@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /adodb/
+Disallow: /connections/
+Disallow: /includes/
+Disallow: /Library/
+Disallow: /logs/
+Disallow: /Scripts/
+Disallow: /Templates/
+Disallow: /webstats/
+Disallow: /downloads/
+Disallow: /MP3/
+Disallow: /pdf/
+Disallow: /MIDI/
+Disallow: /login/
+Disallow: /onderhoud/
+Disallow: /phpmailer/
+Disallow: /publ/
+Disallow: /video/
+Disallow: /Zend/
+

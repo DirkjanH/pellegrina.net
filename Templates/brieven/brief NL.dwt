@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html><!-- InstanceBegin template="/Templates/brieven/briefhoofd NL.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title></title>
+<!-- InstanceEndEditable -->
+<link href="https://www.pellegrina.net/css/mailing.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable --><!-- InstanceEndEditable -->
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="90" colspan="2"><div align="center"><img src="https://pellegrina.net/Images/Logos/LP_transparant.png" class="geenlijn w3-image" alt="La Pellegrina logo"></div></td>
+  </tr>
+  <tr>
+    <td width="50%"><div align="left">Dirkjan Horringa<br>
+      Merwedeplantsoen 73<br>
+    3522 JZ Utrecht </div></td>
+    <td width="50%"><div align="right">tel. (+31) 0619 224 758<br>
+      E-mail: <a href="mailto:info@pellegrina.net">info@pellegrina.net</a><br>
+    KvK nr. 30090647</div></td>
+  </tr>
+  
+  <tr>
+    <td width="100%" colspan="2" valign="top"><p>&nbsp;</p>
+    <!-- InstanceBeginEditable name="tekst" -->
+      <p>Beste {voornaam},</p>
+      <!-- TemplateBeginEditable name="tekst" -->tekst<!-- TemplateEndEditable -->
+      <p>Met muzikale groet,<br>
+        namens <em>La Pellegrina,</em></p>
+      <p>Dirkjan Horringa</p>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

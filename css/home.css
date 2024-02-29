@@ -1,0 +1,46 @@
+#c1,#c2,#c3,#c4 {
+	display: none;
+}
+#cursusoverzicht table {
+}
+
+#cursusoverzicht td.kopje {
+	color: #D30A0A;
+	margin-bottom: -15px;
+	letter-spacing: 0.06em;
+	padding-top: 0.63em;
+	border-top: thin solid #666;
+	padding-left: 15px;
+	font: 700 normal 24px angie-sans, sans-serif;
+}
+#cursusoverzicht td.titel {
+	font-size: 20px;
+	color: #333;
+	height: 35px;
+	vertical-align: middle;
+	background: white;
+	padding-left: 15px;
+	border-top: thin solid #333;
+	line-height: 1.5em;
+	width: 80%;
+}
+#cursusoverzicht td.datum {
+	font-size: 16px;
+	color: #333;
+	height: 25px;
+	padding-left: 15px;
+	font-weight: bold;
+	background-color: white;
+	border-bottom: thin solid #333;
+}
+#cursusoverzicht td.initiaal {
+	font-size: 300%;
+	font-weight: normal;
+	color: #666;
+	vertical-align: top;
+	padding-top: 0px;
+}
+#cursusoverzicht td.link {
+	padding-left: 15px;
+	padding-bottom: 15px;
+}

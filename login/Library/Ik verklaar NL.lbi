@@ -1,0 +1,23 @@
+<link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+
+<body><table width="600" border="0">
+  <tr>
+    <td valign="top"><input type="checkbox" name="voorwaarden" value="akkoord"></td>
+    <td>Ik verklaar mij akkoord met de voorwaarden zoals vermeld onder <a href="../NL/praktisch.htm">praktische
+    zaken</a> en elders op de site (verplicht!) <br></td>
+  </tr>
+  <tr>
+    <td valign="top"><input type="checkbox" name="aanbetaling" value="betaald"></td>
+    <td>Ik heb de aanbetaling van &euro; 150 overgemaakt op rekening NL33 ASNB 0707 2500 72 (BIC ASNB NL21)
+      t.n.v. La Pellegrina, Utrecht. (noodzakelijk voor
+      verdere
+verwerking!)</td>
+  </tr>
+</table>
+<br>
+<p>
+  <input name="submit" type="submit" value="formulier verzenden">
+  <input name="reset" type="reset" value="wissen">
+</p>
+<p>(SVP slechts &eacute;&eacute;n keer klikken. Je ontvangt
+    een automatische bevestiging van de verzending)</p>

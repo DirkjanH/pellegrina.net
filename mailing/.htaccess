@@ -1,0 +1,7 @@
+AuthUserFile /var/www/vhosts/horringa.net/mailing.pellegrina.net/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Beveiligde pagina"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>

@@ -1,0 +1,406 @@
+table.Basistabel {
+	border-collapse:collapse;
+	border-color:#000000;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:-4px;
+	margin-top:4px;
+}
+td.Basistabel {
+	border-left-width:1px;
+	border-left-style:solid;
+	border-left-color:#000000;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-top-color:#000000;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-right-color:#000000;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:4px;
+	padding-right:4px;
+	vertical-align:top;
+}
+.Cursus-Barok {
+	color:#cc9104;
+	widows:1;
+}
+.Cursus-Kamer {
+	color:#d35045;
+	widows:1;
+}
+.Cursus-Klassiek {
+	color:#086bb1;
+	widows:1;
+}
+.Cursus-Romantisch {
+	-epub-hyphens:none;
+	color:#086bb1;
+	widows:1;
+}
+p.Kopje {
+	-epub-hyphens:none;
+	color:#009700;
+	font-family:"Alegreya Sans Medium", sans-serif;
+	font-size:13px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.2;
+	margin-bottom:6px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:14px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.Tekenstijl-1 {
+	color:#000000;
+	font-size:9px;
+}
+span.Webadres {
+	font-family:"Courier New", serif;
+	font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.cursuscijfers {
+	color:#000000;
+	font-family:Cambria, serif;
+	font-size:30px;
+	font-style:normal;
+	font-weight:bold;
+}
+table.TableOverride-1 {
+	border-collapse:collapse;
+	border-width:0px;
+	margin-bottom:0px;
+	margin-top:0px;
+}
+td.CellOverride-1 {
+	border-bottom-color:#000000;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#000000;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#000000;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+}
+td.CellOverride-2 {
+	border-bottom-color:#000000;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#000000;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#000000;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:6px;
+}
+td.CellOverride-3 {
+	border-bottom-color:#000000;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#086bb1;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#086bb1;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+}
+td.CellOverride-4 {
+	border-bottom-color:#000000;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#086bb1;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#000000;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+}
+td.CellOverride-5 {
+	border-bottom-color:#000000;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#000000;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#000000;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#086bb1;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+}
+td.CellOverride-6 {
+	border-bottom-color:#086bb1;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#000000;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#000000;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:0px;
+}
+td.CellOverride-7 {
+	border-bottom-color:#000000;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#000000;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#000000;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#000000;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:0px;
+}
+td.CellOverride-8 {
+	border-bottom-color:#086bb1;
+	border-bottom-style:solid;
+	border-bottom-width:0px;
+	border-left-color:#086bb1;
+	border-left-style:solid;
+	border-left-width:0px;
+	border-right-color:#086bb1;
+	border-right-style:solid;
+	border-right-width:0px;
+	border-top-color:#086bb1;
+	border-top-style:solid;
+	border-top-width:0px;
+	padding-bottom:3px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-top:3px;
+}
+p.ParaOverride-1 {
+	margin-top:6px;
+}
+p.ParaOverride-2 {
+	text-align:center;
+}
+p.ParaOverride-3 {
+	margin-bottom:9px;
+	margin-top:0px;
+}
+p.ParaOverride-4 {
+	margin-bottom:9px;
+}
+p.ParaOverride-5 {
+	margin-bottom:0px;
+	margin-top:9px;
+}
+p.ParaOverride-6 {
+	margin-bottom:0px;
+	margin-top:0px;
+}
+p.ParaOverride-7 {
+	margin-bottom:6px;
+}
+p.ParaOverride-8 {
+	margin-bottom:3px;
+	margin-top:3px;
+}
+li.ParaOverride-9 {
+	text-indent:0px;
+}
+p.ParaOverride-10 {
+	margin-bottom:3px;
+	margin-top:11px;
+}
+span.CharOverride-1 {
+	font-style:italic;
+	font-weight:normal;
+}
+span.CharOverride-2 {
+	color:#cc9104;
+}
+span.CharOverride-3 {
+	color:#d35045;
+}
+span.CharOverride-4 {
+	color:#086bb1;
+}
+span.CharOverride-5 {
+	font-size:11px;
+}
+span.CharOverride-6 {
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-7 {
+	font-family:Verdana, sans-serif;
+	font-size:18px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-8 {
+	color:#009700;
+	font-family:Cambria, serif;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-9 {
+	font-size:58%;
+	vertical-align:super;
+}
+span.CharOverride-10 {
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-11 {
+	font-family:"Alegreya Sans", sans-serif;
+	font-size:24px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-12 {
+	font-size:10px;
+}
+span.CharOverride-13 {
+	font-family:"Alegreya Sans", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-14 {
+	font-family:"Alegreya Sans Black", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-weight:900;
+}
+col._idGenTableRowColumn-1 {
+	width:32px;
+}
+col._idGenTableRowColumn-2 {
+	width:95px;
+}
+col._idGenTableRowColumn-3 {
+	width:260px;
+}
+tr._idGenTableRowColumn-4 {
+	min-height:96px;
+}
+tr._idGenTableRowColumn-5 {
+	min-height:95px;
+}
+#_idContainer004, #_idContainer024 {
+	display:inline-block;
+	height:69px;
+	width:383px;
+}
+#_idContainer006, #_idContainer026 {
+	display:inline-block;
+	height:68px;
+	width:85px;
+}
+#_idContainer009, #_idContainer019, #_idContainer029 {
+	display:inline-block;
+	height:97px;
+	width:168px;
+}
+#_idContainer015 {
+	display:inline-block;
+	height:79px;
+	width:375px;
+}
+#_idContainer032 {
+	display:inline-block;
+	height:69px;
+	width:555px;
+}
+#_idContainer034 {
+	display:inline-block;
+	height:117px;
+	width:156px;
+}
+#_idContainer035 {
+	display:inline-block;
+	height:213px;
+	width:156px;
+}
+#_idContainer036 {
+	display:inline-block;
+	height:128px;
+	width:156px;
+}
+#_idContainer037 {
+	display:inline-block;
+	height:193px;
+	width:156px;
+}
+img._idGenObjectAttribute-1 {
+	height:68px;
+	width:85px;
+}
+img._idGenObjectAttribute-2 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
+div._idGenObjectStyleOverride-1 {
+	border-width:0px;
+	clear: both;
+	float: right
+}
+div._idGenObjectLayout-1 {
+	text-align:center;
+}

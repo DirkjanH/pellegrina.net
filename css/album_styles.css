@@ -1,0 +1,76 @@
+/*La Pellegrina styles
+
+ * Combined style sheet for the index pages and the slide pages.
+ */
+
+/* Style for all bodies. */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #B32D47;
+	background-color: #FFFFFF;
+}
+
+img {
+	border-color: #000000;
+}
+
+/* Custom link styles */
+a:active {  color: #6600FF; text-decoration: underline}
+a:link {  color: #6633CC; text-decoration: underline}
+a:visited {  color: #663366; text-decoration: underline}
+a:hover {  color: #6633FF; text-decoration: underline}
+
+.comment {
+	color: #000000;
+
+}
+
+/* Align the content of the cells on the index pages to the center and bottom. */
+#index td {
+	text-align: center;
+	vertical-align: bottom;
+}
+
+/* Style for all table cells. */
+td {
+	font-family: Verdana, Arial, sans-serif;
+}
+
+.camera {
+	font-size: 10px;
+}
+
+/* Remove the margin under the images on the index pages. */
+#index .image {
+	margin-left: 2;
+	margin-right: 2;
+	margin-bottom: 0;
+}
+
+/* Don't have margins on the slide pages. */
+body#slide {
+	margin: 0;
+}
+
+/* Highlight the image name on the slide pages. */
+#slide .name {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* Header */
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #B32D47;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 1px;
+}
+
+
+#imageinfo {
+
+	font-size: 12px;
+}
+

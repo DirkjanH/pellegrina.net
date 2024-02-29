@@ -1,0 +1,1 @@
+<div id="top" class="w3-hide-small w3-hide-medium"> <a href="/index.php" target="_parent"><img src="/Images/Logos/LP_nieuw.png" alt="La Pellegrina logo" width="600" height="106" class="geenlijn w3-image"/></a></div>

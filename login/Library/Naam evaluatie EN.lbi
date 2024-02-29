@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><table>
+          <tr>
+            <td width="54">Name:</td>
+            <td width="421"><p>
+                <input name="Naam" type=text id="Naam" size="50">
+            </p></td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp;</td>
+            <td><p class="nadruk">(not obligatory! Please feel free to fill out this form anonymously)</p></td>
+          </tr>
+        </table>

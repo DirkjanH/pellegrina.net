@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+div#aanmeldingsprobleem {
+  background: #F8F884;
+  margin: 0 20px;
+  padding: 10px;
+  border: medium double;
+}
+table.formulier {
+  width: 100%;
+  max-width: 600px;
+  padding: 5px;
+  border-style: none;
+  margin-right: auto;
+  margin-left: auto;
+  background: #ffffff;
+}
+table.formulier table {
+  /* [disabled]width: 600px; */
+  vertical-align: top;
+}
+table.formulier p,
+li {
+  width: 100%;
+}
+table.formulier hr {
+  width: 95%;
+  clear: both;
+  margin-top: 30px;
+  text-align: center;
+}
+table.formulier textarea,
+select,
+form {
+  width: 100%;
+}
+td.linkerkolom {
+  width: 20px;
+  vertical-align: top;
+}
+table#instr_vragen {
+  display: none;
+}
+table#solozang_vragen {
+  display: none;
+}
+table#zang_vragen {
+  display: none;
+}
+table#dans_vragen {
+  display: none;
+}
+tr.onzichtbaar {
+  display: none;
+}
+input,
+textarea,
+select,
+checkbox {
+  background: #FFFFD5;
+}
+input [type=button],
+input[type=submit],
+input[type=reset] {
+  background-color: cyan;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input [type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 16px 0 rgba(0, 0, 0, 0.1);
+}
+h1.cursusnaam {
+  line-height: 1.2em;
+  margin-top: -5px;
+  font-size: 20px;
+  letter-spacing: normal;
+}
+table.NAW input.lange_input,
+table.NAW input[type="email"] {
+  width: 100%;
+}
+table.NAW input.date {
+  /* [disabled]width: 120px; */
+}
+table.NAW input[type="radio"] {
+  display: inline;
+  width: auto;
+}
+input,
+textarea,
+select {
+  border: thin #595959 groove;
+}

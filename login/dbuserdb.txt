@@ -1,0 +1,28 @@
+
+# 
+# Database : `dbuserdb`
+# 
+
+# --------------------------------------------------------
+
+#
+# Table structure for table `login_table`
+#
+
+
+CREATE TABLE `login_table` (
+  `userid` int(35) NOT NULL auto_increment,
+  `user_name` varchar(50) NOT NULL default '',
+  `user_pass` varchar(255) NOT NULL default '',
+  `user_level` varchar(50) NOT NULL default '',
+  `date` varchar(20) default NULL,
+  `user_email` varchar(50) NOT NULL default '',
+  `user_ip` varchar(50) NOT NULL default '',
+  PRIMARY KEY  (`userid`)
+) TYPE=MyISAM AUTO_INCREMENT=132 ;
+
+#
+# Dumping data for table `login_table`
+#
+
+INSERT INTO `login_table` VALUES (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '4', '02-08-2005', 'andy@agtc.co.uk', '');

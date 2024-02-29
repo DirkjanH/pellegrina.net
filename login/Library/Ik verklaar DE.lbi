@@ -1,0 +1,28 @@
+<link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+<body>
+<table width="600" border="0">
+  <tr>
+    <td valign="top"><input type="checkbox" name="voorwaarden" value="akkoord"></td>
+    <td><p>Ich bin damit einverstanden, dass meine Adresse auf der Teilnehmerliste
+        ver&ouml;ffentlicht und an alle Teilnehmer versandt wird und ich bin
+        einverstanden mit den Bedingungen unter <a href="../DE/praktisch.htm">Praktisches</a> und
+      anderswo auf dieser Seite. (Pflichtfeld!)
+    <br>
+    </p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><input type="checkbox" name="aanbetaling" value="betaald"></td>
+    <td>Ich habe die Anzahlung von &euro; 150 auf Kontonummer IBAN NL89 PSTB
+      0001 544510 von Postbank Holland &uuml;berwiesen. (notwendig
+    f&uuml;r weitere Verarbeitung!).</td>
+  </tr>
+</table>
+
+<br>
+<p>
+  <input name="submit" type="submit" value="abschicken">
+  <input name="reset" type="reset" value="l&ouml;schen">
+(Bitte
+nur einmal
+klicken. Sie erhalten eine automatische Best&auml;tigung)</p>

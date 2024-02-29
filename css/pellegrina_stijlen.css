@@ -1,0 +1,751 @@
+@charset "utf-8";
+@import 'w3.css';
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UaSrEBBsBhlBjvfkSLk3abBFkvpkARTPlbgv6qm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UaSrEBBsBhlBjvfkSLk3abBFkvpkARTPlbSv6qm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UaSrEBBsBhlBjvfkSLk3abBFkvpkARTPlY-uKqm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UaSrEBBsBhlBjvfkSLk3abBFkvpkARTPlYHuKqm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UacrEBBsBhlBjvfkQjt71kZfyBzPgNG9hUI_A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UacrEBBsBhlBjvfkQjt71kZfyBzPgNGxBUI_A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UacrEBBsBhlBjvfkQjt71kZfyBzPgNGKBII_A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreya/v35/4UacrEBBsBhlBjvfkQjt71kZfyBzPgNGERII_A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUo9_-1phKLFgshYDvh6Vwt7V9VFE92jg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUt9_-1phKLFgshYDvh6Vwt7V9tuA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE52jg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUo9_-1phKLFgshYDvh6Vwt7V9VBEh2jg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUo9_-1phKLFgshYDvh6Vwt7V9VGEt2jg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUu9_-1phKLFgshYDvh6Vwt5fFPmE0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUz9_-1phKLFgshYDvh6Vwt3V0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUu9_-1phKLFgshYDvh6Vwt5alOmE0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUu9_-1phKLFgshYDvh6Vwt5eFImE0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v24/5aUu9_-1phKLFgshYDvh6Vwt5f1LmE0.ttf) format('truetype');
+}
+/* Kleuren: */
+.LP_colour {
+  color: darkgreen;
+}
+.actiekleur {
+  /* voor actieve accordion */
+  color: black !important;
+  background-color: #3fa456 !important;
+}
+.course {
+  font-weight: bold;
+  text-decoration: none !important;
+}
+.chamber {
+  color: #970c00;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+.baroque {
+  color: #d63705;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+.romantic {
+  color: #0a5ac1;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+.set0 {
+  color: darkblue;
+  background-color: #e6e6f3;
+  border: 1px solid darkblue !important;
+}
+.set1 {
+  color: green;
+  background-color: #e6f2e6;
+  border: 1px solid green;
+}
+.set2 {
+  color: crimson;
+  background-color: #fce8ec;
+  border: 1px solid crimson;
+}
+/* Opmaak titel: */
+div#titel {
+  width: 100%;
+  display: table;
+}
+div#cursusplaatje {
+  width: 100%;
+  height: 0;
+  padding-top: 32.5%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+div#titel.romantic div#cursusplaatje {
+  background-image: url('/Images/banner_romantic.jpg');
+}
+div#titel.baroque div#cursusplaatje {
+  background-image: url('/Images/banner_baroque.jpg');
+}
+#titel div#teksten {
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  padding: 0 10px;
+  display: block;
+}
+#titel div.cijfer {
+  font: 7em/0.6em 'Alegreya', serif;
+  width: 80px;
+  margin-top: -10px;
+  float: left;
+}
+#titel h3 {
+  margin-top: 8px;
+  letter-spacing: 1px;
+  color: inherit;
+  vertical-align: top;
+  font-family: 'Alegreya', serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-variant: normal;
+  overflow: hidden;
+}
+#titel p {
+  letter-spacing: 0.1em;
+  color: inherit;
+  vertical-align: top;
+  font-family: 'Alegreya', serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-variant: normal;
+  margin-bottom: 0;
+}
+div#inhoud {
+  clear: both;
+  max-width: 1200px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+div#top {
+  margin-left: 200px;
+  text-align: center;
+  clear: both;
+  z-index: 0;
+  position: relative;
+  border: thin solid black;
+  background-color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+div#main {
+  margin-left: 200px;
+  margin-top: 15px;
+  border: thin solid black;
+  padding: 20px;
+  position: relative;
+  background-color: white;
+}
+ul#cursusmenu {
+  background-color: #58be6f !important;
+  margin-top: -2px;
+}
+ul#cursusmenu li a {
+  color: white !important;
+  line-height: 1em;
+  padding: 4px 16px 0px;
+  text-decoration: none;
+}
+ul#cursusmenu li a:hover {
+  background-color: #a1dbae;
+}
+/* Navigatie: */
+nav#navcontainer {
+  width: 185px;
+  border: 1px solid #235a30;
+  background: #c6e9ce;
+}
+#navcontainer ul {
+  width: 185px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+#navcontainer a {
+  font-size: 15px;
+  width: 185px;
+  display: block;
+  padding-right: 10px;
+}
+#navcontainer li,
+#navcontainer div.w3-accordion {
+  width: 185px;
+  margin-top: 0px;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  background: initial;
+  border-bottom: 1px solid #235a30;
+}
+#navlist a:link,
+#navlist a:visited {
+  color: black;
+}
+#navlist a:hover,
+#navlist a:active {
+  color: black !important;
+  background-color: #3fa456 !important;
+}
+#navlist a.grijs:hover,
+#navlist a.grijs:active {
+  background-color: #999 !important;
+  color: #666 !important;
+}
+p.citaat {
+  color: #723F2B;
+  padding-left: 10mm;
+  text-align: left;
+  background: url("/Images/Logos/bruine_punt.png") no-repeat 3mm 0.2em;
+  font: italic 18px 'Alegreya', serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+#navcontainer {
+  display: none;
+}
+body {
+  background-color: Gainsboro;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-variant-ligatures: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Alegreya', serif;
+  letter-spacing: 0.03em;
+  margin-top: 1em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-variant-ligatures: inherit;
+}
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: -0.5em;
+}
+h1 + div,
+h2 + div,
+h3 + div,
+h4 + div,
+h5 + div,
+h6 + div,
+table + div,
+blockquote + div {
+  margin-top: -0.5em;
+}
+h1 {
+  color: #235a30;
+  font-size: 200%;
+}
+h2 {
+  color: #317f43;
+  font-size: 160%;
+}
+h3 {
+  color: #3fa456;
+  font-size: 140%;
+}
+h4 {
+  color: #58be6f;
+  font-size: 115%;
+}
+h5 {
+  font-size: 110%;
+  color: #6d766f;
+}
+h6 {
+  font-size: 110%;
+  color: black;
+  margin-bottom: -10px;
+}
+h2 + h3 {
+  margin-top: 0.5em;
+}
+ul {
+  list-style-image: none;
+  text-align: left;
+  list-style: square none;
+}
+p,
+td,
+label,
+li {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 15px;
+  font-variant-ligatures: none;
+}
+ol {
+  list-style-image: none;
+  text-align: left;
+  margin-left: 10px;
+}
+li {
+  padding-bottom: 0.31em;
+}
+a:active {
+  color: #58be6f;
+  text-decoration: underline;
+}
+a:link {
+  color: #3fa456;
+  text-decoration: underline;
+}
+a:visited {
+  color: #317f43;
+  text-decoration: underline;
+}
+a:hover {
+  color: #7ccd8f;
+  text-decoration: underline;
+}
+img {
+  border: 1px solid black;
+  max-width: 100%;
+  height: auto;
+}
+img.geenlijn {
+  border: none;
+}
+.box {
+  border: thin solid #000000;
+  background: #FFFFCC;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.fotolinks {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  float: left;
+  clear: both;
+  margin: 10px 20px 10px 0px;
+}
+.fotocenter {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  clear: both;
+  margin-top: 20px;
+}
+.fotorechts {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  float: right;
+  clear: both;
+  margin: 10px 0px 10px 20px;
+}
+div.fotolinks img {
+  margin-bottom: 4px;
+}
+div.fotorechts img {
+  margin-bottom: 4px;
+}
+div.fotocenter img {
+  margin-bottom: 4px;
+}
+.fotobijschrift {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+.nadruk {
+  color: #F00;
+  font-weight: bold;
+  font-size: 70%;
+}
+.kleinkap {
+  font-variant: small-caps;
+}
+.klein {
+  font-size: 70%;
+}
+.grijs {
+  color: #999;
+}
+.centreer {
+  text-align: center;
+}
+.opvallend {
+  color: #090;
+  font-size: 80%;
+}
+.inleiding {
+  font: 17px Georgia, "Times New Roman", Times, serif;
+  margin-top: 20px;
+}
+.formation {
+  font-size: 3em;
+}
+#logo {
+  width: 600px;
+  height: 100px;
+  position: absolute;
+}
+#nog_plaats {
+  width: 98%;
+  height: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 3px;
+  border: thin dotted #000000;
+  background: #C4FFC4;
+}
+#nog_plaats li {
+  font-size: 11px;
+  font-weight: normal;
+}
+#nog_plaats p {
+  font-size: 14px;
+  margin-bottom: -10px;
+  margin-top: -3px;
+  font-weight: bold;
+}
+.groot {
+  font-size: 150%;
+  text-align: left;
+}
+.uit {
+  color: #999;
+  background: #CCC;
+}
+.rechts {
+  text-align: right;
+}
+table.bodytext {
+  margin-left: 1.25em;
+}
+.faq,
+#nog_plaats {
+  padding-top: 0.63em;
+}
+.onzichtbaar {
+  display: none;
+}
+.volvoor {
+  font-weight: bold;
+  font-size: 80%;
+  background: #FFCACA;
+  border: 1px solid #CC0000;
+  padding-left: 10px;
+  color: #CC0000;
+}
+.plaatsvoor {
+  font-weight: bold;
+  font-size: 80%;
+  background: #C4FFC4;
+  border: 1px solid #009700;
+  padding-left: 10px;
+  color: #009700;
+}
+p.suggestie {
+  font-weight: bold;
+  background: #80FFFF;
+  border: 1px solid #005364;
+  padding-left: 10px;
+  color: #005364;
+}
+.container {
+  overflow: auto;
+  width: 100%;
+  clear: both;
+}
+table {
+  border-collapse: collapse;
+}
+table#taal {
+  text-align: center;
+}
+th {
+  font-style: italic;
+  background: #c6e9ce;
+  text-align: center;
+  margin: 0 5px;
+  border: thin solid #333;
+}
+td.geld {
+  text-align: right;
+}
+table.gestreept tr:nth-of-type(odd) td {
+  color: #333;
+  background: #DDD;
+}
+table.gestreept thead tr th,
+table.tablesorter tfoot tr th {
+  border: 1px solid #FFF;
+  padding: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+table.gestreept td {
+  border: 1px solid #FFF;
+  padding: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.zebra {
+  color: #333;
+  background: #DDD;
+}
+.over {
+  color: #FFF;
+  background-color: #333;
+}
+table.prijslijst {
+  margin: 0 auto;
+  width: 90%;
+}
+table#overzicht {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 95%;
+}
+.begin {
+  margin-top: 0em;
+}
+p.facebook {
+  color: #336699;
+}
+div.cols3 {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+  -webkit-column-rule: 1px solid #000;
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -moz-column-rule: 1px solid #000;
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 1px solid #000;
+  margin-top: 20px;
+}
+div.cols2 {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  -webkit-column-rule: 1px solid #000;
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -moz-column-rule: 1px solid #000;
+  column-count: 2;
+  column-gap: 20px;
+  column-rule: 1px solid #000;
+  margin-top: 20px;
+}
+div.cols2 h1,
+div.cols2 h2,
+div.cols2 h3,
+div.cols3 h1,
+div.cols3 h2,
+div.cols3 h3 {
+  -webkit-column-span: all;
+  -moz-column-span: all;
+  column-span: all;
+}
+div.cols2 ul {
+  margin-top: 0px;
+}
+div.cols3 ul {
+  margin-top: 0px;
+}
+.nieuwe_kolom {
+  -webkit-column-break-before: always;
+  break-before: column;
+}
+li.ruimte_ervoor {
+  margin-top: 1em;
+}
+input,
+textarea,
+select {
+  background-color: #FFFBE7;
+  border-width: thin;
+}
+@media screen and (max-width: 992px) {
+  div#inhoud {
+    clear: both;
+    margin: 0px;
+  }
+  div#top {
+    margin: 0px;
+    padding: 15px;
+  }
+  div#banner {
+    display: none;
+  }
+  div#main {
+    margin-left: 0px;
+    position: relative;
+    clear: both !important;
+    border-style: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  div.cols3,
+  div.cols2 {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #titel div.cijfer {
+    display: none;
+  }
+}
+@media print {
+  div#inhoud {
+    margin: 0px !important;
+    padding: 0px;
+  }
+  div#main {
+    margin: 0px !important;
+    padding: 0px;
+    border: none !important;
+  }
+  div#cursus_form {
+    margin-left: 0px !important;
+    padding: 0px;
+    border: none !important;
+  }
+  div#top {
+    display: none;
+  }
+  p,
+  td,
+  li {
+    font-size: 12px;
+  }
+  ul#cursusmenu {
+    display: none;
+  }
+  div.pagina {
+    page-break-after: always;
+  }
+  div.pagina table td {
+    font-size: 50%;
+  }
+  .niet-printen {
+    display: none !important;
+  }
+}

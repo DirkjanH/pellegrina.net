@@ -1,0 +1,10 @@
+<hr>
+        <table width="100%" border="0">
+          <tr>
+            <td width="2%">
+              <input type="checkbox" name="Toehoorder" value="ja">
+              </td>
+            <td width="98%"><b>Ik meld mij aan als toehoorder 
+              (kosten &euro; 300)</b></td>
+          </tr>
+        </table>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<dwquery>
+  <queryparams matchcase="false" ignorewhitespace="false" useregexp="false"wholeword="false"/>
+  <find>
+    <qtext qname="&lt;?php
+//Connection statement
+require_once('kies_jaar.php');
+
+
+// build the form action
+$editFormAction = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? &quot;?&quot; . $_SERVER['QUERY_STRING'] : &quot;&quot;);
+
+if" qraw="true"></qtext>
+  </find>
+  <replace action="replaceText" param1="<?php
+//Connection statement
+require_once('kies_jaar.php');
+
+$evaluatie_tabel = 'evaluatie_2008';
+
+if" param2=""/>
+</dwquery>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html><!-- InstanceBegin template="/Templates/brieven/briefhoofd NL.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title></title>
+<!-- InstanceEndEditable -->
+<link href="https://www.pellegrina.net/css/mailing.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" -->
+
+
+<style type="text/css">
+<!--
+.kopregel {
+	letter-spacing: 0.2mm;
+	font-size: 110%;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+td.totaal {
+	border-top-width: 3px;
+	border-top-style: double;
+}
+td.subtotaal {
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+td.kop {
+	border-width: 1px;
+	border-style: solid;
+}
+table {
+	border-collapse: collapse;
+}
+.kk {
+	font-variant: small-caps;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="90" colspan="2"><div align="center"><img src="https://pellegrina.net/Images/Logos/LP_transparant.png" class="geenlijn w3-image" alt="La Pellegrina logo"></div></td>
+  </tr>
+  <tr>
+    <td width="50%"><div align="left">Dirkjan Horringa<br>
+      Merwedeplantsoen 73<br>
+    3522 JZ Utrecht </div></td>
+    <td width="50%"><div align="right">tel. (+31) 0619 224 758<br>
+      E-mail: <a href="mailto:info@pellegrina.net">info@pellegrina.net</a><br>
+    KvK nr. 30090647</div></td>
+  </tr>
+  
+  <tr>
+    <td width="100%" colspan="2" valign="top"><p>&nbsp;</p>
+    <!-- InstanceBeginEditable name="tekst" -->
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="50%">&nbsp;</td>
+          <td width="50%">{adresblok}</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+          <td height="50" colspan="2" valign="top"><p class="kopregel">FACTUUR, TEVENS BEVESTIGING van INSCHRIJVING </p>
+              <p>&nbsp;</p>
+            <p>Beste {voornaam},</p>
+            <p>Hierbij ontvang je de rekening voor je deelname aan de cursus {cursus}. Maak SVP het nog openstaande bedrag vóór {datum_betaling} over op rekening <strong>NL33 ASNB 0707 2500 72 t.n.v. La Pellegrina</strong>,  Utrecht, <strong>onder vermelding van &quot;factuur {nr}&quot;</strong>. Voor internationale betalingen: 
+BIC ASNB NL21</p>
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td class="kop">Factuurdatum: {datum} </td>
+          <td class="kop">Factuurnummer: {nr} </td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+          <td width="80%" class="kop"><em>Wij hebben voor je gereserveerd: </em></td>
+          <td colspan="2" class="kop"><div align="right"><em>prijs:</em></div></td>
+        </tr>
+        {factuurregels}
+  <tr>
+    <td>Totaal verschuldigd cursusgeld </td>
+    <td width="10" class="subtotaal">&#8364;</td>
+    <td class="subtotaal"><div align="right">{cursusgeld}</div></td>
+  </tr>
+  <tr>
+    <td>Al betaald inschrijfgeld </td>
+    <td width="10">&#8364;</td>
+    <td><div align="right">{aanbet_bedrag}</div></td>
+  </tr>
+  <tr>
+    <td><strong>Nog te betalen vóór {datum_betaling} </strong></td>
+    <td width="10" class="totaal"><strong>&#8364;</strong></td>
+    <td class="totaal"><div align="right"><strong>{tebetalen}</strong></div></td>
+  </tr>
+      </table>
+      <p>{donatie}</p>
+      <p>&nbsp;</p>
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

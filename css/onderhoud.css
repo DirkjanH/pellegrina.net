@@ -1,0 +1,61 @@
+/* LESS Document */
+div#zoeknaam {
+	display: block;
+	position: fixed;
+	float: left;
+	width: 200px;
+	font-size: 12px;
+}
+div#inhoud {
+	float: left;
+	width: 100%;
+	margin-left: 250px;
+}
+header#navigatiebalk {
+	display: block;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+div#mainpage {
+	display: block;
+	position: relative;
+	margin-top: 50px;
+	width: 100%;
+	z-index: 1;
+}
+div#navigatie {
+	display: block;
+	position: fixed;
+	float: left;
+	width: 195px;
+	font-size: 12px;
+}
+#navcontainer {
+	width: 200px;
+	background-color: white;
+}
+#navcontainer li {
+	padding-bottom: 0;
+	line-height: 1.3em;
+	font-size: 13px;
+}
+#navlist a:link,  #navlist a:visited {
+	display: block;
+	color: black;
+}
+#navlist a:hover,  #navlist a:active {
+	display: block;
+	background-color: grey;
+	color: white;
+}
+#navcontainer ul {
+	padding: 10px;
+	list-style-type: none;
+}
+#navcontainer li.active {
+	border-bottom: thin solid rgba(0, 0, 0, 1);
+}
+#navcontainer li.active a {
+	text-decoration: none;
+}

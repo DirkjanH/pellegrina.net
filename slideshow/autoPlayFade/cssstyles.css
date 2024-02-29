@@ -1,0 +1,39 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#container{
+	width:480px;
+	height:360px;
+	position:relative;
+	border: 6px ridge #FFCC00;
+	text-align: left;
+	padding: 0px;
+	display: block;
+	margin: 20px;
+	background-color: white;
+	opacity: 1;
+	z-index: 5;
+}
+
+#container ul{
+	width:480px;
+	height:360px;
+	list-style:none outside none;
+	position:relative;
+	overflow:hidden;
+	background-color: #FFFFFF;
+	opacity: 1;
+	z-index: 10;
+}
+
+#container li:first-child{
+	display:list-item;
+	position:absolute;
+}
+
+#container li{
+	position:absolute;
+	display:none;
+}

@@ -1,0 +1,121 @@
+<link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+
+<hr>
+<table width="600">
+  <tr>
+    <td>
+      <input type="radio" name="Student" value="ja">
+    </td>
+    <td>Ik ben student en jonger dan 35 jaar (korting van &euro; 200,
+      svp kopie bewijs van inschrijving insturen)</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Huisvesting" value="eenpersoons">
+      </td>
+    <td>Ik wil bij voorkeur een eenpersoonskamer (meerprijs 
+      &euro; 150)</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Huisvesting" value="kamperen">
+      </td>
+    <td>Ik wil bij voorkeur kamperen (korting &euro; 45)</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Huisvesting" value="anders">
+      </td>
+    <td>Anders:&#160; 
+      <input type=text name="Huisvesting-opmerking:" size="70">
+    </td>
+  </tr>
+  <tr valign="bottom"> 
+    <td height="30"> 
+      <p> 
+        <input type="checkbox" name="Onderdak" value="graag particulier">
+      </p>
+    </td>
+    <td height="30"> 
+      <p>Ik prefereer onderdak bij particulieren in Bechyn&#283;; (geen
+         meerprijs)</p>
+    </td>
+  </tr>
+</table>
+<hr>
+<p> Eventuele dieetwensen: 
+  <input name="Dieet" type=text id="Dieet" value="[geen]" size="50">
+  </p>
+<hr>
+<table width="600">
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="eigen auto">
+      </td>
+    <td>Ik reis met eigen auto (heb 
+      
+      plaats over voor 
+      <input type=text size="10" name="Meerijders">
+      meerijders).&#160;</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="meerijden">
+      </td>
+    <td>Ik wil graag meerijden</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="vliegen">
+      </td>
+    <td>Ik reis per vliegtuig</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="trein">
+      </td>
+    <td>Ik reis per trein</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="anders">
+      </td>
+    <td>Anders, n.l. 
+      <input type=text name="reistype" value="[weet nog niet]" size="40">
+    </td>
+  </tr>
+</table>
+<hr>
+<table width="600">
+  <tr> 
+    <td>  
+      <input type="checkbox" name="storting fonds">
+      </td>
+    <td>Ik ben bereid een bedrag van &euro; 
+      <input type=text size="8" name="Donatie">
+      te storten in het kortingenfonds&#160;ten behoeve van Oost-Europese deelnemers 
+      en studenten.&#160;</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="checkbox" name="Korting" value="graag info">
+      </td>
+    <td>Ik ben muziekstudent en zou informatie over kortingsmogelijkheden 
+      willen ontvangen.&#160;</td>
+  </tr>
+  <tr> 
+    <td> 
+      <input type="checkbox" name="meer_cursussen" value="ja">
+      </td>
+    <td>Ik geef me voor meer dan n cursus op</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td><br>
+      <p>Verdere opmerkingen en aanvullingen:</p>
+      <p> 
+        <textarea name="opmerkingen" rows="5" cols="60"></textarea>
+      </p>
+    </td>
+  </tr>
+</table>

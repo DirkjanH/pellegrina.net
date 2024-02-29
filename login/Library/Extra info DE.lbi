@@ -1,0 +1,119 @@
+<link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+<hr>
+<table width="600">
+  <tr>
+    <td>
+      <input type="radio" name="Student" value="ja">
+    </td>
+    <td>Ich bin Student und junger als 35 Jahr (Preisminderung &euro; 200,
+      Bitte Kopie Einschreibungsausweis vorlegen)</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Huisvesting" value="eenpersoons">
+      </td>
+    <td>Ich bevorzuge ein Einzelzimmer
+    (Mehrpreis &euro;&nbsp;150) *</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Huisvesting" value="kamperen">
+    </td>
+    <td>Ich m&ouml;chte gerne Zelten
+    (Preisminderung &euro; 45)</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Huisvesting" value="anders">
+      </td>
+    <td>Sonstiges:&#160; 
+      <input type=text name="Huisvesting-opmerking:" size="70">
+    </td>
+  </tr>
+  <tr valign="bottom"> 
+    <td height="30"> 
+      <p> 
+        <input type="checkbox" name="Onderdak" value="graag particulier">
+        </p>
+    </td>
+    <td height="30"> 
+      <p>Ich bitte um Unterbringung in einer Privatunterkunft
+      in Bechyně (kein Mehrpreis)</p>
+    </td>
+  </tr>
+</table>
+<hr>
+<p> Di&auml;tw&uuml;nsche: 
+  <input name="Dieet" type=text id="Dieet" value="[keine]" size="50">
+</p>
+<hr>
+<table width="600">
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="eigen auto">
+      </td>
+    <td>Ich reise per Auto und habe 
+      
+      Platz f&uuml;r
+      <input type=text size="10" name="Meerijders">      &#160;Mitfahrer.</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="meerijden">
+      </td>
+    <td>Ich m&ouml;chte gerne mitfahren</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="vliegen">
+      </td>
+    <td>Ich reise per Flugzeug</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="trein">
+      </td>
+    <td>Ich reise per Zug</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="radio" name="Vervoer" value="anders">
+      </td>
+    <td>Oder sonstiges,
+      <input type=text name="reistype" value="[weiss noch nicht]" size="40">
+    </td></tr>
+</table>
+<hr>
+<table width="600">
+  <tr> 
+    <td>  
+      <input type="checkbox" name="storting fonds">
+      </td>
+    <td>Ich bin bereit einen Beitrag von &euro; 
+      <input type=text size="8" name="Donatie">
+      zu &uuml;berweisen in den Fonds zur Preiserm&auml;ssigung f&uuml;r Musikstudenten
+      und Teilnehmern aus Osteuropa.</td>
+  </tr>
+  <tr> 
+    <td>  
+      <input type="checkbox" name="Korting" value="graag info">
+      </td>
+    <td>Ich bin Musikstudent(in) und m&ouml;chte Informationen &uuml;&uuml;ber
+    Preiserm&auml;ssigung</td>
+  </tr>
+  <tr> 
+    <td> 
+      <input type="checkbox" name="meer_cursussen" value="ja">
+      </td>
+    <td>Ich melde mich f&uuml;r mehr als 1 Kurs an</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td><br>
+      <p>Sonstige Anregungen und Erg&auml;nzungen:</p>
+      <p> 
+        <textarea name="opmerkingen" rows="5" cols="60"></textarea>
+      </p>
+    </td>
+  </tr>
+</table>

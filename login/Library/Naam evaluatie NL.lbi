@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><table>
+          <tr>
+            <td width="54">Naam:</td>
+            <td> <p>
+                <input name="Naam" type=text id="Naam" size="50">
+            </p>
+              </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp;</td>
+            <td><p class="nadruk">(niet verplicht! Je kunt de evaluatie ook anoniem invullen) </p></td>
+          </tr>
+        </table>

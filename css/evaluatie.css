@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("http://www.w3schools.com/lib/w3.css");
+
+.vraag_enquete {
+	color: #006633;
+	font-weight: bold;
+	font-size: 105%;
+	text-align: left;
+	letter-spacing: 1pt;
+	vertical-align: 200%;
+	display: block;
+	padding-top: 12px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 12px;
+	background-color: #E1E1E1;
+	border: 1px solid #000000;
+}
+input, textarea, radio {
+	background: #FF9;
+}
+textarea {
+	width: 100%;
+}
+div#cijfer {
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #0000CC;
+	background-color: #FFFFFF;
+}
+table#opmerkingen, table#marks {
+	background-color: white;
+	width: 100%;
+	border: thin solid rgba(0,0,0,1);
+}
+
+table#opmerkingen td, table#marks td{
+	text-align: left;
+	vertical-align: top;
+	padding: 3px;
+	border: thin solid rgba(0,0,0,1);
+}
+
+table#opmerkingen td.centreer {
+	text-align: center;
+}
+
+h3.evaluatie {
+	height: 50px;
+	padding: 20px 3px 3px;
+	background: rgba(255,255,255,1);
+}
+
+th {
+	font-style: italic;
+}

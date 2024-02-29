@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PremiereData Version="3">
+	<HiddenDockingViews Version="1">
+		<Pane Index="0" ObjectRef="11"/>
+		<Pane Index="1" ObjectRef="14"/>
+		<Pane Index="2" ObjectRef="17"/>
+		<Pane Index="3" ObjectRef="20"/>
+		<Pane Index="4" ObjectRef="23"/>
+		<Pane Index="5" ObjectRef="26"/>
+		<Pane Index="6" ObjectRef="29"/>
+		<Pane Index="7" ObjectRef="32"/>
+		<Pane Index="8" ObjectRef="35"/>
+		<Pane Index="9" ObjectRef="38"/>
+		<Pane Index="10" ObjectRef="41"/>
+		<Pane Index="11" ObjectRef="44"/>
+		<Pane Index="12" ObjectRef="47"/>
+		<Pane Index="13" ObjectRef="50"/>
+		<Pane Index="14" ObjectRef="53"/>
+		<Pane Index="15" ObjectRef="56"/>
+		<Pane Index="16" ObjectRef="59"/>
+		<Pane Index="17" ObjectRef="62"/>
+		<Pane Index="18" ObjectRef="65"/>
+		<Pane Index="19" ObjectRef="68"/>
+		<Pane Index="20" ObjectRef="71"/>
+		<Pane Index="21" ObjectRef="74"/>
+		<Pane Index="22" ObjectRef="77"/>
+		<Pane Index="23" ObjectRef="80"/>
+		<Pane Index="24" ObjectRef="83"/>
+		<Pane Index="25" ObjectRef="86"/>
+		<Pane Index="26" ObjectRef="89"/>
+		<Pane Index="27" ObjectRef="92"/>
+		<Pane Index="28" ObjectRef="95"/>
+	</HiddenDockingViews>
+	<PaneCount>3</PaneCount>
+	<PaneHeader.Visibility>false</PaneHeader.Visibility>
+	<DockingLayout.Properties ObjectRef="1"/>
+	<DockingLayout.SelectedPaneID>76671689-4e94-4927-97c7-3456f1b8c4d6</DockingLayout.SelectedPaneID>
+	<MainFrame Version="1">
+		<Pane Index="0" ObjectRef="2"/>
+		<Pane Index="1" ObjectRef="5"/>
+		<Pane Index="2" ObjectRef="6"/>
+	</MainFrame>
+	<MainFrameWindowState>2</MainFrameWindowState>
+	<PaneWindowCount>0</PaneWindowCount>
+	<MainFramePaneContainerClientRect>0,0,1592,792</MainFramePaneContainerClientRect>
+	<MainFrameWindowRect>-1,-1,1601,869</MainFrameWindowRect>
+	<ApplicationType>4</ApplicationType>
+	<DockingLayoutName>Editing</DockingLayoutName>
+	<PropertyMap ObjectID="1" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_125 ObjectID="2" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>true</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID>4164a4c2-d3f7-4c46-9a1c-7993ad9eda49</CurrentViewID>
+		<PaneSize>0,0,1592,238</PaneSize>
+		<PaneRect>0,554,1592,792</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>9571c477-97ca-49c6-9e6a-5205e5d8d228</PaneID>
+		<PaneWindowRect>4,608,1596,846</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="3"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_125>
+	<DockingView_125 ObjectID="3" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="4"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Timelines</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #1: 8b351424-e9a9-4ce5-9acc-f3e59380a0fc@[532:563:0]</DockingViewTabID>
+		<DockingViewName>Mijn project</DockingViewName>
+		<DockingParticipantID>Timeline</DockingParticipantID>
+		<DockingViewID>4164a4c2-d3f7-4c46-9a1c-7993ad9eda49</DockingViewID>
+	</DockingView_125>
+	<PropertyMap ObjectID="4" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+		<Properties Version="1">
+			<Sequence.ID>1</Sequence.ID>
+		</Properties>
+	</PropertyMap>
+	<Pane_126 ObjectID="5" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>2</PaneType>
+		<Docked>true</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID>0c4a9be2-033a-4895-b493-243c5f042b5f</CurrentViewID>
+		<PaneSize>0,0,673,554</PaneSize>
+		<PaneRect>919,0,1592,554</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>76671689-4e94-4927-97c7-3456f1b8c4d6</PaneID>
+		<PaneWindowRect>923,54,1596,608</PaneWindowRect>
+		<Expanded>true</Expanded>
+	</Pane_126>
+	<Pane_127 ObjectID="6" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>true</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID>e89a77a4-fe64-453d-a763-7f3b2883636e</CurrentViewID>
+		<PaneSize>0,0,919,554</PaneSize>
+		<PaneRect>0,0,919,554</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>7a290eda-ba1e-4791-8319-f4c08be7a511</PaneID>
+		<PaneWindowRect>4,54,923,608</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="7"/>
+			<DockingView Index="1" ObjectRef="9"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_127>
+	<DockingView_126 ObjectID="7" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="8"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Program Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #7: b2ac0e4b-7721-4d1f-93c0-81728013f56f@[542:783:0]</DockingViewTabID>
+		<DockingViewName>Monitor</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>e89a77a4-fe64-453d-a763-7f3b2883636e</DockingViewID>
+	</DockingView_126>
+	<PropertyMap ObjectID="8" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<DockingView_127 ObjectID="9" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="10"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>DVDLayout</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #8: d4b8b27b-4c58-44c2-ac26-4b18da966ff9@[543:211:0]</DockingViewTabID>
+		<DockingViewName>Schijflay-out</DockingViewName>
+		<DockingParticipantID>DVDLayout</DockingParticipantID>
+		<DockingViewID>51ad48fa-8f82-4471-a863-12c9e4707d04</DockingViewID>
+	</DockingView_127>
+	<PropertyMap ObjectID="10" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+		<Properties Version="1">
+			<Sequence.ID>1</Sequence.ID>
+		</Properties>
+	</PropertyMap>
+	<Pane_128 ObjectID="11" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,502,402</PaneSize>
+		<PaneRect>0,0,502,402</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>d77dbe50-b763-4709-a60a-eafff796ebbd</PaneID>
+		<PaneWindowRect>549,249,1051,651</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="12"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_128>
+	<DockingView_128 ObjectID="12" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="13"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Properties</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #9: 8840d1a3-1392-4a9a-83b5-7b9ee2b6bef8@[4260:413:0]</DockingViewTabID>
+		<DockingViewName> Eigenschappen: </DockingViewName>
+		<DockingParticipantID>Properties</DockingParticipantID>
+		<DockingViewID>7d3fdf5b-7237-401e-9a6c-9a1ef19fb672</DockingViewID>
+	</DockingView_128>
+	<PropertyMap ObjectID="13" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_129 ObjectID="14" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>d125e620-35ff-48b3-8f1a-9bfaeeb28780</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="15"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_129>
+	<DockingView_129 ObjectID="15" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="16"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #9: e7b95b46-0d3e-49ba-8418-7744e58ca95c@[1944:346:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV029.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>bd51c3f4-3698-47de-8601-429e343c8402</DockingViewID>
+	</DockingView_129>
+	<PropertyMap ObjectID="16" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_130 ObjectID="17" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>8347f526-638c-4ebd-b24e-c9fac8415f79</PaneID>
+		<PaneWindowRect>909,111,1436,463</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="18"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_130>
+	<DockingView_130 ObjectID="18" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="19"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #32: e42b6932-8cfe-4956-a97e-fa2cdabf580a@[13738:574:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CB.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>94fd2d9d-1db8-4256-956b-d1daff2386e9</DockingViewID>
+	</DockingView_130>
+	<PropertyMap ObjectID="19" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_131 ObjectID="20" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>64b4f3e4-534c-4ae0-aab0-5f5e5f565733</PaneID>
+		<PaneWindowRect>909,111,1436,463</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="21"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_131>
+	<DockingView_131 ObjectID="21" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="22"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #31: b8d6fdff-8e56-43bc-a33d-7d949bab6b89@[13720:699:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CE.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>239fd7a0-2674-47a2-b203-b0b77d57f3d9</DockingViewID>
+	</DockingView_131>
+	<PropertyMap ObjectID="22" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_132 ObjectID="23" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>b575d33e-400a-446e-b041-4d663bb444f7</PaneID>
+		<PaneWindowRect>909,111,1436,463</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="24"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_132>
+	<DockingView_132 ObjectID="24" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="25"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #30: e7a2754e-b0e4-4249-b129-54a4a351116f@[13707:1:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV01F.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>ce73d1c5-77bd-4a27-9815-512103308a7b</DockingViewID>
+	</DockingView_132>
+	<PropertyMap ObjectID="25" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_133 ObjectID="26" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>b76c62f6-154a-442b-94b3-2ec9595be137</PaneID>
+		<PaneWindowRect>909,111,1436,463</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="27"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_133>
+	<DockingView_133 ObjectID="27" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="28"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #29: c1e4760b-95d9-4486-a04d-4d93161c3695@[13483:913:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CA.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>06d5a068-fc07-4cd6-9391-830aa2aa4fe1</DockingViewID>
+	</DockingView_133>
+	<PropertyMap ObjectID="28" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_134 ObjectID="29" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>5d97277e-de1b-42fc-9ba6-d6f1948c7f1c</PaneID>
+		<PaneWindowRect>909,111,1436,463</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="30"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_134>
+	<DockingView_134 ObjectID="30" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="31"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #28: ad204a88-6dad-4fa7-a843-90bbc425ea1c@[12794:844:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - DSC_0937.JPG</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>d4ed2431-2215-441b-86c9-b1990329bbb2</DockingViewID>
+	</DockingView_134>
+	<PropertyMap ObjectID="31" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_135 ObjectID="32" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>201f2684-d801-46fb-9cfd-ab854079543a</PaneID>
+		<PaneWindowRect>909,111,1436,463</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="33"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_135>
+	<DockingView_135 ObjectID="33" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="34"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #27: 60990933-7af1-432c-b8a3-97c13ea0a3f6@[9194:868:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CE.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>4ae1e1b2-28b3-4a47-b4c2-9ba8b72900cb</DockingViewID>
+	</DockingView_135>
+	<PropertyMap ObjectID="34" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_136 ObjectID="35" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,529,329</PaneSize>
+		<PaneRect>0,0,529,329</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>fd22e7b1-40d8-43da-857f-8fd0fb472628</PaneID>
+		<PaneWindowRect>909,111,1438,440</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="36"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_136>
+	<DockingView_136 ObjectID="36" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="37"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #26: 105e4c2a-72fe-4f02-9797-f3ba2a3e5ec6@[8342:184:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CB.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>8f4e6750-b514-4413-b2de-415306113939</DockingViewID>
+	</DockingView_136>
+	<PropertyMap ObjectID="37" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_137 ObjectID="38" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>d6d8294e-25d1-42d8-9be2-b7842ff3bd81</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="39"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_137>
+	<DockingView_137 ObjectID="39" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="40"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #23: c7b4dea1-c375-4fa3-bafb-15c712c451f7@[6992:745:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CA.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>162c198c-9e61-4fb6-af98-3864026be026</DockingViewID>
+	</DockingView_137>
+	<PropertyMap ObjectID="40" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_138 ObjectID="41" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>a1f73c48-4e20-4efd-ba7e-580c8b60045c</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="42"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_138>
+	<DockingView_138 ObjectID="42" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="43"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #22: 56df6503-8b9a-4f97-9ec8-98369106a87a@[6789:994:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CA.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>e47e3fa4-7f0c-446e-94c5-320c780103f0</DockingViewID>
+	</DockingView_138>
+	<PropertyMap ObjectID="43" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_139 ObjectID="44" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>e393033c-193c-48f1-b748-415940bdadb4</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="45"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_139>
+	<DockingView_139 ObjectID="45" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="46"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #21: 22f6c408-5a08-444b-9f02-91848b5286d5@[6446:627:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CA.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>06694586-7b55-493f-96c5-0c82d96778bc</DockingViewID>
+	</DockingView_139>
+	<PropertyMap ObjectID="46" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_140 ObjectID="47" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>dcb6efa9-1d29-4637-a5ec-1e04cb3bf8ae</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="48"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_140>
+	<DockingView_140 ObjectID="48" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="49"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #20: 1646d63c-b23a-40b8-8325-8ea22aa6e0a7@[6428:916:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CB.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>21da8ddd-0d20-4c4e-b87d-e9160a8807b8</DockingViewID>
+	</DockingView_140>
+	<PropertyMap ObjectID="49" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_141 ObjectID="50" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>b9a9bb90-7f0a-4b05-bb66-afa5b5425aeb</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="51"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_141>
+	<DockingView_141 ObjectID="51" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="52"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #19: 7f38dd33-8df6-46fe-b75e-6f8b0ecd0522@[6412:200:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CE.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>056d4ba9-e763-47cf-ad1f-fce89a429fe8</DockingViewID>
+	</DockingView_141>
+	<PropertyMap ObjectID="52" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_142 ObjectID="53" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>e7c35819-24f3-431e-91b0-1610a8f80e18</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="54"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_142>
+	<DockingView_142 ObjectID="54" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="55"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #18: 59625139-0400-4fac-bc1c-70f9504a15b8@[6404:515:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV029.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>ec6286e7-5346-4d80-a8eb-21f96134eff9</DockingViewID>
+	</DockingView_142>
+	<PropertyMap ObjectID="55" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_143 ObjectID="56" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>70091ac9-0b6f-4e26-aeb7-0321e2a1402e</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="57"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_143>
+	<DockingView_143 ObjectID="57" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="58"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #17: 81a83369-69bd-4351-a5b6-86ff491b77ec@[6399:195:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV02A.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>62173e6b-8001-4756-90cd-db0b2fd2cd1d</DockingViewID>
+	</DockingView_143>
+	<PropertyMap ObjectID="58" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_144 ObjectID="59" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>f8fcbfeb-3001-4e3a-bb4f-5e1dff47994c</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="60"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_144>
+	<DockingView_144 ObjectID="60" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="61"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #16: d21d52c7-7d51-47c3-96b1-40f515658fc5@[5860:308:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV00C.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>d440538f-a72a-42b8-852d-52e8fb5bb2f1</DockingViewID>
+	</DockingView_144>
+	<PropertyMap ObjectID="61" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_145 ObjectID="62" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>1f139d92-d742-4a53-a017-4f091e96109b</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="63"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_145>
+	<DockingView_145 ObjectID="63" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="64"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #15: 5a63b2f0-062c-4217-b981-849304db1df6@[3239:761:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV012.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>0706d973-e94d-49d6-9007-eb4cf71f88f5</DockingViewID>
+	</DockingView_145>
+	<PropertyMap ObjectID="64" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_146 ObjectID="65" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>ea1c377c-af22-44b3-a4b0-4c850e67bddb</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="66"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_146>
+	<DockingView_146 ObjectID="66" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="67"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #14: fe943819-6d79-400a-a5e1-e135c3b1eb5d@[2963:599:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV011.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>3c22382e-6a2d-4d4c-93d9-178b6b1d10cb</DockingViewID>
+	</DockingView_146>
+	<PropertyMap ObjectID="67" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_147 ObjectID="68" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>ad65a75c-8850-466a-a825-0874cfc74363</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="69"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_147>
+	<DockingView_147 ObjectID="69" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="70"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #13: f24c09ec-5f1b-4521-9059-9a87b92825bc@[2881:559:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV00F.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>dff87b81-ee3e-4af3-9b51-2831dd17e21a</DockingViewID>
+	</DockingView_147>
+	<PropertyMap ObjectID="70" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_148 ObjectID="71" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>602ffc52-180e-499e-bf4d-5ff0beefba87</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="72"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_148>
+	<DockingView_148 ObjectID="72" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="73"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #12: 97c3261f-1d3c-4f50-8e60-9e029cd05fb0@[2772:31:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV010.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>a83f9228-e833-496c-8846-11b45f73fb73</DockingViewID>
+	</DockingView_148>
+	<PropertyMap ObjectID="73" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_149 ObjectID="74" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>fc6fd77a-6040-4a33-910f-65814292e489</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="75"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_149>
+	<DockingView_149 ObjectID="75" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="76"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #11: ec48cebc-c32a-4388-a0b1-b0a25e44499f@[2702:555:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV00F.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>78c1442e-f8e6-4452-8954-0411a7edb388</DockingViewID>
+	</DockingView_149>
+	<PropertyMap ObjectID="76" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_150 ObjectID="77" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>dd2f15cb-89ee-4cb7-a20f-3eb36a324b67</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="78"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_150>
+	<DockingView_150 ObjectID="78" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="79"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #10: 55f7f96a-204d-48f6-bda8-8b459ce8ce1c@[2509:262:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV015.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>68381be0-cc89-4b7f-a8af-0fd2236bbe9f</DockingViewID>
+	</DockingView_150>
+	<PropertyMap ObjectID="79" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_151 ObjectID="80" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>50b53cfb-7a54-4d5a-8aa7-e73c2a6d3be3</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="81"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_151>
+	<DockingView_151 ObjectID="81" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="82"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #9: fa54ecfc-62eb-45eb-a1b6-430b899ae26c@[2453:557:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV018.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>fd5f2681-d4a6-42d1-a43e-6493b32320c5</DockingViewID>
+	</DockingView_151>
+	<PropertyMap ObjectID="82" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_152 ObjectID="83" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,527,352</PaneSize>
+		<PaneRect>0,0,527,352</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>48b4c450-80e0-4ad1-8663-33547b2134eb</PaneID>
+		<PaneWindowRect>407,157,934,509</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="84"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_152>
+	<DockingView_152 ObjectID="84" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="85"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Source Monitors</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #9: dcac0532-8aa3-4d6b-9118-f9531d8a563b@[528:443:0]</DockingViewTabID>
+		<DockingViewName>Voorvertoning - MOV0CB.MOD</DockingViewName>
+		<DockingParticipantID>Monitor</DockingParticipantID>
+		<DockingViewID>cd3a0806-8b60-4dee-9926-895c2c075b1a</DockingViewID>
+	</DockingView_152>
+	<PropertyMap ObjectID="85" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_153 ObjectID="86" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,266,381</PaneSize>
+		<PaneRect>0,0,266,381</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>b0a29e33-9481-4404-861c-99f6a684d716</PaneID>
+		<PaneWindowRect>418,45,684,426</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="87"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_153>
+	<DockingView_153 ObjectID="87" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="88"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Effect Controls</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #7: c8a4180a-824b-45ed-b1e5-aa97c4dd96be@[147:434:0]</DockingViewTabID>
+		<DockingViewName>Properties</DockingViewName>
+		<DockingParticipantID>Effect Controls</DockingParticipantID>
+		<DockingViewID>d71cbf98-8ffe-4f40-a610-21078e9d4c0a</DockingViewID>
+	</DockingView_153>
+	<PropertyMap ObjectID="88" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_154 ObjectID="89" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,222,381</PaneSize>
+		<PaneRect>0,0,222,381</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>cd429d54-03f8-44c3-8153-9029313f08d5</PaneID>
+		<PaneWindowRect>526,49,748,430</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="90"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_154>
+	<DockingView_154 ObjectID="90" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="91"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>History</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #38: f1189944-94d9-425c-9cb2-ddb9c866f170@[95:103:0]</DockingViewTabID>
+		<DockingViewName>History</DockingViewName>
+		<DockingParticipantID>History</DockingParticipantID>
+		<DockingViewID>18e78872-6be8-431d-a044-5bafdedb7572</DockingViewID>
+	</DockingView_154>
+	<PropertyMap ObjectID="91" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_155 ObjectID="92" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>false</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,258,348</PaneSize>
+		<PaneRect>0,0,258,348</PaneRect>
+		<PaneRestoreID> </PaneRestoreID>
+		<PaneID>4e6c745d-0011-4680-98ab-286c64d33e5c</PaneID>
+		<PaneWindowRect>384,159,642,507</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="93"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_155>
+	<DockingView_155 ObjectID="93" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="94"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>How To</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #000005: caba7e8a-2b20-457c-825b-8f6cf59d3752@[97:147:0]</DockingViewTabID>
+		<DockingViewName>How To</DockingViewName>
+		<DockingParticipantID>How To</DockingParticipantID>
+		<DockingViewID>d8e1e371-0380-4b49-91d0-7261b33f7a15</DockingViewID>
+	</DockingView_155>
+	<PropertyMap ObjectID="94" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+	<Pane_156 ObjectID="95" ClassID="e72d4c59-e6a3-465a-8690-1a74ecc5a0ee" Version="3">
+		<PaneType>0</PaneType>
+		<Docked>true</Docked>
+		<SplitType>9</SplitType>
+		<SplitPaneID> </SplitPaneID>
+		<CurrentViewID></CurrentViewID>
+		<PaneSize>0,0,259,234</PaneSize>
+		<PaneRect>0,0,259,234</PaneRect>
+		<PaneRestoreID>5db87f06-0e2d-419e-b858-9761c9e06d69</PaneRestoreID>
+		<PaneID>6e475e07-0b05-46f8-92da-c7d378e354d1</PaneID>
+		<PaneWindowRect>172,264,431,498</PaneWindowRect>
+		<Pane Version="1">
+			<DockingView Index="0" ObjectRef="96"/>
+		</Pane>
+		<Expanded>true</Expanded>
+	</Pane_156>
+	<DockingView_156 ObjectID="96" ClassID="28470661-8177-4ddd-b59f-17915f9e2b67" Version="1">
+		<DockingView.Properties ObjectRef="97"/>
+		<DockingViewVisible>true</DockingViewVisible>
+		<DockingViewWindowType>Effects</DockingViewWindowType>
+		<DockingViewTabID>DockingTab #9: 368b7876-6fda-4709-bc6c-e6ee120b2c8c@[19:392:0]</DockingViewTabID>
+		<DockingViewName>Effects and Transitions</DockingViewName>
+		<DockingParticipantID>Effects</DockingParticipantID>
+		<DockingViewID>1db385c7-afdc-4e3a-9ff9-b3af7b40815b</DockingViewID>
+	</DockingView_156>
+	<PropertyMap ObjectID="97" ClassID="438d29fd-1954-48e2-9df3-5f96126af53a" Version="1">
+	</PropertyMap>
+</PremiereData>

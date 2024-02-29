@@ -1,0 +1,27 @@
+.opmerking {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-top: 5px;
+	color: #009933;
+}
+.spelers {
+	font-size: 13px;
+	margin-left: 32px;
+}
+.toets {
+	font-size: 70%;
+	color: #FF0000;
+}
+#cursus_form {
+	background: #F7F7F7;
+	border: 3px double #000000;
+	padding: 5px;
+}
+.formation {
+	font-size: 200%;
+	color: #666666;
+	border: thin solid #000000;
+	background: #FFFF33;
+	padding: 3px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}

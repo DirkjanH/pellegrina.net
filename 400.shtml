@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html><!-- InstanceBegin template="/Templates/error message.dwt" codeOutsideHTMLIsLocked="false" -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8">
+
+   <!-- CSS: -->
+   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+   <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      } 
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script>
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+   <title>Bad Request</title>
+   <!-- InstanceEndEditable -->
+<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="inhoud">
+   <div w3-include-html="/includes/header.NL.php" style="margin-bottom: 50px;"></div>
+   <div id="main"><!-- InstanceBeginEditable name="Main" -->
+<H1>Bad Request</H1>
+There was an error in your request.
+<HR>
+<I><!--#echo var="HTTP_HOST" --></I>
+<!-- InstanceEndEditable -->
+      <h2> <a href="javascript: history.go(-1)">Back</a></h2>
+      <p>&nbsp;</p>
+   </div>
+</div>
+<script>
+includeHTML();
+</script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,11 @@
+<hr>
+        <table width="100%" border="0">
+          <tr> 
+            <td width="2%" height="18"> 
+              <input type="checkbox" name="Toehoorder" value="ja">
+              </td>
+            <td width="98%" height="18"><b>I wish to attend 
+              the course as auditor </b><b>(fee 
+              EUR 300)</b></td>
+          </tr>
+        </table>

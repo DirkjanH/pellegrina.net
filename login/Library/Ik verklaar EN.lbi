@@ -1,0 +1,48 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+<body>
+            <table width="600" border="0">
+              <tr>
+                <td valign="top">
+                  <input type="checkbox" name="voorwaarden" value="akkoord">
+                </td>
+                <td><p>I agree to the conditions stated
+                      stated in <a href="../EN/praktisch.htm#annul">Practical matters</a> and
+                elsewhere on this site (obligatory!)<br>
+                </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top"><input type="checkbox" name="aanbetaling" value="betaald"></td>
+                <td>I have paid a deposit of EUR 150 by: </td>
+              </tr>
+              <tr>
+                <td valign="top">&nbsp;</td>
+                <td><table width="600" border="0">
+                  <tr>
+                    <td width="28" valign="top"><input type="radio" name="Betalingswijze" value="bank transfer">
+                    </td>
+                    <td width="529">bank transfer</td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><input type="radio" name="Betalingswijze" value="pmo">
+                    </td>
+                    <td>postal moneyorder</td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><input type="radio" name="Betalingswijze" value="contant">
+                    </td>
+                    <td>cash</td>
+                  </tr>
+                </table>
+                  <br>
+              (paying the deposit is required for further
+                processing!)</td>
+              </tr>
+</table>
+    <p><strong>
+      <input name="submit" type="submit" value="send the form">
+              <input name="reset" type="reset" value="clear">
+</strong>(please click only once. You will see an
+automatic
+confirmation of receipt)</p>

@@ -1,0 +1,49 @@
+<link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+<table width="600">
+          <tr> 
+            <td>Surname:</td>
+            <td>  
+              <input type=text name="Achternaam" size=35>
+              <input type="radio" name="Geslacht" value="M">
+              M 
+              <input type="radio" name="Geslacht" value="V">
+              F</td>
+          </tr>
+          <tr> 
+            <td>First name:</td>
+            <td>  
+              <input type=text name="Voornaam" size=35>
+Date of birth:
+<input type=text name="Geboortedatum" size=10>
+</td>
+          </tr>
+          <tr> 
+            <td>Address:</td>
+            <td>  
+              <input type=text name="Adres" size=75>
+              </td>
+          </tr>
+          <tr> 
+            <td>Postal code:</td>
+            <td>  
+              <input type=text name="Postcode" size=10>
+              Town: 
+              <input type=text name="Plaats" size=20>
+              Country: 
+              <input type=text name="Land" size=20>
+              </td>
+          </tr>
+          <tr> 
+            <td>Telephone:</td>
+            <td>  
+              <input type=text name="Telefoon" size=25>
+Mobile nr.:<input type=text name="Mobiel" size=25>
+</td>
+          </tr>
+          <tr> 
+            <td>Email:</td>
+            <td>  
+              <input type=text name=from size=60>
+      (obligatory!)</td>
+          </tr>
+</table>
