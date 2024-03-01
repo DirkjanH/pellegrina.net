@@ -82,7 +82,7 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 
 	<div id="inhoud">
 		<div id="envelop" class="w3-hide-small w3-hide-medium">
-			<div id="banner" class="">
+			<div id="banner" class="onzichtbaar">
 				<div class="bannergroen">Registration for summer 2024 has started!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
@@ -91,8 +91,8 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Who registers before March 1, receives a EUR 50 red.</div>
 			</div>
-			<div id="banner" class="onzichtbaar">
-				<div class="bannerblauw">Last places available...</div>
+			<div id="banner" class="">
+				<div class="banneroranje">Last places available...</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannerrood">The 2024 courses are (nearly) full</div>
@@ -129,8 +129,9 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 						<li>České Budějovice (Czechia), 25 July - 4 August <?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="onzichtbaar">The choir has a few places in all voice groups</p>
-					<p class="onzichtbaar">Full for all instruments</p>
+					<p class="plaatsvoor">Places for horn, some strings in all groups (in particular violins!) and piano available<br>
+					The choir has a few places in all voice groups, in particular for sopranos and basses</p>
+					<p class="volvoor">The course is full for flute, oboe, clarinet and bassoon</p>
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové) ubytování a stravování za Kč 4.000. Jenom napište &quot;ANKST&quot; na přihlášce v poli &quot;Remarks and additional information</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
@@ -140,8 +141,9 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 11 - 17 August <?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="plaatsvoor onzichtbaar">Places available for baroque bassoon, baroque cello, viola da gamba, continuo players (organ/harpsichord/theorbo</p>
-					<p class="onzichtbaar">Full for all instruments and singers</p>
+					<p class="plaatsvoor">Places available for two baroque oboes, some more baroque violins/violas and continuo players (organ/harpsichord/theorbo)<br>
+					There is also room for a tenor with solo capabilities</p>
+					<p class="volvoor">Full for all other instruments and singers</p>
 					<p class="volvoor onzichtbaar">This course is full for other singers and instruments</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">

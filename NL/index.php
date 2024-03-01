@@ -83,7 +83,7 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 		<div id="" class="onzichtbaar">
 			<div class="bannergeel">De inschrijving voor zomer 2024 start 1 december!</div>
 		</div>
-		<div id="banner" class="">
+		<div id="banner" class="onzichtbaar">
 			<div class="bannergroen">De inschrijving voor zomer 2024 is gestart!</div>
 		</div>
 		<div id="banner" class="onzichtbaar">
@@ -92,8 +92,8 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 		<div id="banner" class="onzichtbaar">
 			<div class="bannergeel">Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>
 		</div>
-		<div id="banner" class="onzichtbaar">
-			<div class="bannerblauw">Nog enkele plaatsen beschikbaar...</div>
+		<div id="banner" class="">
+			<div class="banneroranje">Nog enkele plaatsen beschikbaar...</div>
 		</div>
 		<div id="banner" class="onzichtbaar">
 			<div class="onzichtbaar bannerrood">De cursussen in 2022 zijn (nagenoeg) vol</div>
@@ -122,8 +122,9 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 				<ul>
 					<li>České Budějovice (Tsjechië), 25 juli - 4 augustus <?php echo $jaar ?> </li>
 				</ul>
-				<p class="onzichtbaar">Nog enkele plaatsen in alle stemgroepen van het koor</p>
-				<p class="onzichtbaar">De cursus is vol voor alle instrumenten</p>
+				<p class="plaatsvoor">Nog plaats voor: een hoorn, enkele strijkers in alle groepen (met name violen!) en piano<br>
+				Het koor heeft nog enkele plekken in alle groepen, met name voor sopranen en bassen</p>
+				<p class="volvoor">De cursus is vol voor fluit, hobo, klarinet en fagot</p>
 			</div>
 			<div class="w3-card-2 w3-padding w3-margin-bottom">
 				<h3><a href="baroque/index.php"><span class="baroque">Barokmuziek in 415 Hz: Vivaldi's Venetiaanse Vespers</span></a></h3>
@@ -131,10 +132,9 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 				<ul>
 					<li>Klooster Nieuw Sion, Diepenveen, 11 - 17 augustus <?php echo $jaar ?></li>
 				</ul>
-				<p class="plaatsvoor onzichtbaar">Nog plaats voor barokfagot, continuo (orgel/clavecimbel/theorbe), barokcello en viola da gamba. <br>
-				</p>
-				<p class="onzichtbaar">Deze cursus is vol voor alle instrumenten en zangers</p>
-				<p class="onzichtbaar">Deze cursus is vol voor overige instrumeten en stemmen</p>
+				<p class="plaatsvoor">Nog plaats voor twee barokhobo's, enkele violen en altviolen en clavecimbel/orgel/theorbe<br>
+				Bij de zangers kunnen we nog één enkele tenor plaatsen</p>
+				<p class="volvoor">Deze cursus is vol voor overige instrumenten en stemmen</p>
 		  </div>
 			<div class="w3-card-2 w3-padding w3-margin-bottom">
 				<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Speel kamermuziek met het Kinsky Trio Prague &amp; Friends</span></a></h3>
