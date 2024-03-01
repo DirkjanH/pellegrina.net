@@ -130,42 +130,12 @@ div.bannergeel {
 }
 div.bannerrood {
   background: #ff9793;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ff9793 0%, #ea4535 52%, #ff9793 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
+  background: linear-gradient(
+    90deg,
     color-stop(0%, #ff9793),
     color-stop(52%, #ea4535),
     color-stop(100%, #ff9793)
   );
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    #ff9793 0%,
-    #ea4535 52%,
-    #ff9793 100%
-  );
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ff9793 0%, #ea4535 52%, #ff9793 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ff9793 0%, #ea4535 52%, #ff9793 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #ff9793 0%, #ea4535 52%, #ff9793 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9793', endColorstr='#ff9793', GradientType=0);
-  /* IE6-9 */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-  -moz-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -webkit-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -o-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -ms-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
   transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
     skewX(0deg) skewY(0deg);
   display: block;
