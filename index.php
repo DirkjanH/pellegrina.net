@@ -164,11 +164,11 @@ img.mySlides {
         <div class="onzichtbaar">Data zomer 2024 bekend; inschrijving start 1 december!</div>
         <div class="onzichtbaar">Dates summer 2024 are known; registration starts December 1!</div>
       </div>
-      <div id="bannerteksten" class="bannergroen">
+      <div id="" class="onzichtbaar">
         <div>Inschrijving voor zomer 2024 is gestart!</div>
         <div>Registration for summer 2024 has started!</div>
       </div>
-      <div id="" class="onzichtbaar">
+      <div id="bannerteksten" class="banneroranje">
 		<div class="">Nog enkele plaatsen beschikbaar...</div>
         <div class="">A few last places available...</div>
       </div>
