@@ -867,6 +867,7 @@ if (isset($_POST['zoek_subject']) AND $_POST['zoek_subject'] != '') $where = "su
 ?>
 <!DOCTYPE HTML>
 <html>
+<head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -879,6 +880,7 @@ if (isset($_POST['zoek_subject']) AND $_POST['zoek_subject'] != '') $where = "su
    <meta name="msapplication-config" content="https://pellegrina.net/mailing/browserconfig.xml">
    <meta name="theme-color" content="#ffffff">
 
+   <title>LP message mailer</title>
 
    <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
@@ -1029,8 +1031,6 @@ if (isset($_POST['zoek_subject']) AND $_POST['zoek_subject'] != '') $where = "su
    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
    <?php include_once ($_SERVER['DOCUMENT_ROOT'].'/includes/jquery_opdrachten.php');
    ?>
-<head>
-<title>LP message mailer</title>
 <style type="text/css">
 <!--
 body {
