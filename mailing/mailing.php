@@ -1063,8 +1063,8 @@ table#berichten {
 div#berichten_wrapper {
 	width: 100%;
 	clear: all;
-	z-index: ;
-	position: relative
+	z-index: 1;
+	position: relative;
 	top: 0px;
 	right: 0px;
 }
