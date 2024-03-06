@@ -595,7 +595,7 @@ if (isset($inschrijving)) {
 	}
 
 if (isset($adressen) AND count($adressen) > 0) {
-//	unset($_SESSION['adressen']);
+	unset($_SESSION['adressen']);
 	$_SESSION['adressen'] = $adressen;
 }
 
