@@ -114,22 +114,22 @@ if ((file_exists($adresbestand)) !== FALSE) {
 			$adres['naam'] = $data[0];
 			$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $data[1]));
 			if ($data[30] != '') $adres['email'] = $data[30]; else $adres['email'] = $data[32];
-         if (strstr($adres['email'], ' ::: ')) $adres['email'] = substr($adres['email'], 0, strpos($adres['email'], ' ::: '));
+			if (strstr($adres['email'], ' ::: ')) $adres['email'] = substr($adres['email'], 0, strpos($adres['email'], ' ::: '));
 			if ($data[49] != '') $adres['postcode'] = $data[49]; else $adres['postcode'] = $data[58];
-         if (strstr($adres['postcode'], ' ::: ')) $adres['postcode'] = substr($adres['postcode'], 0, strpos($adres['postcode'], ' ::: '));
+//			if (strstr($adres['postcode'], ' ::: ')) $adres['postcode'] = substr($adres['postcode'], 0, strpos($adres['postcode'], ' ::: '));
 			if (isset($adres['postcode']) AND $adres['postcode'] != '' AND preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) $adres['land'] = 'NL';
 			$adres['groep'] = $data[28];
-		d($adres);
-		if (isset($groep) and $groep != '') {
-			if (strstr($adres['groep'], $groep)) {
-				if (!(strstr($groep, 'LaPel') AND strstr($data[28], 'LaPel niet')))
-					$results[]= $adres;
+			d($adres);
+			if (isset($groep) and $groep != '') {
+				if (strstr($adres['groep'], $groep)) {
+					if (!(strstr($groep, 'LaPel') AND strstr($data[28], 'LaPel niet')))
+						$results[]= $adres;
+				}
 			}
+			else $results[]= $adres;
+			}
+			//else echo('Pech!<br>');
 		}
-		else $results[]= $adres;
-		}
- 	 	//else echo('Pech!<br>');
-     }
 }
 	else echo('Bestand contacts.csv staat niet hier<br>');
 
