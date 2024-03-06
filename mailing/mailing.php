@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/includes2024.php');
 require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
 use Pelago\Emogrifier\CssInliner;
+use function \PHP81_BC\strftime;
 
 Kint::$enabled_mode = true;
 
@@ -616,7 +617,6 @@ $query_cursussen = sprintf("SELECT * FROM cursus WHERE cursusId BETWEEN %s AND %
 $cursussen = select_query($query_cursussen);
 $totaal_cursussen = count($cursussen);
  
-use function \PHP81_BC\strftime;
 foreach ($cursussen as $cursus) {
 	$begindatum = strftime('%A %e %B %Y', strtotime($cursus['datum_begin']), 'nl_NL');
 	$einddatum = strftime('%A %e %B %Y', strtotime($cursus['datum_eind']), 'nl_NL');
