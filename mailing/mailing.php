@@ -397,6 +397,9 @@ d($query_inschrijving);
 	break;
 	
 	case 'utrecht':
+	
+		unset($adressen);
+	
 		$results = lees_gdata();
 		$aantal_r = count($results);
 		$adressen = array();
@@ -411,6 +414,9 @@ d($query_inschrijving);
 	break;
 	
 	case 'culemborg':
+	
+		unset($adressen);
+	
 		$results = lees_gdata();
 		$aantal_r = count($results);
 		$adressen = array();
@@ -423,6 +429,9 @@ d($query_inschrijving);
 	break;
 	
 	case 'arnhem':
+	
+		unset($adressen);
+	
 		$results = lees_gdata();
 		$aantal_r = count($results);
 		$adressen = array();
@@ -435,6 +444,9 @@ d($query_inschrijving);
 	break;
 	
 	case 'afoort':
+	
+		unset($adressen);
+	
 		$results = lees_gdata();
 		$aantal_r = count($results);
 		$adressen = array();
@@ -449,7 +461,10 @@ d($query_inschrijving);
 	break;
 	
 	case 'postcodegebied':
-		// echo $_POST['postcodegebied'].'<br>';
+	
+		unset($adressen);
+	
+		d($_POST['postcodegebied']);
 		function viercijfers ($code) {
 			$code = strval($code);
 			if (!ctype_digit($code)) echo "Deze postcode $code bestaat niet geheel uit cijfers<br>";
@@ -595,7 +610,6 @@ if (isset($inschrijving)) {
 	}
 
 if (isset($adressen) AND count($adressen) > 0) {
-	unset($_SESSION['adressen']);
 	$_SESSION['adressen'] = $adressen;
 }
 
