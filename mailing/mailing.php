@@ -101,7 +101,7 @@ if ((file_exists($adresbestand)) !== FALSE) {
 	$aantal_kommas = substr_count ($lines[0], ',');
 	
 	$maxi = count($lines);
-	unset($lines[0]); // Kolom headers
+	//unset($lines[0]); // Kolom headers
 	d($aantal_kommas, $maxi, $lines);
 	
 	foreach($lines as $line) {
@@ -400,7 +400,7 @@ d($query_inschrijving);
 		$aantal_r = count($results);
 		$adressen = array();
 		foreach ($results as $r) {
-			if ((($r['postcode'] > '1200' AND $r['postcode'] < '1400')
+			if ((($r['postcode'] > '1000' AND $r['postcode'] < '1400')
 				OR ($r['postcode'] > '2500' AND $r['postcode'] < '4300'))
 				AND $r['land'] == 'NL') 
 				$adressen[] = $r;
