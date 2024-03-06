@@ -355,7 +355,7 @@ if (isset($_POST['selectie']) AND isset($_SESSION['taal']) AND $_SESSION['taal']
 														 d.DlnmrId
 													   from inschrijving
 													   where d.DlnmrId = DlnmrId_FK
-														   and CursusId_FK >= {$eerstecursus})
+														   and CursusId_FK >= {string $eerstecursus})
 										AND NOT(toehoorder <=> 1)
 										AND NOT(email <=> \"\")
 										AND achternaam NOT LIKE \"%%XXX%%\"
