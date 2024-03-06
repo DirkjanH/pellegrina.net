@@ -1,12 +1,13 @@
 <?php //Connection statement
 // stel php in dat deze fouten weergeeft
-//ini_set('display_errors',1);
+ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/includes2024.php');
 require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
 use Pelago\Emogrifier\CssInliner;
-Kint::$enabled_mode = false;
+
+Kint::$enabled_mode = true;
 
 d($GLOBALS, $_POST, $_GET);
 
