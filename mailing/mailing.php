@@ -91,6 +91,7 @@ if ((file_exists($adresbestand)) !== FALSE) {
 	$datastring_converted = file_get_contents($adresbestand); 
 	$reg_expr = '#Keywords,\d\d\d\d-\d\d-\d\d\n#';
 	d($reg_expr, $datastring_converted);
+	$datastring_converted = str_replace('Type,Jot 2 - Value'.PHP_EOL, '', $datastring_converted);
 	$datastring_converted = preg_replace($reg_expr, '#$#', $datastring_converted);
 	d($datastring_converted);
 	$datastring_converted = str_replace(',,'.PHP_EOL, '#$#', $datastring_converted);
