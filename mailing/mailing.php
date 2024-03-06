@@ -119,14 +119,14 @@ if ((file_exists($adresbestand)) !== FALSE) {
          if (strstr($adres['postcode'], ' ::: ')) $adres['postcode'] = substr($adres['postcode'], 0, strpos($adres['postcode'], ' ::: '));
 			if (isset($adres['postcode']) AND $adres['postcode'] != '' AND preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) $adres['land'] = 'NL';
 			$adres['groep'] = $data[28];
-d($adres);
-			if (isset($groep) and $groep != '') {
-				if (strstr($adres['groep'], $groep)) {
-					if (!(strstr($groep, 'LaPel') AND strstr($data[28], 'LaPel niet')))
-						$results[]= $adres;
-				}
+		d($adres);
+		if (isset($groep) and $groep != '') {
+			if (strstr($adres['groep'], $groep)) {
+				if (!(strstr($groep, 'LaPel') AND strstr($data[28], 'LaPel niet')))
+					$results[]= $adres;
 			}
-			else $results[]= $adres;
+		}
+		else $results[]= $adres;
 		}
  	 	//else echo('Pech!<br>');
      }
