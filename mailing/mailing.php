@@ -108,7 +108,7 @@ if ((file_exists($adresbestand)) !== FALSE) {
 	
 	foreach($lines as $line) {
 		$data = str_getcsv($line, ",", "\"");
-		//d($data);
+		d($data);
 		if (((isset($data[30]) AND $data[30] !== '') OR (isset($data[32]) AND $data[32] !== '')) AND (strstr($data[28], 'Geen folders') === false)) {
 			unset($adres);
 			$adres['naam'] = $data[0];
