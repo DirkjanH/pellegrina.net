@@ -11,7 +11,7 @@ require_once $_SERVER[ "DOCUMENT_ROOT" ] . '/vendor/autoload.php';
 
 session_start();
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 if ( isset( $_POST[ 'cursus' ] )and $_POST[ 'cursus' ] > 0 )
 	$_SESSION[ 'welke_cursus' ] = $CursusId = $_POST[ 'cursus' ] + $cursus_offset; // cursusnummer
