@@ -52,10 +52,10 @@ if ( isset( $_POST[ 'sorteer' ] )and $_POST[ 'sorteer' ] != "" )
 			$sorteer = 'd.naam_aanbrenger DESC';
 			break;
 		case "Eenpersoons:":
-			$sorteer = 'i.eenpersoons, i.datum_inschr ASC, d.achternaam';
+			$sorteer = 'i.eenpersoons DESC, i.datum_inschr ASC, d.achternaam';
 			break;
 		case "Meerpersoons:":
-			$sorteer = 'i.meerpers, i.datum_inschr ASC, d.achternaam';
+			$sorteer = 'i.meerpers DESC, i.datum_inschr ASC, d.achternaam';
 			break;
 		case "Tweepersoons:":
 			{
