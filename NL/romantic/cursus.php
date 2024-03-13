@@ -87,7 +87,8 @@ individuele deelnemers als voor vaste ensembles. </p>
 <h3>Het programma voor solisten, koor en orkest:<em> Reicha's Requiem</em></h3>
 <div class="fotolinks"><img src="/Images/Locaties/Budejovice/black-tower-st-nicholas-cathedral-ceske-budejovice.jpg" alt="Antonín Dvořák" width="400" height="317" class="w3-image"><br>
 	De kathedraal van České Budějovice</div>
-<p>Elke middag werken we aan een programma voor koor en orkest, dat als afsluiting van de cursus openbaar wordt uitgevoerd. Dit jaar klinkt in dit slotconcert een programma met twee werken, namelijk de <em>Missa pro defunctis</em> (Requiem) van Anton Reicha voor solisten, koor en orkest. Daarnaast werkt het orkest aan de <em>Symfonische Variaties</em> van Dvořák. <a href="programma.php">Lees hier meer over de werken en hun muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en magnifiek klinkende kathedraal van České Budějovice. Het programma wordt 'ingezeept' in een voorbereidende repetitie op zaterdag 1 juni in Den Dolder bij Utrecht.</p>
+<p>Elke middag werken we aan een programma voor koor en orkest, dat als afsluiting van de cursus openbaar wordt uitgevoerd. Dit jaar klinkt in dit slotconcert een programma met twee werken, namelijk de <em>Missa pro defunctis</em> (Requiem) van Anton Reicha voor solisten, koor en orkest. Daarnaast werkt het orkest aan de <em>Symfonische Variaties</em> van Dvořák. <a href="programma.php">Lees hier meer over de werken en hun muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en magnifiek klinkende kathedraal van České Budějovice. 
+Het programma wordt 'ingezeept' in een voorbereidende repetitie op zaterdag 1 juni in Den Dolder bij Utrecht.</p>
 </div>
 <p class="citaat">Anke Wolffes: &quot;De orkestrepetities verliepen erg prettig.
 Het lukt Dirkjan ieder jaar weer om ambitieus en motiverend, en toch
@@ -119,13 +120,9 @@ plaats voor dubbel hout, twee hoorns, pauken
 en strijkers 8-8-6-6-3 (of een paar meer). In de kamermuziek is er plaats voor vier pianisten. Zij spelen in de kamermuziek-ensembles   begeleiden zangers in hun aria's en kunnen zelfs pauken of ander slagwerk spelen in het orkest, of in het koor zingen. Voor de overige instrumenten in het orkest, zoals harp, trompetten, trombones en tuba, huren we Tsjechische professionals in.</p>
 <p class="citaat"><strong id="docs-internal-guid-a06bcaf9-7fff-235d-83ee-d6cfa43efa61"></strong>Christine Achten:	&quot;Een weekje alles loslaten en je onderdompelen in een bad van mooie muziek, hard werken, plezier maken, schoonheid ervaren , fijne sociale contacten, prachtige natuur... dat noem ik vakantie!&quot;</p>
 </div>
-<div class="onzichtbaar">
-	<h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
-	<p> Op <strong>zaterdag 10 juni </strong>wordt overdag een voorbereidende repetitie
-		gehouden in Utrecht, onder leiding van Mitchell Sandler en Dirkjan Horringa. Deze repetitie heeft als doel kennis te maken met
-		de overige
-		deelnemers en koor en orkest vast zo 'in te zepen', dat de deelnemers   hun partijen daarna efficiënter en met meer plezier kunnen voorbereiden. Ook is het inspirerend om de overige deelnemers en met name je  'kamermuziekcollega's' vast te ontmoeten en te bespreken welk werk je gaat spelen of zingen.</p>
-</div>
+<h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
+<p> Op <strong>zaterdag 1 juni </strong>wordt overdag een voorbereidende repetitie
+	gehouden in Den Dolder bij Utrecht, onder leiding van Mitchell Sandler en Dirkjan Horringa. Deze repetitie heeft als doel kennis te maken met de overige deelnemers en koor en orkest vast zo 'in te zepen', dat de deelnemers   hun partijen daarna efficiënter en met meer plezier kunnen voorbereiden. Ook is het inspirerend om de overige deelnemers en met name je  'kamermuziekcollega's' vast te ontmoeten en te bespreken welk werk je gaat spelen of zingen.</p>
 <p class="citaat">Marieke van Dantzig: &quot;Een wonderlijke combinatie van mensen, stijlen en muzikale kwaliteiten in korte tijd tot een prachtig geheel smeden: dat is de kracht van inspirator Dirkjan&quot;</p>
 <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
 <h4>Weekindeling</h4>

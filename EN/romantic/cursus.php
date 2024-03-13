@@ -118,11 +118,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php'; ?>
     <p class="citaat"><strong id="docs-internal-guid-bc7f5956-7fff-e180-16b2-2ffb662f73ef"></strong>Christine Achten: &quot;A week of letting go of everything and immersing yourself in a bath of beautiful music, hard work, having fun, experiencing beauty , fine social contacts, beautiful nature...that's what I call a holiday!&quot;</p>
     <a href="cursus.php" target="_self"></a>
     </div>
-		<div class="onzichtbaar">
 	<h2><a name="kennismaking"></a>Introductory rehearsal</h2>
-			<p> On Saturday, 10 June, a preliminary rehearsal day will be held in Utrecht, led by Mitchell Sandler and Dirkjan Horringa. More information on the venue and times will follow. Its aim is  to get to know the other participants, and to have a first go at the choral and orchestral programme, so you can then prepare your part more efficiently at home. Besides that, it is inspiring to meet your 'chamber music colleagues' and to discuss the work you are going to play or sing. Of course this rehearsal is not mandatory for participants from outside the Netherlands. Still, quite often a few participants not living in the Netherlands turn up, combining it with a weekend sightseeing or visiting friends.</p>
-		</div>
-<p class="citaat">Marieke van Dantzig: &quot;forging a beautiful whole out of a weird combination of people, styles and musical skills in a short time: that is the magic of inspirator Dirkjan&quot;</p>
+			<p> On Saturday, 1 June, a preliminary rehearsal day will be held in Den Dolder near Utrecht, led by Mitchell Sandler and Dirkjan Horringa. Of course this rehearsal is not obligatory for participants from outside the Netherlands. Still, quite often a few participants not living in the Netherlands turn up, combining it with a weekend sightseeing or visiting friends. Mitchell Sandler and Dirkjan Horringa will lead this rehearsal day. Its aim is to get to know the other participants, and to have a first go at the choral and orchestral programme, so you can then prepare your part more efficiently. More information on the venue and times will follow. Beside that, it is inspiring to meet your 'chamber music colleagues' and to discuss the work your are going to play or sing.
+	p class="citaat">Marieke van Dantzig: &quot;forging a beautiful whole out of a weird combination of people, styles and musical skills in a short time: that is the magic of inspirator Dirkjan&quot;</p>
 		<h2><a name="dagindeling"></a>Week  programme and daily  schedule</h2>
     <h4>Week programme</h4>
     <ul>
