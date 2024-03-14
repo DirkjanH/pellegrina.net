@@ -132,9 +132,8 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 				<ul>
 					<li>Klooster Nieuw Sion, Diepenveen, 11 - 17 augustus <?php echo $jaar ?></li>
 				</ul>
-				<p class="plaatsvoor">Nog plaats voor twee barokhobo's, enkele violen en altviolen en clavecimbel/orgel/theorbe<br>
-				Bij de zangers kunnen we nog één enkele tenor plaatsen</p>
-				<p class="volvoor">Deze cursus is vol voor overige instrumenten en stemmen</p>
+				<p class="plaatsvoor">Nog plaats voor twee barokhobo's, enkele violen en altviolen en clavecimbel/orgel/theorbe</p>
+				<p class="volvoor">Deze cursus is vol voor overige instrumenten en voor zangers</p>
 		  </div>
 			<div class="w3-card-2 w3-padding w3-margin-bottom">
 				<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Speel kamermuziek met het Kinsky Trio Prague &amp; Friends</span></a></h3>
