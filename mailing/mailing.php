@@ -217,9 +217,7 @@ function lees_access ($input) {
 	else
 		echo '<script language="javascript">confirm("Dit is geen CSV. Wil je dit?")</script>;';
 
-d($input);
-d($delimiter);
-d($enclosure);
+d($input, $delimiter, $enclosure);
 
 	$fp = fopen('php://temp', 'r+');
 	// ... write $input to the "file" using fwrite()...
@@ -399,6 +397,7 @@ d($query_inschrijving);
 	case 'utrecht':
 	
 		unset($adressen);
+		unset($_SESSION['adressen']);
 	
 		$results = lees_gdata();
 		$aantal_r = count($results);
@@ -416,6 +415,7 @@ d($query_inschrijving);
 	case 'culemborg':
 	
 		unset($adressen);
+		unset($_SESSION['adressen']);
 	
 		$results = lees_gdata();
 		$aantal_r = count($results);
@@ -431,6 +431,7 @@ d($query_inschrijving);
 	case 'arnhem':
 	
 		unset($adressen);
+		unset($_SESSION['adressen']);
 	
 		$results = lees_gdata();
 		$aantal_r = count($results);
@@ -446,6 +447,7 @@ d($query_inschrijving);
 	case 'afoort':
 	
 		unset($adressen);
+		unset($_SESSION['adressen']);
 	
 		$results = lees_gdata();
 		$aantal_r = count($results);
@@ -463,6 +465,7 @@ d($query_inschrijving);
 	case 'postcodegebied':
 	
 		unset($adressen);
+		unset($_SESSION['adressen']);
 	
 		d($_POST['postcodegebied']);
 		function viercijfers ($code) {
