@@ -71,7 +71,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php'; ?>
 	Chamber music ensemble performing<br>
 	photo: Cassandra Luckhardt</div>
 <p>The most important part of the course is working in small ensembles. Everyone is part of two different pre-arranged ensembles, both of which are treated equally. The ensembles work most of the time under the intensive supervision of the teachers. The ensembles present themselves to the other participants at the end of the course; in mutual consultation a number of ensembles can participate in the final public concert. This year the focus is on Italian Baroque.  but this is optional for chamber music. Feel free to play or sing English, German or French music in the small ensemble program.</p>
-<p class="citaat">Frederiek Muller: &quot;La Pellegrina's formula is SO inspiring!&quot;</p>
 <p>All formations from quartet upward are possible. The ensembles will be assigned very soon, so you can prepare at home. That is why quick registration is essential. Within the possibilities of the course, wishes for pieces and instrumentation are taken into account. The course is open to individual participants and permanent ensembles. There is also time for occasional combinations in the evenings.</p>
 <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a piece like this   for choir, soloists and orchestra. But the chamber music is really an asset! Singers and instrumentalists, one to a part, with coaching by all teachers ... Something you rarely get the opportunity to do! And when the teachers sometimes contradict each other, .. well, .. that gives space&quot;</p>
 <h3>Vivaldi's Venetian Vespers<em>, </em>programme for all singers and instrumentalists</h3>
@@ -154,7 +153,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php'; ?>
          <p>The tutors of this course are passionate specialists in their fields: <a href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>, <a href="docenten.php#huizinga">Femke&nbsp;Huizinga</a>, <a href="docenten.php#lindeijer">Hanna&nbsp;Lindeijer</a>, <a href="docenten.php#rodriguez">Ricardo&nbsp;Rodríguez&nbsp;Miranda</a>, <a href="docenten.php#sandler">Mitchell&nbsp;Sandler</a> and <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>.</p>
          <h2><a name="inschrijven"></a>How to register</h2>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/inschrijven.php');?>
-         <p class="citaat">Frederiek Muller: &quot;So wonderful that it is already music from the first moment!&quot;</p>
       </div>
     <!-- InstanceEndEditable -->
     <h2><a href="javascript: history.go(-1)">Back</a></h2>

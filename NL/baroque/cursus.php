@@ -71,7 +71,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php'; ?>
 	foto: Cassandra Luckhardt</div>
       <p>Het belangrijkste onderdeel van de cursus is werken in kleine ensembles. Iedereen maakt deel uit van twee verschillende van tevoren ingedeelde ensembles, die beide in gelijke mate aan bod komen. De ensembles werken het grootste deel van de tijd onder intensieve begeleiding van de
       docenten. De ensembles presenteren zich aan het eind van de cursus aan de overige deelnemers;  in onderling overleg kan een aantal ensembles  deelnemen aan het afsluitende openbare concert. Dit jaar ligt de focus op Italiaanse muziek, maar voor de kamermuziek  is dit optioneel. Voel je vrij als je in het kleine ensemble programma liever  Engelse, Duitse of Franse muziek speelt of zingt.</p>
-      <p class="citaat">Frederiek Muller: &quot;De formule van La Pellegrina werkt zó inspirerend!&quot;</p>
       <p>Alle formaties  vanaf kwartet zijn mogelijk. De ensembles worden tijdig ingedeeld,
       zodat je je thuis kunt voorbereiden. Daarom is snel aanmelden essentieel. Binnen de mogelijkheden van de cursus wordt met wensen voor stukken en bezettingen rekening gehouden. De cursus staat open  voor
       individuele deelnemers en vaste ensembles. Er is  in de avonden ook tijd voor gelegenheidscombinaties.</p>
@@ -155,7 +154,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php'; ?>
          <p> Deze cursus wordt geleid door gedreven specialisten op hun vakgebied: <a href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>, <a href="docenten.php#huizinga">Femke&nbsp;Huizinga</a>, <a href="docenten.php#lindeijer">Hanna&nbsp;Lindeijer</a>, <a href="docenten.php#rodriguez">Ricardo&nbsp;Rodríguez&nbsp;Miranda</a>, <a href="docenten.php#sandler">Mitchell&nbsp;Sandler</a> en <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>.</p>
          <h2><a name="inschrijven"></a>Inschrijven</h2>
 <?php require_once($_SERVER['DOCUMENT_ROOT'].'/includes/inschrijven.php');?>
-          <p class="citaat">Frederiek Muller:	&quot;Zo heerlijk dat het al bij het eerste samenspel muziek is!&quot;  </p>
    </div>
   <!-- InstanceEndEditable -->
     <h2><a href="javascript: history.go(-1)">Terug</a></h2>
