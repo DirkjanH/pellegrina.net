@@ -142,8 +142,7 @@ require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . '/includes/includes2024.php' );
 						</li>
 					</ul>
 					<p class="plaatsvoor">Places available for two baroque oboes, some more baroque violins/violas and continuo players (organ/harpsichord/theorbo)</p>
-					<p class="volvoor">Full for all other instruments and singers</p>
-					<p class="volvoor onzichtbaar">This course is full for other instruments and for singers</p>
+					<p class="volvoor">This course is full for other instruments and for singers</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Play chamber music with the Kinsky Trio Prague & Friends</span></a></h3>
