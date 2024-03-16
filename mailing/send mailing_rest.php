@@ -50,12 +50,10 @@ $blokNr = (int) $eerder_verzonden_mails/$blokgrootte;
 //d($mailing);
 
 $query = "SELECT * FROM {$mailing_adressen} WHERE mailingId_FK = {$mailing_nr} AND tijd_verzonden IS NULL";
-// d($query);
-$stmt = $db->query($query);
-$adressen = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// d($adressen);
-
+$adressen = select_query($query);
 $aantal_emails = count($adressen);
+d($query, $adressen, $aantal_emails);
+
 $regel_bericht = '';
 $refresh = false;
 ?>
