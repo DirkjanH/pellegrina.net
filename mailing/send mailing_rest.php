@@ -5,6 +5,9 @@
 	<meta charset="utf-8">
 	<?php 
 //Connection statement
+
+use function PHPUnit\Framework\isNull;
+
 require_once ($_SERVER['CONTEXT_DOCUMENT_ROOT'].'/includes/includes2017.php');
 require_once $_SERVER["CONTEXT_DOCUMENT_ROOT"].'/vendor/autoload.php';
 require_once ($_SERVER['CONTEXT_DOCUMENT_ROOT'].'/includes/LPmailer.inc.php');	
@@ -72,7 +75,8 @@ echo $start_bericht = '+++++++++ '.date('d/m H:i').' Startbericht: tot nu toe ve
 $verzonden_mails = $eerder_verzonden_mails; //= $mailing['verzonden_mails'];
 
 foreach ($adressen as $nr => $adres) {
-	if ($nr >= $eerder_verzonden_mails AND $nr < $eerder_verzonden_mails+$blokgrootte) {
+	$nog_niet_verzonden = select_query("SELECT tijd_verzonden FROM mailing_adressen WHERE mailadresId = {$adres['mailadresId']}");
+	if (($nr >= $eerder_verzonden_mails OR isNull($nog_niet_verzonden)) AND $nr < $eerder_verzonden_mails+$blokgrootte) {
 		$mail = new LPmailer();
 		$mail->Subject = $Subject;
 		$mail->SetFrom($mailing['From'], $mailing['FromName']);
