@@ -108,7 +108,7 @@ echo $start_bericht = '+++++++++ '.date('d/m H:i').' Startbericht: tot nu toe ve
 $verzonden_mails = $eerder_verzonden_mails = $mailing['verzonden_mails'];
 
 foreach ($adressen as $nr => $adres) {
-	$nog_niet_verzonden = select_query("SELECT tijd_verzonden FROM mailing_adressen WHERE mailadresId = {$adres['mailadresId']}");
+	$nog_niet_verzonden = select_query("SELECT tijd_verzonden FROM mailing_adressen WHERE mailadresId = {$adres['mailadresId']}",2);
 	d($nog_niet_verzonden, $adres['mailadresId']);
 	if (($nr >= $eerder_verzonden_mails OR is_Null($nog_niet_verzonden)) AND $nr < $eerder_verzonden_mails+$blokgrootte) {
 		$encrypt = '';
