@@ -108,9 +108,9 @@ echo $start_bericht = '+++++++++ '.date('d/m H:i').' Startbericht: tot nu toe ve
 $verzonden_mails = $eerder_verzonden_mails = $mailing['verzonden_mails'];
 
 foreach ($adressen as $nr => $adres) {
-	$nog_niet_verzonden = !select_query("SELECT tijd_verzonden FROM mailing_adressen WHERE mailadresId = {$adres['mailadresId']}",0);
+	$nog_niet_verzonden = select_query("SELECT tijd_verzonden FROM mailing_adressen WHERE mailadresId = {$adres['mailadresId']}",0);
 	d($nog_niet_verzonden, $adres['mailadresId']);
-	if (($nr >= $eerder_verzonden_mails OR $nog_niet_verzonden === true) AND $nr < $eerder_verzonden_mails+$blokgrootte) {
+	if (($nr >= $eerder_verzonden_mails OR $nog_niet_verzonden === false) AND $nr < $eerder_verzonden_mails+$blokgrootte) {
 		$encrypt = '';
 		if ($adres['DlnmrId'] != '') $encrypt = encrypt_decrypt('encrypt', $adres[ 'DlnmrId' ]);
 		$mail = new LPmailer();
