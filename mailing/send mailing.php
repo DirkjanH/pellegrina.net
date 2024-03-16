@@ -8,7 +8,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/includes2024.php');
 require_once $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
 require_once $_SERVER["DOCUMENT_ROOT"].'/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_GET);
 
