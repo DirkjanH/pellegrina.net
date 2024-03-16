@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 //Connection statement
-require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/includes2023.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/includes2024.php');
 require_once $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
 require_once $_SERVER["DOCUMENT_ROOT"].'/includes/mailfuncties.inc.php';
 
