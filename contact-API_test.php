@@ -1,3 +1,6 @@
+<?$php
+require_once __DIR__ . '/vendor/autoload.php';
+
 use Google\Cloud\ResourceManager\V3\ContactsServiceClient;
 
 /**
@@ -22,3 +25,4 @@ function list_contacts(string $projectId): void
         printf('Contact: %s' . PHP_EOL, $contact->getName());
     }
 }  
+?>
