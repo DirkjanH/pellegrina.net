@@ -24,5 +24,4 @@ function list_contacts(string $projectId): void
     foreach ($contacts as $contact) {
         printf('Contact: %s' . PHP_EOL, $contact->getName());
     }
-}  
-?>
+}
