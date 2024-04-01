@@ -167,6 +167,12 @@ $cursusnr = 2 + $cursus_offset;
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(violons_1_&_2).pdf">Vivaldi - Cum dederit from Nisi Dominus - Violins 1 & 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(vlc_&_b.c.).pdf">Vivaldi - Cum dederit from Nisi Dominus - Celli & BC</a></li>
       </ul>
+      <h3>Vivaldi - Confitebor RV 596</h3>
+      <ul>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi,A+Confitebor+RV+596+(P,DW).pdf">Vivaldi - Confitebor RV 596 - Score</a></li>
+        <p>other parts to be added soon</p>
+      </ul>
+      <h3>Work for the orchestra only (to be added soon)</h3>
       <h3>Caldara - Salve Regina</h3>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Full Score.pdf">Caldara - Salve Regina - Full Score</a></li>
