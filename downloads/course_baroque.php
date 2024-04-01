@@ -136,7 +136,7 @@ $cursusnr = 2 + $cursus_offset;
         </ul>
       </div>
       <h2>Tutti programme</h2>
-      <p>All parts for the works we are going to perform are now available. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
+      <p>All parts for the works we are going to perform are now available. Please print and study what you needSingers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
       <h3>Vivaldi - Domine ad adjuvandum me festina RV 593</h3>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf">Vivaldi-Domine_ad_adjuvandum - Full Score</a></li>
@@ -150,6 +150,11 @@ $cursusnr = 2 + $cursus_offset;
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Cello & double bass 1-2.pdf">Vivaldi-Domine_ad_adjuvandum - Cello & double bass 1-2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 1.pdf">Vivaldi-Domine_ad_adjuvandum - BC 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 2.pdf">Vivaldi-Domine_ad_adjuvandum - BC 2</a></li>
+      </ul>
+      <h3>Vivaldi - Confitebor RV 596</h3>
+      <ul>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi,A+Confitebor+RV+596+(P,DW).pdf">Vivaldi - Confitebor RV 596 - Score</a></li>
+        <p>other parts to be added soon</p>
       </ul>
       <h3>Galuppi - Laetatus sum</h3>
       <ul>
@@ -166,11 +171,6 @@ $cursusnr = 2 + $cursus_offset;
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(alto).pdf">Vivaldi - Cum dederit from Nisi Dominus - Alto part</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(violons_1_&_2).pdf">Vivaldi - Cum dederit from Nisi Dominus - Violins 1 & 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(vlc_&_b.c.).pdf">Vivaldi - Cum dederit from Nisi Dominus - Celli & BC</a></li>
-      </ul>
-      <h3>Vivaldi - Confitebor RV 596</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi,A+Confitebor+RV+596+(P,DW).pdf">Vivaldi - Confitebor RV 596 - Score</a></li>
-        <p>other parts to be added soon</p>
       </ul>
       <h3>Work for the orchestra only (to be added soon)</h3>
       <h3>Caldara - Salve Regina</h3>
