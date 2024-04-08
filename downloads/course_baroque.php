@@ -154,7 +154,13 @@ $cursusnr = 2 + $cursus_offset;
       <h3>Vivaldi - Confitebor RV 596</h3>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi,A+Confitebor+RV+596+(P,DW).pdf">Vivaldi - Confitebor RV 596 - Score</a></li>
-        <p>other parts to be added soon</p>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - vocal score.pdf">Vivaldi - Confitebor RV 596 - Vocal score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 1.pdf">Vivaldi - Confitebor RV 596 - Oboe 1</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 2.pdf">Vivaldi - Confitebor RV 596 - Oboe 2</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 1.pdf">Vivaldi - Confitebor RV 596 - Violino 1</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 2.pdf">Vivaldi - Confitebor RV 596 - Violino 2</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - viola.pdf">Vivaldi - Confitebor RV 596 - Viola</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - bass.pdf">Vivaldi - Confitebor RV 596 - Cello, double bass, bassoon</a></li>
       </ul>
       <h3>Galuppi - Laetatus sum</h3>
       <ul>
