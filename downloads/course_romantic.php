@@ -135,8 +135,8 @@ $cursusnr = 1 + $cursus_offset;
       </div>
       <p>Excellent recordings to get an impression:</p>
       <ul>
-        <li><a href="https://www.youtube.com/watch?v=_pjcxtPbXrc&list=PLyciOZYqFmnLUwQEHGiqrC7rVWTr9ZLhY" target="_blank">Reicha's Requiem on Youtube (Dvorak Chamber Orchestra -
-            Prague Philharmonic Choir - Lubomir Matl, cond.)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=_pjcxtPbXrc&list=PLyciOZYqFmnLUwQEHGiqrC7rVWTr9ZLhY" target="_blank">Reicha's Requiem on Youtube</a> (Dvorak Chamber Orchestra -
+          Prague Philharmonic Choir - Lubomir Matl, cond.)</li>
         <li>Dvorak - Symphonic Variations op. 78 - BBC Symphony Orchestra conducted by Jiří Bělohlávek - with the full score:<br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=6s">Theme - 0:06</a></br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=49s">Var. 1 - 0:49</a></br>
