@@ -138,37 +138,36 @@ $cursusnr = 1 + $cursus_offset;
       <p>Excellent recordings to get an impression:</p>
       <ul>
         <li><a href="https://www.youtube.com/watch?v=_pjcxtPbXrc&list=PLyciOZYqFmnLUwQEHGiqrC7rVWTr9ZLhY" target="_blank">Reicha's Requiem on Youtube</a></li>
-        <li>Dvorak - Symphonic Variations op. 78:<br>
-          Sections:<br>
-          Theme <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=6s">0:06</a>
-          Var. 1 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=49s">0:49</a>
-          Var. 2 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=84s">1:24</a>
-          Var. 3 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=118s">1:58</a>
-          Var. 4 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=148s">2:28</a>
-          Var. 5 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=178s">2:58</a>
-          Var. 6 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=198s">3:18</a>
-          Var. 7 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=239s">3:59</a>
-          Var. 8 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=270s">4:30</a>
-          Var. 9 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=310s">5:10</a>
-          Var. 10 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=348s">5:48</a>
-          Var. 11 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=371s">6:11</a>
-          Var. 12 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=430s">7:10</a>
-          Var. 13 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=483s">8:03</a>
-          Var. 14 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=512s">8:32</a>
-          Var. 15 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=579s">9:39</a>
-          Var. 16 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=647s">10:47</a>
-          Var. 17 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=669s">11:09</a>
-          Var. 18 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=709s">11:49</a>
-          Var. 19 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=763s">12:43</a>
-          Var. 20 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=809s">13:29</a>
-          Var. 21 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=828s">13:48</a>
-          Var. 22 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=850s">14:10</a>
-          Var. 23 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=878s">14:38</a>
-          Var. 24 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=916s">15:16</a>
-          Var. 25 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1025s">17:05</a>
-          Var. 26 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1061s">17:41</a>
-          Var. 27 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1106s">18:26</a>
-          Finale <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1150s">19:10</a>
+        <li>Dvorak - Symphonic Variations op. 78 - BBC Symphony Orchestra conducted by Jiří Bělohlávek:<br>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=6s">Theme 0:06</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=49s">Var. 1 0:49</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=84s">Var. 2 1:24</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=118s">Var. 3 1:58</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=148s">Var. 4 2:28</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=178s">Var. 5 2:58</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=198s">Var. 6 3:18</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=239s">Var. 7 3:59</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=270s">Var. 8 4:30</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=310s">Var. 9 5:10</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=348s">Var. 10 5:48</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=371s">Var. 11 6:11</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=430s">Var. 12 7:10</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=483s">Var. 13 8:03</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=512s">Var. 14 8:32</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=579s">Var. 15 9:39</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=647s">Var. 16 10:47</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=669s">Var. 17 11:09</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=709s">Var. 18 11:49</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=763s">Var. 19 12:43</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=809s">Var. 20 13:29</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=828s">Var. 21 13:48</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=850s">Var. 22 14:10</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=878s">Var. 23 14:38</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=916s">Var. 24 15:16</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1025s">Var. 25 17:05</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1061s">Var. 26 17:41</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1106s">Var. 27 18:26</a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1150s">Finale 19:10</a>
         </li>
 
       </ul>
