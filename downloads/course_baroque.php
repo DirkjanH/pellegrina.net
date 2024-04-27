@@ -180,10 +180,8 @@ $cursusnr = 2 + $cursus_offset;
       </ul>
       <h3>Vivaldi - Sinfonie avanti la Senna Festeggiante RV 693</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_flauti.pdf" target="_blank">Flauti 1/2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_oboi.pdf" target="_blank">Oboi 1/2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino1.pdf" target="_blank">Violini 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino2.pdf" target="_blank">Violini 2</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino1.pdf" target="_blank">Flauto/oboe/violini 1</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino2.pdf" target="_blank">Flauto/oboe/violini 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_viola.pdf" target="_blank">Viole</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_basso_continuo.pdf" target="_blank">Basso (celli, double bass, BC)</a></li>
       </ul>
