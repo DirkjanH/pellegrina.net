@@ -138,37 +138,38 @@ $cursusnr = 1 + $cursus_offset;
       <p>Excellent recordings to get an impression:</p>
       <ul>
         <li><a href="https://www.youtube.com/watch?v=_pjcxtPbXrc&list=PLyciOZYqFmnLUwQEHGiqrC7rVWTr9ZLhY" target="_blank">Reicha's Requiem on Youtube</a></li>
-        <li>Dvorak - Symphonic Variations op. 78:</li>
-        <span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap" dir="auto">Timestamps:
-          Theme <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=6s" rel="nofollow" target="" force-new-state="true" dir="auto">0:06</a></span>
-          Var. 1 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=49s" rel="nofollow" target="" force-new-state="true" dir="auto">0:49</a></span>
-          Var. 2 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=84s" rel="nofollow" target="" force-new-state="true" dir="auto">1:24</a></span>
-          Var. 3 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=118s" rel="nofollow" target="" force-new-state="true" dir="auto">1:58</a></span>
-          Var. 4 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=148s" rel="nofollow" target="" force-new-state="true" dir="auto">2:28</a></span>
-          Var. 5 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=178s" rel="nofollow" target="" force-new-state="true" dir="auto">2:58</a></span>
-          Var. 6 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=198s" rel="nofollow" target="" force-new-state="true" dir="auto">3:18</a></span>
-          Var. 7 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=239s" rel="nofollow" target="" force-new-state="true" dir="auto">3:59</a></span>
-          Var. 8 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=270s" rel="nofollow" target="" force-new-state="true" dir="auto">4:30</a></span>
-          Var. 9 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=310s" rel="nofollow" target="" force-new-state="true" dir="auto">5:10</a></span>
-          Var. 10 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=348s" rel="nofollow" target="" force-new-state="true" dir="auto">5:48</a></span>
-          Var. 11 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=371s" rel="nofollow" target="" force-new-state="true" dir="auto">6:11</a></span>
-          Var. 12 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=430s" rel="nofollow" target="" force-new-state="true" dir="auto">7:10</a></span>
-          Var. 13 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=483s" rel="nofollow" target="" force-new-state="true" dir="auto">8:03</a></span>
-          Var. 14 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=512s" rel="nofollow" target="" force-new-state="true" dir="auto">8:32</a></span>
-          Var. 15 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=579s" rel="nofollow" target="" force-new-state="true" dir="auto">9:39</a></span>
-          Var. 16 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=647s" rel="nofollow" target="" force-new-state="true" dir="auto">10:47</a></span>
-          Var. 17 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=669s" rel="nofollow" target="" force-new-state="true" dir="auto">11:09</a></span>
-          Var. 18 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=709s" rel="nofollow" target="" force-new-state="true" dir="auto">11:49</a></span>
-          Var. 19 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=763s" rel="nofollow" target="" force-new-state="true" dir="auto">12:43</a></span>
-          Var. 20 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=809s" rel="nofollow" target="" force-new-state="true" dir="auto">13:29</a></span>
-          Var. 21 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=828s" rel="nofollow" target="" force-new-state="true" dir="auto">13:48</a></span>
-          Var. 22 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=850s" rel="nofollow" target="" force-new-state="true" dir="auto">14:10</a></span>
-          Var. 23 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=878s" rel="nofollow" target="" force-new-state="true" dir="auto">14:38</a></span>
-          Var. 24 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=916s" rel="nofollow" target="" force-new-state="true" dir="auto">15:16</a></span>
-          Var. 25 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=1025s" rel="nofollow" target="" force-new-state="true" dir="auto">17:05</a></span>
-          Var. 26 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=1061s" rel="nofollow" target="" force-new-state="true" dir="auto">17:41</a></span>
-          Var. 27 <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=1106s" rel="nofollow" target="" force-new-state="true" dir="auto">18:26</a></span>
-          Finale <span class="" dir="auto" style="font-weight: 400;"><a class="yt-core-attributed-string__link yt-core-attributed-string__link--display-type yt-core-attributed-string__link--call-to-action-color" tabindex="0" href="/watch?v=gKKU65NvvCI&amp;t=1150s" rel="nofollow" target="" force-new-state="true" dir="auto">19:10</a></span></span>
+        <li>Dvorak - Symphonic Variations op. 78:<br>
+          Sections:<br>
+          Theme <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=6s">0:06</a>
+          Var. 1 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=49s">0:49</a>
+          Var. 2 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=84s">1:24</a>
+          Var. 3 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=118s">1:58</a>
+          Var. 4 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=148s">2:28</a>
+          Var. 5 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=178s">2:58</a>
+          Var. 6 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=198s">3:18</a>
+          Var. 7 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=239s">3:59</a>
+          Var. 8 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=270s">4:30</a>
+          Var. 9 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=310s">5:10</a>
+          Var. 10 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=348s">5:48</a>
+          Var. 11 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=371s">6:11</a>
+          Var. 12 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=430s">7:10</a>
+          Var. 13 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=483s">8:03</a>
+          Var. 14 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=512s">8:32</a>
+          Var. 15 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=579s">9:39</a>
+          Var. 16 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=647s">10:47</a>
+          Var. 17 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=669s">11:09</a>
+          Var. 18 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=709s">11:49</a>
+          Var. 19 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=763s">12:43</a>
+          Var. 20 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=809s">13:29</a>
+          Var. 21 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=828s">13:48</a>
+          Var. 22 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=850s">14:10</a>
+          Var. 23 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=878s">14:38</a>
+          Var. 24 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=916s">15:16</a>
+          Var. 25 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1025s">17:05</a>
+          Var. 26 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1061s">17:41</a>
+          Var. 27 <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1106s">18:26</a>
+          Finale <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1150s">19:10</a>
+        </li>
 
       </ul>
 
