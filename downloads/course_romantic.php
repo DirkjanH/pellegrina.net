@@ -138,7 +138,7 @@ $cursusnr = 1 + $cursus_offset;
       <p>Excellent recordings to get an impression:</p>
       <ul>
         <li><a href="https://www.youtube.com/watch?v=_pjcxtPbXrc&list=PLyciOZYqFmnLUwQEHGiqrC7rVWTr9ZLhY" target="_blank">Reicha's Requiem on Youtube</a></li>
-        <li>Dvorak - Symphonic Variations op. 78 - BBC Symphony Orchestra conducted by Jiří Bělohlávek:<br>
+        <li>Dvorak - Symphonic Variations op. 78 - BBC Symphony Orchestra conducted by Jiří Bělohlávek - with the full score:<br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=6s">Theme - 0:06</a></br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=49s">Var. 1 - 0:49</a></br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=84s">Var. 2 - 1:24</a></br>
@@ -169,16 +169,12 @@ $cursusnr = 1 + $cursus_offset;
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1106s">Var. 27 - 18:26</a></br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=1150s">Finale - 19:10</a>
         </li>
-
       </ul>
-
-      <!-- InstanceEndEditable -->
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
       <p>&nbsp;</p>
     </div>
   </div>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd -->
 
 </html>
