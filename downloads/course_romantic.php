@@ -109,7 +109,7 @@ $cursusnr = 1 + $cursus_offset;
 
       <h3>Anton Reicha - Messe des Morts (Requiem) in d</h3>
       <p>Singers can download and print the <a href="../pdf/2024-1/Reicha/Reicha-Requiem_vocal_score.pdf" target="_blank">vocal score</a></p>
-      <h4>Orchestral parts for Haydn's Spring</h4>
+      <h4>Orchestral parts</h4>
       <div class="cols3">
         <ul>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-flute_1.pdf.pdf" target="_blank">Flute I</a></li>
