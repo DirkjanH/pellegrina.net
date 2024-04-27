@@ -107,13 +107,13 @@ $cursusnr = 1 + $cursus_offset;
         </ul>
       </div>
 
-      <h3>Anton Reicha - Messe des Morts (Requiem) in d</h3>
+      <h3>Anton Reicha - Messe des Morts (Requiem)</h3>
       <p>Singers can download and print the <a href="../pdf/2024-1/Reicha/Reicha-Requiem_vocal_score.pdf" target="_blank">vocal score</a></p>
       <h4>Orchestral parts</h4>
       <div class="cols3">
         <ul>
-          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-flute_1.pdf.pdf" target="_blank">Flute I</a></li>
-          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-flute_2.pdf.pdf" target="_blank">Flute II</a></li>
+          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-flute_1.pdf" target="_blank">Flute I</a></li>
+          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-flute_2.pdf" target="_blank">Flute II</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-oboe_1.pdf" target="_blank">Oboe I</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-oboe_2.pdf" target="_blank">Oboe II</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-clarinet_1.pdf" target="_blank">Clarinet I</a></li>
@@ -137,7 +137,8 @@ $cursusnr = 1 + $cursus_offset;
       </div>
       <p>Excellent recordings to get an impression:</p>
       <ul>
-        <li><a href="https://www.youtube.com/watch?v=_pjcxtPbXrc&list=PLyciOZYqFmnLUwQEHGiqrC7rVWTr9ZLhY" target="_blank">Reicha's Requiem on Youtube</a></li>
+        <li><a href="https://www.youtube.com/watch?v=_pjcxtPbXrc&list=PLyciOZYqFmnLUwQEHGiqrC7rVWTr9ZLhY" target="_blank">Reicha's Requiem on Youtube (Dvorak Chamber Orchestra -
+            Prague Philharmonic Choir - Lubomir Matl, cond.)</a></li>
         <li>Dvorak - Symphonic Variations op. 78 - BBC Symphony Orchestra conducted by Jiří Bělohlávek - with the full score:<br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=6s">Theme - 0:06</a></br>
           <a target="_blank" href="https://www.youtube.com/watch?v=gKKU65NvvCI&amp;t=49s">Var. 1 - 0:49</a></br>
