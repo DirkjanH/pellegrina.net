@@ -86,6 +86,7 @@ $cursusnr = 1 + $cursus_offset;
       </div>
       <h2>Works for the final concert</h2>
       <h3>Dvořák - Symphonic Variations op. 87</h3>
+      <p><a href="../pdf/2024-1/sym-var/DVORAK_-_SYMPHONIC_VARIATIONS,_OP._78_(BARTOS)_-_Conductor_Score.pdf" target="_blank">Full score</a></p>
       <div class="cols3">
         <ul>
           <li><a href="../pdf/2024-1/sym-var/DVORAK_-_SYMPHONIC_VARIATIONS,_OP._78_(BARTOS)_-_Flute_1-2.pdf" target="_blank">Flute I/II</a></li>
@@ -102,8 +103,6 @@ $cursusnr = 1 + $cursus_offset;
           <li><a href="../pdf/2024-1/sym-var/Dvorak - Symphonic variations vla._betekend.pdf" target="_blank">Viola</a></li>
           <li><a href="../pdf/2024-1/sym-var/Dvorak - Symphonic variations vlc._betekend.pdf" target="_blank">Cello</a></li>
           <li><a href="../pdf/2024-1/sym-var/Dvorak - Symphonic variations cbs._betekend.pdf" target="_blank">Double bass</a></li>
-          <br>
-          <li><a href="../pdf/2024-1/sym-var/DVORAK_-_SYMPHONIC_VARIATIONS,_OP._78_(BARTOS)_-_Conductor_Score.pdf" target="_blank">Full score</a></li>
         </ul>
       </div>
 
