@@ -103,7 +103,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p class="citaat"><span tabindex="-1" id="result_box2" lang="en"></span>Henriëtte Hamer: &quot;La Pellegrina invites you to do things you did not suspect that you could or maybe even dared&quot;</p>
       <div class="container">
         <h3>The programme for soloists, choir and orchestra: <em>Reicha's Requiem</em></h3>
-        <div class="fotolinks"><img src="Images\Locaties\Budejovice\kloosterkerk_CB.jpg" alt="monastery church" width="400" class="w3-image"><br>
+        <div class="fotolinks"><img src="\Images\Locaties\Budejovice\kloosterkerk_CB.jpg" alt="monastery church" width="400" class="w3-image"><br>
           České Budějovice monastery church</div>
         <p>Each afternoon we work on a programme for choir and orchestra, which is performed publicly as the conclusion of the course. This year, this final concert will feature a programme of two works, namely Anton Reicha's <em>Missa pro defunctis </em>(Requiem) for soloists, choir and orchestra. In addition, the orchestra will work on Dvořák's <em>Symphonic Variations</em>. <a href="programma.php">Read more about the works and their musical and historical context here</a>. The concert will take place in the magnificent and magnificently sounding České Budějovice monastery church. On the 1st of June we'll slap a first coat of paint on the music, as preparation for the summer, in Den Dolder near Utrecht. Of course this rehearsal is not mandatory for people not living in the Netherlands, but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.</p>
       </div>

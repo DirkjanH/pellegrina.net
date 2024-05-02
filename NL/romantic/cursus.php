@@ -97,7 +97,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p class="citaat">Henriëtte Hamer: La Pellegrina nodigt je uit om dingen doen waarvan je niet vermoedde dat je het kon of misschien zelfs durfde</p>
       <div class="container">
         <h3>Het programma voor solisten, koor en orkest:<em> Reicha's Requiem</em></h3>
-        <div class="fotolinks"><img src="Images\Locaties\Budejovice\kloosterkerk_CB.jpg" alt="kloosterkerk České Budějovice" width="400" class="w3-image"><br>
+        <div class="fotolinks"><img src="\Images\Locaties\Budejovice\kloosterkerk_CB.jpg" alt="kloosterkerk České Budějovice" width="400" class="w3-image"><br>
           De kloosterkerk van České Budějovice</div>
         <p>Elke middag werken we aan een programma voor koor en orkest, dat als afsluiting van de cursus openbaar wordt uitgevoerd. Dit jaar klinkt in dit slotconcert een programma met twee werken, namelijk de <em>Missa pro defunctis</em> (Requiem) van Anton Reicha voor solisten, koor en orkest. Daarnaast werkt het orkest aan de <em>Symfonische Variaties</em> van Dvořák. <a href="programma.php">Lees hier meer over de werken en hun muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en magnifiek klinkende kloosterkerk van České Budějovice.
           Het programma wordt 'ingezeept' in een voorbereidende repetitie op zaterdag 1 juni in Den Dolder bij Utrecht.</p>
