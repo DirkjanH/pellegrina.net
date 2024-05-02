@@ -132,7 +132,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 					<ul>
 						<li>Klooster Nieuw Sion, Diepenveen, 11 - 17 augustus <?php echo $jaar ?></li>
 					</ul>
-					<p class="plaatsvoor">Nog plaats voor enkele violen en clavecimbel/orgel/theorbe</p>
+					<p class="plaatsvoor">Nog plaats voor twee barokviolen/alten en clavecimbel/orgel/theorbe</p>
 					<p class="volvoor">Deze cursus is vol voor overige instrumenten en voor zangers</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
