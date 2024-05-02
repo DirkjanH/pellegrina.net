@@ -116,8 +116,8 @@ $cursusnr = 1 + $cursus_offset;
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-oboe_2.pdf" target="_blank">Oboe II</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-clarinet_1.pdf" target="_blank">Clarinet I</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-clarinet_2.pdf" target="_blank">Clarinet II</a></li>
-          <li><a href="../pdf/2024-1/Reicha/HReicha-Requiem-bassoon_1.pdf" target="_blank">Bassoon I</a></li>
-          <li><a href="../pdf/2024-1/Reicha/HReicha-Requiem-bassoon_2.pdf" target="_blank">Bassoon II</a></li>
+          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-bassoon_1.pdf" target="_blank">Bassoon I</a></li>
+          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-bassoon_2.pdf" target="_blank">Bassoon II</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-horn_1.pdf" target="_blank">Horn I</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-horn_2.pdf" target="_blank">Horn II</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-trumpet_1-3.pdf" target="_blank">Trumpet I/II/III</a></li>
