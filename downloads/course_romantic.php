@@ -126,8 +126,8 @@ $cursusnr = 1 + $cursus_offset;
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-trombone_3.pdf" target="_blank">Trombone III</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-timpani.pdf" target="_blank">Timpani</a></li>
           <br>
-          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-violin_1.pdf" target="_blank">Violin I (for now without bowings)</a></li>
-          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-violin_2.pdf" target="_blank">Violin II (for now without bowings)</a></li>
+          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-violin_1.pdf" target="_blank">Violin I (with bowings)</a></li>
+          <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-violin_2.pdf" target="_blank">Violin II (with bowings)</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-viola.pdf" target="_blank">Viola (for now without bowings)</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-cello.pdf" target="_blank">Cello (for now without bowings)</a></li>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-contrabass.pdf" target="_blank">Double Bass (for now without bowings)</a></li>
