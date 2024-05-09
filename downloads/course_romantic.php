@@ -108,7 +108,11 @@ $cursusnr = 1 + $cursus_offset;
 
       <h3>Anton Reicha - Messe des Morts (Requiem)</h3>
       <p>Singers can download and print the <a href="../pdf/2024-1/Reicha/Reicha-Requiem_vocal_score.pdf" target="_blank">vocal score</a></p>
-      <p>Tenors can <a href="\MP3\Reicha deel Requiem en Cum Sanctis vanaf blz 146.mp3">here download a recording of the fugues</a> of the Requiem and Cum sanctis with their part emphasized with piano, made by Anja Kwakkestein. </p>
+      <p>Tenors can here download a recording of the fugues of the Requiem and Cum sanctis (from p. 146) with their part emphasized with piano, made by Anja Kwakkestein. There are two versions:</p>
+      <ol>
+        <li><a href="\MP3\Reicha deel Requiem en Cum Sanctis vanaf blz 146.mp3">Full tempo</a></li>
+        <li><a href="\MP3\Reicha%20deel%20Requiem%20en%20Cum%20Sanctis%20vanaf%20blz%20146%2075%25.mp3">Slowed down to 75 % of the full tempo</li>
+      </ol>
       <div class="cols3">
         <ul>
           <li><a href="../pdf/2024-1/Reicha/Reicha-Requiem-flute_1.pdf" target="_blank">Flute I</a></li>
