@@ -57,7 +57,7 @@ $cursusnr = 1 + $cursus_offset;
         <tr>
           <td class="w3-center"><a href="https://www.google.com/maps/d/u/0/edit?mid=1zv5-hN4rGS_fZVT6gYvyPTuxC86MaC0&usp=sharing" target="_blank">Map of České Budějovice, with all venues</a></td>
           <td class="w3-center"><a href="../part_list.php?cursus=1" target="_blank">List of participants</a></td>
-          <td class="w3-center uit"><a xxxx="../ensemblelijst_1.php" target="_blank">Chamber music formations</a></td>
+          <td class="w3-center"><a href="../ensemblelijst_1.php" target="_blank">Chamber music formations</a></td>
           <td class="w3-center uit"><a xxxx="https://docs.google.com/spreadsheets/d/1bwy8fsIa1gLEtDzFGdV6C9t7NF1YT5km-Bift1fuRIU/edit?usp=sharing" target="_blank">Accommodation overview</a></td>
           <td class="w3-center uit"><a xxxx="2024-1 daily programme.pdf" target="_blank">Daily program</a></td>
         </tr>
