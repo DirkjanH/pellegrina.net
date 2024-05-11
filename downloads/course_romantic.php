@@ -110,8 +110,8 @@ $cursusnr = 1 + $cursus_offset;
       <p>Singers can download and print the <a href="../pdf/2024-1/Reicha/Reicha-Requiem_vocal_score.pdf" target="_blank">vocal score</a></p>
       <p>Tenors can here download a recording of the fugues of the Requiem and Cum sanctis (from p. 146) with their part emphasized with piano, made by Anja Kwakkestein. There are two versions:</p>
       <ol>
-        <li><a href="\MP3\Reicha deel Requiem en Cum Sanctis vanaf blz 146.mp3">Practice file Requiem and Cum Sanctis from page 146, full tempo</a></li>
-        <li><a href="\MP3\Reicha%20deel%20Requiem%20en%20Cum%20Sanctis%20vanaf%20blz%20146%2075%25.mp3">Practice file Requiem and Cum Sanctis from page 146, slowed down to 75 % of the full tempo</li>
+        <li><a href="\MP3\Reicha deel Requiem en Cum Sanctis vanaf blz 146.mp3">Practice file tenor Requiem and Cum Sanctis from page 146, full tempo</a></li>
+        <li><a href="\MP3\Reicha%20deel%20Requiem%20en%20Cum%20Sanctis%20vanaf%20blz%20146%2075%25.mp3">Practice file tenor Requiem and Cum Sanctis from page 146, slowed down to 75 % of the full tempo</li>
         <li><a href="\MP3\Quam Olim Abrahae, Reicha Requiem tenor.mp3">Practice file tenor Quam olim Abrahae, from page 89 and page 108, full tempo</a></li>
       </ol>
       <div class="cols3">
