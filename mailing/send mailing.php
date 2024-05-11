@@ -123,7 +123,7 @@ $querystring = str_replace('SID', '', $_SERVER['QUERY_STRING']);
 			if (isset($adres['cursus']) and $adres['cursus'] != '') $mail_body = str_replace("{cursus}", $adres['cursus'], $mail_body);
 			if (isset($adres['password']) and $adres['password'] != '') $mail_body = str_replace("{password}", $adres['password'], $mail_body);
 			$mail_body = str_replace("DlnmrIdx", $encrypt, $mail_body);
-			$tracker = 'https://pellegrina.net/volg/volg.php?kenmerk=' . urlencode($adres['kenmerk']);
+			$tracker = 'https://pellegrina.net/mailing/volg/volg.php?kenmerk=' . urlencode($adres['kenmerk']);
 			$mail_body = str_replace('</body>', '<img src="' . $tracker . '" border="0" alt=""/></body>', $mail_body);
 
 			d($mail_body);
