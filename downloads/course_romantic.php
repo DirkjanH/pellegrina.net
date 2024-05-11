@@ -62,11 +62,11 @@ $cursusnr = 1 + $cursus_offset;
           <td class="w3-center uit"><a xxxx="2024-1 daily programme.pdf" target="_blank">Daily program</a></td>
         </tr>
       </table>
-      <div class="onzichtbaar">
+      <div>
         <h2>Chamber Choir Repertoire</h2>
         <ul>
-          <li><a href="../pdf/2024-1/2024_chamber_choir.pdf" target="_blank">Chamber Choir Repertoire 2023</a> (86 pages)</li>
-          <li><a href="https://midi.emjeka.nl/midifiles/kamerkoor2023.html" target="_blank">MIDI practice files</a> (mostly made by former participant Marrie Kardol)</li>
+          <li><a href="../pdf/2024-1/chamberchoir_2024.pdf" target="_blank">Chamber Choir Repertoire 2024</a> (46 pages)</li>
+          <li class="onzichtbaar"><a href="https://midi.emjeka.nl/midifiles/kamerkoor2023.html" target="_blank">MIDI practice files</a> (mostly made by former participant Marrie Kardol)</li>
           <li class="onzichtbaar"><a href="https://drive.google.com/drive/folders/1mr8QYstPTyq3yMSyWDBAnjnJyImT8aTb?usp=sharing" target="_blank">MIDI files of the chamber choir repertoire</a>, made by Rob den Heijer</li>
 
         </ul>
