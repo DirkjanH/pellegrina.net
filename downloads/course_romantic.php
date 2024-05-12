@@ -78,6 +78,7 @@
             <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - violino II.pdf">Jadassohn - Serenade for Flute and Strings op.80 - violino II</a></li>
             <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - viola.pdf">Jadassohn - Serenade for Flute and Strings op.80 - viola</a></li>
             <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - cello.pdf">Jadassohn - Serenade for Flute and Strings op.80 - cello</a></li>
+            <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - double bass.pdf">Jadassohn - Serenade for Flute and Strings op.80 - double bass</a></li>
           </ul>
         </div>
         <div class="onzichtbaar">
