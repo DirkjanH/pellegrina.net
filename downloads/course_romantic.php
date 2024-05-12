@@ -71,9 +71,17 @@ $cursusnr = 1 + $cursus_offset;
 
         </ul>
       </div>
-      <div class="onzichtbaar">
+      <div>
         <h2>Some chamber music works</h2>
-        <h4>Pergolesi - Stabat Mater</h4>
+        <h4>Jadassohn - Serenade for Flute and Strings op.80</h4>
+        <ul>
+          <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - flute.pdf">Jadassohn - Serenade for Flute and Strings op.80 - flute</a></li>
+          <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - violino I.pdf">Jadassohn - Serenade for Flute and Strings op.80 - violino I</a></li>
+          <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - violino II.pdf">Jadassohn - Serenade for Flute and Strings op.80 - violino II</a></li>
+          <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - viola.pdf">Jadassohn - Serenade for Flute and Strings op.80 - viola</a></li>
+          <li><a href="../pdf/2024-1/Jadassohn/Serenade for Flute and Strings op.80 - cello.pdf">Jadassohn - Serenade for Flute and Strings op.80 - cello</a></li>
+        </ul>
+        <h4 class="onzichtbaar">Pergolesi - Stabat Mater</h4>
         <div class="cols3">
           <ul>
             <li><a href="../pdf/2022-2/Pergolesi/pergolesi_sm_vln.I.pdf" target="_blank">Violin I</a></li>
