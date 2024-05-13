@@ -1096,12 +1096,10 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 		<div id="message_area"> <strong>Subject:</strong>
 			<input name="subject" type="text" id="subject" size="70" value="<?php echo stripslashes($nieuwsbrief['subject']); ?>">
 			<br>
-			<div id="message_area">
-				<p>Joehoe!</p>
-			</div>
+			<div id="message"></div>
 			<script>
 				ClassicEditor
-					.create(document.querySelector('#message_area'))
+					.create(document.querySelector('#message'))
 					.catch(error => {
 						console.error(error);
 					});
