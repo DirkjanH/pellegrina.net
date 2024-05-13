@@ -929,7 +929,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
 
-	<script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/decoupled-document/ckeditor.js"></script>
 
 	<script>
 		function Selecteer(code, Nr) {
@@ -1088,7 +1088,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 			overflow: hidden;
 		}
 
-		div#message {
+		div#editor {
 			height: 500px;
 			background-color: aliceblue;
 		}
@@ -1101,10 +1101,15 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 		<div id="message_area"> <strong>Subject:</strong>
 			<input name="subject" type="text" id="subject" size="70" value="<?php echo stripslashes($nieuwsbrief['subject']); ?>">
 			<br>
-			<div id="message"></div>
+			<div id="editor"></div>
 			<script>
-				ClassicEditor
-					.create(document.querySelector('#message'))
+				DecoupledEditor
+					.create(document.querySelector('#editor'))
+					.then(editor => {
+						const toolbarContainer = document.querySelector('#toolbar-container');
+
+						toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+					})
 					.catch(error => {
 						console.error(error);
 					});
