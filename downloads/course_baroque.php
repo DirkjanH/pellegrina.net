@@ -153,7 +153,7 @@ $cursusnr = 2 + $cursus_offset;
       </ul>
       <h3>Vivaldi - Confitebor RV 596</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi,A+Confitebor+RV+596+(P,DW).pdf">Vivaldi - Confitebor RV 596 - Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi%20-%20Confitebor%20RV%20596/Vivaldi%20-%20Confitebor%20RV%20596%20-%20score.pdf">Vivaldi - Confitebor RV 596 - Score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - vocal score.pdf">Vivaldi - Confitebor RV 596 - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 1.pdf">Vivaldi - Confitebor RV 596 - Oboe 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 2.pdf">Vivaldi - Confitebor RV 596 - Oboe 2</a></li>
