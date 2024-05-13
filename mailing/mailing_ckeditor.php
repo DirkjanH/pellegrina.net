@@ -1087,6 +1087,11 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 			width: 100%;
 			overflow: hidden;
 		}
+
+		div#message {
+			height: 500px;
+			background-color: aliceblue;
+		}
 		-->
 	</style>
 </head>
