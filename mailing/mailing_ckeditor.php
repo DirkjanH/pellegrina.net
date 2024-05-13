@@ -931,154 +931,164 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 
 	<script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
 
-	function Selecteer (code, Nr) {
-	switch (code) {
-	case 'a':
-	document.getElementById('selectie').value = 'alles';
-	document.getElementById('formulier').submit();
-	break;
-	case 'n':
-	document.getElementById('selectie').value = 'niet-ingeschreven';
-	document.getElementById('formulier').submit();
-	break;
-	case 'g':
-	document.getElementById('selectie').value = 'google';
-	document.getElementById('outlook').class = '';
-	document.getElementById('formulier').submit();
-	break;
-	case 'o':
-	document.getElementById('selectie').value = 'outlook';
-	document.getElementById('outlook').class = '';
-	document.getElementById('formulier').submit();
-	break;
-	case 'v':
-	document.getElementById('selectie').value = 'csv';
-	document.getElementById('outlook').class = '';
-	document.getElementById('formulier').submit();
-	break;
-	case 'l':
-	document.getElementById('selectie').value = 'distributielijst';
-	document.getElementById('outlook').class = '';
-	document.getElementById('formulier').submit();
-	break;
-	case 'f':
-	document.getElementById('selectie').value = 'emails';
-	document.getElementById('outlook').class = '';
-	document.getElementById('formulier').submit();
-	break;
-	case 'd':
-	document.getElementById('selectie').value = 'access';
-	document.getElementById('outlook').class = '';
-	document.getElementById('formulier').submit();
-	break;
-	case 'lp-nl':
-	document.getElementById('selectie').value = 'lp-nl';
-	document.getElementById('formulier').submit();
-	break;
-	case 'lp-eng':
-	document.getElementById('selectie').value = 'lp-eng';
-	document.getElementById('formulier').submit();
-	break;
-	case 'utrecht':
-	document.getElementById('selectie').value = 'utrecht';
-	document.getElementById('formulier').submit();
-	break;
-	case 'culemborg':
-	document.getElementById('selectie').value = 'culemborg';
-	document.getElementById('formulier').submit();
-	break;
-	case 'arnhem':
-	document.getElementById('selectie').value = 'arnhem';
-	document.getElementById('formulier').submit();
-	break;
-	case 'afoort':
-	document.getElementById('selectie').value = 'afoort';
-	document.getElementById('formulier').submit();
-	break;
-	case 'postcodegebied':
-	document.getElementById('selectie').value = 'postcodegebied';
-	document.getElementById('formulier').submit();
-	break;
-	case 'groep':
-	document.getElementById('selectie').value = 'groep';
-	document.getElementById('formulier').submit();
-	break;
-	case 'p':
-	document.getElementById('cursusId').value = Nr;
-	document.getElementById('selectie').value = 'project';
-	document.getElementById('formulier').submit();
-	break;
-	case 'c':
-	document.getElementById('cursusId').value = Nr;
-	document.getElementById('selectie').value = 'cursus';
-	document.getElementById('formulier').submit();
-	break;
-	}
-	}
-
-	function messageZoek (Nr) {
-	document.getElementById('messageId').value = Nr;
-	document.getElementById('formulier').submit();
-	}
-
-	function switchAll() {
-	for (var j = 0; j < <?php echo ($aantal > 0 ? $aantal : 0); ?>; j++) { box=eval("document.formulier.C" + j); box.checked=!box.checked; } } function GP_popupConfirmMsg(msg) { //v1.0 document.MM_returnValue=confirm(msg); } function klapdiensten(id) { if (document.getElementById(id)) { var cont=document.getElementById(id).style; if (cont.display=="block" ) { cont.display="none" ; } else { cont.display="block" ; } return false; } else { return true; } } </script>
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<?php include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/jquery_opdrachten.php');
-		?>
-		<style type="text/css">
-			<!--
-			body {
-				padding: 0 10px;
+	<script>
+		function Selecteer(code, Nr) {
+			switch (code) {
+				case 'a':
+					document.getElementById('selectie').value = 'alles';
+					document.getElementById('formulier').submit();
+					break;
+				case 'n':
+					document.getElementById('selectie').value = 'niet-ingeschreven';
+					document.getElementById('formulier').submit();
+					break;
+				case 'g':
+					document.getElementById('selectie').value = 'google';
+					document.getElementById('outlook').class = '';
+					document.getElementById('formulier').submit();
+					break;
+				case 'o':
+					document.getElementById('selectie').value = 'outlook';
+					document.getElementById('outlook').class = '';
+					document.getElementById('formulier').submit();
+					break;
+				case 'v':
+					document.getElementById('selectie').value = 'csv';
+					document.getElementById('outlook').class = '';
+					document.getElementById('formulier').submit();
+					break;
+				case 'l':
+					document.getElementById('selectie').value = 'distributielijst';
+					document.getElementById('outlook').class = '';
+					document.getElementById('formulier').submit();
+					break;
+				case 'f':
+					document.getElementById('selectie').value = 'emails';
+					document.getElementById('outlook').class = '';
+					document.getElementById('formulier').submit();
+					break;
+				case 'd':
+					document.getElementById('selectie').value = 'access';
+					document.getElementById('outlook').class = '';
+					document.getElementById('formulier').submit();
+					break;
+				case 'lp-nl':
+					document.getElementById('selectie').value = 'lp-nl';
+					document.getElementById('formulier').submit();
+					break;
+				case 'lp-eng':
+					document.getElementById('selectie').value = 'lp-eng';
+					document.getElementById('formulier').submit();
+					break;
+				case 'utrecht':
+					document.getElementById('selectie').value = 'utrecht';
+					document.getElementById('formulier').submit();
+					break;
+				case 'culemborg':
+					document.getElementById('selectie').value = 'culemborg';
+					document.getElementById('formulier').submit();
+					break;
+				case 'arnhem':
+					document.getElementById('selectie').value = 'arnhem';
+					document.getElementById('formulier').submit();
+					break;
+				case 'afoort':
+					document.getElementById('selectie').value = 'afoort';
+					document.getElementById('formulier').submit();
+					break;
+				case 'postcodegebied':
+					document.getElementById('selectie').value = 'postcodegebied';
+					document.getElementById('formulier').submit();
+					break;
+				case 'groep':
+					document.getElementById('selectie').value = 'groep';
+					document.getElementById('formulier').submit();
+					break;
+				case 'p':
+					document.getElementById('cursusId').value = Nr;
+					document.getElementById('selectie').value = 'project';
+					document.getElementById('formulier').submit();
+					break;
+				case 'c':
+					document.getElementById('cursusId').value = Nr;
+					document.getElementById('selectie').value = 'cursus';
+					document.getElementById('formulier').submit();
+					break;
 			}
+		}
 
-			#links {
-				float: left;
-				width: 50%;
-				overflow: hidden;
-			}
+		function messageZoek(Nr) {
+			document.getElementById('messageId').value = Nr;
+			document.getElementById('formulier').submit();
+		}
 
-			.toets {
-				font-size: 70%;
-				color: #FF0000;
+		function switchAll() {
+			for (var j = 0; j < <?php echo ($aantal > 0 ? $aantal : 0); ?>; j++) {
+				box = eval("document.formulier.C" + j);
+				box.checked = !box.checked;
 			}
+		}
 
-			.kolom {
-				float: left;
-				margin-left: 2px;
-				width: 19%;
-				font-size: 65%;
-			}
+		function GP_popupConfirmMsg(msg) { //v1.0 document.MM_returnValue=confirm(msg); } function klapdiensten(id) { if (document.getElementById(id)) { var cont=document.getElementById(id).style; if (cont.display=="block" ) { cont.display="none" ; } else { cont.display="block" ; } return false; } else { return true; } } 
+	</script>
 
-			div#outlookveld {
-				display: none;
-			}
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-			div#attachments {
-				display: none;
-			}
+	<?php include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/jquery_opdrachten.php'); ?>
 
-			table#berichten {
-				width: 100%;
-			}
+	<style type="text/css">
+		<!--
+		body {
+			padding: 0 10px;
+		}
 
-			div#berichten_wrapper {
-				width: 100%;
-				clear: all;
-				z-index: 1;
-				position: relative;
-				top: 0px;
-				right: 0px;
-			}
+		#links {
+			float: left;
+			width: 50%;
+			overflow: hidden;
+		}
 
-			div#message_area {
-				z-index: 1;
-				display: inline-block;
-				width: 100%;
-				overflow: hidden;
-			}
-			-->
-		</style>
+		.toets {
+			font-size: 70%;
+			color: #FF0000;
+		}
+
+		.kolom {
+			float: left;
+			margin-left: 2px;
+			width: 19%;
+			font-size: 65%;
+		}
+
+		div#outlookveld {
+			display: none;
+		}
+
+		div#attachments {
+			display: none;
+		}
+
+		table#berichten {
+			width: 100%;
+		}
+
+		div#berichten_wrapper {
+			width: 100%;
+			clear: all;
+			z-index: 1;
+			position: relative;
+			top: 0px;
+			right: 0px;
+		}
+
+		div#message_area {
+			z-index: 1;
+			display: inline-block;
+			width: 100%;
+			overflow: hidden;
+		}
+		-->
+	</style>
 </head>
 
 <body>
