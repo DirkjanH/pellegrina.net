@@ -64,9 +64,22 @@ $cursusnr = 2 + $cursus_offset;
       <div class="">
         <h2 class="">Chamber music works</h2>
         <ul>
-          <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Score.pdf" target="_blank">Legrenzi, Prosa pro mortuis, score</a> (set 1 nr. 1)</li>
-          <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Instrumental parts.pdf" target="_blank">Legrenzi, Prosa pro mortuis, all instrumental parts</a> (set 1 nr. 1)</li>
-          <li><a href="https://www.youtube.com/watch?v=1OVcwg1c7UM" target="_blank">Legrenzi, Prosa pro mortuis, recording by the Margaretha Consort with Jos van Velthoven</a> (set 1 nr. 1)</li>
+          <li>
+            <h3>Giovanni Legrenzi, Prosa pro mortuis (set 1 nr. 1)</h3>
+            <ul>
+              <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Score.pdf" target="_blank">Legrenzi, Prosa pro mortuis, score</a></li>
+              <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Instrumental parts.pdf" target="_blank">Legrenzi, Prosa pro mortuis, all instrumental parts</a></li>
+              <li><a href="https://www.youtube.com/watch?v=1OVcwg1c7UM" target="_blank">Legrenzi, Prosa pro mortuis, recording by the Margaretha Consort with Jos van Velthoven</a> (set 1 nr. 1)</li>
+            </ul>
+          </li>
+          <h3>Antonín Reichenauer - Quartet in g minor</h3>
+          <ul>
+            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_bassoon.pdf">Bassoon</a></li>
+            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violino.pdf">Violino</a></li>
+            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violoncello.pdf">Cello</a></li>
+            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_basso.pdf">Basso</a></li>
+            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18.pdf">Manuscript source</a></li>
+          </ul>
         </ul>
       </div>
       <h2>Tutti programme</h2>
