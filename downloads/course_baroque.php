@@ -66,6 +66,7 @@ $cursusnr = 2 + $cursus_offset;
         <ul>
           <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Score.pdf" target="_blank">Legrenzi, Prosa pro mortuis, score</a> (set 1 nr. 1)</li>
           <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Instrumental parts.pdf" target="_blank">Legrenzi, Prosa pro mortuis, all instrumental parts</a> (set 1 nr. 1)</li>
+          <li><a href="https://www.youtube.com/watch?v=1OVcwg1c7UM" target="_blank">Legrenzi, Prosa pro mortuis, recording by the Margaretha Consort with Jos van Velthoven</a> (set 1 nr. 1)</li>
         </ul>
       </div>
       <h2>Tutti programme</h2>
