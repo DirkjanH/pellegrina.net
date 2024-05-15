@@ -175,9 +175,9 @@ $cursusnr = 2 + $cursus_offset;
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-viola.pdf">Galuppi-Laetatus_sum_in_A - Viola</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-bc.pdf">Galuppi-Laetatus_sum_in_A - Basso continuo</a></li>
       </ul>
-      <h3>Caldara - Caro mmea vere est cibus a 2</h3>
+      <h3>Caldara - Caro mea vere est cibus a 2</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere.pdf">Caldara - Caro mmea vere est cibus a 2 - Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere.pdf">Caldara - Caro mea vere est cibus a 2 - Score</a></li>
       </ul>
       <h3>Vivaldi - Cum dederit from Nisi Dominus RV 608</h3>
       <ul>
