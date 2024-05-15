@@ -3,7 +3,7 @@ $cursusnr = 2 + $cursus_offset;
 ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -136,7 +136,7 @@ $cursusnr = 2 + $cursus_offset;
         </ul>
       </div>
       <h2>Tutti programme</h2>
-      <p>All parts for the works we are going to perform are now available. Please print and study what you needSingers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
+      <p>All parts for the works we are going to perform are now available. Please print and study what you need. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
       <h3>Vivaldi - Domine ad adjuvandum me festina RV 593</h3>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf">Vivaldi-Domine_ad_adjuvandum - Full Score</a></li>
