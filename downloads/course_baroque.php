@@ -61,78 +61,11 @@ $cursusnr = 2 + $cursus_offset;
       </table>
       <h2><?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?> (<?php echo $cursussen[$cursusnr]['datumkort'] ?>) - information & scores<br />
       </h2>
-      <div class="onzichtbaar">
+      <div class="">
         <h2 class="">Chamber music works</h2>
         <ul>
-          <li><a href="../pdf/2023-2/Chamber/%2329 Du Mont - Desidero te millies (1681).pdf" target="_blank">Du Mont, Desidero</a> (set 1 nr. 1)</li>
-          <li>Capricornus, Ich bin eine Blume zu Saron (set 1 nr. 2)</li>
-          <ul>
-            <li><a href="../pdf/2023-2/Chamber/Capricornus, Samuel - Ich bin eine Blume zu Saron.pdf" target="_blank">score, also for singers</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Capricornus ich bin eine Rose violini.pdf" target="_blank">violins</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Capricornus ich bin eine Rose trombone or vdg.pdf" target="_blank">bass part</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Capricornus ich bin eine Rose bassus pro organo.pdf" target="_blank">organ</a> </li>
-          </ul>
-          <li>Charpentier, Idyle sur le retour de la santé du Roy H.489 (set 1 nr. 3)</li>
-          <ul>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H489 Idylle full score.pdf" target="_blank">Charpentier, Idyle H.489, score</a> incl. text &amp; Dutch translation</li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H489 Idylle score choir.pdf" target="_blank">Charpentier, Idyle H.489, vocal score</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H489 Idylle d1.pdf" target="_blank">Charpentier, Idyle H.489, dessus 1</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H489 Idylle d2.pdf" target="_blank">Charpentier, Idyle H.489, dessus 2</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H489 Idylle vdg.pdf" target="_blank">Charpentier, Idyle H.489, viola da gamba</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H489 Idylle vc.pdf" target="_blank">Charpentier, Idyle H.489, violoncelle</a></li>
-          </ul>
-          <li>Charpentier, Les Arts Florissants H.478 (set 1 nr. 4)
-            <ul>
-              <li><a href="../pdf/2023-2/Chamber/Charpentier Les_arts_florissants_H_487_.pdf" target="_blank">Score</a></li>
-              <li><a href="../pdf/2023-2/Chamber/Charpentier Les arts florissants H 487 Basse continue with vocal parts.pdf" target="_blank">Vocal parts with BC</a></li>
-              <li><a href="../pdf/2023-2/Chamber/Charpentier Les arts florissants H 487 Violin I Flute I.pdf" target="_blank">Violon/Flute I</a></li>
-              <li><a href="../pdf/2023-2/Chamber/Charpentier Les arts florissants H 487 Violin II Flute II.pdf" target="_blank">Violon/Flute II</a></li>
-              <li><a href="../pdf/2023-2/Chamber/Charpentier Les arts florissants H 487 Basse continue 2.pdf" target="_blank">Basse continue</a></li>
-              <li><a href="../pdf/2023-2/Chamber/vertaling les Arts Florissants. deel la Paix.pdf" target="_blank">Translation of the text into Dutch
-                </a></li>
-            </ul>
-          </li>
-          <li>Finger, Sonata in C for Trumpet, Oboe and BC (set 1 nr. 7)</li>
-          <li>
-          <li><b>NB. this is NOT the piece on IMSLP we referred to before! Oboe plays violin part.</b></li>
-          <ul>
-            <li><a href="../pdf/2023-2/Chamber/Finger Sonata in C partituur.pdf" target="_blank">Finger - score</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Finger Sonata in C trompet of blfl of hobo.pdf" target="_blank">Finger - trumpet</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Finger Sonata in C viool.pdf" target="_blank">Finger - oboe</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Finger Sonata in C bas.pdf" target="_blank">Finger - BC</a></li>
-          </ul>
-          </li>
-          <li>Charpentier, Pastorale sur la naissance de N.S.J.C. H.483 (set 2 nr. 1)</li>
-          <ul>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H483 Pastorale score.pdf" target="_blank">Charpentier, Pastorale H.483, score</a> incl. text &amp; Dutch translation</li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H 483 Pastorale dessus 1 -2.pdf" target="_blank">Charpentier, Pastorale H.483, dessus 1-2</a></li>
-          </ul>
-          <li>Bach, Jauchzet Gott in allen Landen BWV 51 (set 2 nr. 2)</li>
-          <ul>
-            <li><a href="../pdf/2023-2/Chamber/bachNBAI,22jauchzetgottinallenlandenBWV51.pdf" target="_blank">score, also for singer</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Bach_Jauchzet_Gott_in_allen_Landen,_BWV_51_-_Trumpet_(C).pdf" target="_blank">trumpet</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Bach_Jauchzet_Gott_in_allen_Landen,_BWV_51_-_Violins_I.pdf" target="_blank">violin 1</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Bach_Jauchzet_Gott_in_allen_Landen,_BWV_51_-_Violins_II.pdf" target="_blank">violin 2</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Bach_Jauchzet_Gott_in_allen_Landen,_BWV_51_-_Violas.pdf" target="_blank">viola</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Bach_Jauchzet_Gott_in_allen_Landen,_BWV_51_-_Cellos,_Basses.pdf" target="_blank">bass part</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Bach_Jauchzet_Gott_in_allen_Landen,_BWV_51_-_Harpsichord.pdf" target="_blank">organ/harpsichord</a></li>
-          </ul>
-          <li>Du Mont: Benedic anima mea (set 2 nr. 3)</li>
-          <ul>
-            <li><a href="../pdf/2023-2/Chamber/Du Mont_Benedic, anima mea_1up_04PV_MS362.pdf" target="_blank">score </a></li>
-            <li><a href="../pdf/2023-2/Chamber/Du Mont_Benedic, anima mea_1up_04PV_MS362-Vocal_score.pdf" target="_blank">vocal score for singers</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Du Mont_Benedic, anima mea_1up_04PV_MS362-Violins.pdf" target="_blank">violin 1/2</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Du Mont_Benedic, anima mea_1up_04PV_MS362-Violas.pdf" target="_blank">viola 1/2</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Du Mont_Benedic, anima mea_1up_04PV_MS362-Violoncello.pdf" target="_blank">cello</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Du Mont_Benedic, anima mea_1up_04PV_MS362-B.C..pdf" target="_blank">organ</a></li>
-          </ul>
-          <li>Charpentier, Leçon de ténèbre du Vendredi Saint H.95 (set 2 nr. 4)</li>
-          <ul>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H95 Lec de Ten Recordare score.pdf" target="_blank">Charpentier, Leçon de ténèbre H.95, score</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H95 Lec de Ten Recordare d1.pdf" target="_blank">Charpentier, Leçon de ténèbre H.95, dessus 1</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H95 Lec de Ten Recordare d2.pdf" target="_blank">Charpentier, Leçon de ténèbre H.95, dessus 2</a></li>
-            <li><a href="../pdf/2023-2/Chamber/Charpentier H95 Lec de Ten Recordare bc.pdf" target="_blank">Charpentier, Leçon de ténèbre H.95, basse continue</a></li>
-          </ul>
+          <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Score.pdf" target="_blank">Legrenzi, Prosa pro mortuis, score</a> (set 1 nr. 1)</li>
+          <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Instrumental parts.pdf" target="_blank">Legrenzi, Prosa pro mortuis, instrumental parts</a> (set 1 nr. 1)</li>
         </ul>
       </div>
       <h2>Tutti programme</h2>
