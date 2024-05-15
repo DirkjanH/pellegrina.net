@@ -65,7 +65,7 @@ $cursusnr = 2 + $cursus_offset;
         <h2 class="">Chamber music works</h2>
         <ul>
           <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Score.pdf" target="_blank">Legrenzi, Prosa pro mortuis, score</a> (set 1 nr. 1)</li>
-          <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Instrumental parts.pdf" target="_blank">Legrenzi, Prosa pro mortuis, instrumental parts</a> (set 1 nr. 1)</li>
+          <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Instrumental parts.pdf" target="_blank">Legrenzi, Prosa pro mortuis, all instrumental parts</a> (set 1 nr. 1)</li>
         </ul>
       </div>
       <h2>Tutti programme</h2>
