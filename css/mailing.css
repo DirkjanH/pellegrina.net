@@ -1,23 +1,23 @@
 @charset "utf-8";
-@import '/css/w3.css';
+@import "/css/w3.css";
 /* mailing.less Versie 1.0 auteur: Dirkjan Horringa */
 body {
-  font: 15px 'Alegreya Sans', Verdana, sans-serif;
+  font: 15px "Alegreya Sans", Verdana, sans-serif;
 }
 p,
 td,
 li,
 a {
-  font-size: 15px;
+  font: 15px "Alegreya Sans", Verdana, sans-serif;
 }
 h1 {
   text-transform: uppercase;
-  color: #381B1B;
+  color: #381b1b;
   font: bold 180%/1.5em "Cambria", "serif";
 }
 h2 {
   font-family: "Cambria", "serif";
-  color: #C7352E;
+  color: #c7352e;
   text-align: left;
   padding-bottom: -15px;
   font: bold 2em;
@@ -28,7 +28,7 @@ h3 {
   font-family: "Cambria", "serif";
   font-size: 1.2em;
   font-weight: bold;
-  color: #3B7E36;
+  color: #3b7e36;
   letter-spacing: 0.1em;
   padding-top: 0.63em;
 }
@@ -36,7 +36,7 @@ h4 {
   font-family: "Cambria", "serif";
   font-size: 1.1em;
   font-weight: bold;
-  color: #0054A8;
+  color: #0054a8;
   letter-spacing: 0.06em;
   padding-top: 0.63em;
   margin-bottom: -0.2em;
@@ -57,11 +57,11 @@ li {
   padding-bottom: 0.31em;
 }
 a:active {
-  color: #60F;
+  color: #60f;
   text-decoration: underline;
 }
 a:link {
-  color: #63C;
+  color: #63c;
   text-decoration: underline;
 }
 a:visited {
@@ -69,7 +69,7 @@ a:visited {
   text-decoration: underline;
 }
 a:hover {
-  color: #63F;
+  color: #63f;
   text-decoration: underline;
 }
 img {
@@ -79,23 +79,23 @@ img.geenlijn {
   border: none;
 }
 .chamber {
-  color: #C01115;
+  color: #c01115;
 }
 .baroque {
-  color: #D17F00;
+  color: #d17f00;
 }
 .classical {
-  color: #106D8C;
+  color: #106d8c;
 }
 .romantic {
-  color: #044EFA;
+  color: #044efa;
 }
 .groot {
   font-size: 150%;
   text-align: left;
 }
 .nadruk {
-  color: #F00;
+  color: #f00;
   font-weight: bold;
   font-size: 80%;
 }
@@ -120,7 +120,7 @@ img.geenlijn {
 }
 .plaatsvoor {
   font-weight: bold;
-  background: #FFFFCC;
+  background: #ffffcc;
   border: 1px solid #000000;
   margin-top: 2em;
   padding-left: 10px;
@@ -132,21 +132,21 @@ th {
   font-style: italic;
   color: black;
   font-size: 13px;
-  background: #E697A7;
+  background: #e697a7;
   text-align: center;
   margin-right: 5px;
   margin-left: 5px;
 }
 p.volvoor {
   font-weight: bold;
-  background: #FFCACA;
-  border: 1px solid #CC0000;
+  background: #ffcaca;
+  border: 1px solid #cc0000;
   padding-left: 10px;
-  color: #CC0000;
+  color: #cc0000;
 }
 p.plaatsvoor {
   font-weight: bold;
-  background: #C4FFC4;
+  background: #c4ffc4;
   border: 1px solid #009700;
   padding-left: 10px;
   color: #009700;
