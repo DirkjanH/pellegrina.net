@@ -74,7 +74,8 @@ $query = "SELECT * FROM {$mailing_adressen} WHERE mailingId_FK = {$mailing_nr}";
 d($query);
 
 $adressen = select_query($query);
-$aantal_emails = count($adressen);
+if (is_array($adressen)) $aantal_emails = count($adressen);
+else $aantal_emails = 1;
 
 d($adressen, $aantal_emails);
 
