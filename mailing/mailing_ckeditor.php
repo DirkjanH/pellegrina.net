@@ -762,8 +762,8 @@ if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 
 		$mail_text = str_replace("</html>", $_POST['message'] . "</body></html>", $mail_text);
 
-		$css = file_get_contents($_SERVER["CONTEXT_DOCUMENT_ROOT"] . '/css/w3.css') . PHP_EOL;
-		$css .= file_get_contents($_SERVER["CONTEXT_DOCUMENT_ROOT"] . '/css/mailing.css');
+		$css = file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/css/w3.css') . PHP_EOL;
+		$css .= file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/css/mailing.css');
 
 		$mail_text = CssInliner::fromHtml(stripslashes($mail_text))->inlineCss($css)->render();
 
