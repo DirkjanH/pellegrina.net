@@ -111,7 +111,7 @@ $cursusnr = 2 + $cursus_offset;
       </ul>
       <h3>Monteverdi - Cantate Domino a 2</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere.pdf" target="_blank">Monteverdi - Cantate Domino a 2 - Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Monteverdi - Cantate Domino a 2.pdf" target="_blank">Monteverdi - Cantate Domino a 2 - Score</a></li>
       </ul>
       <h3>Galuppi - Laetatus sum</h3>
       <ul>
