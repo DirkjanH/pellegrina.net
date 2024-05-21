@@ -98,6 +98,55 @@ $cursusnr = 2 + $cursus_offset;
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 2</a></li>
       </ul>
+      <h4>Division of the voices over choir 1 and 2 in movement 1 and 3:</h4>
+      <table cellspacing="0" cellpadding="0">
+        <thead>
+          <th class="s0" dir="ltr">Choir 1</th>
+          <th class="s0" dir="ltr">Choir 2</th>
+        </thead>
+        <tbody>
+          <tr style="height: 20px">
+            <td class="s1">Tanja van der Brugge, soprano</td>
+            <td class="s1">Angela Morsink, soprano</td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Anne Hodgkinson, soprano</td>
+            <td class="s1">Joyce Vermeer, soprano</td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Anke Muusse, soprano</td>
+            <td class="s1">Sandra Sjamaar, soprano</td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Patti Kimberly Cobb, mezzosoprano</td>
+            <td class="s1">Vivian Stemerdink, mezzosoprano</td>
+          </tr>
+          <tr style="height: 20px">
+            <td></td>
+            <td class="s1">Birthe Rubehn, mezzosoprano</td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Marleen van Reenen, alto</td>
+            <td class="s1">Tonnie Sedee - de Wit, alto</td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Joost Fransen, tenor</td>
+            <td class="s1">René Jakobs, tenor</td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Piet Schipper, tenor</td>
+            <td></td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Martin van Tulder, baritone</td>
+            <td class="s1">Jurgen van der Ent, baritone</td>
+          </tr>
+          <tr style="height: 20px">
+            <td class="s1">Frits Muusse, bass</td>
+            <td class="s1">Mitchell Sandler, bass?</td>
+          </tr>
+        </tbody>
+      </table>
       <h3>Vivaldi - Confitebor RV 596</h3>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi%20-%20Confitebor%20RV%20596/Vivaldi%20-%20Confitebor%20RV%20596%20-%20score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Score</a></li>
