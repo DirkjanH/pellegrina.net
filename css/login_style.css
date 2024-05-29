@@ -8,72 +8,66 @@
 // Licence:		GPL, You may distribute this software under the terms of this General Public License
 // *************************************************************************************************
 // CSS Document */
-tr {height:20px;
+tr {
+  height: 20px;
 }
-.standardText a:hover {text-decoration:none;
-color:#FF0000;
-font-family:Arial, Helvetica, sans-serif;
-font-size:xx-small;
+.standardText a:hover {
+  text-decoration: none;
+  color: #ff0000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-small;
 }
 
-
-.standardText {text-decoration:underline;
-color:#FFFFFF;
-font-family:Arial, Helvetica, sans-serif;
-font-size:xx-small;
+.standardText {
+  text-decoration: underline;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-small;
 }
-.standardText a:hover {text-decoration:none;
-color:#00FFFF;
-font-family:Arial, Helvetica, sans-serif;
-font-size:xx-small;
+.standardText a:hover {
+  text-decoration: none;
+  color: #00ffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-small;
 }
 
 .smallTextBlack {
-font-family:Arial, Helvetica, sans-serif;
-font-size:xx-small;
-color:#000000;
-
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-small;
+  color: #000000;
 }
 .medTextBlack {
-font-family:Arial, Helvetica, sans-serif;
-font-size:x-small;
-color:#000000;
-
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  color: #000000;
 }
 .smallTextWhite {
-font-family:Arial, Helvetica, sans-serif;
-font-size:xx-small;
-color:#FFFFFF;
-
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-small;
+  color: #ffffff;
 }
 .smallErrorText {
-font-family:Arial, Helvetica, sans-serif;
-font-size:xx-small;
-color:#FF0000;
-
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-small;
+  color: #ff0000;
 }
 
-
-table {border: 1px solid #3333ff;
+table {
+  border: 1px solid #3333ff;
 }
-td {border: 1px solid #dddddd;
-padding:2px;
-font-family: Arial, Helvetica, sans-serif;
-font-size:xx-small;
-color:#000000;
-text-decoration:none;
+td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  color: #000000;
 }
-.header {margin-left:20px;
-background-image:url(../login/images/bar.gif);
-border: 1px solid #dddddd;
-padding:0px;
-font-family: Arial, Helvetica, sans-serif;
-font-size:small;
-color:#FFFFFF;
-font-weight:bold;
-text-decoration:none;
+.header {
+  margin-left: 20px;
+  background-image: url(../login/images/bar.gif);
+  border: 1px solid #dddddd;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
 }
