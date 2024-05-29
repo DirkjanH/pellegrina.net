@@ -72,13 +72,15 @@ $cursusnr = 2 + $cursus_offset; ?>
             </ul>
           </li>
           <h3>Antonín Reichenauer - Quartet in g minor</h3>
-          <ul class="cols3">
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_bassoon.pdf" target="_blank">Bassoon</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violino.pdf" target="_blank">Violino</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violoncello.pdf" target="_blank">Cello</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_basso.pdf" target="_blank">Basso</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18.pdf" target="_blank">Manuscript source</a></li>
-          </ul>
+          <div class="cols3">
+            <ul>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_bassoon.pdf" target="_blank">Bassoon</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violino.pdf" target="_blank">Violino</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violoncello.pdf" target="_blank">Cello</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_basso.pdf" target="_blank">Basso</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18.pdf" target="_blank">Manuscript source</a></li>
+            </ul>
+          </div>
         </ul>
       </div>
       <h2>Tutti programme</h2>
