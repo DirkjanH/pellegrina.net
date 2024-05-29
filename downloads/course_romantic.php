@@ -58,7 +58,7 @@ $cursusnr = 1 + $cursus_offset; ?>
           <td class="w3-center"><a href="../part_list.php?cursus=1" target="_blank">List of participants</a></td>
           <td class="w3-center"><a href="../ensemblelijst_1.php" target="_blank">Chamber music formations</a></td>
           <td class="w3-center uit"><a xxxx="https://docs.google.com/spreadsheets/d/1bwy8fsIa1gLEtDzFGdV6C9t7NF1YT5km-Bift1fuRIU/edit?usp=sharing" target="_blank">Accommodation overview</a></td>
-          <td class="w3-center uit"><a href="2024-1 daily programme.pdf" target="_blank">Daily program</a></td>
+          <td class="w3-center"><a href="2024-1 daily programme.pdf" target="_blank">Daily program</a></td>
         </tr>
       </table>
       <div>
