@@ -128,14 +128,23 @@ img.geenlijn {
 .onzichtbaar {
   display: none;
 }
+table,
+th,
+td {
+  border: 1px solid;
+}
+td {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 th {
   font-style: italic;
   color: black;
   font-size: 13px;
   background: #e697a7;
   text-align: center;
-  margin-right: 5px;
-  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 p.volvoor {
   font-weight: bold;
