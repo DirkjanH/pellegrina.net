@@ -72,7 +72,7 @@ $cursusnr = 2 + $cursus_offset; ?>
             </ul>
           </li>
           <h3>Antonín Reichenauer - Quartet in g minor</h3>
-          <ul>
+          <ul class="col3">
             <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_bassoon.pdf" target="_blank">Bassoon</a></li>
             <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violino.pdf" target="_blank">Violino</a></li>
             <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violoncello.pdf" target="_blank">Cello</a></li>
