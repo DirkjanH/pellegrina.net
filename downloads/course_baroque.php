@@ -72,147 +72,149 @@ $cursusnr = 2 + $cursus_offset; ?>
             </ul>
           </li>
           <h3>Antonín Reichenauer - Quartet in g minor</h3>
-          <ul class="col3">
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_bassoon.pdf" target="_blank">Bassoon</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violino.pdf" target="_blank">Violino</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violoncello.pdf" target="_blank">Cello</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_basso.pdf" target="_blank">Basso</a></li>
-            <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18.pdf" target="_blank">Manuscript source</a></li>
-          </ul>
+          <div class="col3">
+            <ul>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_bassoon.pdf" target="_blank">Bassoon</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violino.pdf" target="_blank">Violino</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violoncello.pdf" target="_blank">Cello</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_basso.pdf" target="_blank">Basso</a></li>
+              <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18.pdf" target="_blank">Manuscript source</a></li>
+            </ul>
         </ul>
       </div>
-      <h2>Tutti programme</h2>
-      <p>All parts for the works we are going to perform are now available. Please print and study what you need. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
-      <h3>Vivaldi - Domine ad adjuvandum me festina RV 593</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Full Score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Vocal score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Vocal score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-I</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 2-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 2-I</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 2-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 2-II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Cello & double bass 1-2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Cello & double bass 1-2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 2</a></li>
-      </ul>
-      <h4>Division of the voices over choir 1 and 2 in movement 1 and 3:</h4>
-      <table border="1" cellpadding="10px">
-        <thead>
-          <th class="s0" dir="ltr">Choir 1</th>
-          <th class="s0" dir="ltr">Choir 2</th>
-        </thead>
-        <tbody>
-          <tr style="height: 20px">
-            <td class="s1">Tanja van der Brugge, soprano</td>
-            <td class="s1">Angela Morsink, soprano</td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Anne Hodgkinson, soprano</td>
-            <td class="s1">Joyce Vermeer, soprano</td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Anke Muusse, soprano</td>
-            <td class="s1">Sandra Sjamaar, soprano</td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Patti Kimberly Cobb, mezzosoprano</td>
-            <td class="s1">Vivian Stemerdink, mezzosoprano</td>
-          </tr>
-          <tr style="height: 20px">
-            <td></td>
-            <td class="s1">Birthe Rubehn, mezzosoprano</td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Marleen van Reenen, alto</td>
-            <td class="s1">Tonnie Sedee - de Wit, alto</td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Joost Fransen, tenor</td>
-            <td class="s1">René Jakobs, tenor</td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Piet Schipper, tenor</td>
-            <td></td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Martin van Tulder, baritone</td>
-            <td class="s1">Jurgen van der Ent, baritone</td>
-          </tr>
-          <tr style="height: 20px">
-            <td class="s1">Frits Muusse, bass</td>
-            <td class="s1">Mitchell Sandler, bass?</td>
-          </tr>
-        </tbody>
-      </table>
-      <h3>Vivaldi - Confitebor RV 596</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi%20-%20Confitebor%20RV%20596/Vivaldi%20-%20Confitebor%20RV%20596%20-%20score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - vocal score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Vocal score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 2.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Violino 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 2.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Violino 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - viola.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Viola</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - bass.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Cello, double bass, bassoon</a></li>
-      </ul>
-      <h3>Monteverdi - Cantate Domino a 2</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Monteverdi - Cantate Domino a 2.pdf" target="_blank">Monteverdi - Cantate Domino a 2 - Score</a></li>
-      </ul>
-      <h3>Galuppi - Laetatus sum</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-partitura.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Full score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-voci_e_bc.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Vocal score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_1.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Violino 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_2.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Violino 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-viola.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Viola</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-bc.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Basso continuo</a></li>
-      </ul>
-      <h3>Caldara - Caro mea vere est cibus a 2</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Score</a></li>
-      </ul>
-      <h3>Vivaldi - Cum dederit from Nisi Dominus RV 608</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(conducteur).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(alto).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Alto part</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(violons_1_&_2).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Violins 1 & 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(vlc_&_b.c.).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Celli & BC</a></li>
-      </ul>
-      <h3>Vivaldi - Sinfonie avanti la Senna Festeggiante RV 693 (instruments only)</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino1.pdf" target="_blank">Flauto/oboe/violini 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino2.pdf" target="_blank">Flauto/oboe/violini 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_viola.pdf" target="_blank">Viole</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_basso_continuo.pdf" target="_blank">Basso (celli, double bass, BC)</a></li>
-      </ul>
-      <h3>Caldara - Salve Regina</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Full Score.pdf" target="_blank">Caldara - Salve Regina - Full Score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - Chorpartitur.pdf" target="_blank">Caldara - Salve Regina - Vocal score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin I.pdf" target="_blank">Caldara - Salve Regina - Violin I</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin II.pdf" target="_blank">Caldara - Salve Regina - Violin II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Trombone I, Trombone II.pdf" target="_blank">Caldara - Salve Regina - Viola da gamba or Trombone I-II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violoncello.pdf" target="_blank">Caldara - Salve Regina - Violoncello</a></li>
-      </ul>
-      <h3>Vivaldi - Magnificat RV 610</h3>
-      <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400491-PMLP329343-Vivaldi-Magnificat_-_partitura.pdf" target="_blank">Vivaldi - Magnificat - Score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400499-PMLP329343-Vivaldi-Magnificat_-_Coro&Continuo.pdf" target="_blank">Vivaldi - Magnificat - Coro&Continuo</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400496-PMLP329343-Vivaldi-Magnificat_-_Oboe_1.pdf" target="_blank">Vivaldi - Magnificat - Oboe 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400497-PMLP329343-Vivaldi-Magnificat_-_Oboe_2.pdf" target="_blank">Vivaldi - Magnificat - Oboe 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400492-PMLP329343-Vivaldi-Magnificat_-_Violino_I.pdf" target="_blank">Vivaldi - Magnificat - Violino I</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400493-PMLP329343-Vivaldi-Magnificat_-_Violino_II.pdf" target="_blank">Vivaldi - Magnificat - Violino II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400494-PMLP329343-Vivaldi-Magnificat_-_Viola.pdf" target="_blank">Vivaldi - Magnificat - Viola</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400495-PMLP329343-Vivaldi-Magnificat_-_Violoncello.pdf" target="_blank">Vivaldi - Magnificat - Violoncello</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400498-PMLP329343-Vivaldi-Magnificat_-_Organo.pdf" target="_blank">Vivaldi - Magnificat - Organo</a></li>
-      </ul>
     </div>
-    <!-- InstanceEndEditable -->
-    <h2> <a href="javascript: history.go(-1)">Back</a></h2>
-    <p>&nbsp;</p>
+    <h2>Tutti programme</h2>
+    <p>All parts for the works we are going to perform are now available. Please print and study what you need. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
+    <h3>Vivaldi - Domine ad adjuvandum me festina RV 593</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Full Score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Vocal score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Vocal score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-I</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-II</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola 1</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 2-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 2-I</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 2-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 2-II</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola 2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Cello & double bass 1-2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Cello & double bass 1-2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 1</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 2</a></li>
+    </ul>
+    <h4>Division of the voices over choir 1 and 2 in movement 1 and 3:</h4>
+    <table border="1" cellpadding="10px">
+      <thead>
+        <th class="s0" dir="ltr">Choir 1</th>
+        <th class="s0" dir="ltr">Choir 2</th>
+      </thead>
+      <tbody>
+        <tr style="height: 20px">
+          <td class="s1">Tanja van der Brugge, soprano</td>
+          <td class="s1">Angela Morsink, soprano</td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Anne Hodgkinson, soprano</td>
+          <td class="s1">Joyce Vermeer, soprano</td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Anke Muusse, soprano</td>
+          <td class="s1">Sandra Sjamaar, soprano</td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Patti Kimberly Cobb, mezzosoprano</td>
+          <td class="s1">Vivian Stemerdink, mezzosoprano</td>
+        </tr>
+        <tr style="height: 20px">
+          <td></td>
+          <td class="s1">Birthe Rubehn, mezzosoprano</td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Marleen van Reenen, alto</td>
+          <td class="s1">Tonnie Sedee - de Wit, alto</td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Joost Fransen, tenor</td>
+          <td class="s1">René Jakobs, tenor</td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Piet Schipper, tenor</td>
+          <td></td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Martin van Tulder, baritone</td>
+          <td class="s1">Jurgen van der Ent, baritone</td>
+        </tr>
+        <tr style="height: 20px">
+          <td class="s1">Frits Muusse, bass</td>
+          <td class="s1">Mitchell Sandler, bass?</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Vivaldi - Confitebor RV 596</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi%20-%20Confitebor%20RV%20596/Vivaldi%20-%20Confitebor%20RV%20596%20-%20score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - vocal score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Vocal score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 1</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 2.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Violino 1</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 2.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Violino 2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - viola.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Viola</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - bass.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Cello, double bass, bassoon</a></li>
+    </ul>
+    <h3>Monteverdi - Cantate Domino a 2</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Monteverdi - Cantate Domino a 2.pdf" target="_blank">Monteverdi - Cantate Domino a 2 - Score</a></li>
+    </ul>
+    <h3>Galuppi - Laetatus sum</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-partitura.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Full score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-voci_e_bc.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Vocal score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_1.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Violino 1</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_2.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Violino 2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-viola.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Viola</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-bc.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Basso continuo</a></li>
+    </ul>
+    <h3>Caldara - Caro mea vere est cibus a 2</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Score</a></li>
+    </ul>
+    <h3>Vivaldi - Cum dederit from Nisi Dominus RV 608</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(conducteur).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(alto).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Alto part</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(violons_1_&_2).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Violins 1 & 2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(vlc_&_b.c.).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Celli & BC</a></li>
+    </ul>
+    <h3>Vivaldi - Sinfonie avanti la Senna Festeggiante RV 693 (instruments only)</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino1.pdf" target="_blank">Flauto/oboe/violini 1</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino2.pdf" target="_blank">Flauto/oboe/violini 2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_viola.pdf" target="_blank">Viole</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_basso_continuo.pdf" target="_blank">Basso (celli, double bass, BC)</a></li>
+    </ul>
+    <h3>Caldara - Salve Regina</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Full Score.pdf" target="_blank">Caldara - Salve Regina - Full Score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - Chorpartitur.pdf" target="_blank">Caldara - Salve Regina - Vocal score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin I.pdf" target="_blank">Caldara - Salve Regina - Violin I</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin II.pdf" target="_blank">Caldara - Salve Regina - Violin II</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Trombone I, Trombone II.pdf" target="_blank">Caldara - Salve Regina - Viola da gamba or Trombone I-II</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violoncello.pdf" target="_blank">Caldara - Salve Regina - Violoncello</a></li>
+    </ul>
+    <h3>Vivaldi - Magnificat RV 610</h3>
+    <ul>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400491-PMLP329343-Vivaldi-Magnificat_-_partitura.pdf" target="_blank">Vivaldi - Magnificat - Score</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400499-PMLP329343-Vivaldi-Magnificat_-_Coro&Continuo.pdf" target="_blank">Vivaldi - Magnificat - Coro&Continuo</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400496-PMLP329343-Vivaldi-Magnificat_-_Oboe_1.pdf" target="_blank">Vivaldi - Magnificat - Oboe 1</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400497-PMLP329343-Vivaldi-Magnificat_-_Oboe_2.pdf" target="_blank">Vivaldi - Magnificat - Oboe 2</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400492-PMLP329343-Vivaldi-Magnificat_-_Violino_I.pdf" target="_blank">Vivaldi - Magnificat - Violino I</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400493-PMLP329343-Vivaldi-Magnificat_-_Violino_II.pdf" target="_blank">Vivaldi - Magnificat - Violino II</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400494-PMLP329343-Vivaldi-Magnificat_-_Viola.pdf" target="_blank">Vivaldi - Magnificat - Viola</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400495-PMLP329343-Vivaldi-Magnificat_-_Violoncello.pdf" target="_blank">Vivaldi - Magnificat - Violoncello</a></li>
+      <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400498-PMLP329343-Vivaldi-Magnificat_-_Organo.pdf" target="_blank">Vivaldi - Magnificat - Organo</a></li>
+    </ul>
+  </div>
+  <!-- InstanceEndEditable -->
+  <h2> <a href="javascript: history.go(-1)">Back</a></h2>
+  <p>&nbsp;</p>
   </div>
   </div>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
