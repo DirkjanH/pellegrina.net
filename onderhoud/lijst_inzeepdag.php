@@ -7,6 +7,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 
 Kint::$enabled_mode = true;
 
+d($_REQUEST);
+
 $cursus = $cursus_offset + 1; // alleen cursus 1
 
 $alleen_aanwezig = '';
