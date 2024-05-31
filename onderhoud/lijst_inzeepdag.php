@@ -23,7 +23,7 @@ AND NOT (toehoorder <=> 1) {$alleen_aanwezig}
 order by cursusid_fk, {$volgorde}";
 $inzeepdag = select_query($query_inzeepdag);
 if (is_array($inzeepdag)) $totalRows_inzeepdag = count($inzeepdag);
-d($query_inzeepdag, $inzeepdag);
+d($alleen_aanwezig, $query_inzeepdag, $inzeepdag);
 // end Recordset
 
 // begin Recordset
