@@ -14,8 +14,8 @@ $cursus = $cursus_offset + 1; // alleen cursus 1
 if (isset($_POST['aanwezig']) and $_POST['aanwezig'] == 'aanwezig') $alleen_aanwezig = 'AND (inzeepdag IS NULL or NOT (inzeepdag LIKE \'%niet%\'))';
 else $alleen_aanwezig = '';
 
-$volgorde = 'achternaam';
-if (isset($_POST['instr']) and $_POST['instr'] == 'instr') $volgorde = 'instr';
+$volgorde = 'instr';
+if (isset($_POST['instr']) and $_POST['instr'] == 'achternaam') $volgorde = 'achternaam';
 
 $query_inzeepdag = "SELECT naam, inzeepdag, instr, CursusId_FK FROM inschrijving, dlnmr WHERE dlnmrid = dlnmrid_fk AND CursusId_FK = {$cursus} 
 AND naam NOT LIKE \"%XXX%\" AND naam NOT LIKE \"%YYY%\" AND naam NOT LIKE \"%ZZZ%\" AND NOT (afgewezen <=> 1) 
