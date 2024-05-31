@@ -10,7 +10,7 @@ Kint::$enabled_mode = false;
 $cursus = $cursus_offset + 1; // alleen cursus 1
 
 $alleen_aanwezig = '';
-if (isset($_POST['aanwezig']) and $_POST['aanwezig'] == 'aanwezig') $alleen_aanwezig = 'AND inzeepdag NOT LIKE \'%niet%\'';
+if (isset($_POST['aanwezig']) and $_POST['aanwezig'] == 'aanwezig') $alleen_aanwezig = 'AND NOT (inzeepdag LIKE \'%niet%\')';
 
 $volgorde = 'achternaam';
 if (isset($_POST['instr']) and $_POST['instr'] == 'instr') $volgorde = 'instr';
@@ -63,8 +63,8 @@ d($instrumententabel, $aangenomen);
 			echo $aantal_niet . ' van ' . $aangenomen . ' (' . $percentage . ')'; ?>
 			<button class="w3-right w3-red w3-btn w3-small" form="form1" type="submit" name="instr" value="achternaam">Sorteer op achternaam</button>
 			&nbsp;&nbsp;<button class="w3-right w3-green w3-btn w3-small" form="form1" type="submit" name="instr" value="instr">Sorteer op instrument</button>
+			&nbsp;&nbsp;<button class="w3-right w3-black w3-btn w3-small" form="form1" type="submit" name="aanwezig" value="aanwezig">Alleen aanwezigen</button>
 		</h3>
-		&nbsp;&nbsp;<button class="w3-right w3-black w3-btn w3-small" form="form1" type="submit" name="aanwezig" value="aanwezig">Alleen aanwezigen</button></h3>
 		<table class="w3-table w3-striped w3-border-blue-gray">
 			<tr>
 				<th>Nr:</th>
