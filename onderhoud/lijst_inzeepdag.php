@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_POST, $_GET);
 
