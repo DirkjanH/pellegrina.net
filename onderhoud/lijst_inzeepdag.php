@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 $cursus = $cursus_offset + 1; // alleen cursus 1
 
@@ -21,6 +21,7 @@ AND NOT (toehoorder <=> 1) {$alleen_aanwezig}
 order by cursusid_fk, {$volgorde}";
 $inzeepdag = select_query($query_inzeepdag);
 if (is_array($inzeepdag)) $totalRows_inzeepdag = count($inzeepdag);
+d($query_inzeepdag, $inzeepdag);
 // end Recordset
 
 // begin Recordset
