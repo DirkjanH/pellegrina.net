@@ -11,7 +11,7 @@ d($_REQUEST, $_POST, $_GET);
 
 $cursus = $cursus_offset + 1; // alleen cursus 1
 
-if (isset($_POST['aanwezig']) and $_POST['aanwezig'] == 'aanwezig') $alleen_aanwezig = 'AND inzeepdag IS NULL or NOT (inzeepdag LIKE \'%niet%\')';
+if (isset($_POST['aanwezig']) and $_POST['aanwezig'] == 'aanwezig') $alleen_aanwezig = 'AND (inzeepdag IS NULL or NOT (inzeepdag LIKE \'%niet%\'))';
 else $alleen_aanwezig = '';
 
 $volgorde = 'achternaam';
