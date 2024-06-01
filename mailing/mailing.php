@@ -87,7 +87,6 @@ function lees_gdata($groep = '')
 {
 
 	global $voorzetsels, $leeg;
-
 	$adresbestand = '/var/www/vhosts/horringa.net/.local/share/contacts/contacts.csv'; // in map '.local/share/contacts'
 
 	if ((file_exists($adresbestand)) !== FALSE) {
@@ -110,7 +109,6 @@ function lees_gdata($groep = '')
 
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
-			d($data);
 			if (((isset($data[30]) and $data[30] !== '') or (isset($data[32]) and $data[32] !== '')) and (strstr($data[28], 'Geen folders') === false)) {
 				unset($adres);
 				$adres['naam'] = $data[0];
