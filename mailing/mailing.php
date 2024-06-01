@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 use Pelago\Emogrifier\CssInliner;
 use function \PHP81_BC\strftime;
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($GLOBALS, $_POST, $_GET);
 
