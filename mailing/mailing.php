@@ -109,18 +109,18 @@ function lees_gdata($groep = '')
 
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
-			if (((isset($data[30]) and $data[30] !== '') or (isset($data[32]) and $data[32] !== '')) and (strstr($data[28], 'Geen folders') === false)) {
+			if (((isset($data[32]) and $data[32] !== '') or (isset($data[34]) and $data[34] !== '')) and (strstr($data[30], 'Geen folders') === false)) {
 				unset($adres);
 				$adres['naam'] = $data[0];
 				$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $data[1]));
-				if ($data[30] != '') $adres['email'] = $data[30];
-				else $adres['email'] = $data[32];
+				if ($data[32] != '') $adres['email'] = $data[32];
+				else $adres['email'] = $data[34];
 				if (strstr($adres['email'], ' ::: ')) $adres['email'] = substr($adres['email'], 0, strpos($adres['email'], ' ::: '));
-				if ($data[49] != '') $adres['postcode'] = $data[49];
-				else $adres['postcode'] = $data[58];
+				if ($data[60] != '') $adres['postcode'] = $data[60];
+				else $adres['postcode'] = $data[69];
 				//			if (strstr($adres['postcode'], ' ::: ')) $adres['postcode'] = substr($adres['postcode'], 0, strpos($adres['postcode'], ' ::: '));
 				if (isset($adres['postcode']) and $adres['postcode'] != '' and preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) $adres['land'] = 'NL';
-				$adres['groep'] = $data[28];
+				$adres['groep'] = $data[30];
 				d($adres);
 				if (isset($groep) and $groep != '') {
 					if (strstr($adres['groep'], $groep)) {
