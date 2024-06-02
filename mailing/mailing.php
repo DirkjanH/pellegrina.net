@@ -97,6 +97,7 @@ function lees_gdata($groep = '')
 		$datastring_converted = preg_replace($reg_expr, '#$#', $datastring_converted);
 		d($datastring_converted);
 		$datastring_converted = str_replace(',,' . PHP_EOL, '#$#', $datastring_converted);
+		$datastring_converted = str_replace('- Value' . PHP_EOL, '- Value#$#', $datastring_converted);
 		$datastring_converted = str_replace(PHP_EOL, '|', $datastring_converted);
 		$datastring_converted = str_replace('#$#', ',,' . PHP_EOL, $datastring_converted);
 		d($datastring_converted);
@@ -122,7 +123,7 @@ function lees_gdata($groep = '')
 				//			if (strstr($adres['postcode'], ' ::: ')) $adres['postcode'] = substr($adres['postcode'], 0, strpos($adres['postcode'], ' ::: '));
 				if (isset($adres['postcode']) and $adres['postcode'] != '' and preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) $adres['land'] = 'NL';
 				$adres['groep'] = $data[29];
-				d($adres);
+				//	d($adres);
 				if (isset($groep) and $groep != '') {
 					if (strstr($adres['groep'], $groep)) {
 						if (!(strstr($groep, 'LaPel') and strstr($data[31], 'LaPel niet')))
