@@ -109,6 +109,12 @@ function lees_gdata($groep = '')
 		unset($lines[0]); // Kolom headers
 		d($aantal_kommas, $maxi, $lines, $velden);
 
+		$voornaam = array_search($lines, '"Given Name');
+		$groep = array_search($lines, 'Group Membership');
+		$email1 = array_search($lines, 'E-mail 1 - Value');
+		$email2 = array_search($lines, 'E-mail 2 - Value');
+		d($voornaam, $groep, $email1, $email2);
+
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
 			if (((isset($data[31]) and $data[31] !== '') or (isset($data[33]) and $data[33] !== '')) and (strstr($data[29], 'Geen folders') === false)) {
