@@ -109,10 +109,10 @@ function lees_gdata($groep = '')
 		unset($lines[0]); // Kolom headers
 		d($aantal_kommas, $maxi, $lines, $velden);
 
-		$voornaam = array_search($lines, '"Given Name');
-		$groep = array_search($lines, 'Group Membership');
-		$email1 = array_search($lines, 'E-mail 1 - Value');
-		$email2 = array_search($lines, 'E-mail 2 - Value');
+		$voornaam = array_search('Given Name', $lines);
+		$groep = array_search('Group Membership', $lines);
+		$email1 = array_search('E-mail 1 - Value', $lines);
+		$email2 = array_search('E-mail 2 - Value', $lines);
 		d($voornaam, $groep, $email1, $email2);
 
 		foreach ($lines as $line) {
