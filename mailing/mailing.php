@@ -116,7 +116,7 @@ function lees_gdata($groep = '')
 		$email2 = array_search('E-mail 2 - Value', $velden);
 		$pc1 = array_search('Address 1 - Postal Code', $velden);
 		$pc2 = array_search('Address 2 - Postal Code', $velden);
-		d($naam, $voornaam, $groep, $email1, $email2, $pc1, $pc2);
+		d($naam, $voornaam, $group, $email1, $email2, $pc1, $pc2);
 
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
