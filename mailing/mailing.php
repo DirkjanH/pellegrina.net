@@ -111,25 +111,27 @@ function lees_gdata($groep = '')
 
 		$naam = array_search('Name', $velden, true);
 		$voornaam = array_search('Given Name', $velden);
-		$groep = array_search('Group Membership', $velden);
+		$group = array_search('Group Membership', $velden);
 		$email1 = array_search('E-mail 1 - Value', $velden);
 		$email2 = array_search('E-mail 2 - Value', $velden);
-		d($naam, $voornaam, $groep, $email1, $email2);
+		$pc1 = array_search('Address 1 - Postal Code', $velden);
+		$pc2 = array_search('Address 2 - Postal Code', $velden);
+		d($naam, $voornaam, $groep, $email1, $email2, $pc1, $pc2);
 
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
-			if (((isset($data[31]) and $data[31] !== '') or (isset($data[33]) and $data[33] !== '')) and (strstr($data[29], 'Geen folders') === false)) {
+			if (((isset($data[$email1]) and $data[$email1] !== '') or (isset($data[$email2]) and $data[$email2] !== '')) and (strstr($data[$group], 'Geen folders') === false)) {
 				unset($adres);
-				$adres['naam'] = $data[0];
-				$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $data[1]));
-				if ($data[33] != '') $adres['email'] = $data[33];
-				else $adres['email'] = $data[31];
+				$adres['naam'] = $data[$naam];
+				$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $data[$voornaam]));
+				if ($data[$email1] != '') $adres['email'] = $data[$email1];
+				else $adres['email'] = $data[$email2];
 				if (strstr($adres['email'], ' ::: ')) $adres['email'] = substr($adres['email'], 0, strpos($adres['email'], ' ::: '));
-				if ($data[59] != '') $adres['postcode'] = $data[59];
-				else $adres['postcode'] = $data[68];
+				if ($data[$pc1] != '') $adres['postcode'] = $data[$pc1];
+				else $adres['postcode'] = $data[$pc2];
 				//			if (strstr($adres['postcode'], ' ::: ')) $adres['postcode'] = substr($adres['postcode'], 0, strpos($adres['postcode'], ' ::: '));
 				if (isset($adres['postcode']) and $adres['postcode'] != '' and preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) $adres['land'] = 'NL';
-				$adres['groep'] = $data[29];
+				$adres['groep'] = $data[$group];
 				//	d($adres);
 				if (isset($groep) and $groep != '') {
 					if (strstr($adres['groep'], $groep)) {
