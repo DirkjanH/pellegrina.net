@@ -102,12 +102,10 @@ function lees_gdata($groep = '')
 		$datastring_converted = str_replace('#$#', ',,' . PHP_EOL, $datastring_converted);
 		d($datastring_converted);
 		$lines = explode(PHP_EOL, $datastring_converted);
-		$aantal_kommas = substr_count($lines[0], ',');
 
-		$maxi = count($lines);
 		$velden = str_getcsv($lines[0], ",", "\"");
 		unset($lines[0]); // Kolom headers
-		d($aantal_kommas, $maxi, $lines, $velden);
+		d($lines, $velden);
 
 		$naam = array_search('Name', $velden, true);
 		$voornaam = array_search('Given Name', $velden);
