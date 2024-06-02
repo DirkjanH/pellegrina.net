@@ -114,7 +114,7 @@ function lees_gdata($groep = '')
 		$groep = array_search('Group Membership', $velden);
 		$email1 = array_search('E-mail 1 - Value', $velden);
 		$email2 = array_search('E-mail 2 - Value', $velden);
-		d($voornaam, $groep, $email1, $email2);
+		d($naam, $voornaam, $groep, $email1, $email2);
 
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
