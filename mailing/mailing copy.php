@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 use Pelago\Emogrifier\CssInliner;
 use function \PHP81_BC\strftime;
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($GLOBALS, $_POST, $_GET);
 
@@ -93,7 +93,7 @@ function lees_gdata($groep = '')
 		$datastring_converted = file_get_contents($adresbestand);
 		$reg_expr = '#Keywords,\d\d\d\d-\d\d-\d\d\n#';
 		d($reg_expr, $datastring_converted);
-		//$datastring_converted = substr($datastring_converted, strpos($datastring_converted, 'Type,Jot 2 - Value' . PHP_EOL) + 19);
+		$datastring_converted = substr($datastring_converted, strpos($datastring_converted, 'Type,Jot 2 - Value' . PHP_EOL) + 19);
 		$datastring_converted = preg_replace($reg_expr, '#$#', $datastring_converted);
 		d($datastring_converted);
 		$datastring_converted = str_replace(',,' . PHP_EOL, '#$#', $datastring_converted);
@@ -104,9 +104,8 @@ function lees_gdata($groep = '')
 		$aantal_kommas = substr_count($lines[0], ',');
 
 		$maxi = count($lines);
-		$velden = str_getcsv($lines[0], ",", "\"");
-		unset($lines[0]); // Kolom headers
-		d($aantal_kommas, $maxi, $lines, $velden);
+		//unset($lines[0]); // Kolom headers
+		d($aantal_kommas, $maxi, $lines);
 
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
