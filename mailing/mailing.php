@@ -109,6 +109,7 @@ function lees_gdata($groep = '')
 		unset($lines[0]); // Kolom headers
 		d($aantal_kommas, $maxi, $lines, $velden);
 
+		$naam = array_search('Name', $velden, true);
 		$voornaam = array_search('Given Name', $velden);
 		$groep = array_search('Group Membership', $velden);
 		$email1 = array_search('E-mail 1 - Value', $velden);
