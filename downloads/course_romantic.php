@@ -122,7 +122,7 @@ $cursusnr = 1 + $cursus_offset; ?>
         <li><a href="\MP3\Reicha%20deel%20Requiem%20en%20Cum%20Sanctis%20vanaf%20blz%20146%2075%25.mp3">Practice file tenor Requiem and Cum Sanctis from page 146, slowed down to 75 % of the full tempo</li>
         <li><a href="\MP3\Quam Olim Abrahae, Reicha Requiem tenor.mp3">Practice file tenor Quam olim Abrahae, from page 89 and page 108, full tempo</a></li>
         <li><a href="\MIDI\Reicha-Lacrimosa.mid">MIDI practice file Lacrimosa, page 72 - 80</a></li>
-        <li><a href="MP3\Reicha-Lacrimosa.mp3">MP3 practice file Lacrimosa, page 72 - 80, full tempo: quarter = 144</a></li>
+        <li><a href="\MP3\Reicha-Lacrimosa.mp3">MP3 practice file Lacrimosa, page 72 - 80, full tempo: quarter = 144</a></li>
       </ol>
       <div class="cols3">
         <ul>
