@@ -126,6 +126,7 @@ $cursusnr = 1 + $cursus_offset; ?>
         <li><a href="\MIDI\Reicha-Requiem_vocal_score nr 2 Dies Irae.mid" target="_blank">MIDI practice file Dies Irae, page 29</a></li>
         <li><a href="\MIDI\Reicha-Lacrimosa.mid" target="_blank">MIDI practice file Lacrimosa, page 72</a></li>
         <li><a href="\MIDI\Reicha-Requiem_vocal_score nr 7 Confutatis.mid" target="_blank">MIDI practice file Confutatis, page 88</a></li>
+        <li><a href="\MIDI\Reicha-Quam olim fuga.mid" target="_blank">MIDI practice file Quam olim Abrahae, page 89</a></li>
         <li><a href="\MIDI\Reicha-Requiem_vocal_score nr 9 Domine Jesu.mid" target="_blank">MIDI practice file Domine Jesu, page 122</a></li>
       </ol>
       <div class="cols3">
