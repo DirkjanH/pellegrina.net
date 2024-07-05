@@ -179,7 +179,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - vocal score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 2.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 2</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Violino 1</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Violino 1 + flauto</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - violino 2.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Violino 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - viola.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Viola</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - bass.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Cello, double bass, bassoon</a></li>
@@ -192,8 +192,8 @@ $cursusnr = 2 + $cursus_offset; ?>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-partitura.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Full score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-voci_e_bc.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Vocal score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_1.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Violino 1</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_2.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Violino 2</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_1.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Flauto/oboe/violini 1</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_2.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Flauto/oboe/violini 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-viola.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Viola</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-bc.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Basso continuo</a></li>
       </ul>
@@ -205,12 +205,12 @@ $cursusnr = 2 + $cursus_offset; ?>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(conducteur).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(alto).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Alto part</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(violons_1_&_2).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Violins 1 & 2</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(violons_1_&_2).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Flauto/oboe/violini 1 & 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(vlc_&_b.c.).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Celli & BC</a></li>
       </ul>
       <h3>Vivaldi - Sinfonie avanti la Senna Festeggiante RV 693 (instruments only)</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino1.pdf" target="_blank">Flauto/oboe/violini 1</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino1.pdf" target="_blank"> + gamba (same division as in Domine ad adiuvandum) 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino2.pdf" target="_blank">Flauto/oboe/violini 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_viola.pdf" target="_blank">Viole</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_basso_continuo.pdf" target="_blank">Basso (celli, double bass, BC)</a></li>
@@ -219,9 +219,9 @@ $cursusnr = 2 + $cursus_offset; ?>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Full Score.pdf" target="_blank">Caldara - Salve Regina - Full Score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - Chorpartitur.pdf" target="_blank">Caldara - Salve Regina - Vocal score</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin I.pdf" target="_blank">Caldara - Salve Regina - Violin I</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin II.pdf" target="_blank">Caldara - Salve Regina - Violin II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Trombone I, Trombone II.pdf" target="_blank">Caldara - Salve Regina - Viola da gamba or Trombone I-II</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin I.pdf" target="_blank">Caldara - Salve Regina - Flauto/oboe/violini I</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin II.pdf" target="_blank">Caldara - Salve Regina - Flauto/oboe/violini II</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Trombone I, Trombone II.pdf" target="_blank">Caldara - Salve Regina - Viola da gamba I-II</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violoncello.pdf" target="_blank">Caldara - Salve Regina - Violoncello</a></li>
       </ul>
       <h3>Vivaldi - Magnificat RV 610</h3>
@@ -232,8 +232,8 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400497-PMLP329343-Vivaldi-Magnificat_-_Oboe_2.pdf" target="_blank">Vivaldi - Magnificat - Oboe 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400492-PMLP329343-Vivaldi-Magnificat_-_Violino_I.pdf" target="_blank">Vivaldi - Magnificat - Violino I</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400493-PMLP329343-Vivaldi-Magnificat_-_Violino_II.pdf" target="_blank">Vivaldi - Magnificat - Violino II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400494-PMLP329343-Vivaldi-Magnificat_-_Viola.pdf" target="_blank">Vivaldi - Magnificat - Viola</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400495-PMLP329343-Vivaldi-Magnificat_-_Violoncello.pdf" target="_blank">Vivaldi - Magnificat - Violoncello</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400494-PMLP329343-Vivaldi-Magnificat_-_Viola.pdf" target="_blank">Vivaldi - Magnificat - Viola + gamba (same division as in Domine ad adiuvandum)</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400495-PMLP329343-Vivaldi-Magnificat_-_Violoncello.pdf" target="_blank">Vivaldi - Magnificat - Violoncello, double bass + gamba (same division as in Domine ad adiuvandum)</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400498-PMLP329343-Vivaldi-Magnificat_-_Organo.pdf" target="_blank">Vivaldi - Magnificat - Organo</a></li>
       </ul>
     </div>
