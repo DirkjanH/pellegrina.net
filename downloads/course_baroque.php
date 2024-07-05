@@ -159,6 +159,25 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - viola.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Viola</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - bass.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Cello, double bass, bassoon</a></li>
       </ul>
+      <div class="cols2">
+        <p>Orchestra I:</p>
+        <p>Femke Huizinga, violin I<br>
+          Lea Schuiling, violin I<br>
+          Eliane Heldring, violin II<br>
+          Ineke Huizinga, violin II<br>
+          Corinne Britzel, viola<br>
+          Stephanie Helfferich, viola da gamba (= viola)<br>
+          Hannah Wapenaar, viola da gamba (= bas)</p>
+
+        <p>Orchestra II:</p>
+        <p>Jet Bensdorp, violin I<br>
+          Julia (Sut Keng) Taylor, violin I<br>
+          Birgit Apfelbaum, violin II<br>
+          Hans-Joachim Bieber, violin II<br>
+          Renske Ligtmans, viola<br>
+          Tanja van de Ketterij, viola da gamba (= viola)<br>
+          D&eacute;sir&eacute;e Staverman, viola da gamba (= bas)</p>
+      </div>
       <h3>Monteverdi - Cantate Domino a 2</h3>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Monteverdi - Cantate Domino a 2.pdf" target="_blank">Monteverdi - Cantate Domino a 2 - Score</a></li>
