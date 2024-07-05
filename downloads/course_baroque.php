@@ -149,7 +149,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         </tbody>
       </table>
       <h4>Division of the string players over orchestra 1 and 2 in movement 1 and 3 (gambas play in the orchestra as well):</h4>
-      <table>
+      <table border="1" cellpadding="10px">
         <tr>
           <td>
             <h4>Orchestra I:</h4>
