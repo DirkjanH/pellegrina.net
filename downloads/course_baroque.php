@@ -149,24 +149,30 @@ $cursusnr = 2 + $cursus_offset; ?>
         </tbody>
       </table>
       <h4>Division of the string players over orchestra 1 and 2 in movement 1 and 3 (gambas play in the orchestra as well):</h4>
-      <div class="cols2">
-        <h4>Orchestra I:</h4>
-        <p>Femke Huizinga, violin I<br>
-          Lea Schuiling, violin I<br>
-          Eliane Heldring, violin II<br>
-          Ineke Huizinga, violin II<br>
-          Corinne Britzel, viola<br>
-          Stephanie Helfferich, viola da gamba (= viola)<br>
-          Hannah Wapenaar, viola da gamba (= bas)</p>
-        <h4>Orchestra II:</h4>
-        <p>Jet Bensdorp, violin I<br>
-          Julia (Sut Keng) Taylor, violin I<br>
-          Birgit Apfelbaum, violin II<br>
-          Hans-Joachim Bieber, violin II<br>
-          Renske Ligtmans, viola<br>
-          Tanja van de Ketterij, viola da gamba (= viola)<br>
-          D&eacute;sir&eacute;e Staverman, viola da gamba (= bas)</p>
-      </div>
+      <table>
+        <tr>
+          <td>
+            <h4>Orchestra I:</h4>
+            <p>Femke Huizinga, violin I<br>
+              Lea Schuiling, violin I<br>
+              Eliane Heldring, violin II<br>
+              Ineke Huizinga, violin II<br>
+              Corinne Britzel, viola<br>
+              Stephanie Helfferich, viola da gamba (= viola)<br>
+              Hannah Wapenaar, viola da gamba (= bas)</p>
+          </td>
+          <td>
+            <h4>Orchestra II:</h4>
+            <p>Jet Bensdorp, violin I<br>
+              Julia (Sut Keng) Taylor, violin I<br>
+              Birgit Apfelbaum, violin II<br>
+              Hans-Joachim Bieber, violin II<br>
+              Renske Ligtmans, viola<br>
+              Tanja van de Ketterij, viola da gamba (= viola)<br>
+              D&eacute;sir&eacute;e Staverman, viola da gamba (= bas)</p>
+          </td>
+        </tr>
+      </table>
       <h3>Vivaldi - Confitebor RV 596</h3>
       <ul>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi%20-%20Confitebor%20RV%20596/Vivaldi%20-%20Confitebor%20RV%20596%20-%20score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Score</a></li>
