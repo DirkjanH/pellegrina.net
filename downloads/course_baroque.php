@@ -150,7 +150,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </table>
       <h4>Division of the string players over orchestra 1 and 2 in movement 1 and 3 (gambas play in the orchestra as well):</h4>
       <div class="cols2">
-        <p>Orchestra I:</p>
+        <h4>Orchestra I:</h4>
         <p>Femke Huizinga, violin I<br>
           Lea Schuiling, violin I<br>
           Eliane Heldring, violin II<br>
@@ -158,7 +158,7 @@ $cursusnr = 2 + $cursus_offset; ?>
           Corinne Britzel, viola<br>
           Stephanie Helfferich, viola da gamba (= viola)<br>
           Hannah Wapenaar, viola da gamba (= bas)</p>
-        <p>Orchestra II:</p>
+        <h4>Orchestra II:</h4>
         <p>Jet Bensdorp, violin I<br>
           Julia (Sut Keng) Taylor, violin I<br>
           Birgit Apfelbaum, violin II<br>
