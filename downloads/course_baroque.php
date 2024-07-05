@@ -152,7 +152,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       <table border="1" cellpadding="10px">
         <tr>
           <td>
-            <h4>Orchestra I:</h4>
+            <h5>Orchestra I:</h5>
             <p>Femke Huizinga, violin I<br>
               Lea Schuiling, violin I<br>
               Eliane Heldring, violin II<br>
@@ -162,7 +162,7 @@ $cursusnr = 2 + $cursus_offset; ?>
               Hannah Wapenaar, viola da gamba (= bas)</p>
           </td>
           <td>
-            <h4>Orchestra II:</h4>
+            <h5>Orchestra II:</h5>
             <p>Jet Bensdorp, violin I<br>
               Julia (Sut Keng) Taylor, violin I<br>
               Birgit Apfelbaum, violin II<br>
