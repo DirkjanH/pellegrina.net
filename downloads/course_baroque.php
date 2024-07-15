@@ -99,7 +99,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 2</a></li>
       </ul>
-      <h4>Division of the voices over choir 1 and 2 in movement 1 (NB: in movement 3 both choirs are identical, so choir 2 also sings what is indicated as 'koor 1'):</h4>
+      <h4>Division of the voices over choir 1 and 2 in movement 1 (NB: in movement 3 both choir parts are identical, so choir 2 also sings what is indicated as 'koor 1'):</h4>
       <table border="1" cellpadding="10px">
         <thead>
           <th class="s0" dir="ltr">Choir 1</th>
