@@ -148,7 +148,7 @@ $cursusnr = 2 + $cursus_offset; ?>
           </tr>
         </tbody>
       </table>
-      <h5>NB: in movement 3 both choir parts are identical, so choir 2 also sings what is indicated as 'koor 1'. So only the first movement is for double choir.)</h5>
+      <h5>NB: in movement 3 both choir parts are identical, so choir 2 also sings what is indicated as 'koor 1'. So only the first movement is for double choir.</h5>
       <h4>Division of the string players over orchestra 1 and 2 in movement 1 and 3 (gambas play in the orchestra as well):</h4>
       <table border="1" cellpadding="10px">
         <tr>
