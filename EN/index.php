@@ -128,9 +128,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 						<li>České Budějovice (Czechia), 25 July - 4 August <?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="plaatsvoor">Places for a few more violins available<br>
+					<p class="plaatsvoor onzichtbaar">Places for a few more violins available<br>
 						The choir has a few places in all voice groups, in particular for sopranos and basses</p>
-					<p class="volvoor">The course is full for all other instruments</p>
+					<p class="volvoor">The course is full for all instruments and singers</p>
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové) ubytování a stravování za Kč 4.000. Jenom napište &quot;ANKST&quot; na přihlášce v poli &quot;Remarks and additional information</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
@@ -140,8 +140,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 11 - 17 August <?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="plaatsvoor">Places available for two more baroque violins/violas and continuo players (organ/harpsichord/theorbo)</p>
-					<p class="volvoor">This course is full for other instruments and for singers</p>
+					<p class="plaatsvoor onzichtbaar">Places available for two more baroque violins/violas and continuo players (organ/harpsichord/theorbo)</p>
+					<p class="volvoor">This course is full for all instruments and singers</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Play chamber music with the Kinsky Trio Prague & Friends</span></a></h3>
