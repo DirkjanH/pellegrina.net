@@ -124,7 +124,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 					</ul>
 					<p class="plaatsvoor onzichtbaar">Nog plaats voor enkele violen<br>
 						Het koor heeft nog enkele plekken in alle groepen, met name voor sopranen en bassen</p>
-					<p class="volvoor">De cursus is vol voor alle instrumenten en zangstemmen</p>
+					<p class="volvoor">De cursus is vol voor alle instrumenten en zangers</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="baroque/index.php"><span class="baroque">Barokmuziek in 415 Hz: Vivaldi's Venetiaanse Vespers</span></a></h3>
