@@ -87,7 +87,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       <p>All parts for the works we are going to perform are now available. Please print and study what you need. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
       <h3>Vivaldi - Domine ad adjuvandum me festina RV 593</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Full Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Full Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Vocal score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-I</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-II</a></li>
@@ -226,7 +226,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </ul>
       <h3>Caldara - Salve Regina</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Full Score.pdf" target="_blank">Caldara - Salve Regina - Full Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Full Score.pdf" target="_blank">Caldara - Salve Regina - Full Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - Chorpartitur.pdf" target="_blank">Caldara - Salve Regina - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin I.pdf" target="_blank">Caldara - Salve Regina - Flauto/oboe/violini I</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara - Salve Regina/Caldara - Salve Regina - score - Violin II.pdf" target="_blank">Caldara - Salve Regina - Flauto/oboe/violini II</a></li>
@@ -235,7 +235,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </ul>
       <h3>Vivaldi - Magnificat RV 610</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400491-PMLP329343-Vivaldi-Magnificat_-_partitura.pdf" target="_blank">Vivaldi - Magnificat - Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400491-PMLP329343-Vivaldi-Magnificat_-_partitura.pdf" target="_blank">Vivaldi - Magnificat - Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400499-PMLP329343-Vivaldi-Magnificat_-_Coro&Continuo.pdf" target="_blank">Vivaldi - Magnificat - Coro&Continuo</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400496-PMLP329343-Vivaldi-Magnificat_-_Oboe_1.pdf" target="_blank">Vivaldi - Magnificat - Oboe 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400497-PMLP329343-Vivaldi-Magnificat_-_Oboe_2.pdf" target="_blank">Vivaldi - Magnificat - Oboe 2</a></li>
