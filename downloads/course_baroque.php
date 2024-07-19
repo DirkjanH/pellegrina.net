@@ -91,10 +91,10 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Vocal score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-I</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola + gamba 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola 1</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola + gamba 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 2-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 2-I</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 2-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 2-II</a></li>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola + gamba 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola 2</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Viola 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Viola + gamba 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Cello, gamba & double bass 1-2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Cello & double bass 1-2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 1.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - BC 2.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - BC 2</a></li>
