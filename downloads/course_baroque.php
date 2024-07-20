@@ -87,7 +87,8 @@ $cursusnr = 2 + $cursus_offset; ?>
       <p>All parts for the works we are going to perform are now available. Please print and study what you need. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
       <h3>Vivaldi - Domine ad adjuvandum me festina RV 593</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Full Score with bowings</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Full Score with extra bars in Gloria Patri</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Full Score WITH BOWINGS.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Full Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Vocal score.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-I.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-I</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Domine ad adjuvandum me festina RV 593/Vivaldi-Domine_ad_adjuvandum - Violin 1-II.pdf" target="_blank">Vivaldi-Domine_ad_adjuvandum - Violin 1-II</a></li>
