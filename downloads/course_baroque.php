@@ -176,7 +176,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </table>
       <h3>Vivaldi - Confitebor RV 596</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi%20-%20Confitebor%20RV%20596/Vivaldi%20-%20Confitebor%20RV%20596%20-%20score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - score WITH BOWINGS.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - vocal score.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 1.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi - Confitebor RV 596/Vivaldi - Confitebor RV 596 - oboe 2.pdf" target="_blank">Vivaldi - Confitebor RV 596 - Oboe 2</a></li>
@@ -194,7 +194,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </ul>
       <h3>Galuppi - Laetatus sum</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-partitura.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Full score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-partitura.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Full score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-voci_e_bc.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Vocal score</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_1.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Flauto/oboe/violini 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-violino_2.pdf" target="_blank">Galuppi-Laetatus_sum_in_A - Flauto/oboe/violini 2</a></li>
@@ -203,7 +203,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </ul>
       <h3>Caldara - Caro mea vere est cibus a 2</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro_mea_vere.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-partitura WITH BOWINGS.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro mea vere est cibus, à 2_SS+bc_02PV MS362.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - soprani + BC</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro mea vere est cibus, à 2_SS+bc_02PV MS362-Cello,_B.C..pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Cello</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro mea vere est cibus, à 2_SS+bc_02PV MS362-Cello,_B.C._(+score).pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - cello + score</a></li>
@@ -212,7 +212,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </ul>
       <h3>Vivaldi - Cum dederit from Nisi Dominus RV 608</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(conducteur).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Score</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/Vivaldi_Cum_dederit_from_Nisi_Dominus_RV_608_score WITH BOWINGS.pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(alto).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Alto part</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(violons_1_&_2).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Flauto/oboe/violini 1 & 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Nisi Dominus RV 608/VIVALDI_Cum_dederit_from_Nisi_Dominus_RV_608_(vlc_&_b.c.).pdf" target="_blank">Vivaldi - Cum dederit from Nisi Dominus - Celli & BC</a></li>
@@ -220,6 +220,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       <h3>Vivaldi - Sinfonie avanti la Senna Festeggiante RV 693 (instruments only)</h3>
       <p>NB. we only play the Sinfonia (all 3 sections)</p>
       <ul>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/Vivaldi_La_Senna_Festeggiante_parte_prima_score WITH BOWINGS.pdf" target="_blank">Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino1.pdf" target="_blank">Flauto/oboe/violini 1</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_violino2.pdf" target="_blank">Flauto/oboe/violini 2</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Vivaldi_Senna_RV693/vivaldi_la_senna_festeggiante_parte_prima_viola.pdf" target="_blank">Viole</a></li>
