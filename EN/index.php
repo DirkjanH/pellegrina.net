@@ -90,11 +90,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Who registers before March 1, receives a EUR 50 red.</div>
 			</div>
-			<div id="banner" class="">
+			<div id="banner" class="onzichtbaar">
 				<div class="banneroranje">Last places available...</div>
 			</div>
-			<div id="banner" class="onzichtbaar">
-				<div class="bannerrood">The 2024 courses are (nearly) full</div>
+			<div id="banner" class="">
+				<div class="bannerrood">The 2024 courses are fully booked</div>
 			</div>
 		</div>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>

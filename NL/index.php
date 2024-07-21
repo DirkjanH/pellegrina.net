@@ -91,11 +91,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>
 			</div>
-			<div id="banner" class="">
+			<div id="banner" class="onzichtbaar">
 				<div class="banneroranje">Nog enkele plaatsen beschikbaar...</div>
 			</div>
-			<div id="banner" class="onzichtbaar">
-				<div class="onzichtbaar bannerrood">De cursussen in 2022 zijn (nagenoeg) vol</div>
+			<div id="banner" class="">
+				<div class="bannerrood">De cursussen in 2024 zijn helemaal vol</div>
 			</div>
 		</div>
 		<div id="main" class="w3-row-padding">
