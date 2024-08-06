@@ -204,7 +204,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </ul>
       <h3>Caldara - Caro mea vere est cibus a 2</h3>
       <ul>
-        <li><a href="https://pellegrina.net/pdf/2024-2/Galuppi - Laetatus sum/Galuppi-Laetatus_sum_in_A-partitura WITH BOWINGS.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Score with bowings</a></li>
+        <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro_mea_vere.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Score with bowings</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro mea vere est cibus, à 2_SS+bc_02PV MS362.pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - soprani + BC</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro mea vere est cibus, à 2_SS+bc_02PV MS362-Cello,_B.C..pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - Cello</a></li>
         <li><a href="https://pellegrina.net/pdf/2024-2/Caldara_Caro_mea_vere/Caldara_Caro mea vere est cibus, à 2_SS+bc_02PV MS362-Cello,_B.C._(+score).pdf" target="_blank">Caldara - Caro mea vere est cibus a 2 - cello + score</a></li>
