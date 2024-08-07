@@ -52,7 +52,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <tr>
           <td class="w3-center"><a href="../part_list.php?cursus=2" target="_blank">List of participants</a></td>
           <td class="w3-center"><a href="https://pellegrina.net/ensemblelijst_2.php" target="_blank">Chamber music ensembles</a></td>
-          <td class="w3-center"><a href="2024-2_accommodation.pdf" target="_blank">Overview of accommodation</a></td>
+          <td class="w3-center"><a href="https://docs.google.com/spreadsheets/d/1JCygZZvuBPAWIkfGGGChLMXQSNA34EkRP9tYArxD5LI/edit?usp=sharing" target="_blank">Overview of accommodation</a></td>
           <td class="w3-center"><a href="https://docs.google.com/document/d/1ODcgAmuTYIfNC9DKLaU0f6zed2uJvaJ6aoiIGp2Sb1A/edit?usp=sharing" target="_blank">Accommodation near Nieuw Sion</a></td>
           <td class="w3-center"><a href="2024-2 Baroque daily program.pdf" target="_blank">Daily program</a></td>
           <td class="w3-center uit onzichtbaar">Flyer concert</td>
