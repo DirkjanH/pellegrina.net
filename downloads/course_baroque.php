@@ -55,7 +55,7 @@ $cursusnr = 2 + $cursus_offset; ?>
           <td class="w3-center"><a href="https://docs.google.com/spreadsheets/d/1JCygZZvuBPAWIkfGGGChLMXQSNA34EkRP9tYArxD5LI/edit?usp=sharing" target="_blank">Overview of accommodation</a></td>
           <td class="w3-center"><a href="https://docs.google.com/document/d/1ODcgAmuTYIfNC9DKLaU0f6zed2uJvaJ6aoiIGp2Sb1A/edit?usp=sharing" target="_blank">Accommodation near Nieuw Sion</a></td>
           <td class="w3-center"><a href="2024-2 Baroque daily program.pdf" target="_blank">Daily program</a></td>
-          <td class="w3-center"><a href="LP2024-2 Vivaldi FLYER.pdf" target="_blank">Flyer concert</a></td>
+          <td class="w3-center"><a href="https://docs.google.com/document/d/1IpHquLhJ4NAdDyNHhrhLk_IQGsoXs4FEMSDAqoYFatc/edit?usp=sharing" target="_blank">Flyer concert</a></td>
         </tr>
       </table>
       <h2><?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?> (<?php echo $cursussen[$cursusnr]['datumkort'] ?>) - information & scores<br />
