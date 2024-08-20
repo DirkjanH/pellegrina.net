@@ -107,8 +107,8 @@ function lees_gdata($groep = '')
 		unset($lines[0]); // Kolom headers
 		d($lines, $velden);
 
-		$naam = array_search('Name', $velden, true);
-		$voornaam = array_search('Given Name', $velden);
+		$naam = str_replace('  ', ' ', array_search('First Name', $velden) . ' ' . array_search('Middle Name', $velden) . ' ' . array_search('Last Name', $velden));
+		$voornaam = array_search('First Name', $velden);
 		$group = array_search('Labels', $velden);
 		$email1 = array_search('E-mail 1 - Value', $velden);
 		$email2 = array_search('E-mail 2 - Value', $velden);
