@@ -109,7 +109,7 @@ function lees_gdata($groep = '')
 
 		$naam = array_search('Name', $velden, true);
 		$voornaam = array_search('Given Name', $velden);
-		$group = array_search('Group Membership', $velden);
+		$group = array_search('Labels', $velden);
 		$email1 = array_search('E-mail 1 - Value', $velden);
 		$email2 = array_search('E-mail 2 - Value', $velden);
 		$pc1 = array_search('Address 1 - Postal Code', $velden);
