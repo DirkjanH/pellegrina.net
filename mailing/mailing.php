@@ -107,20 +107,21 @@ function lees_gdata($groep = '')
 		unset($lines[0]); // Kolom headers
 		d($lines, $velden);
 
-		$naam = str_replace('  ', ' ', array_search('First Name', $velden) . ' ' . array_search('Middle Name', $velden) . ' ' . array_search('Last Name', $velden));
 		$voornaam = array_search('First Name', $velden);
+		$middelnaam = array_search('Middle Name', $velden);
+		$achternaam = array_search('Last Name', $velden);
 		$group = array_search('Labels', $velden);
 		$email1 = array_search('E-mail 1 - Value', $velden);
 		$email2 = array_search('E-mail 2 - Value', $velden);
 		$pc1 = array_search('Address 1 - Postal Code', $velden);
 		$pc2 = array_search('Address 2 - Postal Code', $velden);
-		d($naam, $voornaam, $group, $email1, $email2, $pc1, $pc2);
+		d($voornaam, $middelnaam, $achternaam, $group, $email1, $email2, $pc1, $pc2);
 
 		foreach ($lines as $line) {
 			$data = str_getcsv($line, ",", "\"");
 			if (((isset($data[$email1]) and $data[$email1] !== '') or (isset($data[$email2]) and $data[$email2] !== '')) and (strstr($data[$group], 'Geen folders') === false)) {
 				unset($adres);
-				$adres['naam'] = $data[$naam];
+				$adres['naam'] = str_replace('  ', ' ', ($data[$voornaam] . ' ' . $data[$middelnaam] . ' ' . $data[$achternaam]));
 				$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $data[$voornaam]));
 				if ($data[$email1] != '') $adres['email'] = $data[$email1];
 				else $adres['email'] = $data[$email2];
