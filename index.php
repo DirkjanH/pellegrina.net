@@ -9,7 +9,7 @@ use function PHP81_BC\strftime;
 
 Kint::$enabled_mode = false;
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 function getisp($ip = '')
 {
@@ -191,21 +191,21 @@ function getisp($ip = '')
 	<div id="inhoud" class="w3-content">
 		<div id="envelop" class="w3-hide-small w3-hide-medium">
 			<div id="banner">
-				<div id="" class="bannergeel onzichtbaar" style="font-size: 75%;">
-					<div class="onzichtbaar">Data zomer 2024 bekend; inschrijving start 1 december!</div>
-					<div class="onzichtbaar">Dates summer 2024 are known; registration starts December 1!</div>
+				<div id="" class="bannergeel" style="font-size: 75%;">
+					<div class="">Data zomer 2025 bekend; inschrijving start 1 december!</div>
+					<div class="">Dates summer 2025 are known; registration starts December 1!</div>
 				</div>
 				<div id="" class="onzichtbaar">
-					<div>Inschrijving voor zomer 2024 is gestart!</div>
-					<div>Registration for summer 2024 has started!</div>
+					<div>Inschrijving voor zomer 2025 is gestart!</div>
+					<div>Registration for summer 2025 has started!</div>
 				</div>
 				<div id="" class="banneroranje onzichtbaar">
 					<div class="onzichtbaar">Nog enkele plaatsen beschikbaar...</div>
 					<div class="onzichtbaar">A few last places available...</div>
 				</div>
-				<div id="bannerteksten" class="bannerrood">
-					<div class="">De cursussen in 2024 zijn helemaal vol</div>
-					<div class="">The 2024 courses are fully booked</div>
+				<div id="bannerteksten" class="bannerrood onzichtbaar">
+					<div class="onzichtbaar">De cursussen in 2025 zijn helemaal vol</div>
+					<div class="onzichtbaar">The 2025 courses are fully booked</div>
 				</div>
 				<div id="" class="onzichtbaar">
 					<div>Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>

@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 ?>
 
 <!DOCTYPE HTML>
@@ -82,10 +82,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 	<div id="inhoud">
 		<div id="envelop" class="w3-hide-small w3-hide-medium">
 			<div id="banner" class="onzichtbaar">
-				<div class="bannergroen">Registration for summer 2024 has started!</div>
+				<div class="bannergroen">Registration for summer 2025 has started!</div>
 			</div>
-			<div id="banner" class="onzichtbaar">
-				<div class="bannergeel" style="font-size: 75%;">Dates summer 2024 are known; registration starts December 1!</div>
+			<div id="banner" class="">
+				<div class="bannergeel" style="font-size: 75%;">Dates summer 2025 are known; registration starts December 1!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Who registers before March 1, receives a EUR 50 red.</div>
@@ -93,8 +93,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 			<div id="banner" class="onzichtbaar">
 				<div class="banneroranje">Last places available...</div>
 			</div>
-			<div id="banner" class="">
-				<div class="bannerrood">The 2024 courses are fully booked</div>
+			<div id="banner" class="onzichtbaar">
+				<div class="bannerrood">The 2025 courses are fully booked</div>
 			</div>
 		</div>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
@@ -121,33 +121,33 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="romantic/index.php"><span class="romantic">Reicha's Requiem, for orchestra, choir and soloists</span></a></h3>
+					<h3><a xxx="romantic/index.php"><span class="romantic">Dvořák's Spectre's Bride, for orchestra, choir and soloists</span></a></h3>
 					<p>for instrumentalists &amp; (choir &amp; solo) singers, with chamber music and chamber choir<br>
 					</p>
 					<ul>
-						<li>České Budějovice (Czechia), 25 July - 4 August <?php echo $jaar ?>
+						<li>České Budějovice (Czechia), 24 July - 3 August <?php echo $jaar ?>
 						</li>
 					</ul>
 					<p class="plaatsvoor onzichtbaar">Places for a few more violins available<br>
 						The choir has a few places in all voice groups, in particular for sopranos and basses</p>
-					<p class="volvoor">The course is full for all instruments and singers</p>
+					<p class="volvoor onzichtbaar">The course is full for all instruments and singers</p>
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové) ubytování a stravování za Kč 4.000. Jenom napište &quot;ANKST&quot; na přihlášce v poli &quot;Remarks and additional information</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="baroque/index.php"><span class="baroque">Baroque music in 415 Hz: Vivaldi's Venetian Vespers</span></a></h3>
+					<h3><a xxx="baroque/index.php"><span class="baroque">Baroque music in 415 Hz: Purcell & Handel</span></a></h3>
 					<p>for singers &amp; period instruments</p>
 					<ul>
-						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 11 - 17 August <?php echo $jaar ?>
+						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 10 - 16 August <?php echo $jaar ?>
 						</li>
 					</ul>
 					<p class="plaatsvoor onzichtbaar">Places available for two more baroque violins/violas and continuo players (organ/harpsichord/theorbo)</p>
-					<p class="volvoor">This course is full for all instruments and singers</p>
+					<p class="volvoor onzichtbaar">This course is full for all instruments and singers</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Play chamber music with the Kinsky Trio Prague & Friends</span></a></h3>
 					<p>play with a professional chamber musician in a group </p>
 					<ul>
-						<li>České Budějovice (Czechia), 13 - 21 July <?php echo $jaar ?>
+						<li>České Budějovice (Czechia), 12 - 20 July <?php echo $jaar ?>
 						</li>
 					</ul>
 					<p class="nadruk">N.B. This course is organized by and under the responsibility of the Kinsky Trio Prague, in collaboration with <em>La Pellegrina</em>
