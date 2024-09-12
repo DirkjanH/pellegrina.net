@@ -208,8 +208,8 @@ function getisp($ip = '')
 					<div class="onzichtbaar">The 2025 courses are fully booked</div>
 				</div>
 				<div id="" class="onzichtbaar">
-					<div>Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>
-					<div>Who registers before 1 March, receives a EUR 50 red.</div>
+					<div class="onzichtbaar">Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>
+					<div class="onzichtbaar">Who registers before 1 March, receives a EUR 50 red.</div>
 				</div>
 			</div>
 		</div>
