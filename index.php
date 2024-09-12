@@ -231,7 +231,11 @@ function getisp($ip = '')
 				<div class="w3-row-padding w3-light-grey">
 					<div class="w3-card-4 w3-white w3-margin-top w3-quarter">
 						<h1><a href="NL" target="_self"><img src="Images/Logos/Vlag_NL.jpg" alt="Nederlands" width="34" height="24" hspace="10" border="0" align="absmiddle">Cursusprogramma <?php echo $jaar ?></a></h1>
-						<p><a href="NL">Twee zomercursussen voor gevorderde amateurmusici en professionals</a></p>
+						<p><a href="NL">Twee zomercursussen voor gevorderde amateurmusici en professionals:</a></p>
+						<ol>
+							<li>Dvořáks Bruidshemd voor orkest & koor - 24 juli - 3 augustus</li>
+							<li>Barokmuziek in 415 Hz: Purcell & Handel - 10 - 16 augustus</li>
+						</ol>
 					</div>
 					<div id="carroussel" class="w3-panel w3-section w3-half">
 						<img src="Images/slideshow/dvorak_tutors.jpg" alt="" class="mySlides" />
@@ -266,7 +270,11 @@ function getisp($ip = '')
 					</div>
 					<div class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter">
 						<h1><a href="EN" target="_self"><img src="Images/Logos/Vlag_UK.jpg" alt="English" width="34" height="24" hspace="10" align="absmiddle">Course Programme <?php echo $jaar ?></a></h1>
-						<p><a href="EN">Two summer schools for accomplished amateur musicians and professionals</a></p>
+						<p><a href="EN">Two summer schools for accomplished amateur musicians and professionals:</a></p>
+						<ol>
+							<li>Dvořák's Spectre's Bride for orchestra & choir- 24 July - 3 August</li>
+							<li>Baroque music in 415 Hz: Purcell & Handel - 10 - 16 August</li>
+						</ol>
 					</div>
 				</div>
 			</div>
