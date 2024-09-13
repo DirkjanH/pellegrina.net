@@ -233,8 +233,8 @@ function getisp($ip = '')
 						<h1><a href="NL" target="_self"><img src="Images/Logos/Vlag_NL.jpg" alt="Nederlands" width="34" height="24" hspace="10" border="0" align="absmiddle">Cursusprogramma <?php echo $jaar ?></a></h1>
 						<p><a href="NL">Twee zomercursussen voor gevorderde amateurmusici en professionals:</a></p>
 						<ol>
-							<li class="klein">Dvořáks Bruidshemd voor orkest & koor - 24 juli - 3 augustus</li>
-							<li class="klein">Barokmuziek in 415 Hz: Purcell & Handel - 10 - 16 augustus</li>
+							<li class="klein"><b>Dvořáks Bruidshemd</b> voor orkest & koor - 24 juli - 3 augustus</li>
+							<li class="klein">Barokmuziek in 415 Hz: <b>Purcell & Handel</b> - 10 - 16 augustus</li>
 						</ol>
 					</div>
 					<div id="carroussel" class="w3-panel w3-section w3-half">
@@ -272,8 +272,8 @@ function getisp($ip = '')
 						<h1><a href="EN" target="_self"><img src="Images/Logos/Vlag_UK.jpg" alt="English" width="34" height="24" hspace="10" align="absmiddle">Course Programme <?php echo $jaar ?></a></h1>
 						<p><a href="EN">Two summer schools for accomplished amateur musicians and professionals:</a></p>
 						<ol>
-							<li>Dvořák's Spectre's Bride for orchestra & choir- 24 July - 3 August</li>
-							<li>Baroque music in 415 Hz: Purcell & Handel - 10 - 16 August</li>
+							<li class="klein"><b>Dvořák's Spectre's Bride</b> for orchestra & choir- 24 July - 3 August</li>
+							<li class="klein">Baroque music in 415 Hz: <b>Purcell & Handel</b> - 10 - 16 August</li>
 						</ol>
 					</div>
 				</div>
