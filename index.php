@@ -233,8 +233,8 @@ function getisp($ip = '')
 						<h1><a href="NL" target="_self"><img src="Images/Logos/Vlag_NL.jpg" alt="Nederlands" width="34" height="24" hspace="10" border="0" align="absmiddle">Cursusprogramma <?php echo $jaar ?></a></h1>
 						<p><a href="NL">Twee zomercursussen voor gevorderde amateurmusici en professionals:</a></p>
 						<ol>
-							<li>Dvořáks Bruidshemd voor orkest & koor - 24 juli - 3 augustus</li>
-							<li>Barokmuziek in 415 Hz: Purcell & Handel - 10 - 16 augustus</li>
+							<li class="klein">Dvořáks Bruidshemd voor orkest & koor - 24 juli - 3 augustus</li>
+							<li class="klein">Barokmuziek in 415 Hz: Purcell & Handel - 10 - 16 augustus</li>
 						</ol>
 					</div>
 					<div id="carroussel" class="w3-panel w3-section w3-half">
