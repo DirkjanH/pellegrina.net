@@ -134,7 +134,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové) ubytování a stravování za Kč 4.000. Jenom napište &quot;ANKST&quot; na přihlášce v poli &quot;Remarks and additional information</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a xxx="baroque/index.php"><span class="baroque">Baroque music in 415 Hz: Purcell & Handel</span></a></h3>
+					<h3><a xxx="baroque/index.php"><span class="baroque">Baroque music in 415 Hz: Purcell's Odes for St. Cecilia's Day & Handel's Utrecht Te Deum</span></a></h3>
 					<p>for singers &amp; period instruments</p>
 					<ul>
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 10 - 16 August <?php echo $jaar ?>

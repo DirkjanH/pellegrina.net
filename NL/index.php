@@ -127,7 +127,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 					<p class="volvoor onzichtbaar">De cursus is vol voor alle instrumenten en zangers</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a xxx="baroque/index.php"><span class="baroque">Barokmuziek in 415 Hz: Purcell & Handel</span></a></h3>
+					<h3><a xxx="baroque/index.php"><span class="baroque">Barokmuziek in 415 Hz: Purcells Odes for St. Cecilia's Day & Handels Utrecht Te Deum</span></a></h3>
 					<p>voor zangers &amp; 'oude' instrumenten </p>
 					<ul>
 						<li>Klooster Nieuw Sion, Diepenveen, 10 - 16 augustus <?php echo $jaar ?></li>
