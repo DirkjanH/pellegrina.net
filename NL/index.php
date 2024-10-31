@@ -117,7 +117,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a xxx="romantic/index.php"><span class="romantic">Dvořáks Bruidshemd voor orkest, koor en solisten</span></a></h3>
+					<h3><a xxx="romantic/index.php"><span class="romantic">Haydns Missa in Tempore Belli en Dvořáks Gouden Spinnewiel voor orkest, koor en solisten</span></a></h3>
 					<p>voor instrumentalisten en (koor)zangers, met kamermuziek en kamerkoor</p>
 					<ul>
 						<li>České Budějovice (Tsjechië), 24 juli - 3 augustus <?php echo $jaar ?> </li>

@@ -121,7 +121,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a xxx="romantic/index.php"><span class="romantic">Dvořák's Spectre's Bride, for orchestra, choir and soloists</span></a></h3>
+					<h3><a xxx="romantic/index.php"><span class="romantic">Haydn's Missa in Tempore Belli and Dvořák's Golden Spinning Wheel, for orchestra, choir and soloists</span></a></h3>
 					<p>for instrumentalists &amp; (choir &amp; solo) singers, with chamber music and chamber choir<br>
 					</p>
 					<ul>
