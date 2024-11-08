@@ -105,16 +105,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <ul>
             <li>
               Het Kyrie begint met een plechtige inleiding waarbij de pauken eerst
-              rustig en dan zeer luid roffelen, waarmee de aard van de mis wordt <<span>getoonzet.<&nbsp;Het Kyrie is een snel deel in sonatevorm. Het thema wordt door
-                  de sopraan ingezet, overgenomen door het koor in steeds dwingender
-                  toon, terwijl de solisten met korte partijen interveni&euml;ren.<
-                  </li>
+              rustig en dan zeer luid roffelen, waarmee de aard van de mis wordt getoonzet.<&nbsp;Het Kyrie is een snel deel in sonatevorm. Het thema wordt door de sopraan ingezet, overgenomen door het koor in steeds dwingender
+                toon, terwijl de solisten met korte partijen interveni&euml;ren.
+                </li>
             <li>
               Het Gloria is in drie delen. Het middendeel is zeer langzaam,
-              beginnend met een lieflijk duet voor bas en solocello in het <Qui tollis <in A, maar met het inzetten van het koor wordt een dreigende toon
-                gezet. De twee buitendelen zijn thematisch verwant, met fanfares van
-                koperblazers en pauken.
-                </li>
+              beginnend met een lieflijk duet voor bas en solocello in het <i>Qui tollis</i> in A, maar met het inzetten van het koor wordt een dreigende toon gezet. De twee buitendelen zijn thematisch verwant, met fanfares van
+              koperblazers en pauken.
+            </li>
             <li>
               Ook het Credo is driedelig met een eveneens langzaam middendeel met
               een klarinetsolo voor het Et incarnatus est. Het in twee&euml;n gedeelde laatste deel eindigt met een dubbelfuga
@@ -139,9 +137,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
               waardoor de dreiging wordt versterkt. De diplomaat Georg August
               Griesinger, bevriend met Haydn, schreef over de mis: &quot;1796, als
               die Franzosen in der Steyermark standen, setzte Haydn eine Messe,
-              welcher er den Titel <in tempore belli <<span>gab. In dieser Messe sind die Worte <i>Agnus Dei, qui tollis peccata mundi</i>&nbsp;auf eigene Art mit Begleitung von Pauken vorgetragen, als
-                h&ouml;rte man den Feind schon in der Ferne kommen&quot;. De mis
-                eindigt met een fanfare-achtig <i>Allegro con spirito</i> met een bijna dwingend gezongen <i>Dona nobis pacem</i>.
+              welcher er den Titel <i>in tempore belli</i> gab. In dieser Messe sind die Worte <i>Agnus Dei, qui tollis peccata mundi</i>&nbsp;auf eigene Art mit Begleitung von Pauken vorgetragen, als
+              h&ouml;rte man den Feind schon in der Ferne kommen&quot;. De mis
+              eindigt met een fanfare-achtig <i>Allegro con spirito</i> met een bijna dwingend gezongen <i>Dona nobis pacem</i>.
             </li>
           </ul>
           <h3>Bezetting</h3>
