@@ -115,7 +115,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </li>
             <li>
               Ook het Credo is driedelig met een eveneens langzaam middendeel met
-              een klarinetsolo voor het Et incarnatus est. Het in twee&euml;n gedeelde laatste deel eindigt met een dubbelfuga
+              een klarinetsolo voor het <i>Et incarnatus est</i>. Het in twee&euml;n gedeelde laatste deel eindigt met een dubbelfuga
               op de woorden <i>Et vitam venturi saeculi, Amen</i>.
             </li>
             <li>
