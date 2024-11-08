@@ -103,8 +103,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 				<h2 class="kolom LP_colour">Muziekprojecten voor iedere muzikant met een professionele instelling<br>
 				</h2>
 				<p>De zomercursussen in <?php echo $jaar ?>: twee projecten waarin je je kunt onderdompelen in een warm bad van prachtige muziek, met eersteklas docenten en gelijkgestemde zielen. De projecten van <?php echo $jaar ?> staan open voor ervaren muzikanten. Of je nou amateur bent of professional, bij <em>La Pellegrina </em>staat een professionele instelling hoog in het vaandel. Natuurlijk kom je goed voorbereid naar een cursus, natuurlijk vind je het fijn als anderen dat ook doen. Spreekt dit je aan? Lees dan verder...</p>
-				<p>Deze pagina geeft een overzicht van de cursussen in <?php echo $jaar ?>. De barokcursus vindt plaats in het voormalige klooster Nieuw Sion in de bossen van Salland bij Deventer. De cursus rond Reicha's Requiem vindt plaats in Tsjechië, het meest muzikale land van Europa. Plaats van handeling is het conservatorium van České Budějovice, 120 km ten zuiden van Praag. </p>
-				<p>Klik op de cursustitels voor meer informatie. Vanaf 1 december is alle informatie compleet en is de inschrijving geopend. </p>
+				<p>Deze pagina geeft een overzicht van de cursussen in <?php echo $jaar ?>. De barokcursus vindt plaats in het voormalige klooster Nieuw Sion in de bossen van Salland bij Deventer. De cursus rond Haydn en Dvořák vindt plaats in Tsjechië, het meest muzikale land van Europa. Plaats van handeling is het conservatorium van České Budějovice, 120 km ten zuiden van Praag. </p>
+				<p>Klik op de cursustitels voor meer informatie. <b>Vanaf 1 december is alle informatie compleet en is de inschrijving geopend</b>. </p>
 				<p>Mocht je vragen hebben, aarzel dan niet om contact op te nemen met Dirkjan Horringa (tel. 0619-224758).</p>
 				<p class="w3-center w3-panel">In samenwerking met<br>
 					<a href="http://www.acmp.net" target="_blank"><img src="../Images/Logos/ACMP_CMYK.jpg" width="200" height="104" alt="" /></a>

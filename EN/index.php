@@ -106,8 +106,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 					<?php echo $jaar ?> summer courses: two projects where you can immerse yourself in a warm bath of beautiful music, with first-class teachers and like-minded souls. The
 					<?php echo $jaar ?> projects are open to experienced musicians. Whether you are an amateur or a professional, a professional attitude is paramount at La Pellegrina. Of course you come well prepared to a course, of course you like it when others do so too. Does this appeal to you? Then please continue reading...</p>
 				<p>This page gives an overview of the courses in
-					<?php echo $jaar ?>. The baroque course takes place in the former monastery Nieuw Sion in the woods of Salland near Deventer. The course 'Reicha's Requiem' will take place in the Czech Republic, Europe's most musical country. The venue is the conservatoire of České Budějovice, 120 km south of Prague.</p>
-				<p>Click on the course titles for more information. From 1 December, all information will be complete and registration will be open again.</p>
+					<?php echo $jaar ?>. The baroque course takes place in the former monastery Nieuw Sion in the woods of Salland near Deventer. The course around Haydn and Mozart will take place in the Czech Republic, Europe's most musical country. The venue is the conservatoire of České Budějovice, 120 km south of Prague.</p>
+				<p>Click on the course titles for more information. <b>From 1 December, all information will be complete and registration will be open again</b>.</p>
 				<p>Please don't hesitate to contact Dirkjan Horringa in case you have any questions, by mail (<a href="mailto:info@pellegrina.net">info@pellegrina.net</a>) or by phone (+31 619 224 758).</p>
 				<p class="w3-center w3-panel">In cooperation with<br>
 					<a href="http://www.acmp.net" target="_blank"><img src="../Images/Logos/ACMP_CMYK.jpg" width="200" height="104" alt="" /></a>
