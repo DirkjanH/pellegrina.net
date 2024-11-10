@@ -74,9 +74,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <p>While out riding in the countryside, a king happens upon a beautiful village girl, Dornička, and falls in love with her. He asks her step-mother to bring her to his castle. The step-mother and Dornička's identically looking step-sister set off towards the king's castle with Dornička. On the way, they murder her, hack off her feet and hands, and cut out her eyes. They bury the body but keep the amputated parts, "lest someone fix them back". The step-sister then poses as Dornička and marries the king, after which he is called away to battle.</p>
         <p>Meanwhile, in the midst of the forest, a hermit skilled in magical arts finds Dornička's remains and decides to bring her back to life. He sends a page to the castle to persuade the step-sister to part with "two feet" in return for a golden spinning wheel, "two hands" for a golden distaff, and "two eyes" for a golden spindle. The body being complete again, the hermit brings Dornička back to life.</p>
         <p>The king returns from battle and bids his wife to spin for him on her new wheel. As she obliges, the magical spinning wheel sings a song betraying the two women's treacherous plot and relaying all the gruesome details of Dornička's murder. The king goes off into the forest to find his true betrothed. The two murderesses are thrown to the wolves, their bodies mutilated in the same way they had mutilated Dornička's. Having fulfilled its task, the golden spinning wheel magically disappears, never to be seen or heard again.</p>
-        <p><a h<a href="\EN\romantic\text_zlaty_kolovrat.htm">The full text of Erben's poem with a parallel English translation can be found here.</a></p>
+        <p><a h<a href="\EN\romantic\text_zlaty_kolovrat.htm" target="_blank">The full text of Erben's poem with a parallel English translation can be found here.</a></p>
       </div>
       <div class="cols2">
+        <hr style="border-top: 1px solid black;">
         <h3>Haydn - Missa in tempore belli (Paukenmesse)</h3>
         <p>
           Joseph Haydn componeerde de <i>Missa in tempore belli</i>&nbsp;(Hob. XXII:9), ook bekend als de Paukenmesse, in 1796, tijdens de turbulente tijd van de Eerste Coalitieoorlog.
@@ -164,7 +165,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           worden. Het koor heeft de normale bezetting SATB. Er zijn vier solisten satb.
         </p>
 </body>
-<h2><a href="javascript: history.go(-1)">Terug</a></h2>
+<h2><a href="javascript: history.go(-1)">Back</a></h2>
 </div>
 </div>
 </body>
