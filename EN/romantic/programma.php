@@ -152,7 +152,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             ends with a fanfare-like <i>Allegro con spirito</i> with an almost compellingly sung <i>Dona nobis pacem</i>.
           </li>
         </ul>
-        <h3>Celebration</h3>
+        <h3>Ensemble formation</h3>
         <p>
           The Missa in tempore belli is written for two oboes&#39;s, two clarinets, two
           bassoons, two horns, two trumpets, timpani, strings and organ;
