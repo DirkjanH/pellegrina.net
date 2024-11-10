@@ -80,89 +80,89 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <hr style="border-top: 1px solid black;">
         <h3>Haydn - Missa in tempore belli (Paukenmesse)</h3>
         <p>
-          Joseph Haydn componeerde de <i>Missa in tempore belli</i>&nbsp;(Hob. XXII:9), ook bekend als de Paukenmesse, in 1796, tijdens de turbulente tijd van de Eerste Coalitieoorlog.
-          Haydn schreef de mis voor de priesterwijding van Joseph Franz von
-          Hofmann, en ze werd voor het eerst uitgevoerd in de Piaristenkirche
-          Maria Treu in Wenen. Later voerde Haydn de mis ook uit ter ere van de
-          naamdag van prinses Maria Josepha Hermengilde Esterh&aacute;zy. De
-          bijnaam Paukenmesse&nbsp;verwijst naar de prominente rol van de pauken, vooral in het Agnus Dei, waar een paukensolo de dreigende oorlogssfeer oproept. De mis combineert religieuze ernst met strijdlustige muzikale elementen,
-          passend bij de angst voor een mogelijke invasie van Oostenrijk.
+          Joseph Haydn composed the <i>Missa in tempore belli</i>&nbsp;(Hob. XXII:9), also known as the Paukenmesse, in 1796, during the turbulent time of the First Coalition War.
+          Haydn wrote the mass for the ordination of Joseph Franz von
+          Hofmann, and it was first performed in the Piaristenkirche
+          Maria Treu in Vienna. Later, Haydn also performed the mass in honor of the
+          name day of Princess Maria Josepha Hermengilde Esterh&aacute;zy. The
+          nickname Paukenmesse&nbsp;refers to the prominent role of the timpani, especially in the Agnus Dei, where a timpani solo evokes the threatening atmosphere of war. The Mass combines religious seriousness with combative musical elements,
+          appropriate to the fear of a possible invasion of Austria.
         </p>
         <p>
-          Eind 1796, een jaar voor het eind van de Eerste Coalitieoorlog, het
-          militair treffen tussen de coalitie van staten waar Oostenrijk deel van
-          uitmaakte en Frankrijk, behaalde Napoleon Bonaparte overwinningen op de
-          Oostenrijkers die hij uiteindelijk in november versloeg in de Slag bij
-          de brug van Arcole bij Verona. In het westen vocht Oostenrijk met
-          Frankrijk om de controle over Zuid-Duitsland. In deze bedreigende
-          oorlogssfeer en tegen deze achtergrond ontstond de Paukenmis. Voor het
-          eerst sinds 1683, toen een zeer groot Ottomaanse Rijk leger Wenen twee
-          maanden belegerde maar uiteindelijk werd verslagen, was er sprake van
-          re&euml;el gevaar van een invasie van het kerngebied van het
-          Oostenrijkse rijk. De verdrijving van de Turken was voor de
-          Oostenrijkers een belangrijke gebeurtenis die jaarlijks tijdens de
-          Heilige Naam van Maria op 12 september werd herdacht. Met processies en
-          speciale missen werd de overwinning levend gehouden en met kerkmuziek,
-          met name missen en toonzettingen van het Te Deum met ongebruikelijk
-          prominente partijen voor trompetten en pauken die de dreiging van en de
-          overwinning in de oorlog moesten oproepen.
+          In late 1796, a year before the end of the First Coalition War, the
+          military encounter between the coalition of states to which Austria belonged
+          and France, Napoleon Bonaparte scored victories over the
+          Austrians whom he finally defeated in November in the Battle of
+          Bridge of Arcole near Verona. To the west, Austria fought with
+          France for control of southern Germany. In this threatening
+          atmosphere of war and against this background the Pauken Mass was born. For the
+          first time since 1683, when a very large Ottoman Empire army besieged Vienna for two
+          months besieged but was finally defeated, there was a
+          re&euml;el danger of an invasion of the core area of the
+          Austrian Empire. The expulsion of the Turks was for the
+          Austrians an important event that was celebrated annually during the
+          Holy Name of Mary on Sept. 12 was commemorated. With processions and
+          special masses the victory was kept alive and with church music,
+          especially masses and settings of the Te Deum with unusually
+          prominent parts for trumpets and timpani that were intended to evoke the threat of and
+          victory in the war were to evoke.
         </p>
         <h3>
-          Structuur en kenmerken
+          Structure and characteristics
         </h3>
         <p>
-          De structuur van de mis volgt de traditionele misdelen:
+          The structure of the Mass follows the traditional parts of the Mass:
         </p>
         <ul>
           <li>
-            Het Kyrie begint met een plechtige inleiding waarbij de pauken eerst
-            rustig en dan zeer luid roffelen, waarmee de aard van de mis wordt getoonzet.<&nbsp;Het Kyrie is een snel deel in sonatevorm. Het thema wordt door de sopraan ingezet, overgenomen door het koor in steeds dwingender
-              toon, terwijl de solisten met korte partijen interveni&euml;ren.
+            The Kyrie begins with a solemn introduction in which the timpani first
+            quietly and then very loudly, thus setting the tone for the nature of the Mass.<&nbsp;The Kyrie is a fast movement in sonata form. The theme is begun by the soprano, taken over by the choir in increasingly compelling
+              tone, while the soloists intervene with short parts.
               </li>
           <li>
-            Het Gloria is in drie delen. Het middendeel is zeer langzaam,
-            beginnend met een lieflijk duet voor bas en solocello in het <i>Qui tollis</i> in A, maar met het inzetten van het koor wordt een dreigende toon gezet. De twee buitendelen zijn thematisch verwant, met fanfares van
-            koperblazers en pauken.
+            The Gloria is in three movements. The middle movement is very slow,
+            beginning with a lovely duet for bass and solo cello in the <i>Qui tollis</i> in A, but a menacing tone is set with the entry of the chorus. The two outer movements are thematically related, with fanfares of
+            brass and timpani.
           </li>
           <li>
-            Ook het Credo is driedelig met een eveneens langzaam middendeel met
-            een klarinetsolo voor het <i>Et incarnatus est</i>. Het in twee&euml;n gedeelde laatste deel eindigt met een dubbelfuga
-            op de woorden <i>Et vitam venturi saeculi, Amen</i>.
+            The Credo is also three-part with an equally slow middle section with
+            a clarinet solo for the <i>Et incarnatus est</i>. The last movement, divided into two&euml;n, ends with a double fugue
+            on the words <i>Et vitam venturi saeculi, Amen</i>.
           </li>
           <li>
-            Het Sanctus is in twee delen, een statig openingsdeel gevolgd door
-            een donderend snel deel op de woorden <i>Pleni sunt coeli</i>, wederom begeleid door de trompetten en de pauken. Overeenkomstig
-            het liturgisch gebruik is het Sanctus kort.
+            The Sanctus is in two parts, a stately opening section followed by
+            a thundering fast movement on the words <i>Pleni sunt coeli</i>, again accompanied by the trumpets and timpani. In accordance with
+            liturgical custom, the Sanctus is short.
           </li>
           <li>
-            Het Benedictus is een andante met een onheilspellend karakter dat
-            begint in c-klein en langzaam naar C groot gaat op de woorden <i>Osanna in excelsis</i>.
+            The Benedictus is an andante with an ominous character that
+            begins in c minor and slowly moves to C major on the words <i>Osanna in excelsis</i>.
           </li>
           <li>
-            Het Agnus Dei bevat het deel dat de mis zijn bijnaam heeft gegeven:
-            onverwachts komt na de eenvoudige melodie voor koor en strijkers in
-            maat 10 de paukensolo, waar de triomfantelijke partij van de
-            trompetten op aansluit. Syncopen op de violen en aangehouden noten op
-            de hobo&#39;s begeleiden de pauken. Volgens Haydns biograaf Giuseppe
-            Carpani moesten de pauken geslagen worden op de Franse manier,
-            waardoor de dreiging wordt versterkt. De diplomaat Georg August
-            Griesinger, bevriend met Haydn, schreef over de mis: &quot;1796, als
+            The Agnus Dei contains the part that gave the Mass its nickname:
+            unexpectedly, after the simple melody for choir and strings in
+            bar 10 the timpani solo, to which the triumphant part of the
+            trumpets follows. Syncopations on the violins and sustained notes on
+            the oboes&#39;s accompany the timpani. According to Haydn's biographer Giuseppe
+            Carpani, the timpani had to be struck in the French manner,
+            thus reinforcing the threat. The diplomat Georg August
+            Griesinger, a friend of Haydn, wrote of the mass: &quot;1796, when
             die Franzosen in der Steyermark standen, setzte Haydn eine Messe,
             welcher er den Titel <i>in tempore belli</i> gab. In dieser Messe sind die Worte <i>Agnus Dei, qui tollis peccata mundi</i>&nbsp;auf eigene Art mit Begleitung von Pauken vorgetragen, als
-            h&ouml;rte man den Feind schon in der Ferne kommen&quot;. De mis
-            eindigt met een fanfare-achtig <i>Allegro con spirito</i> met een bijna dwingend gezongen <i>Dona nobis pacem</i>.
+            h&ouml;rte man den Feind schon in der Ferne kommen&quot;. The mass
+            ends with a fanfare-like <i>Allegro con spirito</i> with an almost compellingly sung <i>Dona nobis pacem</i>.
           </li>
         </ul>
-        <h3>Bezetting</h3>
+        <h3>Celebration</h3>.
         <p>
-          De Paukenmis is geschreven voor twee hobo&#39;s, twee klarinetten, twee
-          fagotten, twee hoorns, twee trompetten, pauken, strijkers en orgel;
-          later breidde Haydn de partijen voor de klarinetten uit voor alle delen,
-          voegde een partij voor een fluit in het &#39;Qui tollis&#39; toe en
-          versterkte de trompetten door hoorns. Voor de uitvoering in het kader
-          van de zomercursus van La Pellegrina breiden wij de partijen van fluiten
-          en klarinetten wat verder uit, zodat het volwaardige stemmen
-          worden. Het koor heeft de normale bezetting SATB. Er zijn vier solisten satb.
+          The Timpani Mass was written for two oboes&#39;s, two clarinets, two
+          bassoons, two horns, two trumpets, timpani, strings and organ;
+          later Haydn expanded the parts for the clarinets for all movements,
+          added a part for a flute in the &#39;Qui tollis&#39; and
+          amplified the trumpets by horns. For the performance as part of
+          La Pellegrina's summer course, we extended the parts of flutes
+          and clarinets a little further, so that they become full voices
+          become. The choir has the normal scoring SATB. There are four soloists satb.
         </p>
 </body>
 <h2><a href="javascript: history.go(-1)">Back</a></h2>
