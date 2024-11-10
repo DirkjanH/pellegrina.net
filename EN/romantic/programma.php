@@ -116,9 +116,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <ul>
           <li>
             The Kyrie begins with a solemn introduction in which the timpani first
-            quietly and then very loudly, thus setting the tone for the nature of the Mass.<&nbsp;The Kyrie is a fast movement in sonata form. The theme is begun by the soprano, taken over by the choir in increasingly compelling
-              tone, while the soloists intervene with short parts.
-              </li>
+            quietly and then very loudly, thus setting the tone for the nature of the Mass. The Kyrie is a fast movement in sonata form. The theme is begun by the soprano, taken over by the choir in increasingly compelling tone, while the soloists intervene with short parts.
+          </li>
           <li>
             The Gloria is in three movements. The middle movement is very slow,
             beginning with a lovely duet for bass and solo cello in the <i>Qui tollis</i> in A, but a menacing tone is set with the entry of the chorus. The two outer movements are thematically related, with fanfares of
@@ -153,16 +152,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             ends with a fanfare-like <i>Allegro con spirito</i> with an almost compellingly sung <i>Dona nobis pacem</i>.
           </li>
         </ul>
-        <h3>Celebration</h3>.
+        <h3>Celebration</h3>
         <p>
-          The Timpani Mass was written for two oboes&#39;s, two clarinets, two
+          The Missa in tempore belli is written for two oboes&#39;s, two clarinets, two
           bassoons, two horns, two trumpets, timpani, strings and organ;
           later Haydn expanded the parts for the clarinets for all movements,
           added a part for a flute in the &#39;Qui tollis&#39; and
           amplified the trumpets by horns. For the performance as part of
           La Pellegrina's summer course, we extended the parts of flutes
-          and clarinets a little further, so that they become full voices
-          become. The choir has the normal scoring SATB. There are four soloists satb.
+          and clarinets a little further, so that they become full voices. The choir has the normal scoring SATB. There are four soloists satb.
         </p>
 </body>
 <h2><a href="javascript: history.go(-1)">Back</a></h2>

@@ -116,13 +116,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <ul>
           <li>
             Het Kyrie begint met een plechtige inleiding waarbij de pauken eerst
-            rustig en dan zeer luid roffelen, waarmee de aard van de mis wordt getoonzet.<&nbsp;Het Kyrie is een snel deel in sonatevorm. Het thema wordt door de sopraan ingezet, overgenomen door het koor in steeds dwingender
-              toon, terwijl de solisten met korte partijen interveni&euml;ren.
-              </li>
+            rustig en dan zeer luid roffelen, waarmee de aard van de mis wordt getoonzet. Het Kyrie is een snel deel in sonatevorm. Het thema wordt door de sopraan ingezet, overgenomen door het koor in steeds dwingender
+            toon, terwijl de solisten met korte partijen interveni&euml;ren.
+          </li>
           <li>
             Het Gloria is in drie delen. Het middendeel is zeer langzaam,
-            beginnend met een lieflijk duet voor bas en solocello in het <i>Qui tollis</i> in A, maar met het inzetten van het koor wordt een dreigende toon gezet. De twee buitendelen zijn thematisch verwant, met fanfares van
-            koperblazers en pauken.
+            beginnend met een lieflijk duet voor bas en solocello in het <i>Qui tollis</i> in A, maar met het inzetten van het koor wordt een dreigende toon gezet. De twee buitendelen zijn thematisch verwant, met fanfares van koperblazers en pauken.
           </li>
           <li>
             Ook het Credo is driedelig met een eveneens langzaam middendeel met
