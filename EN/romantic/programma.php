@@ -79,11 +79,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           turned out ot be not possible due to restrictions at our
           concert venue, the cathedral.</p>
         <h4>The Golden Spinning Wheel</h4>
-        <p><img src="\Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
-            class="fotocenter" style="clear:both;">The first
-          performance of The Golden Spinning Wheel took place in
-          Prague in 1896, followed by a public premiere in London. The
-          reception was mixed: admiration for its musical depth
+        <img src="\Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
+          class="fotocenter" style="clear:both;">
+        <p>The first performance of The Golden Spinning Wheel took place
+          in Prague in 1896, followed by a public premiere in London.
+          The reception was mixed: admiration for its musical depth
           alternated with criticism from traditionalists such as
           Eduard Hanslick, who deplored Dvořák's ‘deviation’ from
           absolute music. Leoš Janáček, on the other hand, praised
