@@ -202,22 +202,24 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           </li>
         </ol>
         <h4>Handel - Te Deum &amp; Jubilate</h4>
-        <p>Handel’s <i>Te Deum &amp; Jubilate </i>were written to
-          celebrate the Treaty of Utrecht in 1713. It was his first
-          major sacred work on English texts.&nbsp; Handel followed
-          the models of Henry Purcell's 1694 Te Deum and Jubilate with
-          strings and trumpets, which was regularly performed on
-          official occasions at St Paul's even after the composer's
-          death, and a 1709 setting by William Croft. As in these
-          models,&nbsp; Handel composed a combination of two
-          liturgical texts, the Ambrosian hymn Te Deum, We praise
-          thee, O God, and a setting of Psalm 100, O be joyful in the
-          Lord, all ye lands, which is a regular hymn of praise in
-          Anglican morning prayer.&nbsp; Handel's work was first
-          performed at a public rehearsal on March 5, 1713, in St
-          Paul's Cathedral. The official premiere took place after the
-          difficult peace negotiations were completed, in a solemn
-          thanksgiving service on July 7, 1713.&nbsp;</li>
+        <p>
+        <div class="fotolinks"><img src="\Images\handel.jpg"
+            alt="George Frederick Handel"><br>George Frederick
+          Handel</div>Handel’s <i>Te Deum &amp; Jubilate </i>were
+        written to celebrate the Treaty of Utrecht in 1713. It was his
+        first major sacred work on English texts.&nbsp; Handel followed
+        the models of Henry Purcell's 1694 Te Deum and Jubilate with
+        strings and trumpets, which was regularly performed on official
+        occasions at St Paul's even after the composer's death, and a
+        1709 setting by William Croft. As in these models,&nbsp; Handel
+        composed a combination of two liturgical texts, the Ambrosian
+        hymn Te Deum, We praise thee, O God, and a setting of Psalm 100,
+        O be joyful in the Lord, all ye lands, which is a regular hymn
+        of praise in Anglican morning prayer.&nbsp; Handel's work was
+        first performed at a public rehearsal on March 5, 1713, in St
+        Paul's Cathedral. The official premiere took place after the
+        difficult peace negotiations were completed, in a solemn
+        thanksgiving service on July 7, 1713.&nbsp;</li>
         <p>The <i>Te Deum &amp; Jubilate</i> are festively scored for
           six soloists (two sopranos, two altos, tenor and bass),
           mixed choir, two trumpets, flauto traverso, two oboes,
