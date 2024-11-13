@@ -230,8 +230,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li> 10:45 coffee break</li>
         <li> 11:15 2nd session working on music in small ensembles</li>
         <li> 13:00 lunch</li>
-        <li> 14:15 3rd session working on music in small ensembles or
-          sectional rehearsals</li>
+        <li> 14:15 3rd session working on music in sectional rehearsals
+        </li>
         <li> 15:30 tea break</li>
         <li> 16:00 joint rehearsal</li>
         <li> 17:30 drinks and dinner</li>
