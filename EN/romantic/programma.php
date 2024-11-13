@@ -94,8 +94,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           approach to Erben's stories, such as the repetitions in The
           Golden Spinning Wheel, was sometimes controversial, but
           demonstrated his focus on musical narrativity. In addition,
-          his orchestration emphasized refined timbres, with
-          influences from French Impressionism.</p>
+          Dvořák emphasized with his orchestration refined timbres
+          with influences from French Impressionism.</p>
         <h4>Synopsis of The Golden Spinning Wheel</h4>
         <p>While out riding in the countryside, a king happens upon a
           beautiful village girl, Dornička, and falls in love with
