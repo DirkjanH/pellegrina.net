@@ -132,6 +132,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <div class="cols2">
         <hr style="border-top: 1px solid black;">
         <h3>Haydn - Missa in tempore belli (Paukenmesse)</h3>
+        <img src="\Images\pauken.jpg" alt="classical timpani"
+          class="fotocenter" style="clear: both;">
         <p> Joseph Haydn composed the <i>Missa in tempore
             belli</i>&nbsp;(Hob. XXII:9), also known as the
           Paukenmesse, in 1796, during the turbulent time of the First
