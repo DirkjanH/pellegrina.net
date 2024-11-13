@@ -80,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           programme will be performed as the culmination of the
           course, this year again in the church of the Nieuw Sion
           monastery.</li>
-        <h3>Saint Cecilia</h3>
+        <h4>Saint Cecilia</h4>
         <p>Saint Cecilia is known as patroness saint of music in the
           Christian tradition. Saint Cecilia’s connection to music
           stems not from her historical deeds but from symbolic
@@ -102,7 +102,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           her organ. Later it could also be a violin, a cello or
           theorbo. These depictions played a key role in transforming
           her into the patroness of music.</li>
-        <h3>English Resistance and Revival</h3>
+        <h4>English Resistance and Revival</h4>
         <p>For much of England’s history, Cecilia’s veneration remained
           dormant, suppressed by Protestant reluctance to honor
           saints. However, in the late 17th century, a sudden surge of
@@ -130,16 +130,16 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             Bright Cecilia </i>(Z.328), also known as The Ode to St.
           Cecilia, was composed to a text by the Irishman Nicholas
           Brady in 1692.</li>
-        <h3>Purcell - Welcome to all the pleasures</h3>
+        <h4>Purcell - Welcome to all the pleasures</h4>
         <p>The first ode, <i>Welcome to all the pleasures, </i>is scored
           for vocal soloists, chorus and an ensemble of four-part
           strings and basso continuo. As well as accompanying the
           singers, the instruments feature in an overture (called
           &quot;symphony&quot;) and ritornelli. The piece takes about
           18 minutes to perform.</p>
-        <h3>Movements</h3>
-        <h4>Symphony</h4>
+        <h5>Movements</h5>
         <ol>
+          <li>Symphony</li>
           <li>Verse, chorus &amp; ritornello: &quot;Welcome to all the
             Pleasures&quot;</li>
           <li>Song &amp; ritornello: &quot;Here the deities
@@ -156,7 +156,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Song &amp; chorus: &quot;In a consort of voices while
             instruments play&quot;</li>
         </ol>
-        <h3>Purcell - Hail! Bright Cecilia</h3>
+        <h4>Purcell - Hail! Bright Cecilia</h4>
         <p>The second ode, <i>Hail! Bright Cecilia, </i>is scored for
           vocal soloists, chorus and an ensemble of two recorders,
           bass recorder, two oboes, two trumpets, timpani, four-part
@@ -171,7 +171,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           follow Brady's cues exactly. He scored the warlike music for
           two brass trumpets and copper kettle drums instead of the
           fife mentioned by Brady.</li>
-        <h3>Movements</h3>
+        <h5>Movements</h5>
         <ol>
           <li>Symphony (overture):
             Introduction—Canzona—Adagio—Allegro—Grave—Allegro
@@ -197,8 +197,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Chorus: &quot;Hail! Bright Cecilia, hail to thee&quot;
           </li>
         </ol>
-        <h3>&nbsp;Handel - Te Deum &amp; Jubilate</h3>
-        <p>&nbsp;Handel’s <i>Te Deum &amp; Jubilate </i>were written to
+        <h4>Handel - Te Deum &amp; Jubilate</h4>
+        <p>Handel’s <i>Te Deum &amp; Jubilate </i>were written to
           celebrate the Treaty of Utrecht in 1713. It was his first
           major sacred work on English texts.&nbsp; Handel followed
           the models of Henry Purcell's 1694 Te Deum and Jubilate with
@@ -222,7 +222,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           alto and tenor are divided as the soprano; the final
           doxology begins in eight parts. Almost all movements are set
           for solo singers and chorus; there are no real arias.</li>
-        <h3>Te Deum</h3>
+        <h4>Te Deum</h4>
         <ol>
           <li>We praise Thee, O God (Adagio, SATB)</li>
           <li>To Thee all Angels cry aloud (Largo e staccato, 2 altos,
@@ -242,7 +242,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Vouchsafe, O Lord (Adagio, SSAATB)</li>
           <li>Lord, in thee have I trusted (Allegro, SSATB)</li>
         </ol>
-        <h3>Jubilate</h3>
+        <h4>Jubilate</h4>
         <ol>
           <li>Be joyful in the Lord, all ye lands (alto, SATB)</li>
           <li>Serve the Lord with gladness (SSATB)</li>
@@ -254,22 +254,22 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Glory be to the Father (SSAATTBB)</li>
           <li>As it was in the beginning (SSATB)</li>
         </ol>
-        <p>&nbsp;Handel was able to achieve as a composer a superior
-          synthesis between soloists and choir, between solo singing
-          and tutti. The large-scale structure never detracts from the
-          delicacy of melody and harmony, while the musical portrayal
-          of the text is always accurate and displays great
-          refinement.&nbsp;</li>
-        <p>The success of&nbsp; Handel's Te Deum was such that the work
-          was performed annually on the occasion of St. Cecilia's Day,
-          on November 22, thus ousting Purcell's counterpart from
-          first place.</p>
+        <p>Handel was able to achieve as a composer a superior synthesis
+          between soloists and choir, between solo singing and tutti.
+          The large-scale structure never detracts from the delicacy
+          of melody and harmony, while the musical portrayal of the
+          text is always accurate and displays great refinement.</li>
+        <p>The success of Handel's Te Deum was such that the work was
+          performed annually on the occasion of St. Cecilia's Day, on
+          November 22, thus ousting Purcell's counterpart from first
+          place.</p>
       </div>
       <!-- InstanceEndEditable -->
       <h2><a href="javascript: history.go(-1)">Back</a></h2>
     </div>
   </div>
-</body> <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+</body>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 <!-- InstanceEnd -->
 
 </html>
