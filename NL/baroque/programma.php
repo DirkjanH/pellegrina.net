@@ -76,6 +76,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           als hoogtepunt en afsluiting van de cursus, dit jaar weer in
           de kerk van klooster Nieuw Sion.</p>
         <h4>Sinte Cecilia</h4>
+        <div class="fotocenter"><img src="/Images/cecilia.jpg"
+            alt="Sante Cecilia"><br>Sinte Cecilia - schilerij van
+          Guercino</div>
         <p>Sinte Cecilia staat bekend als beschermheilige van de muziek
           in de christelijke traditie. De band van Sinte Cecilia met
           muziek komt niet voort uit haar historische daden, maar uit
