@@ -75,7 +75,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           symphonic poems, in which he musically translated Erben's
           themes without direct text support.</p>
         <h4>Features</h4>
-        <p><img src="Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
+        <p><img src="\Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
             class="fotolinks">Dvořák integrated the rhythmic
           structure of Erben's verses into his thematic material,
           leading to a unique combination of musical inventiveness and
