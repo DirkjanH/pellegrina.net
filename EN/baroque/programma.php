@@ -125,7 +125,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           power, transforming it into a distinctly English tradition.
           </li>
         <p>
-        <div class="fotolinks"><img src="\Images\purcell.jpg"
+        <div class="fotorechts"><img src="\Images\purcell.jpg"
             alt="Henry Purcell" width="250"><br>Henry Purcell</div>
         Purcell contributed two Odes to St. Cecilia: <i>Welcome to all
           the pleasures</i> (Z.339) was written by Purcell to a text
