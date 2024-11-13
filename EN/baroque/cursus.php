@@ -226,16 +226,16 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <h4>Daily Schedule</h4>
       <ul>
         <li>8:00 breakfast</li>
-        <li> 9:30 1st session working on music in small ensembles</li>
-        <li> 10:45 coffee break</li>
-        <li> 11:15 2nd session working on music in small ensembles</li>
-        <li> 13:00 lunch</li>
-        <li> 14:15 3rd session working on music in sectional rehearsals
+        <li>9:30 1st session working on music in small ensembles</li>
+        <li>10:45 coffee break</li>
+        <li>11:15 2nd session working on music in small ensembles</li>
+        <li>13:00 lunch</li>
+        <li>14:15 working on tutti-programme in sectional rehearsals
         </li>
-        <li> 15:30 tea break</li>
-        <li> 16:00 joint rehearsal</li>
-        <li> 17:30 drinks and dinner</li>
-        <li> Evening: free to spend; ample opportunity for extra chamber
+        <li>15:30 tea break</li>
+        <li>16:00 joint rehearsal tutti-programme</li>
+        <li>17:30 drinks and dinner</li>
+        <li>Evening: free to spend; ample opportunity for extra chamber
           music</li>
       </ul>
       <p class="citaat">Staffan Rudner: &quot;The tutors were able to

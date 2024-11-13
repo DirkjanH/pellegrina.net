@@ -226,9 +226,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>10:45 koffiepauze</li>
         <li>11:15 2e sessie werken aan muziek in kleine ensembles</li>
         <li>13:00 lunch</li>
-        <li>14:15 3e sessie werken aan muziek in groepsrepetities</li>
+        <li>14:15 werken aan tutti-programma in groepsrepetities</li>
         <li>15:30 theepauze</li>
-        <li>16:00 gezamenlijke repetitie</li>
+        <li>16:00 gezamenlijke repetitie tutti-programma</li>
         <li>17:30 borrelen en avondeten</li>
         <li>'s Avonds: vrij te besteden; gelegenheid voor extra
           kamermuziek</li>
