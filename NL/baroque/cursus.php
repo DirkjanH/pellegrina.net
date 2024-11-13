@@ -95,12 +95,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           aan bod komen. De ensembles werken het grootste deel van de
           tijd onder intensieve begeleiding van de docenten. De
           ensembles presenteren zich aan het eind van de cursus aan de
-          overige deelnemers; in onderling overleg kan een aantal
-          ensembles deelnemen aan het afsluitende openbare concert.
-          Dit jaar ligt de focus op Engelse muziek, maar voor de
-          kamermuziek is dit optioneel. Voel je vrij als je in het
-          kleine ensemble programma liever Italiaanse, Duitse of
-          Franse muziek speelt of zingt.</p>
+          overige deelnemers. Dit jaar ligt de focus op Engelse
+          muziek, maar voor de kamermuziek is dit optioneel. Voel je
+          vrij als je in het kleine ensemble programma liever
+          Italiaanse, Duitse of Franse muziek speelt of zingt.</p>
         <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles
           worden tijdig ingedeeld, zodat je je thuis kunt
           voorbereiden. Daarom is snel aanmelden essentieel. Binnen de
@@ -278,7 +276,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
   </div>
-</body> <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+</body>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 <!-- InstanceEnd -->
 
 </html>

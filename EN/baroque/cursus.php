@@ -94,12 +94,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           ensembles, both of which are treated equally. The ensembles
           work most of the time under the intensive supervision of the
           teachers. The ensembles present themselves to the other
-          participants at the end of the course; in mutual
-          consultation a number of ensembles can participate in the
-          final public concert. This year the focus is on English
-          baroque music, but this is optional for chamber music. Feel
-          free to play or sing Italian, German or French music in the
-          small ensemble program.</p>
+          participants at the end of the course. This year the focus
+          is on English baroque music, but this is optional for
+          chamber music. Feel free to play or sing Italian, German or
+          French music in the small ensemble program.</p>
         <p>All formations from quartet upward are possible. The
           ensembles will be assigned very soon, so you can prepare at
           home. That is why quick registration is essential. Within
