@@ -204,23 +204,24 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <h4>Handel - Te Deum &amp; Jubilate</h4>
         <p>
         <div class="fotolinks"><img src="\Images\handel.jpg"
-            alt="George Frederick Handel"><br>George Frederick
-          Handel</div>Handels <i>Te Deum &amp; Jubilate </i>werden
-        geschreven om de Vrede van Utrecht in 1713 te vieren. Het was
-        zijn eerste grote geestelijke werk op Engelse teksten.&nbsp;
-        Handel volgde het model van Henry Purcells Te Deum en Jubilate
-        uit 1694 met strijkers en trompetten, dat zelfs na de dood van
-        de componist regelmatig werd uitgevoerd bij officiële
-        gelegenheden in St Paul's, en een zetting uit 1709 van William
-        Croft. Net als in deze modellen componeerde&nbsp; Handel een
-        combinatie van twee liturgische teksten, de Ambrosiaanse hymne
-        <i>Te Deum</i> (We loven U, O God) en een zetting van Psalm 100,
-        <i>O be joyful in the Lord, all ye lands</i>, wat een vaste
-        lofzang is in het Anglicaanse ochtendgebed.&nbsp; Handels werk
-        werd voor het eerst uitgevoerd tijdens een openbare repetitie op
-        5 maart 1713 in St Paul's Cathedral. De officiële première vond
-        plaats nadat de moeizame vredesonderhandelingen waren afgerond,
-        in een plechtige dankdienst op 7 juli 1713.&nbsp;</p>
+            alt="George Frederick Handel" width="250"><br>George
+          Frederick Handel</div>Handels <i>Te Deum &amp; Jubilate
+        </i>werden geschreven om de Vrede van Utrecht in 1713 te vieren.
+        Het was zijn eerste grote geestelijke werk op Engelse
+        teksten.&nbsp; Handel volgde het model van Henry Purcells Te
+        Deum en Jubilate uit 1694 met strijkers en trompetten, dat zelfs
+        na de dood van de componist regelmatig werd uitgevoerd bij
+        officiële gelegenheden in St Paul's, en een zetting uit 1709 van
+        William Croft. Net als in deze modellen componeerde&nbsp; Handel
+        een combinatie van twee liturgische teksten, de Ambrosiaanse
+        hymne <i>Te Deum</i> (We loven U, O God) en een zetting van
+        Psalm 100, <i>O be joyful in the Lord, all ye lands</i>, wat een
+        vaste lofzang is in het Anglicaanse ochtendgebed.&nbsp; Handels
+        werk werd voor het eerst uitgevoerd tijdens een openbare
+        repetitie op 5 maart 1713 in St Paul's Cathedral. De officiële
+        première vond plaats nadat de moeizame vredesonderhandelingen
+        waren afgerond, in een plechtige dankdienst op 7 juli
+        1713.&nbsp;</p>
         <p>Het <i>Te Deum &amp; Jubilate </i>zijn feestelijk genoteerd
           voor zes solisten (twee sopranen, twee alten, tenor en bas),
           gemengd koor, twee trompetten, flauto traverso, twee hobo's,
