@@ -124,12 +124,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           Cecilia’s feast day into a celebration of music’s divine
           power, transforming it into a distinctly English tradition.
           </li>
-        <p>Purcell contributed two Odes to St. Cecilia: <i>Welcome to
-            all the pleasures</i> (Z.339) was written by Purcell to
-          a text by Christopher Fishburn in 1683. The second, <i>Hail!
-            Bright Cecilia </i>(Z.328), also known as The Ode to St.
-          Cecilia, was composed to a text by the Irishman Nicholas
-          Brady in 1692.</li>
+        <p>
+        <div class="fotolinks"><img src="\Images\purcell.jpg"
+            alt="Henry Purcell"><br>Henry Purcell</div>Purcell
+        contributed two Odes to St. Cecilia: <i>Welcome to all the
+          pleasures</i> (Z.339) was written by Purcell to a text by
+        Christopher Fishburn in 1683. The second, <i>Hail! Bright
+          Cecilia </i>(Z.328), also known as The Ode to St. Cecilia,
+        was composed to a text by the Irishman Nicholas Brady in 1692.
+        </li>
         <h4>Purcell - Welcome to all the pleasures</h4>
         <p>The first ode, <i>Welcome to all the pleasures, </i>is scored
           for vocal soloists, chorus and an ensemble of four-part
@@ -149,8 +152,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             invade&quot;</li>
           <li>Song (bass) &amp; chorus: &quot;Then lift up your
             voices&quot; </li>
-          <li>Verse &amp; chorus: &quot;Then lift up your voices&quot;
-          </li>
+          <li>Verse (bass) &amp; chorus: &quot;Then lift up your
+            voices&quot; </li>
           <li> Instrumental interlude</li>
           <li>Song (tenor) &amp; ritornello: &quot;Beauty, thou scene
             of love&quot;</li>
