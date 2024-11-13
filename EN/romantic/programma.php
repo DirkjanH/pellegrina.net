@@ -78,60 +78,56 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           Wheel. The original idea to perform The Spectre’s Bride
           turned out ot be not possible due to restrictions at our
           concert venue, the cathedral.</p>
-        <h4>The Golden Spinning Wheel/h4> <p><img
-              src="\Images\spinnewiel.jpg"
-              alt="Golden Spinning Wheel" class="fotocenter">The
-            first performance of The Golden Spinning Wheel took
-            place in Prague in 1896, followed by a public premiere
-            in London. The reception was mixed: admiration for its
-            musical depth alternated with criticism from
-            traditionalists such as Eduard Hanslick, who deplored
-            Dvořák's ‘deviation’ from absolute music. Leoš Janáček,
-            on the other hand, praised Dvořák's expressive musical
-            'speech' in these works.</p>
-          <p>Dvořák integrated the rhythmic structure of Erben's
-            verses into his thematic material, leading to a unique
-            combination of musical inventiveness and textual
-            reference. His detailed approach to Erben's stories,
-            such as the repetitions in The Golden Spinning Wheel,
-            was sometimes controversial, but demonstrated his focus
-            on musical narrativity. In addition, his orchestration
-            emphasized refined timbres, with influences from French
-            Impressionism.</p>
-          <h4>Synopsis of The Golden Spinning Wheel</h4>
-          <p>While out riding in the countryside, a king happens upon
-            a beautiful village girl, Dornička, and falls in love
-            with her. He asks her step-mother to bring her to his
-            castle. The step-mother and Dornička's identically
-            looking step-sister set off towards the king's castle
-            with Dornička. On the way, they murder her, hack off her
-            feet and hands, and cut out her eyes. They bury the body
-            but keep the amputated parts, "lest someone fix them
-            back". The step-sister then poses as Dornička and
-            marries the king, after which he is called away to
-            battle.</p>
-          <p>Meanwhile, in the midst of the forest, a hermit skilled
-            in magical arts finds Dornička's remains and decides to
-            bring her back to life. He sends a page to the castle to
-            persuade the step-sister to part with "two feet" in
-            return for a golden spinning wheel, "two hands" for a
-            golden distaff, and "two eyes" for a golden spindle. The
-            body being complete again, the hermit brings Dornička
-            back to life.</p>
-          <p>The king returns from battle and bids his wife to spin
-            for him on her new wheel. As she obliges, the magical
-            spinning wheel sings a song betraying the two women's
-            treacherous plot and relaying all the gruesome details
-            of Dornička's murder. The king goes off into the forest
-            to find his true betrothed. The two murderesses are
-            thrown to the wolves, their bodies mutilated in the same
-            way they had mutilated Dornička's. Having fulfilled its
-            task, the golden spinning wheel magically disappears,
-            never to be seen or heard again. </p>
-          <p><a h<a href="\EN\romantic\text_zlaty_kolovrat.htm"
-              target="_blank">The full text of Erben's poem with a
-              parallel English translation can be found here.</a>
-          </p>
+        <h4>The Golden Spinning Wheel</h4>
+        <p><img src="\Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
+            class="fotocenter">The first performance of The Golden
+          Spinning Wheel took place in Prague in 1896, followed by a
+          public premiere in London. The reception was mixed:
+          admiration for its musical depth alternated with criticism
+          from traditionalists such as Eduard Hanslick, who deplored
+          Dvořák's ‘deviation’ from absolute music. Leoš Janáček, on
+          the other hand, praised Dvořák's expressive musical 'speech'
+          in these works.</p>
+        <p>Dvořák integrated the rhythmic structure of Erben's verses
+          into his thematic material, leading to a unique combination
+          of musical inventiveness and textual reference. His detailed
+          approach to Erben's stories, such as the repetitions in The
+          Golden Spinning Wheel, was sometimes controversial, but
+          demonstrated his focus on musical narrativity. In addition,
+          his orchestration emphasized refined timbres, with
+          influences from French Impressionism.</p>
+        <h4>Synopsis of The Golden Spinning Wheel</h4>
+        <p>While out riding in the countryside, a king happens upon a
+          beautiful village girl, Dornička, and falls in love with
+          her. He asks her step-mother to bring her to his castle. The
+          step-mother and Dornička's identically looking step-sister
+          set off towards the king's castle with Dornička. On the way,
+          they murder her, hack off her feet and hands, and cut out
+          her eyes. They bury the body but keep the amputated parts,
+          "lest someone fix them back". The step-sister then poses as
+          Dornička and marries the king, after which he is called away
+          to battle.</p>
+        <p>Meanwhile, in the midst of the forest, a hermit skilled in
+          magical arts finds Dornička's remains and decides to bring
+          her back to life. He sends a page to the castle to persuade
+          the step-sister to part with "two feet" in return for a
+          golden spinning wheel, "two hands" for a golden distaff, and
+          "two eyes" for a golden spindle. The body being complete
+          again, the hermit brings Dornička back to life.</p>
+        <p>The king returns from battle and bids his wife to spin for
+          him on her new wheel. As she obliges, the magical spinning
+          wheel sings a song betraying the two women's treacherous
+          plot and relaying all the gruesome details of Dornička's
+          murder. The king goes off into the forest to find his true
+          betrothed. The two murderesses are thrown to the wolves,
+          their bodies mutilated in the same way they had mutilated
+          Dornička's. Having fulfilled its task, the golden spinning
+          wheel magically disappears, never to be seen or heard again.
+        </p>
+        <p><a h<a href="\EN\romantic\text_zlaty_kolovrat.htm"
+            target="_blank">The full text of Erben's poem with a
+            parallel English translation can be found here.</a>
+        </p>
       </div>
       <div class="cols2">
         <hr style="border-top: 1px solid black;">
