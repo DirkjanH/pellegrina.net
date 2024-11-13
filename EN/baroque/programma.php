@@ -29,9 +29,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
   <meta charset="UTF-8">
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-  <!-- InstanceBeginEditable name="head" -->
   <link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-  <!-- InstanceEndEditable -->
   <!-- Facebook Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -67,13 +65,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
                                     ?> <div id="main">
-      <!-- InstanceBeginEditable name="mainpage" -->
       <div class="cols2">
         <h2>Programme details</h2>
         <p>This year's programme for all focuses on music with a
-          relation to the patroness of music, Saint Cecilia. Two
-          Cecilian Odes by Purcell and two works by&nbsp; Handel is a
-          lot of music, too much to perform in one concert. A
+          relation to the patroness of music, Saint Cecilia: two
+          Cecilian Odes by Purcell and two works by&nbsp; Handel. This
+          is a lot of music, too much to perform in one concert. A
           selection of about an hour will be made from these works
           according to the number and abilities of the singers, so
           that everybody can have a substantial solo. The resulting
@@ -264,12 +261,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           November 22, thus ousting Purcell's counterpart from first
           place.</p>
       </div>
-      <!-- InstanceEndEditable -->
       <h2><a href="javascript: history.go(-1)">Back</a></h2>
     </div>
   </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>

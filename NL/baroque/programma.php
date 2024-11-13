@@ -66,15 +66,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <div class="cols2">
         <h2>Programmadetails</h2>
         <p>Dit jaar staat muziek op het programma met een relatie tot de
-          beschermvrouwe van de muziek, Sinte Cecilia. Twee
-          Ceciliaanse odes van Purcell en twee werken van&nbsp; Handel
-          is veel muziek, te veel om in één concert uit te voeren. Er
-          zal een selectie van ongeveer een uur uit deze werken worden
-          gemaakt op basis van het aantal en de capaciteiten van de
-          zangers, zodat iedereen een substantiële solo kan hebben.
-          Het resulterende programma wordt uitgevoerd als hoogtepunt
-          en afsluiting van de cursus, dit jaar weer in de kerk van
-          klooster Nieuw Sion.</p>
+          beschermvrouwe van de muziek, Sinte Cecilia: twee
+          Ceciliaanse odes van Purcell en twee werken van&nbsp;
+          Handel. Dit is veel muziek, te veel om in één concert uit te
+          voeren. Er zal een selectie van ongeveer een uur uit deze
+          werken worden gemaakt op basis van het aantal en de
+          capaciteiten van de zangers, zodat iedereen een substantiële
+          solo kan hebben. Het resulterende programma wordt uitgevoerd
+          als hoogtepunt en afsluiting van de cursus, dit jaar weer in
+          de kerk van klooster Nieuw Sion.</p>
         <h4>Sinte Cecilia</h4>
         <p>Sinte Cecilia staat bekend als beschermheilige van de muziek
           in de christelijke traditie. De band van Sinte Cecilia met
