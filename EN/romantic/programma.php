@@ -80,14 +80,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           concert venue, the cathedral.</p>
         <h4>The Golden Spinning Wheel</h4>
         <p><img src="\Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
-            class="fotocenter">The first performance of The Golden
-          Spinning Wheel took place in Prague in 1896, followed by a
-          public premiere in London. The reception was mixed:
-          admiration for its musical depth alternated with criticism
-          from traditionalists such as Eduard Hanslick, who deplored
-          Dvořák's ‘deviation’ from absolute music. Leoš Janáček, on
-          the other hand, praised Dvořák's expressive musical 'speech'
-          in these works.</p>
+            class="fotocenter" style="clear:both;">The first
+          performance of The Golden Spinning Wheel took place in
+          Prague in 1896, followed by a public premiere in London. The
+          reception was mixed: admiration for its musical depth
+          alternated with criticism from traditionalists such as
+          Eduard Hanslick, who deplored Dvořák's ‘deviation’ from
+          absolute music. Leoš Janáček, on the other hand, praised
+          Dvořák's expressive musical 'speech' in these works.</p>
         <p>Dvořák integrated the rhythmic structure of Erben's verses
           into his thematic material, leading to a unique combination
           of musical inventiveness and textual reference. His detailed
