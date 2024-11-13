@@ -81,7 +81,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           Het resulterende programma wordt uitgevoerd als hoogtepunt
           en afsluiting van de cursus, dit jaar weer in de kerk van
           klooster Nieuw Sion.</p>
-        <h3>Sinte Cecilia</h3>
+        <h4>Sinte Cecilia</h4>
         <p>Sinte Cecilia staat bekend als beschermheilige van de muziek
           in de christelijke traditie. De band van Sinte Cecilia met
           muziek komt niet voort uit haar historische daden, maar uit
@@ -105,7 +105,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           een viool, een cello of een theorbe zijn. Deze afbeeldingen
           speelden een belangrijke rol in het veranderen van haar in
           de beschermvrouwe van de muziek.</p>
-        <h3>Engels verzet en heropleving</h3>
+        <h4>Engels verzet en heropleving</h4>
         <p>Gedurende een groot deel van de geschiedenis van Engeland
           bleef de verering van Cecilia sluimeren, onderdrukt door de
           protestantse tegenzin om heiligen te eren. Aan het einde van
@@ -134,14 +134,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           Cecilia (Z.328), ook bekend als The Ode to St. Cecilia, werd
           gecomponeerd in 1692 op een tekst van de Ier Nicholas Brady.
         </p>
-        <h3>Purcell - Welcome to all the pleasures</h3>
+        <h4>Purcell - Welcome to all the pleasures</h4>
         <p>De eerste ode, Welcome to all the pleasures, is geschreven
           voor vocale solisten, koor en een ensemble van vierstemmige
           strijkers en basso continuo. De instrumenten begeleiden niet
           alleen de zangers, maar spelen ook een rol in een ouverture
           (de zogenaamde “symfony”) en ritornelli. De uitvoering van
           het stuk duurt ongeveer 18 minuten.</p>
-        <h3>Delen</h3>
+        <h5>Delen</h5>
         <ol>
           <li>Symphony</li>
           <li>Verse, chorus &amp; ritornello: &quot;Welcome to all the
@@ -160,7 +160,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Song &amp; chorus: &quot;In a consort of voices while
             instruments play&quot;</li>
         </ol>
-        <h3>Purcell - Hail! Bright Cecilia</h3>
+        <h4>Purcell - Hail! Bright Cecilia</h4>
         <p>De tweede ode, Hail! Bright Cecilia, is geschreven voor
           vocale solisten, koor en een ensemble van twee blokfluiten,
           basblokfluit, twee hobo's, twee trompetten, pauken,
@@ -176,7 +176,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           aanwijzingen. Hij noteerde de <i>Warlike Music</i> voor twee
           trompetten en pauken in plaats van de fluit die Brady
           noemde.</p>
-        <h3>Delen</h3>
+        <h5>Delen</h5>
         <ol>
           <li>Symphony (overture):
             Introduction—Canzona—Adagio—Allegro—Grave—Allegro</li>
@@ -201,7 +201,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Chorus: &quot;Hail! Bright Cecilia, hail to thee&quot;
           </li>
         </ol>
-        <h3>Handel - Te Deum &amp; Jubilate</h3>
+        <h4>Handel - Te Deum &amp; Jubilate</h4>
         <p>Handels <i>Te Deum &amp; Jubilate </i>werden geschreven om de
           Vrede van Utrecht in 1713 te vieren. Het was zijn eerste
           grote geestelijke werk op Engelse teksten.&nbsp; Handel
@@ -227,7 +227,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           tenor als sopraan ingedeeld; de slotdoxologie begint
           achtstemmig. Bijna alle delen zijn voor solozangers en koor;
           er zijn geen echte aria's.</p>
-        <h3>Te Deum</h3>
+        <h4>Te Deum</h4>
         <ol>
           <li>We praise Thee, O God (Adagio, SATB)</li>
           <li>To Thee all Angels cry aloud (Largo e staccato, 2 altos,
@@ -247,7 +247,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Vouchsafe, O Lord (Adagio, SSAATB)</li>
           <li>Lord, in thee have I trusted (Allegro, SSATB)</li>
         </ol>
-        <h3>Jubilate</h3>
+        <h4>Jubilate</h4>
         <ol>
           <li>Be joyful in the Lord, all ye lands (alto, SATB)</li>
           <li>Serve the Lord with gladness (SSATB)</li>
@@ -274,7 +274,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
   </div>
-</body> <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+</body>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 <!-- InstanceEnd -->
 
 </html>
