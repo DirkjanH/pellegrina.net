@@ -71,7 +71,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <!-- InstanceBeginEditable name="mainpage" -->
       <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
       <h2><a name="programma"></a>De muziek</h2>
-      <p>Al 34 jaar organiseert La Pellegrina een jaarlijkse zomercursus
+      <p>Al 35 jaar organiseert La Pellegrina een jaarlijkse zomercursus
         voor instrumentalisten en (koor)zangers. Deze cursus heeft twee
         aspecten: kamermuziek c.q. kamerkoor, en een gezamenlijk
         programma voor solisten, orkest en koor. De cursus vindt plaats
@@ -143,7 +143,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         </h3>
         <div class="fotolinks"><img
             src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
-            alt="Kathedraal met zwarte toren" width="400"
+            alt="Kathedraal met de zwarte toren" width="400"
             class="w3-image"><br> kathedraal van České Budějovice
           met zwarte toren</div>
         <p>Elke middag werken we aan een programma voor koor en orkest,
