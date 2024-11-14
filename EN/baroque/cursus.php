@@ -128,8 +128,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p class="citaat">Andrew Fyson: &quot;Attending La Pellegrina and
         working with wonderful and enthusiastic musicians has been a
         life-changing experience for me.&quot;</p>
-      <p>La Pellegrina provides the sheet music in the form of a link to a
-        PDF that participants can print and bring.</p>
+      <p>La Pellegrina provides sheet music for the programme for all in
+        the form of links to PDF files which the participants can print
+        out and bring.</p>
       <h3>Extras: Baroque dance and Tai Chi </h3>
       <div class="fotorechts"><img src="/Images/Feuillet-notation.jpg"
           alt="" width="400" height="597" /><br> Feuillet-notation for

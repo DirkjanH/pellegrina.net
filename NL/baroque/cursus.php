@@ -129,9 +129,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         Pellegrina en het werken met prachtige en enthousiaste
         muzikanten is voor mij een levensveranderende ervaring
         geweest&#8221;</p>
-      <p><em>La Pellegrina </em>levert de bladmuziek aan in de vorm van
-        een link naar een PDF die de deelnemers zelf kunnen printen en
-        meenemen.</p>
+      <p><i>La Pellegrina</i> biedt bladmuziek voor het programma voor
+        iedereen in de vorm van links naar PDF-bestanden die de
+        deelnemers kunnen uitprinten en meenemen.</p>
       <h3>Extra's: Barokdans en Tai Chi</h3>
       <div class="fotorechts"><img src="/Images/Feuillet-notation.jpg"
           alt="" width="400" height="597" /><br> Feuillet-notation for
