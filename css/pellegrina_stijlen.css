@@ -285,7 +285,7 @@ ul#cursusmenu li a:hover {
 /* Navigatie: */
 nav#navcontainer {
 	width: 200px;
-	border: 1px solid #235a30;
+	border: none;
 	background: #c6e9ce;
 }
 #navcontainer ul {
@@ -299,6 +299,7 @@ nav#navcontainer {
 	font-size: 15px;
 	width: 200px;
 	display: block;
+  text-decoration: none;
 	padding-right: 10px;
 }
 #navcontainer li,
