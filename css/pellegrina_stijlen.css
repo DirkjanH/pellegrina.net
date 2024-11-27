@@ -297,20 +297,17 @@ div.w3-accordion {
 	border-bottom: 1px solid black;
 	text-decoration: none;
 }
-#navcontainer a:link,
 #navcontainer a:visited {
-	color: black;
 	background-color: #d0becf;
 }
 #navcontainer a:hover,
 #navcontainer a:active {
-	color: black !important;
 	background-color: #ebe9ff !important;
 }
 #navcontainer a.grijs:hover,
 #navcontainer a.grijs:active {
-	background-color: #999 !important;
 	color: #666 !important;
+	background-color: #999 !important;
 }
 p.citaat {
 	color: #723f2b;
