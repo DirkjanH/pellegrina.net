@@ -57,6 +57,5 @@ foreach ($docenteninfo as $i => $doc) {
                 </div>
             </div> <?php if ($taal == 'EN') echo $docent['bio_EN'];
 						else echo $docent['bio_NL']; ?>
-        </div>
-</body>
-</html> <?php } ?>
+        </div> <?php } ?> </body>
+</html>
