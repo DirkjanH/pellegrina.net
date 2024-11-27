@@ -297,8 +297,7 @@ nav#navcontainer {
 	font-size: 15px;
 	width: 200px;
 	display: block;
-	color: black !important;
-	border-bottom: 1px black;
+	border-bottom: 1px solid black;
 	text-decoration: none;
 	padding-right: 10px;
 }
@@ -310,19 +309,19 @@ nav#navcontainer {
 	padding-top: 0;
 	margin-bottom: 0;
 	background: initial;
-	border-bottom: 1px solid #235a30;
+	border-bottom: 1px solid black;
 }
-#navlist a:link,
-#navlist a:visited {
+#navcontainer a:link,
+#navcontainer a:visited {
 	color: black;
 }
-#navlist a:hover,
-#navlist a:active {
+#navcontainer a:hover,
+#navcontainer a:active {
 	color: black !important;
 	background-color: #6c5eea !important;
 }
-#navlist a.grijs:hover,
-#navlist a.grijs:active {
+#navcontainer a.grijs:hover,
+#navcontainer a.grijs:active {
 	background-color: #999 !important;
 	color: #666 !important;
 }
@@ -412,7 +411,6 @@ td,
 label,
 li {
 	font-family: "Alegreya Sans", sans-serif;
-	color: black !important;
 	font-size: 15px;
 	font-variant-ligatures: none;
 }
@@ -666,8 +664,6 @@ div.cols2 h3,
 div.cols3 h1,
 div.cols3 h2,
 div.cols3 h3 {
-	-webkit-column-span: all;
-	-moz-column-span: all;
 	column-span: all;
 }
 div.cols2 ul {
