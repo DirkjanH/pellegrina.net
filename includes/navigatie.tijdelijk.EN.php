@@ -39,7 +39,7 @@
         <li><a class="grijs" <!--href="login.php" target="_parent" -->For
                 participants only</a></li>
     </ul>
-    <div class="w3-content w3-center w3-white"> <a href="/NL/index.php"
+    <div class="w3-content w3-center"> <a href="/NL/index.php"
             target="_parent"><img src="/Images/Logos/Vlag_NL.jpg"
                 alt="Go to the Dutch site" width="34" height="24"
                 class="geenlijn" /></a> <a
