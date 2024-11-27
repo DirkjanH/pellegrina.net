@@ -37,7 +37,7 @@
         <li><a class="grijs" <!--href="login.php" target="_parent" -->Speciaal
                 voor deelnemers</a></li>
     </ul>
-    <div class="w3-content w3-center">
+    <div class="w3-content w3-center w3-white">
         <a href="/EN/index.php" target="_parent"> <img
                 src="/Images/Logos/Vlag_UK.jpg"
                 alt="Ga naar de Engelstalige site" width="34" height="24"
