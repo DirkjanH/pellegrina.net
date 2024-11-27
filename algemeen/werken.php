@@ -21,17 +21,16 @@
         font-size: 20x;
     }
     </style>
-    <link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/navigatie.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
                                     echo $navigatie;
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
-                                    ?>
-        <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
-        <h2>List of works performed in concerts </h2>
+                                    ?> <h2>List of works performed in concerts
+        </h2>
         <h1 class="jaar">2023 </h1>
         <h2 class="cursus">Viennese Masters for choir, soloists and orchestra |
             České Budějovice, 27 July - 6 August</h2>
