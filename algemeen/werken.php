@@ -1,4 +1,4 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -222,7 +222,7 @@
             Netherlands</p>
         <h1 class="jaar">2019</h1>
         <h2 class="cursus">Baroque music in 415 Hz: Montéclair's biblical opera
-            <em>Jephté</em> | Bechyně, 18 - 28 July</h2>
+            <em>Jephté</em> | Bechyně, 18 - 28 July </h2>
         <p>In the final concert in the church:</p>
         <ul>
             <li>Michel Pignolet de Montéclair: biblical opera <em>Jephté</em>

@@ -9,8 +9,7 @@ if ($taal == 'NL') {
 	$titel = 'Docenten \'';
 	$titel .= $cursusdata['cursusnaam_nl'];
 	$titel .= '\'';
-}
-else {
+} else {
 	$titel = 'Tutors \'';
 	$titel .= $cursusdata['cursusnaam_en'];
 	$titel .= '\'';
@@ -22,28 +21,41 @@ $docenteninfo = select_query($query_docenten);
 if (is_array($docenteninfo)) $totaal_docenten = count($docenteninfo);
 
 d($totaal_docenten, $docenteninfo);
- 
+
 foreach ($docenteninfo as $i => $doc) {
 	$docenten[$i]['naam'] = $doc['naam'];
 	$docenten[$i]['bio_NL'] = $doc['bio_NL'];
 	$docenten[$i]['bio_EN'] = $doc['bio_EN'];
 	$docenten[$i]['foto'] = $doc['foto'];
-	}
-/* echo '<pre>';
-print_r($docenten);
-echo '</pre>';
- */ 
+}
 ?>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+    <title>Tutors</title>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+</head>
+<body>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
+    <div id="inhoud" class="w3-main"> <?php
 <div class="w3-container w3-theme-l5">
-  <h2 class="begin"><?php echo $titel; ?></h2>
-  <h3><?php echo $cursusdata['ondertitel']; ?></h3>
-</div>
-
-    <?php foreach ($docenten as $docent) {?>
-  <div class="w3-panel"><a id="<?php echo $docent['foto']; ?>"></a>
-  <div class="w3-col w3-panel w3-padding-0 w3-margin-left w3-card-2 w3-right" style="width:150px"><img src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg" width="150" class="geenlijn" alt="<?php echo $docent['naam']; ?>"/>
-    <div class="w3-container fotobijschrift w3-center" style="margin-top: 6px;"><?php echo $docent['naam']; ?></div>
-  </div>
-  <?php if ($taal == 'EN') echo $docent['bio_EN']; else echo $docent['bio_NL']; ?>
-</div>
-<?php } ?>
+    <h2 class="begin"><?php echo $titel; ?></h2>
+        <h3><?php echo $cursusdata['ondertitel']; ?></h3>
+    </div> <?php foreach ($docenten as $docent) { ?> <div class="w3-panel"><a
+            id="<?php echo $docent['foto']; ?>"></a>
+        <div class="w3-col w3-panel w3-padding-0 w3-margin-left w3-card-2 w3-right"
+            style="width:150px"><img
+                src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
+                width="150" class="geenlijn"
+                alt="<?php echo $docent['naam']; ?>" />
+            <div class="w3-container fotobijschrift w3-center"
+                style="margin-top: 6px;"><?php echo $docent['naam']; ?></div>
+        </div> <?php if ($taal == 'EN') echo $docent['bio_EN'];
+		else echo $docent['bio_NL']; ?>
+    </div>
+</body>
+</html> <?php } ?>
