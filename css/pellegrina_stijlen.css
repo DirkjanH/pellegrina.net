@@ -291,7 +291,8 @@ nav#navcontainer {
 #navcontainer ul {
 	width: 100%;
 	list-style-type: none;
-	margin: 0;
+  text-decoration-style: none;
+	margin-left: 10px;
 	padding: 0px;
 }
 #navcontainer a {
