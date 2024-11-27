@@ -1,4 +1,4 @@
-<?php Kint::$enabled_mode = false; ?> <div class="<?php echo $filenaam[6] ?>"
+<?php Kint::$enabled_mode = true; ?> <div class="<?php echo $filenaam[6] ?>"
     id="titel">
     <div id="teksten">
         <div class="cijfer"> <?php echo $cursusdata['nr']; ?> </div>
@@ -9,12 +9,13 @@
     </div>
     <div id="cursusplaatje">&nbsp;</div>
 </div> <?php
-		d($filenaam, $opening_inschrijving, date('c'), ($opening_inschrijving > date('c')));
-		$menu = '';
+		
+d($filenaam, $opening_inschrijving, date('c'), ($opening_inschrijving > date('c')));
 
-		if (isset($filenaam[7]) and $filenaam[7] == 'cursus') {
-			if (isset($filenaam[5]) and $filenaam[5] == 'NL') {
-				$menu = <<<EOD
+$menu = '';
+
+if (isset($filenaam[7]) and $filenaam[7] == 'cursus') {
+	if (isset($filenaam[5]) and $filenaam[5] == 'NL') {$menu = <<<EOD
 	<div id="cursusmenu" class="w3-bar w3-border w3-card-4 {$filenaam[6]}">
 	<a class="w3-bar-item w3-button w3-mobile" href="#programma" target="_self">De
     muziek</a> EOD; if (isset($filenaam[6]) and $filenaam[6] == 'romantic')
@@ -22,7 +23,7 @@
     target="_self">Kennismakingsrepetitie</a>
 EOD;
 
-	if ($opening_inschrijving > date('c')) { $menu .= <<<EOD
+	if ($opening_inschrijving > date('c')) {$menu .= <<<EOD
 	<a class="w3-bar-item w3-button w3-mobile"
     href="#voorwie" target="_self">Voor wie</a>
     <a class="w3-bar-item w3-button w3-mobile" href="#dagindeling"
@@ -87,4 +88,4 @@ EOD;
 EOD;
 			}
 		}
-		echo $menu; ?>
+		echo $menu; ?> }
