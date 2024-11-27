@@ -270,7 +270,7 @@ div#main {
 	background-color: white;
 }
 ul#cursusmenu {
-	background-color: #58be6f !important;
+	background-color: #6c5eea !important;
 	margin-top: -2px;
 }
 ul#cursusmenu li a {
@@ -280,19 +280,17 @@ ul#cursusmenu li a {
 	text-decoration: none;
 }
 ul#cursusmenu li a:hover {
-	background-color: #a1dbae;
+	background-color: #a7a1db;
 }
 /* Navigatie: */
 nav#navcontainer {
 	width: 200px;
 	border: none;
-	background: #c6e9ce;
+	background: #f9aaeb;
 }
 #navcontainer ul {
 	width: 200px;
-	list-style-type: none;
-  text-decoration-style: none;
-	margin-left: 10px;
+  margin-left: 10px;
 	padding: 0px;
 }
 #navcontainer a {
@@ -319,7 +317,7 @@ nav#navcontainer {
 #navlist a:hover,
 #navlist a:active {
 	color: black !important;
-	background-color: #3fa456 !important;
+	background-color: #6c5eea !important;
 }
 #navlist a.grijs:hover,
 #navlist a.grijs:active {
