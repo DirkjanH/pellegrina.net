@@ -1,4 +1,4 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php'; ?>
 <!DOCTYPE HTML>
 <html>
 <head>
