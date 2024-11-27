@@ -297,7 +297,8 @@ nav#navcontainer {
 	font-size: 15px;
 	width: 200px;
 	display: block;
-  border-bottom: 1px;
+  color: black !important;
+	border-bottom: 1px black;
   text-decoration: none;
 	padding-right: 10px;
 }
