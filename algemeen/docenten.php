@@ -53,7 +53,7 @@ foreach ($docenteninfo as $i => $doc) {
                     src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
                     width="150" class="geenlijn"
                     alt="<?php echo $docent['naam']; ?>" />
-                <div class="w3-container fotobijschrift w3-center"
+                <div class="w3-container klein w3-center"
                     style="margin-top: 6px;"><?php echo $docent['naam']; ?>
                 </div>
             </div> <?php if ($taal == 'EN') echo $docent['bio_EN'];
