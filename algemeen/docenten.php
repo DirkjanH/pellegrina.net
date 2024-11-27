@@ -48,9 +48,9 @@ foreach ($docenteninfo as $i => $doc) {
         </div> <?php foreach ($docenten as $docent) { ?> <div
             class="w3-panel style=" padding-top:20px;">
             <a id="<?php echo $docent['foto']; ?>"></a>
-            <div
-                class="w3-col w3-panel w3-padding w3-margin-left w3-card-2 w3-right">
-                <img src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
+            <div class="w3-col w3-panel w3-padding w3-margin-left w3-card-2 w3-right"
+                style="width:180px"><img
+                    src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
                     width="150" class="geenlijn"
                     alt="<?php echo $docent['naam']; ?>" />
                 <div class="w3-container klein w3-center"
