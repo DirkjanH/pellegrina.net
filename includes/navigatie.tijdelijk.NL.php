@@ -31,8 +31,6 @@
         <li><a href="faq.php" target="_parent">Vaak gestelde vragen</a>
         </li>
         <li><a href="route_plek.php" target="_parent" -->Reisinformatie</a></li>
-        </div>
-        </div>
         <li><a href="adres_toevoegen.php" target="_parent"
                 class="w3-text-red">Informatie ontvangen? Geef E-mail op!</a>
         </li>
