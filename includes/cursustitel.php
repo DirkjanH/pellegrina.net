@@ -19,9 +19,10 @@
 	<a class="w3-bar-item w3-button w3-mobile" href="#programma" target="_self">De
     muziek</a> EOD; if (isset($filenaam[6]) and $filenaam[6] == 'romantic')
 	$menu .= '<a class="w3-bar-item w3-button w3-mobile" href="#kennismaking"
-    target="_self">Kennismakingsrepetitie</a>'; 
+    target="_self">Kennismakingsrepetitie</a>
+EOD;
 
-	if ($opening_inschrijving > date('c')) { $menu .= <<<EOD 
+	if ($opening_inschrijving > date('c')) { $menu .= <<<EOD
 	<a class="w3-bar-item w3-button w3-mobile"
     href="#voorwie" target="_self">Voor wie</a>
     <a class="w3-bar-item w3-button w3-mobile" href="#dagindeling"
