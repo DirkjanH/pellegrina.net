@@ -290,16 +290,16 @@ nav#navcontainer {
 }
 #navcontainer ul {
 	width: 200px;
-  margin-left: 10px;
+	margin-left: 10px;
 	padding: 0px;
 }
 #navcontainer a {
 	font-size: 15px;
 	width: 200px;
 	display: block;
-  color: black !important;
+	color: black !important;
 	border-bottom: 1px black;
-  text-decoration: none;
+	text-decoration: none;
 	padding-right: 10px;
 }
 #navcontainer li,
@@ -412,6 +412,7 @@ td,
 label,
 li {
 	font-family: "Alegreya Sans", sans-serif;
+	color: black !important;
 	font-size: 15px;
 	font-variant-ligatures: none;
 }
@@ -648,24 +649,12 @@ p.facebook {
 	color: #336699;
 }
 div.cols3 {
-	-webkit-column-count: 3;
-	-webkit-column-gap: 20px;
-	-webkit-column-rule: 1px solid #000;
-	-moz-column-count: 3;
-	-moz-column-gap: 20px;
-	-moz-column-rule: 1px solid #000;
 	column-count: 3;
 	column-gap: 20px;
 	column-rule: 1px solid #000;
 	margin-top: 20px;
 }
 div.cols2 {
-	-webkit-column-count: 2;
-	-webkit-column-gap: 20px;
-	-webkit-column-rule: 1px solid #000;
-	-moz-column-count: 2;
-	-moz-column-gap: 20px;
-	-moz-column-rule: 1px solid #000;
 	column-count: 2;
 	column-gap: 20px;
 	column-rule: 1px solid #000;
@@ -688,7 +677,6 @@ div.cols3 ul {
 	margin-top: 0px;
 }
 .nieuwe_kolom {
-	-webkit-column-break-before: always;
 	break-before: column;
 }
 li.ruimte_ervoor {
@@ -723,22 +711,21 @@ select {
 @media screen and (max-width: 800px) {
 	div.cols3,
 	div.cols2 {
-		-webkit-column-count: 1;
-		-moz-column-count: 1;
 		column-count: 1;
 	}
-  #navcontainer div.w3-accordion {
-    width: 200px;
-    margin-top: 0px;
-    padding-bottom: 0;
-    padding-top: 0;
-    margin-bottom: 0;
-    background: initial;
-    border-bottom: 1px solid #235a30;
-  }
-@media screen and (max-width: 1080px) {
-	#titel div.cijfer {
-		display: none;
+	#navcontainer div.w3-accordion {
+		width: 200px;
+		margin-top: 0px;
+		padding-bottom: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+		background: initial;
+		border-bottom: 1px solid #235a30;
+	}
+	@media screen and (max-width: 1080px) {
+		#titel div.cijfer {
+			display: none;
+		}
 	}
 }
 @media print {
