@@ -1,4 +1,4 @@
-<?php Kint::$enabled_mode = true; ?> <div class="<?php echo $filenaam[6] ?>"
+<?php Kint::$enabled_mode = false; ?> <div class="<?php echo $filenaam[6] ?>"
     id="titel">
     <div id="teksten">
         <div class="cijfer"> <?php echo $cursusdata['nr']; ?> </div>
@@ -91,4 +91,4 @@ EOD;
 				}
 			}
 		}
-		echo $menu; ?> }
+		echo $menu; ?>
