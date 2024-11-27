@@ -14,9 +14,9 @@
     <a class="grijs w3-bar-item w3-button" <!--href="aanmelding.php"
         target="_parent" -->Aanmelding</a>
     <div class="w3-dropdown-click">
-        <button class="w3-bar-item w3-button" onclick="myFunction()"><em>La
+        <a class="w3-bar-item w3-button" onclick="myFunction()"><em>La
                 Pellegrina</em>
-            <i class="fa fa-caret-down"></i></button>
+            <i class="fa fa-caret-down"></i></a>
         <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
             <a href="over_pellegrina.php" class="w3-bar-item w3-button">Over
                 <em>La Pellegrina</em></a>
