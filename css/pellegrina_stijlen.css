@@ -251,10 +251,9 @@ div#inhoud {
 	margin-left: auto;
 }
 div#top {
-	margin-left: 200px;
+	margin-left: 210px;
 	text-align: center;
 	clear: both;
-	z-index: 0;
 	position: relative;
 	border: thin solid black;
 	background-color: white;
