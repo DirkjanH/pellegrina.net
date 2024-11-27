@@ -1,10 +1,9 @@
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-large"
     id="navcontainer">
-    <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-closenav w3-large w3-hide-large">Sluit &times;</a>
+    <button class="w3-bar-item w3-button w3-large w3-hide-large"
+        onclick="w3_close()">Sluit &times;</button>
     <a href="/NL/index.php" target="_parent" class="w3-bar-item w3-button">Alle
         cursussen</a>
     <a href="index.php" target="_parent"
@@ -15,8 +14,9 @@
     <a class="grijs w3-bar-item w3-button" <!--href="aanmelding.php"
         target="_parent" -->Aanmelding</a>
     <div class="w3-accordion">
-        <a onclick="myAccFunc('LP')" href="#"><em>La Pellegrina</em> <i
-                class="fa fa-caret-down"></i></a>
+        <a onclick="myAccFunc('LP')" href="#"
+            class="fa fa-caret-down w3-bar-item w3-button"><em>La
+                Pellegrina</em></a>
         <div id="LP" class="w3-accordion-content w3-card-4">
             <a href="over_pellegrina.php" class="w3-bar-item w3-button">Over
                 <em>La Pellegrina</em></a>
