@@ -13,10 +13,10 @@
         target="_parent">Course details</a>
     <a class="grijs w3-bar-item w3-button" <!--href="aanmelding.php"
         target="_parent">Registration</a>
-    <div class="w3-accordion">
-        <a onclick="myAccFunc('LP')" href="#"><em>La Pellegrina</em> <i
-                class="fa fa-caret-down"></i></a>
-        <div id="LP" class="w3-accordion-content w3-card-4">
+    <div class="w3-dropdown-click">
+        <button class="w3-button" onclick="myFunction()"><em>La Pellegrina</em>
+            <i class="fa fa-caret-down"></i></button>
+        <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
             <a class="w3-bar-item w3-button" href="over_pellegrina.php">About
                 <em>La Pellegrina</em></a>
             <a class="w3-bar-item w3-button" href="vorigeprojecten.php">Previous
@@ -66,15 +66,12 @@ function w3_close() {
     document.getElementById("openNav").style.display = "inline-block";
 }
 
-function myAccFunc(naam) {
-    var x = document.getElementById(naam);
+function myFunction() {
+    var x = document.getElementById("demo");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-        x.previousElementSibling.className += " actiekleur";
     } else {
         x.className = x.className.replace(" w3-show", "");
-        x.previousElementSibling.className = x.previousElementSibling.className
-            .replace(" actiekleur", "");
     }
 }
 </script>
