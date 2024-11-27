@@ -288,6 +288,7 @@ nav#navcontainer {
 	background: #ffeefe;
 }
 #navcontainer a,
+a:visited,
 div.w3-accordion {
 	font-size: 15px;
 	width: 200px;
@@ -295,9 +296,6 @@ div.w3-accordion {
 	padding: 3px 10px;
 	border-bottom: 1px solid black;
 	text-decoration: none;
-}
-#navcontainer a:visited {
-	background-color: #d0becf;
 }
 #navcontainer a:hover,
 #navcontainer a:active {
