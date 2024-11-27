@@ -292,6 +292,7 @@ nav#navcontainer {
 	font-size: 15px;
 	width: 200px;
 	display: block;
+	padding: 0;
 	border-bottom: 1px solid black;
 	text-decoration: none;
 	padding-right: 10px;
