@@ -41,21 +41,22 @@ foreach ($docenteninfo as $i => $doc) {
 </head>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-    <div id="inhoud" class="w3-main"> <?php
-<div class="w3-container w3-theme-l5">
-    <h2 class="begin"><?php echo $titel; ?></h2>
-        <h3><?php echo $cursusdata['ondertitel']; ?></h3>
-    </div> <?php foreach ($docenten as $docent) { ?> <div class="w3-panel"><a
-            id="<?php echo $docent['foto']; ?>"></a>
-        <div class="w3-col w3-panel w3-padding-0 w3-margin-left w3-card-2 w3-right"
-            style="width:150px"><img
-                src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
-                width="150" class="geenlijn"
-                alt="<?php echo $docent['naam']; ?>" />
-            <div class="w3-container fotobijschrift w3-center"
-                style="margin-top: 6px;"><?php echo $docent['naam']; ?></div>
-        </div> <?php if ($taal == 'EN') echo $docent['bio_EN'];
-		else echo $docent['bio_NL']; ?>
-    </div>
+    <div id="inhoud" class="w3-main">
+        <div class="w3-container w3-theme-l5">
+            <h2 class="begin"><?php echo $titel; ?></h2>
+            <h3><?php echo $cursusdata['ondertitel']; ?></h3>
+        </div> <?php foreach ($docenten as $docent) { ?> <div class="w3-panel">
+            <a id="<?php echo $docent['foto']; ?>"></a>
+            <div class="w3-col w3-panel w3-padding-0 w3-margin-left w3-card-2 w3-right"
+                style="width:150px"><img
+                    src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
+                    width="150" class="geenlijn"
+                    alt="<?php echo $docent['naam']; ?>" />
+                <div class="w3-container fotobijschrift w3-center"
+                    style="margin-top: 6px;"><?php echo $docent['naam']; ?>
+                </div>
+            </div> <?php if ($taal == 'EN') echo $docent['bio_EN'];
+						else echo $docent['bio_NL']; ?>
+        </div>
 </body>
 </html> <?php } ?>
