@@ -288,11 +288,6 @@ nav#navcontainer {
 	border: none;
 	background: #ffd9fd;
 }
-#navcontainer ul {
-	width: 200px;
-	margin-left: 10px;
-	padding: 0px;
-}
 #navcontainer a {
 	font-size: 15px;
 	width: 200px;
