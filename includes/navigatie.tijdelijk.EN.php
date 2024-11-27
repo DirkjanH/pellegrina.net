@@ -2,44 +2,46 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-large"
     id="navcontainer">
-    <ul id="navlist">
-        <li><a href="javascript:void(0)" onclick="w3_close()"
-                class="w3-closenav w3-large w3-hide-large">Close &times;</a>
-        </li>
-        <li><a href="/EN/index.php" target="_parent">All Courses</a></li>
-        <li><a href="index.php" target="_parent">{cursus}</a></li>
-        <li><a href="programma.php">Programme</a></li>
-        <li class="grijs"><a <!--href="cursus.php" target="_parent">Course
-                details</a></li>
-        <li><a class="grijs" <!--href="aanmelding.php"
-                target="_parent">Registration</a></li>
-        <div class="w3-accordion">
-            <a onclick="myAccFunc('LP')" href="#"><em>La Pellegrina</em> <i
-                    class="fa fa-caret-down"></i></a>
-            <div id="LP" class="w3-accordion-content w3-white w3-card-4">
-                <li><a href="over_pellegrina.php">About <em>La
-                            Pellegrina</em></a></li>
-                <li><a href="vorigeprojecten.php">Previous projects</a></li>
-                <li><a href="../../algemeen/werken.php">Previously performed
-                        works</a></li>
-                <li><a href="contact.php" target="_parent">Contact & links</a>
-                </li>
-            </div>
+    <a href="javascript:void(0)" onclick="w3_close()"
+        class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+    <a href="/EN/index.php" target="_parent" class="w3-bar-item w3-button">All
+        Courses</a>
+    <a href="index.php" target="_parent"
+        class="w3-bar-item w3-button">{cursus}</a>
+    <a href="programma.php" class="w3-bar-item w3-button">Programme</a>
+    <a class="grijs w3-bar-item w3-button" <!--href="cursus.php"
+        target="_parent">Course details</a>
+    <a class="grijs w3-bar-item w3-button" <!--href="aanmelding.php"
+        target="_parent">Registration</a>
+    <div class="w3-accordion">
+        <a onclick="myAccFunc('LP')" href="#"><em>La Pellegrina</em> <i
+                class="fa fa-caret-down"></i></a>
+        <div id="LP" class="w3-accordion-content w3-white w3-card-4">
+            <a class="w3-bar-item w3-button" href="over_pellegrina.php">About
+                <em>La Pellegrina</em></a>
+            <a class="w3-bar-item w3-button" href="vorigeprojecten.php">Previous
+                projects</a>
+            <a class="w3-bar-item w3-button"
+                href="../../algemeen/werken.php">Previously performed works</a>
+            <a class="w3-bar-item w3-button" href="contact.php"
+                target="_parent">Contact & links</a>
         </div>
-        <li><a href="plaats.php" target="_parent">{locatie}, the venue</a></li>
-        <li><a href="docenten.php" target="_parent">Tutors</a></li>
-        <li><a class="grijs" <!--href="praktisch.php" target="_parent" -->Prices
-                & practical matters</a></li>
-        <li><a href="faq.php" target="_parent">Frequently asked questions</a>
-        </li>
-        <li><a href="route_plek.php" target="_parent">Travel information</a>
-        </li>
-        <li><a href="adres_toevoegen.php" target="_parent"
-                class="w3-text-red">Receive information?<br /> Add E-mail
-                Address!</a></li>
-        <li><a class="grijs" <!--href="login.php" target="_parent" -->For
-                participants only</a></li>
-    </ul>
+    </div>
+    <a href="plaats.php" target="_parent"
+        class="w3-bar-item w3-button">{locatie}, the venue</a>
+    <a href="docenten.php" target="_parent"
+        class="w3-bar-item w3-button">Tutors</a>
+    <a class="grijs w3-bar-item w3-button" <!--href="praktisch.php"
+        target="_parent" -->Prices & practical matters</a>
+    <a href="faq.php" target="_parent" class="w3-bar-item w3-button">Frequently
+        asked questions</a>
+    <a href="route_plek.php" target="_parent"
+        class="w3-bar-item w3-button">Travel information</a>
+    <a href="adres_toevoegen.php" target="_parent"
+        class="w3-bar-item w3-button w3-text-red">Receive information?<br /> Add
+        E-mail Address!</a>
+    <a class="grijs w3-bar-item w3-button" <!--href="login.php" target="_parent"
+        -->For participants only</a>
     <div class="w3-content w3-center"> <a href="/NL/index.php"
             target="_parent"><img src="/Images/Logos/Vlag_NL.jpg"
                 alt="Go to the Dutch site" width="34" height="24"

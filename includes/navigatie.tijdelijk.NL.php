@@ -14,9 +14,8 @@
     <a class="grijs w3-bar-item w3-button" <!--href="aanmelding.php"
         target="_parent" -->Aanmelding</a>
     <div class="w3-accordion">
-        <a onclick="myAccFunc('LP')" href="#"
-            class="fa fa-caret-down w3-bar-item w3-button"><em>La
-                Pellegrina</em></a>
+        <a onclick="myAccFunc('LP')" href="#"><em>La Pellegrina</em> <i
+                class="fa fa-caret-down"></i></a>
         <div id="LP" class="w3-accordion-content w3-card-4">
             <a href="over_pellegrina.php" class="w3-bar-item w3-button">Over
                 <em>La Pellegrina</em></a>
