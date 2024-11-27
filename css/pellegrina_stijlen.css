@@ -284,25 +284,25 @@ ul#cursusmenu li a:hover {
 }
 /* Navigatie: */
 nav#navcontainer {
-	width: 250px;
+	width: 220px;
 	border: 1px solid #235a30;
 	background: #c6e9ce;
 }
 #navcontainer ul {
-	width: 250px;
+	width: 100%;
 	list-style-type: none;
 	margin: 0;
 	padding: 0px;
 }
 #navcontainer a {
 	font-size: 15px;
-	width: 250px;
+	width: 100%;
 	display: block;
 	padding-right: 10px;
 }
 #navcontainer li,
 #navcontainer div.w3-accordion {
-	width: 250px;
+	width: 100%;
 	margin-top: 0px;
 	padding-bottom: 0;
 	padding-top: 0;
@@ -725,7 +725,15 @@ select {
 		-moz-column-count: 1;
 		column-count: 1;
 	}
-}
+  #navcontainer div.w3-accordion {
+    width: 200px;
+    margin-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    background: initial;
+    border-bottom: 1px solid #235a30;
+  }
 @media screen and (max-width: 1080px) {
 	#titel div.cijfer {
 		display: none;
