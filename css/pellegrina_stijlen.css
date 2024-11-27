@@ -286,34 +286,26 @@ ul#cursusmenu li a:hover {
 nav#navcontainer {
 	width: 200px;
 	border: none;
-	background: #ffd9fd;
+	background: #ffeefe;
 }
-#navcontainer 
-  a, div.w3-accordion {
-    font-size: 15px;
+#navcontainer a,
+div.w3-accordion {
+	font-size: 15px;
 	width: 200px;
 	display: block;
 	padding: 3px 10px;
 	border-bottom: 1px solid black;
 	text-decoration: none;
-	padding-right: 10px;
-}
-	width: 200px;
-	margin-top: 0px;
-	padding-bottom: 0;
-	padding-top: 3px 10px;
-	margin-bottom: 0;
-	background: initial;
-	border-bottom: 1px solid black;
 }
 #navcontainer a:link,
 #navcontainer a:visited {
 	color: black;
+	background-color: #d0becf;
 }
 #navcontainer a:hover,
 #navcontainer a:active {
 	color: black !important;
-	background-color: #6c5eea !important;
+	background-color: #ebe9ff !important;
 }
 #navcontainer a.grijs:hover,
 #navcontainer a.grijs:active {
