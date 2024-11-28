@@ -697,14 +697,12 @@ select {
 	div.cols2 {
 		column-count: 1;
 	}
-	#navcontainer div.w3-accordion {
+	#navcontainer a:any-link,
+	div.w3-accordion {
 		width: 200px;
 		margin-top: 0px;
-		padding-bottom: 0;
-		padding-top: 0;
-		margin-bottom: 0;
 		background: initial;
-		border-bottom: 1px solid #235a30;
+		border-bottom: 1px solid black;
 	}
 	@media screen and (max-width: 1080px) {
 		#titel div.cijfer {
