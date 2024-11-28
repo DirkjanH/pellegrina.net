@@ -287,7 +287,7 @@ nav#navcontainer {
 	border: none;
 	background: #ffeefe;
 }
-#navcontainer a,
+#navcontainer a:link,
 a:visited,
 div.w3-accordion {
 	color: black;
