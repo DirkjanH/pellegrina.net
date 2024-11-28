@@ -1,6 +1,7 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php'; ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -9,24 +10,102 @@
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <style type="text/css">
-    h1.jaar {
-        border-top: 3px double;
-        padding-top: 10px;
-        font-size: 32px;
-    }
+        h1.jaar {
+            border-top: 3px double;
+            padding-top: 10px;
+            font-size: 32px;
+        }
 
-    h2.cursus {
-        color: #009933;
-        margin: 0 0 5px 0;
-        font-size: 20x;
-    }
+        h2.cursus {
+            color: #009933;
+            margin: 0 0 5px 0;
+            font-size: 20x;
+        }
     </style>
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main">
         <div id="main">
             <h2>List of works performed in concerts </h2>
+            <h1 class="jaar">2024</h1>
+            <h2 class="cursus">Reicha's Requiem for choir, soloists and
+                orchestra | České Budějovice, 25 July - 4 August</h2>
+            <p>In the final concert :</p>
+            <ul>
+                <li>Dvořák - Symphonic Variations op. 87</li>
+                <li>Anton Reicha - Messe des Morts (Requiem)</li>
+            </ul>
+            <p>In the chamber music programme:</p>
+            <ul>
+                <li>Foerster, Nonet op. 147</li>
+                <li>Arias and duets with string quartet</li>
+                <li>Schubert, Die Advokaten D37</li>
+                <li>York Bowen, Quintet for Horn and Strings</li>
+                <li>Martinů, Nonet H 374</li>
+                <li>Mendelssohn Bartholdy, Piano Trio in D minor op. 49 nr. 1
+                </li>
+                <li>Brahms, Piano Quartet in A op. 26</li>
+                <li>Reicha, Quintet A for Flute and Strings</li>
+                <li>Brahms, String Quartet in a op. 51 nr. 2</li>
+                <li>Chausson, Concert for Violin, Piano and String Quartet, op.
+                    21</li>
+                <li>Thuille, Sextet for Winds and Piano in B flat Major op. 6
+                </li>
+                <li>Jadassohn, Serenade in D op. 80</li>
+                <li>Mozart, Piano Quintet with Winds arranged for nonet by
+                    Françaix</li>
+                <li>Ter Horst, String Quartet nr.2</li>
+                <li>Mozart, Horn Quintet KV 407</li>
+                <li>Boccherini, String Quintet in C major</li>
+                <li>Dvořák, Piano Trio in B-Flat Major op. 21</li>
+                <li>Chamber Choir:</li>
+                <ul>
+                    <li>Handl - Ecce quomodo moritur justus</li>
+                    <li>Zelenka - In monte Oliveti</li>
+                    <li>Mozart - Agnus and Dona Nobis from the Missa Brevis in
+                        Bb KV 275</li>
+                    <li>Schubert - Die Nacht D 983 (male choir)</li>
+                    <li>Schumann - Nänie Op.114 (female choir)</li>
+                    <li>Schubert - Coronach Op.52 Nr.4</li>
+                    <li>Fanny Mendelssohn Hensel - Lockung Op. 3 Nr.1</li>
+                    <li>Dvořák - Napadly písně from V Přírodě Op.63</li>
+                    <li>Dvořák - Vyběhla bříza běličká from V Přírodě
+                        Op.63</li>
+                    <li>Irish traditional - The Parting Glass</li>
+                </ul>
+            </ul>
+            <h2 class="cursus">Baroque music in 415 Hz: Vivaldi's Venetian
+                Vespers | Monastery Nieuw Sion, 11 - 17 August</h2>
+            <p>In the final concert in the church:</p>
+            <ul>
+                <li>Vivaldi - Domine ad adjuvandum me festina RV 593</li>
+                <li>Vivaldi - Confitebor RV 596</li>
+                <li>Monteverdi - Cantate Domino a 2</li>
+                <li>Galuppi - Laetatus sum</li>
+                <li>Caldara - Caro mea vere est cibus a 2</li>
+                <li>Vivaldi - Cum dederit from the Nisi Dominus RV 608</li>
+                <li>Vivaldi - Sinfonie avanti la Senna Festeggiante RV 693
+                    (instruments only)</li>
+                <li>Caldara - Salve Regina</li>
+                <li>Vivaldi - Magnificat RV 610</li>
+            </ul>
+            <p>In the chamber music programme:</p>
+            <ul>
+                <li>Legrenzi, Prosa pro mortuis</li>
+                <li>Reichenauer, Quartet</li>
+                <li>Legrenzi, Lauda Jerusalem from Salmi op. 5</li>
+                <li>Rosenmüller, Wahrlich, wahrlich ich sage euch</li>
+                <li>Scarlatti, Stabat Mater</li>
+                <li>Stölzel, Konzert e moll</li>
+                <li>Legrenzi, La basadona</li>
+                <li>Carissimi, Veni sponsa Christi</li>
+                <li>Bach, Aria 'Gott, du hast es wohl gefüget' from BWV 63</li>
+                <li>Zelenka, Tu ad liberandum from Te Deum ZWV 146</li>
+                <li>Rosenmüller, Siehe an die Werke Gottes</li>
+                <li>Pergolesi, Stabat Mater</li>
+            </ul>
             <h1 class="jaar">2023 </h1>
             <h2 class="cursus">Viennese Masters for choir, soloists and
                 orchestra | České Budějovice, 27 July - 6 August</h2>
@@ -225,7 +304,8 @@
             <p>In the final concert in the church:</p>
             <ul>
                 <li>Michel Pignolet de Montéclair: biblical opera
-                    <em>Jephté</em> (1732) </li>
+                    <em>Jephté</em> (1732)
+                </li>
             </ul>
             <p>In the chamber music programme:</p>
             <ul>
@@ -1297,7 +1377,8 @@
             <h2 class="cursus">L'Orfeo | Třeboň, 11 - 21 August </h2>
             <ul id="werken">
                 <li> Summer School of Early Music and Dance around
-                    <i>L’Orfeo</i> by Monteverdi </li>
+                    <i>L’Orfeo</i> by Monteverdi
+                </li>
             </ul>
             <h1 class="jaar">1995</h1>
             <h2 class="cursus">Mozart &amp; Dvořák | Třeboň, 23 July - 3 August
@@ -1390,4 +1471,5 @@
     </div>
 </body>
 <!-- InstanceEnd -->
+
 </html>
