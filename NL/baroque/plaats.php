@@ -63,12 +63,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-		echo $navigatie;
-		echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-		require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
-		?> <div id="main">
+										echo $navigatie;
+										echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+										require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
+										?> <div id="main">
             <!-- InstanceBeginEditable name="mainpage" --> <?php //require_once $_SERVER['DOCUMENT_ROOT'].'/NL/budejovice.php'; 
-			?> <div class="fotocenter"><img
+															?> <div class="fotocenter"><img
                     src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg"
                     class="w3-image" alt="Klooster Nieuw Sion" /></div>
             <p>Klooster Nieuw Sion bestaat sinds 1890 en was tot 2015 een
@@ -89,15 +89,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     src="/Images\Locaties\Nieuw Sion\Kerk NS.jpg"
                     class="w3-image"
                     alt="De kloosterkerk, waar het slotconcert plaatsvindt" /><br>
-                De refter, waar repetities en concerten plaatsvinden <div
+                De kloosterkerk, waar het slotconcert plaatsvindt<div
                     class="fotocenter"><img src="/Images/NS/refter.jpg"
                         class="w3-image"
                         alt="De refter, waar repetities en het kamermuziekconcert plaatsvinden" /><br>
-                    De refter, waar repetities en concerten plaatsvinden <div
-                        class="fotocenter"> <img src="/Images/NS/Hobo band.jpg"
-                            class="w3-image"
-                            alt="De refter, waar repetities en het kamermuziekconcert plaatsvinden" /><br>
-                        Oboe band aan het werk</div>
+                    De refter, waar repetities en het kamermuziekconcert
+                    plaatsvinden <div class="fotocenter"> <img
+                            src="/Images/NS/Hobo band.jpg" class="w3-image"
+                            alt="Oboe band aan het werk" /><br> Oboe band aan
+                        het werk</div>
                     <div class="fotocenter"> <img
                             src="/Images/NS/dejeuner_dans_l'herbe.jpg"
                             alt="Lunch en diner vinden buiten plaats, als het weer het toelaat"

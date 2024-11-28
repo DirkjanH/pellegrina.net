@@ -90,19 +90,19 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     src="\Images\Locaties\Nieuw Sion\Kerk NS.jpg"
                     class="w3-image"
                     alt="The monastery church, where the final concert takes place" /><br>
-                The refectory, where rehearsals take place</div>
+                The monastery church, where the final concert takes place</div>
             <div class="fotocenter"> <img src="/Images/NS/refter.jpg"
                     class="w3-image"
                     alt="The refectory, where the chamber music concert and rehearsals takes place" /><br>
-                The refectory, where rehearsals take place</div>
+                The refectory, where the chamber music concert and rehearsals
+                take place</div>
             <div class="fotocenter"> <img src="/Images/NS/Hobo band.jpg"
-                    class="w3-image"
-                    alt="The refectory, where rehearsals and the chamber music concert takes place" /><br>
-                Oboe band at work</div>
+                    class="w3-image" alt="Oboe band at work" /><br> Oboe band at
+                work</div>
             <div class="fotocenter"> <img
                     src="/Images/NS/dejeuner_dans_l'herbe.jpg" class="w3-image"
-                    alt="Dinner is taken outside, weather permitting" /> Dinner
-                is usually taken outside</div>
+                    alt="Dinner and lunch are usually taken outside" /> Dinner
+                and lunch are usually taken outside</div>
             <div class="fotocenter"><img
                     src="/Images/Locaties/Nieuw Sion/luchtfoto.jpg"
                     class="w3-image"
