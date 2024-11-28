@@ -32,7 +32,7 @@
             <h1 class="jaar">2024</h1>
             <h2 class="cursus">Reicha's Requiem for choir, soloists and
                 orchestra | České Budějovice, 25 July - 4 August</h2>
-            <p>In the final concert :</p>
+            <p>In the final concert in het Monastery Church:</p>
             <ul>
                 <li>Dvořák - Symphonic Variations op. 87</li>
                 <li>Anton Reicha - Messe des Morts (Requiem)</li>
@@ -78,7 +78,7 @@
             </ul>
             <h2 class="cursus">Baroque music in 415 Hz: Vivaldi's Venetian
                 Vespers | Monastery Nieuw Sion, 11 - 17 August</h2>
-            <p>In the final concert in the church:</p>
+            <p>In the final concert in the Refectory:</p>
             <ul>
                 <li>Vivaldi - Domine ad adjuvandum me festina RV 593</li>
                 <li>Vivaldi - Confitebor RV 596</li>
