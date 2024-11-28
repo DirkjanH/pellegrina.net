@@ -290,6 +290,7 @@ nav#navcontainer {
 #navcontainer a,
 a:visited,
 div.w3-accordion {
+	color: black;
 	font-size: 15px;
 	width: 200px;
 	display: block;
