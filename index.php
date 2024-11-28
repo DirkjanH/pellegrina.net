@@ -258,11 +258,14 @@ function getisp($ip = '')
 						<p><a href="NL">Twee zomercursussen voor gevorderde
 								amateurmusici en professionals:</a></p>
 						<ol>
-							<li class="klein"><b>Dvořáks Gouden Spinnewiel &
-									Haydns <i>Missa in tempore belli</i></b> -
-								24 juli - 3 augustus</li>
-							<li class="klein"><b>Purcell & Handel</b> - 10 - 16
-								augustus</li>
+							<li class="klein" style="margin-left: 0px;">
+								<b>Dvořáks Gouden Spinnewiel & Haydns <i>Missa
+										in tempore belli</i></b> - 24 juli - 3
+								augustus
+							</li>
+							<li class="klein" style="margin-left: 0px;">
+								<b>Purcell & Handel</b> - 10 - 16 augustus
+							</li>
 						</ol>
 					</div>
 					<div id="carroussel" class="w3-panel w3-section w3-half">
@@ -317,11 +320,14 @@ function getisp($ip = '')
 						<p><a href="EN">Two summer schools for accomplished
 								amateur musicians and professionals:</a></p>
 						<ol>
-							<li class="klein"><b>Dvořák's Golden Spinning Wheel
-									& Haydn's <i>Missa in tempore belli</i></b>
-								- 24 July - 3 August</li>
-							<li class="klein"><b>Purcell & Handel</b> - 10 - 16
-								August</li>
+							<li class="klein" style="margin-left: 0px;">
+								<b>Dvořák's Golden Spinning Wheel & Haydn's
+									<i>Missa in tempore belli</i></b> - 24 July
+								- 3 August
+							</li>
+							<li class="klein" style="margin-left: 0px;">
+								<b>Purcell & Handel</b> - 10 - 16 August
+							</li>
 						</ol>
 					</div>
 				</div>
