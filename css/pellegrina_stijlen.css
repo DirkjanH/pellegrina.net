@@ -389,7 +389,7 @@ ul#cursusmenu li a:hover {
 nav#navcontainer {
 	width: 200px;
 	border: none;
-	background: #ffeefe;
+	background: #ffb3b3;
 }
 #navcontainer a,
 div.w3-accordion {
@@ -407,7 +407,7 @@ div.w3-accordion {
 }
 #navcontainer a:hover,
 #navcontainer a:active {
-	background-color: #ebe9ff !important;
+	background-color: #ff8080 !important;
 }
 #navcontainer a.grijs:hover,
 #navcontainer a.grijs:active {
@@ -415,7 +415,7 @@ div.w3-accordion {
 	background-color: #999 !important;
 }
 p.citaat {
-	color: #723f2b;
+	color: #ba3615eb;
 	padding-left: 10mm;
 	text-align: left;
 	background: url("/Images/Logos/bruine_punt.png") no-repeat 3mm 0.2em;
