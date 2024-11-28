@@ -391,16 +391,19 @@ nav#navcontainer {
 	border: none;
 	background: #ffeefe;
 }
-#navcontainer a:link,
-a:visited,
+#navcontainer a,
 div.w3-accordion {
-	color: black;
 	font-size: 15px;
 	width: 200px;
 	display: block;
 	padding: 3px 10px;
 	border-bottom: 1px solid black;
 	text-decoration: none;
+}
+#navcontainer a:link,
+a:visited,
+div.w3-accordion {
+	color: black;
 }
 #navcontainer a:hover,
 #navcontainer a:active {
