@@ -1,4 +1,4 @@
-<?php Kint::$enabled_mode = true; ?> <div
+<?php Kint::$enabled_mode = false; ?> <div
 	class="<?php echo $filenaam[6] ?> w3-border w3-card-4" id="titel">
 	<div id="teksten">
 		<div class="cijfer"> <?php echo $cursusdata['nr']; ?> </div>
@@ -26,9 +26,6 @@ EOD;
 		<a class="w3-bar-item w3-button w3-mobile" href="#kennismaking"
 			target="_self">
 			<span class="{$filenaam[6]}">Kennismakingsrepetitie</span></a> 
-EOD;
-
-																				if ($opening_inschrijving > date('c'))  $menu .= <<<EOD
 	 <a	class="w3-bar-item w3-button w3-mobile" href="#voorwie"
 				target="_self"><span class="{$filenaam[6]}">Voor wie</span></a>
 				<a class="w3-bar-item w3-button w3-mobile" href="#dagindeling"
@@ -68,11 +65,6 @@ EOD;
  <a class="w3-bar-item w3-button w3-mobile" href="#kennismaking"
 			target="_self"><span class="{$filenaam[6]}">Introductory
 				rehearsal</span></a>' 
-EOD;
-
-
-																				if ($opening_inschrijving > date('c'))
-																					$menu .= <<<EOD
 				 <a class="w3-bar-item w3-button w3-mobile" href="#voorwie"
 				target="_self"><span class="{$filenaam[6]}">For whom</span></a>
 				<a class="w3-bar-item w3-button w3-mobile" href="#dagindeling"
@@ -107,5 +99,5 @@ EOD;
 EOD;
 																			}
 																		}
-
+																		$menu .= '</div>';
 																		echo $menu; ?>
