@@ -172,7 +172,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           plaats voor trompetten en pauken. Deze waren bedoeld om de
           dreiging van oorlog en de triomf van de overwinning op te
           roepen.</p>
-        <h3> Structuur en kenmerken </h3>
+        <h4> Structuur en kenmerken </h4>
         <p> De structuur van de mis volgt de traditionele misdelen: </p>
         <ul>
           <li>Het Kyrie begint met een plechtige inleiding waarin de
@@ -222,7 +222,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             fanfare-achtig <i>Allegro con spirito</i> met een bijna
             dwingend gezongen <i>Dona nobis pacem</i>. </li>
         </ul>
-        <h3>Bezetting</h3>
+        <h4>Bezetting</h4>
         <p> De Paukenmis is geschreven voor twee hobo&#39;s, twee
           klarinetten, twee fagotten, twee hoorns, twee trompetten,
           pauken, strijkers en orgel; later breidde Haydn de partijen

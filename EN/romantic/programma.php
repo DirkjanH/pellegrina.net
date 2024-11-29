@@ -170,7 +170,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     with unusually prominent for trumpets and timpani. These
                     were meant to evoke the threat of war and the triumph of
                     victory.</p>
-                <h3> Structure and characteristics </h3>
+                <h4> Structure and characteristics </h4>
                 <p> The structure of the Mass follows the traditional parts of
                     the Mass: </p>
                 <ul>
@@ -226,7 +226,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         a most compellingly sung <i>Dona nobis pacem</i>.
                     </li>
                 </ul>
-                <h3>Ensemble formation</h3>
+                <h4>Ensemble formation</h4>
                 <p> The <i>Missa in tempore belli</i> is written for two
                     oboes&#39;s, two clarinets, two bassoons, two horns, two
                     trumpets, timpani, strings and organ; later Haydn expanded
