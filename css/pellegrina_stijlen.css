@@ -397,7 +397,7 @@ nav#navcontainer {
 	border: none;
 	background: #ffcccc;
 }
-#navcontainer a,
+#navcontainer a:any-link,
 div.w3-accordion {
 	font-size: 15px;
 	width: 200px;
@@ -705,7 +705,7 @@ select {
 		column-count: 1;
 	}
 	#navcontainer a:any-link,
-	div.w3-accordion {
+	button.w3-bar-item {
 		width: 200px;
 		margin-top: 0px;
 		background: initial;
