@@ -11,6 +11,11 @@ $_SESSION['test'] = 'test';
     <title>Session test</title>
 </head>
 
-<body> <?php session_status(); ?> </body>
+<body> <?php session_status();
+        echo '<p>Hello world!</p>';
+
+        echo $_SESSION;
+
+        ?> </body>
 
 </html>
