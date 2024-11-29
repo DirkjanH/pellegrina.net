@@ -397,7 +397,7 @@ nav#navcontainer {
 	border: none;
 	background: #ffcccc;
 }
-#navcontainer a:any-link,
+#navcontainer a,
 div.w3-accordion,
 div.w3-dropdown-click {
 	font-size: 15px;
