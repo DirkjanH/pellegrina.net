@@ -14,7 +14,7 @@ $_SESSION['test'] = 'test';
 <body> <?php session_status();
         echo '<p>Hello world!</p>';
 
-        echo $_SESSION;
+        print_r($_SESSION);
 
         ?> </body>
 
