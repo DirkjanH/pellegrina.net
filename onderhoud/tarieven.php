@@ -22,7 +22,6 @@ function cursusgeld($ins)
 	$diner		 		= $cursus[$ins['CursusId']]['diner'];
 	$ACMP 				= 0;
 	$korting2      		= 50; // korting PER CURSUS
-	$paypal		   		= 15; // meerprijs PayPal
 
 	$actiedatum = $cursus[$ins['CursusId']]['datum_korting'];
 
@@ -98,15 +97,6 @@ function cursusgeld($ins)
 		$wensenEN .= ", minus reduction camping in the monastery garden";
 		$regelNL .= "###Korting voor kamperen in de kloostertuin@@@- {$kamperen}";
 		$regelEN .= "###Reduction for camping in the monastery garden@@@- {$kamperen}";
-	}
-
-	// supplement voor betaling met PayPal:
-	if (isset($ins['PayPal']) and $ins['PayPal'] == '1') {
-		$cursusgeld += $paypal;
-		$wensenNL .= ", plus supplement voor betaling via PayPal";
-		$wensenEN .= ", plus supplement for payment with PayPal";
-		$regelNL .= "###Supplement voor betaling via PayPal@@@{$paypal}";
-		$regelEN .= "###Supplement for payment with PayPal@@@{$paypal}";
 	}
 
 	// korting voor tijdig inschrijven:
