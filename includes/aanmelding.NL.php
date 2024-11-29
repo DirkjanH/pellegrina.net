@@ -270,10 +270,7 @@ FOUT;
 				quote($_POST['achternaam']),
 				quote($naam),
 				quote($password),
-				quote(
-					$geboortedatum,
-					"date"
-				),
+				quote($geboortedatum),
 				quote($_POST['geslacht']),
 				quote($_POST['taal']),
 				quote($_POST['telefoon']),

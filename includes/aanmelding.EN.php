@@ -274,10 +274,7 @@ FOUT;
 				quote($_POST['achternaam']),
 				quote($naam),
 				quote($password),
-				quote(
-					$geboortedatum,
-					"date"
-				),
+				quote($geboortedatum),
 				quote($_POST['geslacht']),
 				quote($_POST['taal']),
 				quote($_POST['telefoon']),
@@ -307,7 +304,7 @@ FOUT;
 				<<<FOUT
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link href="/css/aanmelding.css" rel="stylesheet" type="text/css">
-	<div id="aanmeldingsprobleem"><h2>Your registration has failed. The following error occurred:/h2>\n<ul>\n
+	<div id="aanmeldingsprobleem"><h2>Your registration has failed. The following error occurred:</h2>\n<ul>\n
 	<li>You have already registered for this course. You can only register once for the same course</li>\n</ul>\n
 	<p>If you want to change something in your registration or you don't succeed in sending in the form, please send the required data in a normal email to <a 	href="mailto:aanmelding@pellegrina.net">aanmelding@pellegrina.net</a>.</p></div>\n
 FOUT;
