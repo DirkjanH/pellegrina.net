@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -12,6 +13,7 @@
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
+
 <body>
     <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Practical facts & prices
@@ -26,7 +28,8 @@
         above reasons all registrations will first be collected. Final
         confirmation of participation cannot be given until
         <strong><?php echo $cursusdata['beslisdatum']; ?></strong>. In view of
-        the limited number of places it is recommended to register early. </p>
+        the limited number of places it is recommended to register early.
+    </p>
     <p class="citaat">Robert Klotz: &ldquo;I flew across an ocean to attend La
         Pellegrina. Would swim if I have to get there next year.&rdquo;</p>
     <h3>Registration and paying the deposit</h3>
@@ -42,7 +45,8 @@
         We will then send you provisional confirmation of your registration.
         Deposits will of course be refunded to applicants who cannot be placed.
         The entire fee is to be paid on
-        <?php echo $cursusdata['betaaldatum']; ?> at the latest. </p>
+        <?php echo $cursusdata['betaaldatum']; ?> at the latest.
+    </p>
     <p class="citaat">Marrie Kardol: &ldquo;The beautiful inspiring environment,
         the orderly progress of the program, the good preparation and the
         friendly and pleasant way in which the tutors deal with the participants
@@ -56,7 +60,8 @@
         If you register in time, you will receive a
         <strong><?php echo euro_en($cursusdata['korting_vroeg']); ?></strong>
         discount. If you camp or arrange your own accommodation, you will
-        receive a discount; single rooms are possible at a surcharge. </p>
+        receive a discount; single rooms are possible at a surcharge.
+    </p>
     <h3>Accommodation</h3>
     <h4>Single and double rooms in the guesthouse of Klooster Nieuw Sion</h4>
     <p> Most participants stay in the guest house of Klooster Nieuw Sion. There
@@ -155,51 +160,36 @@
         </tr>
     </table>
     <div class="w3-panel">
-        <!--Currency Converter widget by FreeCurrencyRates.com -->
-        <div id='gcw_mainFVAw5y6zp' class='gcw_mainFVAw5y6zp'></div>
-        <a id='gcw_siteFVAw5y6zp'
-            href='https://freecurrencyrates.com/en/'>FreeCurrencyRates.com</a>
-        <script>
-        function reloadFVAw5y6zp() {
-            var sc = document.getElementById('scFVAw5y6zp');
-            if (sc) sc.parentNode.removeChild(sc);
-            sc = document.createElement('script');
-            sc.type = 'text/javascript';
-            sc.charset = 'UTF-8';
-            sc.async = true;
-            sc.id = 'scFVAw5y6zp';
-            sc.src =
-                'https://freecurrencyrates.com/en/widget-horizontal-editable?iso=XUMEUR&df=2&p=FVAw5y6zp&v=its&source=fcr&width=810&width_title=200&firstrowvalue=1&thm=A6C9E2,FCFDFD,4297D7,5C9CCC,FFFFFF,C5DBEC,FCFDFD,2E6E9E,000000&title=Currency%20Converter&tzo=-60';
-            var div = document.getElementById('gcw_mainFVAw5y6zp');
-            div.parentNode.insertBefore(sc, div);
-        }
-        reloadFVAw5y6zp();
-        </script>
-        <!-- put custom styles here: .gcw_mainFVAw5y6zp{}, .gcw_headerFVAw5y6zp{}, .gcw_ratesFVAw5y6zp{}, .gcw_sourceFVAw5y6zp{} -->
-        <!--End of Currency Converter widget by FreeCurrencyRates.com -->
-    </div>
-    <h3>We speak English</h3>
-    <p>The courses organised by <em>La Pellegrina</em> are are open to an
-        international audience, with most participants coming from Western and
-        Eastern Europe. We do, however, have some regular guests from Japan,
-        Taiwan, Canada, Australia, Mexico and the US. As English will probably
-        be the language we all have in common, tuition will be in English on
-        request.</p>
-    <p class="citaat">Jean Walker: Each year on returning I think it can't be as
-        good as the previous year… and it is!!! </p>
-    <p class="citaat">Laurie Boltjes: 'I always go on a long cycling tour after
-        the course. Sometimes some of the other participants join me for a short
-        holiday.' </p>
-    <h3><b><a name="annul"></a></b>Cancellation policy</h3>
-    <p>If <em>La Pellegrina</em> is unable to offer a place, or is forced to
-        cancel a course, any fees that have been paid will be entirely refunded.
-        Deposits cannot be refunded to applicants who withdraw from the course.
-        Applicants cancelling after <?php echo $cursusdata['betaaldatum']; ?>
-        are obliged to pay the entire course fee. It is therefore advisable to
-        take out a cancellation insurance. </p>
-    <p><i>La Pellegrina</i> retains the right to change tutors and programmes if
-        such changes are considered necessary.</p>
-    <!-- InstanceEndEditable -->
+        <div class="w3-panel">
+            <iframe title="fx"
+                src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=EUR&targetCurrency=USD"
+                height=490 width=340 frameBorder="0"
+                allowtransparency="true"></iframe>
+        </div>
+        <h3>We speak English</h3>
+        <p>The courses organised by <em>La Pellegrina</em> are are open to an
+            international audience, with most participants coming from Western
+            and Eastern Europe. We do, however, have some regular guests from
+            Japan, Taiwan, Canada, Australia, Mexico and the US. As English will
+            probably be the language we all have in common, tuition will be in
+            English on request.</p>
+        <p class="citaat">Jean Walker: Each year on returning I think it can't
+            be as good as the previous year… and it is!!! </p>
+        <p class="citaat">Laurie Boltjes: 'I always go on a long cycling tour
+            after the course. Sometimes some of the other participants join me
+            for a short holiday.' </p>
+        <h3><b><a name="annul"></a></b>Cancellation policy</h3>
+        <p>If <em>La Pellegrina</em> is unable to offer a place, or is forced to
+            cancel a course, any fees that have been paid will be entirely
+            refunded. Deposits cannot be refunded to applicants who withdraw
+            from the course. Applicants cancelling after
+            <?php echo $cursusdata['betaaldatum']; ?> are obliged to pay the
+            entire course fee. It is therefore advisable to take out a
+            cancellation insurance. </p>
+        <p><i>La Pellegrina</i> retains the right to change tutors and
+            programmes if such changes are considered necessary.</p>
+        <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
+
 </html>

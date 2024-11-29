@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -12,6 +13,7 @@
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
+
 <body>
     <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Practical facts & prices
@@ -42,26 +44,30 @@
         We will then send you provisional confirmation of your registration.
         Deposits will of course be refunded to applicants who cannot be placed.
         The entire fee is to be paid on
-        <?php echo $cursusdata['betaaldatum']; ?> at the latest.</p>
+        <?php echo $cursusdata['betaaldatum']; ?> at the latest.
+    </p>
     <h3>Prices </h3>
     <p>The course fee -
         <strong><?php echo euro_en($cursusdata['prijs_volledig']); ?></strong>
         per person - includes accomodation in double rooms (with private
         bathroom) at the conservatoire, breakfast, lunch and (only on the first
         and last night) dinner. Travel and insurance expenses are not included.
-        Any bank and credit card charges are payable by the participant.</p>
+        Any bank and credit card charges are payable by the participant.
+    </p>
     <h4>Not yet 36? Student? Pay the reduced price! </h4>
     <p>Applicants up to 35 years old and <em>fulltime</em> students at a
         university or polytechnic pay
         <strong><?php echo euro_en($cursusdata['prijs_student']); ?>&nbsp;</strong>
         per course, per person. Please send us a copy or scan of your
         registration with an university or other institution of higher
-        education, or of your passport as proof of age.</p>
+        education, or of your passport as proof of age.
+    </p>
     <h4>Single rooms and your own accommodation </h4>
     <p>Single rooms (with private bathroom) at the conservatoire are available
         to an extra charge of
         <strong><?php echo euro_en($cursusdata['eenpers']); ?></strong>. If you
-        want a single room, please let us know at an early stage.</p>
+        want a single room, please let us know at an early stage.
+    </p>
     <p>There is also the possibility of booking your own accommodation in Ceské
         Bud&#283;jovice. There is a wide range of hotels, from classic in the
         center to modern just outside. Through <a
@@ -73,7 +79,8 @@
         arrange your own accommodation and breakfast, you get a discount of
         <strong><?php echo euro($cursusdata['korting_eigen_acc']); ?></strong>
         on the course fee. Lunch and (on the first and last night) dinner are
-        shared with all participants and included in the course fee. </p>
+        shared with all participants and included in the course fee.
+    </p>
     <h4>Reduction for early applicants </h4>
     <p>If you apply<strong> before
             <?php echo $cursusdata['beslisdatum']; ?></strong> you will receive
@@ -98,7 +105,8 @@
         expenses not included). You are invited to sit in on all rehearsals,
         concerts and other activities during the course. Also, there is plenty
         to see in and around &#268;esk&eacute; Bud&#283;jovice. Please email
-        <em>La Pellegrina </em>for more info.</p>
+        <em>La Pellegrina </em>for more info.
+    </p>
     <h4>Large instrument? Rent instead of bringing your own!</h4>
     <p>Sometimes it is more convenient for players of large instruments like
         cello, double bass and viola da gamba to rent it locally than to pay an
@@ -113,7 +121,8 @@
             Pellegrina</em> in the same year, we can offer you a
         <strong><?php echo euro_en($cursusdata['korting_meer'] * 2); ?>&nbsp;reduction</strong>.
         Please complete both forms, and click the checkbox at the option 'I wish
-        to register for both courses'. </p>
+        to register for both courses'.
+    </p>
     <h4>Exchange rates</h4>
     <table class="w3-table-all">
         <tr>
@@ -171,28 +180,10 @@
         </tr>
     </table>
     <div class="w3-panel">
-        <!--Currency Converter widget by FreeCurrencyRates.com -->
-        <div id='gcw_mainFVAw5y6zp' class='gcw_mainFVAw5y6zp'></div>
-        <a id='gcw_siteFVAw5y6zp'
-            href='https://freecurrencyrates.com/en/'>FreeCurrencyRates.com</a>
-        <script>
-        function reloadFVAw5y6zp() {
-            var sc = document.getElementById('scFVAw5y6zp');
-            if (sc) sc.parentNode.removeChild(sc);
-            sc = document.createElement('script');
-            sc.type = 'text/javascript';
-            sc.charset = 'UTF-8';
-            sc.async = true;
-            sc.id = 'scFVAw5y6zp';
-            sc.src =
-                'https://freecurrencyrates.com/en/widget-horizontal-editable?iso=XUMEUR&df=2&p=FVAw5y6zp&v=its&source=fcr&width=810&width_title=200&firstrowvalue=1&thm=A6C9E2,FCFDFD,4297D7,5C9CCC,FFFFFF,C5DBEC,FCFDFD,2E6E9E,000000&title=Currency%20Converter&tzo=-60';
-            var div = document.getElementById('gcw_mainFVAw5y6zp');
-            div.parentNode.insertBefore(sc, div);
-        }
-        reloadFVAw5y6zp();
-        </script>
-        <!-- put custom styles here: .gcw_mainFVAw5y6zp{}, .gcw_headerFVAw5y6zp{}, .gcw_ratesFVAw5y6zp{}, .gcw_sourceFVAw5y6zp{} -->
-        <!--End of Currency Converter widget by FreeCurrencyRates.com -->
+        <iframe title="fx"
+            src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=EUR&targetCurrency=USD"
+            height=490 width=340 frameBorder="0"
+            allowtransparency="true"></iframe>
     </div>
     <h3>We speak English</h3>
     <p>The courses organised by <em>La Pellegrina</em> are are open to an
@@ -227,4 +218,5 @@
         <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
+
 </html>
