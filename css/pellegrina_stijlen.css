@@ -398,7 +398,8 @@ nav#navcontainer {
 	background: #ffcccc;
 }
 #navcontainer a:any-link,
-div.w3-accordion {
+div.w3-accordion,
+div.w3-dropdown-click {
 	font-size: 15px;
 	width: 200px;
 	display: block;
@@ -705,7 +706,7 @@ select {
 		column-count: 1;
 	}
 	#navcontainer a:any-link,
-	div.w3-accordion {
+	.w3-accordion {
 		width: 200px;
 		margin-top: 0px;
 		background: initial;
