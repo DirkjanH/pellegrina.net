@@ -212,25 +212,24 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         Deum en Jubilate uit 1694 met strijkers en trompetten, dat zelfs
         na de dood van de componist regelmatig werd uitgevoerd bij
         officiële gelegenheden in St Paul's, en een zetting uit 1709 van
-        William Croft. Net als in deze modellen componeerde&nbsp; Handel
-        een combinatie van twee liturgische teksten, de Ambrosiaanse
-        hymne <i>Te Deum</i> (We loven U, O God) en een zetting van
-        Psalm 100, <i>O be joyful in the Lord, all ye lands</i>, wat een
-        vaste lofzang is in het Anglicaanse ochtendgebed.&nbsp; Handels
+        William Croft. Net als in deze modellen componeerde Handel een
+        combinatie van twee liturgische teksten, de Ambrosiaanse hymne
+        <i>Te Deum</i> (We loven U, O God) en een zetting van Psalm 100,
+        <i>O be joyful in the Lord, all ye lands</i>, wat een vaak
+        gezongen lofzang is in het Anglicaanse ochtendgebed. Handels
         werk werd voor het eerst uitgevoerd tijdens een openbare
         repetitie op 5 maart 1713 in St Paul's Cathedral. De officiële
         première vond plaats nadat de moeizame vredesonderhandelingen
-        waren afgerond, in een plechtige dankdienst op 7 juli
-        1713.&nbsp;</p>
-        <p>Het <i>Te Deum &amp; Jubilate </i>zijn feestelijk genoteerd
-          voor zes solisten (twee sopranen, twee alten, tenor en bas),
+        waren afgerond, in een plechtige dankdienst op 7 juli 1713.</p>
+        <p>Het <i>Te Deum & Jubilate</i> is feestelijk genoteerd voor
+          zes solisten (twee sopranen, twee alten, tenor en bas),
           gemengd koor, twee trompetten, flauto traverso, twee hobo's,
-          fagot, strijkers en basso continuo. Het koor is voor de
-          meeste delen vijfstemmig (SSATB), maar af en toe zijn alt en
-          tenor als sopraan ingedeeld; de slotdoxologie begint
-          achtstemmig. Bijna alle delen zijn voor solozangers en koor;
-          er zijn geen echte aria's.</p>
-        <h4>Te Deum</h4>
+          fagot, strijkers en basso continuo. Het koor is in de meeste
+          delen vijfstemmig (SSATB), maar af en toe zijn alten en
+          tenoren net als de sopranen gesplitst; de slotdoxologie
+          begint achtstemmig. Bijna alle delen zijn voor solozangers
+          en koor; er zijn geen echte aria's.</p>
+        <h4><i>Te Deum</i></h4>
         <ol>
           <li>We praise Thee, O God (Adagio, SATB)</li>
           <li>To Thee all Angels cry aloud (Largo e staccato, 2 altos,
@@ -250,7 +249,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Vouchsafe, O Lord (Adagio, SSAATB)</li>
           <li>Lord, in thee have I trusted (Allegro, SSATB)</li>
         </ol>
-        <h4>Jubilate</h4>
+        <h4><i>Jubilate</i></h4>
         <ol>
           <li>Be joyful in the Lord, all ye lands (alto, SATB)</li>
           <li>Serve the Lord with gladness (SSATB)</li>
@@ -262,13 +261,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <li>Glory be to the Father (SSAATTBB)</li>
           <li>As it was in the beginning (SSATB)</li>
         </ol>
-        <p>Handel wist als componist een superieure synthese te bereiken
-          tussen solisten en koor, tussen solozang en tutti. De
-          grootschalige structuur doet nooit afbreuk aan de
-          delicatesse van melodie en harmonie, terwijl de muzikale
-          uitbeelding van de tekst altijd nauwkeurig is en grote
-          verfijning vertoont.&nbsp;</p>
-        <p>Het succes van&nbsp; Handels Te Deum was zo groot dat het
+        <p>Handel wist een superieure synthese te bereiken tussen
+          solisten en koor. De grootschalige structuur doet nooit
+          afbreuk aan de delicatesse van melodie en harmonie, terwijl
+          de muzikale uitbeelding van de tekst altijd nauwkeurig is en
+          grote verfijning vertoont.</p>
+        <p>Het succes van Handels <i>Te Deum</i> was zo groot dat het
           werk jaarlijks werd uitgevoerd ter gelegenheid van St.
           Cecilia's Day, op 22 november, waardoor Purcells tegenhanger
           van de eerste plaats werd verdrongen.</p>

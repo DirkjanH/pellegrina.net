@@ -204,30 +204,31 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>
                 <div class="fotolinks"><img src="\Images\handel.jpg"
                         alt="George Frederick Handel" width="250"><br>George
-                    Frederick Handel</div>Handel’s <i>Te Deum &amp; Jubilate
-                </i>were written to celebrate the Treaty of Utrecht in 1713. It
-                was his first major sacred work on English texts.&nbsp; Handel
-                followed the models of Henry Purcell's 1694 Te Deum and Jubilate
-                with strings and trumpets, which was regularly performed on
-                official occasions at St Paul's even after the composer's death,
-                and a 1709 setting by William Croft. As in these models,&nbsp;
-                Handel composed a combination of two liturgical texts, the
-                Ambrosian hymn Te Deum, We praise thee, O God, and a setting of
-                Psalm 100, O be joyful in the Lord, all ye lands, which is a
-                regular hymn of praise in Anglican morning prayer.&nbsp;
-                Handel's work was first performed at a public rehearsal on March
-                5, 1713, in St Paul's Cathedral. The official premiere took
-                place after the difficult peace negotiations were completed, in
-                a solemn thanksgiving service on July 7, 1713.&nbsp;</li>
-                <p>The <i>Te Deum &amp; Jubilate</i> are festively scored for
-                    six soloists (two sopranos, two altos, tenor and bass),
-                    mixed choir, two trumpets, flauto traverso, two oboes,
-                    bassoon, strings and basso continuo. The choir is in five
-                    parts (SSATB) for most of the movements, but occasionally
-                    alto and tenor are divided as the soprano; the final
-                    doxology begins in eight parts. Almost all movements are set
-                    for solo singers and chorus; there are no real arias.</li>
-                <h4>Te Deum</h4>
+                    Frederick Handel</div>Handel’s <i>Te Deum &amp; Jubilate</i>
+                were written to celebrate the Treaty of Utrecht in 1713. It was
+                his first major sacred work on English texts.&nbsp; Handel
+                followed the models of Henry Purcell's 1694 <i>Te Deum &
+                    Jubilate</i> with strings and trumpets, which was regularly
+                performed on official occasions at St Paul's even after the
+                composer's death, and a 1709 setting by William Croft. As in
+                these models, Handel composed a combination of two liturgical
+                texts, the Ambrosian hymn Te Deum, We praise thee, O God, and a
+                setting of Psalm 100, O be joyful in the Lord, all ye lands,
+                which is a frequently sung hymn of praise in Anglican morning
+                prayer. Handel's work was first performed at a public rehearsal
+                on March 5, 1713, in St Paul's Cathedral. The official premiere
+                took place after the difficult peace negotiations were
+                completed, in a solemn thanksgiving service on July 7,
+                1713.&nbsp;</li>
+                <p>The <i>Te Deum & Jubilate</i> are festively scored for six
+                    soloists (two sopranos, two altos, tenor and bass), mixed
+                    choir, two trumpets, flauto traverso, two oboes, bassoon,
+                    strings and basso continuo. The choir is in five parts
+                    (SSATB) for most of the movements, but occasionally alto and
+                    tenor are divided as the soprano; the final doxology begins
+                    in eight parts. Almost all movements are set for solo
+                    singers and chorus; there are no real arias.</li>
+                <h4><i>Te Deum</i></h4>
                 <ol>
                     <li>We praise Thee, O God (Adagio, SATB)</li>
                     <li>To Thee all Angels cry aloud (Largo e staccato, 2 altos,
@@ -247,7 +248,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     <li>Vouchsafe, O Lord (Adagio, SSAATB)</li>
                     <li>Lord, in thee have I trusted (Allegro, SSATB)</li>
                 </ol>
-                <h4>Jubilate</h4>
+                <h4><i>Jubilate</i></h4>
                 <ol>
                     <li>Be joyful in the Lord, all ye lands (alto, SATB)</li>
                     <li>Serve the Lord with gladness (SSATB)</li>
@@ -259,15 +260,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     <li>Glory be to the Father (SSAATTBB)</li>
                     <li>As it was in the beginning (SSATB)</li>
                 </ol>
-                <p>Handel was able to achieve as a composer a superior synthesis
-                    between soloists and choir, between solo singing and tutti.
-                    The large-scale structure never detracts from the delicacy
-                    of melody and harmony, while the musical portrayal of the
-                    text is always accurate and displays great refinement.</li>
-                <p>The success of Handel's Te Deum was such that the work was
-                    performed annually on the occasion of St. Cecilia's Day, on
-                    November 22, thus ousting Purcell's counterpart from first
-                    place.</p>
+                <p>Handel was able to achieve a superior synthesis between
+                    soloists and choir. The large-scale structure never detracts
+                    from the delicacy of melody and harmony, while the musical
+                    portrayal of the text is always accurate and displays great
+                    refinement.</li>
+                <p>The success of Handel's <i>Te Deum</i> was such that the work
+                    was performed annually on the occasion of St. Cecilia's Day,
+                    on November 22, thus ousting Purcell's counterpart from the
+                    first place.</p>
             </div>
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
