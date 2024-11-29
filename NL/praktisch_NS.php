@@ -1,19 +1,15 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Naamloos document</title>
-    <!-- InstanceEndEditable -->
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
 </head>
+
 <body>
-    <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Praktische gegevens & prijzen
         "<?php echo $cursusdata['cursusnaam_nl']; ?>"</h2>
     <h3>Toelating</h3>
@@ -27,7 +23,8 @@
         <strong><?php echo $cursusdata['beslisdatum']; ?></strong> wordt bekend
         gemaakt wie er geplaatst kan worden en wie niet. In verband met het
         beperkte aantal plaatsen is het dus aan te raden zo snel mogelijk in te
-        schrijven.. </p>
+        schrijven..
+    </p>
     <p class="citaat">Robert Klotz: &ldquo;Ik vloog een oceaan over om La
         Pellegrina bij te wonen. Zou zwemmen om er volgend jaar weer heen te
         kunnen.&rdquo;</p>
@@ -42,7 +39,8 @@
         Als je niet geplaatst kunt worden, wordt de aanbetaling uiteraard
         teruggestort. Het volledige cursusgeld moet uiterlijk op
         <?php echo $cursusdata['betaaldatum']; ?> betaald zijn. Alle eventuele
-        bank en creditcardkosten zijn voor rekening van de deelnemer. </p>
+        bank en creditcardkosten zijn voor rekening van de deelnemer.
+    </p>
     <p class="citaat">Marrie Kardol: &ldquo;De prachtige inspirerende omgeving,
         het ordelijke verloop van het programma, de goede voorbereiding en de
         vriendelijke en prettige manier waarop de tutors omgaan met de
@@ -58,16 +56,17 @@
         <strong><?php echo euro($cursusdata['korting_vroeg']); ?>
             korting</strong>. Als je kampeert of zelf je accommodatie regelt
         krijg je korting; eenpersoons kamers zijn mogelijk tegen een
-        meerbetaling. </p>
+        meerbetaling.
+    </p>
     <h3>Accommodatie via <em>La Pellegrina</em></h3>
-    <h4>Een- en tweepersoons kamers in het gastenverblijf van Klooster Nieuw
-        Sion</h4>
-    <p>De meeste deelnemers verblijven in het Gastenverblijf van klooster Nieuw
-        Sion. Er zijn zeven tweepersoons en zeventien eenpersoons kamers, met
-        normale bedden, geen slaapzalen of stapelbedden. Een lakenpakket is in
-        de prijs inbegrepen. De voorzieningen zijn er simpel maar schoon,
-        gedeeltelijk met een gemeenschappelijke sanitaire ruimte. Er is een
-        ontbijtbuffet in de eetzaal.</p>
+    <h4>Een- en tweepersoons kamers in Klooster Nieuw Sion</h4>
+    <p>De meeste deelnemers verblijven in klooster Nieuw Sion. Er zijn zeven
+        tweepersoons en zeventien eenpersoons kamers, met normale bedden, geen
+        slaapzalen of stapelbedden. Een lakenpakket is in de prijs inbegrepen.
+        De voorzieningen zijn er simpel maar schoon, gedeeltelijk met een
+        gemeenschappelijke sanitaire ruimte. De nieuwe tweepersoonskamers in het
+        Poortgebouw hebben eigen sanitair. Er is een ontbijtbuffet in de
+        eetzaal.</p>
     <h4>Kamperen in de kloostertuin</h4>
     <p>Kamperen in de tuin van het klooster is ook mogelijk. Tenten, campers en
         caravans zijn welkom; elektriciteit is NIET beschikbaar. Het aantal
@@ -78,11 +77,12 @@
         accommodatie, bijvoorbeeld voor diegenen die in de buurt wonen of zelf
         accommodatie kunnen regelen. In dat geval betaal je naast het cursusgeld
         alleen een bijdrage voor koffie en thee en de gezamenlijke lunch. Er
-        zijn diverse Bed & Breakfast gelegenheden in de buurt.</p>
+        zijn diverse hotels en Bed & Breakfast gelegenheden in de buurt.</p>
     <h3>Maaltijden</h3>
     <p>Tijdens de cursus beschikken we over een aparte eetzaal, waar koffie en
-        thee voor ons klaarstaan en het ontbijt, de lunch en de avondmaaltijd
-        worden geserveerd.</p>
+        thee voor ons klaarstaan. Er is een uitgebreid ontbijtbuffet. De lunch
+        en de avondmaaltijd worden op het terras buiten geserveerd, als het weer
+        dit toestaat.</p>
     <h3>Alle prijzen</h3>
     <table class="w3-table-all">
         <tr>
@@ -171,10 +171,12 @@
         is het niet mogelijk je aanbetaling te retourneren. Annuleer je na
         <?php echo $cursusdata['betaaldatum']; ?>, dan ben je het totale
         cursusgeld verschuldigd. Het is aan te raden tijdig een
-        annuleringsverzekering af te sluiten. </p>
+        annuleringsverzekering af te sluiten.
+    </p>
     <p><i>La Pellegrina</i> behoudt zich het recht voor om, indien noodzakelijk,
         docenten en programma te wijzigen.</p>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
+
 </html>
