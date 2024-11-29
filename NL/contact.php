@@ -43,20 +43,14 @@
     Annemieke&nbsp;Zwanenburg.</p>
   <h2 class="begin">Interessante links over muziek</h2>
   <h3>Muziekbibliotheken en&nbsp;digitale collecties van&nbsp;edities</h3>
-  <table border="0" cellpadding="5">
-    <tr>
-      <td><a href="http://www.Wranitzky.com" target="_blank"><img
-            src="/Images/Logos/wranitzky-banner.gif" width="234"
-            height="60" alt="www.Wranitzky.com" class="geenlijn"
-            style="float: left;" /></a></td>
-      <td>
-        <p><a href="http://www.Wranitzky.com">www.Wranitzky.com</a></p>
-        <p>een prachtige website gewijd aan de muziek van Pavel
-          Vranick&yacute;, met een grote verzameling bladmuziek voor
-          kamermuziek en orkest in uitstekende moderne edities</p>
-      </td>
-    </tr>
-  </table>
+  <a href="http://www.Wranitzky.com" target="_blank"><img
+      src="/Images/Logos/wranitzky-banner.gif" width="234" height="60"
+      alt="www.Wranitzky.com" class="geenlijn"
+      style="float: left; margin-right: 20px;" /></a>
+  <p><a href="http://www.Wranitzky.com">www.Wranitzky.com</a>, een prachtige
+    website gewijd aan de muziek van Pavel Vranický, met een grote
+    verzameling bladmuziek voor kamermuziek en orkest in uitstekende moderne
+    edities</p>
   <h3>Links naar andere aanbieders van zomercursussen</h3>
   <ul>
     <li><a href="http://www.huismuziek.nl" target="_blank">Huismuziek</a>
