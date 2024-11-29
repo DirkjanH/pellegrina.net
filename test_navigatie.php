@@ -1,4 +1,8 @@
 <?php
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+
+Kint::$enabled_mode = true;
+
 session_start();
 $_SESSION['test'] = 'test';
 ?>
@@ -14,7 +18,7 @@ $_SESSION['test'] = 'test';
 <body> <?php session_status();
         echo '<p>Hello world!</p>';
 
-        print_r($_SESSION);
+        d($_SESSION);
 
         ?> </body>
 
