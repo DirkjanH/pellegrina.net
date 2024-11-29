@@ -200,7 +200,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     <li>Chorus: &quot;Hail! Bright Cecilia, hail to thee&quot;
                     </li>
                 </ol>
-                <h4>Handel - Te Deum &amp; Jubilate</h4>
+                <h3>Handel - Te Deum &amp; Jubilate</h3>
                 <p>
                 <div class="fotolinks"><img src="\Images\handel.jpg"
                         alt="George Frederick Handel" width="250"><br>George
