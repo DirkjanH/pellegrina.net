@@ -7,11 +7,11 @@
 			<p> <?php echo $cursusdata['ondertitel']; ?> </p>
 		</div>
 	</div>
-	<div id="cursusplaatje">&nbsp;</div> d($filenaam, $opening_inschrijving,
-	date('c'), ($opening_inschrijving > date('c'))); $menu = ''; if
-	(isset($filenaam[7]) and $filenaam[7] == 'cursus') { if (isset($filenaam[5])
-	and $filenaam[5] == 'NL') { $menu = <<<EOD <div id="cursusmenu"
-		class="w3-bar">
+	<div id="cursusplaatje" class="  w3-border w3-card-4s">&nbsp;</div>
+	d($filenaam, $opening_inschrijving, date('c'), ($opening_inschrijving >
+	date('c'))); $menu = ''; if (isset($filenaam[7]) and $filenaam[7] ==
+	'cursus') { if (isset($filenaam[5]) and $filenaam[5] == 'NL') { $menu =
+	<<<EOD <div id="cursusmenu" class="w3-bar">
 		<a class="w3-bar-item w3-button w3-mobile" href="#programma"
 			target="_self"><span class="{$filenaam[6]}">De muziek</span></a>
 		EOD; if (isset($filenaam[6]) and $filenaam[6] == 'romantic') $menu .=
@@ -29,7 +29,6 @@
 				<a class="w3-bar-item w3-button w3-mobile" href="#metwie"
 					target="_self"><span class="{$filenaam[6]}">Met
 						wie</span></a>
-</div>
 </div> EOD; } else { $menu .= <<<EOD <a class="w3-bar-item w3-button w3-mobile"
 	href="#voorwie" target="_self"><span class="{$filenaam[6]}">Voor
 		wie</span></a>
