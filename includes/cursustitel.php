@@ -1,4 +1,4 @@
-<?php Kint::$enabled_mode = false; ?> <div
+<?php Kint::$enabled_mode = true; ?> <div
 	class="<?php echo $filenaam[6] ?> w3-border w3-card-4" id="titel">
 	<div id="teksten">
 		<div class="cijfer"> <?php echo $cursusdata['nr']; ?> </div>
