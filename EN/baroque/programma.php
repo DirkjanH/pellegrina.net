@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -19,6 +19,7 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -31,57 +32,57 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-                                    echo $navigatie;
-                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
-                                    ?> <div id="main">
+                                        echo $navigatie;
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
+                                        ?> <div id="main">
             <div class="cols2">
                 <h2>Programme details</h2>
-                <p>This year's programme for all focuses on music with a
-                    relation to the patroness of music, Saint Cecilia: two
-                    Cecilian Odes by Purcell and two works by&nbsp; Handel. This
-                    is a lot of music, too much to perform in one concert. A
-                    selection of about an hour will be made from these works
-                    according to the number and abilities of the singers, so
-                    that everybody can have a substantial solo. The resulting
-                    programme will be performed as the culmination of the
-                    course, this year again in the church of the Nieuw Sion
-                    monastery.</li>
+                <p>This year's tutti programme focuses on music dedicated to the
+                    patroness of music, Saint Cecilia: two Cecilian Odes by
+                    Purcell and two works by Handel. This is a lot of music, too
+                    much to perform in one concert. We'll make a selection of
+                    about an hour from these works according to the number and
+                    abilities of the singers, so that everybody can have a
+                    substantial solo. The resulting programme will be the
+                    culmination of the course, again this year in the church of
+                    Nieuw Sion.</li>
                 <h4>Saint Cecilia</h4>
                 <div class="fotocenter"><img src="/Images/cecilia.jpg"
                         alt="Saint Cecilia"><br>Saint Cecilia - painting by
                     Guercino</div>
-                <p>Saint Cecilia is known as patroness saint of music in the
-                    Christian tradition. Saint Cecilia’s connection to music
-                    stems not from her historical deeds but from symbolic
+                <p>Saint Cecilia is known in the Christian tradition as the
+                    patroness saint of music. Saint Cecilia’s connection to
+                    music stems not from her historical deeds but from symbolic
                     interpretations of her legend. According to the <i>Passio
                         Sanctae Caeciliae</i>, a fictionalized 5th-century
                     account, her life revolved around steadfast devotion and
@@ -101,11 +102,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     theorbo. These depictions played a key role in transforming
                     her into the patroness of music.</li>
                 <h4>English Resistance and Revival</h4>
-                <p>For much of England’s history, Cecilia’s veneration remained
-                    dormant, suppressed by Protestant reluctance to honor
-                    saints. However, in the late 17th century, a sudden surge of
-                    interest emerged, driven by a new cultural phenomenon: the
-                    Cecilian ode.</li>
+                <p>For much of post-reformation England’s history, Cecilia’s
+                    veneration remained dormant, suppressed by Protestant
+                    reluctance to honor saints. However, in the late 17th
+                    century, a sudden surge of interest emerged, driven by a new
+                    cultural phenomenon: the Cecilian ode.</li>
                 <p>In 1683, composer Henry Purcell and poet Christopher Fishburn
                     inaugurated a tradition of celebrating Cecilia with musical
                     odes on her feast day. Their works praised her as a muse of
@@ -126,11 +127,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <div class="fotorechts"><img src="\Images\purcell.jpg"
                         alt="Henry Purcell" width="250"><br>Henry Purcell</div>
                 Purcell contributed two Odes to St. Cecilia: <i>Welcome to all
-                    the pleasures</i> (Z.339) was written by Purcell to a text
-                by Christopher Fishburn in 1683. The second, <i>Hail! Bright
-                    Cecilia </i>(Z.328), also known as The Ode to St. Cecilia,
-                was composed to a text by the Irishman Nicholas Brady in 1692.
-                </li>
+                    the pleasures</i> (Z.339) was written in 1683 to a text by
+                Christopher Fishburn. The second, <i>Hail! Bright Cecilia
+                </i>(Z.328), also known as The Ode to St. Cecilia, was compose
+                in 1692 to a text by the Irishman Nicholas Brady. </li>
                 <h4>Purcell - Welcome to all the pleasures</h4>
                 <p>The first ode, <i>Welcome to all the pleasures, </i>is scored
                     for vocal soloists, chorus and an ensemble of four-part
@@ -160,19 +160,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 </ol>
                 <h4>Purcell - Hail! Bright Cecilia</h4>
                 <p>The second ode, <i>Hail! Bright Cecilia, </i>is scored for
-                    vocal soloists, chorus and an ensemble of two recorders,
-                    bass recorder, two oboes, two trumpets, timpani, four-part
-                    strings and basso continuo. With a text full of references
-                    to musical instruments, the work is scored for a variety of
-                    vocal soloists and obbligato instruments, along with strings
-                    and basso continuo. For example, <i>Hark, each Tree</i> is a
-                    duet between, vocally, soprano and bass, and instrumentally,
-                    between recorders and violins. These instruments are called
-                    for in the text (&quot;box and fir&quot; being the woods
-                    from which they are made). However, Purcell did not always
-                    follow Brady's cues exactly. He scored the warlike music for
-                    two brass trumpets and copper kettle drums instead of the
-                    fife mentioned by Brady.</li>
+                    vocal soloists, chorus and an ensemble of two alto
+                    recorders, bass recorder, two oboes, two trumpets, timpani,
+                    four-part strings and basso continuo. With a text full of
+                    references to musical instruments, the work is scored for a
+                    variety of vocal soloists and obbligato instruments, along
+                    with strings and basso continuo. For example, <i>Hark, each
+                        Tree</i> is a duet between soprano and bass voices, and
+                    instrumentally, between recorders and violins. These
+                    instruments are called for in the text (&quot;box and
+                    fir&quot; being the woods from which they are made).
+                    However, Purcell did not always follow Brady's cues exactly.
+                    He scored the warlike music for two brass trumpets and
+                    copper kettle drums instead of the fife mentioned by Brady.
+                    </li>
                 <h5>Movements</h5>
                 <ol>
                     <li>Symphony (overture):
@@ -273,4 +274,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+
 </html>
