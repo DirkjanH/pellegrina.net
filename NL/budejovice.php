@@ -96,6 +96,8 @@
          conservatorium is per gang een keuken waar je zelf iets kunt
          klaarmaken. In het nabijgelegen historische centrum vind je veel
          goede restaurants voor elk budget.</p>
+   </div>
+   <div class="container">
       <p class="citaat">Laurie Boltjes: 'Ik plak er altijd een fietsvakantie
          aan vast. Soms alleen, maar ik ben ook wel gegaan met andere
          cursisten die nog tijd over hadden na het project.'</p>
@@ -108,8 +110,6 @@
    <p>Kijk ook in <a href="https://delveintoeurope.com/ceske-budejovice/"
          target="_blank">dit foto-album</a> voor meer foto's van České
       Budějovice</p>
-   <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
 
 </html>
