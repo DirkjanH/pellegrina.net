@@ -19,8 +19,8 @@
         <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
             <a href="over_pellegrina.php" class="w3-bar-item w3-button">Over
                 <em>La Pellegrina</em></a>
-            <a href="vorigeprojecten.php" class="w3-bar-item w3-button">Eerdere
-                projecten</a>
+            <a href="vorigeprojecten.php"
+                class="w3-bar-item w3-button">Ervaringen van deelnemers</a>
             <a href="/algemeen/werken.php" class="w3-bar-item w3-button">Eerder
                 uitgevoerde werken</a>
             <a href="contact.php" target="_parent"
@@ -54,25 +54,25 @@
     </div>
 </nav>
 <script>
-function w3_open() {
-    document.getElementById("main").style.marginLeft = "200px";
-    document.getElementById("navcontainer").style.width = "200px";
-    document.getElementById("navcontainer").style.display = "block";
-    document.getElementById("openNav").style.display = "none";
-}
-
-function w3_close() {
-    document.getElementById("main").style.marginLeft = "0%";
-    document.getElementById("navcontainer").style.display = "none";
-    document.getElementById("openNav").style.display = "inline-block";
-}
-
-function myFunction() {
-    var x = document.getElementById("demo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "200px";
+        document.getElementById("navcontainer").style.width = "200px";
+        document.getElementById("navcontainer").style.display = "block";
+        document.getElementById("openNav").style.display = "none";
     }
-}
+
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("navcontainer").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+
+    function myFunction() {
+        var x = document.getElementById("demo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
 </script>
