@@ -63,12 +63,13 @@
         receive a discount; single rooms are possible at a surcharge.
     </p>
     <h3>Accommodation</h3>
-    <h4>Single and double rooms in the guesthouse of Klooster Nieuw Sion</h4>
-    <p> Most participants stay in the guest house of Klooster Nieuw Sion. There
-        are eight double and ten single rooms, with normal beds, no dorms or
-        bunk beds. A linen package is included in the price. The facilities are
-        simple but clean, with a communal sanitary area. There is a buffet
-        breakfast in the dining room.</p>
+    <h4>Single and double rooms in the guesthouse of Monastery Nieuw Sion</h4>
+    <p> Most participants stay in the guest house of Monastery Nieuw Sion. There
+        are seven double and seventeen single rooms, with normal beds, no dorms
+        or bunk beds. A linen package is included in the price. The facilities
+        are simple but clean, with a communal sanitary area. The newly created
+        double rooms in the Poortgebouw have their own sanitary facilities.
+        There is a buffet breakfast in the dining room.</p>
     <h4>Camping in the monastery garden</h4>
     <p>Camping in the garden of the monastery is also possible. Tents,
         motorhomes and caravans are welcome but electricity is not available.
@@ -84,7 +85,7 @@
     <h3>Meals</h3>
     <p> During the course we have a separate dining room, where coffee and tea
         are ready for us and breakfast, lunch and dinner will be served.</p>
-    <h3>All prices</h3>
+    <h3>All prices at a glance</h3>
     <table class="w3-table-all">
         <tr>
             <th>Overview of all prices and reductions</th>

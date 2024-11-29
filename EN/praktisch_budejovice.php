@@ -109,13 +109,13 @@
     </p>
     <h4>Large instrument? Rent instead of bringing your own!</h4>
     <p>Sometimes it is more convenient for players of large instruments like
-        cello, double bass and viola da gamba to rent it locally than to pay an
-        extra ticket. <em>La Pellegrina </em>can help to rent quality
-        instruments at a surcharge. Count with a rent of about 50 to 100 EUR for
-        the duration of the course. It is recommended to request it at an early
-        stage. With some luck you get to play the spare instrument of one of our
-        teachers. For string players, it is in principle wise to bring your own
-        bow.</p>
+        cello and double bass to rent it locally than to pay an extra ticket.
+        <em>La Pellegrina </em>can help to rent quality instruments at a
+        surcharge. Count with a rent of about 50 to 100 EUR for the duration of
+        the course. It is recommended to request it at an early stage. With some
+        luck you get to play the spare instrument of one of our teachers. For
+        string players, it is in principle wise to bring your own bow.
+    </p>
     <h4>Taking part in more than one course</h4>
     <p>If you want to participate in more than one course offered by <em>La
             Pellegrina</em> in the same year, we can offer you a
@@ -123,7 +123,7 @@
         Please complete both forms, and click the checkbox at the option 'I wish
         to register for both courses'.
     </p>
-    <h3>All prices </h3>
+    <h3>All prices at a glance</h3>
     <table class="w3-table-all">
         <tr>
             <th>Overview of all prices and reductions</th>
@@ -202,7 +202,7 @@
     <p class="citaat">Yo van Dijk: &quot;An almost magical mix of feeling at
         home and experiencing new adventures. So nice, all those different
         languages with the language of music as the binding factor.&quot;</p>
-    <h3>Holiday in Czechia </h3>
+    <h3>Holiday in Czechia</h3>
     <p>The <em>La Pellegrina summer schools </em>offer excellent possibilities
         to combine ten days of music-making with further holidaying in Czechia,
         which for its peaceful and beautiful countryside is an increasingly
