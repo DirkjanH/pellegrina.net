@@ -32,32 +32,33 @@
       er de bestuurszetel van de provincie Zuid-Bohemen. </p>
    <div class="fotocenter"><img
          src="/Images/Locaties/Budejovice/plein_vanaf_toren.jpg"
-         alt="The central square, seen from the Black Tower" width="600"
+         alt="Het centrale plein, gezien vanaf de Zwarte Toren" width="600"
          height="400" class="w3-image" /><br /> Het centrale plein, gezien
       vanaf de Zwarte Toren</div>
    <div class="container">
       <h4>Het conservatorium </h4>
       <div class="fotocenter"><img
             src="/Images/Locaties/Budejovice/konzervator3.jpg"
-            class="w3-image"
-            alt="The conservatoire, hostel and venue for rehearsals"
-            width="600" height="400" border="1" /><br /> Het conservatorium,
-         onderkomen én plaats van repetities</div>
+            class="w3-image" alt="Het conservatorium,
+            onderkomen én plaats van repetities" width="600" height="400"
+            border="1" /><br /> Het conservatorium, onderkomen én plaats van
+         repetities</div>
       <div class="fotorechts"><img
-            src="/Images/Locaties/Budejovice/domov_mladeze.jpg"
-            alt="Room at the internat" width="500" height="298" /><br /> Een
-         kamer in het conservatorium-internaat</div>
+            src="/Images/Locaties/Budejovice/domov_mladeze.jpg" alt="Een
+            kamer in het conservatorium-internaat" width="600"
+            height="400" /><br /> Een kamer in het conservatorium-internaat
+      </div>
       <p>De cursisten kunnen kiezen voor accommodatie in het internaat van het
          conservatorium. Dit gebouw biedt rustige &eacute;én- en tweepersoons
          kamers, allen met eigen sanitaire voorzieningen).</p>
-      <p class="citaat">Lia van den Heuvel: "La Pellegrina is 10 dagen
+      <p class="citaat">Lia van den Heuvel: "La Pellegrina is tien dagen
          heerlijk genieten van mooie muziek, gezellige mensen en prachtige
          omgeving."</p>
    </div>
    <div class="container">
       <div class="fotolinks"><img
-            src="/Images/Locaties/Budejovice/Room 27.jpg" width="500"
-            height="375" class="w3-image" alt="classroom" /><br />
+            src="/Images/Locaties/Budejovice/Room 27.jpg" width="600"
+            height="400" class="w3-image" alt="classroom" /><br />
          Werkruimte met twee vleugels in het conservatorium</div>
       <p>Het conservatorium is uitgerust met ruime, goed klinkende werkkamers
          met goed onderhouden vleugels en piano's. Een vooraanstaande
@@ -69,8 +70,8 @@
       <h4>De concertzaal</h4>
       <div class="fotorechts"><img
             src="/Images/Locaties/Budejovice/konzervator_zaal.JPG"
-            alt="De concertzaal" class="w3-image" width="500"
-            height="284" /><br /> De concertzaal</div>
+            alt="De concertzaal" class="w3-image" width="600"
+            height="auto" /><br /> De concertzaal</div>
       <p>De concertzaal van het conservatorium, locatie voor het
          docentenconcert en repetities van orkest en koor. Sinds de
          verbouwing van het gebouw beschikt deze zaal over airconditioning.
@@ -83,8 +84,8 @@
    <div class="container">
       <h4>Maaltijden</h4>
       <div class="fotolinks"><img
-            src="/Images/Locaties/Budejovice/masne_kramy.jpg" width="500"
-            height="378" class="w3-image" alt="Masné krámy" /><br /> De
+            src="/Images/Locaties/Budejovice/masne_kramy.jpg" width="600"
+            height="auto" class="w3-image" alt="Masné krámy" /><br /> De
          historische binnenstad van České Budějovice telt veel oude gebouwen,
          zoals deze markthal uit 1336, waarin nu een restaurant is gevestigd
       </div>
