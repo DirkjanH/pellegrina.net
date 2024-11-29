@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -12,6 +13,7 @@
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
+
 <body>
     <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Practical facts & prices
@@ -26,7 +28,8 @@
         above reasons all registrations will first be collected. Final
         confirmation of participation cannot be given until
         <strong><?php echo $cursusdata['beslisdatum']; ?></strong>. In view of
-        the limited number of places it is recommended to register early. </p>
+        the limited number of places it is recommended to register early.
+    </p>
     <p class="citaat">Robert Klotz: &ldquo;I flew across an ocean to attend La
         Pellegrina. Would swim if I have to get there next year.&rdquo;</p>
     <h3>Registration and paying the deposit</h3>
@@ -42,7 +45,8 @@
         We will then send you provisional confirmation of your registration.
         Deposits will of course be refunded to applicants who cannot be placed.
         The entire fee is to be paid on
-        <?php echo $cursusdata['betaaldatum']; ?> at the latest. </p>
+        <?php echo $cursusdata['betaaldatum']; ?> at the latest.
+    </p>
     <p class="citaat">Marrie Kardol: &ldquo;The beautiful inspiring environment,
         the orderly progress of the program, the good preparation and the
         friendly and pleasant way in which the tutors deal with the participants
@@ -56,7 +60,8 @@
         If you register in time, you will receive a
         <strong><?php echo euro_en($cursusdata['korting_vroeg']); ?></strong>
         discount. If you camp or arrange your own accommodation, you will
-        receive a discount; single rooms are possible at a surcharge. </p>
+        receive a discount; single rooms are possible at a surcharge.
+    </p>
     <h3>Accommodation</h3>
     <h4>Single and double rooms in the guesthouse of Klooster Nieuw Sion</h4>
     <p> Most participants stay in the guest house of Klooster Nieuw Sion. There
@@ -79,7 +84,7 @@
     <h3>Meals</h3>
     <p> During the course we have a separate dining room, where coffee and tea
         are ready for us and breakfast, lunch and dinner will be served.</p>
-    <h3>All prices </h3>
+    <h3>All prices</h3>
     <table class="w3-table-all">
         <tr>
             <th>Overview of all prices and reductions</th>
@@ -154,18 +159,19 @@
                 <?php echo euro_EN($cursusdata['korting_meer'] * 2); ?></td>
         </tr>
     </table>
+    <h4>Exchange rates calculator</h4>
     <iframe title="fx"
         src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=EUR&targetCurrency=USD"
         height=490 width=100% frameBorder="0" allowtransparency="true"></iframe>
     <script>
-    const frames = document.querySelectorAll('iframe');
-    const widgetFrame = frames[frames.length - 1];
-    window.addEventListener('message', message => {
-        if (message.source !== widgetFrame.contentWindow) {
-            return;
-        }
-        widgetFrame.setAttribute('height', message.data.height);
-    });
+        const frames = document.querySelectorAll('iframe');
+        const widgetFrame = frames[frames.length - 1];
+        window.addEventListener('message', message => {
+            if (message.source !== widgetFrame.contentWindow) {
+                return;
+            }
+            widgetFrame.setAttribute('height', message.data.height);
+        });
     </script>
     <h3>We speak English</h3>
     <p>The courses organised by <em>La Pellegrina</em> are are open to an
@@ -191,4 +197,5 @@
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
+
 </html>

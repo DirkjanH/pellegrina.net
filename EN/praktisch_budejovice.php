@@ -123,10 +123,10 @@
         Please complete both forms, and click the checkbox at the option 'I wish
         to register for both courses'.
     </p>
-    <h4>Exchange rates</h4>
+    <h3>All prices </h3>
     <table class="w3-table-all">
         <tr>
-            <th>In short: all prices and reductions</th>
+            <th>Overview of all prices and reductions</th>
             <th>When registering <br>before
                 <?php echo $cursusdata['beslisdatum']; ?>:</th>
             <th>When registering <br>on or after
@@ -179,6 +179,7 @@
                 <?php echo euro_en($cursusdata['korting_meer'] * 2); ?></td>
         </tr>
     </table>
+    <h4>Exchange rates calculator</h4>
     <iframe title="fx"
         src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=EUR&targetCurrency=USD"
         height=490 width=100% frameBorder="0" allowtransparency="true"></iframe>
