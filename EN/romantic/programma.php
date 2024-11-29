@@ -165,11 +165,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     area of the Austrian Empire. The expulsion of the Turks was
                     for the Austrians an important event that was celebrated
                     annually on September 12, the Feast of the Most Holy Name of
-                    the Blessed Virgin Mary. With processions and special masses
-                    the victory was kept alive and with church music, especially
-                    masses and settings of the Te Deum with unusually prominent
-                    parts for trumpets and timpani. These were intended to evoke
-                    the threat of war and the triumph of victory. </p>
+                    the Blessed Virgin Mary. Processions and special masses kept
+                    the memory of victory alive, especially with church music
+                    with unusually prominent for trumpets and timpani. These
+                    were meant to evoke the threat of war and the triumph of
+                    victory.</p>
                 <h3> Structure and characteristics </h3>
                 <p> The structure of the Mass follows the traditional parts of
                     the Mass: </p>

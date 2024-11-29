@@ -166,12 +166,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           van het kerngebied van het Oostenrijkse rijk. De verdrijving
           van de Turken was voor de Oostenrijkers een belangrijke
           gebeurtenis die jaarlijks tijdens het feest van de Heilige
-          Naam van Maria op 12 september werd herdacht. Met processies
-          en speciale missen werd de herinnering aan de overwinning
-          levend gehouden, vooral met missen en zettingen van het Te
-          Deum met ongewoon prominente voor trompetten en pauken. Deze
-          waren bedoeld om de dreiging van oorlog en de triomf van de
-          overwinning op te roepen. </p>
+          Naam van Maria op 12 september werd herdacht. Processies en
+          speciale missen hielden de herinnering aan de overwinning
+          levend, vooral door kerkmuziek met een ongewoon prominente
+          plaats voor trompetten en pauken. Deze waren bedoeld om de
+          dreiging van oorlog en de triomf van de overwinning op te
+          roepen.</p>
         <h3> Structuur en kenmerken </h3>
         <p> De structuur van de mis volgt de traditionele misdelen: </p>
         <ul>
