@@ -704,8 +704,7 @@ select {
 	div.cols2 {
 		column-count: 1;
 	}
-	#navcontainer a:any-link,
-	button.w3-bar-item {
+	#navcontainer a:any-link {
 		width: 200px;
 		margin-top: 0px;
 		background: initial;

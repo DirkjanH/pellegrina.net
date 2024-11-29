@@ -3,7 +3,7 @@
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-large"
     id="navcontainer">
     <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+        class="w3-closenav w3-large w3-hide-large"><b>Close &times;</b></a>
     <a href="/EN/index.php" target="_parent" class="w3-bar-item w3-button">All
         Courses</a>
     <a href="index.php" target="_parent"
