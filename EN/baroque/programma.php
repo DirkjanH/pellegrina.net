@@ -136,8 +136,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     for vocal soloists, chorus and an ensemble of four-part
                     strings and basso continuo. As well as accompanying the
                     singers, the instruments feature in an overture (called
-                    &quot;symphony&quot;) and ritornelli. The piece takes about
-                    18 minutes to perform.</p>
+                    <i>symphony</i>) and ritornelli. The piece takes about 18
+                    minutes to perform.
+                </p>
                 <h5>Movements</h5>
                 <ol>
                     <li>Symphony</li>

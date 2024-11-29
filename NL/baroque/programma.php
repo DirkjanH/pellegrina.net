@@ -138,8 +138,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           voor vocale solisten, koor en een ensemble van vierstemmige
           strijkers en basso continuo. De instrumenten begeleiden niet
           alleen de zangers, maar spelen ook een rol in een ouverture
-          (de zogenaamde “symfony”) en ritornelli. De uitvoering van
-          het stuk duurt ongeveer 18 minuten.</p>
+          (de zogenaamde <i>symphony</i>) en ritornelli. De uitvoering
+          van het stuk duurt ongeveer 18 minuten.</p>
         <h5>Delen</h5>
         <ol>
           <li>Symphony</li>
@@ -166,16 +166,16 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           basblokfluit, twee hobo's, twee trompetten, pauken,
           vierstemmige strijkers en basso continuo. Met een tekst vol
           verwijzingen naar muziekinstrumenten is het werk gescoord
-          voor een verscheidenheid aan vocale solisten en obbligato
+          voor een verscheidenheid aan vocale solisten en obligato
           instrumenten, samen met strijkers en basso continuo.
-          Bijvoorbeeld <i>Hark, each Tree </i>is een duet tussen,
-          vocaal, sopraan en bas, en instrumentaal, tussen blokfluiten
-          en violen. Deze instrumenten worden in de tekst genoemd
-          (“box and fir” zijn de houtsoorten waarvan ze gemaakt zijn).
-          Purcell volgde echter niet altijd precies Brady's
-          aanwijzingen. Hij noteerde de <i>Warlike Music</i> voor twee
-          trompetten en pauken in plaats van de fluit die Brady
-          noemde.</p>
+          Bijvoorbeeld <i>Hark, each Tree </i>is een duet tussen een
+          sopraan- en een basstem, en instrumentaal, tussen
+          blokfluiten en violen. Deze instrumenten worden in de tekst
+          genoemd (“box and fir” zijn de houtsoorten waarvan ze
+          gemaakt zijn). Purcell volgde echter niet altijd precies
+          Brady's aanwijzingen. Hij noteerde de <i>Warlike Music</i>
+          voor twee trompetten en pauken in plaats van de fluit die
+          Brady noemde.</p>
         <h5>Delen</h5>
         <ol>
           <li>Symphony (overture):
