@@ -43,8 +43,8 @@
             The conservatoire, hostel and venue for rehearsals</div>
         <div class="fotorechts"><img
                 src="/Images/Locaties/Budejovice/domov_mladeze.jpg"
-                alt="Room at the hostel" class="w3-image" width="500"
-                height="298" /><br /> A room in the hostel of the conservatoire
+                alt="Room at the hostel" class="w3-image" width="600"
+                height="auto" /><br /> A room in the hostel of the conservatoire
         </div>
         <p>The participants can opt for accommodation in the hostel of the
             conservatoire. This building offers accommodation in quiet single
@@ -54,8 +54,8 @@
     </div>
     <div class="container">
         <div class="fotolinks"><img
-                src="/Images/Locaties/Budejovice/Room 27.jpg" width="500"
-                height="375" alt="classroom" /><br /> Classroom with two grand
+                src="/Images/Locaties/Budejovice/Room 27.jpg" width="600"
+                height="400" alt="classroom" /><br /> Classroom with two grand
             pianos at the conservatoire</div>
         <p>The conservatoire is equipped with spacious, well-sounding classrooms
             with well-maintained grand pianos and upright pianos. A leading
@@ -67,8 +67,8 @@
         <h4>The concert hall</h4>
         <div class="fotorechts"><img
                 src="/Images/Locaties/Budejovice/konzervator_zaal.JPG"
-                alt="The concert hall" class="w3-image" width="500"
-                height="284" /><br /> The concert hall</div>
+                alt="The concert hall" class="w3-image" width="600"
+                height="auto" /><br /> The concert hall</div>
         <p>The concert hall in the conservatoire, venue for the tutors' concert
             and rehearsals of orchestra and choir. Since the reconstruction of
             the building this hall has air conditioning.</p>
@@ -80,10 +80,10 @@
     <div class="container">
         <h4>Meals </h4>
         <div class="fotolinks"><img
-                src="/Images/Locaties/Budejovice/masne_kramy.jpg" width="500"
-                height="378" class="w3-image" alt="Masné krámy" /><br /> The old
-            town of České Budějovice has many ancient buildings, such as this
-            market hall from 1336, now in use as a restaurant</div>
+                src="/Images/Locaties/Budejovice/masne_kramy.jpg" width="600"
+                height="auto" class="w3-image" alt="Masné krámy" /><br /> The
+            old town of České Budějovice has many ancient buildings, such as
+            this market hall from 1336, now in use as a restaurant</div>
         <p>For those staying in the conservatory, there is a breakfast buffet in
             the entrance hall and at a nearby restaurant, where lunch is also
             served in the form of a buffet. Dinner is not included in the course
