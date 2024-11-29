@@ -179,12 +179,19 @@
                 <?php echo euro_en($cursusdata['korting_meer'] * 2); ?></td>
         </tr>
     </table>
-    <div class="w3-panel">
-        <iframe title="fx"
-            src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=EUR&targetCurrency=USD"
-            height=490 width=340 frameBorder="0"
-            allowtransparency="true"></iframe>
-    </div>
+    <iframe title="fx"
+        src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=EUR&targetCurrency=USD"
+        height=490 width=100% frameBorder="0" allowtransparency="true"></iframe>
+    <script>
+        const frames = document.querySelectorAll('iframe');
+        const widgetFrame = frames[frames.length - 1];
+        window.addEventListener('message', message => {
+            if (message.source !== widgetFrame.contentWindow) {
+                return;
+            }
+            widgetFrame.setAttribute('height', message.data.height);
+        });
+    </script>
     <h3>We speak English</h3>
     <p>The courses organised by <em>La Pellegrina</em> are are open to an
         international audience, with most participants coming from Western and
