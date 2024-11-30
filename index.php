@@ -228,7 +228,7 @@ function getisp($ip = '')
             </div>
         </div>
         <div id="home"
-            class="w3-container w3-card-4 w3-margin-top w3-white w3-content"
+            class="w3-container w3-card-4 w3-margin-top w3-white w3-content w3-padding"
             style="max-width:1200px">
             <div class="w3-center w3-container"><img
                     src="Images/Logos/LP_nieuw.png" alt="La Pellegrina"
