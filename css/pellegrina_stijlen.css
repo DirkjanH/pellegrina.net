@@ -281,19 +281,19 @@ li {
 	padding-bottom: 0.31em;
 }
 a:active {
-	color: #58be6f;
+	color: #8a00e6;
 	text-decoration: underline;
 }
 a:link {
-	color: #3fa456;
+	color: #a31aff;
 	text-decoration: underline;
 }
 a:visited {
-	color: #317f43;
+	color: #6b00b3;
 	text-decoration: underline;
 }
 a:hover {
-	color: #7ccd8f;
+	color: #c266ff;
 	text-decoration: underline;
 }
 
