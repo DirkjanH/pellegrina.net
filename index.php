@@ -248,8 +248,7 @@ function getisp($ip = '')
                 <div class="w3-row-padding w3-light-grey">
                     <div class="w3-card-4 w3-white w3-margin-top w3-quarter">
                         <h1>
-
-                            < href="NL" target="_self"><img
+                            <a href="NL" target="_self"><img
                                     src="Images/Logos/Vlag_NL.jpg"
                                     alt="Nederlands" width="34" height="24"
                                     hspace="10" border="0"
@@ -316,15 +315,17 @@ function getisp($ip = '')
                                     width="34" height="24" hspace="10"
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
-                        <p><a href="EN">Two summer schools for accomplished
-                                amateur musicians and professionals:</p>
-                        <ol>
-                            <li class="klein"><b>Dvořák's Golden Spinning Wheel
-                                    & Haydn's <i>Missa in tempore belli</i></b>
-                                - 24 July - 3 August</li>
-                            <li class="klein"><b>Purcell & Handel</b> - 10 - 16
-                                August</li>
-                        </ol></a>
+                        <p><a href="NL" target="_self">Two summer schools for
+                                accomplished amateur musicians and
+                                professionals:</a></p>
+                        <ol><a href="NL" target="_self">
+                                <li class="klein"><b>Dvořák's Golden Spinning
+                                        Wheel & Haydn's <i>Missa in tempore
+                                            belli</i></b> - 24 July - 3 August
+                                </li>
+                                <li class="klein"><b>Purcell & Handel</b> - 10 -
+                                    16 August</li>
+                            </a></ol>
                     </div>
                 </div>
             </div>
