@@ -6,13 +6,13 @@ error_reporting(E_ALL);
 Kint::$enabled_mode = false;
 
 if ($taal == 'NL') {
-	$titel = 'Docenten \'';
-	$titel .= $cursusdata['cursusnaam_nl'];
-	$titel .= '\'';
+    $titel = 'Docenten \'';
+    $titel .= $cursusdata['cursusnaam_nl'];
+    $titel .= '\'';
 } else {
-	$titel = 'Tutors \'';
-	$titel .= $cursusdata['cursusnaam_en'];
-	$titel .= '\'';
+    $titel = 'Tutors \'';
+    $titel .= $cursusdata['cursusnaam_en'];
+    $titel .= '\'';
 }
 
 $query_docenten = "SELECT * FROM docenten, cursusdocenten WHERE DocId = DocId_FK AND CursusId_FK = {$cursus} AND code IS NOT NULL ORDER BY achternaam";
@@ -23,10 +23,10 @@ if (is_array($docenteninfo)) $totaal_docenten = count($docenteninfo);
 d($totaal_docenten, $docenteninfo);
 
 foreach ($docenteninfo as $i => $doc) {
-	$docenten[$i]['naam'] = $doc['naam'];
-	$docenten[$i]['bio_NL'] = $doc['bio_NL'];
-	$docenten[$i]['bio_EN'] = $doc['bio_EN'];
-	$docenten[$i]['foto'] = $doc['foto'];
+    $docenten[$i]['naam'] = $doc['naam'];
+    $docenten[$i]['bio_NL'] = $doc['bio_NL'];
+    $docenten[$i]['bio_EN'] = $doc['bio_EN'];
+    $docenten[$i]['foto'] = $doc['foto'];
 }
 ?>
 <!DOCTYPE HTML>
@@ -49,7 +49,7 @@ foreach ($docenteninfo as $i => $doc) {
             class="w3-panel style=" padding-top:20px;">
             <a id="<?php echo $docent['foto']; ?>"></a>
             <div class="w3-col w3-panel w3-padding w3-margin-left w3-card-2 w3-right"
-                style="width:180px"><img
+                style="width:162px"><img
                     src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
                     width="150" class="geenlijn"
                     alt="<?php echo $docent['naam']; ?>" />
@@ -57,6 +57,6 @@ foreach ($docenteninfo as $i => $doc) {
                     style="margin-top: 6px;"><?php echo $docent['naam']; ?>
                 </div>
             </div> <?php if ($taal == 'EN') echo $docent['bio_EN'];
-						else echo $docent['bio_NL']; ?>
+                        else echo $docent['bio_NL']; ?>
         </div> <?php } ?> </body>
 </html>
