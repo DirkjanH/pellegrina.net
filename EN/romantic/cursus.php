@@ -318,8 +318,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 </ul>
             </ul>
             <p class="citaat">Casper van Dongen: “Beautiful music at Czech high
-                level for amateurs in conservatory of beautiful Bohemian city:
-                an annual feast! <i>La Pellegrina</i> has been my annual
+                level for amateurs in the conservatoire of a beautiful Bohemian
+                city: an annual feast! <i>La Pellegrina</i> has been my annual
                 'therapy' for almost 20 years now... Where do you make music
                 with such variety and where do you drink your beer in such a
                 beautiful setting?”</p>
