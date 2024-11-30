@@ -54,7 +54,7 @@ foreach ($docenteninfo as $i => $doc) {
                     width="150" class="geenlijn"
                     alt="<?php echo $docent['naam']; ?>" />
                 <div class="w3-container klein w3-center"
-                    style="margin-top: 4px;"><?php echo $docent['naam']; ?>
+                    style="padding: 4px 0px;"><?php echo $docent['naam']; ?>
                 </div>
             </div> <?php if ($taal == 'EN') echo $docent['bio_EN'];
                         else echo $docent['bio_NL']; ?>
