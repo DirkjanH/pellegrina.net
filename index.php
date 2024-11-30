@@ -244,7 +244,7 @@ function getisp($ip = '')
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
             </script>
-            <div class="w3-card-8 w3-padding">
+            <div class="w3-card-8">
                 <div class="w3-row-padding w3-light-grey">
                     <div class="w3-card-4 w3-white w3-margin-top w3-quarter">
                         <h1>
