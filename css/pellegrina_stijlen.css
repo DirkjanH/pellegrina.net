@@ -704,8 +704,8 @@ select {
 	div.cols2 {
 		column-count: 1;
 	}
-	#navcontainer a:any-link,
-	.w3-accordion {
+	#navcontainer > a:any-link,
+	#navcontainer > div.w3-accordion {
 		width: 200px;
 		margin-top: 0px;
 		background: initial;
