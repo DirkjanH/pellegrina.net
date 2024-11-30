@@ -226,28 +226,28 @@ blockquote + div {
 	margin-top: -0.5em;
 }
 h1 {
-	color: #235a30;
+	color: #4c0080;
 	font-size: 200%;
 	break-after: avoid;
 }
 h2 {
-	color: #317f43;
+	color: #6b00b3;
 	font-size: 160%;
 	break-after: avoid;
 }
 h3 {
-	color: #3fa456;
+	color: #8a00e6;
 	font-size: 140%;
 	break-after: avoid;
 }
 h4 {
-	color: #58be6f;
+	color: #9900ff;
 	font-size: 115%;
 	break-after: avoid;
 }
 h5 {
 	font-size: 110%;
-	color: #6d766f;
+	color: #ad33ff;
 	break-after: avoid;
 }
 h6 {
