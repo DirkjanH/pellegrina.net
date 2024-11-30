@@ -3,7 +3,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 require_once($_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php');
 
@@ -187,39 +187,39 @@ while ($i <= ($laatstecursus)) {
 			body {
 				background-color: white;
 			}
-			
+
 			td {
 				width: 30%;
 			}
-			
+
 			li {
 				margin: 0px;
 				padding: 0px;
 			}
-			
+
 			p {
 				margin-top: 0;
 				margin-bottom: 0;
 			}
-			
+
 			ul {
 				margin-top: 0;
 			}
-			
+
 			-->
 		</style>
 	</head>
 
-	<body>
-		<div class="w3-panel">
-			<table class="w3-table w3-striped">
-				<tr>
-					<?php  
+<body>
+	<div class="w3-panel">
+		<table class="w3-table w3-striped">
+			<tr>
+				<?php
 
-$i = $cursus_offset + 1;
+				$i = $cursus_offset + 1;
 
-while ($i <= ($aantal_cursussen + $cursus_offset)) {
-?>
+				while ($i <= ($aantal_cursussen + $cursus_offset)) {
+				?>
 					<td valign="top">
 						<p><b>Cursus <?php echo $i ?>: </b>
 						</p>
@@ -311,44 +311,45 @@ while ($i <= ($aantal_cursussen + $cursus_offset)) {
 								<?php echo euro($cursus[$i]['korting']); ?>
 							</li>
 							<li><strong>Totaal te ontvangen:&nbsp;
-							<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting']); ?></strong>
+									<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting']); ?></strong>
 							</li>
 							<li>Al betaald:&nbsp;
 								<?php echo euro($cursus[$i]['aanbet_bedrag']); ?>
 							</li>
 							<li>Nog te ontvangen:&nbsp;
-								<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting'] - 
-			   $cursus[$i]['aanbet_bedrag']); ?>
+								<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting'] -
+									$cursus[$i]['aanbet_bedrag']); ?>
 							</li>
 						</ul>
 					</td>
-					<?php 
-	$i++;
-	}
-?>
-				</tr>
-				<tr>
-					<td colspan="<?php echo $aantal_cursussen; ?>" valign="top">
-						<p>Totaal aangenomen deelnemers:&nbsp;
-							<?php echo $aangenomen['totaal']; ?> | cursusgeld:&nbsp;
-							<?php echo euro($cursus['totaal']['cursusgeld']); ?> | donaties:&nbsp;
-							<?php echo euro($cursus['totaal']['donatie']); ?> | aantal donateurs:&nbsp;
-							<?php echo $donateurs['totaal']; ?> | kortingen:&nbsp;
-							<?php echo euro($cursus['totaal']['korting']); ?> | totaal te ontvangen:&nbsp;
-							<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting']); ?>
-						</p>
-						<p>Totaal al betaald:&nbsp;
-							<?php echo euro($cursus['totaal']['aanbet_bedrag']); ?> | Totaal nog te ontvangen:&nbsp;
-							<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting'] - $cursus['totaal']['aanbet_bedrag']); ?> | gemiddelde leeftijd
-							<?php $meer = $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'];
-						if (isset($aangenomen['totaal']) AND $aangenomen['totaal'] > 0) $percentage_meer = round(($meer/$aangenomen['totaal'])*100);
-						if (isset($leeftijd['gemiddelde']) AND $leeftijd['gemiddelde'] > 0) echo round(array_sum($leeftijd['gemiddelde'])/(count($leeftijd['gemiddelde']))); ?> | aantal deelnemers vorig jaar
-							<?php echo $deelnemers_vorigjaar['totaal']; ?> (<?php if ($meer >= 0) echo '+'; 
-						echo $meer . ' = '. $percentage_meer.'%'; ?>)
-						</p>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</body>
+				<?php
+					$i++;
+				}
+				?>
+			</tr>
+			<tr>
+				<td colspan="<?php echo $aantal_cursussen; ?>" valign="top">
+					<p>Totaal aangenomen deelnemers:&nbsp;
+						<?php echo $aangenomen['totaal']; ?> | cursusgeld:&nbsp;
+						<?php echo euro($cursus['totaal']['cursusgeld']); ?> | donaties:&nbsp;
+						<?php echo euro($cursus['totaal']['donatie']); ?> | aantal donateurs:&nbsp;
+						<?php echo $donateurs['totaal']; ?> | kortingen:&nbsp;
+						<?php echo euro($cursus['totaal']['korting']); ?> | totaal te ontvangen:&nbsp;
+						<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting']); ?>
+					</p>
+					<p>Totaal al betaald:&nbsp;
+						<?php echo euro($cursus['totaal']['aanbet_bedrag']); ?> | Totaal nog te ontvangen:&nbsp;
+						<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting'] - $cursus['totaal']['aanbet_bedrag']); ?> | gemiddelde leeftijd
+						<?php $meer = $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'];
+						if (isset($aangenomen['totaal']) and $aangenomen['totaal'] > 0) $percentage_meer = round(($meer / $aangenomen['totaal']) * 100);
+						if (isset($leeftijd['gemiddelde']) and $leeftijd['gemiddelde'] > 0) echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?> | aantal deelnemers vorig jaar
+						<?php echo $deelnemers_vorigjaar['totaal']; ?> (<?php if ($meer >= 0) echo '+';
+																		echo $meer . ' = ' . $percentage_meer . '%'; ?>)
+					</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
 </html>

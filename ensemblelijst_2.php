@@ -10,7 +10,7 @@ Kint::$enabled_mode = false;
 d($_GET);
 d($_POST);
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 $_SESSION['Cursus'] = 2; // Baroque op Nieuw Sion
 

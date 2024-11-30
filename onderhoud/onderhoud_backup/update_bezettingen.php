@@ -1,11 +1,11 @@
 <?php //Connection statement
-require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/includes2024.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1 );
 
 error_reporting(E_ALL);
 
-require_once $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
 Kint::$enabled_mode = false;
 
@@ -23,8 +23,8 @@ while ($cursus <= $aantal_cursussen + $cursus_offset) {
 	d($query_streefgetal);
 	$streefgetallen = select_query($query_streefgetal);
 	d($streefgetallen);
-	
-	foreach ($streefgetallen as $streefgetal) {	
+
+	foreach ($streefgetallen as $streefgetal) {
 		$streven[$cursus][$streefgetal['InstrId']] = $streefgetal['Aantal'];
 		$streven[$cursus]['totaal'] += $streefgetal['Aantal'];
 	}
@@ -45,78 +45,80 @@ while ($cursus <= $aantal_cursussen + $cursus_offset) {
 		d($aantal_ins);
 		if ($aantal_ins > 0)
 			$bezetting[$cursus][$ins] = $aantal_ins;
-	  }
+	}
 	$cursus++;
 }
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<title>Bezetting</title>
-<link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css" />
-<link href="../css/w3.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-<!--
-.klein {
-	font-size: 75%;
-	color: #CC0000;
-}
--->
-</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Bezetting</title>
+	<link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css" />
+	<link href="../css/w3.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		<!--
+		.klein {
+			font-size: 75%;
+			color: #CC0000;
+		}
+		-->
+	</style>
 </head>
 
 <body>
-<div class="w3-content w3-white">
+	<div class="w3-content w3-white">
 
-	<table class="w3-table w3-striped w3-border-blue-gray">
-		<tr>
-			<th>Id:</th>
-			<th>Naam:</th>
-			<?php
-	$cursus = $cursus_offset + 1;
-	while ($cursus <= $aantal_cursussen + $cursus_offset) {
-      	echo '<th>Cursus ' . $cursus . ':</th>';
-		$cursus++;
-		}
-    echo "</tr>\n";
+		<table class="w3-table w3-striped w3-border-blue-gray">
+			<tr>
+				<th>Id:</th>
+				<th>Naam:</th>
+				<?php
+				$cursus = $cursus_offset + 1;
+				while ($cursus <= $aantal_cursussen + $cursus_offset) {
+					echo '<th>Cursus ' . $cursus . ':</th>';
+					$cursus++;
+				}
+				echo "</tr>\n";
 
-	foreach ($instrumenten as $instr) {
-	$cursus = $cursus_offset + 1;
-	while ($cursus <= $aantal_cursussen + $cursus_offset) {
-		$aantal[$cursus] = $bezetting[$cursus][$instr['id']];
-		if ($streven[$cursus][$instr['id']] > 0)
-			$aantal[$cursus] .= " <span class=\"klein\">({$streven[$cursus][$instr['id']]})</span>";
-		$totaal[$cursus] += $bezetting[$cursus][$instr['id']];
-		$cursus++;
-	}
-	
-?>
-		 <tr>
-			 <td><?php echo $instr['id']; ?></td>
-			 <td><?php echo $instr['nl']; ?></td>
-			 <?php
-	$cursus = $cursus_offset + 1;
-	while ($cursus <= $aantal_cursussen + $cursus_offset) {
-      	echo '<td>' . $aantal[$cursus] . '</td>';
-		$cursus++;
-		}
-    echo "</tr>\n";
-   }
-?>
-		<tr>
-			<td>&nbsp;</td>
-			<td><strong>TOTAAL:</strong></td>
+				foreach ($instrumenten as $instr) {
+					$cursus = $cursus_offset + 1;
+					while ($cursus <= $aantal_cursussen + $cursus_offset) {
+						$aantal[$cursus] = $bezetting[$cursus][$instr['id']];
+						if ($streven[$cursus][$instr['id']] > 0)
+							$aantal[$cursus] .= " <span class=\"klein\">({$streven[$cursus][$instr['id']]})</span>";
+						$totaal[$cursus] += $bezetting[$cursus][$instr['id']];
+						$cursus++;
+					}
+
+				?>
+			<tr>
+				<td><?php echo $instr['id']; ?></td>
+				<td><?php echo $instr['nl']; ?></td>
 			<?php
-	$cursus = $cursus_offset + 1;
-	while ($cursus <= $aantal_cursussen + $cursus_offset) {
-      	echo '<td><strong>' . $totaal[$cursus] . ' <span class="klein">(' . $streven[$cursus]['totaal'] . ']</span></strong></td>';
-		$cursus++;
-		}
-    echo "</tr>\n";
-	?>
-	</table>
-</div>
+					$cursus = $cursus_offset + 1;
+					while ($cursus <= $aantal_cursussen + $cursus_offset) {
+						echo '<td>' . $aantal[$cursus] . '</td>';
+						$cursus++;
+					}
+					echo "</tr>\n";
+				}
+			?>
+			<tr>
+				<td>&nbsp;</td>
+				<td><strong>TOTAAL:</strong></td>
+				<?php
+				$cursus = $cursus_offset + 1;
+				while ($cursus <= $aantal_cursussen + $cursus_offset) {
+					echo '<td><strong>' . $totaal[$cursus] . ' <span class="klein">(' . $streven[$cursus]['totaal'] . ']</span></strong></td>';
+					$cursus++;
+				}
+				echo "</tr>\n";
+				?>
+		</table>
+	</div>
 </body>
+
 </html>

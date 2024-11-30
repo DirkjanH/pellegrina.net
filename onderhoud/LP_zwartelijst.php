@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2024.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1);
 
@@ -20,7 +20,8 @@ foreach ($instrumenten as $instr) $instrumententabel[$instr['id']] = $instr['nl'
 d($instrumententabel);
 // end Recordset
 
-function instrument($instr) {
+function instrument($instr)
+{
 	global $instrumententabel;
 	$ins = explode(', ', $instr);
 	unset($instrumenten);
@@ -29,17 +30,19 @@ function instrument($instr) {
 }
 
 // begin voeg gegevens zwarte lijst toe
-if (isset($_GET['DlnmrId'])and($_GET['DlnmrId'] != "")and isset($_POST["verzend"])and($_POST['verzend'] == "Voeg toe")) {
-	$insertSQL = sprintf("INSERT INTO zwartelijst (DlnmrId_FK, categorie, datum, opmerkingen) VALUES (%s, %s, NOW(), %s)",
+if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Voeg toe")) {
+	$insertSQL = sprintf(
+		"INSERT INTO zwartelijst (DlnmrId_FK, categorie, datum, opmerkingen) VALUES (%s, %s, NOW(), %s)",
 		quote($_GET['DlnmrId']),
 		quote($_POST['categorie']),
-		quote($_POST['opmerkingen']));
+		quote($_POST['opmerkingen'])
+	);
 	exec_query($insertSQL);
 }
 // end voeg gegevens zwarte lijst toe
 
 // begin update gegevens zwarte lijst 
-if (isset($_GET['DlnmrId'])and($_GET['DlnmrId'] != "")and isset($_POST["verzend"])and($_POST['verzend'] == "Update")) {
+if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Update")) {
 	$query_update_zwartelijst = "UPDATE zwartelijst SET categorie = {$_POST['categorie']}, datum = NOW(), 
 	opmerkingen = \"{$_POST['opmerkingen']}\" WHERE DlnmrId_FK = {$_GET['DlnmrId']}";
 	exec_query($query_update_zwartelijst);
@@ -47,7 +50,7 @@ if (isset($_GET['DlnmrId'])and($_GET['DlnmrId'] != "")and isset($_POST["verzend"
 // end update gegevens zwarte lijst 
 
 // begin wis gegevens zwarte lijst
-if (isset($_GET['DlnmrId'])and($_GET['DlnmrId'] != "")and isset($_POST["verzend"])and($_POST['verzend'] == "Wis")) {
+if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Wis")) {
 	$insertSQL = "DELETE FROM zwartelijst WHERE DlnmrId_FK = {$_GET['DlnmrId']}";
 	exec_query($insertSQL);
 }
@@ -55,17 +58,21 @@ if (isset($_GET['DlnmrId'])and($_GET['DlnmrId'] != "")and isset($_POST["verzend"
 
 // begin Recordset gegevens zwarte lijst
 $colname__inschrijving = '-1';
-if (isset($_GET['DlnmrId'])and($_GET['DlnmrId'] != "")) {
+if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "")) {
 	$colname__inschrijving = $_GET['DlnmrId'];
 }
-$query_deelnemer = sprintf("SELECT * FROM dlnmr d, zwartelijst z WHERE DlnmrId = DlnmrId_FK AND DlnmrId = %s",
-	$colname__inschrijving);
+$query_deelnemer = sprintf(
+	"SELECT * FROM dlnmr d, zwartelijst z WHERE DlnmrId = DlnmrId_FK AND DlnmrId = %s",
+	$colname__inschrijving
+);
 
 $deelnemer = select_query($query_deelnemer, 1);
 
 if (count($deelnemer) < 1) {
-	$query_deelnemer = sprintf("SELECT * FROM dlnmr WHERE DlnmrId = %s",
-		$colname__inschrijving);
+	$query_deelnemer = sprintf(
+		"SELECT * FROM dlnmr WHERE DlnmrId = %s",
+		$colname__inschrijving
+	);
 
 	$deelnemer = select_query($query_deelnemer);
 }
@@ -97,24 +104,25 @@ $aantal_zwl = count($zwartelijst);
 
 <!DOCTYPE HTML>
 <html><!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-   <META NAME="robots" CONTENT="noindex, nofollow">
-   <link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-   <link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
+	<META NAME="robots" CONTENT="noindex, nofollow">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
 
-   <link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
-   <link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
-   <meta name="msapplication-TileColor" content="#da532c">
-   <meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
-   <meta name="theme-color" content="#ffffff">
+	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP zwarte lijst</title>
-<!-- InstanceEndEditable -->
+	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 	<link rel="stylesheet" href="/css/onderhoud.css">
 	<!-- InstanceBeginEditable name="head" -->
@@ -123,116 +131,119 @@ $aantal_zwl = count($zwartelijst);
 		.categorie1 {
 			background-color: #FBFBC7;
 		}
-		
+
 		.categorie2 {
 			background-color: #FFCACA;
 		}
 		-->
 	</style>
-<!-- InstanceEndEditable -->
+	<!-- InstanceEndEditable -->
 </head>
 
 <body>
 	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php');?>
+		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
 	<div id="inhoud">
 		<header id="navigatiebalk">
-			<?php require_once('LP_navigatie.php');?>
+			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
 			<!-- InstanceBeginEditable name="Mainpage" -->
-<div class="w3-panel w3-white">
-	<table class="onzichtbaar">
-		<tr>
-			<td colspan="3">
-				<form id="zoek" name="zoek" method="GET" action="<?php echo $editFormAction; ?>">
-					<table width="100%" border="1" align="left" cellpadding="5">
-						<tr>
-							<td><input name="DlnmrId" type="input" value="<?php if (isset($_GET['DlnmrId'])) 
-			echo $_GET['DlnmrId']; ?>" size="5"/>
-								<input type="submit" name="Submit" value="Zoek"> &nbsp;
-							</td>
-						</tr>
-					</table>
+			<div class="w3-panel w3-white">
+				<table class="onzichtbaar">
+					<tr>
+						<td colspan="3">
+							<form id="zoek" name="zoek" method="GET" action="<?php echo $editFormAction; ?>">
+								<table width="100%" border="1" align="left" cellpadding="5">
+									<tr>
+										<td><input name="DlnmrId" type="input" value="<?php if (isset($_GET['DlnmrId']))
+																							echo $_GET['DlnmrId']; ?>" size="5" />
+											<input type="submit" name="Submit" value="Zoek"> &nbsp;
+										</td>
+									</tr>
+								</table>
+							</form>
+						</td>
+					</tr>
+				</table>
+				<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
+					<div class="w3-card-4 w3-margin-top">
+						<table class="w3-table w3-border-blue-gray">
+							<tr>
+								<td width="25%" rowspan="2" valign="top">
+									<h2>
+										<?php if ($deelnemer['naam'] != '') echo $deelnemer['naam']; ?>
+									</h2>
+								</td>
+								<td>
+									<label>
+										<div align="right">Categorie:</div>
+									</label>
+								</td>
+								<td class="categorie1"><label>
+										<input type="radio" name="categorie" value="1" <?php if ($deelnemer['categorie'] == "1") echo 'checked'; ?>>
+										waarschuwing</label>
+								</td>
+								<td class="categorie2"><label>
+										<input type="radio" name="categorie" value="2" <?php if ($deelnemer['categorie'] == "2") echo 'checked'; ?>>
+										def. ontzegging</label>
+								</td>
+								<td>&nbsp;&nbsp;<input type="submit" name="verzend" value="Voeg toe" />
+									<input type="submit" name="verzend" value="Update" />
+									<input type="submit" name="verzend" value="Wis">
+								</td>
+							</tr>
+							<tr>
+								<td valign="top">
+									<label>
+										<div align="right">Opmerkingen: </div>
+									</label>
+								</td>
+								<td colspan="3">
+									<textarea name="opmerkingen" cols="70" rows="3" id="opmerkingen"><?php
+																										echo $deelnemer['opmerkingen']; ?></textarea>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<?php if ($aantal_zwl > 0) {
+						echo '<br><hr>'; ?>
+						<table class="w3-table w3-striped w3-border-blue-gray">
+							<caption align="top" class="w3-large w3-text-blue-grey">
+								Geregistreerde personen op zwarte lijst:
+							</caption>
+							<tr>
+								<th width="20%" scope="col">Naam:&nbsp;</th>
+								<th width="20%" scope="col">Instrument/stem:&nbsp;</th>
+								<th scope="col">Datum:&nbsp;</th>
+								<th scope="col">Opmerkingen:&nbsp;</th>
+							</tr>
+							<?php foreach ($zwartelijst as $zwl) { ?>
+								<tr>
+									<td class="<?php echo 'categorie' . $zwl['categorie']; ?>">
+										<a href="<?php echo $_SERVER['PHP_SELF'] . '?DlnmrId=' . $zwl['DlnmrId']; ?>">
+											<?php echo $zwl['naam']; ?>
+										</a>&nbsp;
+									</td>
+									<td>
+										<?php echo instrument($zwl['instr']); ?>&nbsp;</td>
+									<td>
+										<?php echo $zwl['datum']; ?>&nbsp;</td>
+									<td>
+										<?php echo $zwl['opmerkingen']; ?>&nbsp;</td>
+								</tr>
+						<?php }
+						} ?>
+						</table>
+						<?php echo "<p>Totaal aantal personen op de zwarte lijst: {$aantal_zwl}</p>"; ?>
 				</form>
-			</td>
-		</tr>
-		</table>
-	<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
-		<div class="w3-card-4 w3-margin-top">
-			<table class="w3-table w3-border-blue-gray">
-				<tr>
-					<td width="25%" rowspan="2" valign="top">
-						<h2>
-							<?php if ($deelnemer['naam'] != '') echo $deelnemer['naam']; ?>
-						</h2>
-					</td>
-					<td>
-						<label>
-						<div align="right">Categorie:</div>
-						</label>
-					</td>
-					<td class="categorie1"><label>
-						<input type="radio" name="categorie" value="1" <?php if ($deelnemer['categorie'] == "1") echo 'checked'; ?>>
-						waarschuwing</label>
-					</td>
-					<td class="categorie2"><label>
-						<input type="radio" name="categorie" value="2" <?php if ($deelnemer['categorie'] == "2") echo 'checked'; ?>>
-						def. ontzegging</label>
-					</td>
-					<td>&nbsp;&nbsp;<input type="submit" name="verzend" value="Voeg toe"/>
-						<input type="submit" name="verzend" value="Update"/>
-						<input type="submit" name="verzend" value="Wis">
-					</td>
-				</tr>
-				<tr>
-					<td valign="top">
-						<label>
-						<div align="right">Opmerkingen: </div>
-						</label>
-					</td>
-					<td colspan="3">
-						<textarea name="opmerkingen" cols="70" rows="3" id="opmerkingen"><?php 
-	  echo $deelnemer['opmerkingen']; ?></textarea>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<?php if ($aantal_zwl > 0) {
-		echo '<br><hr>'; ?>
-		<table class="w3-table w3-striped w3-border-blue-gray">
-			<caption align="top" class="w3-large w3-text-blue-grey">
-				Geregistreerde personen op zwarte lijst:
-			</caption>
-			<tr>
-				<th width="20%" scope="col">Naam:&nbsp;</th>
-				<th width="20%" scope="col">Instrument/stem:&nbsp;</th>
-				<th scope="col">Datum:&nbsp;</th>
-				<th scope="col">Opmerkingen:&nbsp;</th>
-			</tr>
-			<?php foreach ($zwartelijst as $zwl) { ?>
-			<tr>
-				<td class="<?php echo 'categorie'.$zwl['categorie']; ?>">
-					<a href="<?php echo $_SERVER['PHP_SELF'] . '?DlnmrId=' . $zwl['DlnmrId']; ?>">
-						<?php echo $zwl['naam']; ?>
-					</a>&nbsp;</td>
-				<td>
-					<?php echo instrument($zwl['instr']); ?>&nbsp;</td>
-				<td>
-					<?php echo $zwl['datum']; ?>&nbsp;</td>
-				<td>
-					<?php echo $zwl['opmerkingen']; ?>&nbsp;</td>
-			</tr>
-			<?php }
-	} ?>
-		</table>
-		<?php echo "<p>Totaal aantal personen op de zwarte lijst: {$aantal_zwl}</p>"; ?>
-		</form>
-	</p>
-</div>
-<!-- InstanceEndEditable -->
+				</p>
+			</div>
+			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
