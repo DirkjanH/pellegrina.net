@@ -152,7 +152,7 @@ function getisp($ip = '')
         text-align: center;
     }
 
-    ol {
+    ol li {
         margin-left: 0px;
     }
     -->
