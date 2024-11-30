@@ -151,6 +151,10 @@ function getisp($ip = '')
         color: #999999;
         text-align: center;
     }
+
+    ol {
+        margin-left: 0px;
+    }
     -->
     </style>
     <!--[if gte IE 9]>
