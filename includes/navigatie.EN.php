@@ -8,9 +8,9 @@
         Courses</a>
     <a href="index.php" target="_parent"
         class="w3-bar-item w3-button">{cursus}</a>
-    <a href="programma.php" class="w3-bar-item w3-button">Programme</a>
     <a class="w3-bar-item w3-button" href="cursus.php" target="_parent">Course
         details</a>
+    <a href="programma.php" class="w3-bar-item w3-button">Programme</a>
     <a class="w3-bar-item w3-button" href="aanmelding.php"
         target="_parent">Registration</a>
     <div class="w3-dropdown-click">
@@ -54,25 +54,25 @@
     </div>
 </nav>
 <script>
-    function w3_open() {
-        document.getElementById("main").style.marginLeft = "25%";
-        document.getElementById("navcontainer").style.width = "25%";
-        document.getElementById("navcontainer").style.display = "block";
-        document.getElementById("openNav").style.display = "none";
-    }
+function w3_open() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("navcontainer").style.width = "25%";
+    document.getElementById("navcontainer").style.display = "block";
+    document.getElementById("openNav").style.display = "none";
+}
 
-    function w3_close() {
-        document.getElementById("main").style.marginLeft = "0%";
-        document.getElementById("navcontainer").style.display = "none";
-        document.getElementById("openNav").style.display = "inline-block";
-    }
+function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("navcontainer").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+}
 
-    function myFunction() {
-        var x = document.getElementById("demo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
+function myFunction() {
+    var x = document.getElementById("demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
     }
+}
 </script>
