@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -55,10 +55,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-                                    echo $navigatie;
-                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
-                                    ?> <div id="main">
+                                        echo $navigatie;
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
+                                        ?> <div id="main">
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
             <h2><a name="programma"></a>De muziek</h2>
             <p>Al 35 jaar organiseert La Pellegrina een jaarlijkse zomercursus
@@ -125,9 +125,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 worden uitgenodigd om een deel van een concert van Mozart of een
                 tijdgenoot voor te bereiden en de andere instrumentalisten
                 worden gevraagd om dat - van blad spelend - te begeleiden.</p>
-            <p class="citaat">Henriëtte Hamer: La Pellegrina nodigt je uit om
-                dingen doen waarvan je niet vermoedde dat je het kon of
-                misschien zelfs durfde</p>
+            <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
+                eerste muzikale pellegrina week door het niveau van de cursus,
+                de afwisseling van kamermuziek en tutti programma, de
+                begeleiding door goede coaches en de heerlijk muziek!"</p>
             <div class="container">
                 <h3>Het programma voor solisten, koor en orkest: Dvořák & Haydn
                 </h3>
