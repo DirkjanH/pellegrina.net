@@ -397,8 +397,8 @@ nav#navcontainer {
 	border: none;
 	background: #ffcccc;
 }
-#navcontainer a,
-div.w3-accordion {
+#navcontainer > a,
+#navcontainer > div.w3-accordion {
 	font-size: 15px;
 	width: 200px;
 	display: block;
@@ -406,17 +406,17 @@ div.w3-accordion {
 	border-bottom: 1px solid black;
 	text-decoration: none;
 }
-#navcontainer a:link,
-a:visited,
+#navcontainer > a:link,
+#navcontainer > a:visited,
 div.w3-accordion {
 	color: black;
 }
-#navcontainer a:hover,
-#navcontainer a:active {
+#navcontainer > a:hover,
+#navcontainer > a:active {
 	background-color: #ff8080 !important;
 }
-#navcontainer a.grijs:hover,
-#navcontainer a.grijs:active {
+#navcontainer > a.grijs:hover,
+#navcontainer > a.grijs:active {
 	color: #666 !important;
 	background-color: #999 !important;
 }
