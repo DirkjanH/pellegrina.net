@@ -398,7 +398,8 @@ nav#navcontainer {
 	background: #ffcccc;
 }
 #navcontainer > a,
-#navcontainer > div.w3-accordion {
+#navcontainer > div.w3-accordion,
+#navcontainer > div.w3-dropdown-click {
 	font-size: 15px;
 	width: 200px;
 	display: block;
@@ -408,7 +409,8 @@ nav#navcontainer {
 }
 #navcontainer > a:link,
 #navcontainer > a:visited,
-div.w3-accordion {
+#navcontainer > div.w3-accordion,
+#navcontainer > div.w3-dropdown-click {
 	color: black;
 }
 #navcontainer > a:hover,
@@ -705,7 +707,7 @@ select {
 		column-count: 1;
 	}
 	#navcontainer > a:any-link,
-	#navcontainer > div.w3-accordion {
+	#navcontainer > div.w3-accordion #navcontainer > div.w3-dropdown-click {
 		width: 200px;
 		margin-top: 0px;
 		background: initial;
