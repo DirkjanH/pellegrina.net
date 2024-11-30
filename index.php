@@ -279,9 +279,9 @@ function getisp($ip = '')
                             class="mySlides" />
                         <img src="Images/slideshow/blazers_buiten.jpg" alt=""
                             class="mySlides" />
-                        <img src="Images/slideshow/tevreden_pianokwartet.jpg"
-                            alt="" class="mySlides" />
-                        <img src="Images/slideshow/twee_zangers.jpg" alt=""
+                        <img src="Images/slideshow/strijkkwartet.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/vrouwenensemble.jpg" alt=""
                             class="mySlides" />
                         <img src="Images/slideshow/kamerkoor.jpg" alt=""
                             class="mySlides" />
@@ -291,7 +291,7 @@ function getisp($ip = '')
                             class="mySlides" />
                         <img src="Images/slideshow/zangers.jpg" alt=""
                             class="mySlides" />
-                        <img src="Images/slideshow/celli.jpg" alt=""
+                        <img src="Images/slideshow/docententrio.jpg" alt=""
                             class="mySlides" />
                         <script>
                         var myIndex = 0;
