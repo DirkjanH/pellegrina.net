@@ -244,178 +244,166 @@ function getisp($ip = '')
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
             </script>
-            <div class="w3-card-8">
+            <div class="w3-card-8 w3-padding">
                 <div class="w3-row-padding w3-light-grey">
-                    <a href="NL" target="_self">
-                        <div
-                            class="w3-card-4 w3-white w3-margin-top w3-quarter">
-                            <h1><img src="Images/Logos/Vlag_NL.jpg"
+                    <div class="w3-card-4 w3-white w3-margin-top w3-quarter">
+                        <h1>
+
+                            < href="NL" target="_self"><img
+                                    src="Images/Logos/Vlag_NL.jpg"
                                     alt="Nederlands" width="34" height="24"
                                     hspace="10" border="0"
                                     align="absmiddle">Cursusprogramma
-                                <?php echo $jaar ?>
-                    </a></h1>
-                    <p>Twee zomercursussen voor gevorderde amateurmusici en
-                        professionals:</p>
-                    <ol>
-                        <li class="klein"><b>Dvořáks Gouden Spinnewiel & Haydns
-                                <i>Missa in tempore belli</i></b> - 24 juli - 3
-                            augustus</li>
-                        <li class="klein"><b>Purcell & Handel</b> - 10 - 16
-                            augustus</li>
-                    </ol></a>
-                </div></a>
-                <div id="carroussel" class="w3-panel w3-section w3-half">
-                    <img src="Images/slideshow/dvorak_tutors.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/oboeband.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/druivenkas.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/blazers_buiten.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/tevreden_pianokwartet.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/twee_zangers.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/kamerkoor.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/trio_met_bas.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/orkestrepetitie.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/zangers.jpg" alt=""
-                        class="mySlides" />
-                    <img src="Images/slideshow/celli.jpg" alt=""
-                        class="mySlides" />
-                    <script>
-                    var myIndex = 0;
-                    carousel();
+                                <?php echo $jaar ?> </a>
+                        </h1>
+                        <p><a href="NL" target="_self">Twee zomercursussen voor
+                                gevorderde amateurmusici en professionals:</a>
+                        </p>
+                        <ol><a href="NL" target="_self">
+                                <li class="klein"><b>Dvořáks Gouden Spinnewiel &
+                                        Haydns <i>Missa in tempore belli</i></b>
+                                    - 24 juli - 3 augustus</li>
+                                <li class="klein"><b>Purcell & Handel</b> - 10 -
+                                    16 augustus</li>
+                            </a></ol>
+                    </div></a>
+                    <div id="carroussel" class="w3-panel w3-section w3-half">
+                        <img src="Images/slideshow/dvorak_tutors.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/oboeband.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/druivenkas.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/blazers_buiten.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/tevreden_pianokwartet.jpg"
+                            alt="" class="mySlides" />
+                        <img src="Images/slideshow/twee_zangers.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/kamerkoor.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/trio_met_bas.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/orkestrepetitie.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/zangers.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/celli.jpg" alt=""
+                            class="mySlides" />
+                        <script>
+                        var myIndex = 0;
+                        carousel();
 
-                    function carousel() {
-                        var i;
-                        var x = document.getElementsByClassName("mySlides");
-                        for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none";
+                        function carousel() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            myIndex++;
+                            if (myIndex > x.length) {
+                                myIndex = 1
+                            }
+                            x[myIndex - 1].style.display = "block";
+                            setTimeout(carousel, 3000);
                         }
-                        myIndex++;
-                        if (myIndex > x.length) {
-                            myIndex = 1
-                        }
-                        x[myIndex - 1].style.display = "block";
-                        setTimeout(carousel, 3000);
-                    }
-                    </script>
-                </div>
-                <div
-                    class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter">
-                    <h1><a href="EN" target="_self"><img
-                                src="Images/Logos/Vlag_UK.jpg" alt="English"
-                                width="34" height="24" hspace="10"
-                                align="absmiddle">Course Programme
-                            <?php echo $jaar ?></a></h1>
-                    <p><a href="EN">Two summer schools for accomplished amateur
-                            musicians and professionals:</p>
-                    <ol>
-                        <li class="klein"><b>Dvořák's Golden Spinning Wheel &
-                                Haydn's <i>Missa in tempore belli</i></b> - 24
-                            July - 3 August</li>
-                        <li class="klein"><b>Purcell & Handel</b> - 10 - 16
-                            August</li>
-                    </ol></a>
+                        </script>
+                    </div>
+                    <div
+                        class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter">
+                        <h1><a href="EN" target="_self"><img
+                                    src="Images/Logos/Vlag_UK.jpg" alt="English"
+                                    width="34" height="24" hspace="10"
+                                    align="absmiddle">Course Programme
+                                <?php echo $jaar ?></a></h1>
+                        <p><a href="EN">Two summer schools for accomplished
+                                amateur musicians and professionals:</p>
+                        <ol>
+                            <li class="klein"><b>Dvořák's Golden Spinning Wheel
+                                    & Haydn's <i>Missa in tempore belli</i></b>
+                                - 24 July - 3 August</li>
+                            <li class="klein"><b>Purcell & Handel</b> - 10 - 16
+                                August</li>
+                        </ol></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w3-section w3-white"><strong><a href="japan.php"><img
-                        src="Images/Logos/Vlag_Japan.jpg" alt="Japan" width="34"
-                        height="24" align="baseline">&nbsp;コース案内(概要</a>)
-            </strong>&nbsp;|&nbsp;&nbsp;&nbsp;<a href="CZ_info.php"><img
-                    src="Images/Logos/CZ-vlag.jpg" width="34" height="23"
-                    alt="" />&nbsp;Čeští účastníci vítáni</a></div>
-        <p class="w3-center w3-panel">This program has been made possible, in
-            part, with support from <br>
-            <a href="http://www.acmp.net" target="_blank"><img
-                    src="/Images/Logos/ACMP_CMYK.jpg" width="200" height="104"
-                    alt="" /></a>
-        </p><a
-            href="http://www.facebook.com/pages/La-Pellegrina/443675859011335"
-            title="La Pellegrina on Facebook" target="_blank"><img
-                src="/Images/Logos/facebook_logo.png" alt="Facebook" width="25"
-                height="25" class="geenlijn" /></a><br>
-        <div class="fb-like"
-            data-href="http://www.facebook.com/pages/La-Pellegrina/443675859011335?ref=hl"
-            data-send="true" data-layout="box_count" data-width="450"
-            data-show-faces="true" data-font="verdana"></div>
-        <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript">
-        $(window).load(function() {
-            var pages = $("div#bannerteksten div"),
-                current = 0;
-            var currentPage, nextPage;
-            var timeoutID;
-            var handler = function() {
-                currentPage = pages.eq(current);
-                if (current >= pages.length - 1) current = 0;
-                else current = current + 1;
-                nextPage = pages.eq(current);
-                currentPage.fadeOut('quick', function() {
-                    nextPage.fadeIn('quick', function() {
-                        nextPage.css("opacity", 1);
-                        currentPage.hide();
-                        currentPage.css("opacity",
-                            0);
-                        $('div.banner div').bind('',
-                            handler);
-                    });
-                });
-                timeoutID = setTimeout(function() {
-                    handler();
-                }, 4000);
-            }
-            timeoutID = setTimeout(function() {
-                handler();
-            }, 0);
-        });
-        </script>
-        <script>
-        $(window).load(function() {
-            var pages = $('#container li'),
-                current = 0;
-            var currentPage, nextPage;
-            var timeoutID;
-            var buttonClicked = 0;
-            var handler1 = function() {
-                buttonClicked = 1;
-                $('#container .button').unbind('click');
-                currentPage = pages.eq(current);
-                if ($(this).hasClass('prevButton')) {
-                    if (current <= 0) current = pages.length - 1;
-                    else current = current - 1;
-                } else {
-                    if (current >= pages.length - 1) current = 0;
-                    else current = current + 1;
-                }
-                nextPage = pages.eq(current);
-                currentPage.fadeTo('slow', 0.3, function() {
-                    nextPage.fadeIn('slow', function() {
-                        nextPage.css("opacity", 1);
-                        currentPage.hide();
-                        currentPage.css("opacity",
-                            1);
-                        $('#container .button')
-                            .bind('click',
-                            handler1);
-                    });
-                });
-            }
-            var handler2 = function() {
-                if (buttonClicked == 0) {
-                    $('#container .button').unbind('click');
+            <div class="w3-section w3-white"><strong><a href="japan.php"><img
+                            src="Images/Logos/Vlag_Japan.jpg" alt="Japan"
+                            width="34" height="24"
+                            align="baseline">&nbsp;コース案内(概要</a>)
+                </strong>&nbsp;|&nbsp;&nbsp;&nbsp;<a href="CZ_info.php"><img
+                        src="Images/Logos/CZ-vlag.jpg" width="34" height="23"
+                        alt="" />&nbsp;Čeští účastníci vítáni</a></div>
+            <p class="w3-center w3-panel">This program has been made possible,
+                in part, with support from <br>
+                <a href="http://www.acmp.net" target="_blank"><img
+                        src="/Images/Logos/ACMP_CMYK.jpg" width="200"
+                        height="104" alt="" /></a>
+            </p><a
+                href="http://www.facebook.com/pages/La-Pellegrina/443675859011335"
+                title="La Pellegrina on Facebook" target="_blank"><img
+                    src="/Images/Logos/facebook_logo.png" alt="Facebook"
+                    width="25" height="25" class="geenlijn" /></a><br>
+            <div class="fb-like"
+                data-href="http://www.facebook.com/pages/La-Pellegrina/443675859011335?ref=hl"
+                data-send="true" data-layout="box_count" data-width="450"
+                data-show-faces="true" data-font="verdana"></div>
+            <script src="https://code.jquery.com/jquery-latest.js"></script>
+            <script type="text/javascript">
+            $(window).load(function() {
+                var pages = $("div#bannerteksten div"),
+                    current = 0;
+                var currentPage, nextPage;
+                var timeoutID;
+                var handler = function() {
                     currentPage = pages.eq(current);
                     if (current >= pages.length - 1) current = 0;
                     else current = current + 1;
                     nextPage = pages.eq(current);
-                    currentPage.fadeTo('slow', 0.5, function() {
+                    currentPage.fadeOut('quick', function() {
+                        nextPage.fadeIn('quick',
+                    function() {
+                            nextPage.css("opacity",
+                                1);
+                            currentPage.hide();
+                            currentPage.css(
+                                "opacity", 0);
+                            $('div.banner div')
+                                .bind('', handler);
+                        });
+                    });
+                    timeoutID = setTimeout(function() {
+                        handler();
+                    }, 4000);
+                }
+                timeoutID = setTimeout(function() {
+                    handler();
+                }, 0);
+            });
+            </script>
+            <script>
+            $(window).load(function() {
+                var pages = $('#container li'),
+                    current = 0;
+                var currentPage, nextPage;
+                var timeoutID;
+                var buttonClicked = 0;
+                var handler1 = function() {
+                    buttonClicked = 1;
+                    $('#container .button').unbind('click');
+                    currentPage = pages.eq(current);
+                    if ($(this).hasClass('prevButton')) {
+                        if (current <= 0) current = pages.length -
+                        1;
+                        else current = current - 1;
+                    } else {
+                        if (current >= pages.length - 1) current =
+                        0;
+                        else current = current + 1;
+                    }
+                    nextPage = pages.eq(current);
+                    currentPage.fadeTo('slow', 0.3, function() {
                         nextPage.fadeIn('slow', function() {
                             nextPage.css("opacity",
                                 1);
@@ -427,21 +415,45 @@ function getisp($ip = '')
                                     handler1);
                         });
                     });
-                    timeoutID = setTimeout(function() {
-                        handler2();
-                    }, 5000);
                 }
-            }
-            $('#container .button').click(function() {
-                clearTimeout(timeoutID);
-                handler1();
+                var handler2 = function() {
+                    if (buttonClicked == 0) {
+                        $('#container .button').unbind('click');
+                        currentPage = pages.eq(current);
+                        if (current >= pages.length - 1) current =
+                        0;
+                        else current = current + 1;
+                        nextPage = pages.eq(current);
+                        currentPage.fadeTo('slow', 0.5, function() {
+                            nextPage.fadeIn('slow',
+                                function() {
+                                    nextPage.css(
+                                        "opacity", 1
+                                        );
+                                    currentPage.hide();
+                                    currentPage.css(
+                                        "opacity", 1
+                                        );
+                                    $('#container .button')
+                                        .bind('click',
+                                            handler1);
+                                });
+                        });
+                        timeoutID = setTimeout(function() {
+                            handler2();
+                        }, 5000);
+                    }
+                }
+                $('#container .button').click(function() {
+                    clearTimeout(timeoutID);
+                    handler1();
+                });
+                timeoutID = setTimeout(function() {
+                    handler2();
+                }, 3500);
             });
-            timeoutID = setTimeout(function() {
-                handler2();
-            }, 3500);
-        });
-        </script>
-    </div>
+            </script>
+        </div>
     </div>
     </div>
     <!-- begin olark code -->
