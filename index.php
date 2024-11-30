@@ -225,7 +225,7 @@
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
                 </script>
-                <div class="w3-card-2">
+                <div class="w3-card-8">
                     <div class="w3-row-padding w3-light-grey">
                         <a href="NL" target="_self">
                             <div
