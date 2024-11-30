@@ -243,7 +243,7 @@ $docenteninfo = select_query($query_docenten);
     -->
     </style>
 </head>
-<body class="w3-grey">
+<body class="w3-container">
     <div class="inhoud w3-panel w3-white">
         <form action="<?php echo $editFormAction; ?>" method="post"
             name="formulier" id="formulier">
@@ -319,8 +319,8 @@ $docenteninfo = select_query($query_docenten);
                         <th>Code:</th>
                         <th>Cursus:</th>
                     </tr> <?php
-					foreach ($docenteninfo as $doc) {
-					?> <tr>
+							foreach ($docenteninfo as $doc) {
+							?> <tr>
                         <td> <?php echo $doc['DocId']; ?>&nbsp;</td>
                         <td>
                             <a
@@ -331,8 +331,8 @@ $docenteninfo = select_query($query_docenten);
                         </td>
                         <td> <?php echo $doc['cursus']; ?>&nbsp;</td>
                     </tr> <?php
-					}
-					?>
+							}
+								?>
                 </table>
             </div>
         </form>
