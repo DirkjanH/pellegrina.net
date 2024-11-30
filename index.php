@@ -225,18 +225,16 @@
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
                 </script>
-
-                < class="w3-card-2">
-                    <div class="w3-row-padding w3-light-grey">
+                <span class="w3-card-2">
+                    <class="w3-row-padding w3-light-grey">
                         <a href="NL" target="_self">
-                            <div
+                            <span style="display: block;"
                                 class="w3-card-4 w3-white w3-margin-top w3-quarter">
                                 <h1><img src="Images/Logos/Vlag_NL.jpg"
                                         alt="Nederlands" width="34" height="24"
                                         hspace="10" border="0"
                                         align="absmiddle">Cursusprogramma
-                                    <?php echo $jaar ?>
-                        </a></h1>
+                                    <?php echo $jaar ?> </a></h1>
                         <p>Twee zomercursussen voor gevorderde amateurmusici en
                             professionals:</a></p>
                         <ol>
@@ -246,66 +244,65 @@
                             <li class="klein"><b>Purcell & Handel</b> - 10 - 16
                                 augustus</li>
                         </ol>
-                    </div></a>
-                    <div id="carroussel" class="w3-panel w3-section w3-half">
-                        <img src="Images/slideshow/dvorak_tutors.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/oboeband.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/druivenkas.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/blazers_buiten.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/tevreden_pianokwartet.jpg"
-                            alt="" class="mySlides" />
-                        <img src="Images/slideshow/twee_zangers.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/kamerkoor.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/trio_met_bas.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/orkestrepetitie.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/zangers.jpg" alt=""
-                            class="mySlides" />
-                        <img src="Images/slideshow/celli.jpg" alt=""
-                            class="mySlides" />
-                        <script>
-                        var myIndex = 0;
-                        carousel();
+                </span></a>
+                <div id="carroussel" class="w3-panel w3-section w3-half">
+                    <img src="Images/slideshow/dvorak_tutors.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/oboeband.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/druivenkas.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/blazers_buiten.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/tevreden_pianokwartet.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/twee_zangers.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/kamerkoor.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/trio_met_bas.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/orkestrepetitie.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/zangers.jpg" alt=""
+                        class="mySlides" />
+                    <img src="Images/slideshow/celli.jpg" alt=""
+                        class="mySlides" />
+                    <script>
+                    var myIndex = 0;
+                    carousel();
 
-                        function carousel() {
-                            var i;
-                            var x = document.getElementsByClassName("mySlides");
-                            for (i = 0; i < x.length; i++) {
-                                x[i].style.display = "none";
-                            }
-                            myIndex++;
-                            if (myIndex > x.length) {
-                                myIndex = 1
-                            }
-                            x[myIndex - 1].style.display = "block";
-                            setTimeout(carousel, 3000);
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
                         }
-                        </script>
-                    </div>
-                    <div
+                        myIndex++;
+                        if (myIndex > x.length) {
+                            myIndex = 1
+                        }
+                        x[myIndex - 1].style.display = "block";
+                        setTimeout(carousel, 3000);
+                    }
+                    </script>
+                </div>
+                <a href="EN" target="_self"><span style="display: block;"
                         class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter">
-                        <h1><a href="EN" target="_self"><img
-                                    src="Images/Logos/Vlag_UK.jpg" alt="English"
-                                    width="34" height="24" hspace="10"
-                                    align="absmiddle">Course Programme
-                                <?php echo $jaar ?></a></h1>
-                        <p><a href="EN">Two summer schools for accomplished
-                                amateur musicians and professionals:</a></p>
-                        <ol>
-                            <li class="klein"><b>Dvořák's Golden Spinning Wheel
-                                    & Haydn's <i>Missa in tempore belli</i></b>
-                                - 24 July - 3 August</li>
-                            <li class="klein"><b>Purcell & Handel</b> - 10 - 16
-                                August</li>
-                        </ol>
-                    </div>
+                        <h1><img src="Images/Logos/Vlag_UK.jpg" alt="English"
+                                width="34" height="24" hspace="10"
+                                align="absmiddle">Course Programme
+                            <?php echo $jaar ?></a></h1>
+                <p><a href="EN">Two summer schools for accomplished amateur
+                        musicians and professionals:</a></p>
+                <ol>
+                    <li class="klein"><b>Dvořák's Golden Spinning Wheel &
+                            Haydn's <i>Missa in tempore belli</i></b> - 24 July
+                        - 3 August</li>
+                    <li class="klein"><b>Purcell & Handel</b> - 10 - 16 August
+                    </li>
+                </ol>
+                </span></a>
             </div>
         </div>
         <div class="w3-section w3-white"><strong><a href="japan.php"><img
