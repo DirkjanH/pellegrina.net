@@ -152,8 +152,8 @@ function getisp($ip = '')
         text-align: center;
     }
 
-    ol li {
-        margin-left: 0px;
+    ol {
+        padding: 0px;
     }
     -->
     </style>
