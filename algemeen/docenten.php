@@ -49,7 +49,7 @@ foreach ($docenteninfo as $i => $doc) {
             class="w3-panel style=" padding-top:20px;">
             <a id="<?php echo $docent['foto']; ?>"></a>
             <div class="w3-col w3-panel w3-margin-left w3-card-2 w3-right"
-                style="width:162px; padding: 6px;"><img
+                style="width:162px; padding: 6px 6px 0px 6px;"><img
                     src="/Images/Docenten/<?php echo $docent['foto']; ?>.jpg"
                     width="150" class="geenlijn"
                     alt="<?php echo $docent['naam']; ?>" />
