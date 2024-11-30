@@ -225,8 +225,7 @@
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
                 </script>
-
-                < class="w3-card-2">
+                <div class="w3-card-2">
                     <div class="w3-row-padding w3-light-grey">
                         <a href="NL" target="_self">
                             <div
@@ -306,98 +305,84 @@
                                 August</li>
                         </ol></a>
                     </div>
+                </div>
             </div>
-        </div>
-        <div class="w3-section w3-white"><strong><a href="japan.php"><img
-                        src="Images/Logos/Vlag_Japan.jpg" alt="Japan" width="34"
-                        height="24" align="baseline">&nbsp;コース案内(概要</a>)
-            </strong>&nbsp;|&nbsp;&nbsp;&nbsp;<a href="CZ_info.php"><img
-                    src="Images/Logos/CZ-vlag.jpg" width="34" height="23"
-                    alt="" />&nbsp;Čeští účastníci vítáni</a></div>
-        <p class="w3-center w3-panel">This program has been made possible, in
-            part, with support from <br>
-            <a href="http://www.acmp.net" target="_blank"><img
-                    src="/Images/Logos/ACMP_CMYK.jpg" width="200" height="104"
-                    alt="" /></a>
-        </p><a
-            href="http://www.facebook.com/pages/La-Pellegrina/443675859011335"
-            title="La Pellegrina on Facebook" target="_blank"><img
-                src="/Images/Logos/facebook_logo.png" alt="Facebook" width="25"
-                height="25" class="geenlijn" /></a><br>
-        <div class="fb-like"
-            data-href="http://www.facebook.com/pages/La-Pellegrina/443675859011335?ref=hl"
-            data-send="true" data-layout="box_count" data-width="450"
-            data-show-faces="true" data-font="verdana"></div>
-        <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript">
-        $(window).load(function() {
-            var pages = $("div#bannerteksten div"),
-                current = 0;
-            var currentPage, nextPage;
-            var timeoutID;
-            var handler = function() {
-                currentPage = pages.eq(current);
-                if (current >= pages.length - 1) current = 0;
-                else current = current + 1;
-                nextPage = pages.eq(current);
-                currentPage.fadeOut('quick', function() {
-                    nextPage.fadeIn('quick', function() {
-                        nextPage.css("opacity", 1);
-                        currentPage.hide();
-                        currentPage.css("opacity",
-                            0);
-                        $('div.banner div').bind('',
-                            handler);
-                    });
-                });
-                timeoutID = setTimeout(function() {
-                    handler();
-                }, 4000);
-            }
-            timeoutID = setTimeout(function() {
-                handler();
-            }, 0);
-        });
-        </script>
-        <script>
-        $(window).load(function() {
-            var pages = $('#container li'),
-                current = 0;
-            var currentPage, nextPage;
-            var timeoutID;
-            var buttonClicked = 0;
-            var handler1 = function() {
-                buttonClicked = 1;
-                $('#container .button').unbind('click');
-                currentPage = pages.eq(current);
-                if ($(this).hasClass('prevButton')) {
-                    if (current <= 0) current = pages.length - 1;
-                    else current = current - 1;
-                } else {
-                    if (current >= pages.length - 1) current = 0;
-                    else current = current + 1;
-                }
-                nextPage = pages.eq(current);
-                currentPage.fadeTo('slow', 0.3, function() {
-                    nextPage.fadeIn('slow', function() {
-                        nextPage.css("opacity", 1);
-                        currentPage.hide();
-                        currentPage.css("opacity",
-                            1);
-                        $('#container .button')
-                            .bind('click',
-                            handler1);
-                    });
-                });
-            }
-            var handler2 = function() {
-                if (buttonClicked == 0) {
-                    $('#container .button').unbind('click');
+            <div class="w3-section w3-white"><strong><a href="japan.php"><img
+                            src="Images/Logos/Vlag_Japan.jpg" alt="Japan"
+                            width="34" height="24"
+                            align="baseline">&nbsp;コース案内(概要</a>)
+                </strong>&nbsp;|&nbsp;&nbsp;&nbsp;<a href="CZ_info.php"><img
+                        src="Images/Logos/CZ-vlag.jpg" width="34" height="23"
+                        alt="" />&nbsp;Čeští účastníci vítáni</a></div>
+            <p class="w3-center w3-panel">This program has been made possible,
+                in part, with support from <br>
+                <a href="http://www.acmp.net" target="_blank"><img
+                        src="/Images/Logos/ACMP_CMYK.jpg" width="200"
+                        height="104" alt="" /></a>
+            </p><a
+                href="http://www.facebook.com/pages/La-Pellegrina/443675859011335"
+                title="La Pellegrina on Facebook" target="_blank"><img
+                    src="/Images/Logos/facebook_logo.png" alt="Facebook"
+                    width="25" height="25" class="geenlijn" /></a><br>
+            <div class="fb-like"
+                data-href="http://www.facebook.com/pages/La-Pellegrina/443675859011335?ref=hl"
+                data-send="true" data-layout="box_count" data-width="450"
+                data-show-faces="true" data-font="verdana"></div>
+            <script src="https://code.jquery.com/jquery-latest.js"></script>
+            <script type="text/javascript">
+            $(window).load(function() {
+                var pages = $("div#bannerteksten div"),
+                    current = 0;
+                var currentPage, nextPage;
+                var timeoutID;
+                var handler = function() {
                     currentPage = pages.eq(current);
                     if (current >= pages.length - 1) current = 0;
                     else current = current + 1;
                     nextPage = pages.eq(current);
-                    currentPage.fadeTo('slow', 0.5, function() {
+                    currentPage.fadeOut('quick', function() {
+                        nextPage.fadeIn('quick',
+                    function() {
+                            nextPage.css("opacity",
+                                1);
+                            currentPage.hide();
+                            currentPage.css(
+                                "opacity", 0);
+                            $('div.banner div')
+                                .bind('', handler);
+                        });
+                    });
+                    timeoutID = setTimeout(function() {
+                        handler();
+                    }, 4000);
+                }
+                timeoutID = setTimeout(function() {
+                    handler();
+                }, 0);
+            });
+            </script>
+            <script>
+            $(window).load(function() {
+                var pages = $('#container li'),
+                    current = 0;
+                var currentPage, nextPage;
+                var timeoutID;
+                var buttonClicked = 0;
+                var handler1 = function() {
+                    buttonClicked = 1;
+                    $('#container .button').unbind('click');
+                    currentPage = pages.eq(current);
+                    if ($(this).hasClass('prevButton')) {
+                        if (current <= 0) current = pages.length -
+                        1;
+                        else current = current - 1;
+                    } else {
+                        if (current >= pages.length - 1) current =
+                        0;
+                        else current = current + 1;
+                    }
+                    nextPage = pages.eq(current);
+                    currentPage.fadeTo('slow', 0.3, function() {
                         nextPage.fadeIn('slow', function() {
                             nextPage.css("opacity",
                                 1);
@@ -409,20 +394,44 @@
                                     handler1);
                         });
                     });
-                    timeoutID = setTimeout(function() {
-                        handler2();
-                    }, 5000);
                 }
-            }
-            $('#container .button').click(function() {
-                clearTimeout(timeoutID);
-                handler1();
+                var handler2 = function() {
+                    if (buttonClicked == 0) {
+                        $('#container .button').unbind('click');
+                        currentPage = pages.eq(current);
+                        if (current >= pages.length - 1) current =
+                        0;
+                        else current = current + 1;
+                        nextPage = pages.eq(current);
+                        currentPage.fadeTo('slow', 0.5, function() {
+                            nextPage.fadeIn('slow',
+                                function() {
+                                    nextPage.css(
+                                        "opacity", 1
+                                        );
+                                    currentPage.hide();
+                                    currentPage.css(
+                                        "opacity", 1
+                                        );
+                                    $('#container .button')
+                                        .bind('click',
+                                            handler1);
+                                });
+                        });
+                        timeoutID = setTimeout(function() {
+                            handler2();
+                        }, 5000);
+                    }
+                }
+                $('#container .button').click(function() {
+                    clearTimeout(timeoutID);
+                    handler1();
+                });
+                timeoutID = setTimeout(function() {
+                    handler2();
+                }, 3500);
             });
-            timeoutID = setTimeout(function() {
-                handler2();
-            }, 3500);
-        });
-        </script>
+            </script>
         </div>
         </div>
         </div>
