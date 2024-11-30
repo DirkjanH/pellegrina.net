@@ -317,10 +317,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                             České Budějovice</a></li>
                 </ul>
             </ul>
-            <p class="citaat">Casper van Dongen: &quot;La Pellegrina has been my
-                annual 'therapy' for almost 20 years now... Where do you make
-                music with such variety and where do you drink your beer in such
-                a beautiful setting?&quot;</p>
+            <p class="citaat">Casper van Dongen: “Beautiful music at Czech high
+                level for amateurs in conservatory of beautiful Bohemian city:
+                an annual feast! <i>La Pellegrina</i> has been my annual
+                'therapy' for almost 20 years now... Where do you make music
+                with such variety and where do you drink your beer in such a
+                beautiful setting?”</p>
             <div class="fotocenter"><img src="/Images/bazooka.jpg"
                     alt="Ensemble" width="640" height="424"
                     class="w3-image"><br> Joy after the chamber music concert

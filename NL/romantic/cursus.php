@@ -298,10 +298,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li><a href="route_plek.php">Reismogelijkheden en route naar
                         České Budějovice</a></li>
             </ul>
-            <p class="citaat">Casper van Dongen: &quot;La Pellegrina is al bijna
-                20 jaar 'mijn jaarlijkse therapie'... Waar musiceer je zo
-                afwisselend en drink je zo lekker bier in zo'n mooie
-                omgeving?&quot;</p>
+            <p class="citaat">Casper van Dongen: “Mooie muziek op Tsjechisch
+                hoog nivo voor amateurs in het conservatorium van een prachtige
+                Boheemse stad: <i>La Pellegrina</i> is al bijna 20 jaar 'mijn
+                jaarlijkse therapie'... Waar musiceer je zo afwisselend en drink
+                je zo lekker bier in zo'n mooie omgeving?”</p>
             <div class="fotocenter"><img class="w3-image"
                     src="/Images/bazooka.jpg" width="640" height="424"
                     alt="Ensemble"><br> Vreugde na het kamermuziekconcert </div>
