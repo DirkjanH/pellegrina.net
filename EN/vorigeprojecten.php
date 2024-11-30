@@ -68,11 +68,6 @@
             <td valign="top">Pellegrina is what you need!!!!! An inspiring
                 musical summer in Czechia!</td>
         </tr>
-        <tr>
-            <td>Margriet van der Meij</td>
-            <td valign="top">Your playing gets a huge boost from it! I'm looking
-                forward to next year.</td>
-        </tr>
     </table>
     <!-- InstanceEndEditable -->
 </body>

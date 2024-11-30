@@ -75,11 +75,6 @@
             <td>Van Pellegrina moet je het hebben!!!!! Een inspirerende muzikale
                 zomervakantie in Tsjechi&euml;!</td>
         </tr>
-        <tr>
-            <td>Margriet van der Meij</td>
-            <td>Je spel krijgt er een enorme oppepper van! Ik kijk nu al weer
-                uit naar volgend jaar.</td>
-        </tr>
     </table>
     <!-- InstanceEndEditable -->
 </body>
