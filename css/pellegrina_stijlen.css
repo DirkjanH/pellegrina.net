@@ -398,8 +398,7 @@ nav#navcontainer {
 	background: #ffcccc;
 }
 #navcontainer a,
-#navcontainer div.w3-accordion,
-#navcontainer div.w3-dropdown-click {
+#navcontainer div.w3-accordion {
 	font-size: 15px;
 	width: 200px;
 	display: block;
@@ -409,8 +408,7 @@ nav#navcontainer {
 }
 #navcontainer a:link,
 #navcontainer a:visited,
-#navcontainer div.w3-accordion,
-#navcontainer div.w3-dropdown-click {
+#navcontainer div.w3-accordion {
 	color: black;
 }
 #navcontainer a:hover,
