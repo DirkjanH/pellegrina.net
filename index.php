@@ -238,14 +238,14 @@
                                     <?php echo $jaar ?>
                         </a></h1>
                         <p>Twee zomercursussen voor gevorderde amateurmusici en
-                            professionals:</a></p>
+                            professionals:</p>
                         <ol>
                             <li class="klein"><b>Dvořáks Gouden Spinnewiel &
                                     Haydns <i>Missa in tempore belli</i></b> -
                                 24 juli - 3 augustus</li>
                             <li class="klein"><b>Purcell & Handel</b> - 10 - 16
                                 augustus</li>
-                        </ol>
+                        </ol></a>
                     </div></a>
                     <div id="carroussel" class="w3-panel w3-section w3-half">
                         <img src="Images/slideshow/dvorak_tutors.jpg" alt=""
@@ -297,14 +297,14 @@
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
                         <p><a href="EN">Two summer schools for accomplished
-                                amateur musicians and professionals:</a></p>
+                                amateur musicians and professionals:</p>
                         <ol>
                             <li class="klein"><b>Dvořák's Golden Spinning Wheel
                                     & Haydn's <i>Missa in tempore belli</i></b>
                                 - 24 July - 3 August</li>
                             <li class="klein"><b>Purcell & Handel</b> - 10 - 16
                                 August</li>
-                        </ol>
+                        </ol></a>
                     </div>
             </div>
         </div>
