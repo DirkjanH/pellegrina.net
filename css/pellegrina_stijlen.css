@@ -397,9 +397,9 @@ nav#navcontainer {
 	border: none;
 	background: #ffcccc;
 }
-#navcontainer > a,
-#navcontainer > div.w3-accordion,
-#navcontainer > div.w3-dropdown-click {
+#navcontainer a,
+#navcontainer div.w3-accordion,
+#navcontainer div.w3-dropdown-click {
 	font-size: 15px;
 	width: 200px;
 	display: block;
@@ -407,18 +407,18 @@ nav#navcontainer {
 	border-bottom: 1px solid black;
 	text-decoration: none;
 }
-#navcontainer > a:link,
-#navcontainer > a:visited,
-#navcontainer > div.w3-accordion,
-#navcontainer > div.w3-dropdown-click {
+#navcontainer a:link,
+#navcontainer a:visited,
+#navcontainer div.w3-accordion,
+#navcontainer div.w3-dropdown-click {
 	color: black;
 }
-#navcontainer > a:hover,
-#navcontainer > a:active {
+#navcontainer a:hover,
+#navcontainer a:active {
 	background-color: #ff8080 !important;
 }
-#navcontainer > a.grijs:hover,
-#navcontainer > a.grijs:active {
+#navcontainer a.grijs:hover,
+#navcontainer a.grijs:active {
 	color: #666 !important;
 	background-color: #999 !important;
 }
