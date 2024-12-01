@@ -143,7 +143,7 @@ function check($input)
             }
 
             #navcontainer ul {
-                padding: 10 px;
+                padding: 0px 10 px;
                 list-style-type: none;
             }
 
