@@ -120,10 +120,11 @@ function check($input)
                 width: 210 px;
                 background-color: white;
                 display: block;
+                margin-bottom: 20px;
             }
 
             #navcontainer li {
-                padding-bottom: 20px;
+                padding-bottom: 0;
                 line-height: 1.2 em;
                 font-size: 13 px;
             }
