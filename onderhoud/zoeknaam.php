@@ -164,20 +164,23 @@ function check($input)
         <div id="inhoud" class="w3-panel">
             <form id="vinden" method="post"
                 action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <p>
-                    <input name="zoeknaam" type="text" id="zoeknaam" size="15"
-                        value="<?php echo $_POST['zoeknaam']; ?>"><label>Naam:</label><br>
-                    <input name="oude_dlnrs" type="checkbox" id="oude_dlnrs"
-                        value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
-                            echo 'checked'; ?>><label>Alle deelnemers van ooit:</label><br>
-                    <input type="radio" name="cursus" value="alles"
-                        onclick="javascript: submit();" <?php check('alles'); ?>><label>Alles</label><br>
-                    <input type="radio" name="cursus" value="1"
-                        onclick="javascript: submit();" <?php check('1'); ?>><br><label>1. Romantiek in CB</label><br>
-                    <input type="radio" name="cursus" value="2"
-                        onclick="javascript: submit();" <?php check('2'); ?>><label>2. Barok in NS </label><br>
-                    <input type="radio" name="cursus" value="nieuw"
-                        onclick="javascript: submit();" <?php check('nieuw'); ?>><label>Nieuwe inschrijvingen</label>
+                <p> label>Naam: </label><input name="zoeknaam" type="text"
+                        id="zoeknaam" size="15"
+                        value="<?php echo $_POST['zoeknaam']; ?>">
+                    <<br>
+                        <label>Alle deelnemers van ooit: </label><input
+                            name="oude_dlnrs" type="checkbox" id="oude_dlnrs"
+                            value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
+                                echo 'checked'; ?>><br>
+                        <input type="radio" name="cursus" value="alles"
+                            onclick="javascript: submit();" <?php check('alles'); ?>><label> Alles</label><br>
+                        <input type="radio" name="cursus" value="1"
+                            onclick="javascript: submit();" <?php check('1'); ?>><label> 1. Romantiek in CB</label><br>
+                        <input type="radio" name="cursus" value="2"
+                            onclick="javascript: submit();" <?php check('2'); ?>><label> 2. Barok in NS</label><br>
+                        <input type="radio" name="cursus" value="nieuw"
+                            onclick="javascript: submit();" <?php check('nieuw'); ?>><label> Nieuwe
+                            inschrijvingen</label>
                 </p>
                 <input name="zoek" type="hidden" id="zoek" value="zoek"> <?php if (isset($Inschr)) {
                     d($aantal_ins, $Inschr);
