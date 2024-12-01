@@ -128,6 +128,10 @@ function check($input)
                 font-size: 13 px;
             }
 
+            ul#navlist {
+                margin: 0;
+            }
+
             #navlist a:link,
             #navlist a:visited {
                 display: block;
