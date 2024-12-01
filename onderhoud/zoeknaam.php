@@ -1,6 +1,6 @@
 <?php
 // stel php in dat deze fouten weergeeft
-ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
@@ -8,7 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 $editFormAction = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . $_SERVER['QUERY_STRING'] : "");
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_GET, $_POST);
 
