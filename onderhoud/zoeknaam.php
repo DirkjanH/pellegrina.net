@@ -112,12 +112,12 @@ function check($input)
             div#navigatie {
                 display: block;
                 position: fixed;
-                width: 195 px;
-                font-size: 12 px;
+                width: 195px;
+                font-size: 12px;
             }
 
             #navcontainer {
-                width: 210 px;
+                width: 195px;
                 background-color: white;
                 display: block;
                 margin-bottom: 20px;
@@ -125,8 +125,8 @@ function check($input)
 
             #navcontainer li {
                 padding-bottom: 0;
-                line-height: 1.2 em;
-                font-size: 13 px;
+                line-height: 1.2em;
+                font-size: 13px;
             }
 
             ul#navlist {
