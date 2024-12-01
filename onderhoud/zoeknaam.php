@@ -123,7 +123,7 @@ function check($input)
             }
 
             #navcontainer li {
-                padding-bottom: 0;
+                padding-bottom: 20px;
                 line-height: 1.2 em;
                 font-size: 13 px;
             }
