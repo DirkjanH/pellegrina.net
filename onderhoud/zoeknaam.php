@@ -112,7 +112,7 @@ function check($input)
             div#navigatie {
                 display: block;
                 position: fixed;
-                width: 195px;
+                width: 210px;
                 font-size: 12px;
             }
 
