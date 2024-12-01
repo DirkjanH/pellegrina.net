@@ -111,7 +111,7 @@ function check($input)
     </ head>
 <body>
     <div id="inhoud" class="w3-panel">
-        < id="vinden" method="post"
+        <form id="vinden" method="post"
             action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <label> Naam: </label><input name="zoeknaam" type="text"
                 id="zoeknaam" size="15"
