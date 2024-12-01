@@ -121,7 +121,7 @@ function check($input)
                                     id="oude_dlnrs" value="1"
                                     <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '') echo 'checked'; ?>>
 
-                                <>
+</label>
 
                                     <label>
 
