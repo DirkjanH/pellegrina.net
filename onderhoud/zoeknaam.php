@@ -101,8 +101,10 @@ function check($input)
     </script>
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 
-    < style type="text/css"> div #navigatie { display: block; position: fixed;
-        float: left; width: 195 px; font-size: 12 px; } #navcontainer { width:
+    <style type="text/css"> 
+    div#navigatie { display: block; position: fixed;
+        float: left; width: 195 px; font-size: 12 px; } 
+        #navcontainer { width:
         210 px; background-color: white; display: block; } #navcontainer li {
         padding-bottom: 0; line-height: 1.3 em; font-size: 13 px; } #navlist
         a:link, #navlist a:visited { display: block; color: black; } #navlist
@@ -110,7 +112,8 @@ function check($input)
         color: white; } #navcontainer ul { padding: 10 px; list-style-type:
         none; } #navcontainer li.active { border-bottom: thin solid rgba(0, 0,
         0, 1); } #navcontainer li.active a { text-decoration: none;
-        }.NogNietBevestigd { background: Orange; } </style>
+        }
+        .NogNietBevestigd { background: Orange; } </style>
     </ head>
 <body>
     <div id="inhoud" class="w3-panel">
@@ -120,27 +123,27 @@ function check($input)
 
             < label> Naam:
 
-                < /label><input name="zoeknaam" type="text" id="zoeknaam"
+                </label><input name="zoeknaam" type="text" id="zoeknaam"
                         size="15" value="<?php echo $_POST['zoeknaam']; ?>">
 
                     < br>
 
-                        < label> Alle deelnemers van ooit:
+    <label> Alle deelnemers van ooit:
 
                             < /label><input name="oude_dlnrs" type="checkbox"
                                     id="oude_dlnrs" value="1"
                                     <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '') echo 'checked'; ?>>
 
-                                < p>
+                                <>
 
-                                    < label>
+                                    <label>
 
-                                        < input type="radio" name="cursus"
+                                        <input type="radio" name="cursus"
                                             value="alles"
                                             onclick="javascript: submit();"
                                             <?php check('alles'); ?>> Alles
 
-                                            < /label><br>
+                                            </label><br>
 
                                                 < label>
 
@@ -176,75 +179,72 @@ function check($input)
                                                                                 <?php check('nieuw'); ?>>
                                                                                 Nieuwe
                                                                                 inschrijvingen
-
-                                                                                <
+                                                                                <p
                                                                                     /label>
+                                                                                </p>
 
-                                                                                    < /
-                                                                                        p>
-
-                                                                                        < input
-                                                                                            name="zoek"
-                                                                                            type="hidden"
-                                                                                            id="zoek"
-                                                                                            value="zoek"> <?php if (isset($Inschr)) {
+                                                                                < input
+                                                                                    name="zoek"
+                                                                                    type="hidden"
+                                                                                    id="zoek"
+                                                                                    value="zoek"> <?php if (isset($Inschr)) {
 																												d($aantal_ins, $Inschr);
 																											?>
 
+                                                                                    <
+                                                                                        p>
+                                                                                        Kies
+                                                                                        een
+                                                                                        naam
+                                                                                        uit:
+
+                                                                                        < span
+                                                                                            class="klein">
+                                                                                            (totaal:
+                                                                                            <?php echo $aantal_ins; ?>)
+
                                                                                             <
-                                                                                                p>
-                                                                                                Kies
-                                                                                                een
-                                                                                                naam
-                                                                                                uit:
+                                                                                                /span>
+                                                                                                </p>
 
-                                                                                                < span
-                                                                                                    class="klein">
-                                                                                                    (totaal:
-                                                                                                    <?php echo $aantal_ins; ?>)
+                                                                                                < div
+                                                                                                    id="navcontainer">
 
-                                                                                                    <
-                                                                                                        /span>
-                                                                                                        </p>
-
-                                                                                                        < div
-                                                                                                            id="navcontainer">
-
-                                                                                                            < ul
-                                                                                                                id="navlist"> <?php
+                                                                                                    < ul
+                                                                                                        id="navlist"> <?php
 																																	foreach ($Inschr as $ins) { ?>
 
-                                                                                                                < li
-                                                                                                                    class="active">
+                                                                                                        < li
+                                                                                                            class="active">
 
-                                                                                                                    < a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)"
-                                                                                                                        ;>
-                                                                                                                        <?php
-																																		if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']]) echo '<span class="grijs">';
+                                                                                                            < a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)"
+                                                                                                                ;>
+                                                                                                                <?php
+																																		if (isset($grijs[$ins['DlnmrId']]) and )$grijs[$ins['DlnmrId']]) echo ('<span class="grijs">');
 																																		echo "{$ins['naam']} <span class=\"klein\">({$ins['DlnmrId']})</span>";
 																																		if (is_null($ins['voorl_bev'])) echo " <span class=\"NogNietBevestigd\">###</span>";
 																																		if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']]) echo '</span>'; ?>
 
-                                                                                                                        <
-                                                                                                                            /a>
-                                                                                                                            </li>
+                                                                                                                <
+                                                                                                                    /a>
+                                                                                                                    </li>
+                                                                                                                    <?php } ?>
+
+                                                                                                                    <
+                                                                                                                        /ul>
+
+                                                                                                                        < /
+                                                                                                                            div>
                                                                                                                             <?php } ?>
 
                                                                                                                             <
-                                                                                                                                /ul>
+                                                                                                                                /form>
 
                                                                                                                                 < /
                                                                                                                                     div>
-                                                                                                                                    <?php } ?>
 
                                                                                                                                     <
-                                                                                                                                        /form>
+                                                                                                                                        /body>
 
                                                                                                                                         < /
-                                                                                                                                            div>
-
-                                                                                                                                            <
-                                                                                                                                                /body>
-
-                                                                                                                                                < /
-                                                                                                                                                    html>
+                                                                                                                                            html>

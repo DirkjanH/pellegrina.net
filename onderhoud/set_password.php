@@ -1,12 +1,12 @@
 <?php
 //Connection statement
-require_once('../connections/inschrijf.php');
+require_once('/connections/inschrijf.php');
 
 //Aditional Functions
-require_once('../includes/functions.inc.php');
+require_once('/includes/functions.inc.php');
 
 //Stel utf8 (uitgebreide character set) in:
-mysql_query("SET NAMES UTF8");
+exec_query("SET NAMES UTF8");
 
 // begin Recordset
 $query_Recordset1 = "SELECT DlnmrId FROM dlnmr";
