@@ -120,7 +120,6 @@ function check($input)
                 width: 210 px;
                 background-color: white;
                 display: block;
-                margin-left: 20px;
             }
 
             #navcontainer li {
@@ -143,7 +142,6 @@ function check($input)
             }
 
             #navcontainer ul {
-                padding: 0px 10px;
                 list-style-type: none;
             }
 
