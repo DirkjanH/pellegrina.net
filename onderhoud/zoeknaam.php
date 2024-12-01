@@ -153,6 +153,7 @@ function check($input)
 
             #navcontainer li.active {
                 border-bottom: none;
+                width: 195px;
             }
 
             #navcontainer li.active a {
