@@ -165,28 +165,19 @@ function check($input)
             <form id="vinden" method="post"
                 action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <p>
-                    <label> Naam: </label><input name="zoeknaam" type="text"
-                        id="zoeknaam" size="15"
-                        value="<?php echo $_POST['zoeknaam']; ?>">
-                    <br>
-                    <label>Alle deelnemers van ooit:</label>
+                    <input name="zoeknaam" type="text" id="zoeknaam" size="15"
+                        value="<?php echo $_POST['zoeknaam']; ?>"><label>Naam:</label><br>
                     <input name="oude_dlnrs" type="checkbox" id="oude_dlnrs"
                         value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
-                            echo 'checked'; ?>>
-                    <br>
-                    <label>Alles</label>
+                            echo 'checked'; ?>><label>Alle deelnemers van ooit:</label><br>
                     <input type="radio" name="cursus" value="alles"
-                        onclick="javascript: submit();" <?php check('alles'); ?>>
-                    <br>
-                    <label>1. Romantiek in CB</label>
+                        onclick="javascript: submit();" <?php check('alles'); ?>><label>Alles</label><br>
                     <input type="radio" name="cursus" value="1"
-                        onclick="javascript: submit();" <?php check('1'); ?>><br>
-                    <label>2. Barok in NS </label>
+                        onclick="javascript: submit();" <?php check('1'); ?>><br><label>1. Romantiek in CB</label><br>
                     <input type="radio" name="cursus" value="2"
-                        onclick="javascript: submit();" <?php check('2'); ?>><br>
-                    <label>Nieuwe inschrijvingen </label>
+                        onclick="javascript: submit();" <?php check('2'); ?>><label>2. Barok in NS </label><br>
                     <input type="radio" name="cursus" value="nieuw"
-                        onclick="javascript: submit();" <?php check('nieuw'); ?>>
+                        onclick="javascript: submit();" <?php check('nieuw'); ?>><label>Nieuwe inschrijvingen</label>
                 </p>
                 <input name="zoek" type="hidden" id="zoek" value="zoek"> <?php if (isset($Inschr)) {
                     d($aantal_ins, $Inschr);
@@ -195,7 +186,7 @@ function check($input)
                             <?php echo $aantal_ins; ?>) </span>
                     </p>
                     <div id="navcontainer">
-                        <ul id="navlist"> 
+                        <ul id="navlist">
                             <?php foreach ($Inschr as $ins) { ?>
                                 <li class="active">
                                     <a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)"
@@ -208,13 +199,13 @@ function check($input)
                                             echo " <span class=\"NogNietBevestigd\">###</span>";
                                         if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
                                             echo '</span>'; ?>
-                                        </a>
+                                    </a>
                                 </li>
                             <?php } ?>
-                            </ul>
-                            </div>
-                        <?php } ?>
+                        </ul>
+                    </div>
+                <?php } ?>
             </form>
-            </div>
+        </div>
     </body>
     </html>
