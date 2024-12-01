@@ -161,7 +161,7 @@ function check($input)
         </style>
         </ head>
     <body>
-        <di id="inhoud" class="w3-panel">
+        <div id="inhoud" class="w3-panel">
             <form id="vinden" method="post"
                 action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <p>
