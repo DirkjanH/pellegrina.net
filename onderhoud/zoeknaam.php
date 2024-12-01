@@ -94,63 +94,52 @@ function check($input)
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aanbetaling bevestigen</title>
     <script type="text/javascript">
-    //<!--
+    <!--
     function ToonId(Id) {
         parent.mainFrame.document.zoek.DlnmrId.value = Id;
         parent.mainFrame.document.zoek.Submit.click();
     }
-    -- >
-    </script>
-    <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-    <style type="text/css">
-    <!--
-    div#navigatie {
+    -- > < /script> <
+    link rel = "stylesheet"
+    href = "/css/pellegrina_stijlen.css" > < style type = "text/css" > < !--
+    div #navigatie {
         display: block;
         position: fixed;
         float: left;
-        width: 195px;
-        font-size: 12px;
+        width: 195 px;
+        font - size: 12 px;
     }
-
     #navcontainer {
-        width: 210px;
-        background-color: white;
+        width: 210 px;
+        background - color: white;
         display: block;
     }
-
     #navcontainer li {
-        padding-bottom: 0;
-        line-height: 1.3em;
-        font-size: 13px;
+        padding - bottom: 0;
+        line - height: 1.3 em;
+        font - size: 13 px;
     }
-
-    #navlist a:link,
-    #navlist a:visited {
-        display: block;
-        color: black;
-    }
-
-    #navlist a:hover,
-    #navlist a:active {
-        display: block;
-        background-color: grey;
-        color: white;
-    }
-
+    #navlist a: link,
+        #navlist a: visited {
+            display: block;
+            color: black;
+        }
+    #navlist a: hover,
+        #navlist a: active {
+            display: block;
+            background - color: grey;
+            color: white;
+        }
     #navcontainer ul {
-        padding: 10px;
-        list-style-type: none;
+        padding: 10 px;
+        list - style - type: none;
     }
-
     #navcontainer li.active {
-        border-bottom: thin solid rgba(0, 0, 0, 1);
+        border - bottom: thin solid rgba(0, 0, 0, 1);
     }
-
     #navcontainer li.active a {
-        text-decoration: none;
-    }
-
-    .NogNietBevestigd {
+        text - decoration: none;
+    }.NogNietBevestigd {
         background: Orange;
     }
     -->
