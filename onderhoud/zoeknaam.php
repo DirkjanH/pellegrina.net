@@ -130,6 +130,7 @@ function check($input)
 
             ul#navlist {
                 margin: 0;
+                padding: 0;
             }
 
             #navlist a:link,
