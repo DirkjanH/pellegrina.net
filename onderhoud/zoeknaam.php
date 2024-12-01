@@ -153,11 +153,11 @@ function check($input)
 
             #navcontainer li.active {
                 border-bottom: none;
-                width: 195px;
             }
 
             #navcontainer li.active a {
                 text-decoration: none;
+                width: 195px;
             }
 
             .NogNietBevestigd {
