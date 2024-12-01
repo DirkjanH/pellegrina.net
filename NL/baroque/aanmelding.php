@@ -73,9 +73,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" -->
-            <?php // Haal de inleiding + het NAW formulier op
-                                                      require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_NL.php'; ?>
+            <!-- InstanceBeginEditable name="mainpage" --> <?php // Haal de inleiding + het NAW formulier op
+      require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_NL.php'; ?>
             <table class="formulier" id="instr_kop">
                 <tr>
                     <td class="linkerkolom"><input name="instrumentalist"
@@ -192,7 +191,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td></td>
                     <td><textarea name="stukken_i" rows="4"
                             cols="70"><?php
-                                                            if (isset($_POST['stukken_i'])) echo $_POST['stukken_i']; ?></textarea>
+                        if (isset($_POST['stukken_i'])) echo $_POST['stukken_i']; ?></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -276,7 +275,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td><strong>
                             <textarea name="stukken_z" rows="4"
                                 cols="70"><?php
-                                                            if (isset($_POST['stukken_z'])) echo $_POST['stukken_z']; ?></textarea>
+                          if (isset($_POST['stukken_z'])) echo $_POST['stukken_z']; ?></textarea>
                         </strong></td>
                 </tr>
                 <tr>
@@ -357,7 +356,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             de korting van
                             <?php echo euro($cursusdata['korting_eigen_acc']) ?>
                             krijg), maak ik graag ook gebruik van het
-                            gezamenlijke diner <span class="nadruk">(kosten
+                            gezamenlijke diner <span class="nadruk">(meerprijs
                                 <?php echo euro($cursusdata['diner']) ?>)</span></label>
                     </td>
                 </tr>
@@ -406,7 +405,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td><br> Anders, n.l.<br>
                         <textarea name="reistype"
                             rows="3"><?php
-                                                if (isset($_POST['reistype'])) echo $_POST['reistype']; ?></textarea>
+                        if (isset($_POST['reistype'])) echo $_POST['reistype']; ?></textarea>
                     </td>
                 </tr>
             </table>

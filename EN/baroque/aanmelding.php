@@ -69,8 +69,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" --> <?php // Haal de inleiding + het NAW formulier op
-      require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_EN.php'; ?>
+            <!-- InstanceBeginEditable name="mainpage" -->
+            <?php // Haal de inleiding + het NAW formulier op
+                                                      require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_EN.php'; ?>
             <table class="formulier" id="instr_kop">
                 <tr>
                     <td class="linkerkolom"><input name="instrumentalist"
@@ -352,8 +353,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             <?php if (isset($_POST['diner']) and $_POST['diner'] == 1) echo 'checked'; ?>><label>
                             Although I arrange my own accommodation (and get the
                             <?php echo euro_en($cursusdata['korting_eigen_acc']) ?>
-                            for it), I also like to make use of the communal
-                            dinner <span class="nadruk">(surcharge
+                            reduction for it), I also like to make use of the
+                            communal dinner <span class="nadruk">(surcharge
                                 <?php echo euro_en($cursusdata['diner']) ?>)</span></label>
                     </td>
                 </tr>
@@ -413,10 +414,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
             <table>
                 <tr>
                     <td width="33" class="linkerkolom"><input
-                            name="storting_fonds" type="checkbox" value="1" <?php if (
-                isset($_POST['storting_fonds'])
-                and $_POST['storting_fonds'] == 1
-              ) echo 'checked'; ?>></td>
+                            name="storting_fonds" type="checkbox" value="1"
+                            <?php if (
+                                                                isset($_POST['storting_fonds'])
+                                                                and $_POST['storting_fonds'] == 1
+                                                              ) echo 'checked'; ?>></td>
                     <td width="555">I am willing to contribute EUR <input
                             name="donatie" type=text id="donatie" value="<?php
                                                             if (isset($_POST['donatie']) and $_POST['donatie'] > 0) {
