@@ -197,8 +197,8 @@ function check($input)
                             <?php echo $aantal_ins; ?>) </span>
                     </p>
                     <div id="navcontainer">
-                        <ul id="navlist"> <?php
-                        foreach ($Inschr as $ins) { ?>
+                        <ul id="navlist"> 
+                            <?php foreach ($Inschr as $ins) { ?>
                                 <li class="active">
                                     <a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)"
                                         ;>
@@ -210,11 +210,11 @@ function check($input)
                                             echo " <span class=\"NogNietBevestigd\">###</span>";
                                         if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
                                             echo '</span>'; ?>
-                                        < /a>
+                                        </a>
                                 </li>
                             <?php } ?>
-                            < /ul>
-                            </ div>
+                            </ul>
+                            </div>
                         <?php } ?>
             </form>
             </div>
