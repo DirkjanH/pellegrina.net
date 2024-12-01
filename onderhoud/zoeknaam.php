@@ -151,7 +151,7 @@ function check($input)
             }
 
             #navcontainer li.active {
-                border-bottom: thin solid rgba(0, 0, 0, 1);
+                border-bottom: none;
             }
 
             #navcontainer li.active a {
