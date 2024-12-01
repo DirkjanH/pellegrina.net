@@ -105,7 +105,7 @@ function check($input)
 <body>
     <div id="inhoud" class="w3-panel">
 
-        <form id="vinden" method="post"
+        < id="vinden" method="post"
             action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
             <label> Naam:
@@ -121,7 +121,7 @@ function check($input)
                                     id="oude_dlnrs" value="1"
                                     <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '') echo 'checked'; ?>>
 
-</label>
+</label><br>
 
                                     <label>
 
