@@ -319,10 +319,10 @@ function getisp($ip = '')
                                     width="34" height="24" hspace="10"
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
-                        <p><a href="NL" target="_self">Two summer schools for
+                        <p><a href="EN" target="_self">Two summer schools for
                                 accomplished amateur musicians and
                                 professionals:</a></p>
-                        <ol><a href="NL" target="_self">
+                        <ol><a href="EN" target="_self">
                                 <li class="klein"><b>Dvořák's Golden Spinning
                                         Wheel & Haydn's <i>Missa in tempore
                                             belli</i></b> - 24 July - 3 August
