@@ -75,39 +75,39 @@ function lastID() {
 
 function bedrag_streep($bedrag)
 {
-    return number_format($bedrag, 0, ',', '.').',&#8211;';
+    if ($bedrag > 0) return number_format($bedrag, 0, ',', '.').',&#8211;';
 }
 
 function bedrag($bedrag)
 {
-    return number_format($bedrag, 0, ',', '.');
+    if ($bedrag > 0) return number_format($bedrag, 0, ',', '.');
 }
 
 function euro($bedrag)
 {
-    return '&euro;&nbsp;' . number_format($bedrag, 0, ',', '.');
+    if ($bedrag > 0) return '&euro;&nbsp;' . number_format($bedrag, 0, ',', '.');
 }
 
 function euro2($bedrag)
 {
-    $bedr = '&#8364;&nbsp;' . number_format($bedrag, 2, ',', '.');
+    if ($bedrag > 0) $bedr = '&#8364;&nbsp;' . number_format($bedrag, 2, ',', '.');
     return str_replace(',00', ',&#8212;', $bedr);
 }
 
 function euro_en($bedrag)
 {
-    return 'EUR&nbsp;' . number_format($bedrag, 0, ',', '.');
+    if ($bedrag > 0) return 'EUR&nbsp;' . number_format($bedrag, 0, ',', '.');
 }
 
 function euro_en2($bedrag)
 {
-    $bedr = 'EUR&nbsp;' . number_format($bedrag, 2, ',', '.');
+    if ($bedrag > 0) $bedr = 'EUR&nbsp;' . number_format($bedrag, 2, ',', '.');
     return str_replace(',00', ',&#8212;', $bedr);
 }
 
 function czk($bedrag)
 {
-    return 'CZK&nbsp;' . number_format($bedrag, 0, ',', '.');
+    if ($bedrag > 0) return 'CZK&nbsp;' . number_format($bedrag, 0, ',', '.');
 }
 
 ?>
