@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -13,7 +12,6 @@
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
-
 <body>
     <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Practical facts & prices
@@ -44,30 +42,28 @@
         We will then send you provisional confirmation of your registration.
         Deposits will of course be refunded to applicants who cannot be placed.
         The entire fee is to be paid on
-        <?php echo $cursusdata['betaaldatum']; ?> at the latest.
-    </p>
+        <?php echo $cursusdata['betaaldatum']; ?> at the latest. </p>
     <h3>Prices </h3>
     <p>The course fee -
         <strong><?php echo euro_en($cursusdata['prijs_volledig']); ?></strong>
         per person - includes accomodation in double rooms (with private
         bathroom) at the conservatoire, breakfast, lunch and (only on the first
         and last night) dinner. Travel and insurance expenses are not included.
-        Any bank and credit card charges are payable by the participant.
-    </p>
+        Any bank and credit card charges are payable by the participant. </p>
     <h4>Not yet 36? Student? Pay the reduced price! </h4>
-    <p>Applicants up to 35 years old and <em>fulltime</em> students at a
-        university or polytechnic pay
-        <strong><?php echo euro_en($cursusdata['prijs_student']); ?>&nbsp;</strong>
+    <p>Applicants up to 35 years old (at the start of the course for which they
+        have registered) and <em>fulltime</em> students at a university or
+        polytechnic pay
+        <strong><?php echo euro_en($cursusdata['prijs_student']); ?></strong>
         per course, per person. Please send us a copy or scan of your
         registration with an university or other institution of higher
-        education, or of your passport as proof of age.
-    </p>
+        education, or of your passport as proof of age. </p>
+    <h3>Accommodation</h3>
     <h4>Single rooms and your own accommodation </h4>
     <p>Single rooms (with private bathroom) at the conservatoire are available
         to an extra charge of
         <strong><?php echo euro_en($cursusdata['eenpers']); ?></strong>. If you
-        want a single room, please let us know at an early stage.
-    </p>
+        want a single room, please let us know at an early stage. </p>
     <p>There is also the possibility of booking your own accommodation in Ceské
         Bud&#283;jovice. There is a wide range of hotels, from classic in the
         center to modern just outside. Through <a
@@ -79,8 +75,7 @@
         arrange your own accommodation and breakfast, you get a discount of
         <strong><?php echo euro($cursusdata['korting_eigen_acc']); ?></strong>
         on the course fee. Lunch and (on the first and last night) dinner are
-        shared with all participants and included in the course fee.
-    </p>
+        shared with all participants and included in the course fee. </p>
     <h4>Reduction for early applicants </h4>
     <p>If you apply<strong> before
             <?php echo $cursusdata['beslisdatum']; ?></strong> you will receive
@@ -105,8 +100,7 @@
         expenses not included). You are invited to sit in on all rehearsals,
         concerts and other activities during the course. Also, there is plenty
         to see in and around &#268;esk&eacute; Bud&#283;jovice. Please email
-        <em>La Pellegrina </em>for more info.
-    </p>
+        <em>La Pellegrina </em>for more info. </p>
     <h4>Large instrument? Rent instead of bringing your own!</h4>
     <p>Sometimes it is more convenient for players of large instruments like
         cello and double bass to rent it locally than to pay an extra ticket.
@@ -114,15 +108,13 @@
         surcharge. Count with a rent of about 50 to 100 EUR for the duration of
         the course. It is recommended to request it at an early stage. With some
         luck you get to play the spare instrument of one of our teachers. For
-        string players, it is in principle wise to bring your own bow.
-    </p>
+        string players, it is in principle wise to bring your own bow. </p>
     <h4>Taking part in more than one course</h4>
     <p>If you want to participate in more than one course offered by <em>La
             Pellegrina</em> in the same year, we can offer you a
         <strong><?php echo euro_en($cursusdata['korting_meer'] * 2); ?>&nbsp;reduction</strong>.
         Please complete both forms, and click the checkbox at the option 'I wish
-        to register for both courses'.
-    </p>
+        to register for both courses'. </p>
     <h3>All prices at a glance</h3>
     <table class="w3-table-all">
         <tr>
@@ -139,7 +131,8 @@
                 <?php echo euro_en($cursusdata['prijs_volledig'] - $cursusdata['korting_vroeg']); ?>
             </td>
             <td class="geld">
-                <?php echo euro_en($cursusdata['prijs_volledig']); ?></td>
+                <?php echo euro_en($cursusdata['prijs_volledig']); ?>
+            </td>
         </tr>
         <tr>
             <td>Student participating in course incl. double room in the
@@ -148,7 +141,8 @@
                 <?php echo euro_en($cursusdata['prijs_student'] - $cursusdata['korting_vroeg']); ?>
             </td>
             <td class="geld">
-                <?php echo euro_en($cursusdata['prijs_student']); ?></td>
+                <?php echo euro_en($cursusdata['prijs_student']); ?>
+            </td>
         </tr>
         <tr>
             <td>Auditor incl. double room in the conservatoire</td>
@@ -166,17 +160,21 @@
             <td>Reduction for arranging your own accommodation and
                 breakfast<span class="nadruk"></span></td>
             <td class="geld">
-                <?php echo euro_en($cursusdata['korting_eigen_acc']); ?></td>
+                <?php echo euro_en($cursusdata['korting_eigen_acc']); ?>
+            </td>
             <td class="geld">
-                <?php echo euro_en($cursusdata['korting_eigen_acc']); ?></td>
+                <?php echo euro_en($cursusdata['korting_eigen_acc']); ?>
+            </td>
         </tr>
         <tr>
             <td>Reduction when participating in two courses <span
                     class="nadruk">(in total, not per course)</span></td>
             <td class="geld">
-                <?php echo euro_en($cursusdata['korting_meer'] * 2); ?></td>
+                <?php echo euro_en($cursusdata['korting_meer'] * 2); ?>
+            </td>
             <td class="geld">
-                <?php echo euro_en($cursusdata['korting_meer'] * 2); ?></td>
+                <?php echo euro_en($cursusdata['korting_meer'] * 2); ?>
+            </td>
         </tr>
     </table>
     <h4>Exchange rates calculator</h4>
@@ -222,9 +220,7 @@
         are obliged to pay the entire course fee. It is therefore advisable to
         take out a cancellation insurance. </p>
     <p><i>La Pellegrina</i> retains the right to change tutors and programmes if
-        such changes are considered necessary.
-        <!-- InstanceEndEditable -->
+        such changes are considered necessary. <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
-
 </html>

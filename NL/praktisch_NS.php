@@ -1,14 +1,12 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <title>Naamloos document</title>
 </head>
-
 <body>
     <h2 class="begin">Praktische gegevens & prijzen
         "<?php echo $cursusdata['cursusnaam_nl']; ?>"</h2>
@@ -23,8 +21,7 @@
         <strong><?php echo $cursusdata['beslisdatum']; ?></strong> wordt bekend
         gemaakt wie er geplaatst kan worden en wie niet. In verband met het
         beperkte aantal plaatsen is het dus aan te raden zo snel mogelijk in te
-        schrijven..
-    </p>
+        schrijven.. </p>
     <p class="citaat">Robert Klotz: &ldquo;Ik vloog een oceaan over om La
         Pellegrina bij te wonen. Zou zwemmen om er volgend jaar weer heen te
         kunnen.&rdquo;</p>
@@ -39,8 +36,7 @@
         Als je niet geplaatst kunt worden, wordt de aanbetaling uiteraard
         teruggestort. Het volledige cursusgeld moet uiterlijk op
         <?php echo $cursusdata['betaaldatum']; ?> betaald zijn. Alle eventuele
-        bank en creditcardkosten zijn voor rekening van de deelnemer.
-    </p>
+        bank en creditcardkosten zijn voor rekening van de deelnemer. </p>
     <p class="citaat">Marrie Kardol: &ldquo;De prachtige inspirerende omgeving,
         het ordelijke verloop van het programma, de goede voorbereiding en de
         vriendelijke en prettige manier waarop de tutors omgaan met de
@@ -56,8 +52,16 @@
         <strong><?php echo euro($cursusdata['korting_vroeg']); ?>
             korting</strong>. Als je kampeert of zelf je accommodatie regelt
         krijg je korting; eenpersoons kamers zijn mogelijk tegen een
-        meerbetaling.
-    </p>
+        meerbetaling. </p>
+    <h4>Aanzienlijke korting voor studenten en jongeren </h4>
+    <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger
+        beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
+        waarvoor ze zich hebben aangemeld), krijgen een aanzienlijke korting en
+        betalen
+        <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>
+        cursusgeld per persoon, op basis van een tweepersoons kamer. Stuur bij
+        inschrijving een kopie of een scan van het inschrijvingsbewijs (of van
+        je paspoort als bewijs van je leeftijd) mee. </p>
     <h3>Accommodatie via <em>La Pellegrina</em></h3>
     <h4>Een- en tweepersoons kamers in Klooster Nieuw Sion</h4>
     <p>De meeste deelnemers verblijven in klooster Nieuw Sion. Er zijn zeven
@@ -132,9 +136,11 @@
                     en koffie/thee is wel inbegrepen, ontbijt en avondeten
                     niet)</span></td>
             <td class="geld">
-                <?php echo euro($cursusdata['korting_eigen_acc']); ?></td>
+                <?php echo euro($cursusdata['korting_eigen_acc']); ?>
+            </td>
             <td class="geld">
-                <?php echo euro($cursusdata['korting_eigen_acc']); ?></td>
+                <?php echo euro($cursusdata['korting_eigen_acc']); ?>
+            </td>
         </tr>
         <tr>
             <td>Toeslag voor het gezamenlijke diner <span class="nadruk">(alleen
@@ -148,9 +154,11 @@
                     Pellegrina</em> <span class="nadruk">(binnen één
                     zomer)</span></td>
             <td class="geld">
-                <?php echo euro($cursusdata['korting_meer'] * 2); ?></td>
+                <?php echo euro($cursusdata['korting_meer'] * 2); ?>
+            </td>
             <td class="geld">
-                <?php echo euro($cursusdata['korting_meer'] * 2); ?></td>
+                <?php echo euro($cursusdata['korting_meer'] * 2); ?>
+            </td>
         </tr>
     </table>
     <h3> Voertaal</h3>
@@ -171,12 +179,10 @@
         is het niet mogelijk je aanbetaling te retourneren. Annuleer je na
         <?php echo $cursusdata['betaaldatum']; ?>, dan ben je het totale
         cursusgeld verschuldigd. Het is aan te raden tijdig een
-        annuleringsverzekering af te sluiten.
-    </p>
+        annuleringsverzekering af te sluiten. </p>
     <p><i>La Pellegrina</i> behoudt zich het recht voor om, indien noodzakelijk,
         docenten en programma te wijzigen.</p>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
-
 </html>

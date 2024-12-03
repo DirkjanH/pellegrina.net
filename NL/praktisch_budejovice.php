@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -13,7 +12,6 @@
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
-
 <body>
     <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Praktische gegevens & prijzen
@@ -42,8 +40,7 @@
         Utrecht. Je ontvangt dan een voorlopige bevestiging van inschrijving.
         Als je niet geplaatst kunt worden, wordt de aanbetaling uiteraard
         teruggestort. Het volledige cursusgeld moet uiterlijk op
-        <?php echo $cursusdata['betaaldatum']; ?> betaald zijn.
-    </p>
+        <?php echo $cursusdata['betaaldatum']; ?> betaald zijn. </p>
     <h3>Prijzen</h3>
     <p>De prijs van het project,
         <strong><?php echo euro($cursusdata['prijs_volledig']); ?></strong>&nbsp;per
@@ -51,23 +48,23 @@
         sanitair), ontbijt, lunch en op de eerste en laatste dag ook het
         avondeten. De reis is niet inbegrepen, evenals eventuele verzekeringen.
         Alle eventuele bank en creditcardkosten zijn voor rekening van de
-        deelnemer.
-    </p>
+        deelnemer. </p>
     <h4>Aanzienlijke korting voor studenten en jongeren </h4>
     <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger
-        beroepsonderwijs en deelnemers t/m 35 jaar krijgen een aanzienlijke
-        korting en betalen
+        beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
+        waarvoor ze zich hebben aangemeld). krijgen een aanzienlijke korting en
+        betalen
         <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>
         cursusgeld per persoon, op basis van een tweepersoons kamer in het
         conservatorium. Stuur bij inschrijving een kopie of een scan van het
         inschrijvingsbewijs (of van je paspoort als bewijs van je leeftijd) mee.
     </p>
+    <h3>Accommodatie</h3>
     <h4>Eenpersoons kamers en eigen accommodatie</h4>
     <p>Er zijn ook eenpersoons kamers (uiteraard ook met eigen sanitair) in het
         conservatorium beschikbaar tegen een meerprijs van
         <strong><?php echo euro($cursusdata['eenpers']); ?></strong>. Vroege
-        aanmelding is hiervoor aan te raden.
-    </p>
+        aanmelding is hiervoor aan te raden. </p>
     <p>Daarnaast is er de mogelijkheid om zelf accommodatie in &#268;esk&eacute;
         Bud&#283;jovice te boeken. Er is een ruime keus aan hotels, van klassiek
         in het centrum tot modern net erbuiten. Via <a
@@ -80,8 +77,7 @@
         <strong><?php echo euro($cursusdata['korting_eigen_acc']); ?></strong>
         op de cursusprijs. De lunch en op de eerste en laatste dag ook het
         avondeten zijn gemeenschappelijk met alle deelnemers en dus inbegrepen
-        in de cursusprijs.
-    </p>
+        in de cursusprijs. </p>
     <h4>Reductie voor tijdig inschrijven </h4>
     <p>Als je je <strong>v&oacute;&oacute;r
             <?php echo $cursusdata['beslisdatum']; ?></strong> inschrijft, krijg
@@ -107,8 +103,7 @@
         Er zijn volop mogelijkheden voor wandelen, fietsen, zwemmen,
         kano&euml;n, kastelen bezoeken en gewoon niets doen. Inlichtingen
         hierover zijn bij <a href="contact.php"><i>La Pellegrina</i></a> te
-        verkrijgen.
-    </p>
+        verkrijgen. </p>
     <h4>Groot instrument? Huren in plaats van meenemen!</h4>
     <p>Soms is het handiger voor bespelers van grote instrumenten als celli,
         contrabassen en viola da gamba's er een ter plekke te huren dan een
@@ -163,17 +158,20 @@
         <tr>
             <td>Korting voor eigen accommodatie en ontbijt</td>
             <td class="geld"><?php echo euro($cursusdata['korting_eigen_acc']);
-                                ?></td>
+            ?></td>
             <td class="geld">
-                <?php echo euro($cursusdata['korting_eigen_acc']); ?></td>
+                <?php echo euro($cursusdata['korting_eigen_acc']); ?>
+            </td>
         </tr>
         <tr>
             <td>Korting voor deelname aan twee cursussen<span class="nadruk">
                     (in totaal, niet per cursus)</span></td>
             <td class="geld">
-                <?php echo euro($cursusdata['korting_meer'] * 2); ?></td>
+                <?php echo euro($cursusdata['korting_meer'] * 2); ?>
+            </td>
             <td class="geld">
-                <?php echo euro($cursusdata['korting_meer'] * 2); ?></td>
+                <?php echo euro($cursusdata['korting_meer'] * 2); ?>
+            </td>
         </tr>
     </table>
     <h3> Voertaal</h3>
@@ -202,12 +200,10 @@
         is het niet mogelijk je aanbetaling te retourneren. Annuleer je na
         <?php echo $cursusdata['betaaldatum']; ?>, dan ben je het totale
         cursusgeld verschuldigd. Het is aan te raden tijdig een
-        annuleringsverzekering af te sluiten.
-    </p>
+        annuleringsverzekering af te sluiten. </p>
     <p><i>La Pellegrina</i> behoudt zich het recht voor om, indien noodzakelijk,
         docenten en programma te wijzigen.</p>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
-
 </html>
