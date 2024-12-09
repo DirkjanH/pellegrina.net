@@ -19,10 +19,15 @@
     <h3>Toelating</h3>
     <p> Omdat bij het samenstellen van de groep wordt gestreefd naar een
         evenwichtig geheel, wordt bij toelating in de eerste plaats gekeken naar
-        niveau. Bij gelijkwaardige kandidaten wordt de voorkeur gegeven aan
-        degene die zich het eerst aanmeldde. Wanneer je twijfelt over je niveau,
-        neem dan <a href="contact.php">contact op</a> met <i>La Pellegrina</i>.
-    </p>
+        niveau, in het belang van alle deelnemers. Vaak moeten we kiezen uit een
+        te groot aanbod van belangstellenden voor een bepaald instrument, met
+        name bij de blazers. We letten dan in de eerste plaats op muzikale
+        opleiding, ervaring en inzicht. Het is daarom belangrijk om je muzikale
+        niveau goed te omschrijven. Bij kandidaten voor een bepaald instrument
+        of stemsoort met een gelijkwaardig niveau heeft uiteraard degene die
+        zich het eerst heeft aangemeld voorrang. Wanneer je twijfelt over je
+        niveau, neem dan <a href="contact.php">contact op</a> met <i>La
+            Pellegrina</i>. </p>
     <p>Om bovenstaande reden worden de aanmeldingen in eerste instantie
         verzameld. Op <?php echo $cursusdata['beslisdatum']; ?> wordt bekend
         gemaakt wie er geplaatst kan worden en wie niet. In verband met het

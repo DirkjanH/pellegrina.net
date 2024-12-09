@@ -18,11 +18,16 @@
         "<?php echo $cursusdata['cursusnaam_en']; ?>"</h2>
     <h3>Admission and confirmation</h3>
     <p>It is our aim to form groups well-balanced according to their musical
-        level. This is our first criterion when selecting participants. The
-        second is the date of registration. If two candidates are of equal level
-        for one place, preference will be given to the candidate who applied
-        first. Please <a href="contact.php">contact</a> <em>La Pellegrina</em>
-        if you have any doubts about your musical level or ability.</p>
+        level, for the benefit of all participants. This is our first criterion
+        when selecting participants. The second is the date of registration. If
+        two candidates are of equal level for one place, preference will be
+        given to the candidate who applied first. Often we have to choose from
+        too many applicants for a particular instrument, especially for wind
+        instruments. We then look in the first place at musical education,
+        experience and insight. It is therefore important to describe your
+        musical level well. Please <a href="contact.php">contact</a> <em>La
+            Pellegrina</em> if you have any doubts about your musical level or
+        ability.</p>
     <p>For the above reasons all registrations will first be collected. Final
         confirmation of participation cannot be given until
         <?php echo $cursusdata['beslisdatum']; ?>. In view of the limited number

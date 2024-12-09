@@ -12,16 +12,23 @@
         "<?php echo $cursusdata['cursusnaam_nl']; ?>"</h2>
     <h3>Toelating</h3>
     <p> Omdat bij het samenstellen van de groep wordt gestreefd naar een
-        evenwichtig geheel wordt bij toelating in de eerste plaats gekeken naar
-        niveau. Bij gelijkwaardige kandidaten wordt de voorkeur gegeven aan
-        degene die zich het eerst heeft aanmeld. Wanneer je twijfelt over je
-        niveau, neem dan <a href="contact.php">contact op</a> met <i>La
-            Pellegrina</i>. Om bovenstaande reden worden de aanmeldingen in
-        eerste instantie verzameld. Op
-        <strong><?php echo $cursusdata['beslisdatum']; ?></strong> wordt bekend
+        evenwichtig geheel, wordt bij toelating in de eerste plaats gekeken naar
+        niveau, in het belang van alle deelnemers. Vaak moeten we kiezen uit een
+        te groot aanbod van belangstellenden voor een bepaald instrument, met
+        name bij blazers en bepaalde stemtypen. We letten dan in de eerste
+        plaats op muzikale opleiding, ervaring en inzicht. Het is daarom
+        belangrijk om je muzikale niveau goed te omschrijven. Bij kandidaten
+        voor een bepaald instrument of stemsoort met een gelijkwaardig niveau
+        heeft uiteraard degene die zich het eerst heeft aangemeld voorrang.
+        Wanneer je twijfelt over je niveau, neem dan <a
+            href="contact.php">contact op</a> met <i>La Pellegrina</i>. </p>
+    <p>Om bovenstaande reden worden de aanmeldingen in eerste instantie
+        verzameld. Op <?php echo $cursusdata['beslisdatum']; ?> wordt bekend
         gemaakt wie er geplaatst kan worden en wie niet. In verband met het
         beperkte aantal plaatsen is het dus aan te raden zo snel mogelijk in te
-        schrijven.. </p>
+        schrijven. Inschrijving na <?php echo $cursusdata['beslisdatum']; ?> is
+        nog mogelijk, maar uitsluitend voor de plaatsen die dan nog vacant zijn
+        en vermeld op deze website.</p>
     <p class="citaat">Robert Klotz: &ldquo;Ik vloog een oceaan over om La
         Pellegrina bij te wonen. Zou zwemmen om er volgend jaar weer heen te
         kunnen.&rdquo;</p>
