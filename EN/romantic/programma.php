@@ -19,7 +19,6 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -29,9 +28,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <script>
-        ! function(f, b, e, v, n, t, s) {
+        ! function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
-            n = f.fbq = function() {
+            n = f.fbq = function () {
                 n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
                     arguments)
             };
@@ -53,14 +52,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
 </head>
-
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-                                        echo $navigatie;
-                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
-                                        ?> <div id="main">
+    echo $navigatie;
+    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
+    ?>
+        <div id="main">
             <div class="cols2">
                 <h2>Programme details</h2>
                 <h3>Dvořák - Zlatý kolovrat - The Golden Spinning Wheel</h3>
@@ -79,8 +78,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>In the 2025 summer school we will perform <i>The Golden
                         Spinning Wheel</i>. Our original idea of performing
                     <i>The Spectre’s Bride</i> turned out not be possible due to
-                    restrictions at our concert venue, the cathedral.
-                </p>
+                    restrictions at our concert venue, the cathedral. </p>
                 <h4><i>The Golden Spinning Wheel</i></h4>
                 <img src="\Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
                     class="fotocenter" style="clear:both;">
@@ -170,6 +168,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     with unusually prominent for trumpets and timpani. These
                     were meant to evoke the threat of war and the triumph of
                     victory.</p>
+                <p>This piece has been long thought to express an anti-war
+                    sentiment, even though there is no explicit message in the
+                    text itself, and no clear indication from Haydn that this
+                    was his intention. What is found in the score is a very
+                    unsettled nature to the music, not normally associated with
+                    Haydn, which has led scholars to the conclusion that it is
+                    anti-war in nature. This is especially noticed in the
+                    Benedictus and Agnus Dei. During the time of the composition
+                    of the Mass, the Austrian government had issued a decree in
+                    1796, that "no Austrian should speak of peace until the
+                    enemy is driven back to its customary borders." Whether
+                    this is enough to call it anti-war in nature is certainly
+                    debatable because most of the mass is of a lyrically joyful
+                    nature.</p>
                 <h4> Structure and characteristics </h4>
                 <p> The structure of the Mass follows the traditional parts of
                     the Mass: </p>
@@ -195,8 +207,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         followed by a thundering fast movement on the words
                         <i>Pleni sunt coeli</i>, again accompanied by the
                         trumpets and timpani. In accordance with liturgical
-                        custom, the Sanctus is short.
-                    </li>
+                        custom, the Sanctus is short. </li>
                     <li>The Benedictus is an andante with an ominous character
                         that begins in c minor and slowly moves to C major on
                         the words <i>Osanna in excelsis</i>.</li>
@@ -223,8 +234,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         in a unique way, accompanied by timpani, as if one could
                         already hear the enemy coming in the distance). The mass
                         ends with a fanfare-like <i>Allegro con spirito</i> with
-                        a most compellingly sung <i>Dona nobis pacem</i>.
-                    </li>
+                        a most compellingly sung <i>Dona nobis pacem</i>. </li>
                 </ul>
                 <h4>Ensemble formation</h4>
                 <p> The <i>Missa in tempore belli</i> is written for two
@@ -243,5 +253,4 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-
 </html>
