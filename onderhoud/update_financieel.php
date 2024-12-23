@@ -284,7 +284,7 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 	$mail->Body = $emogrifier;
 
 	$mail->AltBody = strip_tags($emogrifier);
-F
+
 	d($mail);
 
 	if ($_POST['afgewezen'] != 'on' or $insch['afgewezen' != 1]) {
