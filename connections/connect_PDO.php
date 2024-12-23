@@ -65,7 +65,7 @@ function exec_query($query) {
 function quote($value) {
 	global $db;
 	//d($value);
-	return $db->quote($value);
+	if (!is_null($value)) return $db->quote($value);
 }
 
 function lastID() {
