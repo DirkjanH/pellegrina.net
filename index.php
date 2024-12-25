@@ -1,36 +1,37 @@
 <?php // stel php in dat deze fouten weergeeft //ini_set('display_errors', 1);
 error_reporting(E_ALL);
 require_once $_SERVER["DOCUMENT_ROOT"]
-	. '/vendor/autoload.php';
+    . '/vendor/autoload.php';
 
 use function PHP81_BC\strftime;
 
 Kint::$enabled_mode = false;
 require_once($_SERVER['DOCUMENT_ROOT']
-	. '/includes/includes2025.php');
+    . '/includes/includes2025.php');
 function getisp($ip = '')
 {
-	if ($ip == '')
-		$ip = $_SERVER['REMOTE_ADDR'];
-	$longisp = @gethostbyaddr($ip);
-	$isp = explode(
-		'.',
-		$longisp
-	);
-	$isp = array_reverse($isp);
-	$tmp = $isp[1];
-	if (preg_match("/\<(org?|com?|net)\>/i", $tmp)) {
-		$myisp = $isp[2] . '.' .
-			$isp[1] . '.' . $isp[0];
-	} else {
-		$myisp = $isp[1] . '.' . $isp[0];
-	}
-	preg_match("/[0-9]{1,3}\.[0-9]{1,3}/", $myisp);
-	return $myisp;
+    if ($ip == '')
+        $ip = $_SERVER['REMOTE_ADDR'];
+    $longisp = @gethostbyaddr($ip);
+    $isp = explode(
+        '.',
+        $longisp
+    );
+    $isp = array_reverse($isp);
+    $tmp = $isp[1];
+    if (preg_match("/\<(org?|com?|net)\>/i", $tmp)) {
+        $myisp = $isp[2] . '.' .
+            $isp[1] . '.' . $isp[0];
+    } else {
+        $myisp = $isp[1] . '.' . $isp[0];
+    }
+    preg_match("/[0-9]{1,3}\.[0-9]{1,3}/", $myisp);
+    return $myisp;
 } ?>
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
     <title>La Pellegrina Music Summer Schools</title>
     <meta name="Description"
@@ -58,104 +59,105 @@ function getisp($ip = '')
     <meta name="theme-color" content="#ffffff">
     <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <link href="/css/openingspagina.css" rel="stylesheet" type="text/css">
-	<link href="css/banner.css" rel="stylesheet" type="text/css">
+    <link href="css/banner.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-    <!--
-    body,
-    td,
-    th {
-        background-color: #CCC;
-        text-align: center;
-        color: #000000;
-        font: 700 normal 24px;
-        font-family: 'Alegreya Sans', Verdana, sans-serif;
-     }
+        <!--
+        body,
+        td,
+        th,
+        p {
+            background-color: #CCC;
+            text-align: center;
+            color: #000000;
+            font: 700 normal 24px;
+            font-family: 'Alegreya Sans', Verdana, sans-serif;
+        }
 
-    h1 {
-        font-size: 18px;
-        color: #35191C;
-        margin-top: 2.0em;
-    }
+        h1 {
+            font-size: 18px;
+            color: #35191C;
+            margin-top: 2.0em;
+        }
 
-    h2 {
-        color: #901324;
-        text-align: left;
-    }
+        h2 {
+            color: #901324;
+            text-align: left;
+        }
 
-    h3 {
-        color: #739D44;
-        font-size: 22px;
-    }
+        h3 {
+            color: #739D44;
+            font-size: 22px;
+        }
 
-    h4 {
-        color: #07A900;
-        font-size: 18px;
-    }
+        h4 {
+            color: #07A900;
+            font-size: 18px;
+        }
 
-    h5 {
-        font-size: 110%;
-        color: #569442;
-        text-align: center;
-    }
+        h5 {
+            font-size: 110%;
+            color: #569442;
+            text-align: center;
+        }
 
-    h6 {
-        font-size: 110%;
-        color: black;
-        margin-bottom: -10px;
-    }
+        h6 {
+            font-size: 110%;
+            color: black;
+            margin-bottom: -10px;
+        }
 
-    p {
-        font-size: 18px;
-    }
+        p {
+            font-size: 18px;
+        }
 
-    a:link,
-    a:visited {
-        color: #000000;
-        text-decoration: none;
-        font-weight: bold;
-    }
+        a:link,
+        a:visited {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    img {
-        border-style: none;
-    }
+        img {
+            border-style: none;
+        }
 
-    a:hover,
-    a:active {
-        text-decoration: none;
-        color: #990033;
-        font-weight: bolder;
-    }
+        a:hover,
+        a:active {
+            text-decoration: none;
+            color: #990033;
+            font-weight: bolder;
+        }
 
-    div#home {
-        border: thin;
-    }
+        div#home {
+            border: thin;
+        }
 
-    div#carroussel {
-        display: flex;
-        justify-content: center;
-    }
+        div#carroussel {
+            display: flex;
+            justify-content: center;
+        }
 
-    div#envelop {
-        position: relative;
-        clear: both !important;
-        margin: 0px;
-        border-style: none;
-    }
+        div#envelop {
+            position: relative;
+            clear: both !important;
+            margin: 0px;
+            border-style: none;
+        }
 
-    img.mySlides {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-    }
+        img.mySlides {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+        }
 
-    #teller {
-        font: italic 50%;
-        color: #999999;
-        text-align: center;
-    }
+        #teller {
+            font: italic 50%;
+            color: #999999;
+            text-align: center;
+        }
 
-    ol {
-        padding: 0px;
-    }
-    -->
+        ol {
+            padding: 0px;
+        }
+        -->
     </style>
     <!--[if gte IE 9]>
   <style type="text/css">
@@ -171,31 +173,32 @@ function getisp($ip = '')
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
     <div id="inhoud" class="w3-content">
         <div id="envelop" class="w3-hide-small w3-hide-medium">
@@ -232,21 +235,20 @@ function getisp($ip = '')
             </div>
         </div>
         <div id="home"
-            class="w3-container w3-card-4 w3-margin-top w3-white w3-content w3-padding"
-            style="max-width:1200px">
+            class="w3-container w3-card-4 w3-margin-top w3-white w3-content w3-padding">
             <div class="w3-center w3-container"><img
                     src="Images/Logos/LP_nieuw.png" alt="La Pellegrina"
                     style="max-width:600px;width:100%"></div>
             <div id="fb-root"></div>
             <script>
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
             </script>
             <div class="w3-card-8">
                 <div class="w3-row-padding w3-light-grey">
@@ -294,22 +296,22 @@ function getisp($ip = '')
                         <img src="Images/slideshow/zangers.jpg" alt=""
                             class="mySlides" />
                         <script>
-                        var myIndex = 0;
-                        carousel();
+                            var myIndex = 0;
+                            carousel();
 
-                        function carousel() {
-                            var i;
-                            var x = document.getElementsByClassName("mySlides");
-                            for (i = 0; i < x.length; i++) {
-                                x[i].style.display = "none";
+                            function carousel() {
+                                var i;
+                                var x = document.getElementsByClassName("mySlides");
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                myIndex++;
+                                if (myIndex > x.length) {
+                                    myIndex = 1
+                                }
+                                x[myIndex - 1].style.display = "block";
+                                setTimeout(carousel, 3000);
                             }
-                            myIndex++;
-                            if (myIndex > x.length) {
-                                myIndex = 1
-                            }
-                            x[myIndex - 1].style.display = "block";
-                            setTimeout(carousel, 3000);
-                        }
                         </script>
                     </div>
                     <div
@@ -356,212 +358,212 @@ function getisp($ip = '')
                 data-show-faces="true" data-font="verdana"></div>
             <script src="https://code.jquery.com/jquery-latest.js"></script>
             <script type="text/javascript">
-            $(window).load(function() {
-                var pages = $("div#bannerteksten div"),
-                    current = 0;
-                var currentPage, nextPage;
-                var timeoutID;
-                var handler = function() {
-                    currentPage = pages.eq(current);
-                    if (current >= pages.length - 1) current = 0;
-                    else current = current + 1;
-                    nextPage = pages.eq(current);
-                    currentPage.fadeOut('quick', function() {
-                        nextPage.fadeIn('quick',
-                    function() {
-                            nextPage.css("opacity",
-                                1);
-                            currentPage.hide();
-                            currentPage.css(
-                                "opacity", 0);
-                            $('div.banner div')
-                                .bind('', handler);
-                        });
-                    });
-                    timeoutID = setTimeout(function() {
-                        handler();
-                    }, 4000);
-                }
-                timeoutID = setTimeout(function() {
-                    handler();
-                }, 0);
-            });
-            </script>
-            <script>
-            $(window).load(function() {
-                var pages = $('#container li'),
-                    current = 0;
-                var currentPage, nextPage;
-                var timeoutID;
-                var buttonClicked = 0;
-                var handler1 = function() {
-                    buttonClicked = 1;
-                    $('#container .button').unbind('click');
-                    currentPage = pages.eq(current);
-                    if ($(this).hasClass('prevButton')) {
-                        if (current <= 0) current = pages.length -
-                        1;
-                        else current = current - 1;
-                    } else {
-                        if (current >= pages.length - 1) current =
-                        0;
-                        else current = current + 1;
-                    }
-                    nextPage = pages.eq(current);
-                    currentPage.fadeTo('slow', 0.3, function() {
-                        nextPage.fadeIn('slow', function() {
-                            nextPage.css("opacity",
-                                1);
-                            currentPage.hide();
-                            currentPage.css(
-                                "opacity", 1);
-                            $('#container .button')
-                                .bind('click',
-                                    handler1);
-                        });
-                    });
-                }
-                var handler2 = function() {
-                    if (buttonClicked == 0) {
-                        $('#container .button').unbind('click');
+                $(window).load(function() {
+                    var pages = $("div#bannerteksten div"),
+                        current = 0;
+                    var currentPage, nextPage;
+                    var timeoutID;
+                    var handler = function() {
                         currentPage = pages.eq(current);
-                        if (current >= pages.length - 1) current =
-                        0;
+                        if (current >= pages.length - 1) current = 0;
                         else current = current + 1;
                         nextPage = pages.eq(current);
-                        currentPage.fadeTo('slow', 0.5, function() {
-                            nextPage.fadeIn('slow',
+                        currentPage.fadeOut('quick', function() {
+                            nextPage.fadeIn('quick',
                                 function() {
-                                    nextPage.css(
-                                        "opacity", 1
-                                        );
+                                    nextPage.css("opacity",
+                                        1);
                                     currentPage.hide();
                                     currentPage.css(
-                                        "opacity", 1
-                                        );
-                                    $('#container .button')
-                                        .bind('click',
-                                            handler1);
+                                        "opacity", 0);
+                                    $('div.banner div')
+                                        .bind('', handler);
                                 });
                         });
                         timeoutID = setTimeout(function() {
-                            handler2();
-                        }, 5000);
+                            handler();
+                        }, 4000);
                     }
-                }
-                $('#container .button').click(function() {
-                    clearTimeout(timeoutID);
-                    handler1();
+                    timeoutID = setTimeout(function() {
+                        handler();
+                    }, 0);
                 });
-                timeoutID = setTimeout(function() {
-                    handler2();
-                }, 3500);
-            });
+            </script>
+            <script>
+                $(window).load(function() {
+                    var pages = $('#container li'),
+                        current = 0;
+                    var currentPage, nextPage;
+                    var timeoutID;
+                    var buttonClicked = 0;
+                    var handler1 = function() {
+                        buttonClicked = 1;
+                        $('#container .button').unbind('click');
+                        currentPage = pages.eq(current);
+                        if ($(this).hasClass('prevButton')) {
+                            if (current <= 0) current = pages.length -
+                                1;
+                            else current = current - 1;
+                        } else {
+                            if (current >= pages.length - 1) current =
+                                0;
+                            else current = current + 1;
+                        }
+                        nextPage = pages.eq(current);
+                        currentPage.fadeTo('slow', 0.3, function() {
+                            nextPage.fadeIn('slow', function() {
+                                nextPage.css("opacity",
+                                    1);
+                                currentPage.hide();
+                                currentPage.css(
+                                    "opacity", 1);
+                                $('#container .button')
+                                    .bind('click',
+                                        handler1);
+                            });
+                        });
+                    }
+                    var handler2 = function() {
+                        if (buttonClicked == 0) {
+                            $('#container .button').unbind('click');
+                            currentPage = pages.eq(current);
+                            if (current >= pages.length - 1) current =
+                                0;
+                            else current = current + 1;
+                            nextPage = pages.eq(current);
+                            currentPage.fadeTo('slow', 0.5, function() {
+                                nextPage.fadeIn('slow',
+                                    function() {
+                                        nextPage.css(
+                                            "opacity", 1
+                                        );
+                                        currentPage.hide();
+                                        currentPage.css(
+                                            "opacity", 1
+                                        );
+                                        $('#container .button')
+                                            .bind('click',
+                                                handler1);
+                                    });
+                            });
+                            timeoutID = setTimeout(function() {
+                                handler2();
+                            }, 5000);
+                        }
+                    }
+                    $('#container .button').click(function() {
+                        clearTimeout(timeoutID);
+                        handler1();
+                    });
+                    timeoutID = setTimeout(function() {
+                        handler2();
+                    }, 3500);
+                });
             </script>
         </div>
     </div>
     </div>
     <!-- begin olark code -->
     <script data-cfasync="false" type='text/javascript'>
-    /*<![CDATA[*/
-    window.olark || (function(c) {
-        var f = window,
-            d = document,
-            l = f.location.protocol == "https:" ? "https:" : "http:",
-            z = c.name,
-            r = "load";
-        var nt = function() {
-            f[z] = function() {
-                (a.s = a.s || []).push(arguments)
-            };
-            var a = f[z]._ = {},
-                q = c.methods.length;
-            while (q--) {
-                (function(n) {
-                    f[z][n] = function() {
-                        f[z]("call", n, arguments)
-                    }
-                })(c.methods[q])
-            }
-            a.l = c.loader;
-            a.i = nt;
-            a.p = {
-                0: +new Date
-            };
-            a.P = function(u) {
-                a.p[u] = new Date - a.p[0]
-            };
+        /*<![CDATA[*/
+        window.olark || (function(c) {
+            var f = window,
+                d = document,
+                l = f.location.protocol == "https:" ? "https:" : "http:",
+                z = c.name,
+                r = "load";
+            var nt = function() {
+                f[z] = function() {
+                    (a.s = a.s || []).push(arguments)
+                };
+                var a = f[z]._ = {},
+                    q = c.methods.length;
+                while (q--) {
+                    (function(n) {
+                        f[z][n] = function() {
+                            f[z]("call", n, arguments)
+                        }
+                    })(c.methods[q])
+                }
+                a.l = c.loader;
+                a.i = nt;
+                a.p = {
+                    0: +new Date
+                };
+                a.P = function(u) {
+                    a.p[u] = new Date - a.p[0]
+                };
 
-            function s() {
-                a.P(r);
-                f[z](r)
-            }
-            f.addEventListener ? f.addEventListener(r, s, false) : f
-                .attachEvent("on" + r, s);
-            var ld = function() {
-                function p(hd) {
-                    hd = "head";
-                    return ["<", hd, "></", hd, "><", i,
-                        ' onl' + 'oad="var d=', g,
-                        ";d.getElementsByTagName('head')[0].",
-                        j, "(d.", h, "('script')).", k,
-                        "='", l, "//", a.l, "'", '"', "></",
-                        i, ">"
-                    ].join("")
+                function s() {
+                    a.P(r);
+                    f[z](r)
                 }
-                var i = "body",
-                    m = d[i];
-                if (!m) {
-                    return setTimeout(ld, 100)
-                }
-                a.P(1);
-                var j = "appendChild",
-                    h = "createElement",
-                    k = "src",
-                    n = d[h]("div"),
-                    v = n[j](d[h](z)),
-                    b = d[h]("iframe"),
-                    g = "document",
-                    e = "domain",
-                    o;
-                n.style.display = "none";
-                m.insertBefore(n, m.firstChild).id = z;
-                b.frameBorder = "0";
-                b.id = z + "-loader";
-                if (/MSIE[ ]+6/.test(navigator.userAgent)) {
-                    b.src = "javascript:false"
-                }
-                b.allowTransparency = "true";
-                v[j](b);
-                try {
-                    b.contentWindow[g].open()
-                } catch (w) {
-                    c[e] = d[e];
-                    o = "javascript:var d=" + g +
-                        ".open();d.domain='" + d.domain + "';";
-                    b[k] = o + "void(0);"
-                }
-                try {
-                    var t = b.contentWindow[g];
-                    t.write(p());
-                    t.close()
-                } catch (x) {
-                    b[k] = o + 'd.write("' + p().replace(/"/g,
-                            String.fromCharCode(92) + '"') +
-                        '");d.close();'
-                }
-                a.P(2)
+                f.addEventListener ? f.addEventListener(r, s, false) : f
+                    .attachEvent("on" + r, s);
+                var ld = function() {
+                    function p(hd) {
+                        hd = "head";
+                        return ["<", hd, "></", hd, "><", i,
+                            ' onl' + 'oad="var d=', g,
+                            ";d.getElementsByTagName('head')[0].",
+                            j, "(d.", h, "('script')).", k,
+                            "='", l, "//", a.l, "'", '"', "></",
+                            i, ">"
+                        ].join("")
+                    }
+                    var i = "body",
+                        m = d[i];
+                    if (!m) {
+                        return setTimeout(ld, 100)
+                    }
+                    a.P(1);
+                    var j = "appendChild",
+                        h = "createElement",
+                        k = "src",
+                        n = d[h]("div"),
+                        v = n[j](d[h](z)),
+                        b = d[h]("iframe"),
+                        g = "document",
+                        e = "domain",
+                        o;
+                    n.style.display = "none";
+                    m.insertBefore(n, m.firstChild).id = z;
+                    b.frameBorder = "0";
+                    b.id = z + "-loader";
+                    if (/MSIE[ ]+6/.test(navigator.userAgent)) {
+                        b.src = "javascript:false"
+                    }
+                    b.allowTransparency = "true";
+                    v[j](b);
+                    try {
+                        b.contentWindow[g].open()
+                    } catch (w) {
+                        c[e] = d[e];
+                        o = "javascript:var d=" + g +
+                            ".open();d.domain='" + d.domain + "';";
+                        b[k] = o + "void(0);"
+                    }
+                    try {
+                        var t = b.contentWindow[g];
+                        t.write(p());
+                        t.close()
+                    } catch (x) {
+                        b[k] = o + 'd.write("' + p().replace(/"/g,
+                                String.fromCharCode(92) + '"') +
+                            '");d.close();'
+                    }
+                    a.P(2)
+                };
+                ld()
             };
-            ld()
-        };
-        nt()
-    })({
-        loader: "static.olark.com/jsclient/loader0.js",
-        name: "olark",
-        methods: ["configure", "extend", "declare", "identify"]
-    });
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('5575-684-10-1480'); /*]]>*/
+            nt()
+        })({
+            loader: "static.olark.com/jsclient/loader0.js",
+            name: "olark",
+            methods: ["configure", "extend", "declare", "identify"]
+        });
+        /* custom configuration goes here (www.olark.com/documentation) */
+        olark.identify('5575-684-10-1480'); /*]]>*/
     </script>
     <noscript>
         <a href="https://www.olark.com/site/5575-684-10-1480/contact"
@@ -572,4 +574,5 @@ function getisp($ip = '')
     <!-- end olark code -->
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
+
 </html>
