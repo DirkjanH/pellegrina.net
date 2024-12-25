@@ -85,8 +85,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 			<div id="banner" class="">
 				<div class="bannergroen">De inschrijving voor zomer 2025 is gestart!</div>
 			</div>
-			<div id="banner" class="">
-				<div class="bannergeel" style="font-size: 80%;">Data zomer 2025 bekend; inschrijving start 1 december!</div>
+			<div id="banner" class="onzichtbaar">
+				<div class="bannergeel onzichtbaar" style="font-size: 80%;">Data zomer 2025 bekend; inschrijving start 1 december!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>
