@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400,700&display=swap&subset=latin-ext");
+
 div#banner {
   position: absolute;
   top: 0px;
@@ -16,92 +17,73 @@ div#banner {
   line-height: 2.8em;
   font-weight: bold;
 }
+
 div.bannergroen {
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iIzVmYmYzZiIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNWZiZjNmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVmYmYzZiIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-  background: -moz-linear-gradient(
-    top,
-    rgba(95, 191, 63, 0.6) 1%,
-    #5fbf3f 50%,
-    rgba(95, 191, 63, 0.6) 100%
-  );
+  background: -moz-linear-gradient(top,
+      rgba(95, 191, 63, 0.6) 1%,
+      #5fbf3f 50%,
+      rgba(95, 191, 63, 0.6) 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(1%, rgba(95, 191, 63, 0.6)),
-    color-stop(50%, #5fbf3f),
-    color-stop(100%, rgba(95, 191, 63, 0.6))
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      color-stop(1%, rgba(95, 191, 63, 0.6)),
+      color-stop(50%, #5fbf3f),
+      color-stop(100%, rgba(95, 191, 63, 0.6)));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    rgba(95, 191, 63, 0.6) 1%,
-    #5fbf3f 50%,
-    rgba(95, 191, 63, 0.6) 100%
-  );
+  background: -webkit-linear-gradient(top,
+      rgba(95, 191, 63, 0.6) 1%,
+      #5fbf3f 50%,
+      rgba(95, 191, 63, 0.6) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    rgba(95, 191, 63, 0.6) 1%,
-    #5fbf3f 50%,
-    rgba(95, 191, 63, 0.6) 100%
-  );
+  background: -o-linear-gradient(top,
+      rgba(95, 191, 63, 0.6) 1%,
+      #5fbf3f 50%,
+      rgba(95, 191, 63, 0.6) 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    top,
-    rgba(95, 191, 63, 0.6) 1%,
-    #5fbf3f 50%,
-    rgba(95, 191, 63, 0.6) 100%
-  );
+  background: -ms-linear-gradient(top,
+      rgba(95, 191, 63, 0.6) 1%,
+      #5fbf3f 50%,
+      rgba(95, 191, 63, 0.6) 100%);
   /* IE10+ */
-  background: linear-gradient(
-    to bottom,
-    rgba(95, 191, 63, 0.6) 1%,
-    #5fbf3f 50%,
-    rgba(95, 191, 63, 0.6) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(95, 191, 63, 0.6) 1%,
+      #5fbf3f 50%,
+      rgba(95, 191, 63, 0.6) 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#665fbf3f', endColorstr='#665fbf3f', GradientType=0);
   /* IE6-8 */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-  -moz-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -webkit-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -o-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -ms-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
+  -moz-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -o-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
   display: block;
   position: absolute;
   width: 580px;
   z-index: 1;
   overflow: hidden;
 }
+
 div.bannergeel {
   background: #f9ed90;
   /* Old browsers */
   background: -moz-linear-gradient(top, #f9ed90 0%, #f1da36 52%, #f9ec89 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #f9ed90),
-    color-stop(52%, #f1da36),
-    color-stop(100%, #f9ec89)
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      color-stop(0%, #f9ed90),
+      color-stop(52%, #f1da36),
+      color-stop(100%, #f9ec89));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    #f9ed90 0%,
-    #f1da36 52%,
-    #f9ec89 100%
-  );
+  background: -webkit-linear-gradient(top,
+      #f9ed90 0%,
+      #f1da36 52%,
+      #f9ec89 100%);
   /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, #f9ed90 0%, #f1da36 52%, #f9ec89 100%);
   /* Opera 11.10+ */
@@ -112,126 +94,102 @@ div.bannergeel {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9ed90', endColorstr='#f9ec89', GradientType=0);
   /* IE6-9 */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-  -moz-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -webkit-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -o-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -ms-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
+  -moz-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -o-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
   display: block;
   position: absolute;
   width: 580px;
   z-index: 1;
   overflow: hidden;
 }
+
 div.bannerrood {
   background: #ff9793;
-  background: linear-gradient(
-    90deg,
-    color-stop(0%, #ff9793),
-    color-stop(52%, #ea4535),
-    color-stop(100%, #ff9793)
-  );
-  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
+  background: linear-gradient(90deg,
+      color-stop(0%, #ff9793),
+      color-stop(52%, #ea4535),
+      color-stop(100%, #ff9793));
+  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
   display: block;
   position: absolute;
   width: 580px;
   z-index: 10;
   overflow: hidden;
 }
+
 div.banneroranje {
   background: rgb(251, 198, 98);
-  background: linear-gradient(
-    90deg,
-    rgba(251, 198, 98, 1) 0%,
-    rgba(230, 150, 39, 1) 50%,
-    rgba(251, 198, 98, 1) 100%
-  );
-  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
+  background: linear-gradient(90deg,
+      rgba(251, 198, 98, 1) 0%,
+      rgba(230, 150, 39, 1) 50%,
+      rgba(251, 198, 98, 1) 100%);
+  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
   display: block;
   position: absolute;
   width: 580px;
   z-index: 10;
   overflow: hidden;
 }
+
 div.bannerblauw {
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU5YTVjOSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiM1OWE1YzkiIHN0b3Atb3BhY2l0eT0iMC40Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzU5YTVjOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1OWE1YzkiIHN0b3Atb3BhY2l0eT0iMC40Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background: -moz-linear-gradient(
-    top,
-    rgba(89, 166, 201, 0.6) 0%,
-    rgba(89, 166, 201, 0.6) 1%,
-    #59a6c9 50%,
-    rgba(89, 166, 201, 0.6) 100%
-  );
+  background: -moz-linear-gradient(top,
+      rgba(89, 166, 201, 0.6) 0%,
+      rgba(89, 166, 201, 0.6) 1%,
+      #59a6c9 50%,
+      rgba(89, 166, 201, 0.6) 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, rgba(89, 166, 201, 0.6)),
-    color-stop(1%, rgba(89, 166, 201, 0.6)),
-    color-stop(50%, #59a6c9),
-    color-stop(100%, rgba(89, 166, 201, 0.6))
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      color-stop(0%, rgba(89, 166, 201, 0.6)),
+      color-stop(1%, rgba(89, 166, 201, 0.6)),
+      color-stop(50%, #59a6c9),
+      color-stop(100%, rgba(89, 166, 201, 0.6)));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    rgba(89, 166, 201, 0.6) 0%,
-    rgba(89, 166, 201, 0.6) 1%,
-    #59a6c9 50%,
-    rgba(89, 166, 201, 0.6) 100%
-  );
+  background: -webkit-linear-gradient(top,
+      rgba(89, 166, 201, 0.6) 0%,
+      rgba(89, 166, 201, 0.6) 1%,
+      #59a6c9 50%,
+      rgba(89, 166, 201, 0.6) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    rgba(89, 166, 201, 0.6) 0%,
-    rgba(89, 166, 201, 0.6) 1%,
-    #59a6c9 50%,
-    rgba(89, 166, 201, 0.6) 100%
-  );
+  background: -o-linear-gradient(top,
+      rgba(89, 166, 201, 0.6) 0%,
+      rgba(89, 166, 201, 0.6) 1%,
+      #59a6c9 50%,
+      rgba(89, 166, 201, 0.6) 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    top,
-    rgba(89, 166, 201, 0.6) 0%,
-    rgba(89, 166, 201, 0.6) 1%,
-    #59a6c9 50%,
-    rgba(89, 166, 201, 0.6) 100%
-  );
+  background: -ms-linear-gradient(top,
+      rgba(89, 166, 201, 0.6) 0%,
+      rgba(89, 166, 201, 0.6) 1%,
+      #59a6c9 50%,
+      rgba(89, 166, 201, 0.6) 100%);
   /* IE10+ */
-  background: linear-gradient(
-    to bottom,
-    rgba(89, 166, 201, 0.6) 0%,
-    rgba(89, 166, 201, 0.6) 1%,
-    #59a6c9 50%,
-    rgba(89, 166, 201, 0.6) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(89, 166, 201, 0.6) 0%,
+      rgba(89, 166, 201, 0.6) 1%,
+      #59a6c9 50%,
+      rgba(89, 166, 201, 0.6) 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6659a5c9', endColorstr='#6659a5c9', GradientType=0);
   /* IE6-8 */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-  -moz-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -webkit-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -o-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  -ms-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
-  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px)
-    skewX(0deg) skewY(0deg);
+  -moz-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -o-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
+  transform: scale(1) rotate(25deg) translateX(50px) translateY(55px) skewX(0deg) skewY(0deg);
   display: block;
   position: absolute;
   width: 580px;
   z-index: 10;
   overflow: hidden;
 }
+
 @media screen and (max-width: 992px) {
   div#banner {
     display: none;
