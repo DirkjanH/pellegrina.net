@@ -57,7 +57,8 @@ function getisp($ip = '')
         content="https://pellegrina.net/Images/Logos/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-    <link href="css/banner.css" rel="stylesheet" type="text/css">
+    <link href="/css/openingspagina.css" rel="stylesheet" type="text/css">
+	<link href="css/banner.css" rel="stylesheet" type="text/css">
     <style type="text/css">
     <!--
     body,
@@ -68,8 +69,7 @@ function getisp($ip = '')
         color: #000000;
         font: 700 normal 24px;
         font-family: 'Alegreya Sans', Verdana, sans-serif;
-        background-color: lightskyblue;
-    }
+     }
 
     h1 {
         font-size: 18px;
