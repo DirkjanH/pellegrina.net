@@ -1,22 +1,15 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php'; ?>
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-
-  <!-- CSS: -->
-  <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>Japanese introduction</title>
-  <!-- InstanceEndEditable -->
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-  <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
-  <!-- InstanceBeginEditable name="head" -->
-  <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/pellegrina_stijlen.css" type="text/css">
+  <link rel="stylesheet" href="/css/openingspagina.css" type="text/css">
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
   <style type="text/css">
     .japans h1,
@@ -30,14 +23,13 @@
       font-family: Verdana, Geneva, sans-serif;
     }
   </style>
-  <!-- InstanceEndEditable -->
 </head>
 
 <body>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
   <div id="inhoud">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-    <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+    <div id="main">
       <div class="japans">
         <h1>2025年コース案内(概要)</h1>
         <h4>(2024 年12月更新)</h4>
@@ -60,13 +52,12 @@
         <p> 初日の夕刻に顔合わせがあります。また中日には１日自由行動の日があり、練習をせずに近くの観光地へ出かけたり、近郊でウオーキングを楽しんだりします。毎日夕食後には自由にアンサンブルを組んで室内楽を楽しむことが出来ます。そしてそのあと、パブのテラスで安くて美味しいビールやワインを飲んで語らっているうちにチェコの夜は深けていきます。気候は一般にからっとしていますが、最近は年によって異なるようです。 </p>
         <h3><strong>6. 日本語での問い合わせ</strong></h3>
         <p> 初めて参加したいという方で、日本語でもっと知りたい、あるいは質問等がある場合にはご遠慮なく下記宛にメールしてください。<a href="mailto:rengaku@gmail.com" target="_blank">rengaku@gmail.com</a>&nbsp;(吉田和道)</p>
-      </div><!-- InstanceEndEditable -->
+      </div>
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
       <p>&nbsp;</p>
     </div>
   </div>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd -->
 
 </html>
