@@ -9,7 +9,7 @@
 
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
+	<link rel="stylesheet" href="/css/openingspagina.css" type="text/css">
 
 	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>Letní hudební kurzy společnost La Pellegrina</title>
