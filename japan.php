@@ -1,63 +1,72 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursussen.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php'; ?>
 <!DOCTYPE HTML>
 <html><!-- InstanceBegin template="Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
 
-   <!-- CSS: -->
-   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+  <!-- CSS: -->
+  <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Japanese introduction</title>
-<!-- InstanceEndEditable -->
-<?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
-<?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
-<!-- InstanceBeginEditable name="head" -->
-<link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-<?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<style type="text/css">
-.japans h1, h2, h3, h4, h5, h6, p, td {
-	font-family: Verdana, Geneva, sans-serif;
-}
-</style>
-<!-- InstanceEndEditable -->
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>Japanese introduction</title>
+  <!-- InstanceEndEditable -->
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+  <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
+  <!-- InstanceBeginEditable name="head" -->
+  <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+  <style type="text/css">
+    .japans h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    td {
+      font-family: Verdana, Geneva, sans-serif;
+    }
+  </style>
+  <!-- InstanceEndEditable -->
 </head>
+
 <body>
-<?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_tagmanager.php'; ?>
-<div id="inhoud">
-  <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php'; ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
-  <div class="japans">
-<h1>2024年コース案内(概要)</h1>
-   <h4>(2023 年12月更新)</h4>
-   <div class="fotocenter"><img src="Images/japan.jpg" width="600" height="450" alt="Japanese participants playing chamber music in Bechyně"></div>
-   <h3><strong>1. 主催者からのメッセージ</strong></h3>
-   <p>ペレグリーナは国籍を問わず、老若男女を問わず、音楽を愛する人を歓迎しています。オケと室内楽のある程度の経験は要求されますが、それ以上に皆と溶け込んでコミュニケーションを取ることができる、そういう素養が望まれます。コース中の共通言語は英語です。外国人の中にはフランス語、ドイツ語はしゃべることが出来るけれど英語は苦手と言う人もいます。言葉に自信がなくてもシャイにならずに積極的に仲間に入ることが大切です。いつも数人の日本人の参加者もいて、コースは  国際的でとてもにぎやかです。一年に一度ここで遠い国の友人と会うのを楽しみにしているリピーターも沢山います。 このコースに来る人は 皆、ボヘミアの夏休みをゆったりと過ごすことが大切と考えています。年齢的には定年を迎えた人たちが多い中、現役サラリーマン、自由業、家庭の主婦、学生と多種多様の人たちが参加してきます。とにかく、夏休みをあくせくせずに音楽を楽しみながら心地よく過ごすことが出来る、そういうコースです。 <br>
-   	ペレグリーナはチェコという欧州のなかでも非常に音楽に対する造詣の深い国で行われ、プロフェショナルな心構えを磨きたいあなたの為に３つのプロジェクトを用意しています。このプロジェクトに参加するとトップレベルの先生方と心を一つにして素晴らしい音楽に浸ることが可能です。あなたがアマチュアであろうとプロであろうと、ペレグリーナではプロフェショナルな心構えが最も大事なことなのです。自分自身が充分に準備して、他の人達も同じように準備してくることを期待したいあなたでしたら、是非続きをお読みください。 </p>
-   <h3><strong>2. 3つのコース　（詳しくは英語のページを読んでください）</strong></h3>
-		<ol>
-			<li><strong>室内楽とオーケストラによる合唱曲のコース</strong>(7/25 (木) - 8/4 (日) České Budějovice)：オーケストラ、チェコの作曲家Reichaレクイエムを中心とした、オーケストラ、合唱団、ソリストのためのコースと室内楽コース。このコースの特徴は、室内楽（午前）とオーケストラ練習（午後）の組み合わせにあります。従ってオケ一つ分の人数と歌手が集められます。足らないパートは毎年近隣のオーケストラからチェコ人が特別参加しています。室内楽は最後に団内発表会があります。オーケストラ曲はコンセルヴァトワールでリハーサルされ、チェスケ・ブディェヨヴィツェ大聖堂でコンサート形式で演奏されます。Petr Bernášek, Pavel Hořejší、Libor Nováček , Rudolf Sternadel, Jitka Vlašánkova　(以上弦楽器), Martina Bernášková(フルート)、Mitchell Sandler(歌), Dirkjan  Horringa(アンサンブル)その他が指導します。室内楽の課題は2曲で、個人あるいはPreformed(事前に組んだグループ)で選曲してエントリーすることもできます。弦楽四重奏のほか、管楽器、ピアノとのアンサンブルなど大きな編成の曲も可能で、最終的には参加者が出揃った段階で編成と曲目が連絡されます。  またモーツァルト協奏曲の夕べが自由参加で催されます。</li>
-			<li><strong>バロック音楽コース</strong>（8/11 (日) - 8/17 (土) Nieuw Sionの修道院にて）：各種古楽器(A-415、弦楽器はガット弦使用)と合唱のコースで、2つのプログラムで構成されています。レパートリーのメインテーマは、Vivaldiと彼の同時代の作品で構成される夜の礼拝曲で、メンバー全員が参加する。午前は教室でグループに分かれて古楽器と歌の小編成のアンサンブル曲で、午後はグループリハーサルと教会での全体練習です。最後に室内楽の発表会と修道院のチャペルでカンタータ・コンサートが催されます。指導者はDirkjan Horringa (singers and artistic direction)、Femke Huizinga (orchestra, violin), Hanna Lindeijer (baroque winds), Mitchell Sandler (singers), Edoardo Valorz (basso continuo)です</li>
-			<li><strong>室内楽コース</strong>(7/13 (土) - 7/21 (日) České Budějoviceの音楽院)：<strong>このコースは今回よりチェコの指導者により運営されることになりましたので<a href="https://www.kinskytrio.cz/inpage/pellegrina/" target="_blank">Kinsky Trio Prague</a>のサイトに入って申し込み、支払い方法等、詳細をお確かめ下さい。</strong><br>
-			弦楽器、管楽器、ピアニストの為の室内楽のコースで、先生との共演あるいはフルタイム指導のどちらかを選ぶことが出来ます。　課題は2曲でそのうち1曲はPreformed(事前に組んだグループ)で選んだ曲でエントリーすることが出来ます。発表はコンサート形式で行われます。指導は<a href="https://www.kinskytrio.cz/inpage/en/" target="_blank">Kinsky Trio Prague</a>のLucie  Sedláková Hůlová (violin), Martin Sedlák (cello), Veronika Böhmová (piano), および Jan Nykrýn (viola), Jitka Vlašánková (cello), Jan Thuri (oboe), Ludmila  Peterková (clarinet)その他です。</li>
-		</ol> 
-	<h3><strong>3. 申し込み</strong></h3>
-	<p>		コースの料金は各コースとも多少の差がありますので、該当するコースのRegistrationを読んでください。宿泊先の選択も紹介されています。申し込みは12月1日より始まっており、申し込みと手付金(300ユーロ)を3月1日までに納めた人には50ユーロの割引制度があります。申し込み時に学生や東欧圏の人の参加援助のための寄付のリクエストがあり、多少上乗せすると良いでしょう。また、毎年管楽器の人数についてはオケ曲の出番を考慮して制限があります。申し込みの技量欄の書き方ですが、プロなのかアマチュアなのか、どのぐらいのレベルかを主催者側に正しく伝えることが大切です。  控えめ過ぎると組み合わせを考える上で不利になることもありますのでご注意ください。 </p>
-	<h3><strong>4. 支払方法</strong></h3>
-	<p>		海外からの支払方法ですが、2つの方法があり、海外振込みを行なっている主要銀行に行けばLa  Pellegrinaの口座に直接振り込むことが可能です。（注意：3．室内楽コースは別の口座になります）  サイトの支払方法のところにある IBANおよびBIC番号が必要です。クレジットカードでのお支払いも可能です。この場合は手数料が受け取り側で発生するため15ユーロを手付金に上乗せするよう指示されています。Registrationと同時に300ユーロのDeposit(手付金)の支払いが必要です。これにより主催者側からコースに登録された旨の確認があります。残金の支払いは6月1日までに支払うことになっています。3月1日までに支払いを済ませると50ユーロ減額されます。クレジットカードの場合、再度手数料を載せないで済む様、残金を現金で現地で支払うことも可能なので、個別に主催者とコンタクトおよび了承を取って下さい。 <br>
-36 歳以下および同伴者の申込者の割引についてはサイトを見てください。同伴者（演奏に加わらない方）もAuditor (見学者)として歓迎されています。自由にリハーサルを覗いたり、ボヘミヤの夏をゆったりと楽しむことが出来ます。 <br>
-主催者側より何らかの理由で参加が受理されなかった場合は全額払い戻されます。申込者が6月1日以前に参加を取り消す場合には手付金を除く支払い額が払い戻されます。それ以降は返却されませんのでご注意ください。 </p>
-	<h3><strong>5. 最後に</strong></h3>
-	<p>		初日の夕刻に顔合わせがあります。また中日には１日自由行動の日があり、練習をせずに近くの観光地へ出かけたり、近郊でウオーキングを楽しんだりします。毎日夕食後には自由にアンサンブルを組んで室内楽を楽しむことが出来ます。そしてそのあと、パブのテラスで安くて美味しいビールやワインを飲んで語らっているうちにチェコの夜は深けていきます。気候は一般にからっとしていますが、最近は年によって異なるようです。 </p>
-	<h3><strong>6. 日本語での問い合わせ</strong></h3>
-	<p>		初めて参加したいという方で、日本語でもっと知りたい、あるいは質問等がある場合にはご遠慮なく下記宛にメールしてください。<a href="mailto:rengaku@gmail.com" target="_blank">rengaku@gmail.com</a>&nbsp;(吉田和道)</p>
-  </div><!-- InstanceEndEditable -->
-    <h2> <a href="javascript: history.go(-1)">Back</a></h2>
-    <p>&nbsp;</p>
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
+  <div id="inhoud">
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
+    <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+      <div class="japans">
+        <h1>2024年コース案内(概要)</h1>
+        <h4>(2023 年12月更新)</h4>
+        <div class="fotocenter"><img src="Images/japan.jpg" width="600" height="450" alt="Japanese participants playing chamber music in Bechyně"></div>
+        <h3><strong>1. 主催者からのメッセージ</strong></h3>
+        <p>ペレグリーナは国籍を問わず、老若男女を問わず、音楽を愛する人を歓迎しています。オケと室内楽のある程度の経験は要求されますが、それ以上に皆と溶け込んでコミュニケーションを取ることができる、そういう素養が望まれます。コース中の共通言語は英語です。外国人の中にはフランス語、ドイツ語はしゃべることが出来るけれど英語は苦手と言う人もいます。言葉に自信がなくてもシャイにならずに積極的に仲間に入ることが大切です。いつも数人の日本人の参加者もいて、コースは 国際的でとてもにぎやかです。一年に一度ここで遠い国の友人と会うのを楽しみにしているリピーターも沢山います。 このコースに来る人は 皆、ボヘミアの夏休みをゆったりと過ごすことが大切と考えています。年齢的には定年を迎えた人たちが多い中、現役サラリーマン、自由業、家庭の主婦、学生と多種多様の人たちが参加してきます。とにかく、夏休みをあくせくせずに音楽を楽しみながら心地よく過ごすことが出来る、そういうコースです。 <br>
+          ペレグリーナはチェコという欧州のなかでも非常に音楽に対する造詣の深い国で行われ、プロフェショナルな心構えを磨きたいあなたの為に３つのプロジェクトを用意しています。このプロジェクトに参加するとトップレベルの先生方と心を一つにして素晴らしい音楽に浸ることが可能です。あなたがアマチュアであろうとプロであろうと、ペレグリーナではプロフェショナルな心構えが最も大事なことなのです。自分自身が充分に準備して、他の人達も同じように準備してくることを期待したいあなたでしたら、是非続きをお読みください。 </p>
+        <h3><strong>2. 3つのコース　（詳しくは英語のページを読んでください）</strong></h3>
+        <ol>
+          <li><strong>室内楽とオーケストラによる合唱曲のコース</strong>(7/24 (木) - 8/3 (日) České Budějovice)：オーケストラ、チェコの作曲家Reichaレクイエムを中心とした、オーケストラ、合唱団、ソリストのためのコースと室内楽コース。このコースの特徴は、室内楽（午前）とオーケストラ練習（午後）の組み合わせにあります。従ってオケ一つ分の人数と歌手が集められます。足らないパートは毎年近隣のオーケストラからチェコ人が特別参加しています。室内楽は最後に団内発表会があります。オーケストラ曲はコンセルヴァトワールでリハーサルされ、チェスケ・ブディェヨヴィツェ大聖堂でコンサート形式で演奏されます。Petr Bernášek, Pavel Hořejší、Libor Nováček , Rudolf Sternadel, Jitka Vlašánkova　(以上弦楽器), Martina Bernášková(フルート)、Mitchell Sandler(歌), Dirkjan Horringa(アンサンブル)その他が指導します。室内楽の課題は2曲で、個人あるいはPreformed(事前に組んだグループ)で選曲してエントリーすることもできます。弦楽四重奏のほか、管楽器、ピアノとのアンサンブルなど大きな編成の曲も可能で、最終的には参加者が出揃った段階で編成と曲目が連絡されます。 またモーツァルト協奏曲の夕べが自由参加で催されます。</li>
+          <li><strong>バロック音楽コース</strong>（8/10 (日) - 8/10 (土) Nieuw Sionの修道院にて）：各種古楽器(A-415、弦楽器はガット弦使用)と合唱のコースで、2つのプログラムで構成されています。レパートリーのメインテーマは、Purcell & Handelと彼の同時代の作品で構成される夜の礼拝曲で、メンバー全員が参加する。午前は教室でグループに分かれて古楽器と歌の小編成のアンサンブル曲で、午後はグループリハーサルと教会での全体練習です。最後に室内楽の発表会と修道院のチャペルでカンタータ・コンサートが催されます。指導者はDirkjan Horringa (singers and artistic direction)、Femke Huizinga (orchestra, violin), Hanna Lindeijer (baroque winds), Mitchell Sandler (singers), Edoardo Valorz (basso continuo)です</li>
+        </ol>
+        <h3><strong>3. 申し込み</strong></h3>
+        <p> コースの料金は各コースとも多少の差がありますので、該当するコースのRegistrationを読んでください。宿泊先の選択も紹介されています。申し込みは12月1日より始まっており、申し込みと手付金(300ユーロ)を3月1日までに納めた人には50ユーロの割引制度があります。申し込み時に学生や東欧圏の人の参加援助のための寄付のリクエストがあり、多少上乗せすると良いでしょう。また、毎年管楽器の人数についてはオケ曲の出番を考慮して制限があります。申し込みの技量欄の書き方ですが、プロなのかアマチュアなのか、どのぐらいのレベルかを主催者側に正しく伝えることが大切です。 控えめ過ぎると組み合わせを考える上で不利になることもありますのでご注意ください。 </p>
+        <h3><strong>4. 支払方法</strong></h3>
+        <p> 海外からの支払方法ですが、2つの方法があり、海外振込みを行なっている主要銀行に行けばLa Pellegrinaの口座に直接振り込むことが可能です。（注意：3．室内楽コースは別の口座になります） サイトの支払方法のところにある IBANおよびBIC番号が必要です。クレジットカードでのお支払いも可能です。この場合は手数料が受け取り側で発生するため15ユーロを手付金に上乗せするよう指示されています。Registrationと同時に300ユーロのDeposit(手付金)の支払いが必要です。これにより主催者側からコースに登録された旨の確認があります。残金の支払いは6月1日までに支払うことになっています。3月1日までに支払いを済ませると50ユーロ減額されます。クレジットカードの場合、再度手数料を載せないで済む様、残金を現金で現地で支払うことも可能なので、個別に主催者とコンタクトおよび了承を取って下さい。 <br>
+          36 歳以下および同伴者の申込者の割引についてはサイトを見てください。同伴者（演奏に加わらない方）もAuditor (見学者)として歓迎されています。自由にリハーサルを覗いたり、ボヘミヤの夏をゆったりと楽しむことが出来ます。 <br>
+          主催者側より何らかの理由で参加が受理されなかった場合は全額払い戻されます。申込者が6月1日以前に参加を取り消す場合には手付金を除く支払い額が払い戻されます。それ以降は返却されませんのでご注意ください。 </p>
+        <h3><strong>5. 最後に</strong></h3>
+        <p> 初日の夕刻に顔合わせがあります。また中日には１日自由行動の日があり、練習をせずに近くの観光地へ出かけたり、近郊でウオーキングを楽しんだりします。毎日夕食後には自由にアンサンブルを組んで室内楽を楽しむことが出来ます。そしてそのあと、パブのテラスで安くて美味しいビールやワインを飲んで語らっているうちにチェコの夜は深けていきます。気候は一般にからっとしていますが、最近は年によって異なるようです。 </p>
+        <h3><strong>6. 日本語での問い合わせ</strong></h3>
+        <p> 初めて参加したいという方で、日本語でもっと知りたい、あるいは質問等がある場合にはご遠慮なく下記宛にメールしてください。<a href="mailto:rengaku@gmail.com" target="_blank">rengaku@gmail.com</a>&nbsp;(吉田和道)</p>
+      </div><!-- InstanceEndEditable -->
+      <h2> <a href="javascript: history.go(-1)">Back</a></h2>
+      <p>&nbsp;</p>
+    </div>
   </div>
-</div>
-<?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
