@@ -58,7 +58,7 @@
 						<li>lektoři: Martina Bernášková (flétna), Petr Bernášek (housle), Václav Bernášek (violoncello), Pavel Hořejší (viola), Dirkjan Horringa (klarinet), Libor Nováček (klavír), Mitchell Sandler (zpěv), Rudolf Sternadel (housle a viola) a další
 						</li>
 						<li>Ústřední dílo pro všechny: Haydnova Missa in Tempore Belli. Orchestr zahraje také Dvořákovu symfonickou báseň <i>Zlatý kolovrat</i> op. 109</li>
-						<li>Sbor: kromě Haydnova Missa in Tempore Belli s orchestrem také skladby komorního sborového repertoáru, a cappella a s klavírem</li>
+						<li>Sbor: kromě Haydnovy <i>Missa in Tempore Belli</i> s orchestrem také skladby komorního sborového repertoáru, a cappella a s klavírem</li>
 						<li>instrumentalisté budou hrát každý ve dvou předem určených komorních souborech a ve velkém symfonickém orchestru
 						</li>
 						<li>účastníci budou mít možnost zahrát nebo zazpívat si jednu větu z sólového koncertu nebo arii W.A. Mozarta (nebo některého z jeho současníků) za doprovodu “ad hoc” orchestru
