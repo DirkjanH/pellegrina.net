@@ -27,7 +27,7 @@
 
 <body>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-	<div id="inhoud" style="max-width: 1400px">
+	<div id="inhoud" style="max-width: 1200px">
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
 		<div id="main" style="clear: none;">
 			<div class="w3-center" lang="cs-CZ">
