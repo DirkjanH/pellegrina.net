@@ -77,7 +77,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="w3-onethird w3-panel">
+				<div class="w3-rest w3-panel">
 					<p><img src="Images/CZ_info-web-resources/image/IMG_1782-2.jpg" alt="Houslistka v kostele" /></p>
 					<p><img src="Images/CZ_info-web-resources/image/P1020545.png" alt="Orchestr a bas v Bechyňském kostele" /></p>
 					<p><img src="Images/CZ_info-web-resources/image/IMG_2544.jpg" alt="Klarinetistka v komořině" /></p>
