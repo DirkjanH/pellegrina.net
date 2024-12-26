@@ -38,7 +38,7 @@
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
 	<div id="inhoud">
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-		<div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+		<div id="main" style="max-width: 1400px;"> <!-- InstanceBeginEditable name="mainpage" -->
 			<div class="w3-center" lang="cs-CZ">
 				<h1 class="LP_colour w3-margin-bottom" style="margin-top: 0px;">Dva projekty pro každého hudebníka s profesionálním přístupem</h1>
 			</div>
