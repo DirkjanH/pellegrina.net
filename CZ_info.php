@@ -78,10 +78,10 @@
 					</ul>
 				</div>
 				<div class="w3-rest w3-panel">
-					<p><img src="Images/CZ_info-web-resources/image/IMG_1782-2.jpg" alt="Houslistka v kostele" /></p>
-					<p><img src="Images/CZ_info-web-resources/image/P1020545.png" alt="Orchestr a bas v Bechyňském kostele" /></p>
-					<p><img src="Images/CZ_info-web-resources/image/IMG_2544.jpg" alt="Klarinetistka v komořině" /></p>
-					<p><img src="Images/Locaties/Budejovice/ensemble_in_zaal.jpg" alt="Koncertní sál v Budějovicích" width="325" height="248" /></p>
+					<div class="fotocenter"><img src="Images/CZ_info-web-resources/image/IMG_1782-2.jpg" alt="Houslistka v kostele" /></div>
+					<div class="fotocenter"><img src="Images/CZ_info-web-resources/image/P1020545.png" alt="Orchestr a bas v Bechyňském kostele" /></div>
+					<div class="fotocenter"><img src="Images/CZ_info-web-resources/image/IMG_2544.jpg" alt="Klarinetistka v komořině" /></div>
+					<div class="fotocenter"><img src="Images/Locaties/Budejovice/ensemble_in_zaal.jpg" alt="Koncertní sál v Budějovicích" width="325" height="248" /></div>
 				</div>
 			</div>
 			<!-- InstanceEndEditable -->
