@@ -1,17 +1,13 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen CZ.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-
-	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/openingspagina.css" type="text/css">
-
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>Letní hudební kurzy společnost La Pellegrina</title>
 	<style type="text/css">
 		h2.lijnboven {
@@ -25,20 +21,16 @@
 			margin-left: 24px;
 		}
 	</style>
-	<!-- InstanceEndEditable -->
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
 	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
-	<!-- InstanceBeginEditable name="head" -->
-
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
 	<div id="inhoud" style="max-width: 1400px">
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-		<div id="main" style="clear: none;"> <!-- InstanceBeginEditable name="mainpage" -->
+		<div id="main" style="clear: none;">
 			<div class="w3-center" lang="cs-CZ">
 				<h1 class="LP_colour w3-margin-bottom" style="margin-top: 0px;">Dva projekty pro každého hudebníka s profesionálním přístupem</h1>
 			</div>
@@ -84,25 +76,11 @@
 					<div class="fotocenter"><img src="Images/Locaties/Budejovice/ensemble_in_zaal.jpg" alt="Koncertní sál v Budějovicích" width="325" height="248" /></div>
 				</div>
 			</div>
-			<!-- InstanceEndEditable -->
 			<h2> <a href="javascript: history.go(-1)">Zpět</a></h2>
 			<p>&nbsp;</p>
 		</div>
 	</div>
-
-	<a title="Web Analytics" href="http://clicky.com/101101981"><img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-	<script src="//static.getclicky.com/js" type="text/javascript"></script>
-	<script type="text/javascript">
-		try {
-			clicky.init(101101981);
-		} catch (e) {}
-	</script>
-	<noscript>
-		<p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101101981ns.gif" /></p>
-	</noscript>
-
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>
