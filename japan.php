@@ -54,7 +54,6 @@
         <p> 初めて参加したいという方で、日本語でもっと知りたい、あるいは質問等がある場合にはご遠慮なく下記宛にメールしてください。<a href="mailto:rengaku@gmail.com" target="_blank">rengaku@gmail.com</a>&nbsp;(吉田和道)</p>
       </div>
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
-      <p>&nbsp;</p>
     </div>
   </div>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
