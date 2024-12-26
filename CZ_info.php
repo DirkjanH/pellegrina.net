@@ -42,7 +42,7 @@
 			<div class="w3-center" lang="cs-CZ">
 				<h1 class="LP_colour w3-margin-bottom" style="margin-top: 0px;">Dva projekty pro každého hudebníka s profesionálním přístupem</h1>
 			</div>
-			<div class="w3-row-padding">
+			<div class="w3-row">
 				<div class="w3-twothird w3-panel">
 					<h2 class="LP_colour lijnboven" style="margin-top: 0px;">Letní hudební kurzy společnosti <em>La Pellegrina</em> <?php echo $jaar ?> v Čechách a Nízozemsku:</h2>
 					<p>dva projekty, ve kterých se můžete odevzdat nádherné hudbě se špičkovými lektory a stejně smýšlejícími lidmi. Projekty jsou určeny zkušeným instrumentalistům a zpěvákům. Vítáni jsou amatéři, poloprofesionálové i profesionálové, zkrátka všichni hudební nadšenci, kteří jsou pohotoví, přizpůsobiví, schopní hrát /zpívat v souboru s ostatními hráči a jejichž technická úroveň dovoluje zahrát /zazpívat své party v předem určených skladbách. Předpokladem spokojenosti všech účastníků je jejich předchozí zodpovědná příprava a technické zvládnutí svého partu před začátkem kurzu. Věk účastníků je neomezen.</p>
