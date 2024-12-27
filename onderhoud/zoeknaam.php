@@ -107,62 +107,7 @@ function check($input)
             }
         </script>
         <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-        <style type="text/css">
-            div#navigatie {
-                display: block;
-                position: fixed;
-                width: 210px;
-                font-size: 12px;
-            }
-
-            #navcontainer {
-                width: 195px;
-                background-color: white;
-                display: block;
-                margin-bottom: 20px;
-            }
-
-            #navcontainer li {
-                padding-bottom: 0;
-                line-height: 1.2em;
-                font-size: 13px;
-            }
-
-            ul#navlist {
-                margin: 0;
-                padding: 0;
-            }
-
-            #navlist a:link,
-            #navlist a:visited {
-                display: block;
-                color: black;
-            }
-
-            #navlist a:hover,
-            #navlist a:active {
-                display: block;
-                background-color: grey;
-                color: white;
-            }
-
-            #navcontainer ul {
-                list-style-type: none;
-            }
-
-            #navcontainer li.active {
-                border-bottom: none;
-            }
-
-            #navcontainer li.active a {
-                text-decoration: none;
-                width: 195px;
-            }
-
-            .NogNietBevestigd {
-                background: Orange;
-            }
-        </style>
+        <link rel="stylesheet" href="/css/zoeknaam.css">
         </ head>
     <body>
         <div id="inhoud" class="w3-panel">
