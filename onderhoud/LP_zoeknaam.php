@@ -94,9 +94,8 @@ function check($input) {
 			<label>Alle deelnemers van ooit: </label><input name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1" <?php if (isset($_POST['oude_dlnrs']) AND $_POST['oude_dlnrs'] !='') echo 'checked'; ?>>
 			<p>
 				<label><input type="radio" name="cursus" value="alles" onclick="javascript: submit();" <?php check('alles'); ?>>Alles</label><br>
-				<label><input type="radio" name="cursus" value="1" onclick="javascript: submit();" <?php check('1'); ?>>Barok</label><br>
-				<label><input type="radio" name="cursus" value="2" onclick="javascript: submit();" <?php check('2'); ?>>Dvořák</label><br>
-				<label><input type="radio" name="cursus" value="3" onclick="javascript: submit();" <?php check('3'); ?>>Kinsky</label><br>
+				<label><input type="radio" name="cursus" value="1" onclick="javascript: submit();" <?php check('1'); ?>>Romantiek</label><br>
+				<label><input type="radio" name="cursus" value="2" onclick="javascript: submit();" <?php check('2'); ?>>Barok</label><br>
 				<label><input type="radio" name="cursus" value="nieuw" onclick="javascript: submit();" <?php check('nieuw'); ?>>Nieuwe inschrijvingen</label>
 			</p>
 			<input name="zoek" type="hidden" id="zoek" value="zoek">
