@@ -10,6 +10,7 @@ while ($i <= $laatstecursus) {
 	$cur[] = $i;
 	$i++;
 }
+d($i);
 
 if (empty($_POST['oude_dlnrs']))$_POST['oude_dlnrs'] = '';
 if (empty($_POST['cursus'])) {
@@ -19,11 +20,10 @@ if (empty($_POST['cursus'])) {
 
 if ((isset($_POST["zoek"]))AND($_POST["zoek"] == "zoek")AND($_POST["oude_dlnrs"] == 1)) {
 
-	// begin Recordset
 	$zoeknaam = '-1';
 	if (isset($_POST['zoeknaam'])) {
 		$zoeknaam = $_POST['zoeknaam'];
-	} // colname__Inschr
+	}
 	$query_Inschr = sprintf("SELECT DISTINCT DlnmrId, naam FROM dlnmr WHERE naam LIKE \"%%%s%%\" 
 		ORDER BY achternaam ASC", $zoeknaam);
 	$Inschr = select_query($query_Inschr);
@@ -35,6 +35,7 @@ if ((isset($_POST["zoek"]))AND($_POST["zoek"] == "zoek")AND($_POST["oude_dlnrs"]
 			AND DlnmrId = DlnmrId_FK ORDER BY InschrId, CursusId_FK ASC",
 			$ins['naam']);
 		$Cursussen = select_query($query_Cursussen);
+		d($Cursussen);
 		$grijs[$ins['DlnmrId']] = TRUE;
 		foreach ($Cursussen as $cursus) {
 			$grijs[$ins['DlnmrId']] = !(in_array($cursus['CursusId_FK'], $cur));
