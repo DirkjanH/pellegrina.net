@@ -86,7 +86,6 @@ function check($input)
 <html>
 
 <head>
-	<link rel="stylesheet" href="/css/zoeknaam.css">
 	<script type="text/javascript">
 		//<!--
 		function ToonId(Id) {
