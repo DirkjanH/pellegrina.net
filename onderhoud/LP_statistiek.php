@@ -177,152 +177,154 @@ while ($i <= ($laatstecursus)) {
 	<div id="zoeknaam" style="width: 235px; float: left;">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
-	<header id="navigatiebalk" style="float: left;">
-		<?php require_once('LP_navigatie.php'); ?>
-	</header>
-	<div id="mainpage" style="float: left;">
-		<div class="w3-panel w3-white">
-			<table>
-				<tr>
-					<?php
+	<div id="links" style="float: left;">
+		<header id="navigatiebalk">
+			<?php require_once('LP_navigatie.php'); ?>
+		</header>
+		<div id="mainpage">
+			<div class="w3-panel w3-white">
+				<table>
+					<tr>
+						<?php
 
-					$i = $cursus_offset + 1;
+						$i = $cursus_offset + 1;
 
-					while ($i <= ($aantal_cursussen + $cursus_offset)) {
-					?>
-						<td valign="top">
-							<p><b>Cursus <?php echo $i ?>: </b>
+						while ($i <= ($aantal_cursussen + $cursus_offset)) {
+						?>
+							<td valign="top">
+								<p><b>Cursus <?php echo $i ?>: </b>
+								</p>
+								<ul>
+									<li>Aangenomen:
+										<?php echo $aangenomen[$i]; ?>
+									</li>
+									<li>Volle prijs:
+										<?php echo $aangenomen[$i] - $student[$i] - $oost[$i] - $ooststudent[$i] - $toehoorder[$i]; ?>
+									</li>
+									<li>Student:
+										<?php echo $student[$i]; ?>
+									</li>
+									<li>Oost-Europa:
+										<?php echo $oost[$i]; ?>
+									</li>
+									<li>Student Oost-Eur.:
+										<?php echo $ooststudent[$i]; ?>
+									</li>
+									<li>Toehoorder:
+										<?php echo $toehoorder[$i]; ?>
+									</li>
+									<li><strong>Nog niet aangenomen: <?php echo ($deelnemers[$i] - $aangenomen[$i]); ?></strong>
+									</li>
+									<li>Afgewezen:
+										<?php echo $afgewezen_aantal[$i]; ?>
+									</li>
+									<li>Vorig jaar op deze dag:
+										<?php echo $deelnemers_vorigjaar[$i]; ?>
+									</li>
+									<li>Nieuwe deelnemers:
+										<?php echo $nieuw[$i]; ?>
+									</li>
+									<li>Gem. leeftijd:
+										<?php echo $leeftijd['gemiddelde'][$i]; ?>, min.
+										<?php echo $leeftijd['min'][$i] ?>, max.
+										<?php echo $leeftijd['max'][$i] ?>
+									</li>
+								</ul>
+								<p><strong>Accommodatie:</strong>
+								</p>
+								<ul>
+									<li>Eenp.:
+										<?php echo $Eenp_aantal[$i]; ?> +
+										<?php echo $docenten_eenpersoons[$i]; ?> docenten =
+										<?php echo ($docenten_eenpersoons[$i] + $Eenp_aantal[$i]); ?>
+									</li>
+									<li class="onzichtbaar">Meerpers.:
+										<?php echo $meerpers_aantal[$i]; ?>
+									</li>
+									<li>Elektra tweepers.:
+										<?php echo $hotel_2pp_aantal[$i]; ?>
+									</li>
+									<li>Elektra eenpers.:
+										<?php echo $hotel_1pp_aantal[$i]; ?>
+									</li>
+									<li>Eigen accommodatie:
+										<?php echo $eigenacc_aantal[$i]; ?>
+									</li>
+									<li>Kamperen:
+										<?php echo $kamperen_aantal[$i]; ?>
+									</li>
+									<li>Tijdige inschrijvers:
+										<?php echo $vroeg[$i]; ?>
+									</li>
+									<li>Diner bij eigen acc.:
+										<?php echo $diner_aantal[$i]; ?>
+									</li>
+								</ul>
+								<p><strong>Bus:</strong>
+								</p>
+								<ul>
+									<li>Buspassagiers heen:
+										<?php echo $cursus[$i]['busheen']; ?>
+									</li>
+									<li>Buspassagiers terug:
+										<?php echo $cursus[$i]['busterug']; ?>
+									</li>
+								</ul>
+								<p><strong>Betaling:</strong>
+								</p>
+								<ul>
+									<li>Cursusgeld:&nbsp;
+										<?php echo euro($cursus[$i]['cursusgeld']); ?>
+									</li>
+									<li>Donaties:&nbsp;
+										<?php echo euro($cursus[$i]['donatie']); ?>
+									</li>
+									<li>Kortingen:&nbsp;
+										<?php echo euro($cursus[$i]['korting']); ?>
+									</li>
+									<li><strong>Totaal te ontvangen:&nbsp;
+											<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting']); ?></strong>
+									</li>
+									<li>Al betaald:&nbsp;
+										<?php echo euro($cursus[$i]['aanbet_bedrag']); ?>
+									</li>
+									<li>Nog te ontvangen:&nbsp;
+										<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] -
+											$cursus[$i]['aanbet_bedrag']); ?>
+									</li>
+								</ul>
+							</td>
+						<?php
+							$i++;
+						}
+						?>
+					</tr>
+					<tr>
+						<td colspan="<?php echo $aantal_cursussen; ?>" valign="top">
+							<p>Totaal aangenomen deelnemers:&nbsp;
+								<?php echo $aangenomen['totaal']; ?> | cursusgeld:&nbsp;
+								<?php echo euro($cursus['totaal']['cursusgeld']); ?> | donaties:&nbsp;
+								<?php echo euro($cursus['totaal']['donatie']); ?> | aantal donateurs:&nbsp;
+								<?php echo $donateurs['totaal']; ?> | kortingen:&nbsp;
+								<?php echo euro($cursus['totaal']['korting']); ?> | totaal te ontvangen:&nbsp;
+								<?php echo euro(
+									$cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie']
+									/* - $cursus['totaal']['korting'] */
+								); ?>
 							</p>
-							<ul>
-								<li>Aangenomen:
-									<?php echo $aangenomen[$i]; ?>
-								</li>
-								<li>Volle prijs:
-									<?php echo $aangenomen[$i] - $student[$i] - $oost[$i] - $ooststudent[$i] - $toehoorder[$i]; ?>
-								</li>
-								<li>Student:
-									<?php echo $student[$i]; ?>
-								</li>
-								<li>Oost-Europa:
-									<?php echo $oost[$i]; ?>
-								</li>
-								<li>Student Oost-Eur.:
-									<?php echo $ooststudent[$i]; ?>
-								</li>
-								<li>Toehoorder:
-									<?php echo $toehoorder[$i]; ?>
-								</li>
-								<li><strong>Nog niet aangenomen: <?php echo ($deelnemers[$i] - $aangenomen[$i]); ?></strong>
-								</li>
-								<li>Afgewezen:
-									<?php echo $afgewezen_aantal[$i]; ?>
-								</li>
-								<li>Vorig jaar op deze dag:
-									<?php echo $deelnemers_vorigjaar[$i]; ?>
-								</li>
-								<li>Nieuwe deelnemers:
-									<?php echo $nieuw[$i]; ?>
-								</li>
-								<li>Gem. leeftijd:
-									<?php echo $leeftijd['gemiddelde'][$i]; ?>, min.
-									<?php echo $leeftijd['min'][$i] ?>, max.
-									<?php echo $leeftijd['max'][$i] ?>
-								</li>
-							</ul>
-							<p><strong>Accommodatie:</strong>
+							<p>Totaal al betaald:&nbsp;
+								<?php echo euro($cursus['totaal']['aanbet_bedrag']); ?> | Totaal nog te ontvangen:&nbsp;
+								<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] /* - $cursus['totaal']['korting']  */ - $cursus['totaal']['aanbet_bedrag']); ?> | gemiddelde leeftijd
+								<?php echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?> | aantal deelnemers vorig jaar
+								<?php echo $deelnemers_vorigjaar['totaal']; ?> (
+								<?php if ($aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'] >= 0) echo '+';
+								else echo '-';
+								echo $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal']; ?>)
 							</p>
-							<ul>
-								<li>Eenp.:
-									<?php echo $Eenp_aantal[$i]; ?> +
-									<?php echo $docenten_eenpersoons[$i]; ?> docenten =
-									<?php echo ($docenten_eenpersoons[$i] + $Eenp_aantal[$i]); ?>
-								</li>
-								<li class="onzichtbaar">Meerpers.:
-									<?php echo $meerpers_aantal[$i]; ?>
-								</li>
-								<li>Elektra tweepers.:
-									<?php echo $hotel_2pp_aantal[$i]; ?>
-								</li>
-								<li>Elektra eenpers.:
-									<?php echo $hotel_1pp_aantal[$i]; ?>
-								</li>
-								<li>Eigen accommodatie:
-									<?php echo $eigenacc_aantal[$i]; ?>
-								</li>
-								<li>Kamperen:
-									<?php echo $kamperen_aantal[$i]; ?>
-								</li>
-								<li>Tijdige inschrijvers:
-									<?php echo $vroeg[$i]; ?>
-								</li>
-								<li>Diner bij eigen acc.:
-									<?php echo $diner_aantal[$i]; ?>
-								</li>
-							</ul>
-							<p><strong>Bus:</strong>
-							</p>
-							<ul>
-								<li>Buspassagiers heen:
-									<?php echo $cursus[$i]['busheen']; ?>
-								</li>
-								<li>Buspassagiers terug:
-									<?php echo $cursus[$i]['busterug']; ?>
-								</li>
-							</ul>
-							<p><strong>Betaling:</strong>
-							</p>
-							<ul>
-								<li>Cursusgeld:&nbsp;
-									<?php echo euro($cursus[$i]['cursusgeld']); ?>
-								</li>
-								<li>Donaties:&nbsp;
-									<?php echo euro($cursus[$i]['donatie']); ?>
-								</li>
-								<li>Kortingen:&nbsp;
-									<?php echo euro($cursus[$i]['korting']); ?>
-								</li>
-								<li><strong>Totaal te ontvangen:&nbsp;
-										<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting']); ?></strong>
-								</li>
-								<li>Al betaald:&nbsp;
-									<?php echo euro($cursus[$i]['aanbet_bedrag']); ?>
-								</li>
-								<li>Nog te ontvangen:&nbsp;
-									<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] -
-										$cursus[$i]['aanbet_bedrag']); ?>
-								</li>
-							</ul>
 						</td>
-					<?php
-						$i++;
-					}
-					?>
-				</tr>
-				<tr>
-					<td colspan="<?php echo $aantal_cursussen; ?>" valign="top">
-						<p>Totaal aangenomen deelnemers:&nbsp;
-							<?php echo $aangenomen['totaal']; ?> | cursusgeld:&nbsp;
-							<?php echo euro($cursus['totaal']['cursusgeld']); ?> | donaties:&nbsp;
-							<?php echo euro($cursus['totaal']['donatie']); ?> | aantal donateurs:&nbsp;
-							<?php echo $donateurs['totaal']; ?> | kortingen:&nbsp;
-							<?php echo euro($cursus['totaal']['korting']); ?> | totaal te ontvangen:&nbsp;
-							<?php echo euro(
-								$cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie']
-								/* - $cursus['totaal']['korting'] */
-							); ?>
-						</p>
-						<p>Totaal al betaald:&nbsp;
-							<?php echo euro($cursus['totaal']['aanbet_bedrag']); ?> | Totaal nog te ontvangen:&nbsp;
-							<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] /* - $cursus['totaal']['korting']  */ - $cursus['totaal']['aanbet_bedrag']); ?> | gemiddelde leeftijd
-							<?php echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?> | aantal deelnemers vorig jaar
-							<?php echo $deelnemers_vorigjaar['totaal']; ?> (
-							<?php if ($aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'] >= 0) echo '+';
-							else echo '-';
-							echo $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal']; ?>)
-						</p>
-					</td>
-				</tr>
-			</table>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
 </body>
