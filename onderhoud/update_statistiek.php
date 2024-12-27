@@ -7,8 +7,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 Kint::$enabled_mode = false;
 
-d($_GET);
-d($_POST);
+d($_GET, $_POST);
 
 $docenten_eenpersoons[1 + $cursus_offset] = 7;
 $docenten_eenpersoons[2 + $cursus_offset] = 3;
@@ -179,7 +178,6 @@ while ($i <= ($laatstecursus)) {
 
 	<head>
 		<title>statistieken</title>
-		<link rel="stylesheet" href="/css/w3.css">
 		<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 		<style type="text/css">
 			body {

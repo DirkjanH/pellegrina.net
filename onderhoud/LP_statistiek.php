@@ -7,27 +7,40 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 Kint::$enabled_mode = false;
 
-d($_GET);
-d($_POST);
+d($_GET, $_POST);
 
-$docenten_eenpersoons[1 + $cursus_offset] = 5;
-$docenten_eenpersoons[2 + $cursus_offset] = 7;
-$docenten_eenpersoons[3 + $cursus_offset] = 9;
+$docenten_eenpersoons[1 + $cursus_offset] = 7;
+$docenten_eenpersoons[2 + $cursus_offset] = 3;
 
 $i = $eerstecursus;
+$deelnemers_vorigjaar['totaal'] = 0;
+$deelnemers['totaal'] = 0;
+$aangenomen['totaal'] = 0;
+$toehoorder['totaal'] = 0;
+$student['totaal'] = 0;
+$oost['totaal'] = 0;
+$ooststudent['totaal'] = 0;
+$donateurs['totaal'] = 0;
+$vroeg['totaal'] = 0;
+$nieuw['totaal'] = 0;
+$cursus['totaal']['cursusgeld'] = 0;
+$cursus['totaal']['aanbet_bedrag'] = 0;
+$cursus['totaal']['donatie'] = 0;
+$cursus['totaal']['korting'] = 0;
 
 while ($i <= ($laatstecursus)) {
 
 	switch ($i) {
 		case $cursus_offset + 1:
-			$oud = 56; // barok
+			$oud = 59; // romantiek
 			break;
 		case $cursus_offset + 2:
-			$oud = 57; // romantiek
+			$oud = 58; // barok
 			break;
 	}
 
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND CursusId_FK = {$oud} AND NOT (afgewezen <=> 1) AND datum_inschr <= DATE_SUB(CURDATE(), INTERVAL 1 Year)";
+	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND CursusId_FK = {$oud} AND NOT (afgewezen <=> 1) AND datum_inschr <= DATE_SUB(NOW(), INTERVAL 1 Year)";
+	d($tel_query);
 	d($deelnemers_vorigjaar[$i] = select_query($tel_query, 0));
 	$deelnemers_vorigjaar['totaal'] += $deelnemers_vorigjaar[$i];
 
@@ -59,9 +72,9 @@ while ($i <= ($laatstecursus)) {
 	$donateurs[$i] = select_query($tel_query, 0);
 	$donateurs['totaal'] += $donateurs[$i];
 
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving AS a, dlnmr, cursus WHERE DlnmrId=DlnmrId_FK AND CursusId=CursusId_FK 
+	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr, cursus WHERE DlnmrId=DlnmrId_FK AND CursusId=CursusId_FK 
 	AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} 
-	and datum_inschr <= datum_korting and NOT (afgewezen <=> 1) and NOT (a.toehoorder <=> 1) ";
+	and datum_inschr <= datum_korting AND aangenomen = 1 AND NOT(afgewezen <=> 1)";
 	$vroeg[$i] = select_query($tel_query, 0);
 	$vroeg['totaal'] += $vroeg[$i];
 
@@ -84,15 +97,20 @@ while ($i <= ($laatstecursus)) {
 	$leeftijd['min'][$i] = $tel['min'];
 	$leeftijd['max'][$i] = $tel['max'];
 
-	$cur = select_query("select sum(cursusgeld) as cursusgeld, sum(aanbet_bedrag) as aanbet_bedrag, 
+	$gewoon[$i] = $aangenomen[$i] - $student[$i] - $oost[$i] - $ooststudent[$i] - $toehoorder[$i];
+
+	$cursussen = select_query("select sum(cursusgeld) as cursusgeld, sum(aanbet_bedrag) as aanbet_bedrag, 
 	sum(donatie) as donatie, sum(korting) as korting from inschrijving, dlnmr WHERE DlnmrId_FK = DlnmrId 
 	AND aangenomen = 1 AND NOT(afgewezen <=> 1) AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" 
-	AND geboortedatum != 0 AND cursusid_fk = {$i}", 1);
-	d($cur);
-	$cursus[$i] = $cur;
-	$cursus['totaal']['cursusgeld'] += $cur['cursusgeld'];
-	$cursus['totaal']['aanbet_bedrag'] += $cur['donatie'];
-	$cursus['totaal']['korting'] += $cur['korting'];
+	AND geboortedatum != 0 AND cursusid_fk = {$i}");
+	d($cursussen);
+	foreach ($cursussen as $rij) {
+		$cursus[$i] = $rij;
+		$cursus['totaal']['cursusgeld'] += $rij['cursusgeld'];
+		$cursus['totaal']['aanbet_bedrag'] += $rij['aanbet_bedrag'];
+		$cursus['totaal']['donatie'] += $rij['donatie'];
+		$cursus['totaal']['korting'] += $rij['korting'];
+	}
 
 	// begin Recordset busheen
 	$query_busheen = "SELECT count(*) as heen FROM inschrijving WHERE aangenomen = 1 AND busheen = 1 AND cursusid_fk = {$i} and NOT (afgewezen <=> 1) ";
@@ -108,7 +126,6 @@ while ($i <= ($laatstecursus)) {
 	$query_Eenp = "SELECT InschId FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eenpersoons = 1 and NOT (afgewezen <=> 1)";
 	$Eenp = select_query($query_Eenp);
 	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp);
-	else $Eenp_aantal[$i] = 0;
 	// end Recordset
 
 	// begin Recordset
@@ -136,11 +153,11 @@ while ($i <= ($laatstecursus)) {
 	$hotel_1pp_aantal[$i] = select_query($query_hotel_1pp, 0);
 	// end Recordset
 
-	// begin Recordset
-	$query_diner = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND diner = 1 and NOT (afgewezen <=> 1)";
-	$diner_aantal[$i] = select_query($query_diner, 0);
-	// end Recordset
-
+	/* 	// begin Recordset
+		$query_maaltijdpas = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND maaltijdpas = 1 and NOT (afgewezen <=> 1)";
+		$maaltijdpas_aantal[$i] = select_query($query_maaltijdpas, 0);
+		// end Recordset
+	 */
 	// begin Recordset
 	$query_afgewezen = "SELECT count(*) FROM inschrijving WHERE CursusId_FK = {$i} AND afgewezen <=> 1";
 	$afgewezen_aantal[$i] = select_query($query_afgewezen, 0);
