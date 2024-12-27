@@ -188,10 +188,10 @@ while ($i <= ($laatstecursus)) {
 </head>
 
 <body>
-	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php'); ?>
-	</div>
 	<div id="inhoud">
+		<div id="zoeknaam">
+			<?php require_once('LP_zoeknaam.php'); ?>
+		</div>
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
