@@ -2,8 +2,7 @@
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '')
 	$_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 
-d($_SESSION);
-d($_POST);
+d($_SESSION, $_POST);
 
 $i = $eerstecursus;
 while ($i <= $laatstecursus) {

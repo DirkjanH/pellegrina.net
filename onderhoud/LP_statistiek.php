@@ -152,7 +152,7 @@ while ($i <= ($laatstecursus)) {
 ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
 
@@ -169,12 +169,9 @@ while ($i <= ($laatstecursus)) {
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP statistiek</title>
-	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
 	<style>
 		li {
 			padding-bottom: 0;
@@ -188,7 +185,6 @@ while ($i <= ($laatstecursus)) {
 			margin-bottom: 0;
 		}
 	</style>
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -200,8 +196,7 @@ while ($i <= ($laatstecursus)) {
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
-			<div class="w3-panel w3-white w3-margin-right">
+			<div class="w3-panel w3-white">
 				<table>
 					<tr>
 						<?php
@@ -344,10 +339,8 @@ while ($i <= ($laatstecursus)) {
 					</tr>
 				</table>
 			</div>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>
