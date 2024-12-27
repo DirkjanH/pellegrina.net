@@ -1,9 +1,10 @@
 <?php
 // build the form href
-$editFormhref = $_SERVER[ 'PHP_SELF' ] . ( isset( $_SERVER[ 'QUERY_STRING' ] ) ? "?" . $_SERVER[ 'QUERY_STRING' ] : "" );
+$editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . $_SERVER['QUERY_STRING'] : "");
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<style type="text/css">
@@ -38,8 +39,6 @@ $editFormhref = $_SERVER[ 'PHP_SELF' ] . ( isset( $_SERVER[ 'QUERY_STRING' ] ) ?
 				</div>
 				<div class="w3-cell w3-mobile"><a class="button" href="LP_zwartelijst.php">Zwarte lijst</a>
 				</div>
-			</div>
-			<div class="w3-cell-row">
 				<div class="w3-cell w3-mobile"><a class="button" href="LP_persoonlijk.php">Persoonlijk</a>
 				</div>
 				<div class="w3-cell w3-mobile"><a class="button" href="LP_inschrijving.php">Inschrijving</a>
@@ -50,10 +49,9 @@ $editFormhref = $_SERVER[ 'PHP_SELF' ] . ( isset( $_SERVER[ 'QUERY_STRING' ] ) ?
 				</div>
 				<div class="w3-cell w3-mobile"><a class="button" href="LP_betaling.php">Betaling</a>
 				</div>
-				<div class="w3-cell w3-mobile"><a class="button" href="LP_betaling.php">Betaling</a>
-				</div>
 			</div>
 		</div>
 	</form>
 </body>
+
 </html>
