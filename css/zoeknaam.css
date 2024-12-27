@@ -63,7 +63,7 @@ ul#navlist {
     background: Orange;
 }
 
-div#navigatiebalk {
+header#navigatiebalk {
     display: block;
     position: fixed;
     float: left
