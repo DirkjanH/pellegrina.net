@@ -4,6 +4,13 @@ div#inhoud {
     max-width: 800px;
 }
 
+div#zoeknaam {
+    display: block;
+    float: left;
+    width: 235px;
+    margin-bottom: 20px;
+}
+
 div#navigatie {
     display: block;
     position: fixed;
