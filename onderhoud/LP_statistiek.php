@@ -174,7 +174,7 @@ while ($i <= ($laatstecursus)) {
 </head>
 
 <body>
-	<div id="zoeknaam" style="width: 235px; float: left;">
+	<div id="zoeknaam">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
 	<div id="inhoud">
