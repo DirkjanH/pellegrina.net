@@ -9,13 +9,10 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<style type="text/css">
 		a.button {
-			-webkit-appearance: button;
-			-moz-appearance: button;
 			appearance: button;
 			text-decoration: none;
 			color: initial;
 			width: 180px;
-			padding: 0 10px;
 			text-align: center;
 			font-size: small;
 			background-color: lightgoldenrodyellow;
