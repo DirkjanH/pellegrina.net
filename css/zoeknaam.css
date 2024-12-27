@@ -1,14 +1,11 @@
 div#inhoud {
     float: left;
-    display: block;
     max-width: 800px;
 }
 
 div#zoeknaam {
-    display: block;
     float: left;
     width: 235px;
-    margin-bottom: 20px;
 }
 
 div#navigatie {
@@ -16,8 +13,7 @@ div#navigatie {
     position: fixed;
     width: 210px;
     font-size: 12px;
-    float: left;
-}
+ }
 
 #navcontainer {
     width: 195px;
