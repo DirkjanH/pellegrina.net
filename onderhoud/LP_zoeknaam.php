@@ -92,6 +92,9 @@ function check($input)
 			document.getElementById('DlnmrId').value = Id;
 			document.getElementById('vinden').submit();
 		}
+		function wis() {
+			document.getElementById('zoeknaam').value = '';
+		}
 		//-->
 	</script>
 </head>
@@ -99,7 +102,7 @@ function check($input)
 <body>
 	<div class="w3-panel">
 		<form id="vinden" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-			<label>Naam: </label><input name="zoeknaam" type="text" id="zoeknaam" size="15" value="<?php echo $_POST['zoeknaam']; ?>"> <a href="" class="w3-text-red w3-button"><b>X</b></a><br>
+			<label>Naam: </label><input name="zoeknaam" type="text" id="zoeknaam" size="15" value="<?php echo $_POST['zoeknaam']; ?>"> <a href="javascript:wis()" class="w3-text-red w3-button"><b>X</b></a><br>
 			<label>Alle deelnemers van ooit: </label><input name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '') echo 'checked'; ?>>
 			<p>
 				<label><input type="radio" name="cursus" value="alles" onclick="javascript: submit();" <?php check('alles'); ?>>Alles</label><br>
