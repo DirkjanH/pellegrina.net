@@ -93,6 +93,7 @@ function check($input)
 		}
 		function wis() {
 			document.getElementById('zoeknaam').value = '';
+			document.getElementById('vinden').submit();
 		}
 	</script>
 </head>
