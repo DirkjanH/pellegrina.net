@@ -1,3 +1,8 @@
+div#inhoud {
+    float: left;
+    max-width: 1000px;
+}
+
 div#navigatie {
     display: block;
     position: fixed;
