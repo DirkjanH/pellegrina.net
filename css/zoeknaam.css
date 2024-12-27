@@ -62,7 +62,6 @@ a.button {
     appearance: button;
     text-decoration: none;
     color: initial;
-    width: 180px;
-    text-align: center;
+    text-align: left;
     font-size: small;
 }
