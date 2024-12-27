@@ -87,7 +87,6 @@ function check($input)
 
 <head>
 	<script type="text/javascript">
-		//<!--
 		function ToonId(Id) {
 			document.getElementById('DlnmrId').value = Id;
 			document.getElementById('vinden').submit();
@@ -95,7 +94,6 @@ function check($input)
 		function wis() {
 			document.getElementById('zoeknaam').value = '';
 		}
-		//-->
 	</script>
 </head>
 
