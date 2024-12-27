@@ -61,7 +61,5 @@ ul#navlist {
 a.button {
     appearance: button;
     text-decoration: none;
-    color: initial;
-    text-align: left;
     font-size: small;
 }
