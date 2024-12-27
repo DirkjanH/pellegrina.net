@@ -65,7 +65,7 @@ if ((isset($_POST["zoek"])) && ($_POST["zoek"] == "zoek")AND($_POST["oude_dlnrs"
 			AND CursusId_FK > {$cursus_offset} AND CursusId_FK <= ({$aantal_cursussen} + {$cursus_offset}) AND (aanbet_bedrag = 0 OR 
 			aanbet_bedrag IS NULL) AND cursusgeld != 0 ORDER BY achternaam ASC";
 	}
-	d($query_Inschr)
+	d($query_Inschr);
 	$Inschr = select_query($query_Inschr);
 	if (isset($Inschr)AND is_array($Inschr))$aantal_ins = count($Inschr);
 	else $aantal_ins = 0;
