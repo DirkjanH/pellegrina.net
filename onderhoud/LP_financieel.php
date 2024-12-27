@@ -130,7 +130,7 @@ function LeesInschrijving($id, $cursusId)
 			AND CursusId_FK BETWEEN %s AND %s
 			 {$cursuszoek}
 			 AND DlnmrId_FK=%s 
-		ORDER BY CursusId_FK, achternaam ASC",
+		ORDER BY CursusId_FK, achternaam ASC;",
 		quote($eerstecursus),
 		quote($laatstecursus),
 		quote($id)
