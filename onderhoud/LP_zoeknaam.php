@@ -96,7 +96,6 @@ function check($input)
 	</script>
 	<style>
 		label.kruis {
-			h2:after {
 				content: ' \274C';
 			}
 	</style>
