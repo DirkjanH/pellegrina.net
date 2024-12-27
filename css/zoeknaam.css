@@ -1,5 +1,6 @@
 div#inhoud {
     float: left;
+    display: block;
     max-width: 1000px;
 }
 
@@ -8,6 +9,7 @@ div#navigatie {
     position: fixed;
     width: 210px;
     font-size: 12px;
+    float: left;
 }
 
 #navcontainer {
