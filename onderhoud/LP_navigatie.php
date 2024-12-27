@@ -21,6 +21,8 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
 			</div>
 			<div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a class="button" href="LP_wanbetalers.php">Aanm. cursusgeld</a>
 			</div>
+		</div>
+		<div class="w3-bar w3-pale-yellow" style="padding: 0px 8px;">
 			<div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a class="button" href="LP_zwartelijst.php">Zwarte lijst</a>
 			</div>
 			<div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a class="button" href="LP_persoonlijk.php">Persoonlijk</a>
