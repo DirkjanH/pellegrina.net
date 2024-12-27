@@ -171,7 +171,6 @@ while ($i <= ($laatstecursus)) {
 	<meta name="theme-color" content="#ffffff">
 	<title>LP statistiek</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
 	<style>
 		li {
 			padding-bottom: 0;
