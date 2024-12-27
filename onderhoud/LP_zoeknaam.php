@@ -69,6 +69,7 @@ if ((isset($_POST["zoek"])) && ($_POST["zoek"] == "zoek")AND($_POST["oude_dlnrs"
 	$Inschr = select_query($query_Inschr);
 	if (isset($Inschr)AND is_array($Inschr))$aantal_ins = count($Inschr);
 	else $aantal_ins = 0;
+	d($Inschr, $aantal_ins);
 } // if zoek
 
 function check($input) {
