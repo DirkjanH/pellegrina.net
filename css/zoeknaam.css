@@ -52,3 +52,10 @@ ul#navlist {
 .NogNietBevestigd {
     background: Orange;
 }
+
+a.button {
+    appearance: button;
+    width: 180px;
+    text-align: center;
+    font-size: small;
+}

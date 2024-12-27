@@ -6,23 +6,11 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
 <html>
 
 <head>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style type="text/css">
-		a.button {
-			appearance: button;
-			text-decoration: none;
-			color: initial;
-			width: 180px;
-			text-align: center;
-			font-size: small;
-			background-color: lightgoldenrodyellow;
-		}
-	</style>
 </head>
 
 <body>
 	<form name="form1" method="post" href="<?php echo $editFormhref; ?>">
-		<div class="w3-bar">
+		<div class="w3-bar w3-padding-0">
 			<div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a class="button" href="LP_statistiek.php">Statistieken</a>
 			</div>
 			<div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a class="button" href="LP_reminder.php">Aanmaning inschr.geld</a>
