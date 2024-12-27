@@ -10,7 +10,7 @@ while ($i <= $laatstecursus) {
 	$cur[] = $i;
 	$i++;
 }
-d($i);
+d($cur);
 
 if (empty($_POST['oude_dlnrs']))$_POST['oude_dlnrs'] = '';
 if (empty($_POST['cursus'])) {
