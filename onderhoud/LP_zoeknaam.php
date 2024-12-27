@@ -89,7 +89,7 @@ function check($input)
 	<script type="text/javascript">
 		function ToonId(Id) {
 			document.getElementById('DlnmrId').value = Id;
-			document.getElementById('zoek').submit();
+			document.forms['vinden'].submit();
 		}
 		function wis() {
 			document.getElementById('zoeknaam').value = '';
