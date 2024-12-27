@@ -100,7 +100,6 @@ function check($input)
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Aanbetaling bevestigen</title>
         <script type="text/javascript">
             function ToonId(Id) {
                 parent.mainFrame.document.zoek.DlnmrId.value = Id;
@@ -110,7 +109,7 @@ function check($input)
         </ head>
 
     <body>
-        <div id="inhoud" class="w3-panel">
+        <div class="w3-panel">
             <form id="vinden" method="post"
                 action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <p><label>Naam: </label><input name="zoeknaam" type="text"
