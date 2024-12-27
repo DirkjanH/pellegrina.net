@@ -302,7 +302,7 @@ while ($i <= ($laatstecursus)) {
 										<?php echo euro($cursus[$i]['aanbet_bedrag']); ?>
 									</li>
 									<li>Nog te ontvangen:&nbsp;
-										<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] -
+										<?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting'] -
 											$cursus[$i]['aanbet_bedrag']); ?>
 									</li>
 								</ul>

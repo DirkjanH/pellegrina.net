@@ -153,11 +153,6 @@ while ($i <= ($laatstecursus)) {
 	$hotel_1pp_aantal[$i] = select_query($query_hotel_1pp, 0);
 	// end Recordset
 
-	/* 	// begin Recordset
-		$query_maaltijdpas = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND maaltijdpas = 1 and NOT (afgewezen <=> 1)";
-		$maaltijdpas_aantal[$i] = select_query($query_maaltijdpas, 0);
-		// end Recordset
-	 */
 	// begin Recordset
 	$query_afgewezen = "SELECT count(*) FROM inschrijving WHERE CursusId_FK = {$i} AND afgewezen <=> 1";
 	$afgewezen_aantal[$i] = select_query($query_afgewezen, 0);
