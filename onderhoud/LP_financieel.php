@@ -353,6 +353,14 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 </head>
 
 <body>
+	<div id="zoeknaam">
+		<?php require_once('LP_zoeknaam.php'); ?>
+	</div>
+	<div id="mainframe">
+		<header id="navigatiebalk">
+			<?php require_once('LP_navigatie.php'); ?>
+		</header>
+		<div id="mainpage">
 	<table>
 		<tr>
 			<td colspan="5">
