@@ -94,12 +94,18 @@ function check($input)
 		}
 		//-->
 	</script>
+	<style>
+		label.kruis {
+			h2:after {
+				content: ' \274C';
+			}
+	</style>
 </head>
 
 <body>
 	<div class="w3-panel">
 		<form id="vinden" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-			<label>Naam: </label><input name="zoeknaam" type="text" id="zoeknaam" size="15" value="<?php echo $_POST['zoeknaam']; ?>"><br>
+			<label class="kruis">Naam: </label><input name="zoeknaam" type="text" id="zoeknaam" size="15" value="<?php echo $_POST['zoeknaam']; ?>"><br>
 			<label>Alle deelnemers van ooit: </label><input name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '') echo 'checked'; ?>>
 			<p>
 				<label><input type="radio" name="cursus" value="alles" onclick="javascript: submit();" <?php check('alles'); ?>>Alles</label><br>
