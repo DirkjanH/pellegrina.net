@@ -1,6 +1,5 @@
 div#inhoud {
     float: left;
-    max-width: 800px;
 }
 
 div#zoeknaam {
@@ -9,8 +8,6 @@ div#zoeknaam {
 }
 
 div#navigatie {
-    display: block;
-    position: fixed;
     width: 210px;
     font-size: 12px;
 }
@@ -61,12 +58,6 @@ ul#navlist {
 
 .NogNietBevestigd {
     background: Orange;
-}
-
-header#navigatiebalk {
-    display: block;
-    position: fixed;
-    float: left
 }
 
 a.button {
