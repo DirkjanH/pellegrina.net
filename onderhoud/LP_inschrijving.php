@@ -188,33 +188,25 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>LP bewerk inschrijving</title>
-  <!-- InstanceEndEditable -->
-  <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-  <link rel="stylesheet" href="/css/onderhoud.css">
-  <!-- InstanceBeginEditable name="head" -->
+	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
+	<link rel="stylesheet" href="/css/zoeknaam.css">
   <SCRIPT>
-    <!--
     function GP_popupConfirmMsg(msg) { //v1.0
       document.MM_returnValue = confirm(msg);
     }
-    // 
-    -->
   </SCRIPT>
-  <!-- InstanceEndEditable -->
 </head>
 
 <body>
-  <div id="zoeknaam">
-    <?php require_once('LP_zoeknaam.php'); ?>
-  </div>
-  <div id="inhoud">
-    <header id="navigatiebalk">
-      <?php require_once('LP_navigatie.php'); ?>
-    </header>
-    <div id="mainpage">
-      <!-- InstanceBeginEditable name="Mainpage" -->
+	<div id="zoeknaam">
+		<?php require_once('LP_zoeknaam.php'); ?>
+	</div>
+	<div id="mainframe">
+		<header id="navigatiebalk">
+			<?php require_once('LP_navigatie.php'); ?>
+		</header>
+		<div id="mainpage">
       <table width="600" border="0" align="left" style="clear: both;">
         <tr>
           <td colspan="3">

@@ -126,6 +126,11 @@ d($inschrijving);
 	<title>LP persoonlijk</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 	<link rel="stylesheet" href="/css/zoeknaam.css">
+	<SCRIPT>
+		function GP_popupConfirmMsg(msg) { //v1.0
+			document.MM_returnValue = confirm(msg);
+		}
+	</SCRIPT>
 </head>
 
 <body>
