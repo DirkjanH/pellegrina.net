@@ -184,8 +184,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
   <meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <title>LP bewerk inschrijving</title>
-	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/zoeknaam.css">
+  <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
+  <link rel="stylesheet" href="/css/zoeknaam.css">
   <SCRIPT>
     function GP_popupConfirmMsg(msg) { //v1.0
       document.MM_returnValue = confirm(msg);
@@ -194,14 +194,14 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
 </head>
 
 <body>
-	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php'); ?>
-	</div>
-	<div id="mainframe">
-		<header id="navigatiebalk">
-			<?php require_once('LP_navigatie.php'); ?>
-		</header>
-		<div id="mainpage">
+  <div id="zoeknaam">
+    <?php require_once('LP_zoeknaam.php'); ?>
+  </div>
+  <div id="mainframe">
+    <header id="navigatiebalk">
+      <?php require_once('LP_navigatie.php'); ?>
+    </header>
+    <div id="mainpage">
       <table width="600" border="0" align="left" style="clear: both;">
         <tr>
           <td colspan="3">
@@ -209,8 +209,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
               <input name="DlnmrId" id="DlnmrId" type="hidden" value="<?php if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId']; ?>" size="5" />
               <input type="submit" name="Submit" value="Zoek">
               (alle inschrijvingen van de afgelopen jaren:
-              <input name="alles" id="alles" type="checkbox" <?php
-                                                              if (isset($_SESSION['alles']) and stristr($_SESSION['alles'], 'on') !== false) echo 'checked'; ?>>
+              <input name="alles" id="alles" type="checkbox" 
+              <?php if (isset($_SESSION['alles']) and stristr($_SESSION['alles'], 'on') !== false) echo 'checked'; ?>>
               )
             </form>
           </td>
