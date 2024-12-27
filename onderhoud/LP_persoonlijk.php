@@ -123,33 +123,20 @@ d($inschrijving);
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
-	<title>LP persoonlijk</title><!-- InstanceEndEditable -->
+	<title>LP persoonlijk</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
-
-	<script type="text/javascript">
-		//<!--
-		function ToonId(Id) {
-			parent.mainFrame.document.zoek.DlnmrId.value = Id;
-			parent.mainFrame.document.zoek.Submit.click();
-		}
-		//-->
-	</script>
-	<!-- InstanceEndEditable -->
+	<link rel="stylesheet" href="/css/zoeknaam.css">
 </head>
 
 <body>
 	<div id="zoeknaam">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
-	<div id="inhoud">
+	<div id="mainframe">
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
 			<table width="600" border="0" align="left">
 				<td>
 					<form id="zoek" name="zoek" method="get" action="<?php echo $editFormAction; ?>">
