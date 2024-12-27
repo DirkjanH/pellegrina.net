@@ -1,14 +1,11 @@
 <?php
 // stel php in dat deze fouten weergeeft
-ini_set( 'display_errors', 1 );
-
+//ini_set( 'display_errors', 1 );
 error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 Kint::$enabled_mode = false;
-
-session_start();
 
 if (isset($_POST['alles']) and $_POST['alles'] != '') $_SESSION['alles'] = $_POST['alles'];
 
