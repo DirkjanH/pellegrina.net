@@ -1,17 +1,13 @@
 <?php
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1);
-
 error_reporting(E_ALL);
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 Kint::$enabled_mode = false;
 
-d($_SESSION);
-d($_POST);
-
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+d($_SESSION, $_POST);
 
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 elseif (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'];
