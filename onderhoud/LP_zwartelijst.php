@@ -1,11 +1,8 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 // stel php in dat deze fouten weergeeft
-//ini_set('display_errors',1);
-
+ini_set('display_errors',1);
 error_reporting(E_ALL);
-
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
 Kint::$enabled_mode = false;
 
@@ -103,7 +100,7 @@ $aantal_zwl = count($zwartelijst);
 ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
 
@@ -120,12 +117,9 @@ $aantal_zwl = count($zwartelijst);
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP zwarte lijst</title>
-	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
 	<style type="text/css">
 		<!-- 
 		.categorie1 {
@@ -137,7 +131,6 @@ $aantal_zwl = count($zwartelijst);
 		}
 		-->
 	</style>
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -244,6 +237,5 @@ $aantal_zwl = count($zwartelijst);
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>
