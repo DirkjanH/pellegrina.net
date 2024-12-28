@@ -65,7 +65,7 @@ $query_deelnemer = sprintf(
 
 $deelnemer = select_query($query_deelnemer, 1);
 
-if (count($deelnemer) < 1) {
+if (is_array($deelnemer) AND count($deelnemer) < 1) {
 	$query_deelnemer = sprintf(
 		"SELECT * FROM dlnmr WHERE DlnmrId = %s",
 		$colname__inschrijving
