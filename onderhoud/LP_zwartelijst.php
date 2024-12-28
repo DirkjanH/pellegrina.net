@@ -141,8 +141,7 @@ $aantal_zwl = count($zwartelijst);
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
+		<div id="mainpage" style="max-width: 800px;">
 			<div class="w3-panel w3-white">
 				<table class="onzichtbaar">
 					<tr>
@@ -161,7 +160,7 @@ $aantal_zwl = count($zwartelijst);
 					</tr>
 				</table>
 				<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
-					<div class="w3-card-4 w3-margin-top" style="max-width: 800px;">
+					<div class="w3-card-4 w3-margin-top">
 						<table class="w3-table w3-border-blue-gray" cellspacing="0" cellpadding="5">
 							<tr>
 								<td width="25%" rowspan="2" valign="top">
