@@ -1,6 +1,9 @@
 div#mainframe {
     float: left;
     max-width: 1000px;
+}
+
+div#mainpage {
     margin-top: 25px;
 }
 
