@@ -95,7 +95,7 @@ function check($input)
 		}
 
 		function wis() {
-			document.getElementById("vinden.zoeknaam").value = "";
+			document.getElementById("zoeknaam").value = "";
 		}
 	</script>
 </head>
