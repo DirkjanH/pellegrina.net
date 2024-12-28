@@ -161,8 +161,8 @@ $aantal_zwl = count($zwartelijst);
 					</tr>
 				</table>
 				<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
-					<div class="w3-card-4 w3-margin-top">
-						<table class="w3-table w3-border-blue-gray">
+					<div class="w3-card-4 w3-margin-top" style="max-width: 800px;">
+						<table class="w3-table w3-border-blue-gray" cellspacing="0" cellpadding="5">
 							<tr>
 								<td width="25%" rowspan="2" valign="top">
 									<h2>
