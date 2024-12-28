@@ -2,7 +2,9 @@
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '')
 	$_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 
-d($_SESSION, $_POST);
+Kint::$enabled_mode = true;
+
+d($_REQUEST, $_POST, $_SESSION);
 
 $i = $eerstecursus;
 while ($i <= $laatstecursus) {
@@ -91,6 +93,7 @@ function check($input)
 			document.getElementById('DlnmrId').value = Id;
 			document.getElementById('vinden').submit();
 		}
+
 		function wis() {
 			document.getElementById("vinden.zoeknaam").value = "";
 		}
