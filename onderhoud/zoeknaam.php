@@ -118,7 +118,7 @@ function check($input)
         <div id="inhoud" class="w3-panel">
             <form id="vinden" method="post"
                 action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <p><label>Naam: </label><input name="zoeknaam" type="text" id="zoeknaam" size="15" value="<?php echo $_POST['zoeknaam']; ?>"> <a href="javascript:wis()" class="w3-text-red w3-hover-white" style="text-decoration: none;"><b>X</b></a><br>
+                <p><label>Naam: </label><input name="zoeknaam" type="text" id="zoeknaam" size="15" value="<?php echo $_POST['zoeknaam']; ?>"> <a href="javascript:wis()" class="w3-text-red w3-hover-white w3-padding-8" style="text-decoration: none;"><b>X</b></a><br>
                     <label>Alle deelnemers van ooit: </label><input
                         name="oude_dlnrs" type="checkbox" id="oude_dlnrs"
                         value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
