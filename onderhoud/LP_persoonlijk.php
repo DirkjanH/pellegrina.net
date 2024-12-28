@@ -138,7 +138,7 @@ d($inschrijving);
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<table border="0" align="left">
+			<table border="0" align="left" width="100%">
 				<td>
 					<form id="zoek" name="zoek" method="get" action="<?php echo $editFormAction; ?>">
 						<input name="DlnmrId" type="hidden" value="<?php if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId']; ?>" size="5" />
