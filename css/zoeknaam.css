@@ -1,6 +1,7 @@
 div#mainframe {
     float: left;
     max-width: 1000px;
+    margin-top: 25px;
 }
 
 div#zoeknaam {
