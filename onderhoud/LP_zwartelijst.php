@@ -65,7 +65,7 @@ $query_deelnemer = sprintf(
 
 $deelnemer = select_query($query_deelnemer, 1);
 
-if (is_array($deelnemer) AND count($deelnemer) < 1) {
+if (is_array($deelnemer) and count($deelnemer) < 1) {
 	$query_deelnemer = sprintf(
 		"SELECT * FROM dlnmr WHERE DlnmrId = %s",
 		$colname__inschrijving
@@ -95,7 +95,8 @@ WHERE z.DlnmrId_FK = d.DlnmrId
 ORDER BY achternaam";
 
 $zwartelijst = select_query($query_zwartelijst);
-if (isset($zwartelijst) AND is_array($zwartelijst)) $aantal_zwl = count($zwartelijst);
+if (isset($zwartelijst) and is_array($zwartelijst)) $aantal_zwl = count($zwartelijst);
+else $aantal_zwl = 0;
 // end Recordset deelname alle ingeschrevenen zwarte lijst
 ?>
 
