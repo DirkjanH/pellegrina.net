@@ -111,7 +111,7 @@ function check($input)
 		}
        </script>
         <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-        <link rel="stylesheet" href="/css/navigatie.css">
+        <link rel="stylesheet" href="/css/zoeknaam.css">
         </ head>
 
     <body>
