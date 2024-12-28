@@ -119,7 +119,7 @@ $aantal_zwl = count($zwartelijst);
 	<meta name="theme-color" content="#ffffff">
 	<title>LP zwarte lijst</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
+	<link rel="stylesheet" href="/css/zoeknaam.css">
 	<style type="text/css">
 		<!-- 
 		.categorie1 {
