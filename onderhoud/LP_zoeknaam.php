@@ -2,7 +2,7 @@
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '')
 	$_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_POST, $_SESSION);
 
