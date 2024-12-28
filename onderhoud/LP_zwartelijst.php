@@ -137,11 +137,11 @@ $aantal_zwl = count($zwartelijst);
 	<div id="zoeknaam">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
-	<div id="inhoud">
+	<div id="mainframe">
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage" style="max-width: 800px;">
+		<div id="mainpage">
 			<div class="w3-panel w3-white">
 				<table class="onzichtbaar">
 					<tr>
