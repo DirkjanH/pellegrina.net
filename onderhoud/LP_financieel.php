@@ -83,9 +83,8 @@ function LeesInschrijving($id, $cursusId)
 	if (isset($cursusId) and $cursusId > 0)
 		$cursuszoek = 'AND CursusId = ' . $cursusId;
 
-
 	// begin Recordset 'zoek inschrijving'
-	$query_inschrijving = sprintf(
+	if (isset($id) and $id != -1) $query_inschrijving = sprintf(
 		"SELECT
 		  voornaam,
 		  naam,
