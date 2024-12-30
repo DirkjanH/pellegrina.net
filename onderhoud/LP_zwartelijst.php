@@ -182,7 +182,7 @@ else $aantal_zwl = 0;
 										<input type="radio" name="categorie" value="2" <?php if ($deelnemer['categorie'] == "2") echo 'checked'; ?>>
 										def. ontzegging</label>
 								</td>
-								<td>&nbsp;&nbsp;<input type="submit" name="verzend" value="Voeg toe" />
+								<td><input type="submit" name="verzend" value="Voeg toe" />
 									<input type="submit" name="verzend" value="Update" />
 									<input type="submit" name="verzend" value="Wis">
 								</td>
@@ -194,7 +194,7 @@ else $aantal_zwl = 0;
 									</label>
 								</td>
 								<td colspan="3">
-									<textarea name="opmerkingen" cols="70" rows="3" id="opmerkingen"><?php
+									<textarea name="opmerkingen" cols="60" rows="3" id="opmerkingen"><?php
 																										echo $deelnemer['opmerkingen']; ?></textarea>
 								</td>
 							</tr>
