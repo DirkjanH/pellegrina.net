@@ -32,7 +32,7 @@ function instrument($instr)
 if (isset($DlnmrId) and $DlnmrId != '' and isset($_POST["verzend"]) and ($_POST['verzend'] == "Voeg toe")) {
 	$insertSQL = sprintf(
 		"INSERT INTO zwartelijst (DlnmrId_FK, categorie, datum, opmerkingen) VALUES (%s, %s, NOW(), %s)",
-		quote($_GET['DlnmrId']),
+		quote($DlnmrId),
 		quote($_POST['categorie']),
 		quote($_POST['opmerkingen'])
 	);
@@ -41,24 +41,24 @@ if (isset($DlnmrId) and $DlnmrId != '' and isset($_POST["verzend"]) and ($_POST[
 // end voeg gegevens zwarte lijst toe
 
 // begin update gegevens zwarte lijst 
-if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Update")) {
+if (isset($DlnmrId) and ($DlnmrId != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Update")) {
 	$query_update_zwartelijst = "UPDATE zwartelijst SET categorie = {$_POST['categorie']}, datum = NOW(), 
-	opmerkingen = \"{$_POST['opmerkingen']}\" WHERE DlnmrId_FK = {$_GET['DlnmrId']}";
+	opmerkingen = \"{$_POST['opmerkingen']}\" WHERE DlnmrId_FK = {$DlnmrId}";
 	exec_query($query_update_zwartelijst);
 }
 // end update gegevens zwarte lijst 
 
 // begin wis gegevens zwarte lijst
-if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Wis")) {
-	$insertSQL = "DELETE FROM zwartelijst WHERE DlnmrId_FK = {$_GET['DlnmrId']}";
+if (isset($DlnmrId) and ($DlnmrId != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Wis")) {
+	$insertSQL = "DELETE FROM zwartelijst WHERE DlnmrId_FK = {$DlnmrId}";
 	exec_query($insertSQL);
 }
 // end wis gegevens zwarte lijst
 
 // begin Recordset gegevens zwarte lijst
 $colname__inschrijving = '-1';
-if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "")) {
-	$colname__inschrijving = $_GET['DlnmrId'];
+if (isset($DlnmrId) and ($DlnmrId != "")) {
+	$colname__inschrijving = $DlnmrId;
 }
 $query_deelnemer = sprintf(
 	"SELECT * FROM dlnmr d, zwartelijst z WHERE DlnmrId = DlnmrId_FK AND DlnmrId = %s",
@@ -151,8 +151,8 @@ else $aantal_zwl = 0;
 							<form id="zoek" name="zoek" method="GET" action="<?php echo $editFormAction; ?>">
 								<table width="100%" border="1" align="left" cellpadding="5">
 									<tr>
-										<td><input name="DlnmrId" type="input" value="<?php if (isset($_GET['DlnmrId']))
-																							echo $_GET['DlnmrId']; ?>" size="5" />
+										<td><input name="DlnmrId" type="input" value="<?php if (isset($DlnmrId))
+																							echo $DlnmrId; ?>" size="5" />
 											<input type="submit" name="Submit" value="Zoek"> &nbsp;
 										</td>
 									</tr>
