@@ -161,7 +161,7 @@ else $aantal_zwl = 0;
 				</table>
 				<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
 					<div class="w3-card-4 w3-margin-top">
-						<table class="w3-table w3-border-blue-gray" cellspacing="0" cellpadding="5">
+						<table class="w3-table w3-white w3-border-blue-gray" cellspacing="0" cellpadding="5">
 							<tr>
 								<td width="25%" rowspan="2" valign="top">
 									<h2>
