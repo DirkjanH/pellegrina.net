@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 //ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 $_GET['DlnmrId'] = str_replace('SID', '', $_GET['DlnmrId']);
 
