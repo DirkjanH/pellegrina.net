@@ -6,9 +6,7 @@ error_reporting(E_ALL);
 
 Kint::$enabled_mode = true;
 
-// $_GET['DlnmrId'] = str_replace('SID', '', $_GET['DlnmrId']);
-
-d($_GET);
+d($_GET, $_SESSION, $_POST);
 
 // begin Recordset
 $query_instrumenten = "SELECT * FROM instr ORDER BY id ASC";
