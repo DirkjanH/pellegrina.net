@@ -143,7 +143,6 @@ else $aantal_zwl = 0;
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<div class="w3-panel w3-white">
 				<table class="onzichtbaar">
 					<tr>
 						<td colspan="3">
@@ -235,7 +234,6 @@ else $aantal_zwl = 0;
 			</div>
 			<!-- InstanceEndEditable -->
 		</div>
-	</div>
 </body>
 
 </html>
