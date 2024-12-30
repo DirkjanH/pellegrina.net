@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 Kint::$enabled_mode = true;
 
-$_GET['DlnmrId'] = str_replace('SID', '', $_GET['DlnmrId']);
+// $_GET['DlnmrId'] = str_replace('SID', '', $_GET['DlnmrId']);
 
 d($_GET);
 
@@ -27,7 +27,7 @@ function instrument($instr)
 }
 
 // begin voeg gegevens zwarte lijst toe
-if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Voeg toe")) {
+if (isset($DlnmrId) and $DlnmrId != '' and isset($_POST["verzend"]) and ($_POST['verzend'] == "Voeg toe")) {
 	$insertSQL = sprintf(
 		"INSERT INTO zwartelijst (DlnmrId_FK, categorie, datum, opmerkingen) VALUES (%s, %s, NOW(), %s)",
 		quote($_GET['DlnmrId']),
