@@ -6,6 +6,10 @@ error_reporting(E_ALL);
 
 Kint::$enabled_mode = true;
 
+if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
+elseif (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'];
+else $DlnmrId = -1;
+
 d($_GET, $_SESSION, $_POST);
 
 // begin Recordset
