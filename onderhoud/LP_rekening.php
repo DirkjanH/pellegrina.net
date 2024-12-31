@@ -199,7 +199,6 @@ $query_cursus = "SELECT
     , meerpers
     , kamperen
     , toehoorder
-    , maaltijdpas
     , korting_vroeg
     , korting_meer
 	, korting_eigen_acc
@@ -250,8 +249,6 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		$ins['PayPal'] = $inschr['paypal'];
 		$ins['meerdaneen'] = $inschr['meerdaneen'];
 		$ins['eigen_acc'] = $inschr['eigen_acc'];
-		$ins['maaltijdpas'] = $inschr['maaltijdpas'];
-		$ins['ACMP'] = $inschr['ACMP'];
 		$ins['korting'] = bedrag($inschr['korting']);
 		$ins['extra'] = bedrag($inschr['extra']);
 		$ins['CursusId'] = $inschr['CursusId_FK'];
