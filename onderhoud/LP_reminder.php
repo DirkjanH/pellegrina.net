@@ -1,19 +1,15 @@
 <?php //Connection statement
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1 );
-
 error_reporting(E_ALL);
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
 Kint::$enabled_mode = false;
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
-d($_SESSION);
-d($_POST);
-
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
+d($_SESSION, $_POST);
 
 // begin Recordset
 $query_wanbetalers = "SELECT
@@ -45,7 +41,7 @@ ORDER BY dagen DESC";
 
 d($query_wanbetalers);
 d($wanbetalers = select_query($query_wanbetalers));
-$totalRows_wanbetalers = count($wanbetalers);
+if (isset($wanbetalers) and is_array($wanbetalers)) $totalRows_wanbetalers = count($wanbetalers);
 // end Recordset
 
 if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
@@ -116,41 +112,33 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
 	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-
 	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP aanmaning inschrijfgeld</title>
-	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
+	<link rel="stylesheet" href="/css/zoeknaam.css">
 	<script LANGUAGE="JavaScript" TYPE="text/javascript">
-		<!-- 
 		function switchAll() {
 			for (var j = 0; j < <?php echo $totalRows_wanbetalers; ?>; j++) {
 				box = eval("self.document.zoek.C" + j);
 				box.checked = !box.checked;
 			}
 		}
-		-->
 	</script>
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
 	<div id="zoeknaam">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
-	<div id="inhoud">
+	<div id="mainframe">
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
 			<h2>Verzend reminder aan deelnemers die nog niet hun inschrijfgeld hebben overgemaakt</h2><br>
 
 			<p>In totaal <?php echo $totalRows_wanbetalers; ?> deelnemers hebben nog geen inschrijfgeld betaald</p>
@@ -198,10 +186,8 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 				</p>
 				<input name="aantal" type="hidden" value="<?php echo $totalRows_wanbetalers; ?>">
 			</form>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>
