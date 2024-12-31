@@ -1,13 +1,13 @@
 <?php
 // stel php in dat deze fouten weergeeft
-ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
 error_reporting(E_ERROR);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 use Pelago\Emogrifier\CssInliner;
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_GET, $_POST);
 
