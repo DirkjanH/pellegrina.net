@@ -13,6 +13,9 @@ d($_REQUEST, $_POST);
 
 ob_start();
 
+if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
+	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
+
 // Kies tarievenmodule:
 require_once("tarieven.php");
 
