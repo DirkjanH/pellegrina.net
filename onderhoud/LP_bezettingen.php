@@ -12,7 +12,7 @@ Kint::$enabled_mode = false;
 // begin Recordset
 $query_instrumenten = "SELECT id, nl, en FROM instr ORDER BY id ASC";
 $instrumenten = select_query($query_instrumenten);
-$totalRows_instrumenten = count($instrumenten);
+if (isset($instrumenten) AND is_array($instrumenten)) $totalRows_instrumenten = count($instrumenten);
 // end Recordset
 
 $cursus = $cursus_offset + 1;
