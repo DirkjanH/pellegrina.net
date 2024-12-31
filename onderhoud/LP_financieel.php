@@ -77,7 +77,6 @@ d($cursus);
 
 function LeesInschrijving($id, $cursusId)
 {
-
 	global $eerstecursus, $laatstecursus, $inschrijf, $inschrijving, $aantal_inschrijvingen;
 
 	if (isset($cursusId) and $cursusId > 0)
@@ -149,12 +148,12 @@ function LeesInschrijving($id, $cursusId)
 }
 
 if (
-	empty($DlnmrId) or $DlnmrId == ""
+	empty($_POST['DlnmrId']) or $_POST['DlnmrId'] == ""
 	or $_POST['leegmaken'] == 'Leegmaken'
 )
 	$id = -1;
 else
-	$id = $DlnmrId;
+	$id = $_POST['DlnmrId'];
 
 if ((isset($_POST["update"])) && ($_POST["update"] == "Update aanmelding")) {
 	$updateSQL = sprintf(
