@@ -1,6 +1,6 @@
 <?php //Connection statement
 // stel php in dat deze fouten weergeeft
-ini_set('display_errors',1 );
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
@@ -42,6 +42,7 @@ ORDER BY dagen DESC";
 d($query_wanbetalers);
 d($wanbetalers = select_query($query_wanbetalers));
 if (isset($wanbetalers) and is_array($wanbetalers)) $totalRows_wanbetalers = count($wanbetalers);
+else $totalRows_wanbetalers = 0;
 // end Recordset
 
 if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
