@@ -109,7 +109,7 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 
 			$updateSQL = sprintf(
 				"UPDATE inschrijving SET aanmaning=CURDATE() WHERE InschId=%s",
-				GetSQLValueString($_POST["C{$i}"], "int")
+				quote($_POST["C{$i}"])
 			);
 
 			exec_query($updateSQL);
