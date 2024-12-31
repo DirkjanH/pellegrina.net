@@ -12,6 +12,13 @@ d($_REQUEST, $_GET, $_POST, $_SESSION);
 
 if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
 
+ob_start();
+
+if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
+if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
+	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
+
+// Kies tarievenmodule:
 require_once("tarieven.php");
 
 function send_alert($msg)
@@ -430,10 +437,9 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 					</td>
 				</tr>
 			</table>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
+	<?php ob_end_flush(); ?>
 </body>
-<!-- InstanceEnd -->
 
 </html>

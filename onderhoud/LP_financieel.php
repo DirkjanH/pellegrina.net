@@ -609,6 +609,9 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 			</td>
 			</tr>
 			</table>
+		</div>
+	</div>
+	<?php ob_end_flush(); ?>
 </body>
 
 </html>
