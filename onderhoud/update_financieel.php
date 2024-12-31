@@ -13,7 +13,10 @@ d($_REQUEST, $_POST);
 
 ob_start();
 
-// Kies tarievenmodule:
+if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
+	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
+
+	// Kies tarievenmodule:
 require_once("tarieven.php");
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailfuncties.inc.php';
