@@ -1,6 +1,6 @@
 <?php //Connection statement
 // stel php in dat deze fouten weergeeft
-//ini_set('display_errors',1 );
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
@@ -28,7 +28,7 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 			  dlnmr
 			WHERE DlnmrId_FK = DlnmrId
 				AND InschId =  %s",
-				GetSQLValueString($_POST["C{$i}"], "int")
+				quote($_POST["C{$i}"])
 			);
 
 			d($query_aanmaning);
@@ -149,7 +149,7 @@ WHERE DlnmrId_FK = DlnmrId
     AND {$laatstecursus}
 ORDER BY CursusId_FK, achternaam ASC";
 $wanbetalers = select_query($query_wanbetalers);
-$totalRows_wanbetalers = count($wanbetalers);
+if (isset($wanbetalers) and is_array($wanbetalers)) $totalRows_wanbetalers = count($wanbetalers);
 // end Recordset
 
 d($query_wanbetalers);
@@ -157,7 +157,7 @@ d($query_wanbetalers);
 ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
 
@@ -168,7 +168,6 @@ d($query_wanbetalers);
 	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
 	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-
 	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
@@ -178,17 +177,13 @@ d($query_wanbetalers);
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 	<link rel="stylesheet" href="/css/zoeknaam.css">
 	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-		<!-- Begin
 		function switchAll() {
 			for (var j = 1; j <= <?php echo $totalRows_wanbetalers; ?>; j++) {
 				box = eval("self.document.zoek.C" + j);
 				if (!(box.disabled)) box.checked = !box.checked;
 			}
 		}
-		// End 
-		-->
 	</script>
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
