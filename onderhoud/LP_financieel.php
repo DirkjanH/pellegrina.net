@@ -9,7 +9,7 @@ use Pelago\Emogrifier\CssInliner;
 
 Kint::$enabled_mode = true;
 
-d($_REQUEST, $_POST);
+d($_REQUEST, $_GET, $_POST);
 
 ob_start();
 
@@ -160,17 +160,17 @@ if ((isset($_POST["update"])) && ($_POST["update"] == "Update aanmelding")) {
 	$updateSQL = sprintf(
 		"UPDATE inschrijving SET storting_fonds=%s, donatie=%F, aangenomen=%s, aangebracht=%s, 
   afgewezen=%s, info_korting=%s, korting=%F, extra=%F, aanbet_bedrag=%F, PayPal=%s, meerdaneen=%s, cursusgeld=%F WHERE InschId=%s",
-		quote(+isset($_POST['storting_fonds'])),
+		quote(isset($_POST['storting_fonds'])),
 		str2num($_POST['donatie']),
-		quote(+$_POST['aangenomen']),
+		quote($_POST['aangenomen']),
 		quote($_POST['aangebracht']),
-		quote(+isset($_POST['afgewezen'])),
-		quote(+$_POST['info_korting']),
+		quote(isset($_POST['afgewezen'])),
+		quote($_POST['info_korting']),
 		preg_replace("/,/", ".", $_POST['korting']),
 		preg_replace("/,/", ".", $_POST['extra']),
 		preg_replace("/,/", ".", $_POST['aanbet_bedrag']),
-		quote(+isset($_POST['PayPal'])),
-		quote(+isset($_POST['meerdaneen'])),
+		quote(isset($_POST['PayPal'])),
+		quote(isset($_POST['meerdaneen'])),
 		str2num($_POST['cursusgeld']),
 		quote($_POST['InschId'])
 	);
@@ -184,17 +184,17 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 		"UPDATE inschrijving SET storting_fonds=%s, donatie=%F, aanbetaling=now(), aangebracht=%s, aangenomen=%s, 		
 	afgewezen=%s, voorl_bev=CURDATE(), info_korting=%s,
 	korting=%F, extra=%F, aanbet_bedrag=%F, PayPal=%s, meerdaneen=%s, cursusgeld=%F WHERE InschId=%s",
-		quote(+isset($_POST['storting_fonds'])),
+		quote(isset($_POST['storting_fonds'])),
 		str2num($_POST['donatie']),
 		quote($_POST['aangebracht']),
-		quote(+isset($_POST['aangenomen'])),
-		quote(+isset($_POST['afgewezen'])),
-		quote(+$_POST['info_korting']),
+		quote(isset($_POST['aangenomen'])),
+		quote(isset($_POST['afgewezen'])),
+		quote($_POST['info_korting']),
 		preg_replace("/,/", ".", $_POST['korting']),
 		preg_replace("/,/", ".", $_POST['extra']),
 		preg_replace("/,/", ".", $_POST['aanbet_bedrag']),
-		quote(+isset($_POST['PayPal'])),
-		quote(+isset($_POST['meerdaneen'])),
+		quote(isset($_POST['PayPal'])),
+		quote(isset($_POST['meerdaneen'])),
 		preg_replace("/,/", ".", $_POST['cursusgeld']),
 		quote($_POST['InschId'])
 	);
