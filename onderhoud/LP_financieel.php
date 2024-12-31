@@ -521,15 +521,14 @@ LeesInschrijving($DlnmrId, $_GET['cursus']);
 													$ins['CursusId'] = $insch['CursusId_FK'];
 													$factuur = cursusgeld($ins);
 
-													d($ins);
-													d($factuur);
+													d($ins, $factuur);
 
 													?>
 							<div align="right">Cursusgeld:</div>
 						</td>
 						<td>&#8364;&nbsp; <input type="text" name="cursusgeld" value="<?php if (
 																							isset($DlnmrId)
-																							and $DlnmrId] > 0
+																							and $DlnmrId > 0
 																						)
 																							echo (float) $factuur['cursusgeld']; ?>" size="6" />
 						</td>
