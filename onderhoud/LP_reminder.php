@@ -158,24 +158,26 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 						<th>Aangenomen:&nbsp;</th>
 					</tr>
 					<?php
-					foreach ($wanbetalers as $i => $wanbetaler) {
-						if ($wanbetaler['aanmaning_inschr'] != 0)
-							$a = date('d-m-Y', strtotime($wanbetaler['aanmaning_inschr']));
-						else
-							$a = "";
+					if (isset($wanbetalers) and is_array($wanbetalers)) {
+						foreach ($wanbetalers as $i => $wanbetaler) {
+							if ($wanbetaler['aanmaning_inschr'] != 0)
+								$a = date('d-m-Y', strtotime($wanbetaler['aanmaning_inschr']));
+							else
+								$a = "";
 					?>
-						<tr>
-							<td><input name="C<?php echo $i; ?>" type="checkbox" value="<?php echo $wanbetaler['DlnmrId']; ?>" <?php if ($a != "") echo ' DISABLED '; ?>>&nbsp;</td>
-							<td><?php echo $wanbetaler['InschId']; ?>&nbsp;</td>
-							<td><?php echo $wanbetaler['naam']; ?>&nbsp;</td>
-							<td class="w3-right-align"><?php echo $wanbetaler['CursusId_FK']; ?>&nbsp;</td>
-							<td class="w3-right-align"><?php echo $wanbetaler['dagen']; ?>&nbsp;</td>
-							<td class="w3-right-align"><?php echo $a; ?>&nbsp;</td>
-							<td><?php echo $wanbetaler['rekening_verzonden']; ?>&nbsp;</td>
-							<td><?php echo $wanbetaler['rekening_opmerking']; ?>&nbsp;</td>
-							<td class="w3-right-align"><?php echo $wanbetaler['aangenomen']; ?>&nbsp;</td>
-						</tr>
+							<tr>
+								<td><input name="C<?php echo $i; ?>" type="checkbox" value="<?php echo $wanbetaler['DlnmrId']; ?>" <?php if ($a != "") echo ' DISABLED '; ?>>&nbsp;</td>
+								<td><?php echo $wanbetaler['InschId']; ?>&nbsp;</td>
+								<td><?php echo $wanbetaler['naam']; ?>&nbsp;</td>
+								<td class="w3-right-align"><?php echo $wanbetaler['CursusId_FK']; ?>&nbsp;</td>
+								<td class="w3-right-align"><?php echo $wanbetaler['dagen']; ?>&nbsp;</td>
+								<td class="w3-right-align"><?php echo $a; ?>&nbsp;</td>
+								<td><?php echo $wanbetaler['rekening_verzonden']; ?>&nbsp;</td>
+								<td><?php echo $wanbetaler['rekening_opmerking']; ?>&nbsp;</td>
+								<td class="w3-right-align"><?php echo $wanbetaler['aangenomen']; ?>&nbsp;</td>
+							</tr>
 					<?php
+						}
 					}
 					?>
 				</table>
