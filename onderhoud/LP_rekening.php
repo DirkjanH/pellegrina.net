@@ -1,24 +1,16 @@
 <?php //Connection statement
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1 );
-
-session_start();
-
-if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
-
 error_reporting(E_ALL);
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
 Kint::$enabled_mode = false;
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+d($_REQUEST, $_GET, $_POST, $_SESSION);
 
-d($_GET);
-d($_POST);
-d($_SESSION);
-
-require_once('../includes/LPmailer.inc.php');
+if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
 
 require_once("tarieven.php");
 
@@ -348,7 +340,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 
 ?>
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
 
@@ -359,34 +351,25 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
 	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-
 	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP rekeningen maken</title>
-	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
-
-
-	<link rel="stylesheet" href="../css/pellegrina_stijlen.css" type="text/css">
-	<!-- InstanceEndEditable -->
+	<link rel="stylesheet" href="/css/zoeknaam.css">
 </head>
 
 <body>
 	<div id="zoeknaam">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
-	<div id="inhoud">
+	<div id="mainframe">
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
 			<table width="90%" border="0" align="left">
 				<tr>
 					<td colspan="2">
