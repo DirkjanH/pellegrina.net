@@ -9,7 +9,7 @@ use Pelago\Emogrifier\CssInliner;
 
 Kint::$enabled_mode = false;
 
-d($_REQUEST, $_POST);
+d($_REQUEST, $_POST, $_SESSION);
 
 ob_start();
 
