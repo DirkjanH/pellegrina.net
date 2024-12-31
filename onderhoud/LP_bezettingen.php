@@ -71,7 +71,7 @@ while ($cursus <= $aantal_cursussen + $cursus_offset) {
 	<title>LP bezettingen</title>
 	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
+	<link rel="stylesheet" href="/css/zoeknaam.css">
 	<!-- InstanceBeginEditable name="head" -->
 	<style type="text/css">
 		<!--
@@ -89,7 +89,7 @@ while ($cursus <= $aantal_cursussen + $cursus_offset) {
 	<div id="zoeknaam">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
-	<div id="inhoud">
+	<div id="mainframe">
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
