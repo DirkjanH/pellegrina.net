@@ -7,9 +7,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 use Pelago\Emogrifier\CssInliner;
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
-d($_REQUEST, $_GET, $_POST);
+d($_REQUEST, $_POST);
 
 ob_start();
 
@@ -77,13 +77,15 @@ d($cursus);
 
 function LeesInschrijving($id, $cursusId)
 {
+
 	global $eerstecursus, $laatstecursus, $inschrijf, $inschrijving, $aantal_inschrijvingen;
 
 	if (isset($cursusId) and $cursusId > 0)
 		$cursuszoek = 'AND CursusId = ' . $cursusId;
 
+
 	// begin Recordset 'zoek inschrijving'
-	if (isset($id) and $id != -1) $query_inschrijving = sprintf(
+	$query_inschrijving = sprintf(
 		"SELECT
 		  voornaam,
 		  naam,
@@ -128,7 +130,7 @@ function LeesInschrijving($id, $cursusId)
 			AND CursusId_FK BETWEEN %s AND %s
 			 {$cursuszoek}
 			 AND DlnmrId_FK=%s 
-		ORDER BY CursusId_FK, achternaam ASC;",
+		ORDER BY CursusId_FK, achternaam ASC",
 		quote($eerstecursus),
 		quote($laatstecursus),
 		quote($id)
@@ -148,28 +150,28 @@ function LeesInschrijving($id, $cursusId)
 }
 
 if (
-	empty($_POST['DlnmrId']) or $_POST['DlnmrId'] == ""
+	empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == ""
 	or $_POST['leegmaken'] == 'Leegmaken'
 )
 	$id = -1;
 else
-	$id = $_POST['DlnmrId'];
+	$id = $_GET['DlnmrId'];
 
 if ((isset($_POST["update"])) && ($_POST["update"] == "Update aanmelding")) {
 	$updateSQL = sprintf(
 		"UPDATE inschrijving SET storting_fonds=%s, donatie=%F, aangenomen=%s, aangebracht=%s, 
   afgewezen=%s, info_korting=%s, korting=%F, extra=%F, aanbet_bedrag=%F, PayPal=%s, meerdaneen=%s, cursusgeld=%F WHERE InschId=%s",
-		quote(isset($_POST['storting_fonds'])),
+		quote(+isset($_POST['storting_fonds'])),
 		str2num($_POST['donatie']),
-		quote($_POST['aangenomen']),
+		quote(+$_POST['aangenomen']),
 		quote($_POST['aangebracht']),
-		quote(isset($_POST['afgewezen'])),
-		quote($_POST['info_korting']),
+		quote(+isset($_POST['afgewezen'])),
+		quote(+$_POST['info_korting']),
 		preg_replace("/,/", ".", $_POST['korting']),
 		preg_replace("/,/", ".", $_POST['extra']),
 		preg_replace("/,/", ".", $_POST['aanbet_bedrag']),
-		quote(isset($_POST['PayPal'])),
-		quote(isset($_POST['meerdaneen'])),
+		quote(+isset($_POST['PayPal'])),
+		quote(+isset($_POST['meerdaneen'])),
 		str2num($_POST['cursusgeld']),
 		quote($_POST['InschId'])
 	);
@@ -183,17 +185,17 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 		"UPDATE inschrijving SET storting_fonds=%s, donatie=%F, aanbetaling=now(), aangebracht=%s, aangenomen=%s, 		
 	afgewezen=%s, voorl_bev=CURDATE(), info_korting=%s,
 	korting=%F, extra=%F, aanbet_bedrag=%F, PayPal=%s, meerdaneen=%s, cursusgeld=%F WHERE InschId=%s",
-		quote(isset($_POST['storting_fonds'])),
+		quote(+isset($_POST['storting_fonds'])),
 		str2num($_POST['donatie']),
 		quote($_POST['aangebracht']),
-		quote(isset($_POST['aangenomen'])),
-		quote(isset($_POST['afgewezen'])),
-		quote($_POST['info_korting']),
+		quote(+isset($_POST['aangenomen'])),
+		quote(+isset($_POST['afgewezen'])),
+		quote(+$_POST['info_korting']),
 		preg_replace("/,/", ".", $_POST['korting']),
 		preg_replace("/,/", ".", $_POST['extra']),
 		preg_replace("/,/", ".", $_POST['aanbet_bedrag']),
-		quote(isset($_POST['PayPal'])),
-		quote(isset($_POST['meerdaneen'])),
+		quote(+isset($_POST['PayPal'])),
+		quote(+isset($_POST['meerdaneen'])),
 		preg_replace("/,/", ".", $_POST['cursusgeld']),
 		quote($_POST['InschId'])
 	);
@@ -201,7 +203,7 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 	d($updateSQL);
 	exec_query($updateSQL);
 
-	LeesInschrijving($DlnmrId, $_GET['cursus']);
+	LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 
 	// lees de tekst-file
 	$actiedatum = $cursus[$_POST['CursusId_FK']]['datum_korting'];
@@ -303,7 +305,7 @@ d($query_dlnmr);
 
 $dlnmr = select_query($query_dlnmr, 1);
 
-LeesInschrijving($DlnmrId, $_GET['cursus']);
+LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 
 // end Recordset
 
