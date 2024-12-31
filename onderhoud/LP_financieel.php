@@ -398,23 +398,9 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						d($insch);
 						?>
 				<tr>
-					<td valign="bottom">
-						<h2>
-							<div class="rechts"> Naam:</div>
-						</h2>
+					<td colspan="5">
+						<h2>Naam: <?php echo $dlnmr['naam']; ?> - Taal: <?php echo $dlnmr['taal']; ?> </h2>
 					</td>
-					<td valign="bottom">
-						<h2> <?php echo $dlnmr['naam']; ?> </h2>
-					</td>
-					<td valign="bottom">
-						<h2>
-							<div class="rechts"> Taal:</div>
-						</h2>
-					</td>
-					<td valign="bottom">
-						<h2> <?php echo $dlnmr['taal']; ?> </h2>
-					</td>
-					<td valign="bottom">&nbsp;</td>
 				</tr>
 				<form action="<?php echo $editFormAction; ?>" method="POST"
 					name="update" id="update">
