@@ -149,12 +149,12 @@ function LeesInschrijving($id, $cursusId)
 }
 
 if (
-	empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == ""
+	empty($DlnmrId) or $DlnmrId == ""
 	or $_POST['leegmaken'] == 'Leegmaken'
 )
 	$id = -1;
 else
-	$id = $_GET['DlnmrId'];
+	$id = $DlnmrId;
 
 if ((isset($_POST["update"])) && ($_POST["update"] == "Update aanmelding")) {
 	$updateSQL = sprintf(
@@ -202,7 +202,7 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 	d($updateSQL);
 	exec_query($updateSQL);
 
-	LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
+	LeesInschrijving($DlnmrId, $_GET['cursus']);
 
 	// lees de tekst-file
 	$actiedatum = $cursus[$_POST['CursusId_FK']]['datum_korting'];
@@ -304,7 +304,7 @@ d($query_dlnmr);
 
 $dlnmr = select_query($query_dlnmr, 1);
 
-LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
+LeesInschrijving($DlnmrId, $_GET['cursus']);
 
 // end Recordset
 
@@ -386,8 +386,8 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 							}
 							echo "</option>\n</select>";
 							echo '<input name="DlnmrId" type="hidden" value="';
-							if (isset($_GET['DlnmrId']))
-								echo $_GET['DlnmrId'] . '" />';
+							if (isset($DlnmrId))
+								echo $DlnmrId . '" />';
 							echo '<input type="submit" name="Submit" value="Zoek">';
 							echo '</form></td></tr>';
 						} else
@@ -528,8 +528,8 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 							<div align="right">Cursusgeld:</div>
 						</td>
 						<td>&#8364;&nbsp; <input type="text" name="cursusgeld" value="<?php if (
-																							isset($_GET['DlnmrId'])
-																							and $_GET['DlnmrId'] > 0
+																							isset($DlnmrId)
+																							and $DlnmrId] > 0
 																						)
 																							echo (float) $factuur['cursusgeld']; ?>" size="6" />
 						</td>
@@ -563,7 +563,7 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						</td>
 						<td colspan="4"><textarea
 								name="wensen"><?php
-												if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
+												if (isset($DlnmrId) and $DlnmrId > 0)
 													echo $factuur['wensen']; ?></textarea>
 						</td>
 					</tr>
@@ -573,7 +573,7 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						</td>
 						<td colspan="4"><textarea
 								name="donatietxt"><?php
-													if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
+													if (isset($DlnmrId) and $DlnmrId > 0)
 														echo $factuur['donatie']; ?></textarea>
 						</td>
 					</tr>
