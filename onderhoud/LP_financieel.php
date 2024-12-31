@@ -13,6 +13,7 @@ d($_REQUEST, $_POST, $_SESSION);
 
 ob_start();
 
+if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
 	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
 
