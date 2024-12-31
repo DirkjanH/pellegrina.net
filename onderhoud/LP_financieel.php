@@ -7,7 +7,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
 use Pelago\Emogrifier\CssInliner;
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_POST, $_SESSION);
 
