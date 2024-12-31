@@ -1,13 +1,10 @@
 <?php //Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
-require_once("../includes/LPmailer.inc.php");
-
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1 );
-
 error_reporting(E_ALL);
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once("/LPmailer.inc.php");
 
 Kint::$enabled_mode = false;
 
@@ -177,12 +174,9 @@ d($query_wanbetalers);
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP aanmaning cursusgeld</title>
-	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
+	<link rel="stylesheet" href="/css/zoeknaam.css">
 	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 		<!-- Begin
 		function switchAll() {
@@ -201,12 +195,11 @@ d($query_wanbetalers);
 	<div id="zoeknaam">
 		<?php require_once('LP_zoeknaam.php'); ?>
 	</div>
-	<div id="inhoud">
+	<div id="mainframe">
 		<header id="navigatiebalk">
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
 			<h2>Verzend reminder aan deelnemers die hun cursusgeld nog niet hebben voldaan </h2>
 			<br>
 
@@ -258,10 +251,8 @@ d($query_wanbetalers);
 				</p>
 				<input name="aantal" type="hidden" value="<?php echo $totalRows_wanbetalers; ?>">
 			</form>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>
