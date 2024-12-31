@@ -365,7 +365,7 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 			<?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<table>
+			<table class="w3-table" style="max-width: 800px;">
 				<tr>
 					<td colspan="5">
 						<form id="zoek" name="zoek" method="get"
