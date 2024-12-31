@@ -362,13 +362,11 @@ LeesInschrijving($DlnmrId, $_GET['cursus']);
 			<table>
 				<tr>
 					<td colspan="5">
-						<form id="zoek" name="zoek" method="post" action="<?php echo $editFormAction; ?>">
-							<input name="DlnmrId" id="DlnmrId" type="hidden" value="<?php if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId']; ?>" size="5" />
+						<form id="zoek" name="zoek" method="get"
+							action="<?php echo $editFormAction; ?>"> Id: <input
+								name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+																		echo $_GET['DlnmrId']; ?>" size="5" />
 							<input type="submit" name="Submit" value="Zoek">
-							(alle inschrijvingen van de afgelopen jaren:
-							<input name="alles" id="alles" type="checkbox" <?php
-																			if (isset($_SESSION['alles']) and stristr($_SESSION['alles'], 'on') !== false) echo 'checked'; ?>>
-							)
 						</form>
 					</td>
 				</tr> <?php
@@ -385,8 +383,8 @@ LeesInschrijving($DlnmrId, $_GET['cursus']);
 							}
 							echo "</option>\n</select>";
 							echo '<input name="DlnmrId" type="hidden" value="';
-							if (isset($DlnmrId))
-								echo $DlnmrId . '" />';
+							if (isset($_GET['DlnmrId']))
+								echo $_GET['DlnmrId'] . '" />';
 							echo '<input type="submit" name="Submit" value="Zoek">';
 							echo '</form></td></tr>';
 						} else
@@ -520,14 +518,15 @@ LeesInschrijving($DlnmrId, $_GET['cursus']);
 													$ins['CursusId'] = $insch['CursusId_FK'];
 													$factuur = cursusgeld($ins);
 
-													d($ins, $factuur);
+													d($ins);
+													d($factuur);
 
 													?>
 							<div align="right">Cursusgeld:</div>
 						</td>
 						<td>&#8364;&nbsp; <input type="text" name="cursusgeld" value="<?php if (
-																							isset($DlnmrId)
-																							and $DlnmrId > 0
+																							isset($_GET['DlnmrId'])
+																							and $_GET['DlnmrId'] > 0
 																						)
 																							echo (float) $factuur['cursusgeld']; ?>" size="6" />
 						</td>
@@ -561,7 +560,7 @@ LeesInschrijving($DlnmrId, $_GET['cursus']);
 						</td>
 						<td colspan="4"><textarea
 								name="wensen"><?php
-												if (isset($DlnmrId) and $DlnmrId > 0)
+												if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
 													echo $factuur['wensen']; ?></textarea>
 						</td>
 					</tr>
@@ -571,7 +570,7 @@ LeesInschrijving($DlnmrId, $_GET['cursus']);
 						</td>
 						<td colspan="4"><textarea
 								name="donatietxt"><?php
-													if (isset($DlnmrId) and $DlnmrId > 0)
+													if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
 														echo $factuur['donatie']; ?></textarea>
 						</td>
 					</tr>
