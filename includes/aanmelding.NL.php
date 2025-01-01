@@ -178,6 +178,7 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	// check zangstem:
 	if ((isset($_POST['zanger']) or isset($_POST['solozanger'])) and empty($_POST['zangstem'])) {
 		$error = true;
+		$_POST['zangstem'] = NULL;
 		$fout .= "   <li>Je geeft aan zanger te willen deelnemen. Geef SVP ook <b>je stemsoort</b> aan</li>\n";
 	}
 
@@ -312,7 +313,7 @@ FOUT;
 
 			$inschrijfSQL = sprintf(
 				"INSERT INTO inschrijving (instrumentalist, instrumenten, `instr`, niveau_i, ervaring_i, stukken_i, solozanger, zanger, zangstem, niveau_z, ervaring_z, stukken_z, rol_z, toehoorder, vervoer, info_korting, acc_wens, eenpersoons, kamperen, hotel_2pp, hotel_1pp, eigen_acc, diner, storting_fonds, donatie, opmerkingen, aanbetaling, voorwaarden, DlnmrId_FK, CursusId_FK, datum_inschr) 
-		  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+		  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %d, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
 				  %s, %s, %s, %s, %s, %s, %s, %s, NOW());",
 				isset($_POST['instrumentalist']) ? "1" : "0",
 				quote($instrumenten),
