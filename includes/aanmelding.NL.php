@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once('GeneratePassword.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 setlocale(LC_ALL, 'nl_NL');
 
@@ -346,9 +346,10 @@ FOUT;
 				quote($_POST['CursusId_FK'])
 			);
 
+			d($inschrijfSQL);
 			$inschrijving_opgeslagen = exec_query($inschrijfSQL);
 			$InschId = select_query("SELECT MAX(InschId) FROM inschrijving", 0);
-			d($inschrijfSQL, $inschrijving_opgeslagen);
+			d($inschrijving_opgeslagen);
 
 			if ($inschrijving_opgeslagen) {
 				$random_id = bin2hex(random_bytes(4));
