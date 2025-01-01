@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once('GeneratePassword.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 setlocale(LC_ALL, 'nl_NL');
 
@@ -178,7 +178,7 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	// check zangstem:
 	if ((isset($_POST['zanger']) or isset($_POST['solozanger'])) and empty($_POST['zangstem'])) {
 		$error = true;
-		$_POST['zangstem'] = NULL;
+		$_POST['zangstem'] = 0;
 		$fout .= "   <li>Je geeft aan zanger te willen deelnemen. Geef SVP ook <b>je stemsoort</b> aan</li>\n";
 	}
 
