@@ -393,14 +393,14 @@ ul#cursusmenu li a:hover {
 }
 /* Navigatie: */
 nav#navcontainer {
-	width: 200px;
+	width: 185px;
 	border: none;
 	background: #ffcccc;
 }
 #navcontainer a,
 #navcontainer div.w3-accordion {
 	font-size: 15px;
-	width: 200px;
+	width: 185px;
 	display: block;
 	padding: 3px 10px;
 	border-bottom: 1px solid black;
@@ -426,7 +426,7 @@ p.citaat {
 	text-align: left;
 	background: url("/Images/Logos/bruine_punt.png") no-repeat 3mm 0.2em;
 	font: italic 18px "Alegreya", serif;
-	font-weight: 400;
+	font-weight: 500;
 	letter-spacing: 0.03em;
 }
 #navcontainer {
