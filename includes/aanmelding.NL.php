@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once('GeneratePassword.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 setlocale(LC_ALL, 'nl_NL');
 
@@ -72,6 +72,7 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	if (isset($_POST['plaats'])) $_POST['plaats'] = stripslashes(rtrim(ucfirst($_POST['plaats'])));
 	if (empty($_POST['niveau_i'])) $_POST['niveau_i'] = "";
 	if (empty($_POST['ervaring_i'])) $_POST['ervaring_i'] = "";
+	if (empty($_POST['zangstem'])) $_POST['zangstem'] = 0;
 	if (empty($_POST['niveau_z'])) $_POST['niveau_z'] = "";
 	if (empty($_POST['ervaring_z'])) $_POST['ervaring_z'] = "";
 	if (empty($_POST['vervoer'])) $_POST['vervoer'] = "";
@@ -88,7 +89,7 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	if (isset($_POST['instr'])) $ins = $_POST['instr'];
 	if (isset($_POST['toehoorder'])) $ins[] = 500;
 	$instrumenten = implode(', ', (array)$ins); // alleen instrumenten & toehoorders
-	if (isset($_POST['zangstem'])) $ins[] = $_POST['zangstem'];
+	if (isset($_POST['zangstem']) AND $_POST['zangstem'] > 0) $ins[] = $_POST['zangstem'];
 	$instr = implode(', ', (array)$ins); // alle functies
 
 	if (isset($_POST['rol_z'])) $rol_z = implode(', ', $_POST['rol_z']);
@@ -176,9 +177,8 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	}
 
 	// check zangstem:
-	if ((isset($_POST['zanger']) or isset($_POST['solozanger'])) and empty($_POST['zangstem'])) {
+	if ((isset($_POST['zanger']) or isset($_POST['solozanger'])) and $_POST['zangstem'] == 0) {
 		$error = true;
-		$_POST['zangstem'] = 0;
 		$fout .= "   <li>Je geeft aan zanger te willen deelnemen. Geef SVP ook <b>je stemsoort</b> aan</li>\n";
 	}
 
