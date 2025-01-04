@@ -207,24 +207,24 @@ blockquote + div {
   margin-top: -0.5em;
 }
 h1 {
-  color: #5c0099;
+  color: #3c085f;
   font-size: 200%;
 }
 h2 {
-  color: #7a00cc;
+  color: #5a0b8f;
   font-size: 160%;
 }
 h3 {
-  color: #9900ff;
+  color: #780fbe;
   font-size: 140%;
 }
 h4 {
-  color: #ad33ff;
+  color: #9614ec;
   font-size: 115%;
 }
 h5 {
   font-size: 110%;
-  color: #8f33cc;
+  color: #703895;
 }
 h6 {
   font-size: 110%;
@@ -642,19 +642,19 @@ p.citaat {
 }
 /* Links: */
 a:active {
-  color: #ff9999;
+  color: #ad33ff;
   text-decoration: underline;
 }
 a:link {
-  color: #ff6666;
+  color: #9900ff;
   text-decoration: underline;
 }
 a:visited {
-  color: #ff3333;
+  color: #7a00cc;
   text-decoration: underline;
 }
 a:hover {
-  color: #ffcccc;
+  color: #c266ff;
   text-decoration: underline;
 }
 /* Andere formaten en printen: */

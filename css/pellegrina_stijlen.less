@@ -10,7 +10,8 @@
 @chamber_color: lighten(#640800, 10%);
 @romantic_color: darken(#0C70F2, 10%); // Donker korenblauw
 
-@koppen: #9900ff; // paars
+@koppen: #780fbe; // paars
+@link: #9900ff; // paars
 
 @nav_background: #ffcccc; // lichtroze
 @nav_accent: darken(@nav_background, 20%); // donkerroze
@@ -542,19 +543,19 @@ p.citaat {
 
 /* Links: */
   a:active {
-    color: lighten(@nav_accent, 10%);
+    color: lighten(@link, 10%);
     text-decoration: underline;
   }
   a:link {
-     color: @nav_accent;
+     color: @link;
      text-decoration: underline;
   }
   a:visited {
-     color: darken(@nav_accent, 10%);
+     color: darken(@link, 10%);
      text-decoration: underline;
   }
   a:hover {
-    color: lighten(@nav_accent, 20%);
+    color: lighten(@link, 20%);
     text-decoration: underline;
   }
 
