@@ -133,7 +133,7 @@
 .actiekleur {
   /* voor actieve accordion */
   color: black !important;
-  background-color: #9900ff !important;
+  background-color: #ff6666 !important;
 }
 .course {
   font-weight: bold;
@@ -571,7 +571,7 @@ div#main {
   background-color: white;
 }
 ul#cursusmenu {
-  background-color: #ad33ff !important;
+  background-color: #ff9999 !important;
   margin-top: -2px;
 }
 ul#cursusmenu li a {
@@ -581,12 +581,12 @@ ul#cursusmenu li a {
   text-decoration: none;
 }
 ul#cursusmenu li a:hover {
-  background-color: #d699ff;
+  background-color: #ffffff;
 }
 /* Navigatie: */
 nav#navcontainer {
   width: 185px;
-  border: 1px solid #5c0099;
+  border: 1px solid #ff0000;
   background: #ffcccc;
 }
 #navcontainer ul {
@@ -602,7 +602,7 @@ nav#navcontainer {
   padding: 0 0 0 10px;
   margin: 0;
   text-decoration: none;
-  border-bottom: 1px solid #5c0099;
+  border-bottom: 1px solid #ff0000;
 }
 #navcontainer li,
 #navcontainer div.w3-accordion {
@@ -612,7 +612,7 @@ nav#navcontainer {
   padding-top: 0;
   margin-bottom: 0;
   background: initial;
-  border-bottom: 1px solid #5c0099;
+  border-bottom: 1px solid #ff0000;
 }
 #navcontainer a:link,
 #navlist a:visited {
@@ -621,7 +621,7 @@ nav#navcontainer {
 #navcontainer a:hover,
 #navlist a:active {
   color: black !important;
-  background-color: #9900ff !important;
+  background-color: #ff6666 !important;
 }
 #navlist a.grijs:hover,
 #navlist a.grijs:active {
@@ -642,19 +642,19 @@ p.citaat {
 }
 /* Links: */
 a:active {
-  color: #ad33ff;
+  color: #ff9999;
   text-decoration: underline;
 }
 a:link {
-  color: #9900ff;
+  color: #ff6666;
   text-decoration: underline;
 }
 a:visited {
-  color: #7a00cc;
+  color: #ff3333;
   text-decoration: underline;
 }
 a:hover {
-  color: #c266ff;
+  color: #ffcccc;
   text-decoration: underline;
 }
 /* Andere formaten en printen: */
