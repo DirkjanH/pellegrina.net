@@ -10,8 +10,10 @@
 @chamber_color: lighten(#640800, 10%);
 @romantic_color: darken(#0C70F2, 10%); // Donker korenblauw
 
-@nav_accent: lighten(#317f43, 10%); // donker-blauwgroen
-@nav_background: lighten(@nav_accent, 40%);
+@koppen: #9900ff; // paars
+
+@nav_accent: #9900ff; // paars
+@nav_background: #ffcccc; // lichtroze
 
 @cursusmenu: lighten(@nav_accent, 10%);
 @cursusmenu_actief: lighten(@cursusmenu, 20%);
@@ -102,24 +104,24 @@ body {
     margin-top: -0.5em;
   }
   h1 {
-    color: darken(@nav_accent, 20%);
+    color: darken(@koppen, 20%);
     font-size: 200%;
   }
   h2 {
-    color: darken(@nav_accent, 10%);
+    color: darken(@koppen, 10%);
     font-size: 160%;
   }
   h3 {
-    color: @nav_accent;
+    color: @koppen;
     font-size: 140%;
   }
   h4 {
-    color: lighten(@nav_accent, 10%);
+    color: lighten(@koppen, 10%);
     font-size: 115%;
   }
   h5 {
     font-size: 110%;
-    color: desaturate(@nav_accent, 40%);
+    color: desaturate(@koppen, 40%);
   }
   h6 {
     font-size: 110%;
