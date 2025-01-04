@@ -599,7 +599,7 @@ nav#navcontainer {
   font-size: 13px;
   width: 185px;
   display: block;
-  padding: 8px;
+  padding: 8px 4px;
   margin: 0;
   text-decoration: none;
   border-bottom: 1px solid black;
