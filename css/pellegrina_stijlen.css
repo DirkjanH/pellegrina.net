@@ -596,13 +596,13 @@ nav#navcontainer {
   padding: 0px;
 }
 #navcontainer a {
-  font-size: 15px;
+  font-size: 13px;
   width: 185px;
   display: block;
   padding: 0 0 0 10px;
   margin: 0;
   text-decoration: none;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid black;
 }
 #navcontainer li,
 #navcontainer div.w3-accordion {
@@ -615,11 +615,11 @@ nav#navcontainer {
   border-bottom: 1px solid #ff0000;
 }
 #navcontainer a:link,
-#navlist a:visited {
+#navcontainer a:visited {
   color: black;
 }
 #navcontainer a:hover,
-#navlist a:active {
+#navcontainer a:active {
   color: black !important;
   background-color: #ff6666 !important;
 }
