@@ -75,6 +75,7 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	if (empty($_POST['zangstem'])) $_POST['zangstem'] = 0;
 	if (empty($_POST['niveau_z'])) $_POST['niveau_z'] = "";
 	if (empty($_POST['ervaring_z'])) $_POST['ervaring_z'] = "";
+	if (empty($_POST['opmerkingen'])) $_POST['opmerkingen'] = "";
 	if (empty($_POST['vervoer'])) $_POST['vervoer'] = "";
 	if (empty($_POST['donatie'])) $_POST['donatie'] = 0;
 
