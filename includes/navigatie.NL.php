@@ -38,7 +38,7 @@
     <a href="route_plek.php" target="_parent"
         class="w3-bar-item w3-button">Reisinformatie</a>
     <a href="adres_toevoegen.php" target="_parent"
-        class="w3-bar-item w3-button w3-text-red">Informatie ontvangen? Geef
+        class="w3-bar-item w3-button w3-text-red">Informatie ontvangen?<br>Geef
         E-mail op!</a>
     <a class="w3-bar-item w3-button" href="login.php" target="_parent"
         -->Speciaal voor deelnemers</a>
