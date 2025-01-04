@@ -600,6 +600,7 @@ nav#navcontainer {
   width: 185px;
   display: block;
   padding-right: 10px;
+  text-decoration: none;
 }
 #navcontainer li,
 #navcontainer div.w3-accordion {
