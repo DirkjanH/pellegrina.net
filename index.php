@@ -161,13 +161,6 @@ function getisp($ip = '')
         }
         -->
     </style>
-    <!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
     <meta name="google-site-verification"
         content="BOrB5tEMjKF9O0X8Ow1Gjl2z7Q-Su6aCqce0dbJZeVE" />
     <meta name="verify-v1"
