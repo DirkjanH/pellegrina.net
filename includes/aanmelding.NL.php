@@ -70,13 +70,13 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	if (isset($_POST['adres'])) $_POST['adres'] = stripslashes(rtrim(ucfirst($_POST['adres'])));
 	if (isset($_POST['postcode'])) $_POST['postcode'] = stripslashes(rtrim(strtoupper($_POST['postcode'])));
 	if (isset($_POST['plaats'])) $_POST['plaats'] = stripslashes(rtrim(ucfirst($_POST['plaats'])));
-	if (empty($_POST['niveau_i'])) $_POST['niveau_i'] = "";
-	if (empty($_POST['ervaring_i'])) $_POST['ervaring_i'] = "";
-	if (empty($_POST['zangstem'])) $_POST['zangstem'] = 0;
-	if (empty($_POST['niveau_z'])) $_POST['niveau_z'] = "";
-	if (empty($_POST['ervaring_z'])) $_POST['ervaring_z'] = "";
-	if (empty($_POST['opmerkingen'])) $_POST['opmerkingen'] = "";
-	if (empty($_POST['vervoer'])) $_POST['vervoer'] = "";
+	if (empty($_POST['niveau_i'])) $_POST['niveau_i'] = '';
+	if (empty($_POST['ervaring_i'])) $_POST['ervaring_i'] = '';
+	if (empty($_POST['zangstem'])) $_POST['zangstem'] = '';
+	if (empty($_POST['niveau_z'])) $_POST['niveau_z'] = '';
+	if (empty($_POST['ervaring_z'])) $_POST['ervaring_z'] = '';
+	if (empty($_POST['opmerkingen'])) $_POST['opmerkingen'] = '';
+	if (empty($_POST['vervoer'])) $_POST['vervoer'] = '';
 	if (empty($_POST['donatie'])) $_POST['donatie'] = 0;
 
 	$naam = str_replace('  ', ' ', "{$_POST['voornaam']} {$_POST['tussenvoegsels']} {$_POST['achternaam']}");
@@ -90,11 +90,11 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	if (isset($_POST['instr'])) $ins = $_POST['instr'];
 	if (isset($_POST['toehoorder'])) $ins[] = 500;
 	$instrumenten = implode(', ', (array)$ins); // alleen instrumenten & toehoorders
-	if (isset($_POST['zangstem']) AND $_POST['zangstem'] > 0) $ins[] = $_POST['zangstem'];
+	if (isset($_POST['zangstem']) AND $_POST['zangstem'] != '') $ins[] = $_POST['zangstem'];
 	$instr = implode(', ', (array)$ins); // alle functies
 
 	if (isset($_POST['rol_z'])) $rol_z = implode(', ', $_POST['rol_z']);
-	else $rol_z = "";
+	else $rol_z = '';
 
 	d($instr);
 
@@ -314,7 +314,7 @@ FOUT;
 
 			$inschrijfSQL = sprintf(
 				"INSERT INTO inschrijving (instrumentalist, instrumenten, `instr`, niveau_i, ervaring_i, stukken_i, solozanger, zanger, zangstem, niveau_z, ervaring_z, stukken_z, rol_z, toehoorder, vervoer, info_korting, acc_wens, eenpersoons, kamperen, hotel_2pp, hotel_1pp, eigen_acc, diner, storting_fonds, donatie, opmerkingen, aanbetaling, voorwaarden, DlnmrId_FK, CursusId_FK, datum_inschr) 
-		  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %d, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
+		  VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
 				  %s, %s, %s, %s, %s, %s, %s, %s, NOW());",
 				isset($_POST['instrumentalist']) ? "1" : "0",
 				quote($instrumenten),
