@@ -1,5 +1,10 @@
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    #openNav {
+        background-color: white;
+    }
+</style>
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-large"
     id="navcontainer">
     <a href="javascript:void(0)" onclick="w3_close()"
@@ -54,25 +59,25 @@
     </div>
 </nav>
 <script>
-function w3_open() {
-    document.getElementById("main").style.marginLeft = "25%";
-    document.getElementById("navcontainer").style.width = "25%";
-    document.getElementById("navcontainer").style.display = "block";
-    document.getElementById("openNav").style.display = "none";
-}
-
-function w3_close() {
-    document.getElementById("main").style.marginLeft = "0%";
-    document.getElementById("navcontainer").style.display = "none";
-    document.getElementById("openNav").style.display = "inline-block";
-}
-
-function myFunction() {
-    var x = document.getElementById("demo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("navcontainer").style.width = "25%";
+        document.getElementById("navcontainer").style.display = "block";
+        document.getElementById("openNav").style.display = "none";
     }
-}
+
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("navcontainer").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+
+    function myFunction() {
+        var x = document.getElementById("demo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
 </script>
