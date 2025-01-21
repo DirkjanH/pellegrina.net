@@ -3,7 +3,7 @@
 <style>
     .w3-opennav {
         padding: 8px;
-        background-color: palegoldenrod;
+        background-color: yellow;
     }
 </style>
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-large"
