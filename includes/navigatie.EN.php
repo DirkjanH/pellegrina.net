@@ -2,8 +2,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     .w3-opennav {
-        padding: 16px;
-        background-color: white;
+        padding: 8px;
+        background-color: palegoldenrod;
     }
 </style>
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-large"
