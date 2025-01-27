@@ -2,7 +2,7 @@
 $cursusnr = 1 + $cursus_offset; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,14 +11,11 @@ $cursusnr = 1 + $cursus_offset; ?>
   <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>Travel info <?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?></title>
   <meta name="robots" content="noindex, nofollow">
-  <!-- InstanceEndEditable -->
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
   <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
-  <!-- InstanceBeginEditable name="head" -->
   <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
   <style type="text/css">
     h4.nadrukkelijk {
@@ -36,14 +33,13 @@ $cursusnr = 1 + $cursus_offset; ?>
       height: 240px;
     }
   </style>
-  <!-- InstanceEndEditable -->
 </head>
 
 <body>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
   <div id="inhoud">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-    <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+    <div id="main">
       <h2><strong><?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?></strong> (<?php echo $cursussen[$cursusnr]['datumkort'] ?>) - all <?php echo $jaar ?> travel information </h2>
       <table width="100%" border="1">
         <tr>
@@ -55,13 +51,13 @@ $cursusnr = 1 + $cursus_offset; ?>
         </tr>
         <tr>
           <td class="w3-center"><a href="https://www.google.com/maps/d/u/0/edit?mid=1zv5-hN4rGS_fZVT6gYvyPTuxC86MaC0&usp=sharing" target="_blank">Map of České Budějovice, with all venues</a></td>
-          <td class="w3-center"><a href="../part_list.php?cursus=1" target="_blank">List of participants</a></td>
-          <td class="w3-center"><a href="../ensemblelijst_1.php" target="_blank">Chamber music formations</a></td>
-          <td class="w3-center"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxnSQS39e-HAhdl7T5q7PySu4QsVrC_FX95kkSIzBhm3GO0oKgQpJ27OSYpF5-pjmFhv_uHShafHtN/pubhtml?gid=701953541&single=true" target="_blank">Accommodation overview</a></td>
-          <td class="w3-center"><a href="2024-1 daily programme.pdf" target="_blank">Daily program</a></td>
+          <td class="w3-center grijs"><a xxxx="../part_list.php?cursus=1" target="_blank">List of participants</a></td>
+          <td class="w3-center grijs"><a xxxx="../ensemblelijst_1.php" target="_blank">Chamber music formations</a></td>
+          <td class="w3-center grijs"><a xxxx="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxnSQS39e-HAhdl7T5q7PySu4QsVrC_FX95kkSIzBhm3GO0oKgQpJ27OSYpF5-pjmFhv_uHShafHtN/pubhtml?gid=701953541&single=true" target="_blank">Accommodation overview</a></td>
+          <td class="w3-center grijs"><a xxxx="2024-1 daily programme.pdf" target="_blank">Daily program</a></td>
         </tr>
       </table>
-      <div>
+      <div class="onzichtbaar">
         <h2>Chamber Choir Repertoire</h2>
         <ul>
           <li><a href="../pdf/2024-1/chamberchoir_2024.pdf" target="_blank">Chamber Choir Repertoire 2024</a> (46 pages)</li>
@@ -69,7 +65,6 @@ $cursusnr = 1 + $cursus_offset; ?>
           <li class="onzichtbaar"><a href="https://drive.google.com/drive/folders/1mr8QYstPTyq3yMSyWDBAnjnJyImT8aTb?usp=sharing" target="_blank">MIDI files of the chamber choir repertoire</a>, made by Rob den Heijer</li>
 
         </ul>
-      </div>
       <h2>Some chamber music works</h2>
       <h4>Jadassohn - Serenade for Flute and Strings op.80</h4>
       <div class="cols2">
