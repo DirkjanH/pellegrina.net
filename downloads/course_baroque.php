@@ -50,14 +50,15 @@ $cursusnr = 2 + $cursus_offset; ?>
           <th>Flyer concert</th>
         </tr>
         <tr>
-          <td class="w3-center"><a href="../part_list.php?cursus=2" target="_blank">List of participants</a></td>
-          <td class="w3-center"><a href="https://pellegrina.net/ensemblelijst_2.php" target="_blank">Chamber music ensembles</a></td>
-          <td class="w3-center"><a href="https://docs.google.com/spreadsheets/d/1JCygZZvuBPAWIkfGGGChLMXQSNA34EkRP9tYArxD5LI/edit?usp=sharing" target="_blank">Overview of accommodation</a></td>
+          <td class="w3-center grijs"><a xxxx="../part_list.php?cursus=2" target="_blank">List of participants</a></td>
+          <td class="w3-center grijs"><a xxxx="https://pellegrina.net/ensemblelijst_2.php" target="_blank">Chamber music ensembles</a></td>
+          <td class="w3-center grijs"><a xxxx="https://docs.google.com/spreadsheets/d/1JCygZZvuBPAWIkfGGGChLMXQSNA34EkRP9tYArxD5LI/edit?usp=sharing" target="_blank">Overview of accommodation</a></td>
           <td class="w3-center"><a href="https://docs.google.com/document/d/1ODcgAmuTYIfNC9DKLaU0f6zed2uJvaJ6aoiIGp2Sb1A/edit?usp=sharing" target="_blank">Accommodation near Nieuw Sion</a></td>
-          <td class="w3-center"><a href="https://docs.google.com/document/d/1IpHquLhJ4NAdDyNHhrhLk_IQGsoXs4FEMSDAqoYFatc/pub" target="_blank">Daily program</a></td>
-          <td class="w3-center"><a href="LP2024-2 Vivaldi FLYER.pdf" target="_blank">Flyer concert</a></td>
+          <td class="w3-center grijs"><a xxxx="https://docs.google.com/document/d/1IpHquLhJ4NAdDyNHhrhLk_IQGsoXs4FEMSDAqoYFatc/pub" target="_blank">Daily program</a></td>
+          <td class="w3-center grijs"><a xxxx="LP2024-2 Vivaldi FLYER.pdf" target="_blank">Flyer concert</a></td>
         </tr>
       </table>
+      <div class="onzichtbaar">
       <h2><?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?> (<?php echo $cursussen[$cursusnr]['datumkort'] ?>) - information & scores<br />
       </h2>
       <div class="">
@@ -248,13 +249,11 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="https://pellegrina.net/pdf/2024-2/Magnificat RV 610/IMSLP400498-PMLP329343-Vivaldi-Magnificat_-_Organo.pdf" target="_blank">Vivaldi - Magnificat - Organo</a></li>
       </ul>
     </div>
-    <!-- InstanceEndEditable -->
-    <h2> <a href="javascript: history.go(-1)">Back</a></h2>
+     <h2> <a href="javascript: history.go(-1)">Back</a></h2>
     <p>&nbsp;</p>
   </div>
   </div>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd -->
 
 </html>
