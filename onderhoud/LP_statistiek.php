@@ -320,19 +320,16 @@ while ($i <= ($laatstecursus)) {
 								<?php echo euro($cursus['totaal']['donatie']); ?> | aantal donateurs:&nbsp;
 								<?php echo $donateurs['totaal']; ?> | kortingen:&nbsp;
 								<?php echo euro($cursus['totaal']['korting']); ?> | totaal te ontvangen:&nbsp;
-								<?php echo euro(
-									$cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie']
-									/* - $cursus['totaal']['korting'] */
-								); ?>
+								<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting']); ?>
 							</p>
 							<p>Totaal al betaald:&nbsp;
 								<?php echo euro($cursus['totaal']['aanbet_bedrag']); ?> | Totaal nog te ontvangen:&nbsp;
-								<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] /* - $cursus['totaal']['korting']  */ - $cursus['totaal']['aanbet_bedrag']); ?> | gemiddelde leeftijd
-								<?php echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?> | aantal deelnemers vorig jaar
-								<?php echo $deelnemers_vorigjaar['totaal']; ?> (
-								<?php if ($aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'] >= 0) echo '+';
-								else echo '-';
-								echo $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal']; ?>)
+								<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting'] - $cursus['totaal']['aanbet_bedrag']); ?> | gemiddelde leeftijd
+								<?php $meer = $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'];
+								if (isset($aangenomen['totaal']) and $aangenomen['totaal'] > 0) $percentage_meer = round(($meer / $aangenomen['totaal']) * 100);
+								if (isset($leeftijd['gemiddelde']) and $leeftijd['gemiddelde'] > 0) echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?> | aantal deelnemers vorig jaar
+								<?php echo $deelnemers_vorigjaar['totaal']; ?> (<?php if ($meer >= 0) echo '+';
+																				echo $meer . ' = ' . $percentage_meer . '%'; ?>)
 							</p>
 						</td>
 					</tr>
