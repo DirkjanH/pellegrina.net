@@ -116,13 +116,7 @@ $cursusnr = 1 + $cursus_offset; ?>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Conductor_Score.pdf" target="_blank">Full score</a></li>
           </ul>
         </div>
-        <div class="onzichtbaar">
-          <p>Excellent recordings to get an impression:</p>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
+        <p><a href="https://open.spotify.com/playlist/6Q0jeTv8wp11eJyxItIBCB?si=3446d002e0fe45ce" target="_blank"></a>Excellent recordings on Spotify to get an impression</p>
         <h2> <a href="javascript: history.go(-1)">Back</a></h2>
         <p>&nbsp;</p>
       </div>
