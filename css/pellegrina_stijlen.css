@@ -687,6 +687,7 @@ a:hover {
 @media screen and (max-width: 1080px) {
   #titel div.cijfer {
     display: none;
+    column-count: auto;
   }
 }
 @media print {
