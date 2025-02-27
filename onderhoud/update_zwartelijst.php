@@ -1,7 +1,7 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 // stel php in dat deze fouten weergeeft
-ini_set('display_errors',1 );
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
@@ -109,17 +109,15 @@ $aantal_zwl = count($zwartelijst);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<title>Update zwarte lijst</title>
-	<link rel="stylesheet" href="../css/pellegrina_stijlen.css" type="text/css">
-	<link rel="stylesheet" href="../css/w3.css" type="text/css">
+	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<style type="text/css">
-		<!-- .categorie1 {
-		background-color: #FBFBC7;
+		.categorie1 {
+			background-color: #FBFBC7;
 		}
 
 		.categorie2 {
 			background-color: #FFCACA;
 		}
-		-->
 	</style>
 </head>
 
