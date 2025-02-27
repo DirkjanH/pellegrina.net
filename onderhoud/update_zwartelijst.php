@@ -98,7 +98,7 @@ WHERE z.DlnmrId_FK = d.DlnmrId
 ORDER BY achternaam";
 
 $zwartelijst = select_query($query_zwartelijst);
-$aantal_zwl = count($zwartelijst);
+if (is_array($zwartelijst)) $aantal_zwl = count($zwartelijst); else $aantal_zwl = 0;
 // end Recordset deelname alle ingeschrevenen zwarte lijst
 
 ?>
