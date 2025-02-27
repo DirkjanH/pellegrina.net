@@ -687,9 +687,7 @@ a:hover {
 @media screen and (max-width: 800px) {
   div.cols3,
   div.cols2 {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
+    column-count: 1 !important;
   }
 }
 @media screen and (max-width: 1080px) {
