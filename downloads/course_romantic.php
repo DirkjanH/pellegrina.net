@@ -85,7 +85,7 @@ $cursusnr = 1 + $cursus_offset; ?>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Cellos.pdf" target="_blank">Cello</a></li>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Basses.pdf" target="_blank">Double bass</a></li>
           </ul>
-          <p>The string parts above do not have bowings. We will use the bowings from the set of parts underneath. As they are badly legible, we ask you to copy their bowings into a clean print of the parts above.</p>
+          <p style="break-before: column;">The string parts above do not have bowings. We will use the bowings from the set of parts underneath. As they are badly legible, we ask you to copy their bowings into a clean print of the parts above.</p>
           <ul>
             <li><a href="../pdf/2025-1/ZK_bowings_1.violin.pdf" target="_blank">Violin I (badly legible, but with bowings)</a></li>
             <li><a href="../pdf/2025-1/ZK_bowings_2.violin.pdf" target="_blank">Violin II (badly legible, but with bowings)</a></li>
