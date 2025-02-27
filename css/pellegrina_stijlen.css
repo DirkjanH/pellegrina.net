@@ -478,10 +478,8 @@ div.cols3 h2,
 div.cols3 h3 {
   column-span: all;
 }
+div.cols3 ul,
 div.cols2 ul {
-  margin-top: 0px;
-}
-div.cols3 ul {
   margin-top: 0px;
 }
 .nieuwe_kolom {
