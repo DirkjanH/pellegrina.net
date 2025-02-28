@@ -140,7 +140,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 10 - 16 August <?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="plaatsvoor">Places available for tenors and basses<br>
+					<p class="plaatsvoor">Places available for a countertenor, a tenor and a bass with soloistic abilities<br>
 					Instruments: still room for baroque oboe, baroque violins and violas, continuo (organ/harpsichord/theorbo)</p>
 					<p class="volvoor">This course is full for sopranos, mezzo, altos, traverso, cello, double bass, viola da gamba</p>
 				</div>
