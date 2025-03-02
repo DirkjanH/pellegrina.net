@@ -133,7 +133,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 						<li>Klooster Nieuw Sion, Diepenveen, 10 - 16 augustus <?php echo $jaar ?></li>
 					</ul>
 					<p class="plaatsvoor">Plaatsen beschikbaar voor een countertenor, een tenor en een bas met solistische capaciteiten<br>
-					Instrumenten: nog plaats voor barokhobo, barokviolen en -violen, continuo (orgel/clavecimbel/theorbe)</p>
+					Instrumenten: nog plaats voor barokhobo, barokviolen en -altviolen, continuo (orgel/clavecimbel/theorbe)</p>
 					<p class="volvoor">Deze cursus is vol voor sopranen, mezzo's, alten, traverso's, cello's, contrabassen, viola da gamba's</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
