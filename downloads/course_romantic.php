@@ -60,7 +60,7 @@ $cursusnr = 1 + $cursus_offset; ?>
       <div class="onzichtbaar">
         <h2>Chamber Choir Repertoire</h2>
         <ul>
-          <li><a href="../pdf/2025-1/chamberchoir_2025.pdf" target="_blank">Chamber Choir Repertoire 2025</a> (46 pages)</li>
+          <li><a href="../pdf/2025-1/chamberchoir_2025.pdf" target="_blank">Chamber Choir Repertoire 2025</a> (54 pages)</li>
         </ul>
       </div>
       <h2 class="onzichtbaar">Some chamber music works</h2>
