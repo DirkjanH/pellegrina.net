@@ -57,7 +57,7 @@ $cursusnr = 1 + $cursus_offset; ?>
           <td class="w3-center grijs"><a xxxx="2025-1 daily programme.pdf" target="_blank">Daily program</a></td>
         </tr>
       </table>
-      <div class="onzichtbaar">
+      <div class="">
         <h2>Chamber Choir Repertoire</h2>
         <ul>
           <li><a href="../pdf/2025-1/chamberchoir_2025.pdf" target="_blank">Chamber Choir Repertoire 2025</a> (54 pages)</li>
