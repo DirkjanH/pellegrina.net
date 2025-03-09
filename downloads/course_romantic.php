@@ -95,6 +95,7 @@ $cursusnr = 1 + $cursus_offset; ?>
         </div>
 
         <h3>Joseph Haydn - Missa in Tempore Belli (Paukenmesse)</h3>
+        <p><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Conductor_Score.pdf" target="_blank">Full score</a></p>
         <p>Singers can download and print the <a href="../pdf/2025-1/Haydn_Paukenmesse_-_vocal score.pdf" target="_blank">vocal score</a></p>
         <div class="cols3">
           <ul>
