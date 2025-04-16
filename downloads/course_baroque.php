@@ -85,12 +85,14 @@ $cursusnr = 2 + $cursus_offset; ?>
           </ul>
         </div>
         <h2>Tutti programme</h2>
-        <p>All parts for the works we are going to perform are now available. Please print and study what you need. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon.</p>
+        <p>All parts for the works we are going to perform are now available. Please print and study what you need. Singers, please print, study and bring the vocal score. The string parts have no bowings yet. They will be available soon. Some movement require trumpets, which we most likely will not have.</p>
         <h3>Purcell - Welcome to all the pleasures (Z.339)</h3>
+        <p>We can and will perform this Cecilia Ode in its entirety. The instrumental parts still need to be scanned.</p>
         <ul>
           <li><a href="/pdf/2025-2/Purcell_Welcome_score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Score</a></li>
         </ul>
         <h3>Purcell - Hail! Bright Cecilia (Z.328)</h3>
+        <p>We will only perform a few movements of this Cecilia Ode. We will have to skip the overture and no. 11, the countertenor Air “The fife and all the harmony of war”, because they require trumpets.</p>
         <ul>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia_score.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Score</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_1.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Oboe 1</a></li>
@@ -106,7 +108,8 @@ $cursusnr = 2 + $cursus_offset; ?>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Continuo.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Cello, double bass</a></li>
 
         </ul>
-        <h3>Handel - Te Deum HMV 278</h3>
+        <h3>Handel - Utrecht Te Deum HMV 278</h3>
+        <p>We will only perform a few movements of this Te Deum. We will for sure do the quartet with solo flute <i>We believe that thou shalt come to be our judge</i>. We will have to skip the opening chorus, the double choir <i>Day by day we magnify thee</i> and the final chorus <i>O Lord, in thee have I trusted</i>, because they require trumpets.</p>
         <ul>
           <li><a href="/pdf/2025-2/HANDEL_-_TE_DEUM_HWV_278_Score.pdf" target="_blank">Handel - Te Deum - Full score</a></li>
           <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Flute_1.pdf" target="_blank">Handel - Te Deum - Flute</a></li>
@@ -118,7 +121,8 @@ $cursusnr = 2 + $cursus_offset; ?>
           <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Cellos.pdf" target="_blank">Handel - Te Deum - Cello, double bass</a></li>
           <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Vocal score.pdf" target="_blank">Handel - Te Deum - Vocal score</a></li>
         </ul>
-        <h3>Handel - Jubilate HMV 279</h3>
+        <h3>Handel - Utrecht Jubilate HMV 279</h3>
+        <p>We will only perform a few movements of this Jubilate, among which the alto/bass duet <i>Be ye sure that the Lord he is God</i> and the trio for two altos and bass <i>For the Lord is gracious</i>.</p>
         <ul>
           <li><a href="/pdf/2025-2/HANDEL_-_JUBILATE_HWV_279_Score.pdf" target="_blank">Handel - Jubilate - Full score</a></li>
           <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Oboe_1-2.pdf" target="_blank">Handel - Jubilate - Oboes 1-2</a></li>
@@ -128,7 +132,12 @@ $cursusnr = 2 + $cursus_offset; ?>
           <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violas.pdf" target="_blank">Handel - Jubilate - Viola</a></li>
           <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Cellos-Basses.pdf" target="_blank">Handel - Jubilate - Cello, double bass</a></li>
         </ul>
-      </div>
+        <h3>Handel - <i>The soft complaining flute</i> from Ode for St. Cecilia's Day HMV 76</h3>
+        <p>We will for sure do the soprano aria with solo flute <i>The soft complaining flute</i>.</p>
+        <ul>
+          <li><a href="/pdf/2025-2/Handel-The_soft_complaining_flute.pdf">The soft complaining flute - Score</a></li>
+        </ul>
+             </div>
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
       <p>&nbsp;</p>
     </div>
