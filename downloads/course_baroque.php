@@ -109,10 +109,24 @@ $cursusnr = 2 + $cursus_offset; ?>
         <h3>Handel - Te Deum HMV 278</h3>
         <ul>
           <li><a href="/pdf/2025-2/HANDEL_-_TE_DEUM_HWV_278_Score.pdf" target="_blank">Handel - Te Deum - Full score</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Flute_1.pdf" target="_blank">Handel - Te Deum - Flute</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Oboe_1-2.pdf" target="_blank">Handel - Te Deum - Oboes 1-2</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Bassoon_1.pdf" target="_blank">Handel - Te Deum - Bassoon</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Violins_I.pdf" target="_blank">Handel - Te Deum - Violin 1</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Violins_II.pdf" target="_blank">Handel - Te Deum - Violin 2</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Violas.pdf" target="_blank">Handel - Te Deum - Violas</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Cellos.pdf" target="_blank">Handel - Te Deum - Cello, double bass</a></li>
+          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Vocal score.pdf" target="_blank">Handel - Te Deum - Vocal score</a></li>
         </ul>
         <h3>Handel - Jubilate HMV 279</h3>
         <ul>
           <li><a href="/pdf/2025-2/HANDEL_-_JUBILATE_HWV_279_Score.pdf" target="_blank">Handel - Jubilate - Full score</a></li>
+          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Oboe_1-2.pdf" target="_blank">Handel - Jubilate - Oboes 1-2</a></li>
+          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violins_I.pdf" target="_blank">Handel - Jubilate - Violin 1</a></li>
+          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violins_II.pdf" target="_blank">Handel - Jubilate - Violin 2</a></li>
+          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violins_III.pdf" target="_blank">Handel - Jubilate - Violin 3</a></li>
+          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violas.pdf" target="_blank">Handel - Jubilate - Viola</a></li>
+          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Cellos-Basses.pdf" target="_blank">Handel - Jubilate - Cello, double bass</a></li>
         </ul>
       </div>
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
