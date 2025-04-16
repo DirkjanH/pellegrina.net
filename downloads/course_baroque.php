@@ -90,6 +90,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <p>We can and will perform this Cecilia Ode in its entirety. The instrumental parts still need to be scanned.</p>
         <ul>
           <li><a href="/pdf/2025-2/Purcell_Welcome_score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Score</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - Vocal score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Vocal score</a></li>
         </ul>
         <h3>Purcell - Hail! Bright Cecilia (Z.328)</h3>
         <p>We will only perform a few movements of this Cecilia Ode. We will have to skip the overture and no. 11, the countertenor Air “The fife and all the harmony of war”, because they require trumpets.</p>
