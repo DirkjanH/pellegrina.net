@@ -85,7 +85,8 @@ $cursusnr = 2 + $cursus_offset; ?>
           </ul>
         </div>
         <h2>Tutti programme</h2>
-        <p>All works we are going to perform are now available. Please print and study what you need. Singers, please print and bring the vocal score. Please study, besides you solopieces, also the choruses. The string parts have no bowings yet. They will be available soon. Some movement require trumpets, which we most likely will not have.</p>
+        <p>All works we are going to perform are now available. Please print and study what you need. The string parts have no bowings yet. They will be available soon. Some movement require trumpets, which we most likely will not have.</p>
+        <p>Singers, please print and bring the vocal score. Please study, besides you solopieces, also the choruses.</p>
         <h3>Purcell - Welcome to all the pleasures (Z.339)</h3>
         <p>We can and will perform this Cecilia Ode in its entirety. The instrumental parts still need to be scanned.</p>
         <ul>
