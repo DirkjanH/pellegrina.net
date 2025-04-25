@@ -53,7 +53,7 @@ if (isset($_GET['sorteer']) and $_GET['sorteer'] != "")
 d($sorteer, $ook_gepostuleerd, $ook_niet_aangenomen, $ook_gecanceld);
 
 // begin Recordset
-$deelnemers_query = "SELECT d.naam, d.achternaam, a.plaats as \"adres\", d.telefoon, d.mobiel, d.email, i.instr, i.instrumenten, i.toehoorder, i.zangstem, i.vervoer, i.aangenomen, i.afgewezen FROM dlnmr d, adres a, inschrijving i WHERE i.CursusId_FK = {$CursusId} AND d.adresid_FK = a.adresid AND d.dlnmrid = i.dlnmrid_fk  {$ook_niet_aangenomen} {$ook_gepostuleerd} {$ook_gecanceld} ORDER BY {$sorteer} ASC";
+$deelnemers_query = "SELECT d.naam, d.achternaam, CONCAT(a.plaats, \", \", a.land) as \"adres\", d.telefoon, d.mobiel, d.email, i.instr, i.instrumenten, i.toehoorder, i.zangstem, i.vervoer, i.aangenomen, i.afgewezen FROM dlnmr d, adres a, inschrijving i WHERE i.CursusId_FK = {$CursusId} AND d.adresid_FK = a.adresid AND d.dlnmrid = i.dlnmrid_fk  {$ook_niet_aangenomen} {$ook_gepostuleerd} {$ook_gecanceld} ORDER BY {$sorteer} ASC";
 $deelnemers = select_query($deelnemers_query);
 $aantal_deelnemers = 0;
 if (is_array($deelnemers)) $aantal_deelnemers = count($deelnemers);
@@ -164,7 +164,7 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
 						<table>
 							<tr>
 								<th><input type="submit" name="sorteer" value="Name:" accesskey="N"></th>
-								<th width="30%"><input type="submit" name="sorteer" value="Address:" accesskey="A"></th>
+								<th><input type="submit" name="sorteer" value="Address:" accesskey="A"></th>
 								<th>Telephone:</th>
 								<th>Mobile:</th>
 								<th>E-mail:</th>
