@@ -268,7 +268,7 @@ function ruimtecodes()
 					$ens .= '</h2>';
 					echo $ens;
 					ensembleleden($ensemble['ensembleId']);
-					if ($ensemble['opmerking'] != "") echo '<p class="opmerking w3-text-red">' . $ensemble['opmerking'] . '</p>';
+					if ($ensemble['opmerking'] != "") echo '<p class="opmerking w3-text-red w3-margin-left">' . $ensemble['opmerking'] . '</p>';
 				}
 				nulensemble();
 				geenensemble();
