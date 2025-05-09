@@ -210,32 +210,23 @@ function ruimtecodes()
 	}
 	-->
 </SCRIPT>
-<html><!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-
-	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>List of ensemble formation, course nr. <?php echo $_SESSION['Cursus'] ?></title>
 	<meta name="robots" content="noindex, nofollow">
-	<!-- InstanceEndEditable -->
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
-	<!-- InstanceBeginEditable name="head" -->
-	<link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
 	<div id="inhoud">
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-		<div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+		<div id="main">
 			<div id="cursus_form">
 				<form id="cursus_set" method="post" action="<?php echo $editFormAction; ?>">
 					<div class="w3-panel w3-center">
@@ -277,7 +268,7 @@ function ruimtecodes()
 					$ens .= '</h2>';
 					echo $ens;
 					ensembleleden($ensemble['ensembleId']);
-					if ($ensemble['opmerking'] != "") echo '<p class="opmerking">' . $ensemble['opmerking'] . '</p>';
+					if ($ensemble['opmerking'] != "") echo '<p class="opmerking w3-red">' . $ensemble['opmerking'] . '</p>';
 				}
 				nulensemble();
 				geenensemble();
