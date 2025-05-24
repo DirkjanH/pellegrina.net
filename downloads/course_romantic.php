@@ -78,7 +78,7 @@ $cursusnr = 1 + $cursus_offset; ?>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Trumpet_1-2.pdf" target="_blank">Trumpet I/II</a></li>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Trombone_1-3,_Tuba.pdf" target="_blank">Trombones I/II/III, Tuba</a></li>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Timpani,_Bass_Drum,_Cymbals,_Triangle.pdf" target="_blank">Timpani & other percussion</a></li>
-            <li style="break-before: column;"><a href="../pdf/2025-1/Zlatý_kolovrat_-_Violins_I_bowings.pdf" target="_blank">Violin I (with bowings)</a></li>
+            <li style="break-before: column;"><a href="../pdf/2025-1/Zlatý_kolovrat_-_Violins_I.pdf" target="_blank">Violin I</a></li>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Violins_II.pdf" target="_blank">Violin II</a></li>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Violas.pdf" target="_blank">Viola</a></li>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Cellos.pdf" target="_blank">Cello</a></li>
@@ -108,7 +108,7 @@ $cursusnr = 1 + $cursus_offset; ?>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Trumpet-Horn_1-2_(ad_lib.)_(C).pdf" target="_blank">Trumpet I/II</a></li>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Timpani.pdf" target="_blank">Timpani</a></li>
             <br>
-            <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Violins_I.pdf" target="_blank">Violin I (without bowings)</a></li>
+            <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Violins_I_bowings.pdf" target="_blank">Violin I <b>(with bowings)</b></a></li>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Violins_II.pdf" target="_blank">Violin II (without bowings)</a></li>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Violas.pdf" target="_blank">Viola (without bowings)</a></li>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Cellos.pdf" target="_blank">Cello (without bowings)</a></li>
