@@ -109,7 +109,7 @@ $cursusnr = 1 + $cursus_offset; ?>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Timpani.pdf" target="_blank">Timpani</a></li>
             <br>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Violins_I_bowings.pdf" target="_blank">Violin I <b>(with bowings)</b></a></li>
-            <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Violins_II.pdf" target="_blank">Violin II (without bowings)</a></li>
+            <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Violins_II_with_bowings.pdf" target="_blank">Violin II <b>(with bowings)</b></a></li>
             <li><a href="../pdf/2025-1/Haydn - Paukenmesse - viola.pdf" target="_blank">Viola <b>(with bowings)</b></a></li>
             <li><a href="../pdf/2025-1/Haydn Missa in tempore belli HOB XXII.9 cello with bowings.pdf" target="_blank">Cello <b>(with bowings)</b></a></li>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Basses.pdf" target="_blank">Double Bass (without bowings)</a></li>
