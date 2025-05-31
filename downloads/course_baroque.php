@@ -63,7 +63,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <p>All works we are going to perform are now available. Please print and study what you need. The string parts have no bowings yet. They will be available soon. Some movement require trumpets, which we most likely will not have.</p>
         <p>Singers, please print out the vocal scores and bring them with you. Study the choral parts as well as your solo parts.</p>
         <h3>Purcell - Welcome to all the pleasures (Z.339)</h3>
-        <p>We can and will perform this Cecilia Ode in its entirety. The instrumental parts still need to be scanned.</p>
+        <p>We will perform this Cecilia Ode in its entirety.</p>
         <ul>
           <li><a href="/pdf/2025-2/Purcell - Welcome - score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Full score</a></li>
           <li><a href="/pdf/2025-2/Purcell - Welcome - Vocal score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Vocal score</a></li>
