@@ -59,45 +59,26 @@ $cursusnr = 2 + $cursus_offset; ?>
         </tr>
       </table>
       <div class="">
-        <h2><?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?> (<?php echo $cursussen[$cursusnr]['datumkort'] ?>) - information & scores<br />
-        </h2>
-        <div class="onzichtbaar">
-          <h2 class="">Chamber music works</h2>
-          <ul>
-            <li>
-              <h3>Giovanni Legrenzi, Prosa pro mortuis (set 1 nr. 1)</h3>
-              <ul>
-                <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Score.pdf" target="_blank">Legrenzi, Prosa pro mortuis, score</a></li>
-                <li><a href="../pdf/2024-2/Legrenzi/DIES IRAE - Instrumental parts.pdf" target="_blank">Legrenzi, Prosa pro mortuis, all instrumental parts</a></li>
-                <li><a href="https://www.youtube.com/watch?v=1OVcwg1c7UM" target="_blank">Legrenzi, Prosa pro mortuis, recording by the Margaretha Consort with Jos van Velthoven</a> (set 1 nr. 1)</li>
-              </ul>
-            </li>
-            <h3>Antonín Reichenauer - Quartet in g minor</h3>
-            <div class="cols3">
-              <ul>
-                <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_bassoon.pdf" target="_blank">Bassoon</a></li>
-                <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violino.pdf" target="_blank">Violino</a></li>
-                <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_violoncello.pdf" target="_blank">Cello</a></li>
-                <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18_basso.pdf" target="_blank">Basso</a></li>
-                <li><a href="../pdf/2024-2/Reichenauer/Reichenauer_Quartett_Rk_18.pdf" target="_blank">Manuscript source</a></li>
-              </ul>
-            </div>
-          </ul>
-        </div>
         <h2>Tutti programme</h2>
         <p>All works we are going to perform are now available. Please print and study what you need. The string parts have no bowings yet. They will be available soon. Some movement require trumpets, which we most likely will not have.</p>
         <p>Singers, please print out the vocal scores and bring them with you. Study the choral parts as well as your solo parts.</p>
         <h3>Purcell - Welcome to all the pleasures (Z.339)</h3>
         <p>We can and will perform this Cecilia Ode in its entirety. The instrumental parts still need to be scanned.</p>
         <ul>
-          <li><a href="/pdf/2025-2/Purcell_Welcome_score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Full score</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Full score</a></li>
           <li><a href="/pdf/2025-2/Purcell - Welcome - Vocal score.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Vocal score</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - Violin 1.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Violin 1</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - Violin 2.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Violin 2</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - Viola.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Viola</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - Cello-Bass.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Cello, bass, bassoon</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - Figured Bass.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Figured bass</a></li>
+          <li><a href="/pdf/2025-2/Purcell - Welcome - BC realisation.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - BC realisation</a></li>
         </ul>
         <h3>Purcell - Hail! Bright Cecilia (Z.328)</h3>
         <p>We will only perform a few movements of this Cecilia Ode. We will have to skip the overture and no. 11, the countertenor Air “The fife and all the harmony of war”, because they require trumpets.</p>
         <ul>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia_score.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Score</a></li>
-          <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Vocal_score.pdf"_blank">Purcell - Hail! Bright Cecilia - Vocal score</a></li>
+          <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Vocal_score.pdf" _blank">Purcell - Hail! Bright Cecilia - Vocal score</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_1.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Oboe 1</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_2.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Oboe 2</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Recorder_1.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Recorder 1</a></li>
@@ -140,7 +121,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <ul>
           <li><a href="/pdf/2025-2/Handel-The_soft_complaining_flute.pdf">The soft complaining flute - Score</a></li>
         </ul>
-             </div>
+      </div>
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
       <p>&nbsp;</p>
     </div>
