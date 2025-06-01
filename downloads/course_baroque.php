@@ -90,7 +90,6 @@ $cursusnr = 2 + $cursus_offset; ?>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_1.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Oboe 1</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Recorder_1.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Recorder 1</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Recorder_2.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Recorder 2</a></li>
-          <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Greatbass_Recorder.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Greatbass Recorder</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Bassoon.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Bassoon</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Violin_1.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Violin 1</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Violin_2.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Violin 2</a></li>
