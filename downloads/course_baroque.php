@@ -59,8 +59,15 @@ $cursusnr = 2 + $cursus_offset; ?>
         </tr>
       </table>
       <div class="">
+        <h2>Some chamber music works</h2>
+        <h3>Domenico Scarlatti - Salve Regina (set 2 nr. 2)</h3>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-(S,A,Streicher,Orgel).pdf"></a>Full score</li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine1.pdf">Violin 1</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine2.pdf">Violin 2</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Viola.pdf">Viola</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Cello-Bass.pdf">Cello</a></li>
         <h2>Tutti programme</h2>
-        <p>All works we are going to perform are now available. Please print and study what you need. The string parts have no bowings yet. They will be available soon. Some movement require trumpets, which we most likely will not have.</p>
+        <p>All works we are going to perform are now available here. Please print and study what you need. The string parts will soon have bowings; string players will be notified.</p>
         <p>Singers, please print out the vocal scores and bring them with you. Study the choral parts as well as your solo parts.</p>
         <h3>Purcell - Welcome to all the pleasures (Z.339)</h3>
         <p>We will perform this Cecilia Ode in its entirety.</p>
@@ -75,7 +82,7 @@ $cursusnr = 2 + $cursus_offset; ?>
           <li><a href="/pdf/2025-2/Purcell - Welcome - BC realisation.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - BC realisation</a></li>
         </ul>
         <h3>Purcell - Hail! Bright Cecilia (Z.328)</h3>
-        <p>We will only perform a few movements of this Cecilia Ode. We will have to skip the overture and no. 11, the countertenor Air “The fife and all the harmony of war”, because they require trumpets.</p>
+        <p>We will only perform a few movements of this Cecilia Ode</p>
         <ul>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia_score.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Score</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Vocal_score.pdf" _blank">Purcell - Hail! Bright Cecilia - Vocal score</a></li>
