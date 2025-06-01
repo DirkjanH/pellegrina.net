@@ -280,7 +280,7 @@ function ruimtecodes()
 				nulensemble();
 				geenensemble();
 				tutorcodes();
-				ruimtecodes();
+				// ruimtecodes();
 				?>
 			</div>
 			<!-- InstanceEndEditable -->
