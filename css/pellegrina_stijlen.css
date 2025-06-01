@@ -304,6 +304,11 @@ div.fotocenter img {
   font-weight: bold;
   font-size: 70%;
 }
+.opmerking {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+}
 .kleinkap {
   font-variant: small-caps;
 }
