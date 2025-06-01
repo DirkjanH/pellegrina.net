@@ -61,11 +61,11 @@ $cursusnr = 2 + $cursus_offset; ?>
       <div class="">
         <h2>Some chamber music works</h2>
         <h3>Domenico Scarlatti - Salve Regina (set 2 nr. 2)</h3>
-        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-(S,A,Streicher,Orgel).pdf"></a>Full score</li>
-        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine1.pdf">Violin 1</a></li>
-        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine2.pdf">Violin 2</a></li>
-        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Viola.pdf">Viola</a></li>
-        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Cello-Bass.pdf">Cello</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-(S,A,Streicher,Orgel).pdf" target="_blank">Full score</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine1.pdf" target="_blank">Violin 1</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine2.pdf" target="_blank">Violin 2</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Viola.pdf" target="_blank">Viola</a></li>
+        <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Cello-Bass.pdf" target="_blank">Cello</a></li>
         <h2>Tutti programme</h2>
         <p>All works we are going to perform are now available here. Please print and study what you need. The string parts will soon have bowings; string players will be notified.</p>
         <p>Singers, please print out the vocal scores and bring them with you. Study the choral parts as well as your solo parts.</p>
