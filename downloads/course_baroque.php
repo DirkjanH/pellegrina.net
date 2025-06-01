@@ -60,6 +60,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       </table>
       <div class="">
         <h2>Some chamber music works</h2>
+        <p>Most chamber music works are available on the <a href="https://imslp.org/" target="_blank">International Music Score Library Project (IMSLP)</a>, the <a href="https://www.cpdl.org/" target="_blank">Choral Public Domain Library (CPDL)</a>. Only works that are not generally available are listed below.</p>
         <h3>Domenico Scarlatti - Salve Regina (set 2 nr. 2)</h3>
         <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-(S,A,Streicher,Orgel).pdf" target="_blank">Full score</a></li>
         <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine1.pdf" target="_blank">Violin 1</a></li>
