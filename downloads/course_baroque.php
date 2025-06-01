@@ -82,8 +82,12 @@ $cursusnr = 2 + $cursus_offset; ?>
           <li><a href="/pdf/2025-2/Purcell - Welcome - Figured Bass.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - Figured bass</a></li>
           <li><a href="/pdf/2025-2/Purcell - Welcome - BC realisation.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - BC realisation</a></li>
         </ul>
-        <h3>Purcell - Hail! Bright Cecilia (Z.328)</h3>
-        <p>We will only perform a few movements of this Cecilia Ode</p>
+<h3>Handel - Pastiche of movements from the Utrecht Te Deum and Jubilate and the Ode for St. Cecilia's Day</h3>
+        <p>We have made a pastiche of movements from the Utrecht Te Deum and Jubilate and the Ode for St. Cecilia's Day, whch is adapted to the instruments and voices we have during the summer school. At this moment only the score is available. Soon we will add the vocal score and all instrumental parts needed.</p>
+        <ul>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - score.pdf" target="_blank">Handel - Pastiche - Full score</a></li>
+        </ul>
+        <p>We will only perform a few movements of this Cecilia Ode. The score and the parts only contain those movements.</p>
         <ul>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia_score.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Score</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Vocal_score.pdf" _blank">Purcell - Hail! Bright Cecilia - Vocal score</a></li>
@@ -98,35 +102,6 @@ $cursusnr = 2 + $cursus_offset; ?>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Harpsichord.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Harpsichord</a></li>
           <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Continuo.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Cello, double bass</a></li>
 
-        </ul>
-        <h3>Handel - Utrecht Te Deum HMV 278</h3>
-        <p>We will only perform a few movements of this Te Deum. We will for sure do the quartet with solo flute <i>We believe that thou shalt come to be our judge</i>. We will have to skip the opening chorus, the double choir <i>Day by day we magnify thee</i> and the final chorus <i>O Lord, in thee have I trusted</i>, because they require trumpets.</p>
-        <ul>
-          <li><a href="/pdf/2025-2/HANDEL_-_TE_DEUM_HWV_278_Score.pdf" target="_blank">Handel - Te Deum - Full score</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Flute_1.pdf" target="_blank">Handel - Te Deum - Flute</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Oboe_1-2.pdf" target="_blank">Handel - Te Deum - Oboes 1-2</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Bassoon_1.pdf" target="_blank">Handel - Te Deum - Bassoon</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Violins_I.pdf" target="_blank">Handel - Te Deum - Violin 1</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Violins_II.pdf" target="_blank">Handel - Te Deum - Violin 2</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Violas.pdf" target="_blank">Handel - Te Deum - Violas</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Cellos.pdf" target="_blank">Handel - Te Deum - Cello, double bass</a></li>
-          <li><a href="/pdf/2025-2/Handel - Te Deum HMV 278 - Vocal score.pdf" target="_blank">Handel - Te Deum - Vocal score</a></li>
-        </ul>
-        <h3>Handel - Utrecht Jubilate HMV 279</h3>
-        <p>We will only perform a few movements of this Jubilate, among which the alto/bass duet <i>Be ye sure that the Lord he is God</i> and the trio for two altos and bass <i>For the Lord is gracious</i>.</p>
-        <ul>
-          <li><a href="/pdf/2025-2/HANDEL_-_JUBILATE_HWV_279_Score.pdf" target="_blank">Handel - Jubilate - Full score</a></li>
-          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Oboe_1-2.pdf" target="_blank">Handel - Jubilate - Oboes 1-2</a></li>
-          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violins_I.pdf" target="_blank">Handel - Jubilate - Violin 1</a></li>
-          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violins_II.pdf" target="_blank">Handel - Jubilate - Violin 2</a></li>
-          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violins_III.pdf" target="_blank">Handel - Jubilate - Violin 3</a></li>
-          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Violas.pdf" target="_blank">Handel - Jubilate - Viola</a></li>
-          <li><a href="/pdf/2025-2/Handel - Jubilate HMV 279 - Cellos-Basses.pdf" target="_blank">Handel - Jubilate - Cello, double bass</a></li>
-        </ul>
-        <h3>Handel - <i>The soft complaining flute</i> from Ode for St. Cecilia's Day HMV 76</h3>
-        <p>We will for sure do the soprano aria with solo flute <i>The soft complaining flute</i>.</p>
-        <ul>
-          <li><a href="/pdf/2025-2/Handel-The_soft_complaining_flute.pdf">The soft complaining flute - Score</a></li>
         </ul>
       </div>
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
