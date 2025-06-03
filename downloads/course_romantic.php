@@ -79,7 +79,7 @@ $cursusnr = 1 + $cursus_offset; ?>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Trombone_1-3,_Tuba.pdf" target="_blank">Trombones I/II/III, Tuba</a></li>
             <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Timpani,_Bass_Drum,_Cymbals,_Triangle.pdf" target="_blank">Timpani & other percussion</a></li>
             <li style="break-before: column;"><a href="../pdf/2025-1/Zlatý kolovrat - Violins I - With bowings.pdf" target="_blank">Violin I <b>(with bowings)</b></a></li>
-            <li><a href="../pdf/2025-1/Zlatý_kolovrat_-_Violins_II.pdf" target="_blank">Violin II</a></li>
+            <li><a href="../pdf/2025-1/Zlatý kolovrat - Violins II - With bowings.pdf" target="_blank">Violin II <b>(with bowings)</b></a></li>
             <li><a href="../pdf/2025-1/Zlaty Kolovrat, viola (with bowings).pdf" target="_blank">Viola <b>(with bowings)</b></a></li>
             <li><a href="../pdf/2025-1/Zlaty Kolovrat, violoncello (with bowings).pdf" target="_blank">Cello <b>(with bowings)</b></a></li>
             <li><a href="../pdf/2025-1/Zlaty Kolovrat, contrabasso (with bowings).pdf" target="_blank">Double bass <b>(with bowings)</b></a></li>
