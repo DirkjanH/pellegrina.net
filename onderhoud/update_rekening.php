@@ -304,6 +304,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			if (isset($inschr['donatie']) and  $inschr['donatie'] > 0)
 				$mail_text = str_replace("{donatie}", $factuur['donatie'], $mail_text);
 			else $mail_text = str_replace("{donatie}", '', $mail_text);
+			d($mail_text);
 
 			// stuur een mail
 			$mail = new LPmailer();
