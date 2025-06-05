@@ -230,6 +230,8 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 	$totaal_rekeningen = 0;
 	foreach ($inschrijving as $inschr) {
 
+		d($inschr);
+
 		$ins['oost'] = $inschr['oost'];
 		$ins['student'] = $inschr['student'];
 		$ins['leeftijd'] = $inschr['leeftijd'];
