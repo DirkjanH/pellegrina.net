@@ -158,6 +158,7 @@ ORDER BY CursusId_FK, achternaam ASC",
 	if (empty($inschrijving) or $inschrijving == FALSE) $inschrijving = select_query($query_inschrijving);
 	if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving);
 	else echo ('<div class="w3-container w3-panel w3-card-4 w3-white w3-text-red"><p><b>Deze inschrijving bestaat (nog) niet</b></p></div>');
+	d($inschrijving);
 }
 // end Recordset inschrijving
 
