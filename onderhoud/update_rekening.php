@@ -3,15 +3,11 @@
 //ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-//session_start(); (al actief)
-
 if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
-
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($_REQUEST, $_SESSION);
 
