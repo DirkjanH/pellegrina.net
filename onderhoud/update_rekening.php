@@ -230,6 +230,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 	$totaal_rekeningen = 0;
 	foreach ($inschrijving as $inschr) {
 
+		$inschr['aanbet_bedrag'] = intval($inschr['aanbet_bedrag']);
 		d($inschr);
 
 		$ins['oost'] = $inschr['oost'];
