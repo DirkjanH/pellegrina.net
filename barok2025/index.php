@@ -71,7 +71,7 @@
       width: 100vw;
     }
   </style>
-  <iframe src="https://www.ingoedehanden.management/index.php?gotopageid=70139"></iframe>
+  <iframe src="https://barok.ingoedehanden.management"></iframe>
 </body>
 
 </html>
