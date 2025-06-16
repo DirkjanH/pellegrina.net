@@ -139,8 +139,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 10 - 16 August <?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="plaatsvoor onzichtbaar"></p>
-					<p class="volvoor">The course is full for all voice types, as well as for all instruments, except continuo (organ/harpsichord/theorbo)</p>
+					<p class="plaatsvoor">Still place for two continuo players (organ/harpsichord/theorbo), who can play from figured bass</p>
+					<p class="volvoor">The course is full for all voice types, as well as for all instruments, except continuo</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Play chamber music with the Kinsky Trio Prague & Friends</span></a></h3>
