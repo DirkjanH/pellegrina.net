@@ -288,6 +288,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			$inschr['cursusgeld'] = bedrag($inschr['cursusgeld']);
 			$inschr['donatie'] = bedrag($inschr['donatie']);
 			$inschr['aanbet_bedrag'] = bedrag($inschr['aanbet_bedrag'] * -1);
+			d($inschr['aanbet_bedrag']);
 			$adresblok = $inschr['naam'] . '<br>' . $inschr['adres'] . '<br>' .
 				$inschr['postcode'] . ' ' . $inschr['plaats'] . '<br>';
 			if ($inschr['land'] != 'Netherlands' and $inschr['land'] != 'Nederland')
