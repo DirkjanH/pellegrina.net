@@ -122,9 +122,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 					<ul>
 						<li>České Budějovice (Tsjechië), 24 juli - 3 augustus <?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Nog plaats voor piano en enkele strijkers in alle groepen<br>
-						Het koor heeft nog enkele plekken in alle groepen, met name voor sopranen en bassen</p>
-					<p class="volvoor">De cursus is vol voor fluit, hobo, klarinet, fagot en hoorn</p>
+					<p class="plaatsvoor">Het koor heeft nog enkele plekken in alle groepen, met name voor sopranen en bassen</p>
+					<p class="volvoor">De cursus is vol voor alle instrumenten</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="baroque/index.php"><span class="baroque">Barokmuziek in 415 Hz: Purcells Odes for St. Cecilia's Day & Handels Utrecht Te Deum</span></a></h3>
@@ -132,9 +131,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 					<ul>
 						<li>Klooster Nieuw Sion, Diepenveen, 10 - 16 augustus <?php echo $jaar ?></li>
 					</ul>
-					<p class="plaatsvoor">Plaatsen beschikbaar voor een countertenor, een tenor en een bas met solistische capaciteiten<br>
-					Instrumenten: nog plaats voor barokhobo, barokviolen en -altviolen, continuo (orgel/clavecimbel/theorbe)</p>
-					<p class="volvoor">Deze cursus is vol voor sopranen, mezzo's, alten, traverso's, cello's, contrabassen, viola da gamba's</p>
+					<p class="plaatsvoor">Er is nog plaats voor twee continuospelers (orgel/clavecimbel/theorbe), die kunnen spelen vanaf een becijferde bas</p>
+					<p class="volvoor">Deze cursus is vol voor alle stemsoorten en voor alle instrumenten behalve continuo</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Speel kamermuziek met het Kinsky Trio Prague &amp; Friends</span></a></h3>
