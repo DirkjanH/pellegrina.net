@@ -299,6 +299,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			$mail_text = str_replace("{datum}", strftime('%D'), $mail_text);
 			$mail_text = str_replace("{factuurregels}", $factuur['regels'], $mail_text);
 			$mail_text = str_replace("{aanbet_bedrag}", $inschr['aanbet_bedrag'], $mail_text);
+			d($mail_text);
 			$mail_text = str_replace("{cursusgeld}", $totaal_euro, $mail_text);
 			$datum_betaling = strftime('%e %B %Y', strtotime($cursus[$inschr['CursusId_FK']]['datum_betaling']));
 			$mail_text = str_replace("{datum_betaling}", $datum_betaling, $mail_text);
