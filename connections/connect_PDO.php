@@ -80,7 +80,7 @@ function bedrag_streep($bedrag)
 
 function bedrag($bedrag)
 {
-    if ($bedrag > 0) return number_format($bedrag, 0, ',', '.');
+    if (isset($bedrag) AND $bedrag != 0) return number_format($bedrag, 0, ',', '.');
 }
 
 function euro($bedrag)
