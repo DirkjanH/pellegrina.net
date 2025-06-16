@@ -400,7 +400,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		?>
 		<tr>
 			<td colspan="2">
-				<h2>Naam:&nbsp;<?php if ($id != -1) echo $inschr['naam']; ?><br>
+				<h2>Naam:&nbsp;<?php if ($id != -1) echo $in['naam']; ?><br>
 				</h2>
 			</td>
 		</tr>
