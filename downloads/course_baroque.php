@@ -84,7 +84,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="/pdf/2025-2/Purcell - Welcome - BC realisation.pdf" target="_blank">Purcell - Welcome to all the pleasures (Z.339) - BC realisation</a></li>
       </ul>
       <h4>Handel - Pastiche of movements from Handel's Utrecht Te Deum & Jubilate and Ode for St. Cecilia's Day</h4>
-      <p>We have made a pastiche of movements from the Utrecht Te Deum and Jubilate and the Ode for St. Cecilia's Day, whch is adapted to the instruments and voices we have during the summer school. At this moment only the score is available. Soon we will add the vocal score and all instrumental parts needed.</p>
+      <p>We have made a pastiche of movements from the Utrecht Te Deum & Jubilate and the Ode for St. Cecilia's Day, whch is adapted to the instruments and voices we have during the summer school.</p>
       <ul>
         <li><a href="/pdf/2025-2/Handel - Pastiche - score.pdf" target="_blank">Handel - Pastiche - Full score</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - vocal score.pdf" target="_blank">Handel - Pastiche - Vocal score (in modern clefs)</a></li>
