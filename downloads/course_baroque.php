@@ -86,7 +86,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       <h4>Handel - Pastiche of movements from Handel's Utrecht Te Deum & Jubilate and Ode for St. Cecilia's Day</h4>
       <p>We have made a pastiche of movements from the Utrecht Te Deum & Jubilate and the Ode for St. Cecilia's Day, whch is adapted to the instruments and voices we have during the summer school.</p>
       <ul>
-        <li><a href="/pdf/2025-2/Handel - Pastiche - score.pdf" target="_blank">Handel - Pastiche - Full score</a></li>
+        <li><a href="/pdf/2025-2/Handel - Pastiche - score.pdf" target="_blank">Handel - Pastiche - Full score, also for continuo players</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - vocal score.pdf" target="_blank">Handel - Pastiche - Vocal score (in modern clefs)</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - flute.pdf" target="_blank">Handel - Pastiche - Flute</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - oboe 1.pdf" target="_blank">Handel - Pastiche - Oboe 1</a></li>
@@ -96,6 +96,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="/pdf/2025-2/Handel - Pastiche - violin 2.pdf" target="_blank">Handel - Pastiche - Violin 2</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - viola.pdf" target="_blank">Handel - Pastiche - Viola</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - cello-bass.pdf" target="_blank">Handel - Pastiche - Cello & Double bass</a></li>
+        <li><a href="/pdf/2025-2/The soft complaining flute - Lute.pdf" target="_blank">Handel - The soft complaining flute - Lute part</a></li>
       </ul>
       <h4>Purcell - selection from Hail, bright Cecilia (Z.328)</h4>
       <p>We will perform only a few movements of this Cecilia Ode. The score and the parts only contain those movements.</p>
