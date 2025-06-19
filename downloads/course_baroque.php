@@ -87,6 +87,14 @@ $cursusnr = 2 + $cursus_offset; ?>
         <ul>
           <li><a href="/pdf/2025-2/Handel - Pastiche - score.pdf" target="_blank">Handel - Pastiche - Full score</a></li>
           <li><a href="/pdf/2025-2/Handel - Pastiche - vocal score.pdf" target="_blank">Handel - Pastiche - Vocal score (in modern clefs)</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - flute.pdf" target="_blank">Handel - Pastiche - Flute</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - oboe 1.pdf" target="_blank">Handel - Pastiche - Oboe 1</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - oboe 2.pdf" target="_blank">Handel - Pastiche - Oboe 2</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - bassoon.pdf" target="_blank">Handel - Pastiche - Bassoon</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - violin 1.pdf" target="_blank">Handel - Pastiche - Violin 1</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - violin 2.pdf" target="_blank">Handel - Pastiche - Violin 2</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - viola.pdf" target="_blank">Handel - Pastiche - Viola</a></li>
+          <li><a href="/pdf/2025-2/Handel - Pastiche - cello-bass.pdf" target="_blank">Handel - Pastiche - Cello & Double bass</a></li>
         </ul>
         <h4>Purcell - selection from Hail, bright Cecilia (Z.328)</h4>
         <p>We will perform only a few movements of this Cecilia Ode. The score and the parts only contain those movements.</p>
