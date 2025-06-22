@@ -53,7 +53,7 @@ $cursusnr = 1 + $cursus_offset; ?>
           <td class="w3-center"><a href="https://www.google.com/maps/d/u/0/edit?mid=1zv5-hN4rGS_fZVT6gYvyPTuxC86MaC0&usp=sharing" target="_blank">Map of České Budějovice, with all venues</a></td>
           <td class="w3-center "><a <a href="../part_list.php?cursus=1" target="_blank">List of participants</a></td>
           <td class="w3-center"><a <a href="../ensemblelijst_1.php" target="_blank">Chamber music formations</a></td>
-          <td class="w3-center grijs"><a xxxx="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxnSQS39e-HAhdl7T5q7PySu4QsVrC_FX95kkSIzBhm3GO0oKgQpJ27OSYpF5-pjmFhv_uHShafHtN/pubhtml?gid=701953541&single=true" target="_blank">Accommodation overview</a></td>
+          <td class="w3-center grijs"><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT5slBMsznmH15Vxn-ATvg2NtpwgS5Z54GyZ-CMHx9u0GIxOA5NhP5C7yukByBY-aiGbZSIYIrQRwvW/pubhtml?gid=0&single=true" target="_blank">Accommodation overview</a></td>
           <td class="w3-center"><a href="2025-1 daily programme.pdf" target="_blank">Daily program</a></td>
         </tr>
       </table>
