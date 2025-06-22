@@ -46,8 +46,9 @@ $cursusnr = 1 + $cursus_offset; ?>
           <th>Travel information</th>
           <th>List of participants</th>
           <th>Chamber music formations</th>
-          <th>Room allocation </th>
+          <th>Room allocation</th>
           <th>Daily program</th>
+          <th>Concert info</th>
         </tr>
         <tr>
           <td class="w3-center"><a href="https://www.google.com/maps/d/u/0/edit?mid=1zv5-hN4rGS_fZVT6gYvyPTuxC86MaC0&usp=sharing" target="_blank">Map of České Budějovice, with all venues</a></td>
@@ -55,6 +56,8 @@ $cursusnr = 1 + $cursus_offset; ?>
           <td class="w3-center"><a <a href="../ensemblelijst_1.php" target="_blank">Chamber music formations</a></td>
           <td class="w3-center grijs"><a xxx="https://docs.google.com/spreadsheets/d/e/2PACX-1vT5slBMsznmH15Vxn-ATvg2NtpwgS5Z54GyZ-CMHx9u0GIxOA5NhP5C7yukByBY-aiGbZSIYIrQRwvW/pubhtml?gid=0&single=true" target="_blank">Accommodation overview</a></td>
           <td class="w3-center"><a href="2025-1 daily programme.pdf" target="_blank">Daily program</a></td>
+          <td class="w3-center"><a href="https://www.horringa.net/" target="_blank">Concert info (in English)</a><br>
+          <a href="/dvorak-haydn/" target="_blank">Concert info (in Czech)</a></td>
         </tr>
       </table>
       <div class="">
