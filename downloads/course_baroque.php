@@ -94,6 +94,7 @@ $cursusnr = 2 + $cursus_offset; ?>
         <li><a href="/pdf/2025-2/Handel - Pastiche - bassoon.pdf" target="_blank">Handel - Pastiche - Bassoon</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - violin 1.pdf" target="_blank">Handel - Pastiche - Violin 1</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - violin 2.pdf" target="_blank">Handel - Pastiche - Violin 2</a></li>
+        <li><a href="/pdf/2025-2/Handel - Pastiche - violin 3.pdf" target="_blank">Handel - Pastiche - Violin 3</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - viola.pdf" target="_blank">Handel - Pastiche - Viola</a></li>
         <li><a href="/pdf/2025-2/Handel - Pastiche - cello-bass.pdf" target="_blank">Handel - Pastiche - Cello & Double bass</a></li>
         <li><a href="/pdf/2025-2/The soft complaining flute - Lute.pdf" target="_blank">Handel - The soft complaining flute - Lute part</a></li>
