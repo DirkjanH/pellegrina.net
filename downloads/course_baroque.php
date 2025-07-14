@@ -101,7 +101,7 @@ $cursusnr = 2 + $cursus_offset; ?>
       <h4>Purcell - selection from Hail, bright Cecilia (Z.328)</h4>
       <p>We will perform only a few movements of this Cecilia Ode. The score and the parts only contain those movements.</p>
       <ul>
-        <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia_score.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Score <b>with bowings</b></a></li>
+        <li><a href="/pdf\2025-2\Purcell_selection from Hail, bright Cecilia (Z.328)_score (sharp)_met streken PV.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Score <b>with bowings</b></a></li>
         <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Vocal_score.pdf" _blank">Purcell - Hail! Bright Cecilia - Vocal score</a></li>
         <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_1.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Oboe 1</a></li>
         <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_2.pdf" target="_blank">Purcell - Hail! Bright Cecilia - Oboe 2</a></li>
