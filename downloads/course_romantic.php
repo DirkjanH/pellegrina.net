@@ -67,7 +67,7 @@ $cursusnr = 1 + $cursus_offset; ?>
         </ul>
         <p>Some MIDI files of the chamber choir repertoire</p>
         <ul>
-          <li>O Mistress Mine: <a href="../MIDI/Mistress - Sop.mid" target="_blank">soprano</a> | <a href="../MIDI/Mistress - Alto.mid" target="_blank">alto</a> | <a href="../MIDI/Mistress - Tenor.mid" target="_blank">tenor</a> | <a href="../MIDI/Mistress - Bass.mid" target="_blank">bass</a></li>
+          <li>Sandler - O Mistress Mine: <a href="../MIDI/Mistress - Sop.mid" target="_blank">soprano</a> | <a href="../MIDI/Mistress - Alto.mid" target="_blank">alto</a> | <a href="../MIDI/Mistress - Tenor.mid" target="_blank">tenor</a> | <a href="../MIDI/Mistress - Bass.mid" target="_blank">bass</a></li>
           <li>Elgar - Dreamy bits: <a href="../MIDI/Elgar - Sop.mid" target="_blank">soprano</a> | <a href="../MIDI/Elgar - Alto.mid" target="_blank">alto</a> | <a href="../MIDI/Elgar - Tenor.mid" target="_blank">tenor</a> | <a href="../MIDI/Elgar - Bass.mid" target="_blank">bass</a></li>
         </ul>
       </div>
