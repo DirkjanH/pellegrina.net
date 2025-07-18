@@ -65,6 +65,17 @@ $cursusnr = 1 + $cursus_offset; ?>
         <ul>
           <li><a href="../pdf/2025-1/chamberchoir_2025.pdf" target="_blank">Chamber Choir Repertoire 2025</a> (55 pages)</li>
         </ul>
+        <p>Some MIDI files of the chamber choir repertoire</p>
+        <ul>
+          <li><a href="../MIDI/Mistress - Sop.mid" target="_blank">O Mistress Mine - soprano</a></li>
+          <li><a href="../MIDI/Mistress - Alto.mid" target="_blank">O Mistress Mine - alto</a></li>
+          <li><a href="../MIDI/Mistress - Tenor.mid" target="_blank">O Mistress Mine - tenor</a></li>
+          <li><a href="../MIDI/Mistress - Bass.mid" target="_blank">O Mistress Mine - bass</a></li>
+          <li><a href="../MIDI/Elgar - Sop.mid" target="_blank">Elgar - Dreamy bits - soprano</a></li>
+          <li><a href="../MIDI/Elgar - Alto.mid" target="_blank">Elgar - Dreamy bits - alto</a></li>
+          <li><a href="../MIDI/Elgar - Tenor.mid" target="_blank">Elgar - Dreamy bits - tenor</a></li>
+          <li><a href="../MIDI/Elgar - Bass.mid" target="_blank">Elgar - Dreamy bits - bass</a></li>
+        </ul>
       </div>
       <h2 class="onzichtbaar">Some chamber music works</h2>
       <div>
@@ -92,6 +103,14 @@ $cursusnr = 1 + $cursus_offset; ?>
         <h3>Joseph Haydn - Missa in Tempore Belli (Paukenmesse)</h3>
         <p><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Conductor_Score.pdf" target="_blank">Full score</a></p>
         <p>Singers can download and print the <a href="../pdf/2025-1/Haydn_Paukenmesse_-_vocal score.pdf" target="_blank">vocal score</a></p>
+        <p>MIDI files of some movements of the Haydn Mass</p>
+        <ul>
+          <li><a href="../MIDI/Haydn_Paukenmesse_1_Kyrie.mid" target="_blank">1. Kyrie</a></li>
+          <li><a href="../MIDI/Haydn_Paukenmesse_2_Gloria.mid" target="_blank">2. Gloria</a></li>
+          <li><a href="../MIDI/Haydn_Paukenmesse_4a_Sanctus.mid" target="_blank">4. Sanctus</a></li>
+          <li><a href="../MIDI/Haydn_Paukenmesse_5_Agnus_Dei.mid" target="_blank">5. Agnus Dei</a></li>          
+        </ul>
+        <p>Instrumental parts</p>
         <div class="cols3">
           <ul>
             <li><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Flute_solo.pdf" target="_blank">Flute</a></li>
