@@ -42,7 +42,7 @@ $i = $eerstecursus; ?>
     	<?php $i = $eerstecursus + 0; ?>
     	</tr>
 	  <tr valign="TOP">
-    	<td>2. <span class="titel">BAROKO v 415 Hz: Purcell & Handel</span></td>
+    	<td>2. <span class="titel">Baroko v 415 Hz: Purcell & Handel</span></td>
     	<td><?php echo czk($cursussen[$i+1]['prijs_cr']); ?> / <?php echo czk($cursussen[$i+1]['prijs_cr'] - $cursussen[$i+1]['korting_vroeg_cr']); ?> <span class="nadruk">*)</span></td>
     	<td><?php echo czk($cursussen[$i+1]['prijs_cr_student']); ?> / <?php echo czk($cursussen[$i+1]['prijs_cr_student'] - $cursussen[$i+1]['korting_vroeg_cr']); ?> <span class="nadruk">*)</span></td>
     	<?php $i = $eerstecursus + 0; ?>
