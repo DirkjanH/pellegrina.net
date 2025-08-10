@@ -7,18 +7,17 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf8mb4_ubicode_ci">
-  <title>La Pellegrina - Concert Vivaldi's Venetiaanse Vespers</title>
+  <title>La Pellegrina - Concert Purcell & Handel</title>
   <link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
   <link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico" type="image/png">
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='keywords' content='Kaartreservering Vivaldi&#39s Venetiaanse Vespers,La Pellegrina,barokcursus'>
-  <meta name='description' content='Kaartreserveringspagian voor concert Vivaldi&#39s Venetiaanse Vespers'>
-  <meta property="og:url" content='https://pellegrina.net/vivaldi'>
+  <meta name='keywords' content='Kaartreservering concert Purcell & Handel,La Pellegrina,barokcursus'>
+  <meta name='description' content='Kaartreserveringspagian voor concert Purcell & Handel'>
   <meta property="og:type" content='website'>
-  <meta property="og:title" content='La Pellegrina - Concert Vivaldi&#39s Venetiaanse Vespers'>
-  <meta property="og:description" content='Kaartreserveringspagian voor concert Vivaldi&#39s Venetiaanse Vespers'>
+  <meta property="og:title" content='La Pellegrina - Concert Purcell & Handel'>
+  <meta property="og:description" content='Kaartreserveringspagian voor concert Purcell & Handel'>
   <meta property="og:image" content='https://pellegrina.net/Images/Logos/favicon-32x32.png'>
   <!--[if lt IE 9]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
