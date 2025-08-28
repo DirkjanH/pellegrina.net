@@ -166,8 +166,8 @@ function cursusgeld($ins)
 		$b_extra = bedrag($extra);
 		$wensenNL .= ", plus extra cursusgeld wegens speciale afspraak van €&nbsp;{$ins['extra']}";
 		$wensenEN .= ", plus an additional fee for special requirements of EUR&nbsp;{$ins['extra']}";
-		$regelNL .= "###Extra cursusgeld wegens speciale afspraak@@@{$b_extra']}";
-		$regelEN .= "###Additional fee for special requirements@@@{$b_extra']}";
+		$regelNL .= "###Extra cursusgeld wegens speciale afspraak@@@{$b_extra}";
+		$regelEN .= "###Additional fee for special requirements@@@{$b_extra}";
 	}
 
 	// bedankje donatie:
