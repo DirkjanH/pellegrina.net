@@ -7,7 +7,7 @@ if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving 
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 
-Kint::$enabled_mode = true;
+//Kint::$enabled_mode = true;
 
 d($_REQUEST, $_SESSION);
 
