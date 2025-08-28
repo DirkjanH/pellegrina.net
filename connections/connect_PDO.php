@@ -75,7 +75,7 @@ function lastID() {
 
 function bedrag_streep($bedrag)
 {
-    if is_numeric($bedrag) return number_format($bedrag, 0, ',', '.').',&#8211;';
+    if (isset($bedrag) AND is_numeric($bedrag)) return number_format($bedrag, 0, ',', '.').',&#8211;';
 }
 
 function bedrag($bedrag)
