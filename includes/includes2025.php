@@ -17,6 +17,9 @@ require_once($_SERVER["DOCUMENT_ROOT"] . '/connections/connect_PDO.php');
 //Connection statement
 require_once($_SERVER["DOCUMENT_ROOT"] . '/connections/inschrijf.php');
 
+//Functies
+require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/functies.php');
+
 //Aditional Functions
 require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/functions.inc.php');
 
