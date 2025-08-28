@@ -57,7 +57,8 @@ function bedrag_streep($bedrag)
 
 function bedrag($bedrag)
 {
-    if (isset($bedrag) AND is_numeric($bedrag)) return number_format($bedrag, 0, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) $bedr = number_format($bedrag, 2, ',', '.');
+    return str_replace(',00', ',&#8212;', $bedr);
 }
 
 function euro($bedrag)
@@ -67,7 +68,7 @@ function euro($bedrag)
 
 function euro2($bedrag)
 {
-    if (isset($bedrag) AND is_numeric($bedrag)) $bedr = '&#8364;&nbsp;' . number_format($bedrag, 2, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) $bedr = '&euro;&nbsp;' . number_format($bedrag, 2, ',', '.');
     return str_replace(',00', ',&#8212;', $bedr);
 }
 
