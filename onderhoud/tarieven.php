@@ -1,8 +1,7 @@
-@@@-{$b_ins<?php
+<?php
 
 function cursusgeld($ins)
 {
-
 	$jeugd_grens = 36; // korting onder deze leeftijd
 
 	global $cursus, $cursus_offset, $ins;
