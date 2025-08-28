@@ -44,59 +44,59 @@ function cursusgeld($ins)
 		$cursusgeld = $toehoorder;
 		$wensenNL .= "deelname als toehoorder aan cursus ???";
 		$wensenEN .= "participation as auditor in course ???";
-		$regelNL .= "Deelname als toehoorder@@@{$toehoorder}";
-		$regelEN .= "Participation as auditor@@@{$toehoorder}";
+		$regelNL .= "Deelname als toehoorder@@@{bedrag($toehoorder)}";
+		$regelEN .= "Participation as auditor@@@{bedrag($toehoorder)}";
 	} elseif ($ins['student'] or ((int)$ins['leeftijd'] < $jeugd_grens))
 		if ($ins['oost']) {
 			$cursusgeld = $ooststud;
 			$wensenNL .= "deelname als Oost-Europese student/jongere aan cursus ???";
 			$wensenEN .= "participation as Eastern European student/young participant in course ???";
-			$regelNL .= "Deelname als Oost-Europese student@@@{$ooststud}";
-			$regelEN .= "Participation as Eastern European student@@@{$ooststud}";
+			$regelNL .= "Deelname als Oost-Europese student@@@{bedrag($ooststud)}";
+			$regelEN .= "Participation as Eastern European student@@@{bedrag($ooststud)}";
 		} else {
 			$cursusgeld = $student;
 			$wensenNL .= "deelname als student/jongere aan cursus ???";
 			$wensenEN .= "participation as student/young participant in course ???";
-			$regelNL .= "Deelname als student@@@{$student}";
-			$regelEN .= "Participation as student@@@{$student}";
+			$regelNL .= "Deelname als student@@@{bedrag($student)}";
+			$regelEN .= "Participation as student@@@{bedrag($student)}";
 		}
 	else
 		if ($ins['oost']) {
 		$cursusgeld = $oost;
 		$wensenNL .= "deelname als Oost-Europese deelnemer aan cursus ???";
 		$wensenEN .= "participation as Eastern European participant in course ???";
-		$regelNL .= "deelname als Oost-Europese deelnemer@@@{$oost}";
-		$regelEN .= "participation as Eastern European participant@@@{$oost}";
+		$regelNL .= "deelname als Oost-Europese deelnemer@@@{bedrag($oost)}";
+		$regelEN .= "participation as Eastern European participant@@@{bedrag($oost)}";
 	} else {
 		$cursusgeld = $cursusprijs;
 		$wensenNL .= "deelname aan cursus ???";
 		$wensenEN .= "participation in course ???";
-		$regelNL .= "Deelname aan de cursus@@@{$cursusprijs}";
-		$regelEN .= "Participation summer school@@@{$cursusprijs}";
+		$regelNL .= "Deelname aan de cursus@@@{bedrag($cursusprijs)}";
+		$regelEN .= "Participation summer school@@@{bedrag($cursusprijs)}";
 	}
 
 	if ($ins['eenpersoons']) {
 		$cursusgeld += $eenpers;
 		$wensenNL .= ", plus supplement voor eenpersoons kamer";
 		$wensenEN .= ", plus supplement for a single room";
-		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$eenpers}";
-		$regelEN .= "###Supplement for single room@@@{$eenpers}";
+		$regelNL .= "###Supplement voor eenpersoons kamer@@@{bedrag($eenpers)}";
+		$regelEN .= "###Supplement for single room@@@{bedrag($eenpers)}";
 	}
 
 	if ($ins['meerpers']) {
 		$cursusgeld += $meerpers;
 		$wensenNL .= ", minus korting voor meerpersoons kamer";
 		$wensenEN .= ", minus reduction for multi-person room";
-		$regelNL .= "###Korting voor meerpersoons persoons kamer@@@-{$meerpers}";
-		$regelEN .= "###Reduction for multi-person room@@@-{$meerpers}";
+		$regelNL .= "###Korting voor meerpersoons persoons kamer@@@-{bedrag($meerpers)}";
+		$regelEN .= "###Reduction for multi-person room@@@-{bedrag($meerpers)}";
 	}
 
 	if ($ins['kamperen']) {
 		$cursusgeld -= $kamperen;
 		$wensenNL .= ", minus korting voor kamperen in de kloostertuin";
 		$wensenEN .= ", minus reduction camping in the monastery garden";
-		$regelNL .= "###Korting voor kamperen in de kloostertuin@@@- {$kamperen}";
-		$regelEN .= "###Reduction for camping in the monastery garden@@@- {$kamperen}";
+		$regelNL .= "###Korting voor kamperen in de kloostertuin@@@-{bedrag($kamperen)}";
+		$regelEN .= "###Reduction for camping in the monastery garden@@@-{bedrag($kamperen)}";
 	}
 
 	// korting voor tijdig inschrijven:
@@ -104,8 +104,8 @@ function cursusgeld($ins)
 		$cursusgeld -= ($korting_vroeg);
 		$wensenNL .= ", minus korting voor tijdige aanmelding";
 		$wensenEN .= ", minus reduction for timely registration";
-		$regelNL .= "###&nbsp;&nbsp;&nbsp;minus korting voor tijdige aanmelding@@@-{$korting_vroeg}";
-		$regelEN .= "###&nbsp;&nbsp;&nbsp;minus reduction for timely registration@@@-{$korting_vroeg}";
+		$regelNL .= "###&nbsp;&nbsp;&nbsp;minus korting voor tijdige aanmelding@@@-{bedrag($korting_vroeg)}";
+		$regelEN .= "###&nbsp;&nbsp;&nbsp;minus reduction for timely registration@@@-{bedrag($korting_vroeg)}";
 	}
 
 	// korting voor eigen accommodatie:
@@ -113,8 +113,8 @@ function cursusgeld($ins)
 		$cursusgeld -= ($eigen_acc);
 		$wensenNL .= ", minus korting voor eigen accommodatie";
 		$wensenEN .= ", minus reduction for arranging your own accommodation";
-		$regelNL .= "###Korting voor eigen accommodatie@@@{$eigen_acc}";
-		$regelEN .= "###Reduction for arranging your own accommodation@@@{$eigen_acc}";
+		$regelNL .= "###Korting voor eigen accommodatie@@@{bedrag($eigen_acc)}";
+		$regelEN .= "###Reduction for arranging your own accommodation@@@{bedrag($eigen_acc)}";
 	}
 
 	// supplement voor maaltijdpas:
@@ -122,8 +122,8 @@ function cursusgeld($ins)
 		$cursusgeld += $diner;
 		$wensenNL .= ", plus supplement voor diner bij eigen accommodatie";
 		$wensenEN .= ", plus supplement for dinner when having own accommodation";
-		$regelNL .= "###Supplement voor diner bij eigen accommodatie@@@{$diner}";
-		$regelEN .= "###Supplement for dinner when having own accommodation@@@{$diner}";
+		$regelNL .= "###Supplement voor diner bij eigen accommodatie@@@{bedrag($diner)}";
+		$regelEN .= "###Supplement for dinner when having own accommodation@@@{bedrag($diner)}";
 	}
 
 	// korting voor deelname aan meer dan een cursus:
@@ -131,8 +131,8 @@ function cursusgeld($ins)
 		$cursusgeld -= $korting2;
 		$wensenNL .= ", minus korting voor deelname aan meer dan één cursus";
 		$wensenEN .= ", minus reduction for participation in more than one course";
-		$regelNL .= "###Korting voor deelname aan meer dan één cursus@@@-{$korting2}";
-		$regelEN .= "###Reduction for participation in more than one course@@@-{$korting2}";
+		$regelNL .= "###Korting voor deelname aan meer dan één cursus@@@-{bedrag($korting2)}";
+		$regelEN .= "###Reduction for participation in more than one course@@@-{bedrag($korting2)}";
 	}
 
 	// extra toegekende korting:
@@ -144,8 +144,8 @@ function cursusgeld($ins)
 		$cursusgeld -= ($ins['korting']);
 		$wensenNL .= ", minus een extra toegekende korting van €&nbsp;{$ins['korting']}{$aangebrachtNL}";
 		$wensenEN .= ", minus an additionally granted reduction of EUR&nbsp;{$ins['korting']}{$aangebrachtEN}";
-		$regelNL .= "###Extra toegekende korting{$aangebrachtNL}@@@-{$ins['korting']}";
-		$regelEN .= "###Additionally granted reduction{$aangebrachtEN}@@@-{$ins['korting']}";
+		$regelNL .= "###Extra toegekende korting{$aangebrachtNL}@@@-{bedrag($ins['korting'])}";
+		$regelEN .= "###Additionally granted reduction{$aangebrachtEN}@@@-{bedrag($ins['korting'])}";
 	}
 
 	// extra cursusgeld:
@@ -153,16 +153,16 @@ function cursusgeld($ins)
 		$cursusgeld += ($ins['extra']);
 		$wensenNL .= ", plus extra cursusgeld wegens speciale afspraak van €&nbsp;{$ins['extra']}";
 		$wensenEN .= ", plus an additional fee for special requirements of EUR&nbsp;{$ins['extra']}";
-		$regelNL .= "###Extra cursusgeld wegens speciale afspraak@@@{$ins['extra']}";
-		$regelEN .= "###Additional fee for special requirements@@@{$ins['extra']}";
+		$regelNL .= "###Extra cursusgeld wegens speciale afspraak@@@{bedrag($ins['extra'])}";
+		$regelEN .= "###Additional fee for special requirements@@@{bedrag($ins['extra'])}";
 	}
 
 	// bedankje donatie:
 	if (isset($ins['storting_fonds']) and $ins['storting_fonds'] > 0) {
 		if ($ins['donatie'] != "" and $ins['donatie'] > 0) {
-			$ins['donatie'] = bedrag($ins['donatie']);
-			$regelNL .= "###Donatie aan het kortingsfonds@@@{$ins['donatie']}";
-			$regelEN .= "###Contribution to the reduction fund@@@{$ins['donatie']}";
+			$ins['donatie'] = $ins['donatie'];
+			$regelNL .= "###Donatie aan het kortingsfonds@@@{bedrag($ins['donatie'])}";
+			$regelEN .= "###Contribution to the reduction fund@@@{bedrag($ins['donatie'])}";
 			$donNL = euro2($ins['donatie']);
 			$donEN = euro_en($ins['donatie']);
 			$donatieNL = "Hartelijk dank voor je toegezegde donatie van {$donNL} voor het kortingsfonds.";
