@@ -305,7 +305,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			$mail_text = str_replace("{cursusgeld}", $totaal_euro, $mail_text);
 			$datum_betaling = strftime('%e %B %Y', strtotime($cursus[$inschr['CursusId_FK']]['datum_betaling']));
 			$mail_text = str_replace("{datum_betaling}", $datum_betaling, $mail_text);
-			$mail_text = str_replace("{tebetalen}", integer $tebetalen, $mail_text);
+			$mail_text = str_replace("{tebetalen}", $tebetalen, $mail_text);
 			$mail_text = str_replace("{wensen}", stripslashes($inschr['wensen']), $mail_text);
 			if (isset($inschr['donatie']) and  $inschr['donatie'] > 0)
 				$mail_text = str_replace("{donatie}", $factuur['donatie'], $mail_text);
