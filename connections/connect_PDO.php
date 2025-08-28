@@ -75,39 +75,39 @@ function lastID() {
 
 function bedrag_streep($bedrag)
 {
-    if ($bedrag > 0) return number_format($bedrag, 0, ',', '.').',&#8211;';
+    if is_numeric($bedrag) return number_format($bedrag, 0, ',', '.').',&#8211;';
 }
 
 function bedrag($bedrag)
 {
-    if (isset($bedrag) AND $bedrag != 0) return number_format($bedrag, 0, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) return number_format($bedrag, 0, ',', '.');
 }
 
 function euro($bedrag)
 {
-    if ($bedrag > 0) return '&euro;&nbsp;' . number_format($bedrag, 0, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) return '&euro;&nbsp;' . number_format($bedrag, 0, ',', '.');
 }
 
 function euro2($bedrag)
 {
-    if ($bedrag > 0) $bedr = '&#8364;&nbsp;' . number_format($bedrag, 2, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) $bedr = '&#8364;&nbsp;' . number_format($bedrag, 2, ',', '.');
     return str_replace(',00', ',&#8212;', $bedr);
 }
 
 function euro_en($bedrag)
 {
-    if ($bedrag > 0) return 'EUR&nbsp;' . number_format($bedrag, 0, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) return 'EUR&nbsp;' . number_format($bedrag, 0, ',', '.');
 }
 
 function euro_en2($bedrag)
 {
-    if ($bedrag > 0) $bedr = 'EUR&nbsp;' . number_format($bedrag, 2, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) $bedr = 'EUR&nbsp;' . number_format($bedrag, 2, ',', '.');
     return str_replace(',00', ',&#8212;', $bedr);
 }
 
 function czk($bedrag)
 {
-    if ($bedrag > 0) return 'CZK&nbsp;' . number_format($bedrag, 0, ',', '.');
+    if (isset($bedrag) AND is_numeric($bedrag)) return 'CZK&nbsp;' . number_format($bedrag, 0, ',', '.');
 }
 
 ?>
