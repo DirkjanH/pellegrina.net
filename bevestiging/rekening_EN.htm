@@ -1,118 +1,141 @@
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/brieven/briefhoofd EN.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Invoice</title>
-<!-- InstanceEndEditable -->
-<link href="https://www.pellegrina.net/css/mailing.css" rel="stylesheet" type="text/css">
-<!-- InstanceBeginEditable name="head" -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Invoice</title>
+  <link href="https://www.pellegrina.net/css/mailing.css" rel="stylesheet" type="text/css">
 
+  <style type="text/css">
+    <!--
+    .kopregel {
+      letter-spacing: 0.2mm;
+      font-size: 110%;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-<style type="text/css">
-<!--
-.kopregel {
-	letter-spacing: 0.2mm;
-	font-size: 110%;
-	font-weight: bold;
-	text-align: center;
-	text-transform: uppercase;
-}
-td.totaal {
-	border-top-width: 3px;
-	border-top-style: double;
-}
-td.subtotaal {
-	border-top-width: 1px;
-	border-top-style: solid;
-}
-td.kop {
-	border-width: 1px;
-	border-style: solid;
-}
-table {
-	border-collapse: collapse;
-}
-.kk {
-	font-variant: small-caps;
-}
--->
-</style>
-<!-- InstanceEndEditable -->
+    td.totaal {
+      border-top-width: 3px;
+      border-top-style: double;
+    }
+
+    td.subtotaal {
+      border-top-width: 1px;
+      border-top-style: solid;
+    }
+
+    td.kop {
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    .kk {
+      font-variant: small-caps;
+    }
+    -->
+  </style>
 </head>
+
 <body>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td height="90" colspan="2"><div align="center"><img src="https://pellegrina.net/Images/Logos/LP_transparant.png" class="geenlijn w3-image" alt="La Pellegrina logo"></div></td>
-  </tr>
-  <tr>
-    <td width="50%"><div align="left">Dirkjan Horringa<br>
-      Merwedeplantsoen 73<br>
-    NL-3522 JZ Utrecht, Netherlands </div></td>
-    <td width="50%"><div align="right">tel. +31 619 224 758<br>
-      E-mail: <a href="mailto:info@pellegrina.net">info@pellegrina.net</a><br>
-    Utrecht Chamber of Commerce nr. 30090647</div></td>
-  </tr>
-  
-  <tr>
-    <td width="100%" colspan="2" valign="top"><p>&nbsp;</p>
-      <!-- InstanceBeginEditable name="tekst" -->
-      <p>&nbsp;</p>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td width="50%">&nbsp;</td>
-          <td width="50%">{adresblok}</td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-      <table width="100%" border="0" cellspacing="0" cellpadding="10">
-        <tr>
-          <td height="50" colspan="2" valign="top"><p class="kopregel">Invoice  &amp; confirmation of participation </p>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="90" colspan="2">
+        <div align="center"><img src="https://pellegrina.net/Images/Logos/LP_transparant.png" class="geenlijn w3-image"
+            alt="La Pellegrina logo"></div>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <div align="left">Dirkjan Horringa<br>
+          Merwedeplantsoen 73<br>
+          NL-3522 JZ Utrecht, Netherlands </div>
+      </td>
+      <td width="50%">
+        <div align="right">tel. +31 619 224 758<br>
+          E-mail: <a href="mailto:info@pellegrina.net">info@pellegrina.net</a><br>
+          Utrecht Chamber of Commerce nr. 30090647</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="100%" colspan="2" valign="top">
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50%">&nbsp;</td>
+            <td width="50%">{adresblok}</td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td height="50" colspan="2" valign="top">
+              <p class="kopregel">Invoice &amp; confirmation of participation </p>
               <p>&nbsp;</p>
-            <p>Dear {voornaam},</p>
-            <p>This is the invoice for your participation in the summer school {cursus}. Please pay  the remaining course fee before {datum_betaling} in one of the following ways:</p>
-            <ul>
-              <li>Dutch national transfers into account <strong>NL33 ASNB 0707 2500 72 in name of La Pellegrina</strong>, Utrecht</li>
-              <li>International transfers: please mention<strong> BIC ASNB NL21</strong></li>
-              <li>Czech citizens: into our <strong>Komerční Banka account 538940-301/0100</strong></li>
-              <li><strong>Via PayPal</strong>. This is discouraged, as PayPal charges a percentage as bank costs. Please add 3&nbsp;% to the amount due if you pay via PayPal</li>
-              <li>If all other methods fail, you might pay by bringing the amount due in <strong>cash</strong> (EURO's) to the course. Please let me know if this 
-                is what you intend to do</li>
-            </ul>
-          <p>Please mention with every way of payment <strong>&quot;invoice nr.  {nr}&quot;. </strong></p></td>
-        </tr>
-        <tr>
-          <td class="kop">Invoice date: {datum} </td>
-          <td class="kop">Invoice number: {nr} </td>
-        </tr>
-      </table>
-      <table width="100%" border="0" cellspacing="0" cellpadding="10">
-        <tr>
-          <td width="80%" class="kop"><em>We have reserved for you:</em></td>
-          <td class="kop" colspan="2"><div align="right"><em>price:</em></div></td>
-        </tr>
-        <tr> {factuurregels}
-          <td>Total amount due </td>
-          <td class="subtotaal">EUR</td>
-          <td class="subtotaal"><div align="right">{cursusgeld}</div></td>
-        </tr>
-        <tr>
-          <td>Deposit paid</td>
-          <td width="10">EUR</td>
-          <td><div align="right">{aanbet_bedrag}</div></td>
-        </tr>
-        <tr>
-          <td><strong>To be paid before {datum_betaling} </strong></td>
-          <td width="10" class="totaal"><strong>EUR</strong></td>
-          <td class="totaal"><div align="right"><strong>{tebetalen}</strong></div></td>
-        </tr>
-      </table>
-      <p>{donatie}</p>
-      <p>&nbsp;</p>
-<!-- InstanceEndEditable --></td>
-  </tr>
-</table>
-<p>&nbsp;</p>
+              <p>Dear {voornaam},</p>
+              <p>This is the invoice for your participation in the summer school {cursus}. Please pay the remaining
+                course fee before {datum_betaling} in one of the following ways:</p>
+              <ul>
+                <li>Dutch national transfers into account <strong>NL33 ASNB 0707 2500 72 in name of La
+                    Pellegrina</strong>, Utrecht</li>
+                <li>International transfers: please mention<strong> BIC ASNB NL21</strong></li>
+                <li>Czech citizens: into our <strong>Komerční Banka account 538940-301/0100</strong></li>
+                <li><strong>Via PayPal</strong>. This is discouraged, as PayPal charges a percentage as bank costs.
+                  Please add 3&nbsp;% to the amount due if you pay via PayPal</li>
+                <li>If all other methods fail, you might pay by bringing the amount due in <strong>cash</strong>
+                  (EURO's) to the course. Please let me know if this
+                  is what you intend to do</li>
+              </ul>
+              <p>Please mention with every way of payment <strong>&quot;invoice nr. {nr}&quot;. </strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="kop">Invoice date: {datum} </td>
+            <td class="kop">Invoice number: {nr} </td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="80%" class="kop"><em>We have reserved for you:</em></td>
+            <td class="kop" colspan="2">
+              <div align="right"><em>price:</em></div>
+            </td>
+          </tr>
+          <tr> {factuurregels}
+            <td>Total amount due </td>
+            <td class="subtotaal">EUR</td>
+            <td class="subtotaal">
+              <div align="right">{cursusgeld}</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Paid to date</td>
+            <td width="10">EUR</td>
+            <td>
+              <div align="right">{aanbet_bedrag}</div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>To be paid before {datum_betaling} </strong></td>
+            <td width="10" class="totaal"><strong>EUR</strong></td>
+            <td class="totaal">
+              <div align="right"><strong>{tebetalen}</strong></div>
+            </td>
+          </tr>
+        </table>
+        <p>{donatie}</p>
+        <p>&nbsp;</p>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
 </body>
-<!-- InstanceEnd --></html>
+
+</html>
