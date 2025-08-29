@@ -53,7 +53,7 @@ if ($mailing_nr > 0) {
 		// and your second column is a "number" type
 		// but you can change them if they are not
 		array('label' => 'Naam', 'type' => 'string'),
-		array('label' => 'Tijd', 'type' => 'datetime')
+		array('label' => 'Tijd', 'type' => 'number')
 	);
 
 	$rows = array();
@@ -136,21 +136,10 @@ if ($mailing_nr > 0) {
 				}
 			};
 
-			var view = new google.visualization.DataView(<?php echo $jsonTable ?>);
-			view.setColumns([
-				0,
-				{
-					type: 'datetime', // Zorg ervoor dat het nieuwe type 'datetime' is
-					label: 'Tijd',
-					calc: function(dataTable, rowNum) {
-						var ms = dataTable.getValue(rowNum, 1); // Haal de milliseconden op
-						return new Date(ms); // Converteer milliseconden naar een Date-object
-					}
-				}
-			]); // Create our data table out of JSON data loaded from server.
+			var data = new google.visualization.DataView(<?php echo $jsonTable ?>);
 
 			var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
-			chart.draw(view, options);
+			chart.draw(data, options);
 		}
 
 		function formSubmit(val) {
