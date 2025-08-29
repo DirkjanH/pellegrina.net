@@ -8,7 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/connections/connect_PDO.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 session_start();
 ob_start();
@@ -116,7 +116,7 @@ if ($mailing_nr > 0) {
 					gridlines: {
 						count: -1
 					},
-					title: 'tijd',
+					title: 'tijd (uren:minuten)',
 					format: 'HH:mm',
 					slantedText: true,
 				},
