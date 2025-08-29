@@ -79,7 +79,7 @@ if ($mailing_nr > 0) {
 	// encode the table as JSON
 	$jsonTable = json_encode($table);
 
-	d($jsonTable);
+	d($table, $jsonTable);
 } //if ($mailing_nr > 0)
 ?>
 
