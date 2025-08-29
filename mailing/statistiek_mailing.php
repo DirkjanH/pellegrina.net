@@ -137,8 +137,21 @@ if ($mailing_nr > 0) {
 			};
 
 			var data = new google.visualization.DataView(<?php echo $jsonTable ?>);
+			var view = new google.visualization.DataView(data);
+			view.setColumns([
+				0,
+				{
+					type: 'datetime', // Zorg ervoor dat het nieuwe type 'datetime' is
+					label: 'Tijd',
+					calc: function(dataTable, rowNum) {
+						var ms = dataTable.getValue(rowNum, 1);
+						return new Date(ms);
+					}
+				}
+			]); // Create our data table out of JSON data loaded from server.
+
 			var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
-			chart.draw(data, options);
+			chart.draw(view, options);
 		}
 
 		function formSubmit(val) {
