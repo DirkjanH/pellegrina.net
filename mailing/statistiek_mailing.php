@@ -103,7 +103,7 @@ if ($mailing_nr > 0) {
 
 		function drawChart() {
 			var options = {
-				title: 'Tijd voor het openen van emails, in minuten',
+				title: 'Tijd voor het openen van emails',
 				legend: {
 					position: 'none'
 				},
