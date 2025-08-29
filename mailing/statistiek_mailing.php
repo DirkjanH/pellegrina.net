@@ -97,7 +97,7 @@ d($jsonTable);
 	 title: 'Tijd voor het openen van emails, in uren',
     legend: { position: 'none' },
 	 colors: ['green', 'red'],
-	 histogram: {bucketSize: 60, maxNumBuckets: 100},
+	 histogram: {bucketSize: 1, maxNumBuckets: 100},
 	 hAxis: {
 		gridlines: {count: 10},
 		title: 'uren na verzenden',
