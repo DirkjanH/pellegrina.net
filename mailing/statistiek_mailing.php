@@ -143,8 +143,8 @@ if ($mailing_nr > 0) {
 					type: 'datetime', // Zorg ervoor dat het nieuwe type 'datetime' is
 					label: 'Tijd',
 					calc: function(dataTable, rowNum) {
-						var ms = dataTable.getValue(rowNum, 1);
-						return new Date(ms);
+						var ms = dataTable.getValue(rowNum, 1); // Haal de milliseconden op
+						return new Date(ms); // Converteer milliseconden naar een Date-object
 					}
 				}
 			]); // Create our data table out of JSON data loaded from server.
