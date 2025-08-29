@@ -1,6 +1,7 @@
 {
     "livePreviewUseDevServer": true,
-    "livePreviewServerProjectPath": "/",
-    "livePreviewHotReloadSupported": false,
-    "livePreviewFramework": "Custom"
+    "livePreviewServerProjectPath": "/pellegrina.net",
+    "livePreviewHotReloadSupported": true,
+    "livePreviewFramework": "Custom",
+    "livePreviewServerURL": "http:testserver"
 }
