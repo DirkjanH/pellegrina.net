@@ -53,7 +53,7 @@ if ($mailing_nr > 0) {
 		// and your second column is a "number" type
 		// but you can change them if they are not
 		array('label' => 'Naam', 'type' => 'string'),
-		array('label' => 'Tijd', 'type' => 'number')
+		array('label' => 'Tijd', 'type' => 'datetime')
 	);
 
 	$rows = array();
