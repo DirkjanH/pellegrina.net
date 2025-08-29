@@ -118,7 +118,7 @@ if ($mailing_nr > 0) {
 					},
 					title: 'tijd (uren:minuten)',
 					format: '0',
-					slantedText: true,
+					slantedText: true
 				},
 				vAxis: {
 					gridlines: {
