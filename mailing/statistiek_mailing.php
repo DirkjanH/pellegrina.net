@@ -117,7 +117,7 @@ if ($mailing_nr > 0) {
 						count: -1
 					},
 					title: 'tijd in minuten',
-					format: 'd',
+					format: 'dd-MM HH:mm',
 					slantedText: true,
 				},
 				vAxis: {
