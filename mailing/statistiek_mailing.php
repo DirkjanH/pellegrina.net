@@ -136,7 +136,8 @@ if ($mailing_nr > 0) {
 				}
 			};
 
-			var view = new google.visualization.DataView(<?php echo $jsonTable ?>);
+			var data = new google.visualization.DataView(<?php echo $jsonTable ?>);
+			var view = new google.visualization.DataView(data);
 			view.setColumns([
 				0,
 				{
