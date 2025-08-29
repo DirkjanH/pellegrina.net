@@ -117,7 +117,7 @@ if ($mailing_nr > 0) {
 						count: -1
 					},
 					title: 'tijd',
-					format: datetime,
+					format: 'date',
 					slantedText: true,
 				},
 				vAxis: {
