@@ -8,7 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/connections/connect_PDO.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 session_start();
 ob_start();
@@ -61,7 +61,7 @@ if ($mailing_nr > 0) {
 		$temp = array();
 		// each column needs to have data inserted via the $temp array
 		$temp[] = array('v' => $adres['naam']);
-		$temp[] = array('v' => (round($adres['tijd_geopend'] / 60, 2)));
+		$temp[] = array('v' => $adres['tijd_geopend']);
 
 		// insert the temp array into $rows
 		$rows[] = array('c' => $temp);
