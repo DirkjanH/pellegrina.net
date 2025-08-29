@@ -1,12 +1,4 @@
-﻿<!DOCTYPE HTML>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<link rel="shortcut icon" href="/mailing/favicon.ico">
-<META HTTP-EQUIV=Refresh CONTENT="900"; URL="<?php echo $_SERVER['PHP_SELF']; ?>">
-
-<?php 
+﻿<?php 
 //Connection statement
 require_once ($_SERVER['DOCUMENT_ROOT'].'/connections/connect_PDO.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
@@ -86,8 +78,15 @@ d($jsonTable);
 } //if ($mailing_nr > 0)
 ?>
 
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="shortcut icon" href="/mailing/favicon.ico">
+<META HTTP-EQUIV=Refresh CONTENT="900"; URL="<?php echo $_SERVER['PHP_SELF']; ?>">
 <title>Statistieken mailings</title>
-<link href="../css/w3.css" rel="stylesheet" type="text/css">
+<link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
  <script type="text/javascript">
 	google.charts.load("current", {packages:["corechart"], 'language': 'nl'});
