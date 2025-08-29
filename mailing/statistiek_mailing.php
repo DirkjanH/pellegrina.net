@@ -61,7 +61,7 @@ if ($mailing_nr > 0) {
 		$temp = array();
 		// each column needs to have data inserted via the $temp array
 		$temp[] = array('v' => $adres['naam']);
-		$temp[] = array('v' => $adres['tijd_geopend']);
+		$temp[] = array('v' => "Date($adres['tijd_geopend'])");
 
 		// insert the temp array into $rows
 		$rows[] = array('c' => $temp);
