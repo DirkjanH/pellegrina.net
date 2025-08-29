@@ -1,4 +1,10 @@
 ﻿<?php
+// stel php in dat deze fouten weergeeft
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
+Kint::$enabled_mode = false;
+
 //Connection statement
 require_once($_SERVER['DOCUMENT_ROOT'] . '/connections/connect_PDO.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
@@ -10,11 +16,6 @@ ob_start();
 if (isset($_POST['mailing'])) $_SESSION['mailing']	= $_POST['mailing'];
 elseif (isset($_SESSION['mailing'])) $_POST['mailing'] = $_SESSION['mailing'];
 
-// stel php in dat deze fouten weergeeft
-//ini_set('display_errors',1);
-error_reporting(E_ALL);
-
-Kint::$enabled_mode = false;
 d($_POST);
 
 $mailings = select_query("SELECT * FROM mailing_opdrachten");
