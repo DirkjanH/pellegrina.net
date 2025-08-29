@@ -61,8 +61,14 @@ if ($mailing_nr > 0) {
 		$temp = array();
 		// each column needs to have data inserted via the $temp array
 		$temp[] = array('v' => $adres['naam']);
-		$temp[] = array('v' => $adres['tijd_geopend']);
-
+		preg_match('/(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})/', $adres['tijd_geopend'], $match);
+		$year = (int) $match[1];
+		$month = (int) $match[2] - 1; // convert to zero-index to match javascript's dates
+		$day = (int) $match[3];
+		$hours = (int) $match[4];
+		$minutes = (int) $match[5];
+		$seconds = (int) $match[6];
+		$temp[] = array('v' => "Date($year, $month, $day, $hours, $minutes, $seconds)");
 		// insert the temp array into $rows
 		$rows[] = array('c' => $temp);
 	}
