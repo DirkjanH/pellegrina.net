@@ -116,8 +116,8 @@ if ($mailing_nr > 0) {
 					gridlines: {
 						count: -1
 					},
-					title: 'tijd in minuten',
-					format: 'datetime',
+					title: 'tijd',
+					format: datetime,
 					slantedText: true,
 				},
 				vAxis: {
