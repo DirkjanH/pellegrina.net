@@ -8,7 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/connections/connect_PDO.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 session_start();
 ob_start();
@@ -24,7 +24,7 @@ if (isset($_POST['mailing'])) {
 	$mailing_nr = $_POST['mailing'];
 } else {
 	$mailing_nr = end($mailings)['MAILINGiD'];
-	//echo 'Mailing bestaat niet<br><br>';
+	echo 'Mailing bestaat niet<br><br>';
 }
 
 d($mailings);
