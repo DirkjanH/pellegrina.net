@@ -3,12 +3,12 @@
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-Kint::$enabled_mode = false;
-
 //Connection statement
 require_once($_SERVER['DOCUMENT_ROOT'] . '/connections/connect_PDO.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+
+Kint::$enabled_mode = false;
 
 session_start();
 ob_start();
