@@ -137,7 +137,7 @@ if ($mailing_nr > 0) {
 			};
 
 			var data = new google.visualization.DataView(<?php echo $jsonTable ?>);
-			var view = new google.visualization.DataView(data);
+/*			var view = new google.visualization.DataView(data);
 			view.setColumns([
 				0,
 				{
@@ -149,9 +149,9 @@ if ($mailing_nr > 0) {
 					}
 				}
 			]); // Create our data table out of JSON data loaded from server.
-
+*/
 			var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
-			chart.draw(view, options);
+			chart.draw(data, options);
 		}
 
 		function formSubmit(val) {
