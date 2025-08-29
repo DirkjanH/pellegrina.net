@@ -69,7 +69,7 @@ foreach ($adressen as $adres){
     $temp = array();
     // each column needs to have data inserted via the $temp array
     $temp[] = array('v' => $adres['naam']);
-    $temp[] = array('v' => (round($adres['verschil_verzenden']/60, 2)));
+    $temp[] = array('v' => (round($adres['verschil_verzenden']/3600, 2)));
 
     // insert the temp array into $rows
     $rows[] = array('c' => $temp);
@@ -94,13 +94,13 @@ d($jsonTable);
 	google.charts.setOnLoadCallback(drawChart);
 	function drawChart() {
 	var options = {
-	 title: 'Tijd voor het openen van emails, in minuten',
+	 title: 'Tijd voor het openen van emails, in uren',
     legend: { position: 'none' },
 	 colors: ['green', 'red'],
 	 histogram: {bucketSize: 60, maxNumBuckets: 100},
 	 hAxis: {
 		gridlines: {count: -1},
-		title: 'minuten',
+		title: 'uren na verzenden',
 		format: '0',
 		slantedText: true,
 	 },
