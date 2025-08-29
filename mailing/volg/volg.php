@@ -17,6 +17,8 @@ error_reporting(E_ALL);
 //echo $_GET['kenmerk'].'<br>';
 
 require_once $_SERVER["DOCUMENT_ROOT"].'/connections/connect_PDO.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
+
 if (isset($_GET['kenmerk']) AND $_GET['kenmerk'] != '') {
 	$query1 = <<<QUE
 	SELECT

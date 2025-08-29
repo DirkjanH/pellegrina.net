@@ -110,7 +110,7 @@ if ($mailing_nr > 0) {
 					gridlines: {
 						count: -1
 					},
-					title: 'minuten',
+					title: 'tijd in minuten',
 					format: '0',
 					slantedText: true,
 				},
