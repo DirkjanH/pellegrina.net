@@ -31,7 +31,7 @@ d($mailings);
 
 if ($mailing_nr > 0) {
 	$mailing = select_query("SELECT * FROM mailing_opdrachten WHERE mailingId = {$mailing_nr}", 1);
-	$adressen = select_query("SELECT naam, (UNIX_TIMESTAMP(tijd_geopend) - UNIX_TIMESTAMP(tijd_aanmaak)) AS verschil_verzenden, (UNIX_TIMESTAMP(tijd_geopend) - UNIX_TIMESTAMP(tijd_verzonden)) AS verschil FROM mailing_adressen, mailing_opdrachten WHERE mailingId = mailingId_FK AND mailingId_FK = {$mailing_nr} AND tijd_geopend IS NOT NULL");
+	$adressen = select_query("SELECT naam, (UNIX_TIMESTAMP(tijd_geopend) - UNIX_TIMESTAMP(tijd_aanmaak)) AS verschil_verzenden, UNIX_TIMESTAMP(tijd_geopend) as tijd_geopend, (UNIX_TIMESTAMP(tijd_geopend) - UNIX_TIMESTAMP(tijd_verzonden)) AS verschil FROM mailing_adressen, mailing_opdrachten WHERE mailingId = mailingId_FK AND mailingId_FK = {$mailing_nr} AND tijd_geopend IS NOT NULL");
 	$aantal = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$mailing_nr}", 0);
 	$aantal_niet_geopend = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$mailing_nr} AND tijd_geopend IS NOT NULL", 0);
 	$aantal_verzonden = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$mailing_nr} AND tijd_verzonden IS NOT NULL", 0);
@@ -61,7 +61,7 @@ if ($mailing_nr > 0) {
 		$temp = array();
 		// each column needs to have data inserted via the $temp array
 		$temp[] = array('v' => $adres['naam']);
-		$temp[] = array('v' => (round($adres['verschil_verzenden'] / 60, 2)));
+		$temp[] = array('v' => (round($adres['tijd_geopend'] / 60, 2)));
 
 		// insert the temp array into $rows
 		$rows[] = array('c' => $temp);
