@@ -117,7 +117,7 @@ if ($mailing_nr > 0) {
 						count: -1
 					},
 					title: 'tijd',
-					format: '0',
+					format: 'HH:mm',
 					slantedText: true,
 				},
 				vAxis: {
@@ -136,8 +136,8 @@ if ($mailing_nr > 0) {
 				}
 			};
 
-			var data = new google.visualization.DataView(<?php echo $jsonTable ?>);
-			data.setColumns([
+			var view = new google.visualization.DataView(<?php echo $jsonTable ?>);
+			view.setColumns([
 				0,
 				{
 					type: 'datetime', // Zorg ervoor dat het nieuwe type 'datetime' is
@@ -150,7 +150,7 @@ if ($mailing_nr > 0) {
 			]); // Create our data table out of JSON data loaded from server.
 
 			var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
-			chart.draw(data, options);
+			chart.draw(view, options);
 		}
 
 		function formSubmit(val) {
