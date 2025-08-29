@@ -102,7 +102,7 @@ d($jsonTable);
 		gridlines: {count: 10},
 		title: 'uren na verzenden',
 		format: '0',
-		slantedText: true,
+		slantedText: false,
 	 },
 	 vAxis: {
 		gridlines: {color: 'green', width: 10, count: -1},
