@@ -99,7 +99,7 @@ d($jsonTable);
 	 colors: ['green', 'red'],
 	 histogram: {bucketSize: 60, maxNumBuckets: 100},
 	 hAxis: {
-		gridlines: {count: -1},
+		gridlines: {count: 10},
 		title: 'uren na verzenden',
 		format: '0',
 		slantedText: true,
