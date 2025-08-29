@@ -53,7 +53,7 @@ if ($mailing_nr > 0) {
 		// and your second column is a "number" type
 		// but you can change them if they are not
 		array('label' => 'Naam', 'type' => 'string'),
-		array('label' => 'Tijd', 'type' => 'datetime')
+		array('label' => 'Tijd', 'type' => 'number')
 	);
 
 	$rows = array();
@@ -117,7 +117,7 @@ if ($mailing_nr > 0) {
 						count: -1
 					},
 					title: 'tijd',
-					format: 'date',
+					format: '0',
 					slantedText: true,
 				},
 				vAxis: {
@@ -136,8 +136,18 @@ if ($mailing_nr > 0) {
 				}
 			};
 
-			// Create our data table out of JSON data loaded from server.
-			var data = new google.visualization.DataTable(<?php echo $jsonTable ?>);
+			var data = new google.visualization.DataView(<?php echo $jsonTable ?>);
+			view.setColumns([
+				0,
+				1 {
+					type: 'datetime', // Zorg ervoor dat het nieuwe type 'datetime' is
+					label: 'Tijd',
+					calc: function(dataTable, rowNum) {
+						var ms = dataTable.getValue(rowNum, 0);
+						return new Date(ms);
+					}
+				}
+			]); // Create our data table out of JSON data loaded from server.
 
 			var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
 			chart.draw(data, options);
