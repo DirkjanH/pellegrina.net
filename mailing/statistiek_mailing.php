@@ -139,7 +139,7 @@ if ($mailing_nr > 0) {
 			var data = new google.visualization.DataView(<?php echo $jsonTable ?>);
 			data.setColumns([
 				0,
-				1 {
+				{
 					type: 'datetime', // Zorg ervoor dat het nieuwe type 'datetime' is
 					label: 'Tijd',
 					calc: function(dataTable, rowNum) {
