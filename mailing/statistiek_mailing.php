@@ -145,7 +145,7 @@ if ($mailing_nr > 0) {
 </head>
 
 <body>
-	<div class="w3-panel">
+	<div class="w3-panel w3-content">
 		<form id="form1" action="" method="post">
 			<?php foreach ($mailings as $m) {
 				$totaal = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$m['MAILINGiD']}", 0);
