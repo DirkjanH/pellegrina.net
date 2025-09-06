@@ -31,7 +31,7 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-interaction
 
       - name: Update dependencies, but do NOT remove packages
-        run: composer update --no-remove --prefer-dist --no-interaction
+        run: composer update --prefer-dist --no-interaction
 
       # Optional: Run your test suite
       # Uncomment if you have tests configured in composer.json ("test": "your-test-command")
