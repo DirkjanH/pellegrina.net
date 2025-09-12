@@ -7,7 +7,7 @@ use function PHP81_BC\strftime;
 
 Kint::$enabled_mode = false;
 require_once($_SERVER['DOCUMENT_ROOT']
-    . '/includes/includes2025.php');
+    . '/includes/includes2026.php');
 function getisp($ip = '')
 {
     if ($ip == '')
@@ -200,9 +200,9 @@ function getisp($ip = '')
             <div id="banner">
                 <div id="" class="bannergeel onzichtbaar"
                     style="font-size: 75%;">
-                    <div class="onzichtbaar">Data zomer 2025 bekend; inschrijving start 1
+                    <div class="">Data zomer 2026 bekend; inschrijving start 1
                         december!</div>
-                    <div class="onzichtbaar">Dates summer 2025 are known; registration
+                    <div class="">Dates summer 2026 are known; registration
                         starts December 1!</div>
                 </div>
                 <div id="" class="bannergroen onzichtbaar">
@@ -210,9 +210,9 @@ function getisp($ip = '')
                     <div class="onzichtbaar">Registration for summer 2025 has started!</div>
                 </div>
                 <div id="bannerteksten" class="banneroranje">
-                    <div class="">Nog enkele plaatsen beschikbaar...
+                    <div class="onzichtbaar">Nog enkele plaatsen beschikbaar...
                     </div>
-                    <div class="">A few last places available...
+                    <div class="onzichtbaar">A few last places available...
                     </div>
                 </div>
                 <div id="" class="bannerrood onzichtbaar">
@@ -261,11 +261,10 @@ function getisp($ip = '')
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
                         <ol><a href="NL" target="_self">
-                                <li class="klein"><b>Dvořáks Gouden Spinnewiel &
-                                        Haydns <i>Missa in tempore belli</i></b>
-                                    - 24 juli - 3 augustus</li>
-                                <li class="klein"><b>Purcell & Handel</b> - 10 -
-                                    16 augustus</li>
+                                <li class="klein"><b>Tsjechische Romantiek</i></b>
+                                    - 23 juli - 2 augustus</li>
+                                <li class="klein"><b>Barok in Centraal Europa</b> - 9 -
+                                    15 augustus</li>
                             </a></ol>
                     </div></a>
                     <div id="carroussel" class="w3-panel w3-section w3-half">
@@ -321,12 +320,10 @@ function getisp($ip = '')
                                 accomplished amateur musicians and
                                 professionals:</a></p>
                         <ol><a href="EN" target="_self">
-                                <li class="klein"><b>Dvořák's Golden Spinning
-                                        Wheel & Haydn's <i>Missa in tempore
-                                            belli</i></b> - 24 July - 3 August
+                                <li class="klein"><b>Czech Romantic Music</b> - 23 July - 2 August
                                 </li>
-                                <li class="klein"><b>Purcell & Handel</b> - 10 -
-                                    16 August</li>
+                                <li class="klein"><b>Baroque in Central Europe</b> - 9 -
+                                    15 August</li>
                             </a></ol>
                     </div>
                 </div>
