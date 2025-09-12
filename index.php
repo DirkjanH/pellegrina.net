@@ -257,7 +257,7 @@ function getisp($ip = '')
                                     align="absmiddle">Cursusprogramma
                                 <?php echo $jaar ?> </a>
                         </h1>
-                        <p><a xxxx="NL" target="_self">Twee zomercursussen voor
+                        <p class="w3-margin-top"><a xxxx="NL" target="_self">Twee zomercursussen voor
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
                         <ol><a xxxx="NL" target="_self">
@@ -316,7 +316,7 @@ function getisp($ip = '')
                                     width="34" height="24" border="0"
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
-                        <p><a xxxx="EN" target="_self">Two summer schools for
+                        <p class="w3-margin-top"><a xxxx="EN" target="_self">Two summer schools for
                                 accomplished amateur musicians and
                                 professionals:</a></p>
                         <ol><a xxxx="EN" target="_self">
