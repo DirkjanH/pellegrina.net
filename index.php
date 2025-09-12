@@ -248,16 +248,16 @@ function getisp($ip = '')
             </script>
             <div class="w3-card-8">
                 <div class="w3-row-padding w3-light-grey">
-                    <div class="w3-card-4 w3-white w3-margin-top w3-quarter">
+                    <div class="w3-card-4 w3-white w3-margin-top w3-quarter w3-padding">
                         <h1>
                             <a xxxx="NL" target="_self"><img
                                     src="Images/Logos/Vlag_NL.jpg"
                                     alt="Nederlands" width="34" height="24"
-                                    hspace="10" border="0"
+                                    border="0"
                                     align="absmiddle">Cursusprogramma
                                 <?php echo $jaar ?> </a>
                         </h1>
-                        <p class="w3-margin"><a xxxx="NL" target="_self">Twee zomercursussen voor
+                        <p><a xxxx="NL" target="_self">Twee zomercursussen voor
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
                         <ol><a xxxx="NL" target="_self">
@@ -310,13 +310,13 @@ function getisp($ip = '')
                         </script>
                     </div>
                     <div
-                        class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter">
+                        class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter w3-padding">
                         <h1><a xxxx="EN" target="_self"><img
                                     src="Images/Logos/Vlag_UK.jpg" alt="English"
-                                    width="34" height="24" hspace="10"
+                                    width="34" height="24" border="0"
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
-                        <p class="w3-margin"><a xxxx="EN" target="_self">Two summer schools for
+                        <p><a xxxx="EN" target="_self">Two summer schools for
                                 accomplished amateur musicians and
                                 professionals:</a></p>
                         <ol><a xxxx="EN" target="_self">
