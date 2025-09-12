@@ -250,17 +250,17 @@ function getisp($ip = '')
                 <div class="w3-row-padding w3-light-grey">
                     <div class="w3-card-4 w3-white w3-margin-top w3-quarter">
                         <h1>
-                            <a href="NL" target="_self"><img
+                            <a xxxx="NL" target="_self"><img
                                     src="Images/Logos/Vlag_NL.jpg"
                                     alt="Nederlands" width="34" height="24"
                                     hspace="10" border="0"
                                     align="absmiddle">Cursusprogramma
                                 <?php echo $jaar ?> </a>
                         </h1>
-                        <p><a href="NL" target="_self">Twee zomercursussen voor
+                        <p><a xxxx="NL" target="_self">Twee zomercursussen voor
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
-                        <ol><a href="NL" target="_self">
+                        <ol><a xxxx="NL" target="_self">
                                 <li class="klein"><b>Tsjechische Romantiek</i></b>
                                     - 23 juli - 2 augustus</li>
                                 <li class="klein"><b>Barok in Centraal Europa</b> - 9 -
@@ -311,15 +311,15 @@ function getisp($ip = '')
                     </div>
                     <div
                         class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter">
-                        <h1><a href="EN" target="_self"><img
+                        <h1><a xxxx="EN" target="_self"><img
                                     src="Images/Logos/Vlag_UK.jpg" alt="English"
                                     width="34" height="24" hspace="10"
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
-                        <p><a href="EN" target="_self">Two summer schools for
+                        <p><a xxxx="EN" target="_self">Two summer schools for
                                 accomplished amateur musicians and
                                 professionals:</a></p>
-                        <ol><a href="EN" target="_self">
+                        <ol><a xxxx="EN" target="_self">
                                 <li class="klein"><b>Czech Romantic Music</b> - 23 July - 2 August
                                 </li>
                                 <li class="klein"><b>Baroque in Central Europe</b> - 9 -
