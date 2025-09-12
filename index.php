@@ -249,7 +249,7 @@ function getisp($ip = '')
             <div class="w3-card-8">
                 <div class="w3-row-padding w3-light-grey">
                     <div class="w3-card-4 w3-white w3-margin-top w3-quarter">
-                        <h1>
+                        <h1 class="w3-margin">
                             <a xxxx="NL" target="_self"><img
                                     src="Images/Logos/Vlag_NL.jpg"
                                     alt="Nederlands" width="34" height="24"
@@ -311,7 +311,7 @@ function getisp($ip = '')
                     </div>
                     <div
                         class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter">
-                        <h1><a xxxx="EN" target="_self"><img
+                        <h1 class="w3-margin"><a xxxx="EN" target="_self"><img
                                     src="Images/Logos/Vlag_UK.jpg" alt="English"
                                     width="34" height="24" hspace="10"
                                     align="absmiddle">Course Programme
