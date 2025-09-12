@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<dwquery>
-  <queryparams matchcase="false" ignorewhitespace="false" useregexp="true"wholeword="false"/>
-  <find>
-    <qtag qname="[any tag]" qconvertednls="true"><qattribute qname="class" qcompare="=" qvalue="standaard"></qattribute></qtag>
-  </find>
-  <replace action="removeAttribute" param1="class" param2="$1vraag_enquete$2"/>
-</dwquery>

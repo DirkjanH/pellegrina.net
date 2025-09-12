@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<dwquery>
-  <queryparams matchcase="false" ignorewhitespace="false" useregexp="false"wholeword="false"/>
-  <find>
-    <qtag qname="p" qconvertednls="true"><qattribute qname="class" qcompare="=" qvalue="kopje"></qattribute></qtag>
-  </find>
-  <replace action="changeTag" param1="h2" param2=""/>
-</dwquery>
