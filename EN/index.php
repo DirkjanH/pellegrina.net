@@ -125,7 +125,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="romantic/index.php"><span class="romantic">Dvořák's Spectre's Bride, for orchestra, choir and soloists</span></a></h3>
+					<h3><a xxxx="romantic/index.php"><span class="romantic">Dvořák's Spectre's Bride, for orchestra, choir and soloists</span></a></h3>
 					<p>for instrumentalists &amp; (choir &amp; solo) singers, with chamber music and chamber choir<br>
 					</p>
 					<ul>
@@ -137,7 +137,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové) ubytování a stravování za Kč 4.000. Jenom napište &quot;ANKST&quot; na přihlášce v poli &quot;Remarks and additional information</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="baroque/index.php"><span class="baroque">Baroque music from Central Europe in 415 Hz</span></a></h3>
+					<h3><a xxxx="baroque/index.php"><span class="baroque">Baroque music from Central Europe in 415 Hz</span></a></h3>
 					<p>for singers &amp; period instruments</p>
 					<ul>
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19 August <?php echo $jaar ?>
