@@ -198,9 +198,9 @@ function getisp($ip = '')
             <div id="banner">
                 <div id="bannerteksten" class="bannergeel"
                     style="font-size: 75%;">
-                    <div class="">Data zomer 2026 bekend; inschrijving start 1
+                    <div class="">Data zomer 2026 zijn gewijzigd; inschrijving start 1
                         december!</div>
-                    <div class="">Dates summer 2026 are known; registration
+                    <div class="">Dates summer 2026 have changed; registration
                         starts December 1!</div>
                 </div>
                 <div id="" class="bannergroen onzichtbaar">
