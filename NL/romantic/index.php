@@ -81,11 +81,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           orkest<u></u><u></u></li>
         <li>Kamermuziek: iedereen speelt in twee, van tevoren gevormde
           ensembles<u></u><u></u></li>
-        <li>Centraal werk voor iedereen: Haydns <em>Missa in Tempore
-            Belli</em>. Het orkest speelt ook Dvořáks Symfonisch
-          gedicht <i>Het gouden spinnewiel</i> op. 109</li>
-        <li>Koor: naast de Missa in Tempore Belli met orkest ook werken
-          uit het kamerkoorrepertoire, a capella en met piano</li>
+        <li>Centraal werk voor iedereen: Dvořáks cantate <em>Svatební košile</em> (Het Bruidshemd) op. 69</li>
+        <li>Koor: naast Het Bruidshemd met orkest werkt het koor ook aan
+          kamerkoorrepertoire, a capella en met piano</li>
         <li>In het conservatorium van České Budějovice, Zuid-Bohemen,
           Tsjechië</li>
         <li>Met <em>Mozart Concerto Event</em>: deelnemers spelen of

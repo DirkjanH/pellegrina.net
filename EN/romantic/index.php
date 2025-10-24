@@ -82,11 +82,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         </li>
         <li>Everyone plays in two pre-formed chamber music ensembles
         </li>
-        <li>Central work for all: Haydn's <em>Missa in Tempore
-            Belli</em>. The orchestra will also play Dvořák's
-          Symphonic poem <i>The Golden Spinning Wheel</i> op. 109</li>
-        <li>Choir: in addition to the Missa in Tempore Belli with
-          orchestra, also works on chamber choir repertoire, a
+        <li>Central work for all: Dvořák's
+          Cantata <i>The Spectre's Bride</i> op. 69</li>
+        <li>Choir: in addition to the Spectre's Bride with
+          orchestra, the choir also works on chamber choir repertoire, a
           cappella and with piano</li>
         <li>At the Conservatoire of České Budějovice, South Bohemia,
           Czech Republic </li>
