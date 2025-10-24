@@ -75,9 +75,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
       <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
       <ul>
-        <li>Voor: zangers (solisten en zeer ervaren koorzangers), instrumentalisten (barokstrijkers, viola da gamba, traverso, barokhobo, barokfagot, clavecimbel/orgel, theorbe, uitsluitend ‘oude’ instrumenten, stemtoon 415 Hz)</li>
+        <li>Voor: zangers (solisten en zeer ervaren koorzangers), instrumentalisten (barokstrijkers, viola da gamba, traverso, barokhobo, barokfagot, baroktrompet, clavecimbel/orgel, theorbe, uitsluitend ‘oude’ instrumenten, stemtoon 415 Hz)</li>
         <li>Olv Dirkjan Horringa (zangers en artistieke leiding), Femke Huizinga (orkest, viool), Hanna Lindeijer (barok-blazers), Ricardo Rodríguez Miranda (viola da gamba, celli en contrabas, barokdans), Mitchell Sandler (zangers) en Edoardo Valorz (basso continuo)</li>
-        <li>Centrale werken voor iedereen: een selectie uit de beide <i>Odes for St. Cecilia's Day</i> van Purcell, en uit Handels <i>Utrecht Te Deum</i></li>
+        <li>Centrale werken voor iedereen: muziek uit Wenen/Praag/Dresden/Kroměříž van onder andere Fux, Caldara, Zelenka, Michna, Vejvanovský en Schmelzer. Centraal staat het Miserere in c klein ZWV 57 van Zelenka</li>
         <li>Barokke kamermuziek elke ochtend voor instrumentale, vocale of gecombineerde vocaal-instrumentale ensembles</li>
         <li>In klooster Nieuw Sion, Diepenveen bij Deventer, met accommodatie in een- en tweepersoonskamers</li>
         <li>Met <em>Concerto & Aria Event</em>: deelnemers spelen een soloconcert of zingen een aria; de deelnemers vormen een ad hoc orkest dat de begeleiding van blad speelt</li>

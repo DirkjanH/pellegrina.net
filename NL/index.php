@@ -120,7 +120,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a xxxx="romantic/index.php"><span class="romantic">Dvořáks Bruidshemd voor orkest, koor en solisten</span></a></h3>
+					<h3><a href="romantic/index.php"><span class="romantic">Dvořáks Bruidshemd voor orkest, koor en solisten</span></a></h3>
 					<p>voor instrumentalisten en (koor)zangers, met kamermuziek en kamerkoor</p>
 					<ul>
 						<li>České Budějovice (Tsjechië), 30 juli - 9 augustus <?php echo $jaar ?> </li>
@@ -129,7 +129,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 					<p class="volvoor onzichtbaar">De cursus is vol voor alle instrumenten</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a xxxx="baroque/index.php"><span class="baroque">Barokmuziek uit Centraal Europa in 415 Hz</span></a></h3>
+					<h3><a href="baroque/index.php"><span class="baroque">Barokmuziek uit Centraal Europa in 415 Hz</span></a></h3>
 					<p>voor zangers &amp; 'oude' instrumenten </p>
 					<ul>
 						<li>Klooster Nieuw Sion, Diepenveen, 13 - 19 augustus <?php echo $jaar ?></li>
