@@ -82,7 +82,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 	<div id="inhoud">
 		<div id="envelop" class="w3-hide-small w3-hide-medium">
 			<div id="banner" class="onzichtbaar">
-				<div class="bannergroen">Registration for summer 2025 has started!</div>
+				<div class="bannergroen">Registration for summer 2026 has started!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel onzichtbaar" style="font-size: 75%;">Dates summer 2025 are known; registration starts December 1!</div>
@@ -94,7 +94,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 				<div class="banneroranje">Last places available...</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
-				<div class="bannerrood">The 2025 courses are fully booked</div>
+				<div class="bannerrood">The 2026 courses are fully booked</div>
 			</div>
 		</div>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
@@ -121,26 +121,26 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="romantic/index.php"><span class="romantic">Haydn's Missa in Tempore Belli and Dvořák's Golden Spinning Wheel, for orchestra, choir and soloists</span></a></h3>
+					<h3><a href="romantic/index.php"><span class="romantic">Czech Romantics, for orchestra, choir and soloists</span></a></h3>
 					<p>for instrumentalists &amp; (choir &amp; solo) singers, with chamber music and chamber choir<br>
 					</p>
 					<ul>
-						<li>České Budějovice (Czechia), 24 July - 3 August <?php echo $jaar ?>
+						<li>České Budějovice (Czechia), 30 July - 9 August<?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="plaatsvoor">The choir has a few places in all voice groups, in particular for sopranos and basses</p>
-					<p class="volvoor">The course is full for all instruments</p>
+					<p class="plaatsvoor onzichtbaar">The choir has a few places in all voice groups, in particular for sopranos and basses</p>
+					<p class="volvoor onzichtbaar">The course is full for all instruments</p>
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové) ubytování a stravování za Kč 4.000. Jenom napište &quot;ANKST&quot; na přihlášce v poli &quot;Remarks and additional information</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="baroque/index.php"><span class="baroque">Baroque music in 415 Hz: Purcell's Odes for St. Cecilia's Day & Handel's Utrecht Te Deum</span></a></h3>
+					<h3><a href="baroque/index.php"><span class="baroque">Baroque music from Central Europe in 415 Hz</span></a></h3>
 					<p>for singers &amp; period instruments</p>
 					<ul>
-						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 10 - 16 August <?php echo $jaar ?>
+						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19 August <?php echo $jaar ?>
 						</li>
 					</ul>
-					<p class="plaatsvoor">Still place for two continuo players (organ/harpsichord/theorbo), who can play from figured bass</p>
-					<p class="volvoor">The course is full for all voice types, as well as for all instruments, except continuo</p>
+					<p class="plaatsvoor onzichtbaar">Still place for two continuo players (organ/harpsichord/theorbo), who can play from figured bass</p>
+					<p class="volvoor onzichtbaar">The course is full for all voice types, as well as for all instruments, except continuo</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Play chamber music with the Kinsky Trio Prague & Friends</span></a></h3>
