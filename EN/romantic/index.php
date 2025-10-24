@@ -89,7 +89,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           cappella and with piano</li>
         <li>At the Conservatoire of České Budějovice, South Bohemia,
           Czech Republic </li>
-        <li>With <em>Mozart Concerto Event</em>: participants play or
+        <li>With <em>Mozart Concerto Event</em>: participants can play or
           sing a (movement of a) concerto or an aria by Mozart or a
           contemporary; the participants form an ad hoc orchestra
           which sightreads the accompaniment</li>
