@@ -248,17 +248,17 @@ function getisp($ip = '')
                 <div class="w3-row-padding w3-light-grey">
                     <div class="w3-card-4 w3-white w3-margin-top w3-quarter w3-padding">
                         <h1>
-                            <a xxxx="NL" target="_self"><img
+                            <a href="NL" target="_self"><img
                                     src="Images/Logos/Vlag_NL.jpg"
                                     alt="Nederlands" width="34" height="24"
                                     border="0"
                                     align="absmiddle">Cursusprogramma
                                 <?php echo $jaar ?> </a>
                         </h1>
-                        <p class="w3-margin-top"><a xxxx="NL" target="_self">Twee zomercursussen voor
+                        <p class="w3-margin-top"><a href="NL" target="_self">Twee zomercursussen voor
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
-                        <ol><a xxxx="NL" target="_self">
+                        <ol><a href="NL" target="_self">
                                 <li class="klein"><b>Dvořáks Bruidshemd</i></b>
                                     - 30 juli - 9 augustus</li>
                                 <li class="klein"><b>Barok in Centraal Europa</b> - 13 -
@@ -309,15 +309,15 @@ function getisp($ip = '')
                     </div>
                     <div
                         class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter w3-padding">
-                        <h1><a xxxx="EN" target="_self"><img
+                        <h1><a href="EN" target="_self"><img
                                     src="Images/Logos/Vlag_UK.jpg" alt="English"
                                     width="34" height="24" border="0"
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
-                        <p class="w3-margin-top"><a xxxx="EN" target="_self">Two summer schools for
+                        <p class="w3-margin-top"><a href="EN" target="_self">Two summer schools for
                                 accomplished amateur musicians and
                                 professionals:</a></p>
-                        <ol><a xxxx="EN" target="_self">
+                        <ol><a href="EN" target="_self">
                                 <li class="klein"><b>Dvořák's Spectre's Bride</b> - 30 July - 9 August
                                 </li>
                                 <li class="klein"><b>Baroque in Central Europe</b> - 13 -
