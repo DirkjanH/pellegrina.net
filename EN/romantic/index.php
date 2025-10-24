@@ -91,7 +91,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           Czech Republic </li>
         <li>With <em>Mozart Concerto Event</em>: participants can play or
           sing a (movement of a) concerto or an aria by Mozart or a
-          contemporary; the participants form an ad hoc orchestra
+          contemporary; the other participants and tutors form an ad hoc orchestra
           which sightreads the accompaniment</li>
       </ul>
       <p class="plaatsvoor onzichtbaar">Places available for piano, violin

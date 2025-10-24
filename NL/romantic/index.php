@@ -87,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>In het conservatorium van České Budějovice, Zuid-Bohemen,
           Tsjechië</li>
         <li>Met <em>Mozart Concerto Event</em>: deelnemers kunnen een (deel van een) soloconcert of een aria van Mozart
-          of een tijdgenoot spelen of zingen; de overige deelnemers vormen een ad hoc orkest
+          of een tijdgenoot spelen of zingen; de overige deelnemers en docenten vormen een ad hoc orkest
           dat de begeleiding van blad speelt<u></u><u></u></li>
       </ul>
       <p class="plaatsvoor onzichtbaar">Nog plaatsen beschikbaar voor

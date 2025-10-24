@@ -80,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>Centrale werken voor iedereen: muziek uit Wenen/Praag/Dresden/Kroměříž van onder andere Fux, Caldara, Zelenka, Michna, Vejvanovský en Schmelzer. Centraal staat het Miserere in c klein ZWV 57 van Zelenka</li>
         <li>Barokke kamermuziek elke ochtend voor instrumentale, vocale of gecombineerde vocaal-instrumentale ensembles</li>
         <li>In klooster Nieuw Sion, Diepenveen bij Deventer, met accommodatie in een- en tweepersoonskamers</li>
-        <li>Met <em>Concerto & Aria Event</em>: deelnemers kunnen een soloconcert spelen of een aria zingen; de overige deelnemers vormen een ad hoc orkest dat de begeleiding van blad speelt</li>
+        <li>Met <em>Concerto & Aria Event</em>: deelnemers kunnen een soloconcert spelen of een aria zingen; de overige deelnemers en docenten vormen een ad hoc orkest dat de begeleiding van blad speelt</li>
         <li>Met barokdansworkshop voor iedereen</li>
       </ul>
       <p class="onzichtbaar plaatsvoor">Plaats beschikbaar voor een barokhobo</p>

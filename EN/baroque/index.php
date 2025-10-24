@@ -82,7 +82,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>Central works for all: Music from Vienna/Prague/Dresden/Kroměříž by composers including Fux, Caldara, Zelenka, Michna, Vejvanovský, and Schmelzer. The programme includes Zelenka's Miserere in C minor, ZWV 57.</li>
         <li>Baroque chamber music every morning for instrumental, vocal or combined vocal-instrumental ensembles</li>
         <li>In monastery Nieuw Sion, Diepenveen near Deventer (Netherlands), with accommodation in single and double rooms or camping</li>
-        <li>With <em>Concerto & Aria Event</em>: participants can play a concerto or sing an aria; the participants form an ad hoc orchestra which sightreads the accompaniment</li>
+        <li>With <em>Concerto & Aria Event</em>: participants can play a concerto or sing an aria; the other participants and tutors form an ad hoc orchestra which sightreads the accompaniment</li>
         <li>With baroque dance workshop for all</li>
       </ul>
       <p class="onzichtbaar plaatsvoor"> Place available for:  one more baroque oboe</p>
