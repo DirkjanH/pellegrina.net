@@ -102,6 +102,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 		<div id="main" class="w3-row-padding">
 			<div class="w3-card-2 w3-padding w3-margin-bottom w3-half">
 				<h2 class="LP_colour">Music projects for every musician with a professional attitude</h2>
+				<div class="w3-panel w3-yellow">
+					<h1>Please note: the dates of both courses have changed</h1>
+					<p>Due to changes at the conservatory in České Budějovice, both courses had to be scheduled a little later. </p>
+				</div>
 				<p>The
 					<?php echo $jaar ?> summer courses: two projects where you can immerse yourself in a warm bath of beautiful music, with first-class teachers and like-minded souls. The
 					<?php echo $jaar ?> projects are open to experienced musicians. Whether you are an amateur or a professional, a professional attitude is paramount at La Pellegrina. Of course you come well prepared to a course, of course you like it when others do so too. Does this appeal to you? Then please continue reading...</p>

@@ -102,6 +102,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 			<div class="w3-card-2 w3-padding w3-margin-bottom w3-half">
 				<h2 class="kolom LP_colour">Muziekprojecten voor iedere muzikant met een professionele instelling<br>
 				</h2>
+				<div class="w3-panel w3-yellow">
+					<h1>Let op: de data van beide cursussen zijn veranderd</h1>
+					<p>Als gevolg van wijzigingen op het conservatorium in Česk&eacute; Budějovice moesten beide cursussen wat later worden gepland.</p>
+				</div>
 				<p>De zomercursussen in <?php echo $jaar ?>: twee projecten waarin je je kunt onderdompelen in een warm bad van prachtige muziek, met eersteklas docenten en gelijkgestemde zielen. De projecten van <?php echo $jaar ?> staan open voor ervaren muzikanten. Of je nou amateur bent of professional, bij <em>La Pellegrina </em>staat een professionele instelling hoog in het vaandel. Natuurlijk kom je goed voorbereid naar een cursus, natuurlijk vind je het fijn als anderen dat ook doen. Spreekt dit je aan? Lees dan verder...</p>
 				<p>Deze pagina geeft een overzicht van de cursussen in <?php echo $jaar ?>. De barokcursus vindt plaats in het voormalige klooster Nieuw Sion in de bossen van Salland bij Deventer. De cursus rond Haydn en Dvořák vindt plaats in Tsjechië, het meest muzikale land van Europa. Plaats van handeling is het conservatorium van České Budějovice, 120 km ten zuiden van Praag. </p>
 				<p>Klik op de cursustitels voor meer informatie. <b>Vanaf 1 december is alle informatie compleet en is de inschrijving geopend</b>. </p>
