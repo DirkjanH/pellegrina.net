@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 ?>
 
 <!DOCTYPE HTML>
@@ -85,7 +85,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 				<div class="bannergroen">Registration for summer 2026 has started!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
-				<div class="bannergeel onzichtbaar" style="font-size: 75%;">Dates summer 2025 are known; registration starts December 1!</div>
+				<div class="bannergeel onzichtbaar" style="font-size: 75%;">Dates summer 2026 are known; registration starts December 1!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Who registers before March 1, receives a EUR 50 red.</div>
@@ -121,7 +121,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="romantic/index.php"><span class="romantic">Czech Romantics, for orchestra, choir and soloists</span></a></h3>
+					<h3><a href="romantic/index.php"><span class="romantic">Dvořák's Spectre's Bride, for orchestra, choir and soloists</span></a></h3>
 					<p>for instrumentalists &amp; (choir &amp; solo) singers, with chamber music and chamber choir<br>
 					</p>
 					<ul>
@@ -146,7 +146,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Play chamber music with the Kinsky Trio Prague & Friends</span></a></h3>
 					<p>play with a professional chamber musician in a group </p>
 					<ul>
-						<li>České Budějovice (Czechia), 12 - 20 July <?php echo $jaar ?>
+						<li>České Budějovice (Czechia), 18 - 26 July <?php echo $jaar ?>
 						</li>
 					</ul>
 					<p class="nadruk">N.B. This course is organized by and under the responsibility of the Kinsky Trio Prague, in collaboration with <em>La Pellegrina</em>

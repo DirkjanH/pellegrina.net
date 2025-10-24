@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 ?>
 
 <!DOCTYPE HTML>
@@ -80,13 +80,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 		<div id="envelop" class="w3-hide-small w3-hide-medium">
 			<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
 			<div id="" class="onzichtbaar">
-				<div class="bannergeel onzichtbaar">De inschrijving voor zomer 2025 start 1 december!</div>
+				<div class="bannergeel onzichtbaar">De inschrijving voor zomer 2026 start 1 december!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
-				<div class="bannergroen">De inschrijving voor zomer 2025 is gestart!</div>
+				<div class="bannergroen">De inschrijving voor zomer 2026 is gestart!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
-				<div class="bannergeel onzichtbaar" style="font-size: 80%;">Data zomer 2025 bekend; inschrijving start 1 december!</div>
+				<div class="bannergeel onzichtbaar" style="font-size: 80%;">Data zomer 2026 bekend; inschrijving start 1 december!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>
@@ -95,7 +95,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 				<div class="banneroranje">Nog enkele plaatsen beschikbaar...</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
-				<div class="bannerrood">De cursussen in 2025 zijn helemaal vol</div>
+				<div class="bannerrood">De cursussen in 2026 zijn helemaal vol</div>
 			</div>
 		</div>
 		<div id="main" class="w3-row-padding">
@@ -117,28 +117,28 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="romantic/index.php"><span class="romantic">Haydns Missa in Tempore Belli en Dvořáks Gouden Spinnewiel voor orkest, koor en solisten</span></a></h3>
+					<h3><a href="romantic/index.php"><span class="romantic">Dvořáks Bruidshemd voor orkest, koor en solisten</span></a></h3>
 					<p>voor instrumentalisten en (koor)zangers, met kamermuziek en kamerkoor</p>
 					<ul>
-						<li>České Budějovice (Tsjechië), 24 juli - 3 augustus <?php echo $jaar ?> </li>
+						<li>České Budějovice (Tsjechië), 30 juli - 9 augustus <?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Het koor heeft nog enkele plekken in alle groepen, met name voor sopranen en bassen</p>
-					<p class="volvoor">De cursus is vol voor alle instrumenten</p>
+					<p class="plaatsvoor onzichtbaar">Het koor heeft nog enkele plekken in alle groepen, met name voor sopranen en bassen</p>
+					<p class="volvoor onzichtbaar">De cursus is vol voor alle instrumenten</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="baroque/index.php"><span class="baroque">Barokmuziek in 415 Hz: Purcells Odes for St. Cecilia's Day & Handels Utrecht Te Deum</span></a></h3>
 					<p>voor zangers &amp; 'oude' instrumenten </p>
 					<ul>
-						<li>Klooster Nieuw Sion, Diepenveen, 10 - 16 augustus <?php echo $jaar ?></li>
+						<li>Klooster Nieuw Sion, Diepenveen, 13 - 19 augustus <?php echo $jaar ?></li>
 					</ul>
-					<p class="plaatsvoor">Er is nog plaats voor twee continuospelers (orgel/clavecimbel/theorbe), die kunnen spelen vanaf een becijferde bas</p>
-					<p class="volvoor">Deze cursus is vol voor alle stemsoorten en voor alle instrumenten behalve continuo</p>
+					<p class="plaatsvoor onzichtbaar">Er is nog plaats voor twee continuospelers (orgel/clavecimbel/theorbe), die kunnen spelen vanaf een becijferde bas</p>
+					<p class="volvoor onzichtbaar">Deze cursus is vol voor alle stemsoorten en voor alle instrumenten behalve continuo</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Speel kamermuziek met het Kinsky Trio Prague &amp; Friends</span></a></h3>
 					<p>speel met een professionele kamermuziekspeler in de groep </p>
 					<ul>
-						<li>České Budějovice (Tsjechië), 12 - 20 juli <?php echo $jaar ?> </li>
+						<li>České Budějovice (Tsjechië), 18 - 26 juli <?php echo $jaar ?> </li>
 					</ul>
 					<p class="nadruk">N.B. deze cursus wordt georganiseerd door en onder verantwoordelijkheid van het Kinsky Trio Prague, in samenwerking met <em>La Pellegrina</em> </p>
 				</div>
