@@ -85,14 +85,14 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergroen">De inschrijving voor zomer 2026 is gestart!</div>
 			</div>
-			<div id="banner" class="onzichtbaar">
-				<div class="bannergeel onzichtbaar" style="font-size: 80%;">Data zomer 2026 bekend; inschrijving start 1 december!</div>
+			<div id="banner" class="">
+				<div class="bannergeel" style="font-size: 80%;">c; inschrijving start 1 december!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Wie zich vóór 1 maart aanmeldt, krijgt € 50 korting</div>
 			</div>
-			<div id="banner" class="">
-				<div class="banneroranje">Nog enkele plaatsen beschikbaar...</div>
+			<div id="banner" class="onzichtbaar">
+				<div class="banneroranje onzichtbaar">Nog enkele plaatsen beschikbaar...</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannerrood">De cursussen in 2026 zijn helemaal vol</div>
@@ -126,7 +126,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 					<p class="volvoor onzichtbaar">De cursus is vol voor alle instrumenten</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="baroque/index.php"><span class="baroque">Barokmuziek in 415 Hz: Purcells Odes for St. Cecilia's Day & Handels Utrecht Te Deum</span></a></h3>
+					<h3><a href="baroque/index.php"><span class="baroque">Barokmuziek uit Centraal Europa in 415 Hz</span></a></h3>
 					<p>voor zangers &amp; 'oude' instrumenten </p>
 					<ul>
 						<li>Klooster Nieuw Sion, Diepenveen, 13 - 19 augustus <?php echo $jaar ?></li>

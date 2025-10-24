@@ -84,14 +84,14 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergroen">Registration for summer 2026 has started!</div>
 			</div>
-			<div id="banner" class="onzichtbaar">
-				<div class="bannergeel onzichtbaar" style="font-size: 75%;">Dates summer 2026 are known; registration starts December 1!</div>
+			<div id="banner" class="">
+				<div class="bannergeel" style="font-size: 75%;">Please note: dates for summer 2026 have changed; registration starts December 1!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannergeel">Who registers before March 1, receives a EUR 50 red.</div>
 			</div>
-			<div id="banner" class="">
-				<div class="banneroranje">Last places available...</div>
+			<div id="banner" class="onzichtbaar">
+				<div class="banneroranje onzichtbaar">Last places available...</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannerrood">The 2026 courses are fully booked</div>
