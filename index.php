@@ -259,10 +259,10 @@ function getisp($ip = '')
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
                         <ol><a xxxx="NL" target="_self">
-                                <li class="klein"><b>Tsjechische Romantiek</i></b>
-                                    - 23 juli - 2 augustus</li>
-                                <li class="klein"><b>Barok in Centraal Europa</b> - 9 -
-                                    15 augustus</li>
+                                <li class="klein"><b>Dvořáks Bruidshemd</i></b>
+                                    - 30 juli - 9 augustus</li>
+                                <li class="klein"><b>Barok in Centraal Europa</b> - 13 -
+                                    19 augustus</li>
                             </a></ol>
                     </div></a>
                     <div id="carroussel" class="w3-panel w3-section w3-half">
@@ -318,10 +318,10 @@ function getisp($ip = '')
                                 accomplished amateur musicians and
                                 professionals:</a></p>
                         <ol><a xxxx="EN" target="_self">
-                                <li class="klein"><b>Czech Romantic Music</b> - 23 July - 2 August
+                                <li class="klein"><b>Dvořák's Spectre's Bride</b> - 30 July - 9 August
                                 </li>
-                                <li class="klein"><b>Baroque in Central Europe</b> - 9 -
-                                    15 August</li>
+                                <li class="klein"><b>Baroque in Central Europe</b> - 13 -
+                                    19 August</li>
                             </a></ol>
                     </div>
                 </div>
