@@ -103,7 +103,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 			<div class="w3-card-2 w3-padding w3-margin-bottom w3-half">
 				<h2 class="LP_colour">Music projects for every musician with a professional attitude</h2>
 				<div class="w3-panel w3-yellow">
-					<h3>Please note: the dates of both courses have changed</h3>
+					<h3 class="w3-text-black">Please note: the dates of both courses have changed</h3>
 					<p>Due to changes at the conservatory in České Budějovice, both courses had to be scheduled a little later. </p>
 				</div>
 				<p>The
