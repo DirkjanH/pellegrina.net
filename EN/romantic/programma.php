@@ -60,7 +60,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                         echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰';
                                         require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                         ?>
-        <div id="main">
             <div class="cols2">
                 <h2>Programme details</h2>
                 <h3>Dvořák - The Spectre's Bride</h3>
