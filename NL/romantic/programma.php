@@ -23,7 +23,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-  <title>Dvořáks Gouden Spinnewiel & Haydns Missa in tempore belli</title>
+  <title>Dvořáks cantate Het Bruidshemd</title>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
   <script>

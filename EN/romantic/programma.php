@@ -19,18 +19,18 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <title>Dvořák's Golden Spinning Wheel & Haydn's Missa in tempore belli
-    </title>
+    <title>Dvořák's cantata The Spectre's Bride</title>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <script>
-        ! function (f, b, e, v, n, t, s) {
+        ! function(f, b, e, v, n, t, s) {
             if (f.fbq) return;
-            n = f.fbq = function () {
+            n = f.fbq = function() {
                 n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
                     arguments)
             };
@@ -52,205 +52,97 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-    echo $navigatie;
-    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
-    ?>
+                                        echo $navigatie;
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰';
+                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
+                                        ?>
         <div id="main">
             <div class="cols2">
                 <h2>Programme details</h2>
-                <h3>Dvořák - Zlatý kolovrat - The Golden Spinning Wheel</h3>
-                <p>In 1896, Antonín Dvořák composed four symphonic poems based
-                    on ballads from the collection <em>Kytice</em> (The Bouquet)
-                    by Karel Jaromír Erben: <i>The Water Spirit</i>, <i>The
-                        Afternoon Witch</i>, <i>The Golden Spinning Wheel</i>
-                    and <i>The Wild Dove</i>. These works mark an important
-                    phase in Dvořák's career, stemming from his long-standing
-                    fascination with Erben's poetry. Earlier, Dvořák had
-                    incorporated Erben's texts into works such as <i>The
-                        Spectre’s Bride</i> (1884) and considered cantatas based
-                    on other ballads. Ultimately, he chose the genre of
-                    symphonic poems, in which he musically translated Erben's
-                    themes without relying on the support of text.</p>
-                <p>In the 2025 summer school we will perform <i>The Golden
-                        Spinning Wheel</i>. Our original idea of performing
-                    <i>The Spectre’s Bride</i> turned out not be possible due to
-                    restrictions at our concert venue, the cathedral. </p>
-                <h4><i>The Golden Spinning Wheel</i></h4>
-                <img src="\Images\spinnewiel.jpg" alt="Golden Spinning Wheel"
-                    class="fotocenter" style="clear:both;">
-                <p>The first performance of <i>The Golden Spinning Wheel</i>
-                    took place in Prague in 1896, followed by a public premiere
-                    in London. The reception was mixed: there was admiration for
-                    its musical depth, but also criticism from traditionalists
-                    such as Eduard Hanslick, who deplored Dvořák's ‘deviation’
-                    from absolute music. Leoš Janáček, on the other hand,
-                    praised Dvořák's expressive musical 'speech' in these works.
-                </p>
-                <p>Dvořák integrated the rhythmic structure of Erben's verses
-                    into his thematic material, leading to a unique combination
-                    of musical inventiveness and textual reference. His detailed
-                    approach to Erben's stories, such as the musical repetitions
-                    in <i>The Golden Spinning Wheel</i> which follow the textual
-                    repetitions, was sometimes controversial, but demonstrated
-                    his focus on the narrative power of music. In addition,
-                    Dvořák emphasized with his orchestration refined timbres
-                    with influences from French Impressionism. </p>
-                <h4>Synopsis of <i>The Golden Spinning Wheel</i></h4>
-                <p>While out riding in the countryside, a king happens upon a
-                    beautiful village girl, Dornička, and falls in love with
-                    her. He asks her stepmother to bring her to his castle. The
-                    stepmother and Dornička's identically looking stepsister set
-                    off towards the king's castle with Dornička. On the way,
-                    they murder her, hack off her feet and hands, and cut out
-                    her eyes. They bury the body but keep the amputated parts,
-                    "lest someone fix them back". The stepsister then poses as
-                    Dornička and marries the king, after which he is called away
-                    to battle.</p>
-                <p>Meanwhile, in the midst of the forest, a hermit skilled in
-                    magical arts finds Dornička's remains and decides to bring
-                    her back to life. He sends a page to the castle to persuade
-                    the step-sister to part with "two feet" in return for a
-                    golden spinning wheel, "two hands" for a golden distaff, and
-                    "two eyes" for a golden spindle. The body being complete
-                    again, the hermit brings Dornička back to life.</p>
-                <p>The king returns from battle and bids his wife to spin for
-                    him on her new wheel. As she obliges, the magical spinning
-                    wheel sings a song betraying the two women's treacherous
-                    plot and relaying all the gruesome details of Dornička's
-                    murder. The king goes off into the forest to find his true
-                    betrothed. The two murderesses are thrown to the wolves,
-                    their bodies mutilated in the same way they had mutilated
-                    Dornička's. Having fulfilled its task, the golden spinning
-                    wheel magically disappears, never to be seen or heard again.
-                </p>
-                <p><a h<a href="\EN\romantic\text_zlaty_kolovrat.htm"
-                        target="_blank">The full text of Erben's poem with a
-                        parallel English translation can be found here.</a>
-                </p>
+                <h3>Dvořák - The Spectre's Bride</h3>
+
+                <p>Antonín Dvořák's dramatic ballad <i>The
+                        Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
+                    The enthusiasm of English audiences for large-scale vocal works led to
+                    Dvořák being commissioned in November 1883 to write a cantata for
+                    soloists, chorus and orchestra for the 1885 Birmingham Musical Festival. He
+                    himself conducted the first two performances on 28 and 29 March 1885 in
+                    Plze&#328;. The English premiere took place on 27 August 1885, again under
+                    Dvořák's direction. The new work was enthusiastically received. In the
+                    many reviews the assessment of <i>The Spectre's Bride</i> was extremely
+                    positive.</p>
+
+                <p>For his work, Dvořák chose the ballad <i>Svatební
+                        košile</i> (which literally translates as The Bride's Nightgown) by the Czech
+                    poet Karel Jaromír Erben (1811 - 1870). Erben's <i>Kytice</i> (Bouquet)
+                    collection of fairy tales inspired Dvořák more often, for example for his
+                    cycle of symphonic poems, <i>The Water Goblin</i>, <i>The Noon Witch</i>, <i>The
+                        Golden Spinning Wheel</i> and <i>The Wild Dove</i>. In these four poems, as in <i>The
+                        Spectre's Bride</i>, Dvořák assigns specific musical themes and even
+                    instruments for important characters and events in the drama. For example the
+                    bass clarinet, a new invention at the time, is always reserved for spooky,
+                    ghastly moments in the story.</p>
+
+                <p>The ghostly ballad <i>Svatební košile</i> is
+                    a turmoil of emotions encompassing longing, horror, hope, doubt and, at the
+                    end, relief. The tale told is one of a wild and furious nocturnal hunt, through
+                    sludgy swamps and over bare rocks, passing by gloomy, glimmering will o' the
+                    wisps and dogs howling threateningly. In the opening soprano monologue the girl
+                    thinks of her beloved who left to travel abroad. She prays to the Virgin Mary
+                    that he return safely and, at the end of the scene, expresses the blasphemous
+                    thought that, if he did not return, she would rather die. Then a living corpse
+                    appears at the parlour window, pretending to be the girls beloved, and he
+                    invites her to his home. She then sets out with him on a terrible journey
+                    through the night landscape, during which the dead man gradually throws away
+                    the objects the girl has taken with her: a little cross, a rosary and a prayer
+                    book. The couple finally arrive at the place the corpse calls his home - a
+                    cemetery. It is only now that the girl realises her mistake and she is saved by
+                    uttering a prayer of apology to the Virgin Mary and by the appearance of the
+                    first rays of the sun announcing the new day.</p>
+
+                <p>The form of the cantata was determined by
+                    the nature of the text: the dialogue between the girl and the corpse is sung by
+                    solo soprano and tenor; the role of the narrator is entrusted to the solo
+                    baritone and mixed choir. The extensive work precisely follows the sequence of
+                    scenes as they appear in the ballad.</p>
+
+                <p>The ballad is divided into 18 numbers
+                    (mainly linked in the composition through attacca transitions) which are
+                    grouped according to the various scenarios in the story into three parts
+                    (Introduction up to no. 4, nos. 5-12 and nos. 13-18). Diverging from the
+                    literary model, which envisaged a single narrator to recite the whole text,
+                    Dvořák assigned most of the text passages in which the protagonists
+                    'speak' to the solo roles of the girl (soprano) and the dead bridegroom
+                    (tenor). In addition, the function of the narrator is taken jointly by a solo
+                    part (bass or baritone) and the chorus. The orchestra also has a very important
+                    role. It conveys the epic-dramatic expression of the musical progress,
+                    complementing the vocal parts, and is the bearer of the musical action. Only in
+                    two numbers does a lyrical style come to the fore, both times in the two arias
+                    of the girl (no. 2 and no. 17). These are conceived as prayer scenes and mark
+                    inner turning points which slow down the forward movement, at the same time
+                    eliciting decisive transformations.</p>
+
+                <p>Erben's poem has a powerful plot with
+                    numerous dramatic situations which offer all kinds of opportunities for a
+                    highly contrastive musical depiction of the individual scenes and characters. Dvořák
+                    makes use of this, employing his inexhaustible source of imagery without losing
+                    sight of the requirement for overall structural unity and conciseness. He found
+                    great inspiration in the stirring rhythms of Erben's verse, whose impact he was
+                    able to reinforce through his music. The work retains its homogeneity throughout
+                    thanks to the motif of descending fifths which winds its way through the
+                    individual sections. Dvořák's musical setting demonstrates a clear
+                    understanding of the text and a flawless synthesis of music and verse. The
+                    cantata is typical for its dramatic expression, inventive melodies and unusual
+                    rhythms, all told, a supreme example of the composer's creative genius.</p>
+
+                <h2><a href="javascript: history.go(-1)">Back</a></h2>
             </div>
-            <div class="cols2">
-                <hr style="border-top: 1px solid black;">
-                <h3>Haydn - Missa in tempore belli (Paukenmesse)</h3>
-                <img src="\Images\pauken.jpg" alt="classical timpani"
-                    class="fotocenter" style="clear: both;">
-                <p> Joseph Haydn composed the <i>Missa in tempore
-                        belli</i>&nbsp;(Hob. XXII:9), also known as the
-                    Paukenmesse, in 1796, during the turbulent time of the First
-                    Coalition War. Haydn wrote the mass for the ordination of
-                    Joseph Franz von Hofmann, and it was first performed in the
-                    Piaristenkirche Maria Treu in Vienna. Later, Haydn also
-                    performed the mass in honor of the name day of Princess
-                    Maria Josepha Hermengilde Esterh&aacute;zy. The nickname
-                    Paukenmesse&nbsp;refers to the prominent role of the
-                    timpani, especially in the Agnus Dei, where a timpani solo
-                    evokes the threatening atmosphere of war. The Mass combines
-                    religious seriousness with combative musical elements,
-                    appropriate to the fear of a possible invasion of Austria.
-                </p>
-                <p> In late 1796, a year before the end of the First Coalition
-                    War, Napoleon Bonaparte scored victories over the Austrians.
-                    He finally defeated the Austian forces in November in the
-                    Battle of Arcola. To the west, Austria fought with France
-                    for control of southern Germany. In this threatening
-                    atmosphere of war and against this background the
-                    Paukenmesse was born. For the first time since 1683, when a
-                    very large Ottoman Empire army besieged Vienna for two
-                    months, there was a real danger of an invasion of the core
-                    area of the Austrian Empire. The expulsion of the Turks was
-                    for the Austrians an important event that was celebrated
-                    annually on September 12, the Feast of the Most Holy Name of
-                    the Blessed Virgin Mary. Processions and special masses kept
-                    the memory of victory alive, especially with church music
-                    with unusually prominent for trumpets and timpani. These
-                    were meant to evoke the threat of war and the triumph of
-                    victory.</p>
-                <p>This piece has been long thought to express an anti-war
-                    sentiment, even though there is no explicit message in the
-                    text itself, and no clear indication from Haydn that this
-                    was his intention. What is found in the score is a very
-                    unsettled nature to the music, not normally associated with
-                    Haydn, which has led scholars to the conclusion that it is
-                    anti-war in nature. This is especially noticed in the
-                    Benedictus and Agnus Dei. During the time of the composition
-                    of the Mass, the Austrian government had issued a decree in
-                    1796, that "no Austrian should speak of peace until the
-                    enemy is driven back to its customary borders." Whether
-                    this is enough to call it anti-war in nature is certainly
-                    debatable because most of the mass is of a lyrically joyful
-                    nature.</p>
-                <h4> Structure and characteristics </h4>
-                <p> The structure of the Mass follows the traditional parts of
-                    the Mass: </p>
-                <ul>
-                    <li>The Kyrie begins with a solemn introduction in which the
-                        timpani first quietly and then very loudly, set the tone
-                        for the Mass. The Kyrie is a fast movement in sonata
-                        form. The theme is begun by the soprano, taken over by
-                        the choir in increasingly compelling tone, while the
-                        soloists intervene with short sections.</li>
-                    <li>The Gloria is in three movements. The middle movement is
-                        very slow, beginning with a lovely duet for bass and
-                        solo cello in the <i>Qui tollis</i> in A, but a menacing
-                        tone is set with the entry of the chorus. The two outer
-                        movements are thematically related, with fanfares of
-                        brass and timpani. </li>
-                    <li>The Credo is also three-part with an equally slow middle
-                        section with a clarinet solo for the <i>Et incarnatus
-                            est</i>. The last movement, divided into two parts,
-                        ends with a double fugue on the words <i>Et vitam
-                            venturi saeculi, Amen</i>.</li>
-                    <li>The Sanctus is in two parts, a stately opening section
-                        followed by a thundering fast movement on the words
-                        <i>Pleni sunt coeli</i>, again accompanied by the
-                        trumpets and timpani. In accordance with liturgical
-                        custom, the Sanctus is short. </li>
-                    <li>The Benedictus is an andante with an ominous character
-                        that begins in c minor and slowly moves to C major on
-                        the words <i>Osanna in excelsis</i>.</li>
-                    <li>The Agnus Dei contains the part that gave the Mass its
-                        nickname: unexpectedly, after the simple melody for
-                        choir and strings in bar 10 the timpani have a solo,
-                        after which the trumpets follow triumphantly.
-                        Syncopations in the violins and sustained notes on the
-                        oboes&#39;s accompany the timpani. According to Haydn's
-                        biographer Giuseppe Carpani, the timpani had to be
-                        struck in the French manner (with the handpalm pointing
-                        downwards), thus reinforcing the threat. The diplomat
-                        Georg August Griesinger, a friend of Haydn, wrote of the
-                        mass: &quot;1796, when die Franzosen in der Steyermark
-                        standen, setzte Haydn eine Messe, welcher er den Titel
-                        <i>in tempore belli</i> gab. In dieser Messe sind die
-                        Worte <i>Agnus Dei, qui tollis peccata
-                            mundi</i>&nbsp;auf eigene Art mit Begleitung von
-                        Pauken vorgetragen, als h&ouml;rte man den Feind schon
-                        in der Ferne kommen&quot; (In 1796, when the French were
-                        in Styria, Haydn composed a mass to which he gave the
-                        title <i>in tempore belli</i>. In this mass, the words
-                        <i>Agnus Dei, qui tollis peccata mundi</i> are presented
-                        in a unique way, accompanied by timpani, as if one could
-                        already hear the enemy coming in the distance). The mass
-                        ends with a fanfare-like <i>Allegro con spirito</i> with
-                        a most compellingly sung <i>Dona nobis pacem</i>. </li>
-                </ul>
-                <h4>Ensemble formation</h4>
-                <p> The <i>Missa in tempore belli</i> is written for two
-                    oboes&#39;s, two clarinets, two bassoons, two horns, two
-                    trumpets, timpani, strings and organ; later Haydn expanded
-                    the parts for the clarinets for all movements, added a part
-                    for a flute in the &#39;Qui tollis&#39; and amplified the
-                    trumpets by horns. For the performance as part of La
-                    Pellegrina's summer course, we extended the parts of flutes
-                    and clarinets a little further, so that they become full
-                    voices. The choir has the normal scoring SATB. There are
-                    four soloists satb. </p>
-</body>
-<h2><a href="javascript: history.go(-1)">Back</a></h2>
-</div>
-</div>
+        </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+
 </html>
