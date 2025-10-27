@@ -57,7 +57,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
                                         echo $navigatie;
-                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰';
+                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                         require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                         ?>
         <div id="main">
