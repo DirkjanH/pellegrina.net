@@ -134,7 +134,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <h2><a href="javascript: history.go(-1)">Terug</a></h2>
       </div>
     </div>
-</body>
+  </div>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+</body>
 
 </html>

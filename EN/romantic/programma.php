@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -65,8 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2>Programme details</h2>
                 <h3>Dvořák - The Spectre's Bride</h3>
 
-                <p>Antonín Dvořák's dramatic ballad <i>The
-                        Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
+                <p>Antonín Dvořák's dramatic ballad <i>The Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
                     The enthusiasm of English audiences for large-scale vocal works led to
                     Dvořák being commissioned in November 1883 to write a cantata for
                     soloists, chorus and orchestra for the 1885 Birmingham Musical Festival. He
@@ -143,7 +142,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </div>
         </div>
     </div>
-</body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+</body>
 
 </html>
