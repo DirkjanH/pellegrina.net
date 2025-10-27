@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-    case 'romantic':
-        $cursus = 1;
-        break;
-    case 'baroque':
-        $cursus = 2;
-        break;
+  case 'romantic':
+    $cursus = 1;
+    break;
+  case 'baroque':
+    $cursus = 2;
+    break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
