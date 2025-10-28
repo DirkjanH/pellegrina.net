@@ -65,16 +65,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2>Programme details</h2>
                 <h3>Dvořák - The Spectre's Bride</h3>
 
-                <p><div class="fotolinks w3-image"><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" width="250"><br>Antonín Dvořák</div>Antonín Dvořák's dramatic ballad <i>The Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
+                <p>
+                <div class="fotolinks w3-image"><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" width="250"><br>Antonín Dvořák</div>Antonín Dvořák's dramatic ballad <i>The Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
 
-                    The enthusiasm of English audiences for large-scale vocal works led to
-                    Dvořák being commissioned in November 1883 to write a cantata for
-                    soloists, chorus and orchestra for the 1885 Birmingham Musical Festival. He
-                    himself conducted the first two performances on 28 and 29 March 1885 in
-                    Plze&#328;. The English premiere took place on 27 August 1885, again under
-                    Dvořák's direction. The new work was enthusiastically received. In the
-                    many reviews the assessment of <i>The Spectre's Bride</i> was extremely
-                    positive.</p>
+                The enthusiasm of English audiences for large-scale vocal works led to
+                Dvořák being commissioned in November 1883 to write a cantata for
+                soloists, chorus and orchestra for the 1885 Birmingham Musical Festival. He
+                himself conducted the first two performances on 28 and 29 March 1885 in
+                Plze&#328;. The English premiere took place on 27 August 1885, again under
+                Dvořák's direction. The new work was enthusiastically received. In the
+                many reviews the assessment of <i>The Spectre's Bride</i> was extremely
+                positive.</p>
 
                 <p>For his work, Dvořák chose the ballad <i>Svatební
                         košile</i> (which literally translates as The Bride's Nightgown) by the Czech
@@ -92,7 +93,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     a turmoil of emotions encompassing longing, horror, hope, doubt and, at the
                     end, relief. The tale told is one of a wild and furious nocturnal hunt, through
                     sludgy swamps and over bare rocks, passing by gloomy, glimmering will o' the
-                    wisps and dogs howling threateningly. In the opening soprano monologue the girl
+                    wisps and dogs howling threateningly.
+                </p>
+                <h3>Synopsis of the 'plot'</h3>
+                <p>In the opening soprano monologue the girl
                     thinks of her beloved who left to travel abroad. She prays to the Virgin Mary
                     that he return safely and, at the end of the scene, expresses the blasphemous
                     thought that, if he did not return, she would rather die. Then a living corpse
@@ -105,6 +109,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     uttering a prayer of apology to the Virgin Mary and by the appearance of the
                     first rays of the sun announcing the new day.</p>
 
+                <h3>Structure of the composition</h3>
                 <p>The form of the cantata was determined by
                     the nature of the text: the dialogue between the girl and the corpse is sung by
                     solo soprano and tenor; the role of the narrator is entrusted to the solo
