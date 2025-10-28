@@ -65,7 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2>Programme details</h2>
                 <h3>Dvořák - The Spectre's Bride</h3>
 
-                <div class="fotolinks w3-image"><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" width="250"><br>Antonín Dvořák</div><p>Antonín Dvořák's dramatic ballad <i>The Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
+                <p><div class="fotolinks w3-image"><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" width="250"><br>Antonín Dvořák</div>Antonín Dvořák's dramatic ballad <i>The Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
 
                     The enthusiasm of English audiences for large-scale vocal works led to
                     Dvořák being commissioned in November 1883 to write a cantata for
