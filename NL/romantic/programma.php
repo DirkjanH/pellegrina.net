@@ -65,16 +65,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <h2>Programmadetails</h2>
         <h3>Dvořáks cantate <i>Svatební košile</i> op. 69</h3>
 
-        <p><div class="fotolinks w3-image"><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" width="250"><br>Antonín Dvořák</div>Antonín Dvořák componeerde de dramatische cantate <i>Svatební
-            košile</i> (Het Bruidshemd) in 1883. Het Birminghamse Musical Festival had Dvořák
-          namelijk, gezien het enthousiasme van het Engelse publiek voor grootschalige
-          vocale werken, een opdracht voor een cantate voor solisten, koor en orkest voor
-          het festival van 1885 gegeven. Dvořák zelf dirigeerde
-          de eerste twee voorstellingen, op 28 en 29 maart 1885 in Plzeň.
-          De Engelse première vond plaats op 27 augustus 1885, opnieuw onder Dvořáks
-          leiding. Het nieuwe werk werd enthousiast ontvangen. In de vele recensies was
-          de beoordeling van <i>The Spectre's Bride</i>, zoals het stuk in het Engels
-          wordt genoemd, uiterst positief.</p>
+        <p>
+        <div class="fotolinks w3-image"><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" width="250"><br>Antonín Dvořák</div>Antonín Dvořák componeerde de dramatische cantate <i>Svatební
+          košile</i> (Het Bruidshemd) in 1883. Het Birminghamse Musical Festival had Dvořák
+        namelijk, gezien het enthousiasme van het Engelse publiek voor grootschalige
+        vocale werken, een opdracht voor een cantate voor solisten, koor en orkest voor
+        het festival van 1885 gegeven. Dvořák zelf dirigeerde
+        de eerste twee voorstellingen, op 28 en 29 maart 1885 in Plzeň.
+        De Engelse première vond plaats op 27 augustus 1885, opnieuw onder Dvořáks
+        leiding. Het nieuwe werk werd enthousiast ontvangen. In de vele recensies was
+        de beoordeling van <i>The Spectre's Bride</i>, zoals het stuk in het Engels
+        wordt genoemd, uiterst positief.</p>
 
         <p>Voor zijn werk koos Dvořák de ballade <i>Svatební
             košile</i> (letterlijk vertaald als Het Bruidshemd) van de Tsjechische dichter Karel
@@ -91,7 +92,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <p>De 'gothic' ballade <i>Svatební košile</i> is een storm van
           emoties: verlangen, vrees, hoop, twijfel en, op het einde, opluchting. Er wordt
           verteld van een wilde en woedende nachtelijke jacht door zompige moerassen, langs
-          sombere wilgenbosjes en over kale rotsen, terwijl honden dreigend huilen. In de openingsmonoloog treurt het meisje (sopraan) om haar
+          sombere wilgenbosjes en over kale rotsen, terwijl honden dreigend huilen. </p>
+        <h4>Samenvatting van de ‘plot’</h4>
+        <p> In de openingsmonoloog treurt het meisje (sopraan) om haar
           geliefde, die lang geleden is vertrokken naar een ver land. Ze bidt tot de
           Maagd Maria dat hij veilig mag terugkeren en zegt aan het einde van de scène
           dat, als hij niet terugkomt, ze liever zou sterven. Dan verschijnt er een
@@ -105,6 +108,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           de Maagd Maria en door de aankondiging van de nieuwe dag met het verschijnen
           van de eerste zonnestralen.</p>
 
+        <h4>Structuur van de compositie</h4>
         <p>De aard van de tekst bepaalt de vorm van de cantate. De
           dialoog tussen het meisje en de levende dode wordt gezongen door solo sopraan
           en tenor; de solo bariton en het gemengde koor vervullen de rol van verteller. Het
