@@ -87,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           basklarinet bijvoorbeeld, een nieuwe uitvinding van die tijd, is altijd
           gereserveerd voor griezelige, spookachtige momenten in het verhaal.</p>
 
-        <div class="fotocenter w3-image"><img src="/Images/svatebni_kosile.png" alt="Het Bruidshemd"><br>The Spectre's Bride</div>
+        <div class="fotocenter w3-image"><img src="/Images/svatebni_kosile.png" alt="Het Bruidshemd"><br>Illustratie bij Het Bruidshemd</div>
         <p>De 'gothic' ballade <i>Svatební košile</i> is een storm van
           emoties: verlangen, vrees, hoop, twijfel en, op het einde, opluchting. Er wordt
           verteld van een wilde en woedende nachtelijke jacht door zompige moerassen, langs
