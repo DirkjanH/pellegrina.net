@@ -75,11 +75,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         <td class="nr">1.
                         <td>
                         <td width="265">
-                            <p>Už jedenáctá odbila,<br /> a lampa ještě svítila,<br /> a lampa ještě hořela,<br /> co nad klekadlem visela.<br /> Na stěně nízké světničky<br /> byl obraz boží rodičky,<br /> rodičky boží s děťátkem,<br /> tak jako růže s poupátkem.</p>
+                            Už jedenáctá odbila,<br /> a lampa ještě svítila,<br /> a lampa ještě hořela,<br /> co nad klekadlem visela.<br /> Na stěně nízké světničky<br /> byl obraz boží rodičky,<br /> rodičky boží s děťátkem,<br /> tak jako růže s poupátkem.</p>
                             <p>A před tou mocnou světicí<br /> viděti pannu klečící:<br /> klečela, líce skloněné,<br /> ruce na prsa složené;<br /> slzy jí z očí padaly,<br /> čelem se ňádra zdvihaly.<br /> A když slzička upadla,<br /> v ty bílé ňádra zapadla.
                         <td>
                         <td width="293">
-                            <p>The eleventh hour was past and gone, <br /> But still the lamp burnt on and on. <br /> The lamp that on the praying chair <br /> Cast an uneven, ghastly glare. <br /> On the low wall a picture hung, <br /> God's parents, praised by every tongue. <br /> The parents with the Holy Child, <br /> Hoses, with rosebud, saintly mild. </p>
+                            The eleventh hour was past and gone, <br /> But still the lamp burnt on and on. <br /> The lamp that on the praying chair <br /> Cast an uneven, ghastly glare. <br /> On the low wall a picture hung, <br /> God's parents, praised by every tongue. <br /> The parents with the Holy Child, <br /> Hoses, with rosebud, saintly mild. </p>
                             <p>Before the heavenly three a maid <br /> Upon her knees her prayers said. <br /> Her face shone with a holy rest, <br /> Her arms were crossed upon her breast. <br /> And as her tears fell soft and slow, <br /> Her bosom swelled with hidden woe. <br /> Her tears they fell like diamonds bright <br /> Upon her bosom snowy white. </p>
                         </td>
                     </tr>
