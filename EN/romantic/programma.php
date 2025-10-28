@@ -65,7 +65,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2>Programme details</h2>
                 <h3>Dvořák - The Spectre's Bride</h3>
 
-                <p><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" class="fotolinks" width="250">Antonín Dvořák's dramatic ballad <i>The Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
+                <div class="fotolinks w3-image"><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" width="250"><br>Antonín Dvořák</div><p>Antonín Dvořák's dramatic ballad <i>The Spectre's Bride</i> composed in 1883 is a work with a powerful musical impact.
+
                     The enthusiasm of English audiences for large-scale vocal works led to
                     Dvořák being commissioned in November 1883 to write a cantata for
                     soloists, chorus and orchestra for the 1885 Birmingham Musical Festival. He
@@ -86,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     bass clarinet, a new invention at the time, is always reserved for spooky,
                     ghastly moments in the story.</p>
 
-                <img src="/Images/svatebni_kosile.png" alt="The Spectre's Bride" class="fotocenter">
+                <div class="fotocenter"><img src="/Images/svatebni_kosile.png" alt="The Spectre's Bride"><br>The Spectre's Bride</div>
                 <p>The ghostly ballad <i>Svatební košile</i> is
                     a turmoil of emotions encompassing longing, horror, hope, doubt and, at the
                     end, relief. The tale told is one of a wild and furious nocturnal hunt, through
