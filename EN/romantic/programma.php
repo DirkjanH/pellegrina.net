@@ -57,7 +57,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
                                         echo $navigatie;
-                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                         require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                         ?>
         <div id="main">
@@ -86,7 +86,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     bass clarinet, a new invention at the time, is always reserved for spooky,
                     ghastly moments in the story.</p>
 
-                <img src="/Images/svatebni_kosile.png" alt="The Spectre's Bride" class="fotocenter"><p>The ghostly ballad <i>Svatební košile</i> is
+                <img src="/Images/svatebni_kosile.png" alt="The Spectre's Bride" class="fotocenter">
+                <p>The ghostly ballad <i>Svatební košile</i> is
                     a turmoil of emotions encompassing longing, horror, hope, doubt and, at the
                     end, relief. The tale told is one of a wild and furious nocturnal hunt, through
                     sludgy swamps and over bare rocks, passing by gloomy, glimmering will o' the
@@ -142,7 +143,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </div>
         </div>
     </div>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
 </html>

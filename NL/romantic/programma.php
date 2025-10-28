@@ -65,7 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <h2>Programmadetails</h2>
         <h3>Dvořáks cantate <i>Svatební košile</i> op. 69</h3>
 
-        <p>Antonín Dvořák componeerde de dramatische cantate <i>Svatební
+        <p><img src="/Images/Dvorak.jpg" alt="Antonín Dvořák" class="fotolinks" width="250">Antonín Dvořák componeerde de dramatische cantate <i>Svatební
             košile</i> (Het Bruidshemd) in 1883. Het Birminghamse Musical Festival had Dvořák
           namelijk, gezien het enthousiasme van het Engelse publiek voor grootschalige
           vocale werken, een opdracht voor een cantate voor solisten, koor en orkest voor
@@ -87,12 +87,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           basklarinet bijvoorbeeld, een nieuwe uitvinding van die tijd, is altijd
           gereserveerd voor griezelige, spookachtige momenten in het verhaal.</p>
 
+        <img src="/Images/svatebni_kosile.png" alt="Het Bruidshemd" class="fotocenter">
         <p>De 'gothic' ballade <i>Svatební košile</i> is een storm van
           emoties: verlangen, vrees, hoop, twijfel en, op het einde, opluchting. Er wordt
           verteld van een wilde en woedende nachtelijke jacht door zompige moerassen, langs
-          sombere wilgenbosjes en over kale rotsen, terwijl honden dreigend huilen. </p>
-
-        <p>In de openingsmonoloog treurt het meisje (sopraan) om haar
+          sombere wilgenbosjes en over kale rotsen, terwijl honden dreigend huilen. In de openingsmonoloog treurt het meisje (sopraan) om haar
           geliefde, die lang geleden is vertrokken naar een ver land. Ze bidt tot de
           Maagd Maria dat hij veilig mag terugkeren en zegt aan het einde van de scène
           dat, als hij niet terugkomt, ze liever zou sterven. Dan verschijnt er een
@@ -135,7 +134,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       </div>
     </div>
   </div>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
 </html>
