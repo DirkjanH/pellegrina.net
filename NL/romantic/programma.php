@@ -100,8 +100,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           dat, als hij niet terugkomt, ze liever zou sterven. Dan verschijnt er een
           levend lijk (tenor) bij het kamerraam en doet alsof hij de geliefde van het
           meisje is. Hij nodigt haar uit bij hem thuis. Het meisje gelooft hem en ze gaan
-          op weg, een verschrikkelijke reis door de nachtelijk landschap, waarin de dode bruidegom
-          het meisje dwingt om een voor een afstand te doen van de voorwerpen die ze heeft
+          op weg, een verschrikkelijke reis op een vliegend paard door het nachtelijke landschap. De dode bruidegom
+          dwingt het meisje om een voor een afstand te doen van de voorwerpen die ze heeft
           meegenomen: een kruisje, een rozenkrans en een gebedenboek. Het stel komt dan eindelijk
           aan op de plaats die het spook zijn huis noemt - een begraafplaats. Pas nu beseft
           het meisje haar fout. Ze wordt gered door het uitspreken van een smeekbede aan

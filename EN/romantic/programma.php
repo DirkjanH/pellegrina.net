@@ -102,7 +102,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     thought that, if he did not return, she would rather die. Then a living corpse
                     appears at the parlour window, pretending to be the girls beloved, and he
                     invites her to his home. She then sets out with him on a terrible journey
-                    through the night landscape, during which the dead man gradually throws away
+                    on a flying horse through the night landscape, during which the dead man gradually throws away
                     the objects the girl has taken with her: a little cross, a rosary and a prayer
                     book. The couple finally arrive at the place the corpse calls his home - a
                     cemetery. It is only now that the girl realises her mistake and she is saved by
