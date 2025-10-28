@@ -95,7 +95,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     sludgy swamps and over bare rocks, passing by gloomy, glimmering will o' the
                     wisps and dogs howling threateningly.
                 </p>
-                <h3>Synopsis of the 'plot'</h3>
+                <h4>Synopsis of the 'plot'</h4>
                 <p>In the opening soprano monologue the girl
                     thinks of her beloved who left to travel abroad. She prays to the Virgin Mary
                     that he return safely and, at the end of the scene, expresses the blasphemous
@@ -109,7 +109,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     uttering a prayer of apology to the Virgin Mary and by the appearance of the
                     first rays of the sun announcing the new day.</p>
 
-                <h3>Structure of the composition</h3>
+                <h4>Structure of the composition</h4>
                 <p>The form of the cantata was determined by
                     the nature of the text: the dialogue between the girl and the corpse is sung by
                     solo soprano and tenor; the role of the narrator is entrusted to the solo
