@@ -87,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     bass clarinet, a new invention at the time, is always reserved for spooky,
                     ghastly moments in the story.</p>
 
-                <div class="fotocenter w3-image"><img src="/Images/svatebni_kosile.png" alt="The Spectre's Bride"><br>The Spectre's Bride</div>
+                <div class="fotocenter w3-image"><img src="/Images/svatebni_kosile.png" alt="The Spectre's Bride"><br>Illustration for The Spectre's Bride</div>
                 <p>The ghostly ballad <i>Svatební košile</i> is
                     a turmoil of emotions encompassing longing, horror, hope, doubt and, at the
                     end, relief. The tale told is one of a wild and furious nocturnal hunt, through
