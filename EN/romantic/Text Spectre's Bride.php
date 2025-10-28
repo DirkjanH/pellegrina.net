@@ -51,6 +51,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
+    <style>
+        td.nr {
+            width: 30px;
+            vertical-align: top;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -65,22 +72,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <table>
                 <tbody>
                     <tr>
-                        <td width="47">
-                            <p>1.</p>
-                        </td>
+                        <td class="nr">1.
+                        <td>
                         <td width="265">
                             <p>Už jedenáctá odbila,<br /> a lampa ještě svítila,<br /> a lampa ještě hořela,<br /> co nad klekadlem visela.<br /> Na stěně nízké světničky<br /> byl obraz boží rodičky,<br /> rodičky boží s děťátkem,<br /> tak jako růže s poupátkem.</p>
-                            <p>A před tou mocnou světicí<br /> viděti pannu klečící:<br /> klečela, líce skloněné,<br /> ruce na prsa složené;<br /> slzy jí z očí padaly,<br /> čelem se ňádra zdvihaly.<br /> A když slzička upadla,<br /> v ty bílé ňádra zapadla.</p>
-                        </td>
+                            <p>A před tou mocnou světicí<br /> viděti pannu klečící:<br /> klečela, líce skloněné,<br /> ruce na prsa složené;<br /> slzy jí z očí padaly,<br /> čelem se ňádra zdvihaly.<br /> A když slzička upadla,<br /> v ty bílé ňádra zapadla.
+                        <td>
                         <td width="293">
                             <p>The eleventh hour was past and gone, <br /> But still the lamp burnt on and on. <br /> The lamp that on the praying chair <br /> Cast an uneven, ghastly glare. <br /> On the low wall a picture hung, <br /> God's parents, praised by every tongue. <br /> The parents with the Holy Child, <br /> Hoses, with rosebud, saintly mild. </p>
                             <p>Before the heavenly three a maid <br /> Upon her knees her prayers said. <br /> Her face shone with a holy rest, <br /> Her arms were crossed upon her breast. <br /> And as her tears fell soft and slow, <br /> Her bosom swelled with hidden woe. <br /> Her tears they fell like diamonds bright <br /> Upon her bosom snowy white. </p>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>2.</p>
-                        </td>
+                        <td class="nr">2.
+                        <td>
                         <td width="265">
                             <p>"Žel bohu, kde můj tatíček?<br /> Již na něm roste trávníček!<br /> Žel bohu, kde má matička?<br /> Tam leží - podle tatíčka!<br /> Sestra do roka nežila,<br /> bratra mi koule zabila.</p>
                             <p>Měla jsem, smutná, milého,<br /> život bych dala pro něho!<br /> Do ciziny se obrátil,<br /> potud se ještě nevrátil.<br /> Do ciziny se ubíral,<br /> těšil mě, slzy utíral:<br /> "Zasej, má milá, zasej len,<br /> vzpomínej na mne každý den,<br /> první rok přádla hledívej,<br /> druhý rok plátno polívej,<br /> třetí košile vyšívej:<br /> až ty košile ušiješ,<br /> věneček z routy poviješ."</p>
@@ -95,9 +100,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>3.</p>
-                        </td>
+                        <td class="nr">3.
+                        <td>
                         <td width="265">
                             <p>Pohnul se obraz na stěně -<br /> i vzkřikla panna zděšeně;<br /> lampa, co temně hořela,<br /> prskla a zhasla docela.<br /> Možná, žeť větru tažení,<br /> možná i - zlé že znamení!</p>
                             <p>A slyš! na záspí kroků zvuk<br /> a na okénko: ťuk, ťuk, ťuk!<br /> "Spíš, má panenko, nebo bdíš?</p>
@@ -108,9 +112,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>4.</p>
-                        </td>
+                        <td class="nr">4.
+                        <td>
                         <td width="265">
                             <p>Hoj, má panenko, tu jsem již!<br /> Hoj, má panenko, co děláš?<br /> A zdalipak mě ještě znáš,<br /> aneb jiného v srdci máš?"</p>
                             <p>"Ach můj milý, ach pro nebe,<br /> tu dobu myslím na tebe;<br /> na tě jsem vždycky myslila,<br /> za tě se právě modlila!"</p>
@@ -127,20 +130,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>5.</p>
-                        </td>
+                        <td class="nr">5.
+                        <td>
                         <td width="265">
-                            <p>Byla noc, byla hluboká,<br /> měsíček svítil z vysoka<br /> a ticho, pusto v dědině,<br /> vítr burácel jedině.</p>
-                        </td>
+                            <p>Byla noc, byla hluboká,<br /> měsíček svítil z vysoka<br /> a ticho, pusto v dědině,<br /> vítr burácel jedině.
+                        <td>
                         <td width="293">
                             <p>It was deep midnight when they went, <br /> The moon far off watched, nearly spent. <br /> The landscape lay in silence deep, <br /> Only the wind it would not sleep. </p>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>6.</p>
-                        </td>
+                        <td class="nr">6.
+                        <td>
                         <td width="265">
                             <p>A on tu napřed - skok a skok,<br /> a ona za ním, co jí krok.<br /> Psi houfem ve vsi zavyli,<br /> když ty pocestné zvětřili;<br /> a vyli, vyli divnou věc:<br /> žetě nablízku umrlec!</p>
                         </td>
@@ -149,9 +150,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>7.</p>
-                        </td>
+                        <td class="nr">7.
+                        <td>
                         <td width="265">
                             <p>"Pěkná noc, jasná - v tu dobu<br /> vstávají mrtví ze hrobů,<br /> a nežli zvíš, jsou tobě blíž -<br /> má milá, nic se nebojíš?"</p>
                             <p>"Což bych se bála? Tys se mnou,<br /> a oko boží nade mnou. -<br /> Pověz, můj milý, řekni přec,<br /> živ-li a zdráv je tvůj otec?<br /> Tvůj otec a tvá milá máť,<br /> a ráda-li mě bude znáť?"</p>
@@ -166,9 +166,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>8.</p>
-                        </td>
+                        <td class="nr">8.
+                        <td>
                         <td width="265">
                             <p>Knížky jí vzal a zahodil,<br /> a byli skokem deset mil.</p>
                             <p>A byla cesta výšinou,<br /> skalami, lesní pustinou;<br /> a v rokytí a v úskalí<br /> divoké feny štěkaly;</p>
@@ -179,30 +178,28 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>9.</p>
-                        </td>
+                        <td class="nr">9.
+                        <td>
                         <td width="265">
                             <p>a kulich hlásal pověsti:<br /> žetě nablízku neštěstí. -</p>
-                            <p>A on vždy napřed - skok a skok,<br /> a ona za ním, co jí krok.<br /> Po šípkoví a po skalí<br /> ty bílé nohy šlapaly;<br /> a na hloží a křemení<br /> zůstalo krve znamení.</p>
-                        </td>
+                            <p>A on vždy napřed - skok a skok,<br /> a ona za ním, co jí krok.<br /> Po šípkoví a po skalí<br /> ty bílé nohy šlapaly;<br /> a na hloží a křemení<br /> zůstalo krve znamení.
+                        <td>
                         <td width="293">
                             <p>And the voice of the screech-owl told <br /> Of evil that threatened the bold. </p>
                             <p>And he went onward, striding fast, <br /> She, step for step, behind him passed. <br /> Across the stony, rocky way, <br /> Her white feet went that evil day. <br /> And e'en the weeds, and tangled grass, <br /> Were stained with blood as she did pass. </p>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>10.</p>
-                        </td>
+                        <td class="nr">10.
+                        <td>
                         <td width="265">
                             <p>"Pěkná noc, jasná - v tento čas<br /> mrtví s živými chodí zas;<br /> a nežli zvíš, jsou tobě blíž -<br /> má milá, nic se nebojíš?"</p>
                             <p>"Což bych se bála? Tys se mnou,<br /> a ruka Páně nade mnou. -<br /> Pověz, můj milý, řekni jen,<br /> jak je tvůj domek upraven?<br /> Čistá světnička? Veselá?<br /> A zdali blízko kostela?"</p>
                             <p>"Moc, má panenko, moc se ptáš,<br /> však ještě dnes to uhlídáš.<br /> Jen honem pojď - čas utíká,<br /> a dálka ještě veliká.<br /> Co máš, má milá, za pasem?"</p>
                             <p>"Růženec s sebou vzala jsem."</p>
                             <p>"Ho, ten růženec z klokočí<br /> jako had tebe otočí!<br /> Zúží tě, stáhne tobě dech:<br /> zahoď jej pryč - neb máme spěch!"</p>
-                            <p>Růženec popad, zahodil,<br /> a byli skokem dvacet mil.</p>
-                        </td>
+                            <p>Růženec popad, zahodil,<br /> a byli skokem dvacet mil.
+                        <td>
                         <td width="293">
                             <p>"The night is fine — such nights the dead <br /> Walk with the living, I've heard said." <br /> "And ere one knows, stand by one's side — <br /> My love doth fear? Wouldst thou hide?" </p>
                             <p>"Why should I fear? Why should I hide? <br /> God is above — thou by my side." <br /> "But, tell me, is your cottage large? <br /> And who, my love, has it in charge?" <br /> "Is the room big? And is it bright? <br /> Is the church, loved one, within sight?" </p>
@@ -213,30 +210,28 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>11.</p>
-                        </td>
+                        <td class="nr">11.
+                        <td>
                         <td width="265">
                             <p>A byla cesta nížinou,<br /> přes vody, luka, bažinou;<br /> a po bažině, po sluji<br /> modrá světélka laškují:<br /> dvě řady, devět za sebou,<br /> jako když s tělem k hrobu jdou;<br /> a žabí havěť v potoce<br /> pohřební píseň skřehoce. -</p>
-                            <p>A on vždy napřed - skok a skok,<br /> a jí za ním již slábne krok.<br /> Ostřice dívku ubohou<br /> břitvami řeže do nohou;<br /> a to kapradí zelené<br /> je krví její zbarvené.</p>
-                        </td>
+                            <p>A on vždy napřed - skok a skok,<br /> a jí za ním již slábne krok.<br /> Ostřice dívku ubohou<br /> břitvami řeže do nohou;<br /> a to kapradí zelené<br /> je krví její zbarvené.
+                        <td>
                         <td width="293">
                             <p>And the road was swampy and bad. <br /> By morasses, desolate, sad. <br /> O'er the marshes the corpse-lights shone, <br /> Ghastly blue they glimmered alone. <br /> Nine on each side, they went ahead, <br /> As though they burned for some poor dead. <br /> The frogs they sang the burial hymn, <br /> The blue lights flickered and grew dim. </p>
                             <p>And he went onward, striding fast, <br /> She wearily behind him passed. <br /> Poor maiden, why your feet are sore, <br /> And blood runs where your feet you tore. <br /> The weeds are covered with your blood, <br /> But on he strides with heavy thud. </p>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>12.</p>
-                        </td>
+                        <td class="nr">12.
+                        <td>
                         <td width="265">
                             <p>"Pěkná noc, jasná - v tu dobu<br /> spěchají živí ke hrobu;<br /> a nežli zvíš, jsi hrobu blíž -<br /> má milá, nic se nebojíš?"</p>
                             <p>"Ach nebojím, vždyť tys se mnou,<br /> a vůle Páně nade mnou!<br /> Jen ustaň málo v pospěchu,<br /> jen popřej málo oddechu.<br /> Duch slábne, nohy klesají,<br /> a k srdci nože bodají!"</p>
                             <p>"Jen pojď a pospěš, děvče mé,<br /> však brzo již tam budeme.<br /> Hosté čekají, čeká kvas,<br /> a jako střela letí čas. -<br /> Co to máš na té tkaničce<br /> na krku na té tkaničce?"</p>
                             <p>"To křížek po mé matičce."</p>
                             <p>"Hoho, to zlato proklaté<br /> má hrany ostře špičaté!<br /> Bodá tě - a mě nejinak,<br /> zahoď to, budeš jako pták!</p>
-                            <p>Křížek jí vzal a zahodil,<br /> a byli skokem třicet mil.</p>
-                        </td>
+                            <p>Křížek jí vzal a zahodil,<br /> a byli skokem třicet mil.
+                        <td>
                         <td width="293">
                             <p>"The night is fine — such nights the dead <br /> Seek out the living, I've heard said." <br /> "And ere one thinks, one's grave is near — <br /> Say, my beloved, dost thou fear?" </p>
                             <p>"I fear not; thou art by my side — <br /> And God's will — why it must betide." <br /> "But wait a moment, let me stay, <br /> And rest a while upon the way." <br /> Her soul was faint, her knees were weak. <br /> And swords seemed in her heart to meet. </p>
@@ -247,20 +242,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>13.</p>
-                        </td>
+                        <td class="nr">13.
+                        <td>
                         <td width="265">
-                            <p>Tu na planině široké<br /> stavení stojí vysoké;<br /> a úzká dlouhá okna jsou,<br /> a věž se zvonkem nad střechou.</p>
-                        </td>
+                            <p>Tu na planině široké<br /> stavení stojí vysoké;<br /> a úzká dlouhá okna jsou,<br /> a věž se zvonkem nad střechou.
+                        <td>
                         <td width="293">
                             <p>Upon a wide and open plain <br /> She saw a building once again. <br /> The windows they were narrow, high, <br /> A bell hung in the turret nigh. </p>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>14.</p>
-                        </td>
+                        <td class="nr">14.
+                        <td>
                         <td width="265">
                             <p>"Hoj, má panenko, tu jsme již!<br /> Nic, má panenko, nevidíš?"</p>
                             <p>"Ach proboha, ten kostel snad?<br /> Ten hřbitov - a těch křížů řad?"</p>
@@ -285,9 +278,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>15.</p>
-                        </td>
+                        <td class="nr">15.
+                        <td>
                         <td width="265">
                             <p>Skokem přeskočil ohradu,<br /> nic nepomyslil na zradu;<br /> skočil do výše sáhů pět -<br /> jí však již venku nevidět:<br /> jenom po bílém obleku<br /> zablesklo se jest v útěku,<br /> a schrána její blízko dost -<br /> nenadál se zlý její host!</p>
                             <p>Stojíť tu, stojí komora:<br /> nizoučké dvéře - závora;<br /> zavrzly dvéře za pannou<br /> a závora jí ochranou.<br /> Stavení skrovné, bez oken,<br /> měsíc lištami šeřil jen;<br /> stavení pevné jako klec,<br /> a v něm na márách - umrlec.</p>
@@ -302,9 +294,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>16.</p>
-                        </td>
+                        <td class="nr">16.
+                        <td>
                         <td width="265">
                             <p>A tu na dvéře: buch, buch, buch!<br /> burácí zvenčí její druh:<br /> "Vstávej, umrlče, nahoru,<br /> odstrč mi tam tu závoru!"</p>
                             <p>A mrtvý oči otvírá,<br /> a mrtvý oči protírá,<br /> sbírá se, hlavu pozvedá<br /> a půlkolem se ohlédá.</p>
@@ -315,8 +306,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                             <p>"Spas duši, Kriste Ježíši,<br /> smiluj se v bídě nejvyšší! -<br /> Ty mrtvý, nevstávej a lež;<br /> pánbůh tě potěš - a mne též!"</p>
                             <p>A mrtvý zas se položiv,<br /> natáhnul údy jako dřív. -</p>
                             <p>A znova venku: buch, buch, buch!<br /> a panně mizí zrak i sluch!<br /> Vstávej, umrlče, hola hou,<br /> a podej mi sem tu živou!</p>
-                            <p>Ach běda, běda děvčeti!<br /> Umrlý vstává potřetí<br /> velké, kalné své oči<br /> na polomrtvou otočí.</p>
-                        </td>
+                            <p>Ach běda, běda děvčeti!<br /> Umrlý vstává potřetí<br /> velké, kalné své oči<br /> na polomrtvou otočí.
+                        <td>
                         <td width="293">
                             <p>The dead one opens wide his eyes, <br /> He makes as though he would arise. <br /> His head he raises from the bier, <br /> He looks about him, far and near. </p>
                             <p>"Great God! Thy mercy now I pray — <br /> Oh, keep me from the devil's sway!" <br /> "You dead one, lay you down to sleep — <br /> God in His mercy, thy soul keep." </p>
@@ -331,9 +322,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>17.</p>
-                        </td>
+                        <td class="nr">17.
+                        <td>
                         <td width="265">
                             <p>"Maria Panno, při mně stůj,<br /> u syna svého oroduj!<br /> Nehodně jsem tě prosila:<br /> ach odpusť, co jsem zhřešila!<br /> Maria, matko milosti,<br /> z té moci zlé mě vyprosti."</p>
                         </td>
@@ -342,9 +332,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         </td>
                     </tr>
                     <tr>
-                        <td width="47">
-                            <p>18.</p>
-                        </td>
+                        <td class="nr">18.
+                        <td>
                         <td width="265">
                             <p>A slyš, tu právě nablízce<br /> kokrhá kohout ve vísce;<br /> a za ním, co ta dědina,<br /> všecka kohoutí družina.</p>
                             <p>Tu mrtvý, jak se postavil,<br /> pádem se na zem povalil,<br /> a venku ticho - ani ruch:<br /> zmizel dav, i zlý její druh. -</p>
