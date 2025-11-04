@@ -129,7 +129,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 					<p>for instrumentalists &amp; (choir &amp; solo) singers, with chamber music and chamber choir<br>
 					</p>
 					<ul>
-						<li>České Budějovice (Czechia), 30 July - 9 August<?php echo $jaar ?>
+						<li>České Budějovice (Czechia), 30 July - 9 August <?php echo $jaar ?>
 						</li>
 					</ul>
 					<p class="plaatsvoor onzichtbaar">The choir has a few places in all voice groups, in particular for sopranos and basses</p>
