@@ -61,7 +61,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                         ?> <div id="main">
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
             <h2><a name="programma"></a>De muziek</h2>
-            <p>Al 35 jaar organiseert La Pellegrina een jaarlijkse zomercursus
+            <p>Al 36 jaar organiseert La Pellegrina een jaarlijkse zomercursus
                 voor instrumentalisten en (koor)zangers. Deze cursus heeft twee
                 aspecten: kamermuziek c.q. kamerkoor, en een gezamenlijk
                 programma voor solisten, orkest en koor. De cursus vindt plaats
