@@ -3,7 +3,7 @@
 //ini_set('display_errors', 1);
 error_reporting(E_ERROR);
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
 use Pelago\Emogrifier\CssInliner;
 

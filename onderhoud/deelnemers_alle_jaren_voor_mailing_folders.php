@@ -1,5 +1,5 @@
 <?php //Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 // begin Recordset
 $query_lijst = "SELECT DISTINCT naam, voornaam, adres, postcode, plaats, land, taal, email FROM inschrijving, dlnmr, adres WHERE dlnmrid = dlnmrid_fk AND adresid_fk = adresid 
 and NOT (afgewezen <=> 1) and naam NOT LIKE '%XXX%' AND NOT (toehoorder <=> 1) ORDER BY achternaam ASC";

@@ -1,5 +1,5 @@
 <?php //Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 // begin Recordset
 $query_woonruimte = "SELECT naam, particulier, acc_wens, eenpersoons, kamperen, CursusId_FK FROM inschrijving, dlnmr WHERE dlnmrid = dlnmrid_fk AND naam NOT LIKE \"%XXX%\" AND aangenomen = 1 AND CursusId_FK > {$cursus_offset} AND CursusId_FK <= ({$aantal_cursussen} + {$cursus_offset}) order by cursusid_fk, achternaam";
 $woonruimte = $inschrijf->SelectLimit($query_woonruimte) or die($inschrijf->ErrorMsg());

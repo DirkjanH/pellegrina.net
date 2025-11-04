@@ -12,7 +12,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 Kint::$enabled_mode = false;
 
 //Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
 if (empty($_SESSION['Set']) or $_SESSION['Set'] == '') $_SESSION['Set'] = 1;
 if (empty($_SESSION['Cursus'])) $_SESSION['Cursus'] = 1;

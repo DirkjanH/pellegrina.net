@@ -1,5 +1,5 @@
 <?php //Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 $query_Cursus = "SELECT InschId, naam, instr, instrumenten, zangstem FROM inschrijving, dlnmr WHERE DlnmrId_FK = DlnmrId and instr IS NOT NULL ORDER BY InschId";
 
 $Cursus = $inschrijf->SelectLimit($query_Cursus) or die($inschrijf->ErrorMsg());

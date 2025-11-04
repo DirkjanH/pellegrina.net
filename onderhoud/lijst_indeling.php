@@ -1,5 +1,5 @@
 <?php //Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 $CursusId = $eerstecursus;
 if (isset($_GET['cursus']) and $_GET['cursus'] != "")
 	$CursusId = $_GET['cursus'] + $cursus_offset; // cursusnummer

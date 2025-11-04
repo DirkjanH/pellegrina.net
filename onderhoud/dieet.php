@@ -35,7 +35,7 @@ Kint::$enabled_mode = false;
 
 		<?php
 		//Connection statement
-		require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+		require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 		/* echo '<pre>';
 print_r($_GET);
 echo '</pre>';
