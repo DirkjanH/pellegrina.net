@@ -206,7 +206,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     pianist moet je een solistische partij aankunnen. De
                     instrumentale bezetting van de cursus wordt bepaald door de
                     orkestwerken: in principe is er plaats voor dubbel hout,
-                    twee hoorns, pauken en strijkers 8-8-6-6-3 (of een paar
+                    vier hoorns, pauken en strijkers 8-8-6-6-3 (of een paar
                     meer). In de kamermuziek is er plaats voor vier pianisten.
                     Zij spelen in de kamermuziek-ensembles begeleiden zangers in
                     hun aria's en kunnen zelfs pauken of ander slagwerk spelen
