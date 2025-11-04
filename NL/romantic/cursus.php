@@ -126,7 +126,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 tijdgenoot voor te bereiden en de andere instrumentalisten
                 worden gevraagd om dat - van blad spelend - te begeleiden.</p>
             <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
-                eerste muzikale pellegrina week door het niveau van de cursus,
+                eerste muzikale Pellegrina week door het niveau van de cursus,
                 de afwisseling van kamermuziek en tutti programma, de
                 begeleiding door goede coaches en de heerlijk muziek!"</p>
             <div class="container">
