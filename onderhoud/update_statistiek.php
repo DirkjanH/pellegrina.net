@@ -125,7 +125,8 @@ while ($i <= ($laatstecursus)) {
 	// begin Recordset
 	$query_Eenp = "SELECT InschId FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eenpersoons = 1 and NOT (afgewezen <=> 1)";
 	$Eenp = select_query($query_Eenp);
-	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp); else $Eenp_aantal[$i] = 0;
+	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp);
+	else $Eenp_aantal[$i] = 0;
 	// end Recordset
 
 	// begin Recordset
@@ -333,6 +334,7 @@ while ($i <= ($laatstecursus)) {
 						<?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting'] - $cursus['totaal']['aanbet_bedrag']); ?> | gemiddelde leeftijd
 						<?php $meer = $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'];
 						if (isset($aangenomen['totaal']) and $aangenomen['totaal'] > 0) $percentage_meer = round(($meer / $aangenomen['totaal']) * 100);
+						else $percentage_meer = 0;
 						if (isset($leeftijd['gemiddelde']) and $leeftijd['gemiddelde'] > 0) echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?> | aantal deelnemers vorig jaar
 						<?php echo $deelnemers_vorigjaar['totaal']; ?> (<?php if ($meer >= 0) echo '+';
 																		echo $meer . ' = ' . $percentage_meer . '%'; ?>)
