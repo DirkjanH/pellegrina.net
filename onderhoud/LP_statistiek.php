@@ -32,10 +32,10 @@ while ($i <= ($laatstecursus)) {
 
 	switch ($i) {
 		case $cursus_offset + 1:
-			$oud = 61; // romantiek
+			$oud = 60; // romantiek
 			break;
 		case $cursus_offset + 2:
-			$oud = 62; // barok
+			$oud = 61; // barok
 			break;
 	}
 
