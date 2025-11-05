@@ -125,7 +125,7 @@ while ($i <= ($laatstecursus)) {
 	// begin Recordset
 	$query_Eenp = "SELECT InschId FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eenpersoons = 1 and NOT (afgewezen <=> 1)";
 	$Eenp = select_query($query_Eenp);
-	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp) else $Eenp_aantal[$i] = 0;
+	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp); else $Eenp_aantal[$i] = 0;
 	// end Recordset
 
 	// begin Recordset
