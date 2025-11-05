@@ -32,10 +32,10 @@ while ($i <= ($laatstecursus)) {
 
 	switch ($i) {
 		case $cursus_offset + 1:
-			$oud = 59; // romantiek
+			$oud = 61; // romantiek
 			break;
 		case $cursus_offset + 2:
-			$oud = 58; // barok
+			$oud = 62; // barok
 			break;
 	}
 
@@ -125,7 +125,7 @@ while ($i <= ($laatstecursus)) {
 	// begin Recordset
 	$query_Eenp = "SELECT InschId FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eenpersoons = 1 and NOT (afgewezen <=> 1)";
 	$Eenp = select_query($query_Eenp);
-	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp);
+	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp) else $Eenp_aantal[$i] = 0;
 	// end Recordset
 
 	// begin Recordset
