@@ -24,23 +24,19 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
 ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_aanmelding_NL.dwt.php" codeOutsideHTMLIsLocked="true" -->
+<html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
-<!-- CSS: -->
 <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 <link rel="stylesheet" href="/css/aanmelding.css" type="text/css">
 
 <head>
 
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>Aanmeldingsformulier '<?php echo $cursusdata['cursusnaam_nl']; ?>'</title>
-  <!-- InstanceEndEditable -->
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-  <!-- InstanceBeginEditable name="head" -->
-  <!-- InstanceEndEditable -->
+
   <!-- Facebook Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -67,6 +63,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
   <!-- End Facebook Pixel Code -->
+
 </head>
 
 <body>
@@ -78,8 +75,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
     ?>
     <div id="main">
-      <!-- InstanceBeginEditable name="mainpage" -->
-      <?php // Haal de inleiding + het NAW formulier op
+ 
+ <?php // Haal de inleiding + het NAW formulier op
       require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_NL.php'; ?>
 
       <table class="formulier" id="instr_kop">
@@ -496,15 +493,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
         </tr>
       </table>
       <p>Kijk op de pagina <a href="praktisch.php" target="_blank">praktische zaken</a> voor handige manieren van internationaal betalen.</p>
+
       <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/akkoord_voorwaarden_NL.php'; ?>
-      <p><input name="submit" type="submit" value="verzenden"></p>
-      <p><span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
-      </p>
-      <input type="hidden" name="MM_insert" value="aanmelding">
-    </form>
-    </td>
-    </tr>
-    </table>
     <h2><a href="javascript: history.go(-1)">Terug</a></h2>
   </div>
   </div>

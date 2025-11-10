@@ -8,3 +8,11 @@
             Ik begrijp dat mijn persoonlijke gegevens worden opgeslagen om praktische redenen die verband houden met de organisatie van de zomercursus. Mijn gegevens worden beschikbaar gesteld aan andere deelnemers en docenten. Ze worden nooit met andere partijen gedeeld zonder mijn uitdrukkelijke toestemming.</td>
         </tr>
       </table>
+      <p><input name="submit" type="submit" value="verzenden"></p>
+      <p><span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
+      </p>
+      <input type="hidden" name="MM_insert" value="aanmelding">
+    </form>
+    </td>
+    </tr>
+    </table>
