@@ -28,6 +28,7 @@ table.formulier hr {
   clear: both;
   margin-top: 30px;
   text-align: center;
+  color: black;
 }
 table.formulier textarea,
 select,
