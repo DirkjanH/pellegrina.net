@@ -9,7 +9,7 @@
         </tr>
       </table>
       <p><input name="submit" type="submit" value="submit"></p>
-      <p><span class="nadruk">(Please click only once. You will be redirected to the payment page or receive an automatic confirmation of the shipment)</span>
+      <p><span class="nadruk">(Please click only once. You will be redirected to the payment page or receive an automatic confirmation of your registration)</span>
       </p>
       <input type="hidden" name="MM_insert" value="aanmelding">
     </form>
