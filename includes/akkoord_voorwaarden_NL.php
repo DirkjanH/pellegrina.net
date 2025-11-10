@@ -9,7 +9,7 @@
         </tr>
       </table>
       <p><input name="submit" type="submit" value="verzenden"></p>
-      <p><span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
+      <p><span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van je aanmelding)</span>
       </p>
       <input type="hidden" name="MM_insert" value="aanmelding">
     </form>
