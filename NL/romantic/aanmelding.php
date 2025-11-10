@@ -498,8 +498,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
       <p>Kijk op de pagina <a href="praktisch.php" target="_blank">praktische zaken</a> voor handige manieren van internationaal betalen.</p>
       <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/akkoord_voorwaarden_NL.php'; ?> 
       <div class="w3-panel">
-        <p><input name="submit" type="submit" value="verzenden"><br>
-          <span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
+        <input name="submit" type="submit" value="verzenden"><br>
+          <p><span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
         </p>
         <input type="hidden" name="MM_insert" value="aanmelding">
       </div>
