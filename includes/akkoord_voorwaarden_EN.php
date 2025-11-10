@@ -8,3 +8,11 @@
             I understand that my personal data will be stored for practical reasons related to the organization of the summer course. My data will be made available to other participants and tutors. They will never be shared with other parties without my express consent.
         </tr>
       </table>
+      <p><input name="submit" type="submit" value="verzenden"></p>
+      <p><span class="nadruk">(Please click only once. You will be redirected to the payment page or receive an automatic confirmation of the shipment)</span>
+      </p>
+      <input type="hidden" name="MM_insert" value="aanmelding">
+    </form>
+    </td>
+    </tr>
+    </table>
