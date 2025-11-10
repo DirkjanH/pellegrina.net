@@ -496,19 +496,17 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
         </tr>
       </table>
       <p>Kijk op de pagina <a href="praktisch.php" target="_blank">praktische zaken</a> voor handige manieren van internationaal betalen.</p>
-      <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/akkoord_voorwaarden_NL.php'; ?> 
-      <div class="w3-panel">
-        <input name="submit" type="submit" value="verzenden"><br>
-          <p><span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
-        </p>
-        <input type="hidden" name="MM_insert" value="aanmelding">
-      </div>
-      </form>
-      </td>
-      </tr>
-      </table>
-      <h2><a href="javascript: history.go(-1)">Terug</a></h2>
-    </div>
+      <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/akkoord_voorwaarden_NL.php'; ?>
+      <p><input name="submit" type="submit" value="verzenden"></p>
+      <p><span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
+      </p>
+      <input type="hidden" name="MM_insert" value="aanmelding">
+    </form>
+    </td>
+    </tr>
+    </table>
+    <h2><a href="javascript: history.go(-1)">Terug</a></h2>
+  </div>
   </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
