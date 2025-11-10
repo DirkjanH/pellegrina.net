@@ -6,12 +6,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -24,54 +24,55 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
-<!-- InstanceBegin template="/Templates/LP_aanmelding_EN.dwt.php" codeOutsideHTMLIsLocked="true" -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-<!-- CSS: -->
+
 <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 <link rel="stylesheet" href="/css/aanmelding.css" type="text/css">
+
 <head>
     <title>Aanmeldingsformulier '<?php echo $cursusdata['cursusnaam_en']; ?>'
     </title>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-                                    echo $navigatie;
-                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
-                                    ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" -->
+                                        echo $navigatie;
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
+                                        ?> <div id="main">
             <?php // Haal de inleiding + het NAW formulier op
-                                                      require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_EN.php'; ?>
+            require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_EN.php'; ?>
             <table class="formulier" id="instr_kop">
                 <tr>
                     <td class="linkerkolom"><input name="instrumentalist"
@@ -97,45 +98,45 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             <OPTGROUP LABEL="Winds">
                                 <OPTION VALUE="112"
                                     <?php
-                  if (isset($instr) and stristr($instr, '112') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '112') !== false) echo 'selected'; ?>>
                                     traverso </OPTION>
                                 <OPTION VALUE="116"
                                     <?php
-                  if (isset($instr) and stristr($instr, '116') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '116') !== false) echo 'selected'; ?>>
                                     recorder </OPTION>
                                 <OPTION VALUE="122"
                                     <?php
-                  if (isset($instr) and stristr($instr, '122') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '122') !== false) echo 'selected'; ?>>
                                     baroque oboe </OPTION>
                                 <OPTION VALUE="141"
                                     <?php
-                  if (isset($instr) and stristr($instr, '141') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '141') !== false) echo 'selected'; ?>>
                                     baroque bassoon</OPTION>
                                 <OPTION VALUE="160"
                                     <?php
-                  if (isset($instr) and stristr($instr, '160') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '160') !== false) echo 'selected'; ?>>
                                     baroque trumpet</OPTION>
                             </OPTGROUP>
                             <OPTGROUP LABEL="Strings">
                                 <OPTION VALUE="210"
                                     <?php
-                  if (isset($instr) and stristr($instr, '210') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '210') !== false) echo 'selected'; ?>>
                                     violin </OPTION>
                                 <OPTION VALUE="220"
                                     <?php
-                  if (isset($instr) and stristr($instr, '220') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '220') !== false) echo 'selected'; ?>>
                                     viola</OPTION>
                                 <OPTION VALUE="230"
                                     <?php
-                  if (isset($instr) and stristr($instr, '230') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '230') !== false) echo 'selected'; ?>>
                                     cello</OPTION>
                                 <OPTION VALUE="240"
                                     <?php
-                  if (isset($instr) and stristr($instr, '240') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '240') !== false) echo 'selected'; ?>>
                                     double bass </OPTION>
                                 <OPTION VALUE="250"
                                     <?php
-                  if (isset($instr) and stristr($instr, '250') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '250') !== false) echo 'selected'; ?>>
                                     viola da gamba [please indicate under
                                     'remarks' which instruments you play:
                                     descant, alto/tenor and/or bass]</OPTION>
@@ -143,20 +144,20 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             <OPTGROUP LABEL="Continuo instruments">
                                 <OPTION VALUE="320"
                                     <?php
-                  if (isset($instr) and stristr($instr, '320') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '320') !== false) echo 'selected'; ?>>
                                     harpsichord </OPTION>
                                 <OPTION VALUE="330"
                                     <?php
-                  if (isset($instr) and stristr($instr, '330') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '330') !== false) echo 'selected'; ?>>
                                     organ</OPTION>
                                 <OPTION VALUE="340"
                                     <?php
-                  if (isset($instr) and stristr($instr, '340') !== false) echo 'selected'; ?>>
+                                    if (isset($instr) and stristr($instr, '340') !== false) echo 'selected'; ?>>
                                     theorbo </OPTION>
                             </OPTGROUP>
                             <OPTION VALUE="000"
                                 <?php
-                if (isset($instr) and stristr($instr, '000') !== false) echo 'selected'; ?>>
+                                if (isset($instr) and stristr($instr, '000') !== false) echo 'selected'; ?>>
                                 other [please describe under 'remarks']</OPTION>
                         </SELECT>
                     </td>
@@ -187,7 +188,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td><strong>
                             <textarea name="stukken_i" rows="4"
                                 cols="70"><?php
-                          if (isset($_POST['stukken_i'])) echo $_POST['stukken_i']; ?></textarea>
+                                            if (isset($_POST['stukken_i'])) echo $_POST['stukken_i']; ?></textarea>
                         </strong></td>
                 </tr>
                 <tr>
@@ -195,15 +196,15 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td>I have&nbsp; <input name="ervaring_i" type="radio"
                             value="weinig"
                             <?php
-              if (isset($_POST['ervaring_i']) and ($_POST['ervaring_i'] == "weinig")) echo 'checked'; ?>>
+                            if (isset($_POST['ervaring_i']) and ($_POST['ervaring_i'] == "weinig")) echo 'checked'; ?>>
                         little&nbsp; <input type="radio" name="ervaring_i"
                             value="enige"
                             <?php
-              if (isset($_POST['ervaring_i']) and ($_POST['ervaring_i'] == "enige")) echo 'checked'; ?>>
+                            if (isset($_POST['ervaring_i']) and ($_POST['ervaring_i'] == "enige")) echo 'checked'; ?>>
                         some&nbsp; <input type="radio" name="ervaring_i"
                             value="veel"
                             <?php
-              if (isset($_POST['ervaring_i']) and ($_POST['ervaring_i'] == "veel")) echo 'checked'; ?>>
+                            if (isset($_POST['ervaring_i']) and ($_POST['ervaring_i'] == "veel")) echo 'checked'; ?>>
                         extensive experience in chamber music.</td>
                 </tr>
             </table>
@@ -227,25 +228,25 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                         <p><strong>My voice type is:</strong></p>
                         <input name="zangstem" type="radio" value="10"
                             <?php
-              if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "10")) echo 'checked'; ?>>soprano  <input
+                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "10")) echo 'checked'; ?>>soprano  <input
                             type="radio" name="zangstem" value="20"
                             <?php
-              if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "20")) echo 'checked'; ?>>mezzosoprano  <input
+                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "20")) echo 'checked'; ?>>mezzosoprano  <input
                             type="radio" name="zangstem" value="30"
                             <?php
-              if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "30")) echo 'checked'; ?>>alto  <input
+                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "30")) echo 'checked'; ?>>alto  <input
                             type="radio" name="zangstem" value="40"
                             <?php
-              if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "40")) echo 'checked'; ?>>countertenor  <input
+                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "40")) echo 'checked'; ?>>countertenor  <input
                             type="radio" name="zangstem" value="50"
                             <?php
-              if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "50")) echo 'checked'; ?>>tenor  <input
+                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "50")) echo 'checked'; ?>>tenor  <input
                             type="radio" name="zangstem" value="60"
                             <?php
-              if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "60")) echo 'checked'; ?>>baritone  <input
+                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "60")) echo 'checked'; ?>>baritone  <input
                             type="radio" name="zangstem" value="70"
                             <?php
-              if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "70")) echo 'checked'; ?>>bass
+                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "70")) echo 'checked'; ?>>bass
                     </td>
                 </tr>
                 <tr>
@@ -253,19 +254,19 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td>Ability:  <input name="niveau_z" type="radio"
                             value="redelijk"
                             <?php
-              if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "redelijk")) echo 'checked'; ?>>
+                            if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "redelijk")) echo 'checked'; ?>>
                         fairly advanced  <input type="radio" name="niveau_z"
                             value="zeer"
                             <?php
-              if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "zeer")) echo 'checked'; ?>>
+                            if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "zeer")) echo 'checked'; ?>>
                         well advanced  <input type="radio" name="niveau_z"
                             value="zangstudent"
                             <?php
-              if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "zangstudent")) echo 'checked'; ?>>
+                            if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "zangstudent")) echo 'checked'; ?>>
                         singing student  <input type="radio" name="niveau_z"
                             value="beroeps"
                             <?php
-              if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "beroeps")) echo 'checked'; ?>>
+                            if (isset($_POST['niveau_z']) and ($_POST['niveau_z'] == "beroeps")) echo 'checked'; ?>>
                         professional standard</td>
                 </tr>
                 <tr>
@@ -277,7 +278,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td></td>
                     <td><textarea name="stukken_z" rows="4"
                             cols="70"><?php
-                        if (isset($_POST['stukken_z'])) echo $_POST['stukken_z']; ?></textarea>
+                                        if (isset($_POST['stukken_z'])) echo $_POST['stukken_z']; ?></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -285,14 +286,15 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td>I have&nbsp; <input name="ervaring_z" type="radio"
                             value="weinig"
                             <?php
-              if (isset($_POST['ervaring_z']) and ($_POST['ervaring_z'] == "weinig")) echo 'checked'; ?>>little&nbsp;
+                            if (isset($_POST['ervaring_z']) and ($_POST['ervaring_z'] == "weinig")) echo 'checked'; ?>>little&nbsp;
                         <input type="radio" name="ensemble_z" value="enige"
                             <?php
-              if (isset($_POST['ervaring_z']) and ($_POST['ervaring_z'] == "enige")) echo 'checked'; ?>>some&nbsp; <input
+                            if (isset($_POST['ervaring_z']) and ($_POST['ervaring_z'] == "enige")) echo 'checked'; ?>>some&nbsp; <input
                             type="radio" name="ensemble_z" value="veel"
                             <?php
-              if (isset($_POST['ervaring_z']) and ($_POST['ervaring_z'] == "veel")) echo 'checked'; ?>> extensive
-                        experience in solo ensembles. </td>
+                            if (isset($_POST['ervaring_z']) and ($_POST['ervaring_z'] == "veel")) echo 'checked'; ?>> extensive
+                        experience in solo ensembles.
+                    </td>
                 </tr>
             </table>
             <hr>
@@ -301,7 +303,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td class="linkerkolom"><input type="checkbox"
                             name="toehoorder" value="500"
                             <?php
-              if (isset($_POST['toehoorder']) and $_POST['toehoorder'] == 500) echo 'checked'; ?>></td>
+                            if (isset($_POST['toehoorder']) and $_POST['toehoorder'] == 500) echo 'checked'; ?>></td>
                     <td><b>I wish to attend as auditor </b><span
                             class="nadruk">(fee
                             <?php echo euro_en($cursusdata['toehoorder']); ?>)</span>
@@ -362,13 +364,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
             <p>Other wishes concerning accommodation:<br>
                 <textarea name="acc_wens" cols="70"
                     rows="5"><?php
-                    if (isset($_POST['acc_wens'])) echo $_POST['acc_wens']; ?></textarea>
+                                if (isset($_POST['acc_wens'])) echo $_POST['acc_wens']; ?></textarea>
             </p>
             <hr>
             <p>Diet requirements: <input name="dieet" type=text id="dieet"
                     size="50" value="<?php
-                            if (isset($_POST['Dieet']) and $_POST['Dieet'] != "") echo $_POST['Dieet'];
-                            else echo "[none]"; ?>">
+                                        if (isset($_POST['Dieet']) and $_POST['Dieet'] != "") echo $_POST['Dieet'];
+                                        else echo "[none]"; ?>">
             </p>
             <hr>
             <table>
@@ -380,23 +382,23 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                                 an option)</span><br>
                             <select name="vervoer" size="7" id="vervoer">
                                 <option value="???" <?php
-                                    if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "???")) echo 'selected';
-                                    ?>>not yet known</option>
+                                                    if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "???")) echo 'selected';
+                                                    ?>>not yet known</option>
                                 <option value="car (0 pl.)" <?php
-                                            if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "car (0 pl.)"))
-                                              echo 'selected'; ?>>by car, no
+                                                            if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "car (0 pl.)"))
+                                                                echo 'selected'; ?>>by car, no
                                     places for passengers</option>
                                 <option value="car (? pl.)" <?php
-                                            if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "car (? pl.)")) echo 'selected';
-                                            ?>>by car, possibly place for one
+                                                            if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "car (? pl.)")) echo 'selected';
+                                                            ?>>by car, possibly place for one
                                     or more passengers</option>
                                 <option value="ride" <?php
-                                      if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "ride")) echo 'selected';
-                                      ?>>I wish to join others travelling by
+                                                        if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "ride")) echo 'selected';
+                                                        ?>>I wish to join others travelling by
                                     car</option>
                                 <option value="train"
                                     <?php
-                  if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "train")) echo 'selected'; ?>>
+                                    if (isset($_POST['vervoer']) and ($_POST['vervoer'] == "train")) echo 'selected'; ?>>
                                     by train</option>
                             </select>
                         </p>
@@ -416,15 +418,15 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td width="33" class="linkerkolom"><input
                             name="storting_fonds" type="checkbox" value="1"
                             <?php if (
-                                                                isset($_POST['storting_fonds'])
-                                                                and $_POST['storting_fonds'] == 1
-                                                              ) echo 'checked'; ?>></td>
+                                isset($_POST['storting_fonds'])
+                                and $_POST['storting_fonds'] == 1
+                            ) echo 'checked'; ?>></td>
                     <td width="555">I am willing to contribute EUR <input
                             name="donatie" type=text id="donatie" value="<?php
-                                                            if (isset($_POST['donatie']) and $_POST['donatie'] > 0) {
-                                                              $_POST['storting_fonds'] = 1;
-                                                              echo $_POST['donatie'];
-                                                            } ?>" size="5"> to
+                                                                            if (isset($_POST['donatie']) and $_POST['donatie'] > 0) {
+                                                                                $_POST['storting_fonds'] = 1;
+                                                                                echo $_POST['donatie'];
+                                                                            } ?>" size="5"> to
                         the reduction fund for participants from Eastern Europe
                         and students. </td>
                 </tr>
@@ -444,8 +446,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                 <tr>
                     <td class="linkerkolom"><input name="info_korting"
                             type="checkbox" id="info_korting" value="1" <?php
-                                                          if (isset($_POST['info_korting']) and $_POST['info_korting'] == 1)
-                                                            echo 'checked'; ?>>
+                                                                        if (isset($_POST['info_korting']) and $_POST['info_korting'] == 1)
+                                                                            echo 'checked'; ?>>
                     </td>
                     <td>I am a music student and wish to receive information
                         about reductions. </td>
@@ -454,7 +456,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td colspan="2"><br> Remarks and additional information:<br>
                         <textarea name="opmerkingen" rows="5"
                             cols="70"><?php
-                        if (isset($_POST['opmerkingen'])) echo $_POST['opmerkingen']; ?></textarea>
+                                        if (isset($_POST['opmerkingen'])) echo $_POST['opmerkingen']; ?></textarea>
                     </td>
                 </tr>
             </table>
@@ -487,42 +489,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                                 further processing)</span></label></td>
                 </tr>
             </table>
-            <p>Please see the <a href="praktisch.php" target="_blank">practical
-                    matters</a> page for convenient ways of international
-                payment.</p>
-            <hr>
-            <h3>Send in the form</h3>
-            <table border="0">
-                <tr>
-                    <td valign="bottom" class="linkerkolom"><input
-                            type="checkbox" name="voorwaarden" value="akkoord"
-                            <?php if (isset($_POST['voorwaarden'])) echo 'checked'; ?>>
-                    </td>
-                    <td>I agree to the conditions stated in <a
-                            href="praktisch.php">Practical matters</a> and
-                        elsewhere on this site <span
-                            class="nadruk">(mandatory!)</span>. <br> I
-                        understand my personal data are stored for practical
-                        reasons related to the organisation of the summer
-                        school. They will never be shared with third parties
-                        without my explicit permission.</td>
-                </tr>
-            </table>
-            <p><input name="submit" type="submit" value="send the form"><br>
-                <span class="nadruk">(please click only once. You will see
-                    either the payment page or an automatic confirmation of
-                    receipt)</span>
-            </p>
-            <input type="hidden" name="MM_insert" value="aanmelding">
-            </form>
-            </td>
-            </tr>
-            </table>
-            <!-- InstanceEndEditable -->
+            <p>Please see the <a href="praktisch.php" target="_blank">practical matters</a> page for convenient ways of international payment.</p>
+            <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/akkoord_voorwaarden_EN.php'; ?>
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
+
 </html> <?php ob_end_flush(); ?>
