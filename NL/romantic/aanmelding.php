@@ -75,8 +75,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
     ?>
     <div id="main">
- 
- <?php // Haal de inleiding + het NAW formulier op
+
+      <?php // Haal de inleiding + het NAW formulier op
       require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/NAW_NL.php'; ?>
 
       <table class="formulier" id="instr_kop">
@@ -495,11 +495,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
       <p>Kijk op de pagina <a href="praktisch.php" target="_blank">praktische zaken</a> voor handige manieren van internationaal betalen.</p>
 
       <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/akkoord_voorwaarden_NL.php'; ?>
-    <h2><a href="javascript: history.go(-1)">Terug</a></h2>
+      <h2><a href="javascript: history.go(-1)">Terug</a></h2>
+    </div>
   </div>
-  </div>
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 
 </html>
 <?php ob_end_flush(); ?>
