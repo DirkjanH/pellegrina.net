@@ -496,7 +496,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
         </tr>
       </table>
       <p>Kijk op de pagina <a href="praktisch.php" target="_blank">praktische zaken</a> voor handige manieren van internationaal betalen.</p>
-      <?php require_once '/includes/akkoord_voorwaarden_NL.php'; ?> 
+      <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/akkoord_voorwaarden_NL.php'; ?> 
       <div class="w3-panel">
         <p><input name="submit" type="submit" value="verzenden"><br>
           <span class="nadruk">(SVP slechts één keer klikken. Je wordt verder geleid naar de betaalpagina of je ontvangt een automatische bevestiging van de verzending)</span>
@@ -507,13 +507,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
       </td>
       </tr>
       </table>
-      <!-- InstanceEndEditable -->
       <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
   </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>
 <?php ob_end_flush(); ?>
