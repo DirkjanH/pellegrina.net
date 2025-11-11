@@ -85,25 +85,25 @@
               <input
                 type=text name="land"
                 value="<?php
-                        if (isset($_POST['land'])) echo $_POST['land']; ?>" class="lange_input">
+                        if (isset($_POST['land'])) echo $_POST['land']; ?>" class="lange_input" >
               <input
                 name="eerste_inschrijving" type="hidden"
-                value="<?php echo $_POST['eerste_inschrijving']; ?>">
+                value="<?php echo $_POST['eerste_inschrijving']; ?>" />
               <input
                 name="DlnmrId" type="hidden"
-                value="<?php echo $_POST['DlnmrId']; ?>">
+                value="<?php echo $_POST['DlnmrId']; ?>" />
               <input
                 name="DlnmrId_FK" type="hidden"
-                value="<?php echo $_POST['DlnmrId_FK']; ?>">
+                value="<?php echo $_POST['DlnmrId_FK']; ?>" />
               <input
                 name="AdresId_FK" type="hidden"
-                value="<?php echo $_POST['AdresId_FK']; ?>">
+                value="<?php echo $_POST['AdresId_FK']; ?>" />
               <input
                 name="AdresId" type="hidden"
-                value="<?php echo $_POST['AdresId']; ?>">
+                value="<?php echo $_POST['AdresId']; ?>" />
               <input
                 name="datum_inschr" type="hidden"
-                value="<?php echo date("Y-m-d"); ?>">
+                value="<?php echo date("Y-m-d"); ?>" />
             </td>
           </tr>
           <tr>
