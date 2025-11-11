@@ -99,7 +99,7 @@ function safestrtotime($szFormat, $szDate)
     $szTemp = str_replace('D', jddayofweek($nJD, 2), $szTemp);
     $szTemp = str_replace('F', jdmonthname($nJD, 1), $szTemp);
 
-    d(szTemp);
+    d($szTemp);
     return $szTemp;
 }
 
