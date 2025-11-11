@@ -65,7 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     ?> <div id="main">
       <div class="cols2">
         <h2>Programmadetails</h2>
-        <p>Centraal in de cursus staat barokmuziek in Centraal-Europa (ca. 1600–1750). Het gebied van Oostenrijk, Tsjechië, Polen speelde een centrale rol in de ontwikkeling van westerse klassieke muziek, waarbij expressie, virtuositeit en nieuwe vormen centraal stonden.</p>
+        <p>Centraal in de zomercursus staat barokmuziek in Centraal-Europa (ca. 1600–1750). Het gebied van Oost-Duitsland, Oostenrijk, Tsjechië en Polen speelde een centrale rol in de ontwikkeling van westerse klassieke muziek, waarbij expressie, virtuositeit en nieuwe vormen centraal stonden.</p>
         <h4>Historische en sociale context</h4>
         <p>De barokperiode viel samen met een tijd van politieke en religieuze spanningen, zoals de Dertigjarige Oorlog en de opkomst van absolute vorsten als de Habsburgers in Wenen en de Hohenzollerns in Brandenburg. Veel muziek werd in dienst van hof en kerk geschreven, waar rijke vorsten en bisschoppen componisten en musici aan zich verbonden. Tegelijkertijd groeide het openbare concertleven door de toenemende welvaart van de burgerij, waardoor muziek ook buiten kerken en hoven tot bloei kwam.</p>
         <h4>Belangrijke componisten</h4>

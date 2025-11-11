@@ -68,7 +68,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <div class="cols2">
 
                 <h2>Program details</h2>
-                <p>The course focuses on Baroque music in Central Europe (ca. 1600–1750). The region comprising Austria, the Czech Republic, and Poland played a central role in the development of Western classical music, with expression, virtuosity, and new forms taking center stage.
+                <p>The summerschool focuses on Baroque music in Central Europe (ca. 1600–1750). The region comprising the east of Germany, Austria, the Czech Republic and Poland, played a central role in the development of Western classical music, with expression, virtuosity, and new forms taking center stage.
                 <h4>Historical and social context</h4>
                 <p>The Baroque period coincided with a time of political and religious tensions, such as the Thirty Years' War and the rise of absolute monarchs such as the Habsburgs in Vienna and the Hohenzollerns in Brandenburg. Much music was written in the service of the court and the church, where wealthy monarchs and bishops employed composers and musicians. At the same time, public concert life grew due to the increasing prosperity of the bourgeoisie, allowing music to flourish outside churches and courts.</p>
                 <h4>Important composers</h4>
