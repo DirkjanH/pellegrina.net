@@ -42,8 +42,8 @@ if (isset($_GET['Zoek']) and $_GET['pw'] != '' and empty($_POST)) {
 	GROUP BY d.naam 
 	ORDER BY d.achternaam ";
 	$oude_gegevens = select_query($query_oude_gegevens, 1);
+	d($query_oude_gegevens, $oude_gegevens);
 }
-d($query_oude_gegevens, $oude_gegevens);
 // end Recordset
 
 if (isset($oude_gegevens) and is_array($oude_gegevens)) {
