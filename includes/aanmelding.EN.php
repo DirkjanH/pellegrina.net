@@ -61,7 +61,7 @@ if (isset($oude_gegevens) and is_array($oude_gegevens)) {
 
 d($instrumentcodetabel, $_POST);
 
-if ((isset($_POST['submit'])) && ($_POST['submit'] == 'send the form')) {
+if ((isset($_POST['submit'])) && ($_POST['submit'] == 'submit')) {
 	// corrigeer
 	if (empty($_POST['land'])) $_POST['land'] = "Netherlands";
 	if (isset($_POST['voornaam'])) $_POST['voornaam'] = stripslashes(rtrim(ucfirst($_POST['voornaam'])));
