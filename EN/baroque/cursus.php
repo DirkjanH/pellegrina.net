@@ -205,12 +205,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 </h2>
                 <h4>Week programme</h4>
                 <ul>
-                    <li>Sunday morning August 10: arrival at Nieuw Sion, 10:30
+                    <li>Thursday morning August 13: arrival at Nieuw Sion, 10:30
                         course opening and first rehearsal</li>
-                    <li>Friday August 15: final internal presentation of the
+                    <li>Tuesday August 18: final internal presentation of the
                         chamber music ensembles</li>
-                    <li>Saturday afternoon August 16: public concert with the
-                        programme 'Ode to St. Cecilia' in the monastery church,
+                    <li>Wednesday afternoon August 19: public concert with the
+                        programme 'Baroque from Central Europe' in the monastery church,
                         followed by drinks and departure</li>
                 </ul>
                 <p class="citaat">Annelies Jans: &quot;Each morning two
