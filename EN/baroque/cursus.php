@@ -94,7 +94,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     work most of the time under the intensive supervision of the
                     teachers. The ensembles present themselves to the other
                     participants at the end of the course. This year the focus
-                    is on German, Austrian and Czech baroque music, but this is optional for
+                    is on German, Austrian, Polish and Czech baroque music, but this is optional for
                     chamber music. Feel free to play or sing Italian, English or
                     French music in the small ensemble program.</p>
                 <p>All formations from quartet upward are possible. The
