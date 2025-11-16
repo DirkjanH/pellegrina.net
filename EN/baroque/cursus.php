@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -20,6 +20,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
 <!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -35,38 +36,39 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <!-- InstanceEndEditable -->
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-                                    echo $navigatie;
-                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
-                                    ?> <div id="main">
+                                        echo $navigatie;
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
+                                        ?> <div id="main">
             <!-- InstanceBeginEditable name="mainpage" -->
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
             <div class="container">
@@ -77,8 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     aspects: on one hand, a program of small ensembles of
                     singers and players of 'early' instruments, both vocal and
                     instrumental separately or in combination. On the other
-                    hand, there is a joint program with music by Purcell &
-                    Handel. All singers and instrumentalists participate in this
+                    hand, there is a joint program with baroque music from Central Europe. All singers and instrumentalists participate in this
                     program.</p>
                 <p class="citaat">Jeroen van Bergeijk: &quot;The ideal holiday
                     spending: many days of hard work in a monastery, immersed in
@@ -93,8 +94,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     work most of the time under the intensive supervision of the
                     teachers. The ensembles present themselves to the other
                     participants at the end of the course. This year the focus
-                    is on English baroque music, but this is optional for
-                    chamber music. Feel free to play or sing Italian, German or
+                    is on German, Austrian and Czech baroque music, but this is optional for
+                    chamber music. Feel free to play or sing Italian, English or
                     French music in the small ensemble program.</p>
                 <p>All formations from quartet upward are possible. The
                     ensembles will be assigned very soon, so you can prepare at
@@ -185,7 +186,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         string players are welcome, but are required to fit
                         their instrument with gut strings and play with a
                         baroque bow. It is possible to borrow baroque bows via
-                        <em>La Pellegrina</em>. </li>
+                        <em>La Pellegrina</em>.
+                    </li>
                     <li>You are experienced in playing in small ensembles.</li>
                 </ul>
                 <p class="citaat">Harry Kragt: &quot;I melted for the music, not
@@ -283,7 +285,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     <a
                         href="docenten.php#rodriguez">Ricardo&nbsp;Rodríguez&nbsp;Miranda</a>,
                     <a href="docenten.php#sandler">Mitchell&nbsp;Sandler</a> and
-                    <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>. </p>
+                    <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>.
+                </p>
                 <h2><a name="inschrijven"></a>How to register</h2>
                 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             </div>
@@ -294,4 +297,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 <!-- InstanceEnd -->
+
 </html>
