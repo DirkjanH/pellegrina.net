@@ -76,7 +76,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <!-- InstanceBeginEditable name="mainpage" -->
       <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
       <ul>
-        <li>For: singers (soloists and very experienced choral singers), instrumentalists (baroque strings, viola da gamba, recorder/traverso, baroque oboe, baroque bassoon, baroque trumpets, harpsichord/organ, theorbo; period instruments only, tuning pitch 415 Hz)</li>
+        <li>For: singers (soloists and very experienced choral singers), instrumentalists (baroque strings, viola da gamba, recorder/traverso, baroque oboe, baroque bassoon, baroque trumpet & trombone, harpsichord/organ, theorbo; period instruments only, tuning pitch 415 Hz)</li>
         <li>With Dirkjan Horringa (singers and artistic direction), Femke Huizinga (orchestra, violin), Hanna Lindeijer (baroque winds), Ricardo Rodríguez Miranda (viola da gamba, cello, double bass, baroque dance), Mitchell Sandler (singers). and Edoardo Valorz (basso continuo)<br>
         </li>
         <li>Central works for all: Music from Vienna/Prague/Dresden/Kroměříž by composers including Fux, Caldara, Zelenka, Michna, Vejvanovský, and Schmelzer. The programme includes Zelenka's Miserere in C minor, ZWV 57.</li>
