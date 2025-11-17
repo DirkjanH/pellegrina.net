@@ -214,9 +214,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     our free evenings? Right, make music as much as
                     possible...!&quot;</p>
             </div>
-            <div class="fotocenter"><img src="/Images/kerkconcert.png"
-                    alt="church concert" width="600" height="450"
-                    class="w3-image" /><br /> Church concert</div>
+            <div class="fotocenter"><img src="/Images/duo.png"
+                    alt="Preparing parts toegether" class="w3-image" /><br />Preparing parts toegether</div>
             <h4>Daily Schedule</h4>
             <ul>
                 <li>8:00 breakfast</li>
@@ -234,7 +233,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p class="citaat">Staffan Rudner: &quot;The tutors were able to
                 adapt to the potential of all of us. After the course a new
                 energy has come to our practicing and playing at home.&quot;</p>
-            <h2><a name="waar" id="metwie2"></a>Where</h2>
+            <div class="fotocenter"><img src="/Images/lunch.png"
+                    alt="Lunch at the edge of the forest" class="w3-image" /><br>Lunch at the edge of the forest</div>
+            <h2><a name="waar" id="waar"></a>Waar</h2>
             <p>Nieuw Sion Monastery has been in existence since 1890. Until 2015, it was a Trappist monastery. In that year, the last eight monks closed the door behind them and found a new home on the island of Schiermonnikoog. The monastery was transferred for one euro to a foundation whose aim is to preserve the spiritual significance of the monastic community.</p>
             <p>Since then, all kinds of spiritual, cultural, and musical activities have taken place there. A growing number of people are seeking a monastic life centered on silence and spirituality. Three times a day, silent prayers are held in the monastery church. In addition, they tend to the large vegetable garden, run the brewery and coffee house, and organize a large number of activities, such as retreats, youth weekends, and the like. The income from all these activities pays for small renovations to the monastery. This year, for example, single and double rooms with private bathrooms are available for the first time in the renovated Poortgebouw. More information can be found here:</p>
             <ul>
@@ -248,10 +249,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 recommend this to anyone&quot;</p>
             <h2><a name="metwie" id="metwie"></a>With whom</h2>
             <div class="container">
-                <div class="fotorechts"> <img
-                        src="/Images/Docenten/Bechyne-334.jpg" class="w3-image"
-                        width="400" height="261" alt="tutors at a party" /><br>
-                    The tutors giving a toast to a successful concert</div>
                 <p>The tutors of this course are passionate specialists in their
                     fields: <a
                         href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>,

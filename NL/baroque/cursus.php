@@ -205,6 +205,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vrije avonden? Juist, zoveel mogelijk
                     muziekmaken....!!!&rdquo;</p>
             </div>
+            <div class="fotocenter"><img src="/Images/duo.png"
+                    alt="Partijen samen voorbereiden" class="w3-image" /><br>Partijen samen voorbereiden</div>
             <h4>Dagindeling</h4>
             <ul>
                 <li>8:00 ontbijt</li>
@@ -223,7 +225,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 zich aan te passen aan de mogelijkheden van ons allemaal. Na de
                 cursus is er een nieuwe energie om thuis te oefenen en te spelen
                 over ons heen gekomen.&quot;</p>
-            <h2><a name="waar" id="metwie2"></a>Waar</h2>
+            <div class="fotocenter"><img src="/Images/lunch.png"
+                    alt="Lunch aan de rand van het bos" class="w3-image" /><br>Lunch aan de rand van het bos</div>
+            <h2><a name="waar" id="waar"></a>Waar</h2>
             <p> Klooster Nieuw Sion bestaat sinds 1890. Het was tot 2015 een
                 trappistenklooster. In dat jaar trokken de laatste acht monniken
                 de deur achter zich dicht en vonden een nieuwe plek op het
@@ -250,11 +254,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </ul>
             <div class="container">
                 <h2><a name="metwie" id="metwie"></a>Met wie</h2>
-                <div class="fotorechts"> <img
-                        src="/Images/Docenten/Bechyne-334.jpg" class="w3-image"
-                        width="400" height="261"
-                        alt="docenten bij het slotfeest" /><br> De docenten
-                    proosten op het geslaagde concert</div>
                 <p> Deze cursus wordt geleid door gedreven specialisten op hun
                     vakgebied: <a
                         href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>,
@@ -268,12 +267,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2><a name="inschrijven"></a>Inschrijven</h2>
                 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             </div>
-            <!-- InstanceEndEditable -->
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
     </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>
