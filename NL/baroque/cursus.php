@@ -93,7 +93,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     aan bod komen. De ensembles werken het grootste deel van de
                     tijd onder intensieve begeleiding van de docenten. De
                     ensembles presenteren zich aan het eind van de cursus aan de
-                    overige deelnemers. Dit jaar ligt de focus op barokmuziek uit Centraal Europa, maar voor de kamermuziek is dit optioneel. Voel je
+                    overige deelnemers. Dit jaar ligt de focus op Duitse, Oostenrijkse, Poolse en Tsjechische barokmuziek, maar voor de kamermuziek is dit optioneel. Voel je
                     vrij als je in het kleine ensemble programma liever
                     Italiaanse, Engelse of Franse muziek speelt of zingt.</p>
                 <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles
@@ -112,13 +112,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     geeft ruimte&quot;</p>
                 <h3>Programma <i>Barok uit Centraal Europa</i> voor alle zangers
                     en instrumentalisten</h3>
-                <p><div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>Iedere middag werken alle zangers en instrumentalisten samen
-                    aan het programma 'Barok uit Centraal Europa' voor iedereen. Centraal staat het Requiem in f klein van Biber en het Miserere in c klein ZWV 57 van Zelenka. Dit programma wordt in de kloosterkerk uitgevoerd als het slotconcert van de cursus. Uiteraard zijn er eerst groepsrepetities voor het koor en het orkest,
-                    en correpetitie voor de solisten. Later in de week worden
-                    alle groepen bijeen gevoegd en ontstaat een kleurrijk en
-                    divers ensemble, waarin iedereen zijn eigen uitdagingen
-                    heeft. <a href="programma.php">Lees hier meer over de werken
-                        en hun muzikale en historische context</a>.</p>
+                <p>
+                <div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>Iedere middag werken alle zangers en instrumentalisten samen
+                aan het programma 'Barok uit Centraal Europa' voor iedereen. Centraal staat het Requiem in f klein van Biber en het Miserere in c klein ZWV 57 van Zelenka. Dit programma wordt in de kloosterkerk uitgevoerd als het slotconcert van de cursus. Uiteraard zijn er eerst groepsrepetities voor het koor en het orkest,
+                en correpetitie voor de solisten. Later in de week worden
+                alle groepen bijeen gevoegd en ontstaat een kleurrijk en
+                divers ensemble, waarin iedereen zijn eigen uitdagingen
+                heeft. <a href="programma.php">Lees hier meer over de werken
+                    en hun muzikale en historische context</a>.</p>
             </div>
             <p class="citaat">Andrew Fyson: &#8220;Het bijwonen van La
                 Pellegrina en het werken met prachtige en enthousiaste

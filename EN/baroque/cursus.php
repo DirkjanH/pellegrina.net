@@ -85,9 +85,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     spending: many days of hard work in a monastery, immersed in
                     music, with an inspiring group of music lovers&quot;</p>
                 <h3>Chamber music</h3>
-                <div class="fotorechts"><img src="/Images/Chamber Music-93.jpg"
-                        alt="" width="500" height="321" /><br> Chamber music
-                    ensemble performing<br> photo: Cassandra Luckhardt</div>
+                <div class="fotocenter w3-center"><img src="/Images/kamermuziek_NS.png"
+                        alt="Chamber music ensemble performing" /><br>Chamber music ensemble performing</div>
                 <p>The most important part of the course is working in small
                     ensembles. Everyone is part of two different pre-arranged
                     ensembles, both of which are treated equally. The ensembles
