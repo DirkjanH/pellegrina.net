@@ -213,8 +213,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <ul>
                 <li>8:00 ontbijt</li>
                 <li>9:00 1e sessie werken aan muziek in kleine ensembles</li>
-                <li>10:15 koffiepauze</li>
-                <li>10:45 2e sessie werken aan muziek in kleine ensembles</li>
+                <li>10:30 koffiepauze</li>
+                <li>11:00 2e sessie werken aan muziek in kleine ensembles</li>
                 <li>12:30 lunch</li>
                 <li>13:30 werken aan tutti-programma in groepsrepetities</li>
                 <li>15:00 theepauze</li>
