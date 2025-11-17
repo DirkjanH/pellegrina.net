@@ -6,11 +6,11 @@ error_reporting(E_ALL);
 require_once('GeneratePassword.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 setlocale(LC_ALL, 'nl_NL');
 
-$inschrijfgeld = '300.00';
+$inschrijfgeld = '30.00';
 
 $instrumenten = select_query("SELECT * FROM instr ORDER BY id ASC");
 foreach ($instrumenten as $row) {

@@ -3,7 +3,7 @@
 //ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 require_once('GeneratePassword.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php';
