@@ -113,9 +113,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     docenten ... Daar krijg je zelden de gelegenheid voor! En
                     dat de docenten elkaar soms tegenspreken, .. tja, .. dat
                     geeft ruimte&quot;</p>
-                <h3>Programma <em>Ode aan Sinte Cecilia</em> voor alle zangers
+                <h3>Programma <i>Barok uit Centraal Europa</i> voor alle zangers
                     en instrumentalisten</h3>
-                <p>Iedere middag werken alle zangers en instrumentalisten samen
+                <p><div class="fotolinks"><img class="w3-image" width="250" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>Iedere middag werken alle zangers en instrumentalisten samen
                     aan het programma 'Ode aan Sinte Cecilia' voor iedereen, dat
                     wordt uitgevoerd in het slotconcert van de cursus. Uiteraard
                     zijn er eerst groepsrepetities voor het koor en het orkest,
