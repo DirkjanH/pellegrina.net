@@ -241,24 +241,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 adapt to the potential of all of us. After the course a new
                 energy has come to our practicing and playing at home.&quot;</p>
             <h2><a name="waar" id="metwie2"></a>Where</h2>
-            <p> Monastery Nieuw Sion has existed since 1890. It was a Trappist
-                monastery until 2015. In that year, the last eight monks closed
-                the door behind them and found a new place on the island of
-                Schiermonnikoog. The monastery was then transferred for one euro
-                to a foundation.</p>
-            <p>Since then, all kinds of spiritual, as well as cultural and and
-                musical activities take place there. A growing number of people
-                who strive for a monastic life in which silence and spirituality
-                are central. Three times a day there are silence prayers in the
-                monastery church. In addition, they tend the large vegetable
-                garden, keep the brewery and coffee house running and organize a
-                large number of activities, such as retreats, youth weekends
-                weekends and the like. The income from all these activities year
-                pay for small reconstructions of the monastery. This year, for
-                for example, for the first time there are single and double
-                rooms available with private bathroom facilities in the
-                renovated Poortgebouw (Gate House). More information can be
-                found here:</p>
+            <p>Nieuw Sion Monastery has been in existence since 1890. Until 2015, it was a Trappist monastery. In that year, the last eight monks closed the door behind them and found a new home on the island of Schiermonnikoog. The monastery was transferred for one euro to a foundation whose aim is to preserve the spiritual significance of the monastic community.</p>
+            <p>Since then, all kinds of spiritual, cultural, and musical activities have taken place there. A growing number of people are seeking a monastic life centered on silence and spirituality. Three times a day, silent prayers are held in the monastery church. In addition, they tend to the large vegetable garden, run the brewery and coffee house, and organize a large number of activities, such as retreats, youth weekends, and the like. The income from all these activities pays for small renovations to the monastery. This year, for example, single and double rooms with private bathrooms are available for the first time in the renovated Poortgebouw. More information can be found here:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
                         target="_blank">An impression of the monastery</a> (in Dutch)</li>
