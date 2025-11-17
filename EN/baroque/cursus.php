@@ -97,10 +97,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     chamber music. Feel free to play or sing Italian, English or
                     French music in the small ensemble program.</p>
                 <p>All formations from quartet upward are possible. The
-                    ensembles will be assigned very soon, so you can prepare at
-                    home. That is why quick registration is essential. Within
-                    the possibilities of the course, wishes for pieces and
-                    instrumentation are taken into account. The course is open
+                    ensembles will be assigned in April or May, so you can prepare at
+                    home. Wishes for pieces and instrumentation are taken into account, within
+                    the possibilities and restrictions of the course. The course is open
                     to individual participants and permanent ensembles. There is
                     also time for occasional combinations in the evenings.</p>
                 <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a

@@ -97,9 +97,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vrij als je in het kleine ensemble programma liever
                     Italiaanse, Engelse of Franse muziek speelt of zingt.</p>
                 <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles
-                    worden tijdig ingedeeld, zodat je je thuis kunt
-                    voorbereiden. Daarom is snel aanmelden essentieel. Binnen de
-                    mogelijkheden van de cursus wordt met wensen voor stukken en
+                    worden al in april of mei ingedeeld, zodat je je thuis goed kunt
+                    voorbereiden. Binnen de mogelijkheden en beperkingen van de cursus wordt met wensen voor stukken en
                     bezettingen rekening gehouden. De cursus staat open voor
                     individuele deelnemers en vaste ensembles. Er is in de
                     avonden ook tijd voor gelegenheidscombinaties.</p>
