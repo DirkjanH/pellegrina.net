@@ -37,7 +37,7 @@
     <h4>Design &amp; realisation</h4>
     <p>Thomas Op de Coul, Dirkjan Horringa </p>
     <h4>Photo's</h4>
-    <p>Hans Nijs and Václav Pancer, but also the many beautiful photographs by participants and tutors like Briana Gillet, Matthia
+    <p>Hans Nijs and Václav Pancer, but also many beautiful photographs by participants and tutors like Briana Gillet, Matthia
       Cox, Lea Schuiling, Wout&nbsp;van&nbsp;den&nbsp;Heuvel, Cassandra
       Luckhardt, Désirée Staverman, Vivian Stemerdink,
       Patrick&nbsp;Vercammen, Petra&nbsp;Wals, Joyce Vermeer, Fred Willems

@@ -33,8 +33,7 @@
     <h4>Design &amp; uitvoering</h4>
     <p>Thomas Op de Coul, Dirkjan Horringa </p>
     <h4>Foto's</h4>
-    <p>Voor het illustreren van deze site is dankbaar gebruik gemaakt van de
-        vele mooie foto's van deelnemers, waaronder Briana Gillet, Matthia Cox,
+    <p>Hans Nijs en Václav Pancer, maar ook de vele prachtige foto's van deelnemers en docenten, waaronder Briana Gillet, Matthia Cox,
         Lea Schuiling, Wout&nbsp;van&nbsp;den&nbsp;Heuvel, Cassandra Luckhardt,
         Anthonie Meijers, Désirée Staverman, Vivian Stemerdink,
         Patrick&nbsp;Vercammen, Petra&nbsp;Wals, Joyce Vermeer, Fred Willems en
