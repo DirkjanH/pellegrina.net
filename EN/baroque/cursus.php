@@ -113,15 +113,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     well, .. that gives space&quot;</p>
                 <h3>Baroque from Central Europe, program for all singers and instrumentalists</h3>
                 <p>
-                <div class="fotolinks"><img class="w3-image" width="250" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work
-                together on the programme 'Baroque from Central Europe' for all,
-                which is performed in the monastery church as the culmination of the course. The program includes Biber's Requiem in F minor and Zelenka's Miserere in C minor ZWV 57. Of
-                course, there are first sectional rehearsals for the choir
-                and orchestra, and correpetition for the soloists. Later in
-                the week, all groups are joined together to create a
-                colourful and diverse ensemble, in which everyone has their
-                own challenges. <a href="programma.php">Read more about the
-                    works and their musical and historical context here</a>.
+                <div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work together on the programme 'Baroque from Central Europe' for all,
+                which is performed in the monastery church as the culmination of the course. The program includes Biber's Requiem in F minor and Zelenka's Miserere in C minor ZWV 57. Of course, at first sectional rehearsals for the choir and orchestra and correpetition for the soloists will be held. Later in
+                the week, all groups join forces to create a colorful and diverse ensemble, in which everyone has their
+                own challenges. <a href="programma.php">Read more about the works and their musical and historical context here</a>.
                 </p>
             </div>
             <p class="citaat">Andrew Fyson: &quot;Attending La Pellegrina and
