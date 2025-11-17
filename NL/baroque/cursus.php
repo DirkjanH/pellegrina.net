@@ -85,20 +85,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     ondergedompeld in muziek, met een fijne groep
                     muziekminnaars&quot;</p>
                 <h3>Kamermuziek</h3>
-                <div class="fotorechts"><img src="/Images/Chamber Music-93.jpg"
-                        alt="" width="500" height="321" /><br>
-                    Kamermuziekensemble tijdens concert<br> foto: Cassandra
-                    Luckhardt</div>
+                <div class="fotocenter w3-center"><img src="/Images/kamermuziek_NS.png"
+                        alt="Kamermuziekensemble tijdens concert" /><br>Kamermuziekensemble tijdens concert</div>
                 <p>Het belangrijkste onderdeel van de cursus is werken in kleine
                     ensembles. Iedereen maakt deel uit van twee verschillende
                     van tevoren ingedeelde ensembles, die beide in gelijke mate
                     aan bod komen. De ensembles werken het grootste deel van de
                     tijd onder intensieve begeleiding van de docenten. De
                     ensembles presenteren zich aan het eind van de cursus aan de
-                    overige deelnemers. Dit jaar ligt de focus op Engelse
-                    muziek, maar voor de kamermuziek is dit optioneel. Voel je
+                    overige deelnemers. Dit jaar ligt de focus op barokmuziek uit Centraal Europa, maar voor de kamermuziek is dit optioneel. Voel je
                     vrij als je in het kleine ensemble programma liever
-                    Italiaanse, Duitse of Franse muziek speelt of zingt.</p>
+                    Italiaanse, Engelse of Franse muziek speelt of zingt.</p>
                 <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles
                     worden tijdig ingedeeld, zodat je je thuis kunt
                     voorbereiden. Daarom is snel aanmelden essentieel. Binnen de
