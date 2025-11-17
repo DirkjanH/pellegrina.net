@@ -10,7 +10,7 @@ Kint::$enabled_mode = false;
 
 setlocale(LC_ALL, 'nl_NL');
 
-$inschrijfgeld = '30.00';
+$inschrijfgeld = '300.00';
 
 $instrumenten = select_query("SELECT * FROM instr ORDER BY id ASC");
 foreach ($instrumenten as $row) {
