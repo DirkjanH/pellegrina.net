@@ -261,10 +261,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 found here:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
-                        target="_blank">An impression of the monastery</a><br>
-                    <a href="https://www.nieuwsion.nl/"
-                        target="_blank">Monastery website</a>
-                </li>
+                        target="_blank">An impression of the monastery</a> (in Dutch)</li>
+                <li><a href="https://www.nieuwsion.nl/" target="_blank">Monastery website</a> (in Dutch)</li>
             </ul>
             <p class="citaat">Roeland Gerritsen: &quot;To make music on a high
                 level (with qualified teachers AND students) at a unique
