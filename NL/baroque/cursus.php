@@ -116,9 +116,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h3>Programma <i>Barok uit Centraal Europa</i> voor alle zangers
                     en instrumentalisten</h3>
                 <p><div class="fotolinks"><img class="w3-image" width="250" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>Iedere middag werken alle zangers en instrumentalisten samen
-                    aan het programma 'Ode aan Sinte Cecilia' voor iedereen, dat
-                    wordt uitgevoerd in het slotconcert van de cursus. Uiteraard
-                    zijn er eerst groepsrepetities voor het koor en het orkest,
+                    aan het programma 'Barok uit Centraal Europa' voor iedereen. Centraal staat het Requiem in f klein van Biber en het Miserere in c klein ZWV 57 van Zelenka. Dit programma wordt in de kloosterkerk uitgevoerd als het slotconcert van de cursus. Uiteraard zijn er eerst groepsrepetities voor het koor en het orkest,
                     en correpetitie voor de solisten. Later in de week worden
                     alle groepen bijeen gevoegd en ontstaat een kleurrijk en
                     divers ensemble, waarin iedereen zijn eigen uitdagingen

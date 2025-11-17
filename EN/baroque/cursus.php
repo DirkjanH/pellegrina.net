@@ -111,17 +111,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     teachers ... Something you rarely get the opportunity to do!
                     And when the teachers sometimes contradict each other, ..
                     well, .. that gives space&quot;</p>
-                <h3>Ode to Saint Cecilia, programme for all singers and
-                    instrumentalists</h3>
-                <p>Every afternoon, all singers and instrumentalists work
-                    together on the programme 'Ode to Saint Cecilia' for all,
-                    which is performed in the final concert of the course. Of
-                    course, there are first sectional rehearsals for the choir
-                    and orchestra, and correpetition for the soloists. Later in
-                    the week, all groups are joined together to create a
-                    colourful and diverse ensemble, in which everyone has their
-                    own challenges. <a href="programma.php">Read more about the
-                        works and their musical and historical context here</a>.
+                <h3>Baroque from Central Europe, program for all singers and instrumentalists</h3>
+                <p>
+                <div class="fotolinks"><img class="w3-image" width="250" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work
+                together on the programme 'Baroque from Central Europe' for all,
+                which is performed in the final concert of the course. Of
+                course, there are first sectional rehearsals for the choir
+                and orchestra, and correpetition for the soloists. Later in
+                the week, all groups are joined together to create a
+                colourful and diverse ensemble, in which everyone has their
+                own challenges. <a href="programma.php">Read more about the
+                    works and their musical and historical context here</a>.
                 </p>
             </div>
             <p class="citaat">Andrew Fyson: &quot;Attending La Pellegrina and
