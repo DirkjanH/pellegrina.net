@@ -163,26 +163,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     <br>
                 </div>
                 <h4>Zangers</h4>
-                <p>Er is plaats voor maximaal 16 ervaren zangers. Om deel te
-                    kunnen nemen dien je te voldoen aan de volgende vereisten:
+                <p>Er is plaats voor maximaal 16 ervaren zangers. Om deel te kunnen nemen dien je te voldoen aan de volgende vereisten:
                 </p>
                 <ul>
-                    <li> Je zingt goed van blad en kunt zelfstandig je partij
-                        instuderen</li>
-                    <li> Je hebt ervaring in oude-muziekensembles in
-                        enkelvoudige bezetting</li>
-                    <li> Je hebt een ontwikkelde stem die zich leent voor solo-
-                        en ensemblezang</li>
-                    <li> Je bent ge&iuml;nteresseerd in de historische
-                        uitvoeringspraktijk</li>
+                    <li> Je zingt goed van blad en kunt zelfstandig je partij instuderen</li>
+                    <li> Je hebt ervaring in oude-muziekensembles in enkelvoudige bezetting</li>
+                    <li> Je hebt een ontwikkelde stem die zich leent voor solo- en ensemblezang</li>
+                    <li> Je bent ge&iuml;nteresseerd in de historische uitvoeringspraktijk</li>
                 </ul>
                 <h4>Instrumentalisten </h4>
                 <p>Er is plaats voor maximaal 24 instrumentalisten, namelijk
                     barokstrijkers, viola da gamba, blokfluit, traverso,
-                    barokhobo, barokfagot, clavecimbel/orgel, theorbe,
+                    barokhobo, barokfagot, baroktrompet & -trombone, clavecimbel/orgel, theorbe,
                     uitsluitend 'oude' instrumenten, stemtoon 415 Hz.</p>
-                <p>Om deel te kunnen nemen dien je te voldoen aan de volgende
-                    vereisten:</p>
+                <p>Om deel te kunnen nemen dien je te voldoen aan de volgende vereisten:</p>
                 <ul>
                     <li> Je speelt een 'oud' instrument. Strijkers: eventueel
                         een modern instrument met darmsnaren en een barokstok.
@@ -203,13 +197,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
                 <h4> Weekindeling</h4>
                 <ul>
-                    <li>Zondagochtend 10 augustus: aankomst op Nieuw Sion, 10:30
-                        cursusopening en eerste repetitie</li>
-                    <li>Vrijdag 15 augustus: afsluitende interne presentatie van
-                        de kamermuziekensembles; </li>
-                    <li>Zaterdagmiddag 16 augustus: openbaar concert 'Ode aan
-                        Sinte Cecilia' in de kloosterkerk, aansluitend borrel en
-                        vertrek</li>
+                    <li>Donderdagochtend 13 augustus: aankomst op Nieuw Sion, 10:30 cursusopening en eerste repetitie</li>
+                    <li>Dinsdag 18 augustus: afsluitende interne presentatie van de kamermuziekensembles; </li>
+                    <li>Woensdagmiddag 19 augustus: openbaar concert 'Barok uit Centraal Europa' in de kloosterkerk, aansluitend borrel en vertrek</li>
                 </ul>
                 <p class="citaat">Annelies Jans: &ldquo;Twee repetities 's
                     morgens, twee repetities 's middags, en wat goen we op onze
@@ -219,14 +209,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h4>Dagindeling</h4>
             <ul>
                 <li>8:00 ontbijt</li>
-                <li>9:30 1e sessie werken aan muziek in kleine ensembles</li>
-                <li>10:45 koffiepauze</li>
-                <li>11:15 2e sessie werken aan muziek in kleine ensembles</li>
-                <li>13:00 lunch</li>
-                <li>14:15 werken aan tutti-programma in groepsrepetities</li>
-                <li>15:30 theepauze</li>
-                <li>16:00 gezamenlijke repetitie tutti-programma</li>
-                <li>17:30 borrelen en avondeten</li>
+                <li>9:00 1e sessie werken aan muziek in kleine ensembles</li>
+                <li>10:15 koffiepauze</li>
+                <li>10:45 2e sessie werken aan muziek in kleine ensembles</li>
+                <li>12:30 lunch</li>
+                <li>13:30 werken aan tutti-programma in groepsrepetities</li>
+                <li>15:00 theepauze</li>
+                <li>15:30 gezamenlijke repetitie tutti-programma</li>
+                <li>17:00 borrelen en avondeten</li>
                 <li>'s Avonds: vrij te besteden; gelegenheid voor extra
                     kamermuziek</li>
             </ul>

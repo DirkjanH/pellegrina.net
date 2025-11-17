@@ -177,7 +177,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h4><strong>Instrumentalists</strong></h4>
                 <p>The maximum instrumental group size is 24. For instruments we
                     can place baroque strings, viola da gamba,
-                    traverso/recorder, baroque oboe, baroque bassoon,
+                    traverso/recorder, baroque oboe, baroque bassoon, baroque trumpet & trombone
                     harpsichord/organ, theorbo; period instruments only, tuning
                     pitch 415 Hz. </p>
                 <p>To qualify you must meet the following requirements: </p>
@@ -226,15 +226,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h4>Daily Schedule</h4>
             <ul>
                 <li>8:00 breakfast</li>
-                <li>9:30 1st session working on music in small ensembles</li>
-                <li>10:45 coffee break</li>
-                <li>11:15 2nd session working on music in small ensembles</li>
-                <li>13:00 lunch</li>
-                <li>14:15 working on tutti-programme in sectional rehearsals
-                </li>
-                <li>15:30 tea break</li>
-                <li>16:00 joint rehearsal tutti-programme</li>
-                <li>17:30 drinks and dinner</li>
+                <li>9:00 1st session working on music in small ensembles</li>
+                <li>10:15 coffee break</li>
+                <li>10:45 2nd session working on music in small ensembles</li>
+                <li>12:30 lunch</li>
+                <li>13:30 working on tutti-programme in sectional rehearsals</li>
+                <li>15:00 tea break</li>
+                <li>15:30 joint rehearsal tutti-programme</li>
+                <li>17:00 drinks and dinner</li>
                 <li>Evening: free to spend; ample opportunity for extra chamber
                     music</li>
             </ul>

@@ -79,7 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>For: singers (soloists and very experienced choral singers), instrumentalists (baroque strings, viola da gamba, recorder/traverso, baroque oboe, baroque bassoon, baroque trumpet & trombone, harpsichord/organ, theorbo; period instruments only, tuning pitch 415 Hz)</li>
         <li>With Dirkjan Horringa (singers and artistic direction), Femke Huizinga (orchestra, violin), Hanna Lindeijer (baroque winds), Ricardo Rodríguez Miranda (viola da gamba, cello, double bass, baroque dance), Mitchell Sandler (singers). and Edoardo Valorz (basso continuo)<br>
         </li>
-        <li>Central works for all: Music from Vienna/Prague/Dresden/Kroměříž by composers including Fux, Caldara, Zelenka, Michna, Vejvanovský, and Schmelzer. The programme includes Zelenka's Miserere in C minor, ZWV 57.</li>
+        <li>Central works for everyone: music from Vienna/Prague/Dresden/Kroměříž by Fux, Caldara, Biber, Zelenka, Michna, Vejvanovský, Schmelzer, and others. The program includes Biber's Requiem in F minor and Zelenka's Miserere in C minor ZWV 57.
         <li>Baroque chamber music every morning for instrumental, vocal or combined vocal-instrumental ensembles</li>
         <li>In monastery Nieuw Sion, Diepenveen near Deventer (Netherlands), with accommodation in single and double rooms or camping</li>
         <li>With <em>Concerto & Aria Event</em>: participants can play a concerto or sing an aria; the other participants and tutors form an ad hoc orchestra which sightreads the accompaniment</li>
