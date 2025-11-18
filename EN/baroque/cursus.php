@@ -78,7 +78,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     year's seven-day baroque course. This course has two
                     aspects: each morning we work in small ensembles of
                     singers and players of 'early' instruments, both vocal and
-                    instrumental separately or in combination. Each afternoon we work together on a joint 
+                    instrumental separately or in combination. Each afternoon we work together on a joint
                     program with baroque music from Central Europe. All singers and instrumentalists participate in this program.</p>
                 <p class="citaat">Jeroen van Bergeijk: &quot;The ideal holiday
                     spending: many days of hard work in a monastery, immersed in
@@ -98,8 +98,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     ensembles will be assigned in April or May, so you can prepare at
                     home. Wishes for pieces and instrumentation are taken into account, within
                     the possibilities and restrictions of the course. The course is open
-                    to individual participants and permanent ensembles. In the evenings those who still 
-                    have feel like it can form occasional chamber music combinations. A number of rooms and keyboard instruments are available for this.</p>
+                    to individual participants and permanent ensembles. </p>
+                <p> In the evenings those who still feel like it can form occasional chamber music combinations. 
+                    A number of rooms and keyboard instruments are available for this.</p>
                 <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a
                     piece like this for choir, soloists and orchestra. But the
                     chamber music is really an asset! Singers and
