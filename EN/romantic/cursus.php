@@ -340,10 +340,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sandler, </a><a href="docenten.php#sternadel">Rudolf
                     Sternadel</a> and <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
-            <div class="fotocenter"><img src="/Images/maal_bij_Elektra.png"
-                    alt="meal at Penzion Elektra" width="400"
-                    height="300" /><br /> After hard work, a meal like this
-                tastes great</div>
             <h2><a name="inschrijven"></a>How to register</h2>
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             <!-- InstanceEndEditable -->

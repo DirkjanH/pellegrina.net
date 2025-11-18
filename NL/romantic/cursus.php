@@ -282,13 +282,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     width="800" height="302" alt="" /><br> Haydns Schöpfung
                 tijdens een herhalingsconcert in Utrecht in 2018 <br>
             </div>
-            <h2><a name="waar" id="metwie2"></a>Waar</h2>
-            <p>Meer over České Budějovice, de plek waar de cursus wordt
-                gehouden, lees je hier:</p>
+            <h2><a name="waar"></a>Waar</h2>
+            <p>Meer over České Budějovice, de stad waar de cursus wordt gehouden, lees je hier:</p>
             <ul>
                 <li><a href="plaats.php">České Budějovice, de stad</a></li>
-                <li><a href="route_plek.php">Reismogelijkheden en route naar
-                        České Budějovice</a></li>
+                <li><a href="route_plek.php">Reismogelijkheden en route naar České Budějovice</a></li>
             </ul>
             <p class="citaat">Casper van Dongen: “Mooie muziek op Tsjechisch
                 hoog nivo voor amateurs in het conservatorium van een prachtige
@@ -298,8 +296,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <div class="fotocenter"><img class="w3-image"
                     src="/Images/bazooka.jpg" width="640" height="424"
                     alt="Ensemble"><br> Vreugde na het kamermuziekconcert </div>
-            <h2>Met wie</h2>
-            <p><a name="metwie"></a>Deze cursus wordt geleid door een aantal
+            <h2><a name="metwie"></a>Met wie</h2>
+            <p>Deze cursus wordt geleid door een aantal
                 gedreven vakmusici: <a href="docenten.php#bernaskova">Martina
                     Bernášková</a>, <a href="docenten.php#Pbernasek">Petr
                     Bernášek</a>, <a href="docenten.php#horejsi">Pavel
