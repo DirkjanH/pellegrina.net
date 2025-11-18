@@ -72,11 +72,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 ook bekend onder de Duitse naam Budweis, is een gemoedelijke
                 stad waar de nabijheid van Oostenrijk voelbaar is. Het
                 conservatorium is niet lang geleden grondig verbouwd, met airconditioning in de concertzaal. Er zijn uitstekende vleugels en
-                prima voorzieningen om te musiceren. Zo kan iedereen die er altijd van droomde te studeren aan een conservatorium toch nog gaan! Er is in
-                hetzelfde gebouw accommodatie in het schoolinternaat, met
+                prima voorzieningen om te musiceren. Zo kan iedereen die er altijd van droomde te studeren aan een conservatorium toch nog gaan!</p>
+            <p>Er is in het gebouw van het conservatorium ook een schoolinternaat, met
                 simpele maar schone één- en tweepersoons kamers die ieder een
                 eigen douche en toilet hebben. Daarnaast is er een keur van
-                hotels in diverse prijsklassen in de omgeving. </p>
+                hotels in diverse prijsklassen in de omgeving.</p>
             <h3>De kamermuziek c.q. het kamerkoor</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
                     alt="kamermuziek" width="500" height="334"
@@ -310,10 +310,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sandler</a>, <a href="docenten.php#sternadel">Rudolf
                     Sternadel</a> en <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
-            <div class="fotocenter"><img src="/Images/maal_bij_Elektra.png"
-                    alt="maal bij Penzion Elektra" class="w3-image" width="400"
-                    height="300" /><br /> Na hard werken smaakt een dergelijk
-                maal prima </div>
             <h2><a name="inschrijven"></a>Inschrijven</h2>
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
