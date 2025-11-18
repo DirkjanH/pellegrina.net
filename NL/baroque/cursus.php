@@ -74,12 +74,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2><a name="programma"></a>Het programma</h2>
                 <p>Het voormalige klooster Nieuw Sion in de Sallandse bossen bij
                     Deventer is de locatie voor de zevendaagse barokcursus van
-                    komende zomer. Deze cursus heeft twee aspecten: enerzijds
-                    een programma van kleine ensembles van zangers en bespelers
+                    komende zomer. Deze cursus heeft twee aspecten: iedere ochtend werkt iedereen in kleine ensembles van zangers en bespelers
                     van 'oude' instrumenten, zowel vocaal en instrumentaal apart
-                    als gecombineerd. Daarnaast is er een gezamenlijk programma
-                    met muziek van Purcell & Handel. Alle zangers en
-                    instrumentalisten nemen deel aan dit programma. </p>
+                    als gecombineerd. Daarnaast is er een programma waarin alle zangers en
+                    instrumentalisten participeert, met barokmuziek uit Centraal Europa.</p>
                 <p class="citaat">Jeroen van Bergeijk: &quot;De ideale
                     vakantiebesteding: hard werken in een klooster,
                     ondergedompeld in muziek, met een fijne groep
@@ -87,21 +85,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h3>Kamermuziek</h3>
                 <div class="fotocenter w3-center"><img src="/Images/kamermuziek_NS.png"
                         alt="Kamermuziekensemble tijdens concert" /><br>Kamermuziekensemble tijdens concert</div>
-                <p>Het belangrijkste onderdeel van de cursus is werken in kleine
-                    ensembles. Iedereen maakt deel uit van twee verschillende
-                    van tevoren ingedeelde ensembles, die beide in gelijke mate
-                    aan bod komen. De ensembles werken het grootste deel van de
-                    tijd onder intensieve begeleiding van de docenten. De
-                    ensembles presenteren zich aan het eind van de cursus aan de
-                    overige deelnemers. Dit jaar ligt de focus op Duitse, Oostenrijkse, Poolse en Tsjechische barokmuziek, maar voor de kamermuziek is dit optioneel. Voel je
-                    vrij als je in het kleine ensemble programma liever
-                    Italiaanse, Engelse of Franse muziek speelt of zingt.</p>
-                <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles
-                    worden al in april of mei ingedeeld, zodat je je thuis goed kunt
-                    voorbereiden. Binnen de mogelijkheden en beperkingen van de cursus wordt met wensen voor stukken en
-                    bezettingen rekening gehouden. De cursus staat open voor
-                    individuele deelnemers en vaste ensembles. Er is in de
-                    avonden ook tijd voor gelegenheidscombinaties.</p>
+                <p>Elke ochtend van de cursus werken we in kleine ensembles. Iedereen maakt deel uit van twee verschillende vooraf samengestelde ensembles. De ensembles werken meestal onder intensieve begeleiding van de docenten. Aan het einde van de cursus presenteren de ensembles zich aan de andere deelnemers. Dit jaar ligt de focus op Duitse, Oostenrijkse, Poolse en Tsjechische barokmuziek, maar dit is optioneel voor kamermuziek. Je kunt gerust Italiaanse, Engelse of Franse muziek spelen of zingen in het kleine ensembleprogramma.</p>
+                <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles worden in april of mei samengesteld, zodat je je thuis kunt voorbereiden. Binnen de mogelijkheden en beperkingen van de cursus wordt rekening gehouden met wensen voor stukken en instrumentatie. De cursus staat open voor individuele deelnemers en vaste ensembles.</p>
+                <p>'s Avonds kunnen degenen die daar nog zin in hebben, incidentele kamermuziekcombinaties vormen. Hiervoor zijn een aantal ruimtes en toetsinstrumenten beschikbaar.</p>
                 <p class="citaat">Lea Schuiling: &quot;Leuk natuurlijk, zo'n
                     tuttistuk voor zangers en instrumentalisten. Maar wat een
                     aanwinst is ook het kamermuziekprogramma! Zangers en
@@ -109,16 +95,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     docenten ... Daar krijg je zelden de gelegenheid voor! En
                     dat de docenten elkaar soms tegenspreken, .. tja, .. dat
                     geeft ruimte&quot;</p>
-                <h3>Programma <i>Barok uit Centraal Europa</i> voor alle zangers
-                    en instrumentalisten</h3>
-                <p>
-                <div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>Iedere middag werken alle zangers en instrumentalisten samen
+                <h3>Programma <i>Barok uit Centraal Europa</i> voor alle zangers en instrumentalisten</h3>
+                <p><div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>
+                Iedere middag werken alle zangers en instrumentalisten samen
                 aan het programma 'Barok uit Centraal Europa' voor iedereen. Centraal staat het Requiem in f klein van Biber en het Miserere in c klein ZWV 57 van Zelenka. Dit programma wordt in de kloosterkerk uitgevoerd als het slotconcert van de cursus. Uiteraard zijn er eerst groepsrepetities voor het koor en het orkest,
-                en correpetitie voor de solisten. Later in de week worden
-                alle groepen bijeen gevoegd en ontstaat een kleurrijk en
-                divers ensemble, waarin iedereen zijn eigen uitdagingen
-                heeft. <a href="programma.php">Lees hier meer over de werken
-                    en hun muzikale en historische context</a>.</p>
+                en correpetitie voor de solisten. Later in de week komen alle groepen bijeen en ontstaat een kleurrijk en divers ensemble, waarin iedereen zijn eigen uitdagingen heeft. <a href="programma.php">Lees hier meer over de werken en hun muzikale en historische context</a>.</p>
             </div>
             <p class="citaat">Andrew Fyson: &#8220;Het bijwonen van La
                 Pellegrina en het werken met prachtige en enthousiaste
@@ -208,7 +189,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="Partijen samen voorbereiden" class="w3-image" /><br>Partijen samen voorbereiden</div>
             <h4>Dagindeling</h4>
             <ul>
-                <li>8:00 ontbijt</li>
+                <li>vanaf 7:30 ontbijt</li>
+                <li>8:45 warming-up voor zangers en instrumentalisten</li>
                 <li>9:00 1e sessie werken aan muziek in kleine ensembles</li>
                 <li>10:30 koffiepauze</li>
                 <li>11:00 2e sessie werken aan muziek in kleine ensembles</li>

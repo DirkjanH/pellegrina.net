@@ -216,7 +216,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="Preparing parts toegether" class="w3-image" /><br />Preparing parts toegether</div>
             <h4>Daily Schedule</h4>
             <ul>
-                <li>8:00 breakfast</li>
+                <li>from 7:30 Breakfast</li>
+                <li>8:45 Warm-up for singers and instrumentalists</li>
                 <li>9:00 1st session working on music in small ensembles</li>
                 <li>10:30 coffee break</li>
                 <li>11:00 2nd session working on music in small ensembles</li>
