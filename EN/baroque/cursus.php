@@ -99,7 +99,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     home. Wishes for pieces and instrumentation are taken into account, within
                     the possibilities and restrictions of the course. The course is open
                     to individual participants and permanent ensembles. In the evenings those who still 
-                    have the erergy can form occasional chamber music combinations.</p>
+                    have feel like it can form occasional chamber music combinations. A number of rooms and keyboard instruments are available for this.</p>
                 <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a
                     piece like this for choir, soloists and orchestra. But the
                     chamber music is really an asset! Singers and
