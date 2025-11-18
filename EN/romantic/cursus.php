@@ -79,7 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     224 758 for information </p>
                 <p>&nbsp;</p>
             </div>
-            <h2><a name="programma"></a>The music</h2>
+            <h2><a name="programma"></a>The programme</h2>
             <p>For 36 years, <em>La Pellegrina </em>has annually organised a
                 summer course for instrumentalists and (choral) singers in
                 Czechia. This course has two aspects: chamber music or chamber

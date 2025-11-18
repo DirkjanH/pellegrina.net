@@ -73,9 +73,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 stad waar de nabijheid van Oostenrijk voelbaar is. Het
                 conservatorium is niet lang geleden grondig verbouwd, met airconditioning in de concertzaal. Er zijn uitstekende vleugels in alle werkruimten en
                 prima voorzieningen om te musiceren. Zo kan iedereen die er altijd van droomde te studeren aan een conservatorium toch nog gaan!</p>
-            <p>Accommodatie is in het schoolinternaat van het conservatorium in hetzelfde gebouw, met
-                simpele maar schone één- en tweepersoons kamers die ieder een eigen douche en toilet hebben. Daarnaast is er een keur van
-                hotels in diverse prijsklassen in de omgeving.</p>
+            <p>In hetzelfde gebouw is er accommodatie in het schoolinternaat, met eenvoudige maar schone een- en tweepersoonskamers, elk met een eigen douche en toilet.  Daarnaast is er een keur van hotels en appartementen in diverse prijsklassen in de omgeving.</p>
             <h3>De kamermuziek c.q. het kamerkoor</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
                     alt="kamermuziek" width="500" height="334"
