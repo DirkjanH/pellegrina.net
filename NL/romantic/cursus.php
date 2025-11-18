@@ -138,7 +138,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>Elke middag werken we aan een programma voor koor en orkest,
                     dat als afsluiting van de cursus openbaar wordt uitgevoerd.
                     Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák. <a href="programma.php">Lees
-                        hier meer over de werken en hun muzikale en historische
+                        hier meer over het Bruidshemd en zijn muzikale en historische
                         context</a>. Het slotconcert vindt plaats in de
                     schitterende en magnifiek klinkende kathedraal van České
                     Budějovice. Het programma wordt 'ingezeept' in een
