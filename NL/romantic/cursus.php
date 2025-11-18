@@ -97,8 +97,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     solozangers</a>) kunnen daarin eventueel ook participeren.
                 Uniek is de mogelijkheid grotere en ingewikkelder combinaties,
                 o.a. met blazers, te formeren, die 'thuis' niet gemakkelijk te
-                organiseren zijn. Denk aan het Octet van Schubert, de Nonetten van
-                Rota en Spohr en de blazersserenade van Dvořák.
+                organiseren zijn. Denk aan het octet van Schubert, de nonetten van
+                Rota, Martinů en Spohr en de blazersserenade van Dvořák.
             </p>
             <p class="citaat">Yo van Dijk: &quot;Waar ik met enige
                 koudwatervrees in sprong, bleek een aangenaam warm bad van
