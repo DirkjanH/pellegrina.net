@@ -76,21 +76,19 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>The former monastery of Nieuw Sion in the Salland forests
                     near Deventer in the Netherlands is the venue for this
                     year's seven-day baroque course. This course has two
-                    aspects: on one hand, a program of small ensembles of
+                    aspects: each morning we work in small ensembles of
                     singers and players of 'early' instruments, both vocal and
-                    instrumental separately or in combination. On the other
-                    hand, there is a joint program with baroque music from Central Europe. All singers and instrumentalists participate in this
-                    program.</p>
+                    instrumental separately or in combination. Each afternoon we work together on a joint 
+                    program with baroque music from Central Europe. All singers and instrumentalists participate in this program.</p>
                 <p class="citaat">Jeroen van Bergeijk: &quot;The ideal holiday
                     spending: many days of hard work in a monastery, immersed in
                     music, with an inspiring group of music lovers&quot;</p>
                 <h3>Chamber music</h3>
                 <div class="fotocenter w3-center"><img src="/Images/kamermuziek_NS.png"
                         alt="Chamber music ensemble performing" /><br>Chamber music ensemble performing</div>
-                <p>The most important part of the course is working in small
+                <p>Each morning of the course we work in small
                     ensembles. Everyone is part of two different pre-arranged
-                    ensembles, both of which are treated equally. The ensembles
-                    work most of the time under the intensive supervision of the
+                    ensembles. The ensembles work most of the time under the intensive supervision of the
                     teachers. The ensembles present themselves to the other
                     participants at the end of the course. This year the focus
                     is on German, Austrian, Polish and Czech baroque music, but this is optional for
@@ -100,8 +98,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     ensembles will be assigned in April or May, so you can prepare at
                     home. Wishes for pieces and instrumentation are taken into account, within
                     the possibilities and restrictions of the course. The course is open
-                    to individual participants and permanent ensembles. There is
-                    also time for occasional combinations in the evenings.</p>
+                    to individual participants and permanent ensembles. In the evenings those who still 
+                    have the erergy can form occasional chamber music combinations.</p>
                 <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a
                     piece like this for choir, soloists and orchestra. But the
                     chamber music is really an asset! Singers and
@@ -112,7 +110,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h3>Baroque from Central Europe, program for all singers and instrumentalists</h3>
                 <p>
                 <div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work together on the programme 'Baroque from Central Europe' for all,
-                which is performed in the monastery church as the culmination of the course. The program includes Biber's Requiem in F minor and Zelenka's Miserere in C minor ZWV 57. Of course, at first sectional rehearsals for the choir and orchestra and correpetition for the soloists will be held. Later in
+                which is performed in the monastery church on the last course day as the culmination of the course. The program includes Biber's Requiem in F minor and Zelenka's Miserere in C minor ZWV 57. Of course, at first sectional rehearsals for the choir and orchestra and correpetition for the soloists will be held. Later in
                 the week, all groups join forces to create a colorful and diverse ensemble, in which everyone has their
                 own challenges. <a href="programma.php">Read more about the works and their musical and historical context here</a>.
                 </p>
@@ -127,7 +125,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <div class="fotorechts"><img src="/Images/Feuillet-notation.jpg"
                     alt="" width="400" height="597" /><br> Feuillet-notation for
                 a chaconne</div>
-            <p>Baroque music cannot be separated from Baroque dance as it was
+            <p>Baroque music cannot be seen separated from Baroque dance as it was
                 practised at court. Thanks to sources with dance notation from
                 the period, such as the writings of the dance masters Feuillet
                 and Lorin, we can get a good idea of how dance was practised.
@@ -234,9 +232,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 energy has come to our practicing and playing at home.&quot;</p>
             <div class="fotocenter"><img src="/Images/lunch.png"
                     alt="Lunch at the edge of the forest" class="w3-image" /><br>Lunch at the edge of the forest</div>
-            <h2><a name="waar" id="waar"></a>Waar</h2>
+            <h2><a name="waar" id="waar"></a>Where</h2>
             <p>Nieuw Sion Monastery has been in existence since 1890. Until 2015, it was a Trappist monastery. In that year, the last eight monks closed the door behind them and found a new home on the island of Schiermonnikoog. The monastery was transferred for one euro to a foundation whose aim is to preserve the spiritual significance of the monastic community.</p>
-            <p>Since then, all kinds of spiritual, cultural, and musical activities have taken place there. A growing number of people are seeking a monastic life centered on silence and spirituality. Three times a day, silent prayers are held in the monastery church. In addition, they tend to the large vegetable garden, run the brewery and coffee house, and organize a large number of activities, such as retreats, youth weekends, and the like. The income from all these activities pays for small renovations to the monastery. This year, for example, single and double rooms with private bathrooms are available for the first time in the renovated Poortgebouw. More information can be found here:</p>
+            <p>Since then, all kinds of spiritual, cultural, and musical activities have taken place there. A growing number of people are seeking a monastic life centered on silence and spirituality. Three times a day, silent prayers are held in the monastery church. In addition, they tend to the large vegetable garden, run the brewery and coffee house, and organize a large number of activities, such as retreats, youth weekends, and the like. The income from all these activities pays for small renovations to the monastery. Now there are new single and double rooms with private bathrooms available in the renovated Poortgebouw. More information can be found here:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
                         target="_blank">An impression of the monastery</a> (in Dutch)</li>
