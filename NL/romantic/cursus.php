@@ -74,7 +74,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 conservatorium is niet lang geleden grondig verbouwd, met airconditioning in de concertzaal. Er zijn uitstekende vleugels in alle werkruimten en
                 prima voorzieningen om te musiceren. Zo kan iedereen die er altijd van droomde te studeren aan een conservatorium toch nog gaan!</p>
             <p>In hetzelfde gebouw is er accommodatie in het schoolinternaat, met eenvoudige maar schone een- en tweepersoonskamers, elk met een eigen douche en toilet.  Daarnaast is er een keur van hotels en appartementen in diverse prijsklassen in de omgeving.</p>
-            <h3>De kamermuziek c.q. het kamerkoor</h3>
+            <h3>Kamermuziek & kamerkoor</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
                     alt="kamermuziek" width="500" height="334"
                     class="w3-image" /><br />
@@ -117,10 +117,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 vaste ensembles. </p>
             <p>Er is in de cursus ook tijd voor gelegenheidscombinaties van
                 kamermuziek. Een speciale avond wordt het <em>Mozart Concerto
-                    Event</em>, waar de pianisten en andere instrumentalisten
+                    Event</em>, waar de pianisten en andere instrumentalisten en zangers
                 worden uitgenodigd om een deel van een concert van Mozart of een
                 tijdgenoot voor te bereiden en de andere instrumentalisten
-                worden gevraagd om dat - van blad spelend - te begeleiden.</p>
+                worden gevraagd om dat - à vue spelend - te begeleiden.</p>
             <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
                 eerste muzikale Pellegrina week door het niveau van de cursus,
                 de afwisseling van kamermuziek en tutti programma, de
@@ -310,7 +310,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
     </div>
-</body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+</body>
 
 </html>

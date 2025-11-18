@@ -92,7 +92,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 and fine facilities for making music. So anyone who always dreamt of studying at a
                 conservatoire can still do so!</p>
             <p> In the same building there is accommodation in the school hostel, with simple but clean single
-                and double rooms, each with its own shower and toilet. In addition, there is a choice of hotels in various price ranges in
+                and double rooms, each with its own shower and toilet. In addition, there is a choice of hotels and appartments in various price ranges in
                 the area. </p>
             <h3>Chamber music &amp; chamber choir</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
@@ -114,9 +114,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 singers (<a href="#solozang">see the description here</a>) may
                 also participate in this. There is also the unique possibility
                 to form larger and more complex combinations, also with winds,
-                that are not easy to organize 'at home'. Think of Schubert's
-                Octet, the Spohr Nonet and the Allegro for four string quartets
-                by the Dutch romantic composer Van Bree.</p>
+                that are not easy to organize 'at home'. Think of Schubert's octet, the nonets by Rota, Martinů and Spohr, 
+                and Dvořák's serenade for wind instruments.</p>
             <p class="citaat">Yo van Dijk: &quot;What I jumped into with some
                 cold feet turned out to be a pleasant warm bath of enthusiastic
                 musicians. For a moment you are in another world, a more
@@ -129,15 +128,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 work on Barber's <em>Dover Beach</em> with a string quartet. A
                 few more suggestions: Pergolesi's <em>Stabat Mater</em> with
                 strings, Mozart and Haydn <em>Lieder </em>for several voices and
-                piano, Telemann's <em>Harmonischer Gottesdienst</em>, Schubert's
-                <em>Hochzeitsbraten</em> or other Schubert works for several
+                piano, Schubert's <em>Hochzeitsbraten</em> or other Schubert or Brahms works for several
                 voices and piano, etc., etc.
             </p>
             <p>The course is open to individual participants as well as existing
-                ensembles. </p>
+                ensembles.</p>
             <p>There will be time for occasional combinations and musical
                 get-togethers. A special evening will be the <em>Mozart Concerto
-                    Event</em>, where pianists and other instrumentalists are
+                    Event</em>, where pianists and other instrumentalists and singers are
                 invited to prepare a movement from a concerto by Mozart or a
                 contemporary and the other instrumentalists are asked to
                 accompany, sight-reading the orchestral parts.</p>
@@ -146,24 +144,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 of chamber music and tutti program, the guidance by good coaches
                 and the wonderful music!”</p>
             <div class="container">
-                <h3>The programme for soloists, choir and orchestra: Dvořák &
-                    Haydn </h3>
+                <h3>The programme for soloists, choir and orchestra: Dvořák's <i>Svatební košile</i> (the Spectre's Bride)</h3>
                 <div class="fotolinks"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Cathedral with Black Tower" width="400"
-                        class="w3-image"><br> České Budějovice cathedral</div>
+                        class="w3-image"><br>České Budějovice cathedral with the Black Tower</div>
                 <p>Each afternoon we work on a programme for choir and
                     orchestra, which is performed publicly as the conclusion of
-                    the course. This year, this final concert will feature a
-                    program of two works, namely the <em>Missa in tempore
-                        belli</em> by Joseph Haydn for soloists, choir and
-                    orchestra. In addition the orchestra is working on the
-                    symphonic poem <em>The Golden Spinning Wheel</em> by Dvořák.
-                    <a href="programma.php">Read more about the works and their
+                    the course. This year, this final concert will feature Dvořák's <i>Svatební košile</i> (the Spectre's Bride) for soloists, choir and
+                    orchestra. <a href="programma.php">Read more about the works and their
                         musical and historical context here</a>. The concert
-                    will take place in the magnificent and magnificently
-                    sounding České Budějovice monastery church. On the 14st of
-                    June we'll slap a first coat of paint on the music, as
+                    will take place in the magnificently sounding České Budějovice cathedral.</p>
+                <p>On the 13th of June we'll slap a first coat of paint on the music, as
                     preparation for the summer, in Den Dolder near Utrecht. Of
                     course this rehearsal is not mandatory for people not living
                     in the Netherlands, but some foreign participants tend to
@@ -227,7 +219,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     accompany singers in their arias and may even play timpani
                     or other percussion in the orchestra, or sing in the choir.
                     For the other instruments in the orchestra, such as harp,
-                    trumpets, trombones and tuba, we hire Czech professionals.
+                    trumpets, trombones and tuba, we usually hire Czech professionals.
                 </p>
                 <p class="citaat">Christine Achten: &quot;A week of letting go
                     of everything and immersing yourself in a bath of beautiful
@@ -237,7 +229,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <a href="cursus.php" target="_self"></a>
             </div>
             <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
-            <p> On Saturday, 1 June, a preliminary rehearsal day will be held in
+            <p> On Saturday, 13 June, a preliminary rehearsal day will be held in
                 Den Dolder near Utrecht. Of course this rehearsal is not
                 obligatory for participants from outside the Netherlands. Still,
                 quite often a few participants not living in the Netherlands
@@ -283,8 +275,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </p>
             <div class="fotocenter"><img src="/Images/pauze.jpg" alt="interval"
                     width="640" height="427" border="1"
-                    class="w3-image" /><br /> Interval in the monastery
-                courtyard</div>
+                    class="w3-image" /><br>Interval in the monastery courtyard</div>
             <h4>Daily schedule</h4>
             <ul>
                 <li> 8:00 breakfast</li>
@@ -293,7 +284,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li> 13:00 lunch</li>
                 <li>14:30 the orchestra first works in sectional rehearsals,
                     later also in full ensemble; the choir works at first
-                    separately on Haydn's <i>Missa in tempore belli</i>. Later
+                    separately on Dvořák's <i>Svatební košile</i>. Later
                     in the week, choir and orchestra rehearse together </li>
                 <li>17:30 drinks and dinner</li>
                 <li> Evening off, plenty of time for playing more chamber music,
@@ -346,8 +337,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>
-</body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
+</body>
 
 </html>
