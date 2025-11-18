@@ -72,8 +72,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 ook bekend onder de Duitse naam Budweis, is een gemoedelijke
                 stad waar de nabijheid van Oostenrijk voelbaar is. Het
                 conservatorium is niet lang geleden grondig verbouwd, met airconditioning in de concertzaal. Er zijn uitstekende vleugels en
-                prima voorzieningen om te musiceren. Zo kan iedereen die graag
-                aan een conservatorium had gestudeerd toch nog gaan! Er is in
+                prima voorzieningen om te musiceren. Zo kan iedereen die er altijd van droomde te studeren aan een conservatorium toch nog gaan! Er is in
                 hetzelfde gebouw accommodatie in het schoolinternaat, met
                 simpele maar schone één- en tweepersoons kamers die ieder een
                 eigen douche en toilet hebben. Daarnaast is er een keur van
@@ -133,7 +132,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h3>Het programma voor solisten, koor en orkest: Dvořáks <i>Svatební košile</i> (Het Bruidshemd)</h3>
                 <div class="fotolinks"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
-                        alt="Kathedraal met de zwarte toren" width="400"
+                        alt="Kathedraal met de Zwarte Toren" width="400"
                         class="w3-image"><br>kathedraal van České Budějovice met de Zwarte Toren</div>
                 <p>Elke middag werken we aan een programma voor koor en orkest,
                     dat als afsluiting van de cursus openbaar wordt uitgevoerd.
@@ -317,7 +316,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 maal prima </div>
             <h2><a name="inschrijven"></a>Inschrijven</h2>
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
-            <!-- InstanceEndEditable -->
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
     </div>

@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -19,7 +19,7 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -28,40 +28,43 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <meta charset="UTF-8">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
+
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-                                    echo $navigatie;
-                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
-                                    ?> <div id="main">
+                                        echo $navigatie;
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
+                                        ?> <div id="main">
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
             <div class="onzichtbaar" id="nog_plaats">
                 <p>&nbsp;</p>
@@ -77,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>&nbsp;</p>
             </div>
             <h2><a name="programma"></a>The music</h2>
-            <p>For 35 years, <em>La Pellegrina </em>has annually organised a
+            <p>For 36 years, <em>La Pellegrina </em>has annually organised a
                 summer course for instrumentalists and (choral) singers in
                 Czechia. This course has two aspects: chamber music or chamber
                 choir, and a joint programme for soloists, orchestra and choir.
@@ -85,14 +88,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 Budějovice. České Budějovice, also known by its German name
                 Budweis, is a friendly town where the proximity to Austria is
                 palpable. The conservatory has recently undergone extensive
-                renovation. The concert hall has air condition, the entrance is
-                spacious and bright, and the work areas have been refurbished.
-                There are excellent grand pianos and fine facilities for making
-                music. So anyone who would have liked to study at a
-                conservatoire can still do so! In the same building there is
-                accommodation in the school hostel, with simple but clean single
-                and double rooms, each with its own shower and toilet. In
-                addition, there is a choice of hotels in various price ranges in
+                renovation, with air condition in the concert hall. There are excellent grand pianos in the classrooms
+                and fine facilities for making music. So anyone who always dreamt of studying at a
+                conservatoire can still do so!</p>
+            <p> In the same building there is accommodation in the school hostel, with simple but clean single
+                and double rooms, each with its own shower and toilet. In addition, there is a choice of hotels in various price ranges in
                 the area. </p>
             <h3>Chamber music &amp; chamber choir</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
@@ -131,7 +131,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 strings, Mozart and Haydn <em>Lieder </em>for several voices and
                 piano, Telemann's <em>Harmonischer Gottesdienst</em>, Schubert's
                 <em>Hochzeitsbraten</em> or other Schubert works for several
-                voices and piano, etc., etc. </p>
+                voices and piano, etc., etc.
+            </p>
             <p>The course is open to individual participants as well as existing
                 ensembles. </p>
             <p>There will be time for occasional combinations and musical
@@ -167,7 +168,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     course this rehearsal is not mandatory for people not living
                     in the Netherlands, but some foreign participants tend to
                     show up, combining the rehearsal with a trip or visiting
-                    friends. They are of course most welcome. </p>
+                    friends. They are of course most welcome.
+                </p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;The rehearsals were very
                 pleasant. Dirkjan manages every year to be ambitious and
@@ -351,4 +353,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 <!-- InstanceEnd -->
+
 </html>
