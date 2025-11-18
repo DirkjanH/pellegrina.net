@@ -6,7 +6,7 @@ if ( isset( $filenaam[ 7 ] )AND $filenaam[ 7 ] == 'cursus' ) {
 	if ( isset( $filenaam[ 5 ] )AND $filenaam[ 5 ] == 'NL' ) {
 		if ( $opening_inschrijving > date( 'c' ) ) {
 			$inschrijven = <<<EOD
-         <p>Zodra de inschrijving geopend is, dus vanaf 1 december, kun je je inschrijven door het inschrijfformulier in te vullen en het inschrijfgeld van $inschrijfgeld te betalen. Dat inschrijfgeld wordt natuurlijk terugbetaald in het geval dat je niet geplaatst kunt worden.</p>
+         <p>Zodra de inschrijving open is, dus vanaf 1 december, kun je je inschrijven door het inschrijfformulier in te vullen en de aanbetaling van $inschrijfgeld te betalen (die natuurlijk wordt terugbetaald als je niet geplaatst kunt worden).</p>
 EOD;
 		} else {
 			$inschrijven = <<<EOD
