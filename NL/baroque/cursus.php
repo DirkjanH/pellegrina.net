@@ -221,9 +221,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 houden de brouwerij en het koffiehuis draaiende en organiseren
                 een groot aantal activiteiten, zoals retraites, jeugdweekenden
                 weekenden en dergelijke. De inkomsten van al deze activiteiten
-                jaar betalen kleine reconstructies van het klooster. Dit jaar,
-                zijn er bijvoorbeeld voor het eerst één- en tweepersoons kamers
-                beschikbaar met eigen sanitair in het gerenoveerde Poortgebouw.
+                jaar betalen kleine reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw.
                 Meer informatie is hier vinden:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
