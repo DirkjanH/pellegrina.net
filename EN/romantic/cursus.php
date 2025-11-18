@@ -333,7 +333,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Vlašánková</a>.</p>
             <h2><a name="inschrijven"></a>How to register</h2>
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
-            <!-- InstanceEndEditable -->
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>

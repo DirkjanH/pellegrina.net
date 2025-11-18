@@ -17,7 +17,7 @@ EOD;
 	} else {
 		if ( $opening_inschrijving > date( 'c' ) ) {
 			$inschrijven = <<<EOD
-         <p>As soon as the registration is open, so from December 1, you can register by using the registration form and paying the deposit of $inschrijfgeld_EN (which of course will be refunded in case you cannot be placed).</p>
+         <p>As soon as the registration is open, so from December 1, you can register by filling out the registration form and paying the deposit of $inschrijfgeld_EN (which of course will be refunded in case you cannot be placed).</p>
 EOD;
 		} else {
 			$inschrijven = <<<EOD
