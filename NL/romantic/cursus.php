@@ -60,17 +60,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                         require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                         ?> <div id="main">
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
-            <h2><a name="programma"></a>De muziek</h2>
+            <h2><a name="programma"></a>Het programma</h2>
             <p>Al 36 jaar organiseert La Pellegrina een jaarlijkse zomercursus
-                voor instrumentalisten en (koor)zangers. Deze cursus heeft twee
+                voor instrumentalisten en (koor)zangers in Tsjechië. Deze cursus heeft twee
                 aspecten: kamermuziek c.q. kamerkoor, en een gezamenlijk
                 programma voor solisten, orkest en koor. De cursus vindt plaats
                 in het conservatorium van České Budějovice. České Budějovice,
                 ook bekend onder de Duitse naam Budweis, is een gemoedelijke
                 stad waar de nabijheid van Oostenrijk voelbaar is. Het
-                conservatorium is niet lang geleden grondig verbouwd. De zaal
-                heeft airconditioning , de entree is ruim en licht en de
-                werkruimtes zijn opgeknapt. Er zijn uitstekende vleugels en
+                conservatorium is niet lang geleden grondig verbouwd, met airconditioning in de concertzaal. Er zijn uitstekende vleugels en
                 prima voorzieningen om te musiceren. Zo kan iedereen die graag
                 aan een conservatorium had gestudeerd toch nog gaan! Er is in
                 hetzelfde gebouw accommodatie in het schoolinternaat, met
@@ -82,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="kamermuziek" width="500" height="334"
                     class="w3-image" /><br />
             </div>
-            <p>Iedere ochtend werkt men in kamermuziek- c.q. kamerkoorbezetting.
+            <p>Iedere ochtend werken we in kamermuziek- c.q. kamerkoorbezetting.
                 Iedereen maakt deel uit van twee verschillende van tevoren
                 ingedeelde ensembles, die per dag worden afgewisseld. De
                 ensembles werken minimaal de helft van de tijd onder intensieve
@@ -99,8 +97,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     solozangers</a>) kunnen daarin eventueel ook participeren.
                 Uniek is de mogelijkheid grotere en ingewikkelder combinaties,
                 o.a. met blazers, te formeren, die 'thuis' niet gemakkelijk te
-                organiseren zijn. Denk aan het Octet van Schubert, het Nonet van
-                Spohr en het Allegro voor vier strijkkwartetten van Van Bree.
+                organiseren zijn. Denk aan het Octet van Schubert, de Nonetten van
+                Rota en Spohr en de blazersserenade van Dvořák.
             </p>
             <p class="citaat">Yo van Dijk: &quot;Waar ik met enige
                 koudwatervrees in sprong, bleek een aangenaam warm bad van
@@ -114,9 +112,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 en piano. Een bariton zou <em>Dover Beach</em> van Barber kunnen
                 instuderen met een strijkkwartet. Nog een paar suggesties:
                 Pergolesi's <em>Stabat Mater</em> met strijkers, Mozart en Haydn
-                liederen voor meer stemmen met piano, Telemanns <em>Harmonischer
-                    Gottesdienst</em>, Schuberts <em>Hochzeitsbraten</em> of
-                andere Schubert voor meerdere stemmen met piano, enz., enz.</p>
+                liederen voor meer stemmen met piano, Schuberts <em>Hochzeitsbraten</em> of
+                andere Schubert of Brahms voor meerdere stemmen met piano, enz., enz.</p>
             <p>De cursus staat open zowel voor individuele deelnemers als voor
                 vaste ensembles. </p>
             <p>Er is in de cursus ook tijd voor gelegenheidscombinaties van
@@ -130,20 +127,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 de afwisseling van kamermuziek en tutti programma, de
                 begeleiding door goede coaches en de heerlijk muziek!"</p>
             <div class="container">
-                <h3>Het programma voor solisten, koor en orkest: Dvořák & Haydn
-                </h3>
+                <h3>Het programma voor solisten, koor en orkest: Dvořáks <i>Svatební košile</i> (Het Bruidshemd)</h3>
                 <div class="fotolinks"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Kathedraal met de zwarte toren" width="400"
-                        class="w3-image"><br> kathedraal van České Budějovice
-                    met zwarte toren</div>
+                        class="w3-image"><br>kathedraal van České Budějovice met de Zwarte Toren</div>
                 <p>Elke middag werken we aan een programma voor koor en orkest,
                     dat als afsluiting van de cursus openbaar wordt uitgevoerd.
-                    Dit jaar klinkt in dit slotconcert een programma met twee
-                    werken, namelijk de <em>Missa in tempore belli</em> van
-                    Joseph Haydn voor solisten, koor en orkest. Daarnaast werkt
-                    het orkest aan het symfonisch gedicht <em>Het Gouden
-                        Spinnewiel</em> van Dvořák. <a href="programma.php">Lees
+                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák. <a href="programma.php">Lees
                         hier meer over de werken en hun muzikale en historische
                         context</a>. Het slotconcert vindt plaats in de
                     schitterende en magnifiek klinkende kathedraal van České
