@@ -199,8 +199,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li>15:00 theepauze</li>
                 <li>15:30 gezamenlijke repetitie tutti-programma</li>
                 <li>17:00 borrelen en avondeten</li>
-                <li>'s Avonds: vrij te besteden; gelegenheid voor extra
-                    kamermuziek</li>
+                <li>'s avonds: vrij te besteden; gelegenheid voor extra kamermuziek</li>
             </ul>
             <p class="citaat">Staffan Rudner: &quot;De docenten waren in staat
                 zich aan te passen aan de mogelijkheden van ons allemaal. Na de

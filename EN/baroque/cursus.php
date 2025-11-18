@@ -226,8 +226,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li>15:00 tea break</li>
                 <li>15:30 joint rehearsal tutti-programme</li>
                 <li>17:00 drinks and dinner</li>
-                <li>Evening: free to spend; ample opportunity for extra chamber
-                    music</li>
+                <li>evening: free to spend; ample opportunity for occasional chamber music</li>
             </ul>
             <p class="citaat">Staffan Rudner: &quot;The tutors were able to
                 adapt to the potential of all of us. After the course a new
