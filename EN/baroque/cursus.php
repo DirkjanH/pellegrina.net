@@ -99,7 +99,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     home. Wishes for pieces and instrumentation are taken into account, within
                     the possibilities and restrictions of the course. The course is open
                     to individual participants and permanent ensembles. </p>
-                <p> In the evenings those who still feel like it can form occasional chamber music combinations. 
+                <p> In the evenings those who still feel like it can form occasional chamber music combinations.
                     A number of rooms and keyboard instruments are available for this.</p>
                 <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a
                     piece like this for choir, soloists and orchestra. But the
@@ -235,7 +235,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="Lunch at the edge of the forest" class="w3-image" /><br>Lunch at the edge of the forest</div>
             <h2><a name="waar" id="waar"></a>Where</h2>
             <p>Nieuw Sion Monastery has been in existence since 1890. Until 2015, it was a Trappist monastery. In that year, the last eight monks closed the door behind them and found a new home on the island of Schiermonnikoog. The monastery was transferred for one euro to a foundation whose aim is to preserve the spiritual significance of the monastic community.</p>
-            <p>Since then, all kinds of spiritual, cultural, and musical activities have taken place there. A growing number of people are seeking a monastic life centered on silence and spirituality. Three times a day, silent prayers are held in the monastery church. In addition, they tend to the large vegetable garden, run the brewery and coffee house, and organize a large number of activities, such as retreats, youth weekends, and the like. The income from all these activities pays for small renovations to the monastery. Now there are new single and double rooms with private bathrooms available in the renovated Poortgebouw. More information can be found here:</p>
+            <p>Since then, all kinds of spiritual, cultural, and musical activities have taken place there. A growing number of people are seeking a monastic life centered on silence and spirituality. Three times a day, silent prayers are held in the monastery church. In addition, they tend to the large vegetable garden, run the brewery and coffee house, and organize a large number of activities, such as retreats, youth weekends, and the like. The income from all these activities pays for small renovations to the monastery. For example, new single and double rooms with private bathrooms are now available in the renovated Poortgebouw. More information can be found here:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
                         target="_blank">An impression of the monastery</a> (in Dutch)</li>
