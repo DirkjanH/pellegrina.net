@@ -19,6 +19,7 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -26,32 +27,34 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <title><?php echo $cursusdata['cursusnaam_nl']; ?></title>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
@@ -139,7 +142,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         context</a>. Het slotconcert vindt plaats in de
                     schitterende en magnifiek klinkende kathedraal van České
                     Budějovice. Het programma wordt 'ingezeept' in een
-                    voorbereidende repetitie op zaterdag 14 juni in Den Dolder
+                    voorbereidende repetitie op zaterdag 13 juni in Den Dolder
                     bij Utrecht.</p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;De orkestrepetities verliepen
@@ -203,7 +206,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     hun aria's en kunnen zelfs pauken of ander slagwerk spelen
                     in het orkest, of in het koor zingen. Voor de overige
                     instrumenten in het orkest, zoals harp, trompetten,
-                    trombones en tuba, huren we Tsjechische professionals in.
+                    trombones en tuba, huren we doorgaans Tsjechische professionals in.
                 </p>
                 <p class="citaat">Christine Achten: &quot;Een weekje alles
                     loslaten en je onderdompelen in een bad van mooie muziek,
@@ -212,7 +215,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vakantie!&quot;</p>
             </div>
             <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
-            <p> Op <strong>zaterdag 14 juni </strong>wordt overdag een
+            <p> Op <strong>zaterdag 13 juni </strong>wordt overdag een
                 voorbereidende repetitie gehouden in Den Dolder bij Utrecht,
                 onder leiding van Mitchell Sandler en Dirkjan Horringa. Deze
                 repetitie heeft als doel kennis te maken met de overige
@@ -229,21 +232,21 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
             <h4>Weekindeling</h4>
             <ul>
-                <li>Donderdagavond 24 juli rond 18:00 opening cursus met het
+                <li>Donderdagavond 30 juli rond 18:00 opening cursus met het
                     avondeten; 's avonds eerste<em> </em>repetitie van koor en
                     orkest</li>
-                <li>Vrijdagavond 25 juli kamermuziekconcert door de docenten
+                <li>Vrijdagavond 31 juli kamermuziekconcert door de docenten
                 </li>
-                <li>Dinsdag 29 juli vrije dag</li>
-                <li>Woensdagavond 30 juli <em>Mozart Concerto Event</em>:
+                <li>Dinsdag 4 augustus vrije dag</li>
+                <li>Woensdagavond 5 augustus <em>Mozart Concerto Event</em>:
                     deelnemers spelen solo in delen uit Mozart concerten, a vue
                     begeleid door het orkest</li>
-                <li>Vrijdagmiddag en -avond 1 augustus kamermuziekconcerten voor
+                <li>Vrijdagmiddag en -avond 7 augustus kamermuziekconcerten voor
                     en door deelnemers </li>
-                <li>Zaterdagmiddag 2 augustus om 15:30 openbare uitvoering in de
-                    kathedraal van het programma met Dvořák en Haydn door
+                <li>Zaterdagmiddag 8 augustus om 15:00 openbare uitvoering in de
+                    kathedraal van Dvořáks cantate <i>Svatební košile</i> (Het Bruidshemd) door
                     solisten, koor en orkest </li>
-                <li>Zondagochtend 3 augustus vertrek na het ontbijt</li>
+                <li>Zondagochtend 9 augustus vertrek na het ontbijt</li>
             </ul>
             <div class="fotocenter"> <img
                     src="/Images/Mozart Concerto Event 1.jpg" width="400"
@@ -320,5 +323,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
+
 </html>
