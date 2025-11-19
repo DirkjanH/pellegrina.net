@@ -154,8 +154,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     amateur van een vergelijkbaar niveau, en houd je van zingen als
                     solist? Heb je de vaardigheden om je partij zelfstandig voor te bereiden? Heb je een specifiek kamermuziekstuk in gedachten?
                     Zo ja, dan kun je deel uitmaken van een van de kamermuziekensembles in de ochtendsessies.</p>
-                <p>We horen je graag. Dit geeft ons een idee van hoe je je in de cursus kunt plaatsen en om te weten welk stuk in de
-                    kamermuziek voor jou geschikt zou kunnen zijn. Maak een opname van je zang en stuur die naar <em>La Pellegrina</em>.</p>
+                <p>We horen je graag. Dit geeft ons een idee van hoe je je in de cursus kunt plaatsen. Maak een opname van je zang en stuur
+                    die naar <em>La Pellegrina</em>.</p>
                 <p class="citaat">Yolande Krooshof: &quot;ik heb drie mensen
                     overgehaald mee te gaan, best griezelig, maar ze hebben alle
                     drie genoten!</p>
@@ -187,7 +187,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </div>
             <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
             <p> Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
-                en een eerste kennismaking te hebben met het koor- en orkestprogramma, zodat je je daarna efficiënter kunt voorbereiden op je partij. Daarnaast is het inspirerend om vast een 
+                en een eerste kennismaking te hebben met het koor- en orkestprogramma, zodat je je daarna efficiënter kunt voorbereiden op je partij. Daarnaast is het inspirerend om vast een
                 gevoel te krijgen voor het werk dat je gaat spelen of zingen en ook je ‘collega's’ te ontmoeten.
             </p>
             <p class="citaat">Marieke van Dantzig: &quot;Een wonderlijke

@@ -170,9 +170,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     soloist? Do you have the skills to prepare your part independently? Do you have a specific chamber music piece in mind?
                     If so, you can be part of one of the chamber music ensembles in the morning sessions.</p>
                 <p> We would like to hear you. This will give us an idea of how
-                    to place you within the course to know which part might be
-                    appropriate for you in the chamber music. Please make a
-                    recording of your singing and send it to <em>La Pellegrina</em>.</p>
+                    to place you within the course. Please make a recording of your singing and send it to <em>La Pellegrina</em>.</p>
             </div>
             <p class="citaat">Yolande Krooshof: &quot;I have persuaded three
                 people to join the course, eerie, but they all have enjoyed
