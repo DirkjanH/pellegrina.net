@@ -80,17 +80,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>&nbsp;</p>
             </div>
             <h2><a name="programma"></a>The programme</h2>
-            <p>For 36 years, <em>La Pellegrina </em>has organised
-                summer courses for instrumentalists and singers in
-                Czechia. This course has two aspects: chamber music or chamber
-                choir, and a joint programme for soloists, orchestra and choir.
+            <p>For 36 years, <em>La Pellegrina </em>has organised summer courses for instrumentalists and singers in
+                Czechia. This summer course has two aspects: chamber music and a joint programme for soloists, orchestra and choir.
                 The summer school takes place in the conservatoire of České
-                Budějovice. České Budějovice, also known by its German name
-                Budweis, is a friendly town where the proximity to Austria is
-                palpable. The conservatory has recently undergone extensive
-                renovation, with air condition in the concert hall. There are excellent grand pianos in the classrooms
-                and fine facilities for making music. So anyone who always dreamt of studying at a
-                conservatoire can still do so!</p>
+                Budějovice, also known by its German name Budweis. This is a friendly town where the proximity to Austria is
+                palpable. The conservatoire has recently undergone extensive
+                renovation, with air conditioning in the concert hall. There are excellent grand pianos in the classrooms
+                and fine facilities for making music. So anyone who always dreamt of studying at a conservatoire can still do so!</p>
             <p> In the same building there is accommodation in the school hostel, with simple but clean single
                 and double rooms, each with its own shower and toilet. In addition, there is a choice of hotels and apartments in various price ranges in
                 the area. </p>

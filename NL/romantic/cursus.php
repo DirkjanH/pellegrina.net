@@ -68,8 +68,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 voor instrumentalisten en (koor)zangers in Tsjechië. Deze cursus heeft twee
                 aspecten: kamermuziek c.q. kamerkoor, en een gezamenlijk
                 programma voor solisten, orkest en koor. De cursus vindt plaats
-                in het conservatorium van České Budějovice. České Budějovice,
-                ook bekend onder de Duitse naam Budweis, is een gemoedelijke
+                in het conservatorium van České Budějovice, ook bekend onder de Duitse naam Budweis. Dit is een gemoedelijke
                 stad waar de nabijheid van Oostenrijk voelbaar is. Het
                 conservatorium is niet lang geleden grondig verbouwd, met airconditioning in de concertzaal. Er zijn uitstekende vleugels in alle werkruimten en
                 prima voorzieningen om te musiceren. Zo kan iedereen die er altijd van droomde te studeren aan een conservatorium toch nog gaan!</p>
