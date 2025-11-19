@@ -104,7 +104,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 combinations of strings and winds, with or without piano. All
                 formations from quartet upward are possible, with perhaps a few trios. Very advanced
                 singers (<a href="#solozang">see the description here</a>) may
-                also participate in this. It is also possible to form larger and more complex combinations, which are not easy to organize 'at home'.
+                also participate in this. It is also possible to form larger and more complex combinations, which are not easy to organize at home.
                 Think of Schubert's octet, the nonets by Rota, Martinů and Spohr,
                 and Dvořák's serenade for wind instruments. Ensembles will be formed well in advance, so
                 you can prepare your parts thoroughly at home.</p>

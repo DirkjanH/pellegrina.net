@@ -91,7 +91,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 Alle bezettingen vanaf kwartet zijn mogelijk, met eventueel een
                 paar trio's ertussen. Zeer gevorderde zangers (<a href="#solozang">zie toelichting bij
                     solozangers</a>) kunnen daarin eventueel ook participeren.
-                Het is ook mogelijk grotere en ingewikkelder combinaties te formeren, die 'thuis' niet gemakkelijk te
+                Het is ook mogelijk grotere en ingewikkelder combinaties te formeren, die thuis niet gemakkelijk te
                 organiseren zijn. Denk aan het octet van Schubert, de nonetten van
                 Rota, Martinů en Spohr en de blazersserenade van Dvořák. De ensemble-indeling wordt tijdig bekend
                 gemaakt, zodat je je thuis kunt voorbereiden.
