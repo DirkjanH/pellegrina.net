@@ -73,7 +73,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 stad waar de nabijheid van Oostenrijk voelbaar is. Het
                 conservatorium is niet lang geleden grondig verbouwd, met airconditioning in de concertzaal. Er zijn uitstekende vleugels in alle werkruimten en
                 prima voorzieningen om te musiceren. Zo kan iedereen die er altijd van droomde te studeren aan een conservatorium toch nog gaan!</p>
-            <p>In hetzelfde gebouw is er accommodatie in het schoolinternaat, met eenvoudige maar schone een- en tweepersoonskamers, elk met een eigen douche en toilet.  Daarnaast is er een keur van hotels en appartementen in diverse prijsklassen in de omgeving.</p>
+            <p>In hetzelfde gebouw is er accommodatie in het schoolinternaat, met eenvoudige maar schone een- en tweepersoonskamers, elk met een eigen douche en toilet. Daarnaast is er een keur van hotels en appartementen in diverse prijsklassen in de omgeving.</p>
             <h3>Kamermuziek & kamerkoor</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
                     alt="kamermuziek" width="500" height="334"
@@ -84,20 +84,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 ingedeelde ensembles, die per dag worden afgewisseld. De
                 ensembles werken minimaal de helft van de tijd onder intensieve
                 begeleiding van de docenten. De ensembles krijgen de kans om
-                zichzelf te presenteren in een intern concert.</p>
-            <p class="citaat" dir="ltr">Rob Klotz: Als ik dan een verslaving
+                zichzelf te presenteren in een concert voor de andere deelnemers.</p>
+            <p class="citaat">Rob Klotz: Als ik dan een verslaving
                 moet hebben, is naar La Pellegrina gaan mijn favoriete drug</p>
             <p>Instrumentalisten houden zich bezig met kamermuziek in
                 bezettingen voor strijkers en/of blazers, al dan niet met piano.
                 Alle bezettingen vanaf kwartet zijn mogelijk, met eventueel een
-                paar trio's ertussen. De ensemble-indeling wordt tijdig bekend
-                gemaakt, zodat je je thuis kunt voorbereiden. Zeer gevorderde
-                zangers (<a href="#solozang">zie toelichting bij
+                paar trio's ertussen. Zeer gevorderde zangers (<a href="#solozang">zie toelichting bij
                     solozangers</a>) kunnen daarin eventueel ook participeren.
-                Uniek is de mogelijkheid grotere en ingewikkelder combinaties,
-                o.a. met blazers, te formeren, die 'thuis' niet gemakkelijk te
+                Het is ook mogelijk grotere en ingewikkelder combinaties te formeren, die 'thuis' niet gemakkelijk te
                 organiseren zijn. Denk aan het octet van Schubert, de nonetten van
-                Rota, Martinů en Spohr en de blazersserenade van Dvořák.
+                Rota, Martinů en Spohr en de blazersserenade van Dvořák. De ensemble-indeling wordt tijdig bekend
+                gemaakt, zodat je je thuis kunt voorbereiden.
             </p>
             <p class="citaat">Yo van Dijk: &quot;Waar ik met enige
                 koudwatervrees in sprong, bleek een aangenaam warm bad van
@@ -105,7 +103,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 mooiere wereld zonder zorgen&quot;</p>
             <p>Elke ochtend vormen de koorzangers een kamerkoor en werken aan
                 muziek voor kamerkoor, a cappella en met piano. Sommige zangers
-                kunnen ook combinaties vormen met instrumenten. Een sopraan kan
+                kunnen ook kamermzuiek-combinaties vormen met instrumenten. Een sopraan kan
                 bijvoorbeeld met fluit en clavecimbel Haydns <i>Deutsche Arien
                 </i> studeren, of de liederen van Spohr of Schubert met klarinet
                 en piano. Een bariton zou <em>Dover Beach</em> van Barber kunnen
@@ -115,12 +113,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 andere Schubert of Brahms voor meerdere stemmen met piano, enz., enz.</p>
             <p>De cursus staat open zowel voor individuele deelnemers als voor
                 vaste ensembles. </p>
-            <p>Er is in de cursus ook tijd voor gelegenheidscombinaties van
-                kamermuziek. Een speciale avond wordt het <em>Mozart Concerto
-                    Event</em>, waar de pianisten en andere instrumentalisten en zangers
-                worden uitgenodigd om een deel van een concert van Mozart of een
-                tijdgenoot voor te bereiden en de andere instrumentalisten
-                worden gevraagd om dat - à vue spelend - te begeleiden.</p>
+            <p>Er is in de cursus ook tijd voor kamermuziek door gelegenheidscombinaties. Neem dus vooral je lievelings-kamermuziek mee. Een speciale avond wordt het <em>Mozart Concerto
+                    Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
+                tijdgenoot voor te bereiden. De andere instrumentalisten en docenten vormen dan een ad hoc orkest om dat - à vue spelend - te begeleiden.</p>
             <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
                 eerste muzikale Pellegrina week door het niveau van de cursus,
                 de afwisseling van kamermuziek en tutti programma, de
@@ -131,15 +126,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Kathedraal met de Zwarte Toren" width="400"
                         class="w3-image"><br>kathedraal van České Budějovice met de Zwarte Toren</div>
-                <p>Elke middag werken we aan een programma voor koor en orkest,
-                    dat als afsluiting van de cursus openbaar wordt uitgevoerd.
-                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák. <a href="programma.php">Lees
-                        hier meer over het Bruidshemd en zijn muzikale en historische
-                        context</a>. Het slotconcert vindt plaats in de
-                    schitterende en magnifiek klinkende kathedraal van České
-                    Budějovice. Het programma wordt 'ingezeept' in een
-                    voorbereidende repetitie op zaterdag 13 juni in Den Dolder
-                    bij Utrecht.</p>
+                <p>Elke middag werken we aan een programma voor iedereen, dat we als afsluiting van de cursus openbaar uitvoeren.
+                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák, voor solisten, koor en orkest. <a href="programma.php">Lees
+                    hier meer over het Bruidshemd en zijn muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en
+                    magnifiek klinkende kathedraal van České Budějovice.</p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;De orkestrepetities verliepen
                 erg prettig. Het lukt Dirkjan ieder jaar weer om ambitieus en
@@ -150,37 +140,24 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="" width="500" height="334" /><br> Mitchell Sandler and
                 his chamber choir</div>
             <p>De cursus staat open voor 32 ervaren koorzangers (SATB). Het koor
-                heeft een grote en uitdagende partij in de <em></em>Missa in
-                tempore belli</em>. Daarnaast vormen de koorleden elke ochtend
-                een kamerkoor koor en werken ze aan muziek van Mendelssohn,
-                Dvořák, Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler
-                zal dit koor leiden op zijn onnavolgbare manier, waarbij hij
-                behulpzame vocale instructies en uitstekende pianobegeleiding
-                combineert met duidelijke leiding. Tsjechische professionele
-                zangers, met name tenoren en bassen, zullen zich bij het koor
-                voegen koor als de balans tussen de verschillende stemgroepen
-                daar om vraagt. </p>
-            <p class="citaat">Marrie Kardol: &quot;Pellegrina is een van mijn
-                leukste en gezondste verslavingen geworden!&quot;</p>
+                heeft een grote en uitdagende partij in <em>Svatební košile</em>. Daarnaast vormen de koorleden elke ochtend
+                een kamerkoor koor en werken ze aan muziek van Mendelssohn, Dvořák, Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler
+                zal dit koor leiden op zijn onnavolgbare manier, waarbij hij behulpzame vocale instructies en uitstekende pianobegeleiding
+                combineert met duidelijke leiding. Tsjechische professionele zangers, met name tenoren en bassen, zullen zich bij het koor
+                voegen koor als de balans tussen de verschillende stemgroepen daar om vraagt. </p>
+            <p class="citaat">Marrie Kardol: &quot;Pellegrina is een van mijn leukste en gezondste verslavingen geworden!&quot;</p>
             <div class="container" style="clear: both;">
                 <h4><a name="solozang"></a>Solozangers</h4>
                 <div class="fotorechts"><img class="w3-image"
                         src="/Images/zangcoaching.jpg"
                         alt="singer being coached" width="400"
                         height="300" /><br /> Zangcoaching in vol bedrijf</div>
-                <p>Ben je een zangstudent of recent afgestudeerd, of een
-                    getalenteerde amateur op een gelijkwaardig niveau, en vind
-                    je het prettig om als solist te zingen? Heb je de
-                    onafhankelijkheid en het handigheid om een partij in te
-                    studeren en wil je graag zingen met een instrumentaal
-                    ensemble? In dat geval is het mogelijk dat je in de
-                    ochtendsessies deel uitmaakt van een van de
-                    kamermuziekensembles.</p>
-                <p>We horen je graag. Dit geeft ons een idee van hoe je je in de
-                    cursus kunt plaatsen - om te weten welk stuk in de
-                    kamermuziek voor jou geschikt zou kunnen zijn. Maak een
-                    opname van je zang en stuur deze naar <em>La Pellegrina
-                    </em>als CD, MP3 of YouTube-clip.</p>
+                <p>Ben je een zangstudent of pas afgestudeerd, of een getalenteerde
+                    amateur van een vergelijkbaar niveau, en houd je van zingen als
+                    solist? Heb je de vaardigheden om je partij zelfstandig voor te bereiden? Heb je een specifiek kamermuziekstuk in gedachten?
+                    Zo ja, dan kun je deel uitmaken van een van de kamermuziekensembles in de ochtendsessies.</p>
+                <p>We horen je graag. Dit geeft ons een idee van hoe je je in de cursus kunt plaatsen en om te weten welk stuk in de
+                    kamermuziek voor jou geschikt zou kunnen zijn. Maak een opname van je zang en stuur die naar <em>La Pellegrina</em>.</p>
                 <p class="citaat">Yolande Krooshof: &quot;ik heb drie mensen
                     overgehaald mee te gaan, best griezelig, maar ze hebben alle
                     drie genoten!</p>
@@ -211,15 +188,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vakantie!&quot;</p>
             </div>
             <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
-            <p> Op <strong>zaterdag 13 juni </strong>wordt overdag een
-                voorbereidende repetitie gehouden in Den Dolder bij Utrecht,
-                onder leiding van Mitchell Sandler en Dirkjan Horringa. Deze
-                repetitie heeft als doel kennis te maken met de overige
-                deelnemers en koor en orkest vast zo 'in te zepen', dat de
-                deelnemers hun partijen daarna efficiënter en met meer plezier
-                kunnen voorbereiden. Ook is het inspirerend om de overige
-                deelnemers en met name je 'kamermuziekcollega's' vast te
-                ontmoeten en te bespreken welk werk je gaat spelen of zingen.
+            <p> Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
+                en een eerste kennismaking te hebben met het koor- en orkestprogramma, zodat je je daarna efficiënter kunt voorbereiden op je partij. Daarnaast is het inspirerend om vast een 
+                gevoel te krijgen voor het werk dat je gaat spelen of zingen en ook je ‘collega's’ te ontmoeten.
             </p>
             <p class="citaat">Marieke van Dantzig: &quot;Een wonderlijke
                 combinatie van mensen, stijlen en muzikale kwaliteiten in korte
@@ -310,7 +281,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
     </div>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
 </html>

@@ -80,8 +80,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>&nbsp;</p>
             </div>
             <h2><a name="programma"></a>The programme</h2>
-            <p>For 36 years, <em>La Pellegrina </em>has annually organised a
-                summer course for instrumentalists and (choral) singers in
+            <p>For 36 years, <em>La Pellegrina </em>has organised
+                summer courses for instrumentalists and singers in
                 Czechia. This course has two aspects: chamber music or chamber
                 choir, and a joint programme for soloists, orchestra and choir.
                 The summer school takes place in the conservatoire of České
@@ -92,7 +92,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 and fine facilities for making music. So anyone who always dreamt of studying at a
                 conservatoire can still do so!</p>
             <p> In the same building there is accommodation in the school hostel, with simple but clean single
-                and double rooms, each with its own shower and toilet. In addition, there is a choice of hotels and appartments in various price ranges in
+                and double rooms, each with its own shower and toilet. In addition, there is a choice of hotels and apartments in various price ranges in
                 the area. </p>
             <h3>Chamber music &amp; chamber choir</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
@@ -102,45 +102,36 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p>The mornings are devoted to small ensembles. Every participant
                 will be assigned to two different ensembles, alternating per
                 day. At least half of the time the ensembles receive intensive
-                coaching by the tutors. The ensembles will have an opportunity
-                to present themselves in an internal concert.</p>
-            <p class="citaat" dir="ltr">Rob Klotz: If I have to have an
-                addiction, going to La Pellegrina is my drug of choice</p>
+                coaching by the tutors. At the end of the course each ensemble presents itself in an concert for the other participants.</p>
+            <p class="citaat">Rob Klotz: If I have to have an addiction, going to La Pellegrina is my drug of choice</p>
             <p>Instrumentalists take part in chamber music in all possible
-                combinations of string and winds, with or without piano. All
-                formations from quartet upward are possible, with perhaps a few
-                incidental trios. Ensembles will be formed well in advance, so
-                you can prepare your parts thoroughly at home. Very advanced
+                combinations of strings and winds, with or without piano. All
+                formations from quartet upward are possible, with perhaps a few trios. Very advanced
                 singers (<a href="#solozang">see the description here</a>) may
-                also participate in this. There is also the unique possibility
-                to form larger and more complex combinations, also with winds,
-                that are not easy to organize 'at home'. Think of Schubert's octet, the nonets by Rota, Martinů and Spohr, 
-                and Dvořák's serenade for wind instruments.</p>
+                also participate in this. It is also possible to form larger and more complex combinations, which are not easy to organize 'at home'.
+                Think of Schubert's octet, the nonets by Rota, Martinů and Spohr,
+                and Dvořák's serenade for wind instruments. Ensembles will be formed well in advance, so
+                you can prepare your parts thoroughly at home.</p>
             <p class="citaat">Yo van Dijk: &quot;What I jumped into with some
                 cold feet turned out to be a pleasant warm bath of enthusiastic
                 musicians. For a moment you are in another world, a more
                 beautiful one without worries&quot; </p>
-            <p>Each morning the singers form a chamber choir and work on music
-                for chamber choir, a cappella and with piano. Some singers can
-                form combinations with instruments. For instance, a soprano
+            <p>Each morning the singers form a chamber choir and work on music, both a cappella and with piano. Some singers can
+                form chamber music combinations with instruments. For instance, a soprano
                 could do Schubert's <em>Hirt auf dem Felsen </em>or Spohr's
                 <em>Lieder </em>for voice, clarinet and piano. A baritone could
                 work on Barber's <em>Dover Beach</em> with a string quartet. A
                 few more suggestions: Pergolesi's <em>Stabat Mater</em> with
                 strings, Mozart and Haydn <em>Lieder </em>for several voices and
                 piano, Schubert's <em>Hochzeitsbraten</em> or other Schubert or Brahms works for several
-                voices and piano, etc., etc.
+                voices and piano, etc.
             </p>
-            <p>The course is open to individual participants as well as existing
-                ensembles.</p>
-            <p>There will be time for occasional combinations and musical
-                get-togethers. A special evening will be the <em>Mozart Concerto
-                    Event</em>, where pianists and other instrumentalists and singers are
-                invited to prepare a movement from a concerto by Mozart or a
-                contemporary and the other instrumentalists are asked to
-                accompany, sight-reading the orchestral parts.</p>
+            <p>The course is open to individual participants as well as existing ensembles.</p>
+            <p>There will be time for occasional musical get-togethers, so bring your favourite chamber music works! A special evening will be the <em>Mozart Concerto
+                    Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
+                contemporary. The other instrumentalists and tutors are asked to accompany, sight-reading the orchestral parts.</p>
             <p class="citaat">Anke Muusse: “I really enjoyed my first musical
-                pellegrina week because of the level of the course, the variety
+                Pellegrina week because of the level of the course, the variety
                 of chamber music and tutti program, the guidance by good coaches
                 and the wonderful music!”</p>
             <div class="container">
@@ -149,19 +140,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Cathedral with Black Tower" width="400"
                         class="w3-image"><br>České Budějovice cathedral with the Black Tower</div>
-                <p>Each afternoon we work on a programme for choir and
-                    orchestra, which is performed publicly as the conclusion of
+                <p>Each afternoon we work on our tutti programme, which we will performed publicly at the end of
                     the course. This year, this final concert will feature Dvořák's <i>Svatební košile</i> (the Spectre's Bride) for soloists, choir and
                     orchestra. <a href="programma.php">Read more about the works and their
-                        musical and historical context here</a>. The concert
-                    will take place in the magnificently sounding České Budějovice cathedral.</p>
-                <p>On the 13th of June we'll slap a first coat of paint on the music, as
-                    preparation for the summer, in Den Dolder near Utrecht. Of
-                    course this rehearsal is not mandatory for people not living
-                    in the Netherlands, but some foreign participants tend to
-                    show up, combining the rehearsal with a trip or visiting
-                    friends. They are of course most welcome.
-                </p>
+                        musical and historical context here</a>. The concert will take place in the České Budějovice cathedral, with its magnificent acoustics.</p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;The rehearsals were very
                 pleasant. Dirkjan manages every year to be ambitious and
@@ -172,8 +154,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="" width="500" height="334" /><br> Mitchell Sandler and
                 his chamber choir</div>
             <p>The course is open to 32 experienced chamber choir singers
-                (SATB). The choir has a big and challenging part in de <em>Missa
-                    in tempore belli</em>. In addition, the choristers form a
+                (SATB). The choir has a big and challenging role in <em>Svatební košile</em>. In addition, the choristers form a
                 chamber choir every morning and work on music by Mendelssohn,
                 Dvořák, Mozart and their Czech contemporaries. Mitchell Sandler
                 will lead this choir in his inimitable way, combining helpful
@@ -190,15 +171,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         class="w3-image" /><br /> A singer being coached</div>
                 <p>Are you a vocal student or recent graduate, or a talented
                     amateur at an equivalent level, and enjoy singing as a
-                    soloist? Do you have the independence and dexterity to study
-                    a part and would like to sing with an instrumental ensemble?
-                    If so, it is possible that you will be part of one of the
-                    chamber music ensembles in the morning sessions.</p>
+                    soloist? Do you have the skills to prepare your part independently? Do you have a specific chamber music piece in mind?
+                    If so, you can be part of one of the chamber music ensembles in the morning sessions.</p>
                 <p> We would like to hear you. This will give us an idea of how
-                    to place you within the course – to know which part might be
+                    to place you within the course to know which part might be
                     appropriate for you in the chamber music. Please make a
-                    recording of your singing and send it to <em>La Pellegrina
-                    </em>as CD, MP3 or YouTube clip.</p>
+                    recording of your singing and send it to <em>La Pellegrina</em>.</p>
             </div>
             <p class="citaat">Yolande Krooshof: &quot;I have persuaded three
                 people to join the course, eerie, but they all have enjoyed
@@ -215,7 +193,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     is determined by the orchestral works: there is room for
                     double woodwinds, two horns, timpani and strings 8-8-6-6-3
                     or a few more. In the chamber music, there is room for four
-                    pianists. They play in the chamber music ensembles,
+                    pianists. They willplay in the chamber music ensembles,
                     accompany singers in their arias and may even play timpani
                     or other percussion in the orchestra, or sing in the choir.
                     For the other instruments in the orchestra, such as harp,
@@ -229,18 +207,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <a href="cursus.php" target="_self"></a>
             </div>
             <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
-            <p> On Saturday, 13 June, a preliminary rehearsal day will be held in
-                Den Dolder near Utrecht. Of course this rehearsal is not
-                obligatory for participants from outside the Netherlands. Still,
-                quite often a few participants not living in the Netherlands
-                turn up, combining it with a weekend sightseeing or visiting
-                friends. Mitchell Sandler and Dirkjan Horringa will lead this
-                rehearsal day. Its aim is to get to know the other participants,
-                and to have a first go at the choral and orchestral programme,
-                so you can then prepare your part more efficiently. More
-                information on the venue and times will follow. Beside that, it
-                is inspiring to meet your 'chamber music colleagues' and to
-                discuss the work your are going to play or sing.
+            <p>On Saturday 13 June we'll slap a first coat of paint on the music, in Den Dolder near Utrecht. Its aim is to get to know the other participants,
+                and to have a first go at the choral and orchestral programme, so you can then prepare your part more efficiently. More
+                information on the venue and times will follow. Beside that, it is inspiring to meet your 'chamber music colleagues' and to
+                get a feeling for the work your are going to play or sing. Of course this preparatory rehearsal is not mandatory for people not living in the Netherlands, 
+                but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.
+            </p>
+
             <p class="citaat">Marieke van Dantzig: &quot;forging a beautiful
                 whole out of a weird combination of people, styles and musical
                 skills in a short time: that is the magic of inspirator
@@ -336,7 +309,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
 </html>
