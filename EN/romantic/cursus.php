@@ -202,10 +202,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </div>
             <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
             <p>On Saturday 13 June we'll slap a first coat of paint on the music, in Den Dolder near Utrecht. Its aim is to get to know the other participants,
-                and to have a first go at the choral and orchestral programme, so you can then prepare your part more efficiently. More
-                information on the venue and times will follow. Beside that, it is inspiring to meet your 'chamber music colleagues' and to
-                get a feeling for the work your are going to play or sing. Of course this preparatory rehearsal is not mandatory for people not living in the Netherlands, 
-                but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.
+                and to have a first go at the choral and orchestral programme, so you can then prepare your part more efficiently. Besides, it is inspiring to meet your 'colleagues' and to get a feeling for the work your are going to play or sing. Of course this preparatory rehearsal is not mandatory for people not living in the Netherlands, but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.
             </p>
 
             <p class="citaat">Marieke van Dantzig: &quot;forging a beautiful
