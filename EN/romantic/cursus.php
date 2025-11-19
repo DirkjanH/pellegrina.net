@@ -136,8 +136,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Cathedral with Black Tower" width="400"
                         class="w3-image"><br>České Budějovice cathedral with the Black Tower</div>
-                <p>Each afternoon we work on our tutti programme, which we will performed publicly at the end of
-                    the course. This year, this final concert will feature Dvořák's <i>Svatební košile</i> (the Spectre's Bride) for soloists, choir and
+                <p>Each afternoon we work on our tutti programme, which we will perform publicly at the end of
+                    the course. This year, the final concert will feature Dvořák's <i>Svatební košile</i> (the Spectre's Bride) for soloists, choir and
                     orchestra. <a href="programma.php">Read more about the works and their
                         musical and historical context here</a>. The concert will take place in the České Budějovice cathedral, with its magnificent acoustics.</p>
             </div>

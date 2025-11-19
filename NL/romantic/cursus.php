@@ -126,8 +126,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         alt="Kathedraal met de Zwarte Toren" width="400"
                         class="w3-image"><br>kathedraal van České Budějovice met de Zwarte Toren</div>
                 <p>Elke middag werken we aan een programma voor iedereen, dat we als afsluiting van de cursus openbaar uitvoeren.
-                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák, voor solisten, koor en orkest. <a href="programma.php">Lees
-                    hier meer over het Bruidshemd en zijn muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en
+                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák, voor solisten, koor en orkest. <a href="programma.php">Lees meer over het Bruidshemd en zijn muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en
                     magnifiek klinkende kathedraal van České Budějovice.</p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;De orkestrepetities verliepen
