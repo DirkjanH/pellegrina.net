@@ -278,8 +278,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 'therapy' for almost 20 years now... Where do you make music
                 with such variety and where do you drink your beer in such a
                 beautiful setting?”</p>
-            <div class="fotocenter"><img src="/Images/bazooka.jpg"
-                    alt="Ensemble" width="640" height="424"
+            <div class="fotocenter w3-center"><img src="/Images/bazooka.jpg"
+                    alt="Ensemble" width="800"
                     class="w3-image"><br> Joy after the chamber music concert
             </div>
             <h2><a name="metwie"></a>With whom</h2>
@@ -293,7 +293,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sandler, </a><a href="docenten.php#sternadel">Rudolf
                     Sternadel</a> and <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
-            <div class="fotocenter"> <img
+            <div class="fotocenter w3-center"><img
                     src="/Images/tutors_CB.png" alt="Tutors" class="w3-image" style="max-width: 800px;">
                     <br>The tutors during the tutors' concert</div>
             <h2><a name="inschrijven"></a>How to register</h2>

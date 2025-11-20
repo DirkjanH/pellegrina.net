@@ -240,8 +240,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 stimulerende en opwindende muzikale ervaring voor serieuze
                 amateurmusici die bereid zijn hard te werken aan het doel van
                 een gepolijste publieke uitvoering&quot;</p>
-            <div class="fotocenter"> <img
-                    src="/Images/slotconcert_2025.png" class="w3-image" style="max-width: 800px;"
+            <div class="fotocenter w3-center" style="max-width: 800px;"> <img
+                    src="/Images/slotconcert_2025.png" class="w3-image"
                     alt="Haydns Missa in tempore belli in de kathedraal"><br>Haydns Missa in tempore belli in de kathedraal</div>
             <h2><a name="waar"></a>Waar</h2>
             <p>Meer over České Budějovice, de stad waar de cursus wordt gehouden, lees je hier:</p>
@@ -254,9 +254,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 Boheemse stad: <i>La Pellegrina</i> is al bijna 20 jaar 'mijn
                 jaarlijkse therapie'... Waar musiceer je zo afwisselend en drink
                 je zo lekker bier in zo'n mooie omgeving?”</p>
-            <div class="fotocenter"><img class="w3-image"
-                    src="/Images/bazooka.jpg" width="640" height="424"
-                    alt="Ensemble"><br> Vreugde na het kamermuziekconcert </div>
+            <div class="fotocenter w3-center"><img class="w3-image"
+                    src="/Images/bazooka.jpg" width="800"
+                    alt="Ensemble"><br>Vreugde na het kamermuziekconcert</div>
             <h2><a name="metwie"></a>Met wie</h2>
             <p>Deze cursus wordt geleid door een aantal
                 gedreven vakmusici: <a href="docenten.php#bernaskova">Martina
@@ -268,7 +268,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sandler</a>, <a href="docenten.php#sternadel">Rudolf
                     Sternadel</a> en <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
-            <div class="fotocenter" style="max-width: 800px;"> <img
+            <div class="fotocenter w3-center" style="max-width: 800px;"> <img
                     src="/Images/tutors_CB.png" alt="Docenten" class="w3-image"
                     ><br>De docenten tijdens het docentenconcert</div>
              <h2><a name="inschrijven"></a>Inschrijven</h2>
