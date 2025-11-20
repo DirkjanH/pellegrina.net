@@ -79,13 +79,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 Sindsdien vindt er een breed scala van spirituele, maar ook
                 culturele en muzikale activiteiten plaats. </p>
             <p> Een groeiend aantal mensen streeft naar een kloosterleven waarin stilte en spiritualiteit
-                centraal staan. Driemaal daags zijn er stiltegebeden in de
-                kloosterkerk. Daarnaast verzorgen ze de grote groentetuin,
-                houden de brouwerij en het koffiehuis draaiende en organiseren
-                een groot aantal activiteiten, zoals retraites, jeugdweekenden
-                weekenden en dergelijke. </p>
-            <p>De inkomsten van al deze activiteiten
-                jaar betalen kleine reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw.Meer informatie vind
+                centraal staan. Driemaal daags zijn er stiltegebeden in de kloosterkerk. Daarnaast verzorgen ze de grote groentetuin,
+                houden de brouwerij en het koffiehuis draaiende en organiseren een groot aantal activiteiten, zoals retraites, jeugdweekenden en dergelijke. </p>
+            <p>De inkomsten van al deze activiteiten jaar betalen kleine reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw. Meer informatie vind
                 je hier:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
@@ -96,35 +92,33 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 </li>
             </ul>
             <div class="fotocenter"><img
-                    src="/Images\Locaties\Nieuw Sion\Kerk NS.jpg"
+                    src="/Images\Locaties\Nieuw Sion\Kerk NS.jpg" width="800"
                     class="w3-image"
                     alt="De kloosterkerk, waar het slotconcert plaatsvindt" /><br>
                 De kloosterkerk, waar het slotconcert plaatsvindt<div
-                    class="fotocenter"><img src="/Images/NS/refter.jpg"
+                    class="fotocenter"><img src="/Images/NS/refter.jpg" width="800"
                         class="w3-image"
                         alt="De refter, waar repetities en het kamermuziekconcert plaatsvinden" /><br>
                     De refter, waar repetities en het kamermuziekconcert
                     plaatsvinden <div class="fotocenter"> <img
-                            src="/Images/NS/Hobo band.jpg" class="w3-image"
+                            src="/Images/NS/Hobo band.jpg" class="w3-image" width="800"
                             alt="Oboe band aan het werk" /><br> Oboe band aan
                         het werk</div>
                     <div class="fotocenter"> <img
                             src="/Images/NS/dejeuner_dans_l'herbe.jpg"
-                            alt="Lunch en diner vinden buiten plaats, als het weer het toelaat"
-                            width="950" height="633" class="w3-image" /><br> De
+                            alt="Lunch en diner vinden buiten plaats, als het weer het toelaat" width="800"
+                            class="w3-image" /><br> De
                         lunch en het diner vinden doorgaans buiten plaats</div>
                     <div class="fotocenter"><img
                             src="/Images/Locaties/Nieuw Sion/luchtfoto.jpg"
-                            class="w3-image"
+                            class="w3-image" width="800"
                             alt="Luchtfoto van het klooster Nieuw Sion" />Luchtfoto
                         van het klooster Nieuw Sion</div>
                 </div>
-                <!-- InstanceEndEditable -->
                 <h2><a href="javascript: history.go(-1)">Terug</a></h2>
             </div>
         </div>
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>
