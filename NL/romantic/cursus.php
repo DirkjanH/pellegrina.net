@@ -271,7 +271,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sandler</a>, <a href="docenten.php#sternadel">Rudolf
                     Sternadel</a> en <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
-            <h2><a name="inschrijven"></a>Inschrijven</h2>
+            <div class="fotocenter"> <img
+                    src="/images/tutors_České Budějovice.png" alt="Docenten"
+                    ><br>Enkele docenten tijdens een docentenconcert</div>
+             <h2><a name="inschrijven"></a>Inschrijven</h2>
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
