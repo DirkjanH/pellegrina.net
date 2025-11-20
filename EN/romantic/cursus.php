@@ -120,12 +120,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 few more suggestions: Pergolesi's <em>Stabat Mater</em> with
                 strings, Mozart and Haydn <em>Lieder </em>for several voices and
                 piano, Schubert's <em>Hochzeitsbraten</em> or other Schubert or Brahms works for several
-                voices and piano, etc.
+                voices and piano, etc. There will be time for occasional musical get-togethers, so bring your favourite chamber music works along!
             </p>
             <p>The course is open to individual participants as well as existing ensembles.</p>
-            <p><div class="fotorechts"><img class="w3-image" src="/Images/Lukas_B.png" alt="Participant performing as soloist"><br>Participant performing as soloist</div>There will be time for occasional musical get-togethers, so bring your favourite chamber music works! A special evening will be the <em>Mozart Concerto
-                    Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
-                contemporary. The other instrumentalists and tutors are asked to accompany, sight-reading the orchestral parts.</p>
+            <p>
+            <div class="fotorechts"><img class="w3-image" src="/Images/Lukas_B.png" alt="Participant performing as soloist"><br>Participant performing as soloist in the Mozart Concerto Event</div>A special evening will be the <em>Mozart Concerto
+                Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
+            contemporary. The other instrumentalists and tutors are asked to accompany, sight-reading the orchestral parts.</p>
             <p class="citaat">Anke Muusse: “I really enjoyed my first musical
                 Pellegrina week because of the level of the course, the variety
                 of chamber music and tutti program, the guidance by good coaches
@@ -232,12 +233,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     orchestra at the cathedral</li>
                 <li>Sunday morning 9 August: departure after breakfast</li>
             </ul>
-            <div class="fotocenter"> <img
-                    src="/Images/Mozart Concerto Event 1.jpg" width="400"
-                    height="267" alt="" />&nbsp;&nbsp;&nbsp;<img
-                    src="/Images/Mozart Concerto Event 2.jpg" width="400"
-                    height="267" alt="" /><br> Mozart Concerto Event: orchestra
-                sightreads accompaniment | content soloist</div>
             <p class="citaat">François Lanave: &quot;I was the only
                 French-speaking person at breakfast among musicians speaking a
                 strange language with raspy 'g' sounds. But they immediately

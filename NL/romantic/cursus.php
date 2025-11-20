@@ -109,12 +109,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 instuderen met een strijkkwartet. Nog een paar suggesties:
                 Pergolesi's <em>Stabat Mater</em> met strijkers, Mozart en Haydn
                 liederen voor meer stemmen met piano, Schuberts <em>Hochzeitsbraten</em> of
-                andere Schubert of Brahms voor meerdere stemmen met piano, enz., enz.</p>
+                andere Schubert of Brahms voor meerdere stemmen met piano, enz. Er is in de cursus ook tijd voor kamermuziek door gelegenheidscombinaties. Neem dus vooral je lievelings-kamermuziek mee.</p>
             <p>De cursus staat open zowel voor individuele deelnemers als voor
                 vaste ensembles. </p>
-            <p>Er is in de cursus ook tijd voor kamermuziek door gelegenheidscombinaties. Neem dus vooral je lievelings-kamermuziek mee. Een speciale avond wordt het <em>Mozart Concerto
-                    Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
-                tijdgenoot voor te bereiden. De andere instrumentalisten en docenten vormen dan een ad hoc orkest om dat - à vue spelend - te begeleiden.</p>
+            <p>
+            <div class="fotorechts"><img class="w3-image" src="/Images/Lukas_B.png" alt="Deelnemer die als solist optreedt"><br>Deelnemer die als solist optreedt tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
+            tijdgenoot voor te bereiden. De andere instrumentalisten en docenten vormen dan een ad hoc orkest om dat - à vue spelend - te begeleiden.</p>
             <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
                 eerste muzikale Pellegrina week door het niveau van de cursus,
                 de afwisseling van kamermuziek en tutti programma, de
@@ -126,8 +126,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         alt="Kathedraal met de Zwarte Toren" width="400"
                         class="w3-image"><br>kathedraal van České Budějovice met de Zwarte Toren</div>
                 <p>Elke middag werken we aan een programma voor iedereen, dat we als afsluiting van de cursus openbaar uitvoeren.
-                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák, voor solisten, koor en orkest. <a href="programma.php">Lees meer over het Bruidshemd en zijn muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en
-                    magnifiek klinkende kathedraal van České Budějovice.</p>
+                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák, voor solisten, koor en orkest. <a href="programma.php">Lees meer over het Bruidshemd en zijn muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en magnifiek klinkende kathedraal van České Budějovice.</p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;De orkestrepetities verliepen
                 erg prettig. Het lukt Dirkjan ieder jaar weer om ambitieus en
@@ -139,9 +138,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 his chamber choir</div>
             <p>De cursus staat open voor 32 ervaren koorzangers (SATB). Het koor
                 heeft een grote en uitdagende partij in <em>Svatební košile</em>. Daarnaast vormen de koorleden elke ochtend
-                een kamerkoor koor en werken ze aan muziek van Mendelssohn, Dvořák, Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler
-                zal dit koor leiden op zijn onnavolgbare manier, waarbij hij behulpzame vocale instructies en uitstekende pianobegeleiding
-                combineert met duidelijke leiding. Tsjechische professionele zangers, met name tenoren en bassen, zullen zich bij het koor
+                een kamerkoor koor en werken ze aan muziek van Mendelssohn, Dvořák, Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler zal dit koor leiden op zijn onnavolgbare manier, waarbij hij behulpzame vocale instructies en uitstekende pianobegeleiding combineert met duidelijke leiding. Tsjechische professionele zangers, met name tenoren en bassen, zullen zich bij het koor
                 voegen koor als de balans tussen de verschillende stemgroepen daar om vraagt. </p>
             <p class="citaat">Marrie Kardol: &quot;Pellegrina is een van mijn leukste en gezondste verslavingen geworden!&quot;</p>
             <div class="container" style="clear: both;">
