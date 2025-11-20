@@ -237,9 +237,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 strange language with raspy 'g' sounds. But they immediately
                 turned nicely into English, so that we could communicate&quot;
             </p>
-            <div class="fotocenter"><img src="/Images/pauze.jpg" alt="interval"
-                    width="640" height="427" border="1"
-                    class="w3-image" /><br>Interval in the monastery courtyard</div>
             <h4>Daily schedule</h4>
             <ul>
                 <li> 8:00 breakfast</li>
@@ -260,7 +257,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 amateur musicians who are willing to work hard toward the goal
                 of a polished public performance&quot;</p>
             <div class="fotocenter"> <img
-                    src="/Images/slotconcert_2025.png"  width="800" class="w3-image"
+                    src="/Images/slotconcert_2025.png" width="800" class="w3-image"
                     alt="Performing Haydn's Missa in tempore belli in the Cathedral"><br>Performing Haydn's Missa in tempore belli in the Cathedral</div>
             <h2><a name="waar"></a>Where</h2>
             <p>Read more about České Budějovice, the place where the course will
@@ -295,7 +292,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Vlašánková</a>.</p>
             <div class="fotocenter w3-center"><img
                     src="/Images/tutors_CB.png" alt="Tutors" class="w3-image" width="800">
-                    <br>The tutors during the tutors' concert</div>
+                <br>The tutors during the tutors' concert
+            </div>
             <h2><a name="inschrijven"></a>How to register</h2>
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
