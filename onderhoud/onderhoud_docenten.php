@@ -1,7 +1,7 @@
 <?php //Connection statement
-include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2025.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 // stel php in dat deze fouten weergeeft
-ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
