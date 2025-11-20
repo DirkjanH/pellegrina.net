@@ -241,7 +241,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 amateurmusici die bereid zijn hard te werken aan het doel van
                 een gepolijste publieke uitvoering&quot;</p>
             <div class="fotocenter"> <img
-                    src="/Images/slotconcert_2025.png" class="w3-image"
+                    src="/Images/slotconcert_2025.png" class="w3-image" style="max-width: 800px;"
                     alt="Haydns Missa in tempore belli in de kathedraal"><br>Haydns Missa in tempore belli in de kathedraal</div>
             <h2><a name="waar"></a>Waar</h2>
             <p>Meer over České Budějovice, de stad waar de cursus wordt gehouden, lees je hier:</p>
@@ -269,8 +269,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sternadel</a> en <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
             <div class="fotocenter"> <img
-                    src="/Images/tutors_CB.png" alt="Docenten"
-                    ><br>Enkele docenten tijdens een docentenconcert</div>
+                    src="/Images/tutors_CB.png" alt="Docenten" class="w3-image" style="max-width: 800px;"
+                    ><br>De docenten tijdens het docentenconcert</div>
              <h2><a name="inschrijven"></a>Inschrijven</h2>
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
