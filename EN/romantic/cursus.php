@@ -201,6 +201,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <a href="cursus.php" target="_self"></a>
             </div>
             <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
+            <div class="fotocenter"><img src="/Images/DJ in actie.png" class="w3-image" src="Dirkjan Horringa in action"><br>Dirkjan Horringa in action</div>
             <p>On Saturday 13 June we'll slap a first coat of paint on the music, in Den Dolder near Utrecht. Its aim is to get to know the other participants,
                 and to have a first go at the tutti programme, so you can then prepare your part more efficiently. Besides, it is inspiring to meet your 'colleagues' and to get a feeling for the work your are going to play or sing. Of course this preparatory rehearsal is not mandatory for people not living in the Netherlands, but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.
             </p>
