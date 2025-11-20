@@ -200,16 +200,21 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     holiday!&quot;</p>
                 <a href="cursus.php" target="_self"></a>
             </div>
-            <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
-            <div class="fotocenter"><img src="/Images/DJ in actie.png" class="w3-image" src="Dirkjan Horringa in action"><br>Dirkjan Horringa in action</div>
-            <p>On Saturday 13 June we'll slap a first coat of paint on the music, in Den Dolder near Utrecht. Its aim is to get to know the other participants,
-                and to have a first go at the tutti programme, so you can then prepare your part more efficiently. Besides, it is inspiring to meet your 'colleagues' and to get a feeling for the work your are going to play or sing. Of course this preparatory rehearsal is not mandatory for people not living in the Netherlands, but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.
-            </p>
 
-            <p class="citaat">Marieke van Dantzig: &quot;forging a beautiful
-                whole out of a weird combination of people, styles and musical
-                skills in a short time: that is the magic of inspirator
-                Dirkjan&quot;</p>
+            <div class="container">
+                <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
+                <p>
+                <div class="fotorechts"><img src="/Images/DJ in actie.png" width="500" class="w3-image" src="Dirkjan Horringa in action"><br>Dirkjan Horringa in action</div>
+                On Saturday 13 June we'll slap a first coat of paint on the music, in Den Dolder near Utrecht. Its aim is to get to know the other participants,
+                and to have a first go at the tutti programme, so you can then prepare your part more efficiently. Besides, it is inspiring to meet your 'colleagues' and to get a feeling for the work your are going to play or sing. Of course this preparatory rehearsal is not mandatory for people not living in the Netherlands, but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.
+                </p>
+
+                <p class="citaat">Marieke van Dantzig: &quot;forging a beautiful
+                    whole out of a weird combination of people, styles and musical
+                    skills in a short time: that is the magic of inspirator
+                    Dirkjan&quot;</p>
+            </div>
+
             <h2><a name="dagindeling"></a>Week programme and daily schedule</h2>
             <h4>Week programme</h4>
             <ul>
