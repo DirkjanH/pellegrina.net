@@ -186,15 +186,19 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vakantie!&quot;</p>
             </div>
             <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
-            
-            <p><div class="fotorechts"><img src="/Images/DJ in actie.png" width="500" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
+
+            <div class="container">
+                <p>
+                <div class="fotorechts"><img src="/Images/DJ in actie.png" width="500" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
                 en een eerste kennismaking te hebben met het koor- en orkestprogramma, zodat je je daarna efficiënter kunt voorbereiden op je partij. Daarnaast is het inspirerend om vast een
                 gevoel te krijgen voor het werk dat je gaat spelen of zingen en ook je ‘collega's’ te ontmoeten.
-            </p>
-            <p class="citaat">Marieke van Dantzig: &quot;Een wonderlijke
-                combinatie van mensen, stijlen en muzikale kwaliteiten in korte
-                tijd tot een prachtig geheel smeden: dat is de kracht van
-                inspirator Dirkjan&quot;</p>
+                </p>
+                <p class="citaat">Marieke van Dantzig: &quot;Een wonderlijke
+                    combinatie van mensen, stijlen en muzikale kwaliteiten in korte
+                    tijd tot een prachtig geheel smeden: dat is de kracht van
+                    inspirator Dirkjan&quot;</p>
+            </div>
+            
             <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
             <h4>Weekindeling</h4>
             <ul>
