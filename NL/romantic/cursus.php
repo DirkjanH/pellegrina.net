@@ -113,7 +113,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p>De cursus staat open zowel voor individuele deelnemers als voor
                 vaste ensembles. </p>
             <p>
-            <div class="fotorechts"><img width="500" class="w3-image" src="/Images/Lukas_B.png" alt="Deelnemer die als solist optreedt"><br>Deelnemer die als solist optreedt tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
+            <div class="fotorechts"><img width="300" class="w3-image" src="/Images/Lukas_B.png" alt="Deelnemer die als solist optreedt"><br>Deelnemer die als solist optreedt tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
             tijdgenoot voor te bereiden. De andere instrumentalisten en docenten vormen dan een ad hoc orkest om dat - à vue spelend - te begeleiden.</p>
             <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
                 eerste muzikale Pellegrina week door het niveau van de cursus,
