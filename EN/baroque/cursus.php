@@ -212,7 +212,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     our free evenings? Right, make music as much as
                     possible...!&quot;</p>
             </div>
-            <div class="fotocenter"><img src="/Images/duo.png"
+            <div class="fotocenter"><img src="/Images/duo.png" width="800"
                     alt="Preparing parts toegether" class="w3-image" /><br />Preparing parts toegether</div>
             <h4>Daily Schedule</h4>
             <ul>
