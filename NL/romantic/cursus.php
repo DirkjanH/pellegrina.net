@@ -186,6 +186,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vakantie!&quot;</p>
             </div>
             <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
+            <div class="fotocenter"><img src="/Images/DJ in actie.png" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>
             <p> Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
                 en een eerste kennismaking te hebben met het koor- en orkestprogramma, zodat je je daarna efficiënter kunt voorbereiden op je partij. Daarnaast is het inspirerend om vast een
                 gevoel te krijgen voor het werk dat je gaat spelen of zingen en ook je ‘collega's’ te ontmoeten.
