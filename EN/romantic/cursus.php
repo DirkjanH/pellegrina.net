@@ -123,7 +123,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 voices and piano, etc.
             </p>
             <p>The course is open to individual participants as well as existing ensembles.</p>
-            <p>There will be time for occasional musical get-togethers, so bring your favourite chamber music works! A special evening will be the <em>Mozart Concerto
+            <p><div class="fotorechts"><img class="w3-image" src="/Images/Lukas_B.png" alt="Participant performing as soloist"><br>Participant performing as soloist</div>There will be time for occasional musical get-togethers, so bring your favourite chamber music works! A special evening will be the <em>Mozart Concerto
                     Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
                 contemporary. The other instrumentalists and tutors are asked to accompany, sight-reading the orchestral parts.</p>
             <p class="citaat">Anke Muusse: “I really enjoyed my first musical
@@ -187,7 +187,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     is determined by the orchestral works: there is room for
                     double woodwinds, two horns, timpani and strings 8-8-6-6-3
                     or a few more. In the chamber music, there is room for four
-                    pianists. They willplay in the chamber music ensembles,
+                    pianists. They will play in the chamber music ensembles,
                     accompany singers in their arias and may even play timpani
                     or other percussion in the orchestra, or sing in the choir.
                     For the other instruments in the orchestra, such as harp,

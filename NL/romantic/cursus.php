@@ -219,12 +219,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     solisten, koor en orkest </li>
                 <li>Zondagochtend 9 augustus vertrek na het ontbijt</li>
             </ul>
-            <div class="fotocenter"> <img
-                    src="/Images/Mozart Concerto Event 1.jpg" width="400"
-                    height="267" alt="" />&nbsp;&nbsp;&nbsp;<img
-                    src="/Images/Mozart Concerto Event 2.jpg" width="400"
-                    height="267" alt="" /><br> Mozart Concerto Event: orkest
-                begeleidt van blad | tevreden solist</div>
             <p class="citaat">François Lanave: &quot;Ik was de enige Franstalige
                 persoon bij het ontbijt te midden van muzikanten die een vreemde
                 taal met raspende 'ch' klanken spraken. Maar zij schakelden
