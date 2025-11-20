@@ -96,7 +96,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     dat de docenten elkaar soms tegenspreken, .. tja, .. dat
                     geeft ruimte&quot;</p>
                 <h3>Programma <i>Barok uit Centraal Europa</i> voor alle zangers en instrumentalisten</h3>
-                <p><div class="fotocenter w3-center"><img class="w3-image" width="800" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>
+                <p>
+                <div class="fotocenter w3-center"><img class="w3-image" width="800" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>
                 Iedere middag werken alle zangers en instrumentalisten samen
                 aan het programma 'Barok uit Centraal Europa' voor iedereen. Centraal staat het Requiem in f klein van Biber en het Miserere in c klein ZWV 57 van Zelenka. Dit programma wordt in de kloosterkerk uitgevoerd als het slotconcert van de cursus. Uiteraard zijn er eerst groepsrepetities voor het koor en het orkest,
                 en correpetitie voor de solisten. Later in de week komen alle groepen bijeen en ontstaat een kleurrijk en divers ensemble, waarin iedereen zijn eigen uitdagingen heeft. <a href="programma.php">Lees hier meer over de werken en hun muzikale en historische context</a>.</p>
@@ -220,9 +221,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 kloosterkerk. Daarnaast verzorgen zee de grote groentetuin,
                 houden de brouwerij en het koffiehuis draaiende en organiseren
                 een groot aantal activiteiten, zoals retraites, jeugdweekenden
-                weekenden en dergelijke. De inkomsten van al deze activiteiten
-                jaar betalen kleine reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw.
-                Meer informatie is hier vinden:</p>
+                en dergelijke. </p>
+            <p>De inkomsten van al deze activiteiten
+                jaar betalen kleine reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw. Meer informatie is hier vinden:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
                         target="_blank">Een sfeer-impressie van het klooster</a>
