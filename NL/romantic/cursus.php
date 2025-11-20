@@ -113,7 +113,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p>De cursus staat open zowel voor individuele deelnemers als voor
                 vaste ensembles. </p>
             <p>
-            <div class="fotolinks"><img width="300" class="w3-image" src="/Images/Lukas_B.png" alt="Deelnemer die als solist optreedt"><br>Deelnemer die als solist optreedt tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
+            <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.png" alt="Deelnemer die als solist optreedt"><br>Deelnemer die als solist optreedt tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
             tijdgenoot voor te bereiden. De andere instrumentalisten en docenten vormen dan een ad hoc orkest om dat - à vue spelend - te begeleiden.</p>
             <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
                 eerste muzikale Pellegrina week door het niveau van de cursus,
@@ -121,7 +121,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 begeleiding door goede coaches en de heerlijk muziek!"</p>
             <div class="container">
                 <h3>Het programma voor solisten, koor en orkest: Dvořáks <i>Svatební košile</i> (Het Bruidshemd)</h3>
-                <div class="fotolinks"><img
+                <div class="fotorechts"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Kathedraal met de Zwarte Toren" width="400"
                         class="w3-image"><br>kathedraal van České Budějovice met de Zwarte Toren</div>
@@ -134,8 +134,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a name="voorwie"></a>Voor wie</h2>
             <h4>Koor</h4>
             <div class="fotolinks"><img src="/Images/Mitchell en koor.jpg"
-                    alt="" width="500" height="334" /><br> Mitchell Sandler and
-                his chamber choir</div>
+                    alt="" width="400"><br> Mitchell Sandler and his chamber choir</div>
             <p>De cursus staat open voor 32 ervaren koorzangers (SATB). Het koor
                 heeft een grote en uitdagende partij in <em>Svatební košile</em>. Daarnaast vormen de koorleden elke ochtend
                 een kamerkoor koor en werken ze aan muziek van Mendelssohn, Dvořák, Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler zal dit koor leiden op zijn onnavolgbare manier, waarbij hij behulpzame vocale instructies en uitstekende pianobegeleiding combineert met duidelijke leiding. Tsjechische professionele zangers, met name tenoren en bassen, zullen zich bij het koor

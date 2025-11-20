@@ -124,7 +124,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </p>
             <p>The course is open to individual participants as well as existing ensembles.</p>
             <p>
-            <div class="fotolinks"><img width="300" class="w3-image" src="/Images/Lukas_B.png" alt="Participant performing as soloist"><br>Participant performing as soloist in the Mozart Concerto Event</div>A special evening will be the <em>Mozart Concerto Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
+            <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.png" alt="Participant performing as soloist"><br>Participant performing as soloist in the Mozart Concerto Event</div>A special evening will be the <em>Mozart Concerto Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
             contemporary. The other instrumentalists and tutors are asked to accompany, sight-reading the orchestral parts.</p>
             <p class="citaat">Anke Muusse: “I really enjoyed my first musical
                 Pellegrina week because of the level of the course, the variety
@@ -132,7 +132,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 and the wonderful music!”</p>
             <div class="container">
                 <h3>The programme for soloists, choir and orchestra: Dvořák's <i>Svatební košile</i> (the Spectre's Bride)</h3>
-                <div class="fotolinks"><img
+                <div class="fotorechts"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Cathedral with Black Tower" width="400"
                         class="w3-image"><br>České Budějovice cathedral with the Black Tower</div>
@@ -147,7 +147,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a name="voorwie"></a>For whom</h2>
             <h4>Choir</h4>
             <div class="fotolinks"><img src="/Images/Mitchell en koor.jpg"
-                    alt="" width="500" height="334" /><br> Mitchell Sandler and
+                    alt="" width="400"><br> Mitchell Sandler and
                 his chamber choir</div>
             <p>The course is open to 32 experienced chamber choir singers
                 (SATB). The choir has a big and challenging role in <em>Svatební košile</em>. In addition, the choristers form a
