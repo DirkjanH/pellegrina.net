@@ -260,11 +260,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 amateur musicians who are willing to work hard toward the goal
                 of a polished public performance&quot;</p>
             <div class="fotocenter"> <img
-                    src="../../Images/2018-02-10-LPPO-Schöpfung-Utrecht.jpg"
-                    width="800" height="302" alt="" /><br> Performing Haydn's
-                Creation during a repeat concert in Utrecht in 2018 <br>
-            </div>
-            <h2><a name="waar"></a>Where </h2>
+                    src="/Images/slotconcert_2025.png" class="w3-image"
+                    alt="Performing Haydn's Missa in tempore belli in the Cathedral"><br>Performing Haydn's Missa in tempore belli in the Cathedral</div>
+            <h2><a name="waar"></a>Where</h2>
             <p>Read more about České Budějovice, the place where the course will
                 be held:</p>
             <ul>

@@ -240,11 +240,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 stimulerende en opwindende muzikale ervaring voor serieuze
                 amateurmusici die bereid zijn hard te werken aan het doel van
                 een gepolijste publieke uitvoering&quot;</p>
-            <div class="fotocenter"><img
-                    src="/Images/2018-02-10-LPPO-Schöpfung-Utrecht.jpg"
-                    width="800" height="302" alt="" /><br> Haydns Schöpfung
-                tijdens een herhalingsconcert in Utrecht in 2018 <br>
-            </div>
+            <div class="fotocenter"> <img
+                    src="/Images/slotconcert_2025.png" class="w3-image"
+                    alt="Haydns Missa in tempore belli in de kathedraal"><br>Haydns Missa in tempore belli in de kathedraal</div>
             <h2><a name="waar"></a>Waar</h2>
             <p>Meer over České Budějovice, de stad waar de cursus wordt gehouden, lees je hier:</p>
             <ul>
