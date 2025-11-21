@@ -19,7 +19,6 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +68,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                         echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                         require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
                                         ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" -->
             <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
             <div class="container">
                 <h2><a name="programma"></a>The programme</h2>
@@ -246,26 +244,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 location in Europe in a fantastic atmosphere, I can heartily
                 recommend this to anyone&quot;</p>
             <h2><a name="metwie" id="metwie"></a>With whom</h2>
-            <div class="container">
-                <p>The tutors of this course are passionate specialists in their
-                    fields: <a
-                        href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>,
-                    <a href="docenten.php#huizinga">Femke&nbsp;Huizinga</a>, <a
-                        href="docenten.php#lindeijer">Hanna&nbsp;Lindeijer</a>,
-                    <a
-                        href="docenten.php#rodriguez">Ricardo&nbsp;Rodríguez&nbsp;Miranda</a>,
-                    <a href="docenten.php#sandler">Mitchell&nbsp;Sandler</a> and
-                    <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>.
-                </p>
-                <h2><a name="inschrijven"></a>How to register</h2>
-                <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
-            </div>
-            <!-- InstanceEndEditable -->
+            <p>The tutors of this course are passionate specialists in their fields:
+                <a href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>,
+                <a href="docenten.php#huizinga">Femke&nbsp;Huizinga</a>,
+                <a href="docenten.php#lindeijer">Hanna&nbsp;Lindeijer</a>,
+                <a href="docenten.php#rodriguez">Ricardo&nbsp;Rodríguez&nbsp;Miranda</a>,
+                <a href="docenten.php#sandler">Mitchell&nbsp;Sandler</a> and
+                <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>.
+            </p>
+            <h2><a name="inschrijven"></a>How to register</h2>
+            <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>

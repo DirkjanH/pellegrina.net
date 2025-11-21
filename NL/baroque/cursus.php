@@ -226,26 +226,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 jaar betalen kleine reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw. Meer informatie is hier vinden:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
-                        target="_blank">Een sfeer-impressie van het klooster</a>
-                </li>
-                <li><a href="https://www.nieuwsion.nl/" target="_blank">Website
-                        van het klooster</a></li>
+                        target="_blank">Een sfeer-impressie van het klooster</a></li>
+                <li><a href="https://www.nieuwsion.nl/" target="_blank">Website van het klooster</a></li>
             </ul>
-            <div class="container">
-                <h2><a name="metwie" id="metwie"></a>Met wie</h2>
-                <p> Deze cursus wordt geleid door gedreven specialisten op hun
-                    vakgebied: <a
-                        href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>,
-                    <a href="docenten.php#huizinga">Femke&nbsp;Huizinga</a>, <a
-                        href="docenten.php#lindeijer">Hanna&nbsp;Lindeijer</a>,
-                    <a
-                        href="docenten.php#rodriguez">Ricardo&nbsp;Rodríguez&nbsp;Miranda</a>,
-                    <a href="docenten.php#sandler">Mitchell&nbsp;Sandler</a> en
-                    <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>.
-                </p>
-                <h2><a name="inschrijven"></a>Inschrijven</h2>
-                <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
-            </div>
+            <h2><a name="metwie" id="metwie"></a>Met wie</h2>
+            <p> Deze cursus wordt geleid door gedreven specialisten op hun vakgebied: 
+                <a href="docenten.php#horringa">Dirkjan&nbsp;Horringa</a>,
+                <a href="docenten.php#huizinga">Femke&nbsp;Huizinga</a>, 
+                <a href="docenten.php#lindeijer">Hanna&nbsp;Lindeijer</a>,
+                <a href="docenten.php#rodriguez">Ricardo&nbsp;Rodríguez&nbsp;Miranda</a>,
+                <a href="docenten.php#sandler">Mitchell&nbsp;Sandler</a> en
+                <a href="docenten.php#valorz">Edoardo&nbsp;Valorz</a>.
+            </p>
+            <h2><a name="inschrijven"></a>Inschrijven</h2>
+            <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/inschrijven.php'); ?>
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
     </div>
