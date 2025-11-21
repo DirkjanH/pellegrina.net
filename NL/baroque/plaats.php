@@ -64,12 +64,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-    <div id="inhoud" class="w3-main"> 
-        <?php echo $navigatie; echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';  
+    <div id="inhoud" class="w3-main">
+        <?php echo $navigatie;
+        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
+
         <div id="main">
-            <div class="fotocenter"><img src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg" width="800" class="w3-image" 
-            alt="Klooster Nieuw Sion" /></div>
+            <div class="fotocenter"><img src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg" width="800" class="w3-image"
+                    alt="Klooster Nieuw Sion" /></div>
             <p>Klooster Nieuw Sion bestaat sinds 1890 en was tot 2015 een
                 trappistenklooster. De laatste monniken trokken toen de deur
                 achter zich dicht en vonden een nieuwe plek op Schiermonnikoog.
