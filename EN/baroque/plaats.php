@@ -60,16 +60,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-    <div id="inhoud" class="w3-main"> <?php
-                                        echo $navigatie;
-                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
-                                        ?> <div id="main">
+    <div id="inhoud" class="w3-main">
+        <?php echo $navigatie;
+        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
 
-            ?> <div
-                class="fotocenter"><img
-                    src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg" width="800"
-                    class="w3-image" alt="Klooster Nieuw Sion" /></div>
+        <div id="main">
+            <div class="fotocenter"><img src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg" width="800" class="w3-image"
+                    alt="Klooster Nieuw Sion" /></div>
             <p>Monastery Nieuw Sion has existed since 1890 and was a Trappist
                 monastery until 2015. The last monks then closed the door behind
                 them and found a new place on the island of Schiermonnikoog.
