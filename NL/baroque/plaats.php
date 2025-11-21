@@ -71,7 +71,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                         ?> <div id="main">
             <!-- InstanceBeginEditable name="mainpage" --> <?php //require_once $_SERVER['DOCUMENT_ROOT'].'/NL/budejovice.php'; 
                                                             ?> <div class="fotocenter"><img
-                    src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg"
+                    src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg" width="800"
                     class="w3-image" alt="Klooster Nieuw Sion" /></div>
             <p>Klooster Nieuw Sion bestaat sinds 1890 en was tot 2015 een
                 trappistenklooster. De laatste monniken trokken toen de deur

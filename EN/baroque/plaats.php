@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -19,58 +19,56 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title><?php echo $cursusdata['plaats_kort'] ?>, place of action</title>
-    <!-- InstanceEndEditable -->
     <meta charset="UTF-8">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
+
     <!-- Facebook Pixel Code -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
+
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
-                                    echo $navigatie;
-                                    echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                    require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
-                                    ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" --> <?php //require_once $_SERVER['DOCUMENT_ROOT'].'/NL/budejovice.php'; 
-                                                      ?> <div
+                                        echo $navigatie;
+                                        echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                        require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
+                                        ?> <div id="main">
+
+            ?> <div
                 class="fotocenter"><img
-                    src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg"
+                    src="/Images/Locaties/Nieuw Sion/Nieuw Sion.jpg" width="800"
                     class="w3-image" alt="Klooster Nieuw Sion" /></div>
             <p>Monastery Nieuw Sion has existed since 1890 and was a Trappist
                 monastery until 2015. The last monks then closed the door behind
@@ -88,31 +86,30 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </ul>
             <div class="fotocenter"> <img
                     src="\Images\Locaties\Nieuw Sion\Kerk NS.jpg"
-                    class="w3-image"
+                    class="w3-image" width="800"
                     alt="The monastery church, where the final concert takes place" /><br>
                 The monastery church, where the final concert takes place</div>
             <div class="fotocenter"> <img src="/Images/NS/refter.jpg"
-                    class="w3-image"
+                    class="w3-image" width="800"
                     alt="The refectory, where the chamber music concert and rehearsals takes place" /><br>
                 The refectory, where the chamber music concert and rehearsals
                 take place</div>
-            <div class="fotocenter"> <img src="/Images/NS/Hobo band.jpg"
+            <div class="fotocenter"> <img src="/Images/NS/Hobo band.jpg" width="800"
                     class="w3-image" alt="Oboe band at work" /><br> Oboe band at
                 work</div>
             <div class="fotocenter"> <img
-                    src="/Images/NS/dejeuner_dans_l'herbe.jpg" class="w3-image"
+                    src="/Images/NS/dejeuner_dans_l'herbe.jpg" class="w3-image" width="800"
                     alt="Dinner and lunch are usually taken outside" /> Dinner
                 and lunch are usually taken outside</div>
             <div class="fotocenter"><img
                     src="/Images/Locaties/Nieuw Sion/luchtfoto.jpg"
-                    class="w3-image"
+                    class="w3-image" width="800"
                     alt="Aerial view of the monastery Nieuw Sion" />Aerial view
                 of the monastery Nieuw Sion</div>
-            <!-- InstanceEndEditable -->
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
+
 </html>
