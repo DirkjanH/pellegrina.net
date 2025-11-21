@@ -150,9 +150,9 @@
             </td>
         </tr>
         <tr>
-            <td>Toeslag voor het gezamenlijke diner <span class="nadruk">(alleen
+            <td>Toeslag voor het gezamenlijke avondeten <span class="nadruk">(alleen
                     nodig bij eigen accommodatie; voor andere deelnemers is het
-                    standaard inbegrepen)</span></td>
+                    avondeten standaard inbegrepen)</span></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
         </tr>

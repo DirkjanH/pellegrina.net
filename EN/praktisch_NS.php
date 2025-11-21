@@ -1,19 +1,14 @@
 <!doctype html>
 <html>
-<!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Naamloos document</title>
-    <!-- InstanceEndEditable -->
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
 </head>
+
 <body>
-    <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Practical facts & prices
         "<?php echo $cursusdata['cursusnaam_en']; ?>"</h2>
     <h3>Admission and confirmation</h3>
@@ -49,7 +44,8 @@
         We will then send you provisional confirmation of your registration.
         Deposits will of course be refunded to applicants who cannot be placed.
         The entire fee is to be paid on
-        <?php echo $cursusdata['betaaldatum']; ?> at the latest. </p>
+        <?php echo $cursusdata['betaaldatum']; ?> at the latest.
+    </p>
     <p class="citaat">Marrie Kardol: &ldquo;The beautiful inspiring environment,
         the orderly progress of the program, the good preparation and the
         friendly and pleasant way in which the tutors deal with the participants
@@ -63,7 +59,8 @@
         If you register in time, you will receive a
         <strong><?php echo euro_en($cursusdata['korting_vroeg']); ?></strong>
         discount. If you camp or arrange your own accommodation, you will
-        receive a discount; single rooms are possible at a surcharge. </p>
+        receive a discount; single rooms are possible at a surcharge.
+    </p>
     <h4>Significant discount for students and young people</h4>
     <p><em>Full-time</em> students at academic and higher professional education
         and participants up to 35 years of age (at the start of the course for
@@ -71,7 +68,8 @@
         <strong><?php echo euro_en($cursusdata['prijs_student']); ?></strong>
         course fee per person, based on a double room. When registration a copy
         or scan of the registration certificate (or of your passport as proof of
-        age). </p>
+        age).
+    </p>
     <h3>Accommodation</h3>
     <h4>Single and double rooms in Monastery Nieuw Sion</h4>
     <p> Most participants stay in Monastery Nieuw Sion. There are seven double
@@ -161,7 +159,7 @@
         </tr>
         <tr>
             <td>Surcharge for the joint dinner <span class="nadruk">(only needed
-                    when having your own accommodation; otherwise it is included as 
+                    when having your own accommodation; otherwise the dinner is included as
                     standard)</span></td>
             <td class="geld"><?php echo euro_EN($cursusdata['diner']); ?></td>
             <td class="geld"><?php echo euro_EN($cursusdata['diner']); ?></td>
@@ -212,7 +210,6 @@
         take out a cancellation insurance. </p>
     <p><i>La Pellegrina</i> retains the right to change tutors and programmes if
         such changes are considered necessary.</p>
-    <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
+
 </html>
