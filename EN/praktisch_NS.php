@@ -161,7 +161,7 @@
         </tr>
         <tr>
             <td>Surcharge for the joint dinner <span class="nadruk">(only needed
-                    when having your own accommodation; otherwise it is
+                    when having your own accommodation; otherwise it is included as 
                     standard)</span></td>
             <td class="geld"><?php echo euro_EN($cursusdata['diner']); ?></td>
             <td class="geld"><?php echo euro_EN($cursusdata['diner']); ?></td>

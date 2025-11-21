@@ -152,7 +152,7 @@
         <tr>
             <td>Toeslag voor het gezamenlijke diner <span class="nadruk">(alleen
                     nodig bij eigen accommodatie; voor andere deelnemers is het
-                    standaard)</span></td>
+                    standaard inbegrepen)</span></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
         </tr>
