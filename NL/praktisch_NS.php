@@ -71,29 +71,17 @@
         je paspoort als bewijs van je leeftijd) mee. </p>
     <h3>Accommodatie via <em>La Pellegrina</em></h3>
     <h4>Een- en tweepersoons kamers in Klooster Nieuw Sion</h4>
-    <p>De meeste deelnemers verblijven in klooster Nieuw Sion. Er zijn zeven
-        tweepersoons en zeventien eenpersoons kamers, met normale bedden, geen
-        slaapzalen of stapelbedden. Een lakenpakket is in de prijs inbegrepen.
-        De voorzieningen zijn er simpel maar schoon, gedeeltelijk met een
-        gemeenschappelijke sanitaire ruimte. De nieuwe tweepersoonskamers in het
-        Poortgebouw hebben eigen sanitair. Er is een ontbijtbuffet in de
-        eetzaal.</p>
+    <p>De meeste deelnemers verblijven in klooster Nieuw Sion. Er zijn twee plekken waar mensen kunnen verblijven, het Gastenverblijf en het Poortgebouw. Het Gastenverblijf heeft een tweepersoons en dertien eenpersoons kamers. De voorzieningen zijn er simpel maar schoon, met een gemeenschappelijke sanitaire ruimte. 
+        Daarnaast is er sinds kort het geheel gerenoveerde Poortgebouw, met drie eenpersoonskamers met gedeeld sanitair en vijf tweepersoonskamers met eigen sanitair. Er is een ontbijtbuffet in de eetzaal.</p>
     <h4>Kamperen in de kloostertuin</h4>
-    <p>Kamperen in de tuin van het klooster is ook mogelijk. Tenten, campers en
-        caravans zijn welkom; elektriciteit is NIET beschikbaar. Het aantal
-        plaatsen is beperkt, er zijn eenvoudige sanitaire voorzieningen in het
-        klooster.</p>
+    <p>Er zijn een paar kampeerplekken in de notenboomgaard van het klooster beschikbaar. Tenten, campers en caravans zijn welkom; elektriciteit is NIET beschikbaar. Het aantal plaatsen is beperkt, er zijn eenvoudige gedeelde sanitaire voorzieningen in het klooster.</p>
     <h4>Eigen accommodatie</h4>
-    <p>Het is mogelijk aan de cursus deel te nemen op basis van eigen
-        accommodatie, bijvoorbeeld voor diegenen die in de buurt wonen of zelf
-        accommodatie kunnen regelen. In dat geval betaal je naast het cursusgeld
-        alleen een bijdrage voor koffie en thee en de gezamenlijke lunch. Er
-        zijn diverse hotels en Bed & Breakfast gelegenheden in de buurt.</p>
+    <p>Het is mogelijk aan de cursus deel te nemen op basis van eigen accommodatie, bijvoorbeeld voor diegenen die in de buurt wonen of zelf
+        accommodatie kunnen regelen. In dat geval betaal je naast het cursusgeld alleen een bijdrage voor koffie en thee en de gezamenlijke lunch. Er
+        zijn diverse hotels en Bed & Breakfast gelegenheden in de buurt. Het mogelijk om tegen een meerprijs ook het avondeten in het Klooster te krijgen.</p>
     <h3>Maaltijden</h3>
-    <p>Tijdens de cursus beschikken we over een aparte eetzaal, waar koffie en
-        thee voor ons klaarstaan. Er is een uitgebreid ontbijtbuffet. De lunch
-        en de avondmaaltijd worden op het terras buiten geserveerd, als het weer
-        dit toestaat.</p>
+    <p>Tijdens de cursus beschikken we over een aparte eetzaal, waar koffie en thee voor ons klaarstaan. Er is een uitgebreid ontbijtbuffet. De lunch
+        en de avondmaaltijd worden als het weer het toestaat op het terras buiten geserveerd.</p>
     <h3>Alle prijzen</h3>
     <table class="w3-table-all">
         <tr>
@@ -104,68 +92,51 @@
                 <?php echo $cursusdata['beslisdatum']; ?>: </th>
         </tr>
         <tr>
-            <td>Deelname incl. tweepersoons kamer in het Gastenverblijf </td>
-            <td class="geld">
-                <?php echo euro($cursusdata['prijs_volledig'] - $cursusdata['korting_vroeg']); ?>
-            </td>
-            <td class="geld"><?php echo euro($cursusdata['prijs_volledig']); ?>
-            </td>
+            <td>Deelname incl. tweepersoons kamer in het Gastenverblijf, met gedeeld sanitair</td>
+            <td class="geld"><?php echo euro($cursusdata['prijs_volledig'] - $cursusdata['korting_vroeg']); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['prijs_volledig']); ?></td>
         </tr>
         <tr>
-            <td>Deelname student c.q. deelnemer t/m 35 jaar incl. tweepersoons
-                kamer in het Gastenverblijf</td>
-            <td class="geld">
-                <?php echo euro($cursusdata['prijs_student'] - $cursusdata['korting_vroeg']); ?>
-            </td>
-            <td class="geld"><?php echo euro($cursusdata['prijs_student']); ?>
-            </td>
+            <td>Deelname student c.q. deelnemer t/m 35 jaar incl. tweepersoons kamer in het Gastenverblijf, met gedeeld sanitair</td>
+            <td class="geld"><?php echo euro($cursusdata['prijs_student'] - $cursusdata['korting_vroeg']); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['prijs_student']); ?></td>
         </tr>
         <tr>
-            <td>Deelname toehoorder incl. tweepersoons kamer in het
-                Gastenverblijf</td>
+            <td>Deelname toehoorder incl. tweepersoons kamer in het Gastenverblijf, met gedeeld sanitair</td>
             <td class="geld"><?php echo euro($cursusdata['toehoorder']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['toehoorder']); ?></td>
         </tr>
         <tr>
-            <td>Meerprijs eenpersoons kamer in het Gastenverblijf </td>
+            <td>Meerprijs eenpersoons kamer in het Gastenverblijf of het Poortgebouw, met gedeeld sanitair</td>
             <td class="geld"><?php echo euro($cursusdata['eenpers']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['eenpers']); ?></td>
         </tr>
         <tr>
-            <td>Korting voor kamperen in de kloostertuin <span
-                    class="nadruk">(per persoon, incl. alle maaltijden)</span>
-            </td>
+            <td>Meerprijs plaats in tweepersoons kamer in het Poortgebouw, met eigen sanitair</td>
+            <td class="geld"><?php echo euro($cursusdata['tweepers_eigen_sanitair']); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['tweepers_eigen_sanitair']); ?></td>
+        </tr>
+        <tr>
+            <td>Korting voor kamperen in de kloostertuin <span class="nadruk">(per persoon, incl. alle maaltijden)</span></td>
             <td class="geld"><?php echo euro($cursusdata['kamperen']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['kamperen']); ?></td>
         </tr>
         <tr>
             <td>Korting voor eigen accommodatie <span class="nadruk">(de lunch
-                    en koffie/thee is wel inbegrepen, ontbijt en avondeten
-                    niet)</span></td>
-            <td class="geld">
-                <?php echo euro($cursusdata['korting_eigen_acc']); ?>
-            </td>
-            <td class="geld">
-                <?php echo euro($cursusdata['korting_eigen_acc']); ?>
-            </td>
+                    en koffie/thee is wel inbegrepen, ontbijt en avondeten niet)</span></td>
+            <td class="geld"><?php echo euro($cursusdata['korting_eigen_acc']); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['korting_eigen_acc']); ?></td>
         </tr>
         <tr>
-            <td>Toeslag voor het gezamenlijke avondeten <span class="nadruk">(alleen
-                    nodig bij eigen accommodatie; voor andere deelnemers is het
+            <td>Toeslag voor het gezamenlijke avondeten <span class="nadruk">(alleen nodig bij eigen accommodatie; voor andere deelnemers is het
                     avondeten standaard inbegrepen)</span></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
         </tr>
         <tr>
-            <td>Korting voor deelname aan meer dan één cursus van <em>La
-                    Pellegrina</em> <span class="nadruk">(binnen één
-                    zomer)</span></td>
-            <td class="geld">
-                <?php echo euro($cursusdata['korting_meer'] * 2); ?>
-            </td>
-            <td class="geld">
-                <?php echo euro($cursusdata['korting_meer'] * 2); ?>
-            </td>
+            <td>Korting voor deelname aan meer dan één cursus van <em>La Pellegrina</em> <span class="nadruk">(binnen één zomer)</span></td>
+            <td class="geld"><?php echo euro($cursusdata['korting_meer'] * 2); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['korting_meer'] * 2); ?></td>
         </tr>
     </table>
     <h3> Voertaal</h3>
