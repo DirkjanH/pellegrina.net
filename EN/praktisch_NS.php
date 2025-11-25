@@ -121,23 +121,23 @@
             <td class="geld"><?php echo euro($cursusdata["hotel_2pp"]); ?></td>
         </tr>
         <tr>
-            <td>Discount for camping in the monastery garden <span class="emphasis">(per person, including all meals)</span></td>
+            <td>Discount for camping in the monastery garden <span class="nadruk">(per person, including all meals)</span></td>
             <td class="geld"><?php echo euro($cursusdata["kamperen"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["kamperen"]); ?></td>
         </tr>
         <tr>
-            <td>Discount for own accommodation <span class="emphasis">(lunch and coffee/tea are included, breakfast and dinner are not)</span></td>
+            <td>Discount for own accommodation <span class="nadruk">(lunch and coffee/tea are included, breakfast and dinner are not)</span></td>
             <td class="geld"><?php echo euro($cursusdata["korting_eigen_acc"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["korting_eigen_acc"]); ?></td>
         </tr>
         <tr>
-            <td>Surcharge for communal dinner <span class="emphasis">(only necessary if you have your own accommodation;
+            <td>Surcharge for communal dinner <span class="nadruk">(only necessary if you have your own accommodation;
                     dinner is included as standard for other participants)</span></td>
             <td class="geld"><?php echo euro($cursusdata["diner"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["diner"]); ?></td>
         </tr>
         <tr>
-            <td>Discount for participating in more than one course at <em>La Pellegrina</em> <span class="emphasis">(within one summer)</span></td>
+            <td>Discount for participating in more than one course at <em>La Pellegrina</em> <span class="nadruk">(within one summer)</span></td>
             <td class="geld"><?php echo euro($cursusdata["korting_meer"] * 2); ?></td>
             <td class="geld"><?php echo euro($cursusdata["korting_meer"] * 2); ?></td>
         </tr>
