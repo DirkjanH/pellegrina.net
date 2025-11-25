@@ -109,7 +109,7 @@
         </tr>
 
         <tr>
-            <td>Participation for students or participants up to 35 years of age, including a double room in the Guest House, with shared bathroom facilities</td>
+            <td>Participation for students or participants up to age 35, including a double room in the Guest House, with shared bathroom facilities</td>
             <td class="geld"><?php echo euro($cursusdata["prijs_student"] - $cursusdata["korting_vroeg"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["prijs_student"]); ?></td>
         </tr>
