@@ -102,7 +102,7 @@
             <td class="geld"><?php echo euro($cursusdata['prijs_student'] - $cursusdata['korting_vroeg']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['prijs_student']); ?></td>
         </tr>
-        <tr>
+        <tr class="onzichtbaar">
             <td>Deelname toehoorder incl. tweepersoons kamer in het Gastenverblijf, met gedeeld sanitair</td>
             <td class="geld"><?php echo euro($cursusdata['toehoorder']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['toehoorder']); ?></td>
