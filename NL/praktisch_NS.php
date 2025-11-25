@@ -1,12 +1,14 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <title>Naamloos document</title>
 </head>
+
 <body>
     <h2 class="begin">Praktische gegevens & prijzen
         "<?php echo $cursusdata['cursusnaam_nl']; ?>"</h2>
@@ -43,23 +45,19 @@
         Als je niet geplaatst kunt worden, wordt de aanbetaling uiteraard
         teruggestort. Het volledige cursusgeld moet uiterlijk op
         <?php echo $cursusdata['betaaldatum']; ?> betaald zijn. Alle eventuele
-        bank en creditcardkosten zijn voor rekening van de deelnemer. </p>
+        bank en creditcardkosten zijn voor rekening van de deelnemer.
+    </p>
     <p class="citaat">Marrie Kardol: &ldquo;De prachtige inspirerende omgeving,
         het ordelijke verloop van het programma, de goede voorbereiding en de
         vriendelijke en prettige manier waarop de tutors omgaan met de
         deelnemers, dit alles maakt Pellegrina tot een aanrader voor elke
         muziekliefhebber!&rdquo;</p>
     <h3>Prijzen</h3>
-    <p>De prijs van het project is
-        <strong><?php echo euro($cursusdata['prijs_volledig']); ?></strong>&nbsp;per
-        persoon, inclusief accommodatie in een tweepersoons kamer en alle
-        maaltijden.Studenten en iedereen tot 36 jaar betalen
-        <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>. Als
-        je je tijdig inschrijft krijg je
-        <strong><?php echo euro($cursusdata['korting_vroeg']); ?>
-            korting</strong>. Als je kampeert of zelf je accommodatie regelt
-        krijg je korting; eenpersoons kamers zijn mogelijk tegen een
-        meerbetaling. </p>
+    <p>De prijs van het project is <strong><?php echo euro($cursusdata['prijs_volledig']); ?></strong>&nbsp;per
+        persoon, inclusief accommodatie in een tweepersoons kamer en alle maaltijden. Studenten en iedereen tot 36 jaar betalen
+        <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>. Als je je tijdig inschrijft krijg je <strong><?php echo euro($cursusdata['korting_vroeg']); ?>
+            korting</strong>. Als je kampeert of zelf je accommodatie regelt krijg je korting; eenpersoons kamers zijn mogelijk tegen een meerprijs.
+    </p>
     <h4>Aanzienlijke korting voor studenten en jongeren </h4>
     <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger
         beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
@@ -68,11 +66,14 @@
         <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>
         cursusgeld per persoon, op basis van een tweepersoons kamer. Stuur bij
         inschrijving een kopie of een scan van het inschrijvingsbewijs (of van
-        je paspoort als bewijs van je leeftijd) mee. </p>
-    <h3>Accommodatie via <em>La Pellegrina</em></h3>
+        je paspoort als bewijs van je leeftijd) mee.
+    </p>
+    <h3>Accommodatie</h3>
     <h4>Een- en tweepersoons kamers in Klooster Nieuw Sion</h4>
-    <p>De meeste deelnemers verblijven in klooster Nieuw Sion. Er zijn twee plekken waar mensen kunnen verblijven, het Gastenverblijf en het Poortgebouw. Het Gastenverblijf heeft een tweepersoons en dertien eenpersoons kamers. De voorzieningen zijn er simpel maar schoon, met een gemeenschappelijke sanitaire ruimte. 
-        Daarnaast is er sinds kort het geheel gerenoveerde Poortgebouw, met drie eenpersoonskamers met gedeeld sanitair en vijf tweepersoonskamers met eigen sanitair. Er is een ontbijtbuffet in de eetzaal.</p>
+    <p>De meeste deelnemers verblijven in klooster Nieuw Sion. Er zijn twee plekken waar mensen kunnen verblijven, het Gastenverblijf en het Poortgebouw. </p>
+    <p>Het Gastenverblijf heeft één tweepersoons en dertien eenpersoons kamers. De voorzieningen zijn er simpel maar schoon, met een gemeenschappelijke sanitaire ruimte.
+    </p>
+    <p>Daarnaast is er sinds kort het geheel gerenoveerde en comfortabele Poortgebouw, met drie eenpersoonskamers met gedeeld sanitair en vijf tweepersoonskamers met eigen sanitair.</p>
     <h4>Kamperen in de kloostertuin</h4>
     <p>Er zijn een paar kampeerplekken in de notenboomgaard van het klooster beschikbaar. Tenten, campers en caravans zijn welkom; elektriciteit is NIET beschikbaar. Het aantal plaatsen is beperkt, er zijn eenvoudige gedeelde sanitaire voorzieningen in het klooster.</p>
     <h4>Eigen accommodatie</h4>
@@ -157,10 +158,12 @@
         is het niet mogelijk je aanbetaling te retourneren. Annuleer je na
         <?php echo $cursusdata['betaaldatum']; ?>, dan ben je het totale
         cursusgeld verschuldigd. Het is aan te raden tijdig een
-        annuleringsverzekering af te sluiten. </p>
+        annuleringsverzekering af te sluiten.
+    </p>
     <p><i>La Pellegrina</i> behoudt zich het recht voor om, indien noodzakelijk,
         docenten en programma te wijzigen.</p>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
+
 </html>
