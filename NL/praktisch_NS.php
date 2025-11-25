@@ -123,14 +123,13 @@
             <td class="geld"><?php echo euro($cursusdata['kamperen']); ?></td>
         </tr>
         <tr>
-            <td>Korting voor eigen accommodatie <span class="nadruk">(de lunch
-                    en koffie/thee is wel inbegrepen, ontbijt en avondeten niet)</span></td>
+            <td>Korting voor eigen accommodatie <span class="nadruk">(de lunch en koffie/thee is wel inbegrepen, ontbijt en avondeten niet)</span></td>
             <td class="geld"><?php echo euro($cursusdata['korting_eigen_acc']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['korting_eigen_acc']); ?></td>
         </tr>
         <tr>
-            <td>Toeslag voor het gezamenlijke avondeten <span class="nadruk">(alleen nodig bij eigen accommodatie; voor andere deelnemers is het
-                    avondeten standaard inbegrepen)</span></td>
+            <td>Toeslag voor het gezamenlijke avondeten <span class="nadruk">(alleen nodig bij eigen accommodatie; 
+                voor andere deelnemers is het avondeten standaard inbegrepen)</span></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['diner']); ?></td>
         </tr>
