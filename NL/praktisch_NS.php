@@ -114,8 +114,8 @@
         </tr>
         <tr>
             <td>Meerprijs plaats in tweepersoons kamer in het Poortgebouw, met eigen sanitair</td>
-            <td class="geld"><?php echo euro($cursusdata['tweepers_eigen_sanitair']); ?></td>
-            <td class="geld"><?php echo euro($cursusdata['tweepers_eigen_sanitair']); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['hotel_2pp']); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['hotel_2pp']); ?></td>
         </tr>
         <tr>
             <td>Korting voor kamperen in de kloostertuin <span class="nadruk">(per persoon, incl. alle maaltijden)</span></td>
