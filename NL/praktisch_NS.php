@@ -56,17 +56,11 @@
     <p>De prijs van het project is <strong><?php echo euro($cursusdata['prijs_volledig']); ?></strong>&nbsp;per
         persoon, inclusief accommodatie in een tweepersoons kamer en alle maaltijden. Studenten en iedereen tot 36 jaar betalen
         <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>. Als je je tijdig inschrijft krijg je <strong><?php echo euro($cursusdata['korting_vroeg']); ?>
-            korting</strong>. Als je kampeert of zelf je accommodatie regelt krijg je korting; eenpersoons kamers zijn mogelijk tegen een meerprijs.
+        korting</strong>. Als je kampeert of zelf je accommodatie regelt krijg je korting; eenpersoons kamers zijn mogelijk tegen een meerprijs.
     </p>
     <h4>Aanzienlijke korting voor studenten en jongeren </h4>
-    <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger
-        beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
-        waarvoor ze zich hebben aangemeld), krijgen een aanzienlijke korting en
-        betalen
-        <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>
-        cursusgeld per persoon, op basis van een tweepersoons kamer. Stuur bij
-        inschrijving een kopie of een scan van het inschrijvingsbewijs (of van
-        je paspoort als bewijs van je leeftijd) mee.
+    <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
+        waarvoor ze zich hebben aangemeld), krijgen een aanzienlijke korting en betalen strong><?php echo euro($cursusdata['prijs_student']); ?></strong> cursusgeld per persoon, op basis van een tweepersoons kamer. Stuur bij inschrijving een kopie of een scan van het inschrijvingsbewijs (of van je paspoort als bewijs van je leeftijd) mee.
     </p>
     <h3>Accommodatie</h3>
     <h4>Een- en tweepersoons kamers in Klooster Nieuw Sion</h4>

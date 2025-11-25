@@ -70,32 +70,24 @@
         or scan of the registration certificate (or of your passport as proof of
         age).
     </p>
+
     <h3>Accommodation</h3>
     <h4>Single and double rooms in Monastery Nieuw Sion</h4>
-    <p> Most participants stay in Monastery Nieuw Sion. There are seven double
-        and seventeen single rooms, with normal beds, no dorms or bunk beds. A
-        linen package is included in the price. The facilities are simple but
-        clean, with a communal sanitary area. The newly created double rooms in
-        the Poortgebouw have their own sanitary facilities. There is a buffet
-        breakfast in the dining room.</p>
+    <p>Most participants stay in Monastery Nieuw Sion. There are two places where people can stay, the Guest House (Gastenverblijf) and the Gatehouse (Poortgebouw).</p>
+    <p>The Guest House has one double room and thirteen single rooms. The facilities are simple but clean, with shared bathroom facilities.</p>
+    <p>In addition, there is the recently renovated and comfortable Gatehouse, with three single rooms with shared bathroom facilities and five double rooms with private bathroom facilities.
     <h4>Camping in the monastery garden</h4>
-    <p>Camping in the garden of the monastery is also possible. Tents,
-        motorhomes and caravans are welcome but electricity is not available.
-        The number of places is limited, there are simple sanitary facilities in
-        the monastery.</p>
-    <h4>Your own accommodation</h4>
-    <p> It is possible to participate in the course on the basis of your own
-        accommodation, for example for those who live in the area or can arrange
-        accommodation there themselves. In that case, in addition to the course
-        fee, you only pay a contribution for coffee and tea and the joint lunch.
-        There are a few Bed &amp; Breakfast places in the vicinity of the
-        monastery.</p>
-    <h3>Meals</h3>
-    <p>During the course we have a separate dining room, where coffee and tea
-        are ready for us. There is an extensive breakfast buffet. Lunch and
-        dinner will be served on the terrace outside, weather permitting.</p>
-    <h3>All prices at a glance</h3>
+    <p>There are a few camping spots available in the monastery's walnut orchard. Tents, campers and caravans are welcome; electricity is NOT available. The number of spots is limited, and there are simple shared sanitary facilities in the monastery.
+    <h4>Own accommodation</h4>
+    <p>It is possible to participate in the course on the basis of your own accommodation, for example for those who live nearby or can arrange their own
+        accommodation. In that case, in addition to the course fee, you only pay a contribution for coffee and tea and the communal lunch. There
+        are several hotels and Bed & Breakfast establishments in the vicinity. It is also possible to have dinner in the monastery at an additional cost.</p>
 
+    <h3>Meals</h3>
+    <p>During the course, we have a separate dining room where coffee and tea are available. There is an extensive breakfast buffet. Lunch
+        and dinner are served on the outdoor terrace, weather permitting.
+
+    <h3>All prices at a glance</h3>
     <table class="w3-table-all">
         <tr>
             <th>Overview of all prices and discounts</th>
@@ -107,7 +99,6 @@
             <td class="geld"><?php echo euro($cursusdata["prijs_volledig"] - $cursusdata["korting_vroeg"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["prijs_volledig"]); ?></td>
         </tr>
-
         <tr>
             <td>Participation for students or participants up to age 35, including a double room in the Guest House with shared bathroom facilities</td>
             <td class="geld"><?php echo euro($cursusdata["prijs_student"] - $cursusdata["korting_vroeg"]); ?></td>
