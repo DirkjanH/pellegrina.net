@@ -87,10 +87,8 @@
     <table class="w3-table-all">
         <tr>
             <th>Overzicht van alle prijzen en kortingen</th>
-            <th>Bij inschrijving <br />v&ograve;&ograve;r
-                <?php echo $cursusdata['beslisdatum']; ?>: </th>
-            <th>Bij inschrijving <br />op of na
-                <?php echo $cursusdata['beslisdatum']; ?>: </th>
+            <th>Bij inschrijving <br />vòòr <?php echo $cursusdata['beslisdatum']; ?>:</th>
+            <th>Bij inschrijving <br />op of na <?php echo $cursusdata['beslisdatum']; ?>:</th>
         </tr>
         <tr>
             <td>Deelname incl. tweepersoons kamer in het Gastenverblijf, met gedeeld sanitair</td>

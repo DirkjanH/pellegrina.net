@@ -95,84 +95,60 @@
         are ready for us. There is an extensive breakfast buffet. Lunch and
         dinner will be served on the terrace outside, weather permitting.</p>
     <h3>All prices at a glance</h3>
+
     <table class="w3-table-all">
         <tr>
-            <th>Overview of all prices and reductions</th>
-            <th>When registering <br> before
-                <?php echo $cursusdata['beslisdatum']; ?>:</th>
-            <th>When registering <br> on or after
-                <?php echo $cursusdata['beslisdatum']; ?>:</th>
+            <th>Overview of all prices and discounts</th>
+            <th>When registering <br />before <?php echo $cursusdata["beslisdatum"]; ?>:</th>
+            <th>When registering <br />on or after <?php echo $cursusdata["beslisdatum"]; ?>:</th>
         </tr>
         <tr>
-            <td>Participation in the course <span class="nadruk">including a
-                    place in a double room in the guest house and full
-                    board</span></td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['prijs_volledig'] - $cursusdata['korting_vroeg']); ?>
-            </td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['prijs_volledig']); ?>
-            </td>
+            <td>Participation incl. double room in the Guest House, with shared bathroom facilities</td>
+            <td class="geld"><?php echo euro($cursusdata["full_price"] - $cursusdata["early_bird_discount"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["full_price"]); ?></td>
+        </tr>
+
+        <tr>
+            <td>Participation for students or participants up to 35 years of age, including a double room in the Guest House, with shared bathroom facilities</td>
+            <td class="geld"><?php echo euro($cursusdata["prijs_student"] - $cursusdata["korting_vroeg"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["prijs_student"]); ?></td>
+        </tr>
+        <tr class="invisible">
+            <td>Participation as an auditor, including a double room in the Guest House, with shared bathroom facilities</td>
+            <td class="geld"><?php echo euro($cursusdata["auditor"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["auditor"]); ?></td>
         </tr>
         <tr>
-            <td>Participation student or person up to 35 in the course <span
-                    class="nadruk">including a place in a double room in the
-                    guest house and full board</span></td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['prijs_student'] - $cursusdata['korting_vroeg']); ?>
-            </td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['prijs_student']); ?>
-            </td>
+            <td>Surcharge for single room in the Guest House or Gatehouse, with shared bathroom facilities</td>
+            <td class="geld"><?php echo euro($cursusdata["single"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["single"]); ?></td>
         </tr>
         <tr>
-            <td>Participation as an auditor in the course <span
-                    class="nadruk">including a place in a double room in the
-                    guest house and full board</span></td>
-            <td class="geld"><?php echo euro_EN($cursusdata['toehoorder']); ?>
-            </td>
-            <td class="geld"><?php echo euro_EN($cursusdata['toehoorder']); ?>
-            </td>
+            <td>Surcharge for a place in a double room in the Gatehouse, with private bathroom facilities</td>
+            <td class="geld"><?php echo euro($cursusdata["hotel_2pp"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["hotel_2pp"]); ?></td>
         </tr>
         <tr>
-            <td>Surcharge for single room in the guesthouse</td>
-            <td class="geld"><?php echo euro_EN($cursusdata['eenpers']); ?></td>
-            <td class="geld"><?php echo euro_EN($cursusdata['eenpers']); ?></td>
+            <td>Discount for camping in the monastery garden <span class="emphasis">(per person, including all meals)</span></td>
+            <td class="geld"><?php echo euro($cursusdata["kamperen"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["camping"]); ?></td>
         </tr>
         <tr>
-            <td>Reduction for camping at the monastery campsite</td>
-            <td class="geld"><?php echo euro_EN($cursusdata['kamperen']); ?>
-            </td>
-            <td class="geld"><?php echo euro_EN($cursusdata['kamperen']); ?>
-            </td>
+            <td>Discount for own accommodation <span class="emphasis">(lunch and coffee/tea are included, breakfast and dinner are not)</span></td>
+            <td class="geld"><?php echo euro($cursusdata["korting_eigen_acc"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["korting_eigen_acc"]); ?></td>
         </tr>
         <tr>
-            <td>Reduction for own accommodation<span class="nadruk"> (the joint
-                    lunch and coffee/tea are included, breakfast and dinner
-                    not)</span></td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['korting_eigen_acc']); ?>
-            </td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['korting_eigen_acc']); ?>
-            </td>
+            <td>Surcharge for communal dinner <span class="emphasis">(only necessary if you have your own accommodation;
+                    dinner is included as standard for other participants)</span></td>
+            <td class="geld"><?php echo euro($cursusdata["diner"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["dinner"]); ?></td>
         </tr>
         <tr>
-            <td>Surcharge for the joint dinner <span class="nadruk">(only needed
-                    when having your own accommodation; otherwise the dinner is included as
-                    standard)</span></td>
-            <td class="geld"><?php echo euro_EN($cursusdata['diner']); ?></td>
-            <td class="geld"><?php echo euro_EN($cursusdata['diner']); ?></td>
-        </tr>
-        <tr>
-            <td>Reduction for taking part in more than one La Pellegrina summer
-                school <span class="nadruk">(within one year)</span></td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['korting_meer'] * 2); ?>
-            </td>
-            <td class="geld">
-                <?php echo euro_EN($cursusdata['korting_meer'] * 2); ?>
-            </td>
+            <td>Discount for participating in more than one course at <em>La Pellegrina</em> <span class="emphasis">(within one summer)</span></td>
+
+            <td class="geld"><?php echo euro($cursusdata["korting_meer"] * 2); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["korting_meer"] * 2); ?></td>
         </tr>
     </table>
     <h4>Exchange rates calculator</h4>
