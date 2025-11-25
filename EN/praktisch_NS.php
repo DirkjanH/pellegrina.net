@@ -113,15 +113,15 @@
             <td class="geld"><?php echo euro($cursusdata["prijs_student"] - $cursusdata["korting_vroeg"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["prijs_student"]); ?></td>
         </tr>
-        <tr class="invisible">
+        <tr class="onzichtbaar">
             <td>Participation as an auditor, including a double room in the Guest House, with shared bathroom facilities</td>
-            <td class="geld"><?php echo euro($cursusdata["auditor"]); ?></td>
-            <td class="geld"><?php echo euro($cursusdata["auditor"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["toehoorder"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["toehoorder"]); ?></td>
         </tr>
         <tr>
             <td>Surcharge for single room in the Guest House or Gatehouse, with shared bathroom facilities</td>
-            <td class="geld"><?php echo euro($cursusdata["single"]); ?></td>
-            <td class="geld"><?php echo euro($cursusdata["single"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["eenpers"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["eenpers"]); ?></td>
         </tr>
         <tr>
             <td>Surcharge for a place in a double room in the Gatehouse, with private bathroom facilities</td>
@@ -131,7 +131,7 @@
         <tr>
             <td>Discount for camping in the monastery garden <span class="emphasis">(per person, including all meals)</span></td>
             <td class="geld"><?php echo euro($cursusdata["kamperen"]); ?></td>
-            <td class="geld"><?php echo euro($cursusdata["camping"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["kamperen"]); ?></td>
         </tr>
         <tr>
             <td>Discount for own accommodation <span class="emphasis">(lunch and coffee/tea are included, breakfast and dinner are not)</span></td>
