@@ -121,7 +121,7 @@
             <td class="geld"><?php echo euro($cursusdata["hotel_2pp"]); ?></td>
         </tr>
         <tr>
-            <td>Discount for camping in the monastery garden <span class="nadruk">(per person, including all meals)</span></td>
+            <td>Discount for camping in the monastery garden <span class="nadruk">(per person, all meals included)</span></td>
             <td class="geld"><?php echo euro($cursusdata["kamperen"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["kamperen"]); ?></td>
         </tr>
