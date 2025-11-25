@@ -100,9 +100,14 @@
             <td class="geld"><?php echo euro($cursusdata['toehoorder']); ?></td>
         </tr>
         <tr>
-            <td>Meerprijs eenpersoons kamer in het Gastenverblijf of het Poortgebouw, met gedeeld sanitair</td>
+            <td>Meerprijs eenpersoons kamer in het Gastenverblijf, met gedeeld sanitair</td>
             <td class="geld"><?php echo euro($cursusdata['eenpers']); ?></td>
             <td class="geld"><?php echo euro($cursusdata['eenpers']); ?></td>
+        </tr>
+        <tr>
+            <td>Meerprijs eenpersoons kamer in het Poortgebouw, met gedeeld sanitair</td>
+            <td class="geld"><?php echo euro($cursusdata['hotel_1pp']); ?></td>
+            <td class="geld"><?php echo euro($cursusdata['hotel_1pp']); ?></td>
         </tr>
         <tr>
             <td>Meerprijs plaats in tweepersoons kamer in het Poortgebouw, met eigen sanitair</td>
