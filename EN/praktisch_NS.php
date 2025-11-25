@@ -111,9 +111,14 @@
             <td class="geld"><?php echo euro($cursusdata["toehoorder"]); ?></td>
         </tr>
         <tr>
-            <td>Surcharge for single room in the Guest House or Gatehouse, with shared bathroom facilities</td>
+            <td>Surcharge for single room in the Guest House (Gastenverblijf), with shared bathroom facilities</td>
             <td class="geld"><?php echo euro($cursusdata["eenpers"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["eenpers"]); ?></td>
+        </tr>
+        <tr>
+            <td>Surcharge for single room in the Gatehouse (Poortgebouw), with shared bathroom facilities</td>
+            <td class="geld"><?php echo euro($cursusdata["hotel_1pp"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["hotel_1pp"]); ?></td>
         </tr>
         <tr>
             <td>Surcharge for a place in a double room in the Gatehouse, with private bathroom facilities</td>
