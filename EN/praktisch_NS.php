@@ -75,7 +75,7 @@
     <h4>Single and double rooms in Monastery Nieuw Sion</h4>
     <p>Most participants stay in Monastery Nieuw Sion. There are two places where people can stay, the Guest House (Gastenverblijf) and the Gatehouse (Poortgebouw).</p>
     <p>The Guest House has one double room and thirteen single rooms. The facilities are simple but clean, with shared bathroom facilities.</p>
-    <p>In addition, there is the recently renovated and comfortable Gatehouse, with three single rooms with shared bathroom facilities and five double rooms with private bathroom facilities.
+    <p>In addition, there is the recently renovated and more comfortable Gatehouse, with three single rooms with shared bathroom facilities and five double rooms with private bathroom facilities.
     <h4>Camping in the monastery garden</h4>
     <p>There are a few camping spots available in the monastery's walnut orchard. Tents, campers and caravans are welcome; electricity is NOT available. The number of spots is limited, and there are simple shared sanitary facilities in the monastery.
     <h4>Own accommodation</h4>
