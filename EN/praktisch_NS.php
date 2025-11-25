@@ -91,9 +91,9 @@
     <table class="w3-table-all">
         <tr>
             <th>Overview of all prices and discounts</th>
-            <th class="w3-right-align">When registering <br />before <?php echo $cursusdata["beslisdatum"]; ?>:</th>
+            <th class="w3-right-align">When registering <br>before <?php echo $cursusdata["beslisdatum"]; ?>:</th>
 
-            <th class="w3-right-align">When registering <br />on or after <br><?php echo $cursusdata["beslisdatum"]; ?>:</th>
+            <th class="w3-right-align">When registering <br>on or after <?php echo $cursusdata["beslisdatum"]; ?>:</th>
         </tr>
         <tr>
             <td>Participation incl. double room in the Guest House, with shared bathroom facilities</td>
