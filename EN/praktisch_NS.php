@@ -104,8 +104,8 @@
         </tr>
         <tr>
             <td>Participation incl. double room in the Guest House, with shared bathroom facilities</td>
-            <td class="geld"><?php echo euro($cursusdata["full_price"] - $cursusdata["early_bird_discount"]); ?></td>
-            <td class="geld"><?php echo euro($cursusdata["full_price"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["prijs_volledig"] - $cursusdata["korting_vroeg"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["prijs_volledig"]); ?></td>
         </tr>
 
         <tr>
@@ -142,11 +142,10 @@
             <td>Surcharge for communal dinner <span class="emphasis">(only necessary if you have your own accommodation;
                     dinner is included as standard for other participants)</span></td>
             <td class="geld"><?php echo euro($cursusdata["diner"]); ?></td>
-            <td class="geld"><?php echo euro($cursusdata["dinner"]); ?></td>
+            <td class="geld"><?php echo euro($cursusdata["diner"]); ?></td>
         </tr>
         <tr>
             <td>Discount for participating in more than one course at <em>La Pellegrina</em> <span class="emphasis">(within one summer)</span></td>
-
             <td class="geld"><?php echo euro($cursusdata["korting_meer"] * 2); ?></td>
             <td class="geld"><?php echo euro($cursusdata["korting_meer"] * 2); ?></td>
         </tr>
