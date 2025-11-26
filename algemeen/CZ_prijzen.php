@@ -24,7 +24,7 @@ $i = $eerstecursus; ?>
       <h2>České ceny</h2>
       <p> Českým a&nbsp;slovenským účastníkům kursů pořádaných agenturou <i>La
           Pellegrina</i> nabízíme zvýhodněné podmínky, mimo jiné i&nbsp;snížené ceny:</p>
-      <table border="1" cellpadding="5">
+      <table border="1" cellpadding="5" class="w3-table-all">
         <tr valign="TOP">
           <th><b>Kurs:</b></th>
           <th align="RIGHT"><b>Cena:</b></th>
