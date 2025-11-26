@@ -298,7 +298,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                 </tr>
             </table>
             <hr>
-            <table class="formulier">
+            <table class="formulier onzichtbaar">
                 <tr>
                     <td class="linkerkolom"><input type="checkbox"
                             name="toehoorder" value="500"
@@ -313,7 +313,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
             </table>
             <hr>
             <p><strong> Geef SVP hieronder je voorkeur aan voor je accommodatie.</strong><br>
-                <span class="nadruk">De basisprijs is incl. een plaats in een tweepersoonskamer en volpension. Als je dat wilt hoef je
+                <span class="nadruk">De basisprijs is incl. een plaats in een tweepersoonskamer in het Gastenverblijf en volpension. Als je dat wilt hoef je
                     niets aan te vinken.</span>
             </p>
             <table class="formulier">

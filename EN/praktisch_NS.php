@@ -106,7 +106,7 @@
             <td class="geld"><?php echo euro($cursusdata["prijs_student"]); ?></td>
         </tr>
         <tr class="onzichtbaar">
-            <td>Participation as an auditor, including a double room in the Guest House with shared bathroom facilities</td>
+            <td>Participation as an auditor, including a double room in the Guest House (Gastenverblijf) with shared bathroom facilities</td>
             <td class="geld"><?php echo euro($cursusdata["toehoorder"]); ?></td>
             <td class="geld"><?php echo euro($cursusdata["toehoorder"]); ?></td>
         </tr>
