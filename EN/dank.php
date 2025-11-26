@@ -111,6 +111,10 @@ if (isset($dlnmr['eigen_acc']) and $dlnmr['eigen_acc'] > 0) {
 	$message .= "<li>You have indicated that you want to arrange your own accommodation. Please contact one of the various accommodations for this. It is advisable not to wait too long.</li>\n";
 }
 
+if (isset($dlnmr['diner']) and $dlnmr['diner'] > 0) {
+	$message .= "<li>You have indicated that you arrange your own accommodation and would like to join the communal dinner.</li>\n";
+}
+
 if (isset($dlnmr['acc_wens']) and $dlnmr['acc_wens'] > 0) {
 	$tmp = stripslashes($dlnmr['acc_wens']);
 	$message .= "<li>Your special wishes about accommodation are: {$tmp}</li>\n";

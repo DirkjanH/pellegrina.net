@@ -111,6 +111,10 @@ if (isset($dlnmr['eigen_acc']) and $dlnmr['eigen_acc'] > 0) {
 	$message .= "<li>Je hebt aangegeven dat je zelf je accommodatie wilt regelen. Neem hiervoor zelf contact op met een accommodatie. Het is raadzaam niet te lang te wachten.</li>\n";
 }
 
+if (isset($dlnmr['diner']) and $dlnmr['diner'] > 0) {
+	$message .= "<li>Je hebt aangegeven dat je zelf je accommodatie regelt en gebruik wilt maken van het gezamenlijke avondeten.</li>\n";
+}
+
 if (isset($dlnmr['acc_wens']) and $dlnmr['acc_wens'] > 0) {
 	$tmp = stripslashes($dlnmr['acc_wens']);
 	$message .= "<li>Je speciale wensen voor accommodatie zijn: {$tmp}</li>\n";
