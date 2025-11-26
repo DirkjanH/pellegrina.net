@@ -101,7 +101,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 		<div id="main" class="w3-row-padding">
 			<div class="w3-card-2 w3-padding w3-margin-bottom w3-half">
 				<h2 class="kolom LP_colour">Muziekprojecten voor iedere muzikant met een professionele instelling</h2>
-				<div class="w3-panel w3-yellow">
+				<div class="w3-panel w3-yellow onzichtbaar">
 					<h3 class="w3-text-black">Let op: de data van beide cursussen zijn veranderd</h3>
 					<p>Als gevolg van wijzigingen op het conservatorium in Česk&eacute; Budějovice moesten beide cursussen wat later worden gepland.</p>
 				</div>
