@@ -36,7 +36,7 @@ if (isset($_POST['toggle_test'])) {
                name="toggle_test"
                value="0"
                onchange="this.form.submit()">
-        Test aan
+        Test uit
     </label>
     <noscript>
         <button type="submit">Save</button>
