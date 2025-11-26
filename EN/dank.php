@@ -92,7 +92,15 @@ if (isset($dlnmr['toehoorder']) and $dlnmr['toehoorder'] > 0) {
 }
 
 if (isset($dlnmr['eenpersoons']) and $dlnmr['eenpersoons'] > 0) {
-	$message .= "<li>You have reserved a single room in the hostel. The number of single rooms is limited. They will be allocated after the definitive admission on {$cursus['datum_beslissing']}, in order of registration.</li>\n";
+	$message .= "<li>You have reserved a single room in the Guest House (Gastenverblijf). The number of rooms is limited. They will be allocated after definitive admission on {$cursus['datum_beslissing']}, in order of registration.</li>\n";
+}
+
+if (isset($dlnmr["hotel_1pp"]) and $dlnmr["hotel_1pp"] > 0) {
+	$message .= "<li>You have reserved a single room in the Gatehouse (Poortgebouw). The number of rooms is limited. They will be allocated after definitive admission on {$course["decision_date"]}, in order of registration.</li>\n";
+}
+
+if (isset($dlnmr["hotel_2pp"]) and $dlnmr["hotel_2pp"] > 0) {
+	$message .= "<li>You have reserved a place in a double room with private bathroom facilities in the Gatehouse (Poortgebouw). The number of rooms is limited. They will be allocated after definitive admission on {$course["decision_date"]}, in order of registration.</li>\n";
 }
 
 if (isset($dlnmr['kamperen']) and $dlnmr['kamperen'] > 0) {
