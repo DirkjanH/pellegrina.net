@@ -117,27 +117,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 conservatorium. Stuur bij inschrijving een kopie of een scan van het
                 inschrijvingsbewijs (of van je paspoort als bewijs van je leeftijd) mee.
             </p>
-            <h3>Accommodatie</h3>
-            <h4>Eenpersoons kamers en eigen accommodatie</h4>
-            <p>Er zijn ook eenpersoons kamers (uiteraard ook met eigen sanitair) in het
-                conservatorium beschikbaar tegen een meerprijs van
-                <strong><?php echo euro($cursusdata['eenpers']); ?></strong>. Vroege
-                aanmelding is hiervoor aan te raden.
-            </p>
-            <p>Daarnaast is er de mogelijkheid om zelf accommodatie in &#268;esk&eacute;
-                Bud&#283;jovice te boeken. Er is een ruime keus aan hotels, van klassiek
-                in het centrum tot modern net erbuiten. Via <a
-                    href="http://www.booking.com/city/cz/ceske-budejovice.nl.html"
-                    target="_blank">booking.com</a> heb je snel een overzicht van de
-                mogelijkheden. Ook via <a
-                    href="https://www.airbnb.nl/s/%C4%8Cesk%C3%A9-Bud%C4%9Bjovice-?checkin=24%2F07%2F2016&amp;checkout=31%2F07%2F2016&amp;ss_id=qo8di0g9"
-                    target="_blank">Airbnb</a> zijn er tal van mogelijkheden. Als je je
-                eigen accommodatie en ontbijt regelt, krijg je een korting van
-                <strong><?php echo euro($cursusdata['korting_eigen_acc']); ?></strong>
-                op de cursusprijs. De lunch en op de eerste en laatste dag ook het
-                avondeten zijn gemeenschappelijk met alle deelnemers en dus inbegrepen
-                in de cursusprijs.
-            </p>
             <h4>Reductie voor tijdig inschrijven </h4>
             <p>Als je je <strong>v&oacute;&oacute;r
                     <?php echo $cursusdata['beslisdatum']; ?></strong> inschrijft, krijg
@@ -147,7 +126,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 jonger (maar niet voor toehoorders). Na
                 <?php echo $cursusdata['beslisdatum']; ?> kun je je ook nog inschrijven
                 voor de plaatsen die op dat moment nog open zijn, maar dan geldt deze
-                reductie natuurlijk niet meer. </p>
+                reductie niet meer. </p>
             <h4>Extra reductie voor muziekstudenten</h4>
             <p>Voltijds muziekstudenten aan een conservatorium kunnen beroep doen op een
                 extra korting dankzij een fonds opgebouwd uit vrijwillige bijdragen van
@@ -180,6 +159,29 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     van <?php echo euro($cursusdata['korting_meer'] * 2); ?>.</strong>
                 Vul dan SVP beide inschrijfformulieren in en klik de optie 'Ik wil voor
                 meer dan &eacute;&eacute;n cursus inschrijven' aan.</p>
+            <h3>Accommodatie</h3>
+            <h4>Eenpersoons kamers</h4>
+            <p>Er zijn ook eenpersoons kamers (uiteraard ook met eigen sanitair) in het
+                conservatorium beschikbaar tegen een meerprijs van
+                <strong><?php echo euro($cursusdata['eenpers']); ?></strong>. Vroege
+                aanmelding is hiervoor aan te raden.
+            </p>
+            <h4>Eigen accommodatie</h4>
+            <p>Daarnaast is er de mogelijkheid om zelf accommodatie in České Budějovice
+                te boeken. Er is een ruime keus aan hotels, van klassiek
+                in het centrum tot modern net erbuiten. Via <a
+                    href="http://www.booking.com/city/cz/ceske-budejovice.nl.html"
+                    target="_blank">booking.com</a> heb je snel een overzicht van de
+                mogelijkheden. Ook via <a
+                    href="https://www.airbnb.nl/s/%C4%8Cesk%C3%A9-Bud%C4%9Bjovice-?checkin=24%2F07%2F2016&amp;checkout=31%2F07%2F2016&amp;ss_id=qo8di0g9"
+                    target="_blank">Airbnb</a> zijn er tal van mogelijkheden. Als je je
+                eigen accommodatie en ontbijt regelt, krijg je een korting van
+                <strong><?php echo euro($cursusdata['korting_eigen_acc']); ?></strong>
+                op de cursusprijs. De lunch en op de eerste en laatste dag ook het
+                avondeten zijn gemeenschappelijk met alle deelnemers en dus inbegrepen
+                in de cursusprijs.
+            </p>
+            <h3>Alle prijzen in één oogopslag</h3>
             <table class="w3-table-all">
                 <tr>
                     <th>Overzicht van alle prijzen en kortingen</th>

@@ -101,13 +101,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <?php echo $cursusdata['betaaldatum']; ?> at the latest.
       </p>
       <h3>Prices </h3>
-      <p>The course fee -
-        <strong><?php echo euro_en($cursusdata['prijs_volledig']); ?></strong>
+      <p>The course fee - <strong><?php echo euro_en($cursusdata['prijs_volledig']); ?></strong>
         per person - includes accomodation in double rooms (with private
         bathroom) at the conservatoire, breakfast, lunch and (only on the first
         and last night) dinner. Travel and insurance expenses are not included.
-        Any bank and credit card charges are payable by the participant.
-      </p>
+        Any bank and credit card charges are payable by the participant.</p>
       <h4>Not yet 36? Student? Pay the reduced price! </h4>
       <p>Applicants up to 35 years old (at the start of the course for which they
         have registered) and <em>fulltime</em> students at a university or
@@ -115,28 +113,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <strong><?php echo euro_en($cursusdata['prijs_student']); ?></strong>
         per course, per person. Please send us a copy or scan of your
         registration with an university or other institution of higher
-        education, or of your passport as proof of age.
-      </p>
-      <h3>Accommodation</h3>
-      <h4>Single rooms and your own accommodation </h4>
-      <p>Single rooms (with private bathroom) at the conservatoire are available
-        to an extra charge of
-        <strong><?php echo euro_en($cursusdata['eenpers']); ?></strong>. If you
-        want a single room, please let us know at an early stage.
-      </p>
-      <p>There is also the possibility of booking your own accommodation in Ceské
-        Bud&#283;jovice. There is a wide range of hotels, from classic in the
-        center to modern just outside. Through <a
-          href="http://www.booking.com/city/cz/ceske-budejovice.nl.html"
-          target="_blank">booking.com</a> you get a quick overview of the
-        possibilities. Also via <a
-          href="https://www.airbnb.com/s/%C4%8Cesk%C3%A9-Bud%C4%9Bjovice-?checkin=07%2F24%2F2016&checkout=07%2F31%2F2016&ss_id=qo8di0g9"
-          target="_blank">Airbnb</a> there are plenty of options. If you
-        arrange your own accommodation and breakfast, you get a discount of
-        <strong><?php echo euro($cursusdata['korting_eigen_acc']); ?></strong>
-        on the course fee. Lunch and (on the first and last night) dinner are
-        shared with all participants and included in the course fee.
-      </p>
+        education, or of your passport as proof of age.</p>
       <h4>Reduction for early applicants </h4>
       <p>If you apply<strong> before
           <?php echo $cursusdata['beslisdatum']; ?></strong> you will receive
@@ -160,7 +137,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         and accomodation in double rooms (course fee, travel and insurance
         expenses not included). You are invited to sit in on all rehearsals,
         concerts and other activities during the course. Also, there is plenty
-        to see in and around &#268;esk&eacute; Bud&#283;jovice. Please email
+        to see in and around &#268;esk&eacute; Bud&#283;jovice. Please call or email
         <em>La Pellegrina </em>for more info.
       </p>
       <h4>Large instrument? Rent instead of bringing your own!</h4>
@@ -178,6 +155,26 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <strong><?php echo euro_en($cursusdata['korting_meer'] * 2); ?>&nbsp;reduction</strong>.
         Please complete both forms, and click the checkbox at the option 'I wish
         to register for both courses'.
+      </p>
+      <h3>Accommodation</h3>
+      <h4>Single rooms and your own accommodation </h4>
+      <p>Single rooms (with private bathroom) at the conservatoire are available
+        to an extra charge of
+        <strong><?php echo euro_en($cursusdata['eenpers']); ?></strong>. If you
+        want a single room, please let us know at an early stage.
+      </p>
+      <p>There is also the possibility of booking your own accommodation in Ceské
+        Bud&#283;jovice. There is a wide range of hotels, from classic in the
+        center to modern just outside. Through <a
+          href="http://www.booking.com/city/cz/ceske-budejovice.nl.html"
+          target="_blank">booking.com</a> you get a quick overview of the
+        possibilities. Also via <a
+          href="https://www.airbnb.com/s/%C4%8Cesk%C3%A9-Bud%C4%9Bjovice-?checkin=07%2F24%2F2016&checkout=07%2F31%2F2016&ss_id=qo8di0g9"
+          target="_blank">Airbnb</a> there are plenty of options. If you
+        arrange your own accommodation and breakfast, you get a discount of
+        <strong><?php echo euro($cursusdata['korting_eigen_acc']); ?></strong>
+        on the course fee. Lunch and (on the first and last night) dinner are
+        shared with all participants and included in the course fee.
       </p>
       <h3>All prices at a glance</h3>
       <table class="w3-table-all">
