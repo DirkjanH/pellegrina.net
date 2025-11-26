@@ -1,4 +1,4 @@
-$test = $_GET['test'];
+$test = $_SESSION['test'];
 
 <?php 
 //	haal navigatie op
