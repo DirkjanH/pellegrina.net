@@ -104,7 +104,7 @@ if (isset($dlnmr['hotel_2pp']) and $dlnmr['hotel_2pp'] > 0) {
 }
 
 if (isset($dlnmr['kamperen']) and $dlnmr['kamperen'] > 0) {
-	$message .= "<li>Je hebt een kampeerplek gereserveerd in de kloostertuin. Het aantal plekken is beperkt. Ze zullen worden toegewezen na de definitieve toelating op {$cursus['datum_beslissing']}, in volgorde van aanmelding.</li>\n";
+	$message .= "<li>Je wilt kamperen in de kloostertuin. Het aantal plekken is beperkt. Ze zullen worden toegewezen na de definitieve toelating op {$cursus['datum_beslissing']}, in volgorde van aanmelding.</li>\n";
 }
 
 if (isset($dlnmr['eigen_acc']) and $dlnmr['eigen_acc'] > 0) {
