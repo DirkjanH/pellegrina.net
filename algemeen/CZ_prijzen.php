@@ -31,13 +31,13 @@ $i = $eerstecursus; ?>
           <th align="RIGHT"><b>Studentsk&aacute; cena:</b></th>
         </tr>
         <tr valign="TOP">
-          <td>1. Dvořákův Zlatý kolovrat a Haydnova <i>Missa in tempore belli<span class="titel"> pro orchestr, sbor a sólisty</span></td>
+          <td class="titel">1. Dvořákova kantáta Svatební košile pro orchestr, sbor a sólisty</td>
           <td><?php echo czk($cursussen[$i]['prijs_cr']); ?> / <?php echo czk($cursussen[$i]['prijs_cr'] - $cursussen[$i]['korting_vroeg_cr']); ?> <span class="nadruk">*)</span></td>
           <td><?php echo czk($cursussen[$i]['prijs_cr_student']); ?> / <?php echo czk($cursussen[$i]['prijs_cr_student'] - $cursussen[$i]['korting_vroeg_cr']); ?> <span class="nadruk">*)</span></td>
           <?php $i = $eerstecursus + 0; ?>
         </tr>
         <tr valign="TOP">
-          <td>2. <span class="titel">Baroko v 415 Hz: Purcell & Handel</span></td>
+          <td class="titel">2. Barokní hudba ze střední Evropy v 415 Hz</td>
           <td><?php echo czk($cursussen[$i + 1]['prijs_cr']); ?> / <?php echo czk($cursussen[$i + 1]['prijs_cr'] - $cursussen[$i + 1]['korting_vroeg_cr']); ?> <span class="nadruk">*)</span></td>
           <td><?php echo czk($cursussen[$i + 1]['prijs_cr_student']); ?> / <?php echo czk($cursussen[$i + 1]['prijs_cr_student'] - $cursussen[$i + 1]['korting_vroeg_cr']); ?> <span class="nadruk">*)</span></td>
           <?php $i = $eerstecursus + 0; ?>
