@@ -1,22 +1,11 @@
-session_start();
-
-// Initialize if not set yet
-if (!isset($_SESSION['test'])) {
-    $_SESSION['test'] = 0;
-}
-
-$test = $_SESSION['test'];
-
-//echo '$_SESSION[test]: '.$test.'<br>';
-
 <?php 
 //	haal navigatie op
-if ($opening_inschrijving > date('c') OR $test == 0) {
+if ($opening_inschrijving > date('c')) {
 // 	echo 'voor actiedatum<br>';
 	if ($taal == "NL") $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.tijdelijk.NL.php';
 	else $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.tijdelijk.EN.php';
 }
-elseif ($opening_inschrijving <= date('c') OR $test == 1) {
+else {
 // 	echo 'op of na actiedatum<br>';
 	if ($taal == "NL") $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.NL.php';
 	else $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.EN.php';
