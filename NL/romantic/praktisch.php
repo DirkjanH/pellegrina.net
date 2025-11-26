@@ -129,8 +129,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 reductie niet meer. </p>
             <h4>Extra reductie voor muziekstudenten</h4>
             <p>Voltijds muziekstudenten aan een conservatorium kunnen beroep doen op een
-                extra korting dankzij een fonds opgebouwd uit vrijwillige bijdragen van
-                deelnemers: vraag svp om details.</p>
+                extra korting dankzij een fonds opgebouwd uit bijdragen van
+                de ACMP en deelnemers: vraag svp om details.</p>
             <h4> Toehoorders en niet-deelnemende partners</h4>
             <p> Er is beperkt plaats voor toehoorders, zoals niet-deelnemende partners.
                 De kosten voor deelname, inclusief logies in tweepersoons kamers en

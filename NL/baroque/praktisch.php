@@ -122,6 +122,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <h4>Aanzienlijke korting voor studenten en jongeren </h4>
       <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
         waarvoor ze zich hebben aangemeld), krijgen een aanzienlijke korting en betalen strong><?php echo euro($cursusdata['prijs_student']); ?></strong> cursusgeld per persoon, op basis van een tweepersoons kamer. Stuur bij inschrijving een kopie of een scan van het inschrijvingsbewijs (of van je paspoort als bewijs van je leeftijd) mee.
+      <h4>Extra reductie voor muziekstudenten</h4>
+      <p>Voltijds muziekstudenten aan een conservatorium kunnen beroep doen op een
+        extra korting dankzij een fonds opgebouwd uit bijdragen van
+        de ACMP en deelnemers: vraag svp om details.</p>
       </p>
       <h3>Accommodatie</h3>
       <h4>Een- en tweepersoons kamers in Klooster Nieuw Sion</h4>
@@ -138,7 +142,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <h3>Maaltijden</h3>
       <p>Tijdens de cursus beschikken we over een aparte eetzaal, waar koffie en thee voor ons klaarstaan. Er is een uitgebreid ontbijtbuffet. De lunch
         en de avondmaaltijd worden als het weer het toestaat op het terras buiten geserveerd.</p>
-      <h3>Alle prijzen</h3>
+      <h3>Alle prijzen in één oogopslag</h3>
       <table class="w3-table-all">
         <tr>
           <th>Overzicht van alle prijzen en kortingen</th>
