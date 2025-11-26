@@ -10,7 +10,7 @@ use Pelago\Emogrifier\CssInliner;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 $locale = 'nl';
 
