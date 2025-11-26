@@ -298,20 +298,22 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                 </tr>
             </table>
             <hr>
-            <table class="formulier onzichtbaar">
-                <tr>
-                    <td class="linkerkolom"><input type="checkbox"
-                            name="toehoorder" value="500"
-                            <?php
-                            if (isset($_POST['toehoorder']) and $_POST['toehoorder'] == 500) echo 'checked'; ?>></td>
-                    <td><b>Ik meld me aan als toehoorder</b><span
-                            class="nadruk"><b> </b>(prijs
-                            <?php echo euro($cursusdata['toehoorder']); ?> incl.
-                            een plaats in een tweepersoonskamer en
-                            volpension)</span></td>
-                </tr>
-            </table>
-            <hr>
+            <div class="onzichtbaar">
+                <table class="formulier">
+                    <tr>
+                        <td class="linkerkolom"><input type="checkbox"
+                                name="toehoorder" value="500"
+                                <?php
+                                if (isset($_POST['toehoorder']) and $_POST['toehoorder'] == 500) echo 'checked'; ?>></td>
+                        <td><b>Ik meld me aan als toehoorder</b><span
+                                class="nadruk"><b> </b>(prijs
+                                <?php echo euro($cursusdata['toehoorder']); ?> incl.
+                                een plaats in een tweepersoonskamer en
+                                volpension)</span></td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
             <p><strong> Geef SVP hieronder je voorkeur aan voor je accommodatie.</strong><br>
                 <span class="nadruk">De basisprijs is incl. een plaats in een tweepersoonskamer in het Gastenverblijf en volpension. Als je dat wilt hoef je
                     niets aan te vinken.</span>
@@ -352,7 +354,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             <?php if (isset($_POST['eigen_acc']) and $_POST['eigen_acc'] == 1) echo 'checked'; ?>>
                     </td>
                     <td>Ik regel mijn eigen accommodatie en maak alleen gebruik van de gezamenlijke lunch, diner en
-                            koffie/thee <span class="nadruk">(korting <?php echo euro($cursusdata['korting_eigen_acc']) ?>)</span>
+                        koffie/thee <span class="nadruk">(korting <?php echo euro($cursusdata['korting_eigen_acc']) ?>)</span>
                     </td>
                 </tr>
                 <tr>
@@ -498,7 +500,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
     </div>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
 </html> <?php ob_end_flush(); ?>

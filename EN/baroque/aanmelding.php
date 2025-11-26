@@ -302,19 +302,21 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                 </tr>
             </table>
             <hr>
-            <table class="formulier onzichtbaar">
-                <tr>
-                    <td class="linkerkolom"><input type="checkbox"
-                            name="toehoorder" value="500"
-                            <?php
-                            if (isset($_POST['toehoorder']) and $_POST['toehoorder'] == 500) echo 'checked'; ?>></td>
-                    <td><b>I wish to attend as auditor </b><span
-                            class="nadruk">(fee
-                            <?php echo euro_en($cursusdata['toehoorder']); ?>)</span>
-                    </td>
-                </tr>
-            </table>
-            <hr>
+            <div class="onzichtbaar">
+                <table class="formulier ">
+                    <tr>
+                        <td class="linkerkolom"><input type="checkbox"
+                                name="toehoorder" value="500"
+                                <?php
+                                if (isset($_POST['toehoorder']) and $_POST['toehoorder'] == 500) echo 'checked'; ?>></td>
+                        <td><b>I wish to attend as auditor </b><span
+                                class="nadruk">(fee
+                                <?php echo euro_en($cursusdata['toehoorder']); ?>)</span>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
             <p><strong>Please indicate underneath your accommodation preferences</strong><br>
                 <span class="nadruk">Standard accommodation is a place in a double room at the Guest House (Gastenverblijf) and full board. If that
                     is what you want you don't need to indicate other wishes here.</span>
@@ -331,8 +333,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             name="eenpersoons" id="eenpersoons" value="1"
                             <?php if (isset($_POST["eenpersoons"]) and $_POST["eenpersoons"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I would prefer a single room in the Guest House (Gastenverblijf) <span class="nadruk">(additional charge 
-                        <?php echo euro($cursusdata["eenpers"]); ?>; limited availability)</span></td>
+                    <td>I would prefer a single room in the Guest House (Gastenverblijf) <span class="nadruk">(additional charge
+                            <?php echo euro($cursusdata["eenpers"]); ?>; limited availability)</span></td>
                 </tr>
                 <tr>
                     <td class="linkerkolom"><input type="checkbox" name="hotel_1pp" id="hotel_1pp" value="1"
