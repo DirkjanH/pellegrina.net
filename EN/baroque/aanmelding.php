@@ -324,7 +324,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td class="linkerkolom"><input type="checkbox" name="hotel_2pp" id="hotel_2pp" value="1"
                             <?php if (isset($_POST["hotel_2pp"]) and $_POST["hotel_2pp"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I would prefer a place in a double room with private bathroom facilities in the Gatehouse (Poortgebouw) <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_2pp"]); ?>; limited availability)</span></td>
+                    <td>I would prefer a place in a double room with private bathroom facilities in the Gatehouse (Poortgebouw) <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_2pp"]); ?> per person; limited availability)</span></td>
                 </tr>
                 <tr>
                     <td class="linkerkolom"><input type="checkbox"
