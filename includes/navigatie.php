@@ -1,5 +1,7 @@
 $test = $_SESSION['test'];
 
+echo '$_SESSION[test]: '.$test.'<br>';
+
 <?php 
 //	haal navigatie op
 if ($opening_inschrijving > date('c')) {
