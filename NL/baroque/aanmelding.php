@@ -119,6 +119,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                                     <?php
                                     if (isset($instr) and stristr($instr, '160') !== false) echo 'selected'; ?>>
                                     baroktrompet</OPTION>
+                                <OPTION VALUE="170"
+                                    <?php
+                                    if (isset($instr) and stristr($instr, '170') !== false) echo 'selected'; ?>>
+                                    baroktrombone</OPTION>
                             </OPTGROUP>
                             <OPTGROUP
                                 LABEL="Strijkers (barokinstrumenten of moderne instrumenten met darmsnaren en barokstok)">
@@ -344,14 +348,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             persoon; beperkt beschikbaar)</span></td>
                 </tr>
                 <tr>
-                    <td class="linkerkolom"><input name="eigen_acc"
-                            type="checkbox" id="eigen_acc" value="1"
+                    <td class="linkerkolom"><input name="eigen_acc" type="checkbox" id="eigen_acc" value="1"
                             <?php if (isset($_POST['eigen_acc']) and $_POST['eigen_acc'] == 1) echo 'checked'; ?>>
                     </td>
-                    <td>
-                        <p>Ik regel mijn eigen accommodatie en maak alleen gebruik van de gezamenlijke lunch, diner en
+                    <td>Ik regel mijn eigen accommodatie en maak alleen gebruik van de gezamenlijke lunch, diner en
                             koffie/thee <span class="nadruk">(korting <?php echo euro($cursusdata['korting_eigen_acc']) ?>)</span>
-                        </p>
                     </td>
                 </tr>
                 <tr>

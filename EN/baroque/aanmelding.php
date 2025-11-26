@@ -116,6 +116,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                                     <?php
                                     if (isset($instr) and stristr($instr, '160') !== false) echo 'selected'; ?>>
                                     baroque trumpet</OPTION>
+                                <OPTION VALUE="170"
+                                    <?php
+                                    if (isset($instr) and stristr($instr, '170') !== false) echo 'selected'; ?>>
+                                    baroque trombone</OPTION>
                             </OPTGROUP>
                             <OPTGROUP LABEL="Strings">
                                 <OPTION VALUE="210"
@@ -311,53 +315,53 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                 </tr>
             </table>
             <hr>
-            <p><strong>Please indicate underneath your accommodation
-                    preferences</strong><br>
-                <span class="nadruk">Standard accommodation is a place in a
-                    double room at the monastery hostel and full board. If that
-                    is what you want you don't need to indicate other wishes
-                    here.</span>
+            <p><strong>Please indicate underneath your accommodation preferences</strong><br>
+                <span class="nadruk">Standard accommodation is a place in a double room at the monastery hostel and full board. If that
+                    is what you want you don't need to indicate other wishes here.</span>
             </p>
             <table class="formulier">
                 <tr>
+                    <td class="linkerkolom"><input type="checkbox" name="hotel_2pp" id="hotel_2pp" value="1"
+                            <?php if (isset($_POST["hotel_2pp"]) and $_POST["hotel_2pp"] == 1) echo "checked"; ?>>
+                    </td>
+                    <td>I would prefer a place in a double room with private bathroom facilities in the Poortgebouw <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_2pp"]) ?>; limited availability)</span></td>
+                </tr>
+                <tr>
                     <td class="linkerkolom"><input type="checkbox"
                             name="eenpersoons" id="eenpersoons" value="1"
-                            <?php if (isset($_POST['eenpersoons']) and $_POST['eenpersoons'] == 1) echo 'checked'; ?>>
+                            <?php if (isset($_POST["eenpersoons"]) and $_POST["eenpersoons"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I prefer a single room <span class="nadruk">(surcharge
-                            <?php echo euro_en($cursusdata['eenpers']) ?>;
-                            availability limited)</span></td>
+                    <td>I would prefer a single room in the Guest House <span class="nadruk">(additional charge <?php echo euro($cursusdata["eenpersoons"]) ?>; limited
+                            availability)</span></td>
                 </tr>
                 <tr>
-                    <td class="linkerkolom"><input name="kamperen"
-                            type="checkbox" id="kamperen" value="1"
-                            <?php if (isset($_POST['kamperen']) and $_POST['kamperen'] == 1) echo 'checked'; ?>>
+                    <td class="linkerkolom"><input type="checkbox" name="hotel_1pp" id="hotel_1pp" value="1"
+                            <?php if (isset($_POST["hotel_1pp"]) and $_POST["hotel_1pp"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I would like to camp in the monastery garden <span
-                            class="nadruk">(reduction
-                            <?php echo euro_en($cursusdata['kamperen']) ?>;
-                            availability limited )</span></td>
+                    <td>I would prefer a single room in the Poortgebouw <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_1pp"]) ?>; limited
+                            availability)</span></td>
                 </tr>
                 <tr>
-                    <td class="linkerkolom"><input name="eigen_acc"
-                            type="checkbox" id="eigen_acc" value="1"
-                            <?php if (isset($_POST['korting_eigen_acc']) and $_POST['korting_eigen_acc'] == 1) echo 'checked'; ?>>
+                    <td class="linkerkolom"><input name="kamperen" type="checkbox" id="kamperen" value="1" <?php if (isset($_POST["kamperen"]) and $_POST["kamperen"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I arrange my own accommodation and make use only of the
-                        collective lunch, dinner and coffee/tea <span
-                            class="nadruk">(reduction
-                            <?php echo euro_en($cursusdata['korting_eigen_acc']) ?>)</span>
+                    <td>I would like to camp at the monastery campsite <span class="nadruk">(discount <?php echo euro($cursusdata["kamperen"]) ?> per
+                            person; limited availability)</span></td>
+                </tr>
+                <tr>
+                    <td class="linkerkolom"><input name="eigen_acc" type="checkbox" id="eigen_acc" value="1"
+                            <?php if (isset($_POST["eigen_acc"]) and $_POST["eigen_acc"] == 1) echo "checked"; ?>>
+                    </td>
+                    <td>I will arrange my own accommodation and will only make use of the communal lunch, dinner and
+                        coffee/tea <span class="nadruk">(discount <?php echo euro($cursusdata["kortng_eigen_acc"]) ?>)</span>
                     </td>
                 </tr>
                 <tr>
                     <td class="linkerkolom">&nbsp;</td>
-                    <td><input name="diner" type="checkbox" id="diner" value="1"
-                            <?php if (isset($_POST['diner']) and $_POST['diner'] == 1) echo 'checked'; ?>><label>
-                            Although I arrange my own accommodation (and get the
-                            <?php echo euro_en($cursusdata['korting_eigen_acc']) ?>
-                            reduction for it), I also like to make use of the
-                            communal dinner <span class="nadruk">(surcharge
-                                <?php echo euro_en($cursusdata['diner']) ?>)</span></label>
+                    <td><input name="dinner" type="checkbox" id="dinner" value="1"
+                            <?php if (isset($_POST["dinner"]) and $_POST["dinner"] == 1) echo "checked"; ?>><label>
+                            Although I arrange my own accommodation (and receive a discount of
+                            <?php echo euro($cursusdata["korting_eigen_acc"]) ?> for this), I would also like to take part in the
+                            communal dinner <span class="nadruk">(additional cost <?php echo euro($cursusdata["diner"]) ?>)</span></label>
                     </td>
                 </tr>
             </table>
