@@ -43,5 +43,7 @@ if (isset($_POST['toggle_test'])) {
     </noscript>
 </form>
 
+print_r($_SESSION);
+
 </body>
 </html>
