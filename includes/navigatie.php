@@ -1,3 +1,5 @@
+$test = $_GET['test'];
+
 <?php 
 //	haal navigatie op
 if ($opening_inschrijving > date('c')) {
@@ -5,7 +7,7 @@ if ($opening_inschrijving > date('c')) {
 	if ($taal == "NL") $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.tijdelijk.NL.php';
 	else $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.tijdelijk.EN.php';
 }
-else {
+elseif ($opening_inschrijving =< date('c') OR $test == 'test') {
 // 	echo 'op of na actiedatum<br>';
 	if ($taal == "NL") $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.NL.php';
 	else $nav_text_file = $_SERVER['DOCUMENT_ROOT'].'/includes/navigatie.EN.php';
