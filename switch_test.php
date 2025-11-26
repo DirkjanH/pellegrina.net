@@ -28,7 +28,7 @@ if (isset($_POST['toggle_test'])) {
                name="toggle_test"
                value="1"
                onchange="this.form.submit()"
-            <?php echo $_SESSION['test'] ? 'checked' : ''; ?>>
+            <?php echo $_SESSION['test'] ? '' : 'checked'; ?>>
         Test
     </label>
     <noscript>
