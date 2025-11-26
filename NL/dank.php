@@ -99,7 +99,7 @@ if (isset($dlnmr['hotel_1pp']) and $dlnmr['hotel_1pp'] > 0) {
 	$message .= "<li>Je hebt een eenpersoonskamer in het Poortgebouw gereserveerd. Het aantal is er beperkt. Ze zullen worden toegewezen na de definitieve toelating op {$cursus['datum_beslissing']}, in volgorde van inschrijving.</li>\n";
 }
 
-if (isset($dlnmr['eenpersoons']) and $dlnmr['eenpersoons'] > 0) {
+if (isset($dlnmr['hotel_2pp']) and $dlnmr['hotel_2pp'] > 0) {
 	$message .= "<li>Je hebt een plaats in een tweepersoonskamer met eigen sanitair in het Poortgebouw gereserveerd. Het aantal kamers is er beperkt. Ze zullen worden toegewezen na de definitieve toelating op {$cursus['datum_beslissing']}, in volgorde van inschrijving.</li>\n";
 }
 
