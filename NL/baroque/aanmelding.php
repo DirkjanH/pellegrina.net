@@ -308,31 +308,39 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                 </tr>
             </table>
             <hr>
-            <p><strong> Geef SVP hieronder je voorkeur aan voor je
-                    accommodatie.</strong><br>
-                <span class="nadruk">De basisprijs is incl. een plaats in een
-                    tweepersoonskamer en volpension. Als je dat wilt hoef je
+            <p><strong> Geef SVP hieronder je voorkeur aan voor je accommodatie.</strong><br>
+                <span class="nadruk">De basisprijs is incl. een plaats in een tweepersoonskamer en volpension. Als je dat wilt hoef je
                     niets aan te vinken.</span>
             </p>
             <table class="formulier">
                 <tr>
                     <td class="linkerkolom"><input type="checkbox"
+                            name="hotel_2pp" id="hotel_2pp" value="1"
+                            <?php if (isset($_POST['hotel_2pp']) and $_POST['hotel_2pp'] == 1) echo 'checked'; ?>>
+                    </td>
+                    <td>Ik wil bij voorkeur een plaats in een tweepersoonskamer met eigen sanitair in het Poortgebouw <span class="nadruk">(meerprijs <?php echo euro($cursusdata['hotel_2pp']) ?>; beperkt beschikbaar)</span></td>
+                </tr>
+                <tr>
+                    <td class="linkerkolom"><input type="checkbox"
                             name="eenpersoons" id="eenpersoons" value="1"
                             <?php if (isset($_POST['eenpersoons']) and $_POST['eenpersoons'] == 1) echo 'checked'; ?>>
                     </td>
-                    <td>Ik wil bij voorkeur een eenpersoonskamer <span
-                            class="nadruk">(meerprijs
-                            <?php echo euro($cursusdata['eenpers']) ?>; beperkt
+                    <td>Ik wil bij voorkeur een eenpersoonskamer in het Gastenverblijf <span class="nadruk">(meerprijs <?php echo euro($cursusdata['eenpers']) ?>; beperkt
+                            beschikbaar)</span></td>
+                </tr>
+                <tr>
+                    <td class="linkerkolom"><input type="checkbox"
+                            name="hotel_1pp" id="hotel_1pp" value="1"
+                            <?php if (isset($_POST['hotel_1pp']) and $_POST['hotel_1pp'] == 1) echo 'checked'; ?>>
+                    </td>
+                    <td>Ik wil bij voorkeur een eenpersoonskamer in het Poortgebouw <span class="nadruk">(meerprijs <?php echo euro($cursusdata['hotel_1pp']) ?>; beperkt
                             beschikbaar)</span></td>
                 </tr>
                 <tr>
                     <td class="linkerkolom"><input name="kamperen"
-                            type="checkbox" id="kamperen" value="1"
-                            <?php if (isset($_POST['kamperen']) and $_POST['kamperen'] == 1) echo 'checked'; ?>>
+                            type="checkbox" id="kamperen" value="1" <?php if (isset($_POST['kamperen']) and $_POST['kamperen'] == 1) echo 'checked'; ?>>
                     </td>
-                    <td>Ik wil graag kamperen op de kloostercamping <span
-                            class="nadruk">(korting
-                            <?php echo euro($cursusdata['kamperen']) ?> per
+                    <td>Ik wil graag kamperen op de kloostercamping <span class="nadruk">(korting <?php echo euro($cursusdata['kamperen']) ?> per
                             persoon; beperkt beschikbaar)</span></td>
                 </tr>
                 <tr>
@@ -341,10 +349,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                             <?php if (isset($_POST['eigen_acc']) and $_POST['eigen_acc'] == 1) echo 'checked'; ?>>
                     </td>
                     <td>
-                        <p>Ik regel mijn eigen accommodatie en maak alleen
-                            gebruik van de gezamenlijke lunch, diner en
-                            koffie/thee <span class="nadruk">(korting
-                                <?php echo euro($cursusdata['korting_eigen_acc']) ?>)</span>
+                        <p>Ik regel mijn eigen accommodatie en maak alleen gebruik van de gezamenlijke lunch, diner en
+                            koffie/thee <span class="nadruk">(korting <?php echo euro($cursusdata['korting_eigen_acc']) ?>)</span>
                         </p>
                     </td>
                 </tr>
@@ -352,12 +358,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td class="linkerkolom">&nbsp;</td>
                     <td><input name="diner" type="checkbox" id="diner" value="1"
                             <?php if (isset($_POST['diner']) and $_POST['diner'] == 1) echo 'checked'; ?>><label>
-                            Hoewel ik mijn eigen accommodatie regel (en daarvoor
-                            de korting van
-                            <?php echo euro($cursusdata['korting_eigen_acc']) ?>
-                            krijg), maak ik graag ook gebruik van het
-                            gezamenlijke diner <span class="nadruk">(meerprijs
-                                <?php echo euro($cursusdata['diner']) ?>)</span></label>
+                            Hoewel ik mijn eigen accommodatie regel (en daarvoor de korting van
+                            <?php echo euro($cursusdata['korting_eigen_acc']) ?> krijg), maak ik graag ook gebruik van het
+                            gezamenlijke avondeten <span class="nadruk">(meerprijs <?php echo euro($cursusdata['diner']) ?>)</span></label>
                     </td>
                 </tr>
             </table>
