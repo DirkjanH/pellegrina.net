@@ -24,12 +24,19 @@ if (isset($_POST['toggle_test'])) {
 
 <form method="post">
     <label>
-        <input type="checkbox"
+        <input type="radio"
                name="toggle_test"
                value="1"
                onchange="this.form.submit()"
             <?php echo $_SESSION['test'] ? 'checked' : ''; ?>>
-        Test
+        Test aan
+    </label>
+    <label>
+        <input type="radio"
+               name="toggle_test"
+               value="0"
+               onchange="this.form.submit()">
+        Test aan
     </label>
     <noscript>
         <button type="submit">Save</button>
