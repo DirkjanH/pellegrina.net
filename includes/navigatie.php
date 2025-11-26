@@ -1,3 +1,10 @@
+session_start();
+
+// Initialize if not set yet
+if (!isset($_SESSION['test'])) {
+    $_SESSION['test'] = 0;
+}
+
 $test = $_SESSION['test'];
 
 //echo '$_SESSION[test]: '.$test.'<br>';
