@@ -150,7 +150,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <h4>Extra reduction for Eastern-european participants</h4>
       <p>For participants from Central European countries and countries of the
         former Soviet Union specially reduced course fees are available thanks
-        to a fund sponsored by western participants. Here you find more
+        to a fund sponsored by the ACMP and western participants. Here you find more
         information in <a href="/algemeen/CE_prijzen.php">English</a> or <a
           href="/algemeen/CZ_prijzen.php">Czech</a>.</p>
       <h4>Auditors and non-participating spouses</h4>

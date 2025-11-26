@@ -129,6 +129,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         or scan of the registration certificate (or of your passport as proof of
         age).
       </p>
+      <h4>Extra reduction for Eastern-European participants</h4>
+      <p>For participants from Central European countries and countries of the
+        former Soviet Union specially reduced course fees are available thanks
+        to a fund sponsored by the ACMP and western participants. Here you find more
+        information in <a href="/algemeen/CE_prijzen.php">English</a> or <a
+          href="/algemeen/CZ_prijzen.php">Czech</a>.</p>
 
       <h3>Accommodation</h3>
       <h4>Single and double rooms in Monastery Nieuw Sion</h4>
