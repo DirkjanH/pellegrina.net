@@ -67,7 +67,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
     ?>
     <div id="main">
-      <?php require_once $_SERVER['DOCUMENT_ROOT'] . 'EN/praktisch_NS.php'; ?>
+      <?php require_once $_SERVER['DOCUMENT_ROOT'] . 'EN/praktisch_budejovice.php'; ?>
       <h2><a href="javascript: history.go(-1)">Back</a></h2>
     </div>
   </div>
