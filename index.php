@@ -282,11 +282,11 @@ function getisp($ip = '')
                             class="mySlides" />
                         <img src="Images/slideshow/kamerkoor.jpg" alt=""
                             class="mySlides" />
-                        <img src="Images/slideshow/trio_met_bas.jpg" alt=""
+                        <img src="Images/slideshow/kloosterkerk.jpg" alt=""
                             class="mySlides" />
                         <img src="Images/slideshow/orkestrepetitie.jpg" alt=""
                             class="mySlides" />
-                        <img src="Images/slideshow/zangers.jpg" alt=""
+                        <img src="Images/slideshow/zingende_mannen.jpg" alt=""
                             class="mySlides" />
                         <script>
                             var myIndex = 0;
