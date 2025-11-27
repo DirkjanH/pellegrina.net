@@ -291,7 +291,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sternadel</a> and <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
             <div class="fotocenter w3-center"><img
-                    src="/Images/tutors_CB.png" alt="Tutors" class="w3-image" width="800">
+                    src="/Images/tutors_CB.jpg" alt="Tutors" class="w3-image" width="800">
                 <br>The tutors during the tutors' concert
             </div>
             <h2><a name="inschrijven"></a>How to register</h2>
