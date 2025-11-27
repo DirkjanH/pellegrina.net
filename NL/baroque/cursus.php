@@ -110,7 +110,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 iedereen in de vorm van links naar PDF-bestanden die de
                 deelnemers kunnen uitprinten en meenemen.</p>
             <h3>Extra's: Barokdans en Tai Chi</h3>
-            <div class="fotorechts"><img src="/Images/barokdans.png" alt="Barokdansles" width="400"><br>Barokdansles met Ricardo</div>
+            <div class="fotorechts"><img src="/Images/barokdans.jpg" alt="Barokdansles" width="400"><br>Barokdansles met Ricardo</div>
             <p>Barokmuziek is niet los te zien van de barokdans zoals die aan
                 het hof werd beoefend. Dankzij bronnen met dansnotatie uit die
                 periode, zoals de geschriften van de dansmeesters Feuillet en
