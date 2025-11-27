@@ -121,9 +121,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 the form of links to PDF files which the participants can print
                 out and bring.</p>
             <h3>Extras: Baroque dance and Tai Chi </h3>
-            <div class="fotorechts"><img src="/Images/Feuillet-notation.jpg"
-                    alt="" width="400" height="597" /><br> Feuillet-notation for
-                a chaconne</div>
+            <div class="fotorechts"><img src="/Images/barokdans.png" alt="Baroque dance class" width="400"><br>Baroque dance class with Ricardo</div>
             <p>Baroque music cannot be seen separated from Baroque dance as it was
                 practised at court. Thanks to sources with dance notation from
                 the period, such as the writings of the dance masters Feuillet
