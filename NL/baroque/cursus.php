@@ -97,7 +97,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     geeft ruimte&quot;</p>
                 <h3>Programma <i>Barok uit Centraal Europa</i> voor alle zangers en instrumentalisten</h3>
                 <p>
-                <div class="fotocenter w3-center"><img class="w3-image" width="800" src="/Images/concert_kloosterkerk.png" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>
+                <div class="fotocenter w3-center"><img class="w3-image" width="800" src="/Images/concert_kloosterkerk.jpg" alt="Concert in de kloosterkerk"><br>Concert in de kloosterkerk</div>
                 Iedere middag werken alle zangers en instrumentalisten samen
                 aan het programma 'Barok uit Centraal Europa' voor iedereen. Centraal staat het Requiem in f klein van Biber en het Miserere in c klein ZWV 57 van Zelenka. Dit programma wordt in de kloosterkerk uitgevoerd als het slotconcert van de cursus. Uiteraard zijn er eerst groepsrepetities voor het koor en het orkest,
                 en correpetitie voor de solisten. Later in de week komen alle groepen bijeen en ontstaat een kleurrijk en divers ensemble, waarin iedereen zijn eigen uitdagingen heeft. <a href="programma.php">Lees hier meer over de werken en hun muzikale en historische context</a>.</p>
