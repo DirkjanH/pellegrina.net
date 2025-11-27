@@ -124,7 +124,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </p>
             <p>The course is open to individual participants as well as existing ensembles.</p>
             <p>
-            <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.png" alt="Participant performing as soloist"><br>Participant performing as soloist in the Mozart Concerto Event</div>A special evening will be the <em>Mozart Concerto Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
+            <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.jpg" alt="Participant performing as soloist"><br>Participant performing as soloist in the Mozart Concerto Event</div>A special evening will be the <em>Mozart Concerto Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
             contemporary. The other instrumentalists and tutors are asked to accompany, sight-reading the orchestral parts.</p>
             <p class="citaat">Anke Muusse: “I really enjoyed my first musical
                 Pellegrina week because of the level of the course, the variety

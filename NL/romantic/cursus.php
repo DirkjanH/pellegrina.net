@@ -110,10 +110,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 Pergolesi's <em>Stabat Mater</em> met strijkers, Mozart en Haydn
                 liederen voor meer stemmen met piano, Schuberts <em>Hochzeitsbraten</em> of
                 andere Schubert of Brahms voor meerdere stemmen met piano, enz. Er is in de cursus ook tijd voor kamermuziek door gelegenheidscombinaties. Neem dus vooral je lievelings-kamermuziek mee.</p>
-            <p>De cursus staat open zowel voor individuele deelnemers als voor
-                vaste ensembles. </p>
+            <p>De cursus staat open zowel voor individuele deelnemers als voor vaste ensembles. </p>
             <p>
-            <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.png" alt="Deelnemer die als solist optreedt"><br>Deelnemer die als solist optreedt tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
+            <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.jpg" alt="Deelnemer die als solist optreedt"><br>Deelnemer treedt als solist  tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
             tijdgenoot voor te bereiden. De andere instrumentalisten en docenten vormen dan een ad hoc orkest om dat - à vue spelend - te begeleiden.</p>
             <p class="citaat">Anke Muusse: "Ik heb heel erg genoten van mijn
                 eerste muzikale Pellegrina week door het niveau van de cursus,
