@@ -134,11 +134,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 en heerlijk ontspannend."</p>
             <div class="container">
                 <h2><a name="voorwie"></a>Voor wie </h2>
-                <div class="fotorechts"><img src="/Images/margarita.jpg"
-                        alt="rehearsal in the castle hall" width="400"
-                        height="533" class="w3-image" /><br> Sopraan in actie
-                    <br>
-                </div>
+                <div class="fotorechts"><img src="/Images/counter.jpg" alt="Countertenor in actie" width="400"
+                        class="w3-image" /><br>Countertenor in actie</div>
                 <h4>Zangers</h4>
                 <p>Er is plaats voor maximaal 16 ervaren zangers. Om deel te kunnen nemen dien je te voldoen aan de volgende vereisten:</p>
                 <ul>

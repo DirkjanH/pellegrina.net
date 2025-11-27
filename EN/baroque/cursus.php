@@ -145,10 +145,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 venue and wonderfully relaxing."</p>
             <div class="container">
                 <h2><a name="voorwie"></a>For whom</h2>
-                <div class="fotorechts"><img src="/Images/margarita.jpg"
-                        alt="rehearsal in the castle hall" width="400"
-                        height="533" class="w3-image" /><br /> Soprano in action
-                </div>
+                <div class="fotorechts"><img src="/Images/counter.jpg" alt="Countertenor in action" width="400"
+                        class="w3-image" /><br>Countertenor in action</div>
                 <h4><strong>Singers</strong></h4>
                 <p>There is room for up to 16 experienced singers. To qualify you must meet the following requirements:</p>
                 <ul>
