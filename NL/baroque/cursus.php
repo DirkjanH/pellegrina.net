@@ -140,15 +140,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     <br>
                 </div>
                 <h4>Zangers</h4>
-                <p>Er is plaats voor maximaal 16 ervaren zangers. Om deel te kunnen nemen dien je te voldoen aan de volgende vereisten:
-                </p>
+                <p>Er is plaats voor maximaal 16 ervaren zangers. Om deel te kunnen nemen dien je te voldoen aan de volgende vereisten:</p>
                 <ul>
-                    <li> Je zingt goed van blad en kunt zelfstandig je partij instuderen</li>
-                    <li> Je hebt ervaring in oude-muziekensembles in enkelvoudige bezetting</li>
-                    <li> Je hebt een ontwikkelde stem die zich leent voor solo- en ensemblezang</li>
-                    <li> Je bent ge&iuml;nteresseerd in de historische uitvoeringspraktijk</li>
+                    <li>Je zingt goed van blad en kunt zelfstandig je partij instuderen</li>
+                    <li>Je hebt ervaring in oude-muziekensembles in enkelvoudige bezetting</li>
+                    <li>Je hebt een ontwikkelde stem die zich leent voor solo- en ensemblezang</li>
+                    <li>Je bent geïnteresseerd in de historische uitvoeringspraktijk</li>
                 </ul>
-                <h4>Instrumentalisten </h4>
+                <h4>Instrumentalisten</h4>
                 <p>Er is plaats voor maximaal 24 instrumentalisten, namelijk
                     barokstrijkers, viola da gamba, blokfluit, traverso,
                     barokhobo, barokfagot, baroktrompet & -trombone, clavecimbel/orgel, theorbe,

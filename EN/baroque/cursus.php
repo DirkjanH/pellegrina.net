@@ -150,17 +150,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         height="533" class="w3-image" /><br /> Soprano in action
                 </div>
                 <h4><strong>Singers</strong></h4>
-                <p>There is room for up to 16 experienced singers. To qualify
-                    you must meet the following requirements:</p>
+                <p>There is room for up to 16 experienced singers. To qualify you must meet the following requirements:</p>
                 <ul>
-                    <li>You are a good sight reader and able to study parts
-                        independently</li>
-                    <li>You are experienced with ensembles for early music in
-                        small ensembles (quartet, quintet)</li>
-                    <li>You have a trained voice suitable for ensemble and solo
-                        singing</li>
-                    <li>You are interested in historical performance practice,
-                        tuning systems and ornamentation </li>
+                    <li>You are a good sight reader and able to study parts independently</li>
+                    <li>You are experienced with ensembles for early music in small ensembles (quartet, quintet)</li>
+                    <li>You have a trained voice suitable for ensemble and solo singing</li>
+                    <li>You are interested in historical performance practice, tuning systems and ornamentation </li>
                 </ul>
                 <h4><strong>Instrumentalists</strong></h4>
                 <p>The maximum instrumental group size is 24. For instruments we
