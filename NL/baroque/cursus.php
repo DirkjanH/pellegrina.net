@@ -180,7 +180,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vrije avonden? Juist, zoveel mogelijk
                     muziekmaken....!!!&rdquo;</p>
             </div>
-            <div class="fotocenter"><img src="/Images/duo.png" width="800"
+            <div class="fotocenter"><img src="/Images/duo.jpg" width="800"
                     alt="Partijen samen voorbereiden" class="w3-image" /><br>Partijen samen voorbereiden</div>
             <h4>Dagindeling</h4>
             <ul>
