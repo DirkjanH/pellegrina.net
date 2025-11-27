@@ -82,7 +82,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     spending: many days of hard work in a monastery, immersed in
                     music, with an inspiring group of music lovers&quot;</p>
                 <h3>Chamber music</h3>
-                <div class="fotocenter w3-center"><img src="/Images/kamermuziek_NS.png" width="800"
+                <div class="fotocenter w3-center"><img src="/Images/kamermuziek_NS.jpg" width="800"
                         alt="Chamber music ensemble performing" /><br>Chamber music ensemble performing</div>
                 <p>Each morning of the course we work in small
                     ensembles. Everyone is part of two different pre-arranged
