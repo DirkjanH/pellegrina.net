@@ -200,7 +200,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 zich aan te passen aan de mogelijkheden van ons allemaal. Na de
                 cursus is er een nieuwe energie om thuis te oefenen en te spelen
                 over ons heen gekomen.&quot;</p>
-            <div class="fotocenter"><img src="/Images/lunch.png" width="800"
+            <div class="fotocenter"><img src="/Images/lunch.jpg" width="800"
                     alt="Lunch aan de rand van het bos" class="w3-image" /><br>Lunch aan de rand van het bos</div>
             <h2><a name="waar" id="waar"></a>Waar</h2>
             <p> Klooster Nieuw Sion bestaat sinds 1890. Het was tot 2015 een

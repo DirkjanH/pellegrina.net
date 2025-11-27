@@ -220,7 +220,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p class="citaat">Staffan Rudner: &quot;The tutors were able to
                 adapt to the potential of all of us. After the course a new
                 energy has come to our practicing and playing at home.&quot;</p>
-            <div class="fotocenter"><img src="/Images/lunch.png" width="800"
+            <div class="fotocenter"><img src="/Images/lunch.jpg" width="800"
                     alt="Lunch at the edge of the forest" class="w3-image" /><br>Lunch at the edge of the forest</div>
             <h2><a name="waar" id="waar"></a>Where</h2>
             <p>Nieuw Sion Monastery has been in existence since 1890. Until 2015, it was a Trappist monastery. In that year, the last eight monks closed the door behind them and found a new home on the island of Schiermonnikoog. The monastery was transferred for one euro to a foundation whose aim is to preserve the spiritual significance of the monastic community.</p>
