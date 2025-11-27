@@ -238,7 +238,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 een gepolijste publieke uitvoering&quot;</p>
             <div class="fotocenter w3-center"> <img
                     src="/Images/slotconcert_2025.jpg" class="w3-image" width="800"
-                    alt="Haydns Missa in tempore belli in de kathedraal in 2025"><br>Haydns Missa in tempore belli in de kathedraal</div>
+                    alt="Haydns Missa in tempore belli in de kathedraal in 2025"><br>Haydns Missa in tempore belli in de kathedraal in 2025</div>
             <h2><a name="waar"></a>Waar</h2>
             <p>Meer over České Budějovice, de stad waar de cursus wordt gehouden, lees je hier:</p>
             <ul>
