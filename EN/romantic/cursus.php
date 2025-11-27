@@ -202,7 +202,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </div>
 
             <div class="container">
-                <div class="fotorechts"><img width="500" src="/Images/DJ in actie.png" width="500" class="w3-image" src="Dirkjan Horringa in action"><br>Dirkjan Horringa in action</div>
+                <div class="fotorechts"><img src="/Images/DJ_in_actie.jpg" width="400" class="w3-image" src="Dirkjan Horringa in action"><br>Dirkjan Horringa in action</div>
                 <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
                 <p>
                     On Saturday 13 June we'll slap a first coat of paint on the music, in Den Dolder near Utrecht. Its aim is to get to know the other participants,

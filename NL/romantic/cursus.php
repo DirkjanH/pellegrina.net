@@ -182,7 +182,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </div>
 
             <div class="container">
-                <div class="fotorechts"><img src="/Images/DJ in actie.png" width="500" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>
+                <div class="fotorechts"><img src="/Images/DJ_in_actie.jpg" width="400" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>
                 <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
                 <p>
                     Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
