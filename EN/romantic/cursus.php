@@ -257,7 +257,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 amateur musicians who are willing to work hard toward the goal
                 of a polished public performance&quot;</p>
             <div class="fotocenter"> <img
-                    src="/Images/slotconcert_2025.png" width="800" class="w3-image"
+                    src="/Images/slotconcert_2025.jpg" width="800" class="w3-image"
                     alt="Performing Haydn's Missa in tempore belli in the Cathedral"><br>Performing Haydn's Missa in tempore belli in the Cathedral</div>
             <h2><a name="waar"></a>Where</h2>
             <p>Read more about České Budějovice, the place where the course will

@@ -182,8 +182,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             </div>
 
             <div class="container">
-                <div class="fotorechts"><img src="/Images/DJ_in_actie.jpg" width="400" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>
                 <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
+                <div class="fotorechts"><img src="/Images/DJ_in_actie.jpg" width="400" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>
                 <p>
                     Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
                     en een eerste kennismaking te hebben met het koor- en orkestprogramma, zodat je je daarna efficiënter kunt voorbereiden op je partij. Daarnaast is het inspirerend om vast een
@@ -237,8 +237,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 amateurmusici die bereid zijn hard te werken aan het doel van
                 een gepolijste publieke uitvoering&quot;</p>
             <div class="fotocenter w3-center"> <img
-                    src="/Images/slotconcert_2025.png" class="w3-image" width="800"
-                    alt="Haydns Missa in tempore belli in de kathedraal"><br>Haydns Missa in tempore belli in de kathedraal</div>
+                    src="/Images/slotconcert_2025.jpg" class="w3-image" width="800"
+                    alt="Haydns Missa in tempore belli in de kathedraal in 2025"><br>Haydns Missa in tempore belli in de kathedraal</div>
             <h2><a name="waar"></a>Waar</h2>
             <p>Meer over České Budějovice, de stad waar de cursus wordt gehouden, lees je hier:</p>
             <ul>
