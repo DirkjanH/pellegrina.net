@@ -278,6 +278,10 @@ function getisp($ip = '')
                             class="mySlides" />
                         <img src="Images/slideshow/ensemble_NS.jpg" alt=""
                             class="mySlides" />
+                        <img src="Images/slideshow/DJ_dirigerend2.jpg" alt=""
+                            class="mySlides" />
+                        <img src="Images/slideshow/koorzangers.jpg" alt=""
+                            class="mySlides" />
                         <img src="Images/slideshow/docententrio.jpg" alt=""
                             class="mySlides" />
                         <img src="Images/slideshow/kamerkoor.jpg" alt=""
