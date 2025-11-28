@@ -133,7 +133,7 @@
 .actiekleur {
   /* voor actieve accordion */
   color: black !important;
-  background-color: #ff6666 !important;
+  background-color: #d9ff5e !important;
 }
 .course {
   font-weight: bold;
@@ -207,24 +207,24 @@ blockquote + div {
   margin-top: -0.5em;
 }
 h1 {
-  color: #3c085f;
+  color: #5f081e;
   font-size: 200%;
 }
 h2 {
-  color: #5a0b8f;
+  color: #8f0b2c;
   font-size: 160%;
 }
 h3 {
-  color: #780fbe;
+  color: #be0f3b;
   font-size: 140%;
 }
 h4 {
-  color: #9614ec;
+  color: #ec144a;
   font-size: 115%;
 }
 h5 {
   font-size: 110%;
-  color: #703895;
+  color: #95384f;
 }
 h6 {
   font-size: 110%;
@@ -408,7 +408,7 @@ table#taal {
 }
 th {
   font-style: italic;
-  background: #ffcccc;
+  background: #f1ffc4;
   text-align: center;
   margin: 0 5px;
   border: thin solid #333;
@@ -582,7 +582,7 @@ div#main {
   background-color: white;
 }
 ul#cursusmenu {
-  background-color: #ff9999 !important;
+  background-color: #e5ff91 !important;
   margin-top: -2px;
 }
 ul#cursusmenu li a {
@@ -592,13 +592,13 @@ ul#cursusmenu li a {
   text-decoration: none;
 }
 ul#cursusmenu li a:hover {
-  background-color: #ffffff;
+  background-color: #fdfff7;
 }
 /* Navigatie: */
 nav#navcontainer {
   width: 185px;
-  border: 1px solid #ff0000;
-  background: #ffcccc;
+  border: 1px solid #bcf700;
+  background: #f1ffc4;
 }
 #navcontainer ul {
   width: 185px;
@@ -623,7 +623,7 @@ nav#navcontainer {
   padding-top: 0;
   margin-bottom: 0;
   background: initial;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid #bcf700;
 }
 #navcontainer a:link,
 #navcontainer a:visited {
@@ -632,7 +632,7 @@ nav#navcontainer {
 #navcontainer a:hover,
 #navcontainer a:active {
   color: black !important;
-  background-color: #ff6666 !important;
+  background-color: #d9ff5e !important;
 }
 #navlist a.grijs:hover,
 #navlist a.grijs:active {
@@ -653,19 +653,19 @@ p.citaat {
 }
 /* Links: */
 a:active {
-  color: #ad33ff;
+  color: #fe0040;
   text-decoration: underline;
 }
 a:link {
-  color: #9900ff;
+  color: #cb0033;
   text-decoration: underline;
 }
 a:visited {
-  color: #7a00cc;
+  color: #980026;
   text-decoration: underline;
 }
 a:hover {
-  color: #c266ff;
+  color: #ff3266;
   text-decoration: underline;
 }
 /* Andere formaten en printen: */
