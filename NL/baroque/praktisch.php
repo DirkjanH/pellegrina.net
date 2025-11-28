@@ -121,7 +121,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       </p>
       <h4>Aanzienlijke korting voor studenten en jongeren </h4>
       <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
-        waarvoor ze zich hebben aangemeld), krijgen een aanzienlijke korting en betalen strong><?php echo euro($cursusdata['prijs_student']); ?></strong> cursusgeld per persoon, op basis van een tweepersoons kamer. Stuur bij inschrijving een kopie of een scan van het inschrijvingsbewijs (of van je paspoort als bewijs van je leeftijd) mee.
+        waarvoor ze zich hebben aangemeld), krijgen een aanzienlijke korting en betalen <strong><?php echo euro($cursusdata['prijs_student']); ?></strong> cursusgeld per persoon, op basis van een tweepersoons kamer. Stuur bij inschrijving een kopie of een scan van het inschrijvingsbewijs (of van je paspoort als bewijs van je leeftijd) mee.
       <h4>Extra reductie voor muziekstudenten</h4>
       <p>Voltijds muziekstudenten aan een conservatorium kunnen beroep doen op een
         extra korting dankzij een fonds opgebouwd uit bijdragen van
@@ -205,12 +205,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p>De projecten van <i>La Pellegrina</i> worden internationaal aangeboden.
         Er wordt Nederlands, Duits en Engels gesproken. De coaching zal
         gedeeltelijk in het Engels zijn.</p>
-      <p class="citaat">Jean Walker: Ik denk elk jaar dat het bij terugkomst niet
-        zo goed kan zijn als het jaar ervoor... en dan is het dat toch!!!</p>
-      <p class="onzichtbaar citaat">Katy en Jan de Jongh: 'V&oacute;&oacute;r het
+      <p class="citaat">Jean Walker: &quot;Ik denk elk jaar dat het bij terugkomst niet
+        zo goed kan zijn als het jaar ervoor... en dan is het dat toch!!!&quot;</p>
+      <p class="onzichtbaar citaat">Katy en Jan de Jongh: &quot;Vóór het
         project gaan we een paar dagen naar Praag, en erna uitrusten in de
         omgeving. Zuid-Bohemen is mooi en goedkoop, dan kun je nog eens wat
-        langer blijven.'</p>
+        langer blijven.&quot;</p>
       <h3><a name="annul"></a>Annuleringsregeling</h3>
       <p>Als je onverhoopt niet geplaatst kunt worden voor een cursus, of als
         <i>La Pellegrina</i> het project zou moeten annuleren, ontvang je

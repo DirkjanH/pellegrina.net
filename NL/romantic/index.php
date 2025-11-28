@@ -75,12 +75,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           pianisten; ook voor bestaande kamermuziekensembles</li>
         <li>Intensieve begeleiding door ervaren docenten: Martina
           Bernášková, Petr Bernášek, Pavel Hořejší, Dirkjan Horringa,
-          Libor Nováček, Mitchell Sandler (coaching zangers), Rudolf
+          Libor Nováček, Mitchell Sandler, Rudolf
           Sternadel, Jitka Vlašánková en anderen</li>
         <li>Instrumentalisten: kamermuziek én groot symfonisch
-          orkest<u></u><u></u></li>
-        <li>Kamermuziek: iedereen speelt in twee, van tevoren gevormde
-          ensembles<u></u><u></u></li>
+          orkest</li>
+        <li>Kamermuziek: iedereen speelt in twee, van tevoren gevormde ensembles</li>
         <li>Centraal werk voor iedereen: Dvořáks cantate <em>Svatební košile</em> (Het Bruidshemd) op. 69</li>
         <li>Koor: naast Het Bruidshemd met orkest werkt het koor ook aan
           kamerkoorrepertoire, a capella en met piano</li>
@@ -88,7 +87,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           Tsjechië</li>
         <li>Met <em>Mozart Concerto Event</em>: deelnemers kunnen een (deel van een) soloconcert of een aria van Mozart
           of een tijdgenoot spelen of zingen; de overige deelnemers en docenten vormen een ad hoc orkest
-          dat de begeleiding van blad speelt<u></u><u></u></li>
+          dat de begeleiding van blad speelt</li>
       </ul>
       <p class="plaatsvoor onzichtbaar">Nog plaatsen beschikbaar voor
         piano, viool en altviool. Het koor heeft nog enkele plaatsen in

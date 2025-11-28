@@ -77,7 +77,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     komende zomer. Deze cursus heeft twee aspecten: iedere ochtend werkt iedereen in kleine ensembles van zangers en bespelers
                     van 'oude' instrumenten, zowel vocaal en instrumentaal apart
                     als gecombineerd. Daarnaast is er een programma waarin alle zangers en
-                    instrumentalisten participeert, met barokmuziek uit Centraal Europa.</p>
+                    instrumentalisten participeren, met barokmuziek uit Centraal Europa.</p>
                 <p class="citaat">Jeroen van Bergeijk: &quot;De ideale
                     vakantiebesteding: hard werken in een klooster,
                     ondergedompeld in muziek, met een fijne groep
@@ -212,7 +212,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 en muzikale activiteiten plaats. Een groeiend aantal mensen die
                 streven naar een kloosterleven waarin stilte en spiritualiteit
                 centraal staan. Driemaal daags zijn er stiltegebeden in de
-                kloosterkerk. Daarnaast verzorgen zee de grote groentetuin,
+                kloosterkerk. Daarnaast verzorgen ze de grote groentetuin,
                 houden de brouwerij en het koffiehuis draaiende en organiseren
                 een groot aantal activiteiten, zoals retraites, jeugdweekenden
                 en dergelijke. </p>

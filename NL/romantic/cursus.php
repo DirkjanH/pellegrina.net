@@ -109,7 +109,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 instuderen met een strijkkwartet. Nog een paar suggesties:
                 Pergolesi's <em>Stabat Mater</em> met strijkers, Mozart en Haydn
                 liederen voor meer stemmen met piano, Schuberts <em>Hochzeitsbraten</em> of
-                andere Schubert of Brahms voor meerdere stemmen met piano, enz. Er is in de cursus ook tijd voor kamermuziek door gelegenheidscombinaties. Neem dus vooral je lievelings-kamermuziek mee.</p>
+                andere stukken voor meerdere stemmen met piano, enz. Er is in de cursus ook tijd voor kamermuziek door gelegenheidscombinaties. Neem dus vooral je lievelings-kamermuziek mee.</p>
             <p>De cursus staat open zowel voor individuele deelnemers als voor vaste ensembles. </p>
             <p>
             <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.jpg" alt="Deelnemer die als solist optreedt"><br>Deelnemer treedt als solist  tijdens het Mozart Concerto Event</div>Een speciale avond wordt het <em>Mozart Concerto Event</em>, waar iedereen de kans krijgt om een deel van een concert of een aria van Mozart of een
@@ -151,9 +151,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Zo ja, dan kun je deel uitmaken van een van de kamermuziekensembles in de ochtendsessies.</p>
                 <p>We horen je graag. Dit geeft ons een idee van hoe je je in de cursus kunt plaatsen. Maak een opname van je zang en stuur
                     die naar <em>La Pellegrina</em>.</p>
-                <p class="citaat">Yolande Krooshof: &quot;ik heb drie mensen
+                <p class="citaat">Yolande Krooshof: &quot;Ik heb drie mensen
                     overgehaald mee te gaan, best griezelig, maar ze hebben alle
-                    drie genoten!</p>
+                    drie genoten!&quot;</p>
             </div>
             <div class="container">
                 <div class="fotolinks"> <img class="w3-image"
@@ -198,19 +198,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
             <h4>Weekindeling</h4>
             <ul>
-                <li>Donderdagavond 30 juli rond 18:00 opening cursus met het
-                    avondeten; 's avonds eerste<em> </em>repetitie van koor en
-                    orkest</li>
-                <li>Vrijdagavond 31 juli kamermuziekconcert door de docenten
-                </li>
+                <li>Donderdagavond 30 juli rond 18:00 opening cursus met het avondeten; 's avonds eerste<em> </em>repetitie van koor en orkest</li>
+                <li>Vrijdagavond 31 juli kamermuziekconcert door de docenten</li>
                 <li>Dinsdag 4 augustus vrije dag</li>
-                <li>Woensdagavond 5 augustus <em>Mozart Concerto Event</em>:
-                    deelnemers spelen solo in delen uit Mozart concerten, a vue
-                    begeleid door het orkest</li>
-                <li>Vrijdagmiddag en -avond 7 augustus kamermuziekconcerten voor
-                    en door deelnemers </li>
-                <li>Zaterdagmiddag 8 augustus om 15:00 openbare uitvoering in de
-                    kathedraal van Dvořáks cantate <i>Svatební košile</i> (Het Bruidshemd) door
+                <li>Woensdagavond 5 augustus <em>Mozart Concerto Event</em>: deelnemers spelen solo in delen uit Mozart concerten, à vue begeleid door het orkest</li>
+                <li>Vrijdagmiddag en -avond 7 augustus kamermuziekconcerten voor en door deelnemers </li>
+                <li>Zaterdagmiddag 8 augustus om 15:00 openbare uitvoering in de kathedraal van Dvořáks cantate <i>Svatební košile</i> (Het Bruidshemd) door
                     solisten, koor en orkest </li>
                 <li>Zondagochtend 9 augustus vertrek na het ontbijt</li>
             </ul>
@@ -220,24 +213,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 meteen over naar Engels, zodat we konden communiceren&quot;</p>
             <h4>Dagindeling</h4>
             <ul>
-                <li> 8:00 ontbijt</li>
-                <li> 9:30-12:30 instrumentalisten en zangers werken in kleine
+                <li>8:00 ontbijt</li>
+                <li>9:30-12:30 instrumentalisten en zangers werken in kleine
                     ensembles aan kamermuziek en kamerkoor</li>
-                <li> 13:00 lunch</li>
-                <li> 14:30 het orkest werkt eerst in groepsrepetities, later in
-                    de cursus in de complete bezetting; het koor werkt in het
-                    begin apart aan Haydns <em>Missa in tempore belli</em>.
-                    Later in de week repeteren koor en orkest samen </li>
-                <li> 17:30 borrelen en avondeten</li>
-                <li> 's Avonds: vrij; ruime gelegenheid voor extra kamermuziek,
-                    en vergeet niet dat Tsjechië beroemd is om haar bier...</li>
+                <li>13:00 lunch</li>
+                <li>14:30 het orkest werkt eerst in groepsrepetities, later in de cursus in de complete bezetting; het koor werkt in het
+                    begin apart aan Dvořáks <em>Bruidshemd</em>. Later in de week repeteren koor en orkest samen </li>
+                <li>17:30 borrelen en avondeten</li>
+                <li>'s Avonds: vrij; ruime gelegenheid voor extra kamermuziek, en vergeet niet dat Tsjechië beroemd is om haar bier...</li>
             </ul>
             <p class="citaat">Robert Beverly: &quot;Pellegrina is een
                 stimulerende en opwindende muzikale ervaring voor serieuze
                 amateurmusici die bereid zijn hard te werken aan het doel van
                 een gepolijste publieke uitvoering&quot;</p>
-            <div class="fotocenter w3-center"> <img
-                    src="/Images/slotconcert_2025.jpg" class="w3-image" width="800"
+            <div class="fotocenter w3-center"> <img src="/Images/slotconcert_2025.jpg" class="w3-image" width="800"
                     alt="Haydns Missa in tempore belli in de kathedraal in 2025"><br>Haydns Missa in tempore belli in de kathedraal in 2025</div>
             <h2><a name="waar"></a>Waar</h2>
             <p>Meer over České Budějovice, de stad waar de cursus wordt gehouden, lees je hier:</p>
