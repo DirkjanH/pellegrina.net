@@ -202,8 +202,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         </tr>
       </table>
       <h3> Voertaal</h3>
-      <p>De projecten van <i>La Pellegrina</i> worden internationaal aangeboden.
-        Er wordt Nederlands, Duits en Engels gesproken. De coaching zal
+      <p>De projecten van <i>La Pellegrina</i> worden internationaal aangeboden. Er wordt Nederlands, Duits en Engels gesproken. De coaching zal
         gedeeltelijk in het Engels zijn.</p>
       <p class="citaat">Jean Walker: &quot;Ik denk elk jaar dat het bij terugkomst niet
         zo goed kan zijn als het jaar ervoor... en dan is het dat toch!!!&quot;</p>
@@ -215,7 +214,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p>Als je onverhoopt niet geplaatst kunt worden voor een cursus, of als
         <i>La Pellegrina</i> het project zou moeten annuleren, ontvang je
         uiteraard het gehele betaalde bedrag terug. Annuleer je zelf
-        v&oacute;&oacute;r of op <?php echo $cursusdata['betaaldatum']; ?>, dan
+        vóór of op <?php echo $cursusdata['betaaldatum']; ?>, dan
         is het niet mogelijk je aanbetaling te retourneren. Annuleer je na
         <?php echo $cursusdata['betaaldatum']; ?>, dan ben je het totale
         cursusgeld verschuldigd. Het is aan te raden tijdig een

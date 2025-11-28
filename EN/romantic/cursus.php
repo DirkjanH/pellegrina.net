@@ -119,7 +119,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 work on Barber's <em>Dover Beach</em> with a string quartet. A
                 few more suggestions: Pergolesi's <em>Stabat Mater</em> with
                 strings, Mozart and Haydn <em>Lieder </em>for several voices and
-                piano, Schubert's <em>Hochzeitsbraten</em> or other Schubert or Brahms works for several
+                piano, Schubert's <em>Hochzeitsbraten</em> or other works for several
                 voices and piano, etc. There will be time for occasional musical get-togethers, so bring your favourite chamber music works along!
             </p>
             <p>The course is open to individual participants as well as existing ensembles.</p>
