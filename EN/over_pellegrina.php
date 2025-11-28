@@ -1,22 +1,14 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-
-  <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>Naamloos document</title>
-  <!-- InstanceEndEditable -->
-  <!-- InstanceBeginEditable name="head" -->
-  <!-- InstanceEndEditable -->
 </head>
 
 <body>
-  <!-- InstanceBeginEditable name="mainpage" -->
   <h2 class="begin"><em>La Pellegrina</em></h2>
   <p>La Pellegrina was founded in 1989 by dancer Doroth&eacute;e Wortelboer and musician Dirkjan Horringa for the organization of summer schools abroad. In the first years of <em>La Pellegrina </em>the courses were held in Italy, with historical dance and early music as subject. Since 1991 the courses have acquired a much wider scope and take place in Czechia and the Netherlands - this summer for the 36<sup>th</sup> time.</p>
   <h2>What does <em>La Pellegrina</em> mean? </h2>
@@ -66,8 +58,6 @@
     feeling of being on a holiday somewhere far away.&quot;</p>
   <h2>Course programme</h2>
   <p><i>La Pellegrina </i> organizes two projects in the upcoming summer.</p>
-  <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
 
 </html>
