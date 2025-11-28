@@ -92,6 +92,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     is on German, Austrian, Polish and Czech baroque music, but this is optional for
                     chamber music. Feel free to play or sing Italian, English or
                     French music in the small ensemble program.</p>
+                <p class="citaat">Birgit Apfelbaum: &quot;In my opinion, La Pellegrina fully lives up to its claim of offering a stimulating environment for dedicated baroque enthusiasts with a professional attitude. I particularly enjoyed the combination of the tutti program with a grand final concert for external listeners and the work in chamber music ensembles accompanied by highly motivated coaches, culminating in a recital attended by the other participants.&quot;</p>
+                <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles worden in april of mei samengesteld, zodat je je thuis kunt voorbereiden. Binnen de mogelijkheden en beperkingen van de cursus wordt rekening gehouden met wensen voor stukken en instrumentatie. De cursus staat open voor individuele deelnemers en vaste ensembles.</p>
                 <p>All formations from quartet upward are possible. The
                     ensembles will be assigned in April or May, so you can prepare at
                     home. Wishes for pieces and instrumentation are taken into account, within
