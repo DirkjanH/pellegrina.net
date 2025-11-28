@@ -207,24 +207,24 @@ blockquote + div {
   margin-top: -0.5em;
 }
 h1 {
-  color: #5f081e;
+  color: #011716;
   font-size: 200%;
 }
 h2 {
-  color: #8f0b2c;
+  color: #024944;
   font-size: 160%;
 }
 h3 {
-  color: #be0f3b;
+  color: #047a73;
   font-size: 140%;
 }
 h4 {
-  color: #ec144a;
+  color: #06aba2;
   font-size: 115%;
 }
 h5 {
   font-size: 110%;
-  color: #95384f;
+  color: #1d615d;
 }
 h6 {
   font-size: 110%;
