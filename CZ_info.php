@@ -41,31 +41,29 @@
 						<p class="LP_colour w3-large"><strong>Českým a&nbsp;slovenským účastníkům kursů pořádaných agenturou <i>La
 									Pellegrina</i> nabízíme zvýhodněné podmínky, mimo jiné i&nbsp;<a href="algemeen/CZ_prijzen.php" target="_blank">snížené ceny</a>. </strong></p>
 					</div>
-					<h2 class="romantic lijnboven">1. Dvořákův Zlatý kolovrat a Haydnova <i>Missa in tempore belli</i></h2>
-					<h3 class="romantic plaats">24. července - 3. srpna v Českých Budějovicích</h3>
+					<h2 class="romantic lijnboven">1. Dvořákova kantáta <i>Svatební košile</i> pro orchestr, sbor a sólisty</h2>
+					<h3 class="romantic plaats">30. července - 9. srpna v Českých Budějovicích</h3>
 					<ul>
-						<li>pro sborové a sólové zpěváky, orchestrální a komorní hráče na smyčcové a dechové nástroje, klavíristy. Vítány jsou i existující soubory
+						<li>Pro sborové a sólové zpěváky, orchestrální a komorní hráče na smyčcové a dechové nástroje, klavíristy. Vítány jsou i existující soubory
 						</li>
-						<li>lektoři: Martina Bernášková (flétna), Petr Bernášek (housle), Václav Bernášek (violoncello), Pavel Hořejší (viola), Dirkjan Horringa (klarinet), Libor Nováček (klavír), Mitchell Sandler (zpěv), Rudolf Sternadel (housle a viola) a další
+						<li>Lektoři: Martina Bernášková (flétna), Petr Bernášek (housle), Václav Bernášek (violoncello), Pavel Hořejší (viola), Dirkjan Horringa (klarinet), Libor Nováček (klavír), Mitchell Sandler (zpěv), Rudolf Sternadel (housle a viola) a další
 						</li>
-						<li>Ústřední dílo pro všechny: Haydnova Missa in Tempore Belli. Orchestr zahraje také Dvořákovu symfonickou báseň <i>Zlatý kolovrat</i> op. 109</li>
-						<li>Sbor: kromě Haydnovy <i>Missa in Tempore Belli</i> s orchestrem také skladby komorního sborového repertoáru, a cappella a s klavírem</li>
-						<li>instrumentalisté budou hrát každý ve dvou předem určených komorních souborech a ve velkém symfonickém orchestru
+						<li>Ústřední dílo pro všechny: Dvořákovu kantátu <i>Svatební košile</i> op. 69</li>
+						<li>Sbor: kromě kantáty <i>Svatební košile</i> s orchestrem také skladby komorního sborového repertoáru, a cappella a s klavírem</li>
+						<li>Instrumentalisté budou hrát každý ve dvou předem určených komorních souborech a ve velkém symfonickém orchestru
 						</li>
-						<li>účastníci budou mít možnost zahrát nebo zazpívat si jednu větu z sólového koncertu nebo arii W.A. Mozarta (nebo některého z jeho současníků) za doprovodu “ad hoc” orchestru
-						</li>
-						<li>kurz probíhá v příjemném prostředí Konzervatoře v Českých Budějovicích a vyvrcholí společným koncertem v katedrále</li>
+						<li>Účastníci budou mít možnost zahrát nebo zazpívat si jednu větu z sólového koncertu nebo arii W.A. Mozarta (nebo některého z jeho současníků) za doprovodu “ad hoc” orchestru</li>
+						<li>Kurz probíhá v příjemném prostředí Konzervatoře v Českých Budějovicích a vyvrcholí společným koncertem v katedrále</li>
 					</ul>
-					<h2 class="baroque lijnboven">2. BAROKNÍ KURZ: Purcell & Händel</h2>
-					<h3 class="baroque plaats">10. - 16. srpna v klášteře Nieuw Sion, Nízozemsko</h3>
+					<h2 class="baroque lijnboven">2. Barokní hudba ze střední Evropy v 415 Hz</h2>
+					<h3 class="baroque plaats">13. - 19. srpna v klášteře Nieuw Sion, Nízozemsko</h3>
 					<ul>
-						<li>pro zpěváky (sólisty a zkušené sboristy) a instrumentalisty (pouze na dobové nástroje, ladění 415 Hz)</li>
-						<li>lektoři: Femke Huizinga (orchestr, housle), Hanna Lindeijer (barokní dechové nástroje), Dirkjan Horringa (zpěv a umělecký vedoucí), Ricardo Rodríguez Miranda (viola da gamba, barokní tánec), Mitchell Sandler (zpěv) a Edoardo Valorz (basso continuo)</li>
-						<li>Ústřední skladby pro všechny: výběr z obou Purcellových Ód na den svaté Cecílie a z Handelsova Utrechtského Te Deum a Jubilate</li>
-						<li>každé dopoledne hraní barokní hudby v menších instrumentálních, vokálních, nebo smíšených vokálně intrumentálních ansámblech</li>
-						<li>kurz probíhá v příjemném prostředí bývalého kláštera a vyvrcholí společným koncertem v klášterním kostele </li>
-						<li>S dílnou barokního tance pro všechny účastníky, vedenou Ricardem Rodríguezem Mirandou
-						</li>
+						<li>Pro zpěváky (sólisty a zkušené sboristy) a instrumentalisty (pouze na dobové nástroje, ladění 415 Hz)</li>
+						<li>Lektoři: Femke Huizinga (orchestr, housle), Hanna Lindeijer (barokní dechové nástroje), Dirkjan Horringa (zpěv a umělecký vedoucí), Ricardo Rodríguez Miranda (viola da gamba, barokní tánec), Mitchell Sandler (zpěv) a Edoardo Valorz (basso continuo)</li>
+						<li>Díla pro všechny: hudba z Vídně/Prahy/Drážďan/Kroměříže od autorů jako Fux, Caldara, Biber, Zelenka, Michna, Vejvanovský a Schmelzer. Ústředními díly jsou Requiem f moll od Bibera a Miserere c moll ZWV 57 od Zelenky</li>
+						<li>Každé dopoledne hraní barokní hudby v menších instrumentálních, vokálních, nebo smíšených vokálně intrumentálních ansámblech</li>
+						<li>Kurz probíhá v příjemném prostředí bývalého kláštera a vyvrcholí společným koncertem v klášterním kostele </li>
+						<li>S dílnou barokního tance pro všechny účastníky, vedenou Ricardem Rodríguezem Mirandou</li>
 					</ul>
 				</div>
 				<div class="w3-rest w3-panel">
