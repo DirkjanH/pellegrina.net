@@ -38,9 +38,8 @@
     play salon music on the goodbye party.&quot;</p>
   <h2>At a rather high level</h2>
   <p>The projects of <i>La Pellegrina</i> include chamber music and chamber choir, as well as large ensembles for orchestra and singers. For enthusiastic singers and instrumentalists, there is therefore much to do at a high musical level.</p>
-  <div class="w3-content w3-center "><img src="/Images/orkest.jpg" alt="Orchestral concert" class="w3-image" />
-    <div class="w3-container fotobijschrift">Concert at the Riding School, Bechyn&#283;</div>
-  </div>
+  <div class="fotocenter"><img src="/Images/concert_kathedraal.png" alt="Concert at the České Budějovice Cathedral" class="w3-image" width="800"/>
+    <br>Concert at the České Budějovice Cathedral</div>
   <p class="citaat">Evelien Tollenaar: &quot;Everything has been arranged
     when you get there. All you need to do is pack your instrument and go. Once at the venue, there is ten days of worrying about nothing, except playing the
     right notes&quot;</p>

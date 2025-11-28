@@ -41,9 +41,8 @@
     salonmuziek spelen op het slotfeest.&quot;</p>
   <h2>Op een goed niveau</h2>
   <p>In de projecten van <i>La Pellegrina</i> komt zowel kamermuziek en kamerkoor aan bod, als grote bezettingen voor orkest en zangers. Voor enthousiaste zangers en instrumentalisten valt er dus veel te doen op een goed muzikaal niveau.</p>
-  <div class="w3-content w3-center "><img src="/Images/orkest.jpg" alt="Orchestral concert" class="w3-image" />
-    <div class="w3-container fotobijschrift">Concert in de voormalige manege, Bechyn&#283;</div>
-  </div>
+  <div class="fotocenter"><img src="/Images/concert_kathedraal.png" alt="Concert in de Kathedraal van České Budějovice" class="w3-image" width="800"/>
+    <br>Concert in de Kathedraal van České Budějovice</div>
   <p class="citaat">Evelien Tollenaar: &quot;Alles wordt voor je geregeld.
     Je pakt je instrument in en vertrekt. Na aankomst is het onbekommerd muziekmaken, met een keur van goede muzikanten binnen handbereik.&quot; </p>
   <div class="w3-content w3-center"><img src="/Images/trio.jpg" alt="Trio" class="w3-image" />
