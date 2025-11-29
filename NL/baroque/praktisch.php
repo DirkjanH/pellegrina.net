@@ -204,12 +204,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <h3> Voertaal</h3>
       <p>De projecten van <i>La Pellegrina</i> worden internationaal aangeboden. Er wordt Nederlands, Duits en Engels gesproken. De coaching zal
         gedeeltelijk in het Engels zijn.</p>
-      <p class="citaat">Jean Walker: &quot;Ik denk elk jaar dat het bij terugkomst niet
-        zo goed kan zijn als het jaar ervoor... en dan is het dat toch!!!&quot;</p>
-      <p class="onzichtbaar citaat">Katy en Jan de Jongh: &quot;Vóór het
-        project gaan we een paar dagen naar Praag, en erna uitrusten in de
-        omgeving. Zuid-Bohemen is mooi en goedkoop, dan kun je nog eens wat
-        langer blijven.&quot;</p>
+      <p class="citaat">Peter Klusener: &quot;Ik heb een geweldige barok muziekweek in het klooster Sion in Diepenveen gehad. Ik kan het iedereen aanraden. Het is heel laagdrempelig en de sfeer van saamhorigheid om samen een mooi resultaat te bereiken is hartverwarmend.&quot;</p>
       <h3><a name="annul"></a>Annuleringsregeling</h3>
       <p>Als je onverhoopt niet geplaatst kunt worden voor een cursus, of als
         <i>La Pellegrina</i> het project zou moeten annuleren, ontvang je
@@ -220,8 +215,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         cursusgeld verschuldigd. Het is aan te raden tijdig een
         annuleringsverzekering af te sluiten.
       </p>
-      <p><i>La Pellegrina</i> behoudt zich het recht voor om, indien noodzakelijk,
-        docenten en programma te wijzigen.</p>
+      <p class="citaat">Jean Walker: &quot;Ik denk elk jaar dat het bij terugkomst niet zo goed kan zijn als het jaar ervoor... en dan is het dat toch!!!&quot;</p>
+      <p><i>La Pellegrina</i> behoudt zich het recht voor om, indien noodzakelijk, docenten en programma te wijzigen.</p>
       <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
   </div>

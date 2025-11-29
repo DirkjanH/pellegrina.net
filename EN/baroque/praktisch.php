@@ -233,11 +233,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         Taiwan, Canada, Australia, Mexico and the US. As English will probably
         be the language we all have in common, tuition will be in English on
         request.</p>
-      <p class="citaat">Jean Walker: Each year on returning I think it can't be as
-        good as the previous year… and it is!!! </p>
-      <p class="citaat">Laurie Boltjes: 'I always go on a long cycling tour after
-        the course. Sometimes some of the other participants join me for a short
-        holiday.' </p>
+      <p class="citaat">Peter Klusener: &quot;I had a wonderful week of Baroque music at the Sion monastery in Diepenveen. I can recommend it to everyone. It's very accessible, and the atmosphere of togetherness in achieving a beautiful result is heartwarming.&quot;</p>
       <h3><b><a name="annul"></a></b>Cancellation policy</h3>
       <p>If <em>La Pellegrina</em> is unable to offer a place, or is forced to
         cancel a course, any fees that have been paid will be entirely refunded.
@@ -245,8 +241,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         Applicants cancelling after <?php echo $cursusdata['betaaldatum']; ?>
         are obliged to pay the entire course fee. It is therefore advisable to
         take out a cancellation insurance. </p>
-      <p><i>La Pellegrina</i> retains the right to change tutors and programmes if
-        such changes are considered necessary.</p>
+      <p class="citaat">Jean Walker: &quot;Each year on returning I think it can't be as good as the previous year… and it is!!!&quot;</p>
+      <p><i>La Pellegrina</i> retains the right to change tutors and programmes if such changes are considered necessary.</p>
       <h2><a href="javascript: history.go(-1)">Back</a></h2>
     </div>
   </div>
