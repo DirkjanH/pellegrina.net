@@ -233,7 +233,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         Taiwan, Canada, Australia, Mexico and the US. As English will probably
         be the language we all have in common, tuition will be in English on
         request.</p>
-      <p class="citaat">Peter Klusener: &quot;I had a wonderful week of Baroque music at the Sion monastery in Diepenveen. I can recommend it to everyone. It's very accessible, and the atmosphere of togetherness in achieving a beautiful result is heartwarming.&quot;</p>
+      <p class="citaat">Peter Klusener: &quot;I had a wonderful week of Baroque music at the Sion monastery in Diepenveen. I can recommend it to everyone. It's very accessible, and the atmosphere of togetherness in achieving a beautiful result is heartwarming&quot;</p>
       <h3><b><a name="annul"></a></b>Cancellation policy</h3>
       <p>If <em>La Pellegrina</em> is unable to offer a place, or is forced to
         cancel a course, any fees that have been paid will be entirely refunded.
