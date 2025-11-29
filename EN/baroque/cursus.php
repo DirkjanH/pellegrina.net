@@ -101,16 +101,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     to individual participants and permanent ensembles. </p>
                 <p> In the evenings those who still feel like it can form occasional chamber music combinations.
                     A number of rooms and keyboard instruments are available for this.</p>
-                <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a
-                    piece like this for choir, soloists and orchestra. But the
-                    chamber music is really an asset! Singers and
-                    instrumentalists, one to a part, with coaching by all
-                    teachers ... Something you rarely get the opportunity to do!
-                    And when the teachers sometimes contradict each other, ..
-                    well, .. that gives space&quot;</p>
+                <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a piece like this for choir, soloists and orchestra. But the
+                    chamber music is really an asset! Singers and instrumentalists, one to a part, with coaching by all teachers ... Something you rarely get the opportunity to do! And when the teachers sometimes contradict each other, .. well, .. that gives space&quot;</p>
                 <h3>Baroque from Central Europe, program for all singers and instrumentalists</h3>
-                <p>
-                <div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.jpg" width="800" alt="Concert in de kloosterkerk"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work together on the programme 'Baroque from Central Europe' for all,
+                <p><div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.jpg" width="800" alt="Concert in the monastery church"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work together on the programme 'Baroque from Central Europe' for all,
                 which is performed in the monastery church on the last course day as the culmination of the course. The program includes Biber's Requiem in F minor and Zelenka's Miserere in C minor ZWV 57. Of course, at first sectional rehearsals for the choir and orchestra and correpetition for the soloists will be held. Later in
                 the week, all groups join forces to create a colorful and diverse ensemble, in which everyone has their
                 own challenges. <a href="programma.php">Read more about the works and their musical and historical context here</a>.
