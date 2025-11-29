@@ -640,10 +640,10 @@ nav#navcontainer {
   color: #666 !important;
 }
 p.citaat {
-  color: #6100c1;
+  color: #c13d00;
   padding-left: 10mm;
   text-align: left;
-  background: url("/Images/Logos/paarse_punt.png") no-repeat 3mm 0.2em;
+  background: url("/Images/Logos/oranje_punt.png") no-repeat 3mm 0.2em;
   font: italic 18px 'Alegreya', serif;
   font-weight: 400;
   letter-spacing: 0.03em;
