@@ -133,8 +133,7 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	}
 
 	// check geboortedatum:
-	if (
-		empty($_POST['geboortedatum'])
+	if (empty($_POST['geboortedatum'])
 		or (safestrtotime('Y-m-d', $_POST['geboortedatum']) == '1970-01-01')
 		or (safestrtotime('Y', $_POST['geboortedatum']) < (date('Y') - $maximumleeftijd))
 		or (safestrtotime('Y', $_POST['geboortedatum']) > (date('Y') - $minimumleeftijd))
