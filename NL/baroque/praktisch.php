@@ -126,7 +126,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p>Voltijds muziekstudenten aan een conservatorium kunnen beroep doen op een
         extra korting dankzij een fonds opgebouwd uit bijdragen van
         de ACMP en deelnemers: vraag svp om details.</p>
-      </p>
+      <p class="citaat">Anke Muusse: &quot;Geweldige uitdagende en muzikale week waar je als zanger helemaal tot je recht komt, zowel bij de kamermuziek als het tutti programma, mede dank zij de prima coaches!&quot;</p>
       <h3>Accommodatie</h3>
       <h4>Een- en tweepersoons kamers in Klooster Nieuw Sion</h4>
       <p>De meeste deelnemers verblijven in klooster Nieuw Sion. Er zijn twee plekken waar mensen kunnen verblijven, het Gastenverblijf en het Poortgebouw. </p>

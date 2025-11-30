@@ -133,9 +133,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p>For participants from Central European countries and countries of the
         former Soviet Union specially reduced course fees are available thanks
         to a fund sponsored by the ACMP and western participants. Here you find more
-        information in <a href="/algemeen/CE_prijzen.php">English</a> or <a
-          href="/algemeen/CZ_prijzen.php">Czech</a>.</p>
-
+        information in <a href="/algemeen/CE_prijzen.php">English</a> or <a href="/algemeen/CZ_prijzen.php">Czech</a>.</p>
+      <p class="citaat">Anke Muusse: &quot;A fantastic, challenging, and musical week where you can really come into your own as a singer, both in the chamber music and tutti programs, thanks to the excellent coaches!&quot;</p>
       <h3>Accommodation</h3>
       <h4>Single and double rooms in Monastery Nieuw Sion</h4>
       <p>Most participants stay in Monastery Nieuw Sion. There are two places where people can stay, the Guest House (Gastenverblijf) and the Gatehouse (Poortgebouw).</p>
