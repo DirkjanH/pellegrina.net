@@ -98,6 +98,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 teruggestort. Het volledige cursusgeld moet uiterlijk op
                 <?php echo $cursusdata['betaaldatum']; ?> betaald zijn.
             </p>
+            <p class="citaat">Marieke van Dantzig: &quot;'La Pellegrina' is je een dikke week helemaal onderdompelen in muziek met heel veel leuke en gezellige gelijkgestemden!&quot;</p>
             <h3>Prijzen</h3>
             <p>De prijs van het project,
                 <strong><?php echo euro($cursusdata['prijs_volledig']); ?></strong>&nbsp;per

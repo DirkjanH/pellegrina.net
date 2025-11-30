@@ -97,9 +97,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         commission of about 3 %, we will offset this against your next payment.
         We will then send you provisional confirmation of your registration.
         Deposits will of course be refunded to applicants who cannot be placed.
-        The entire fee is to be paid on
-        <?php echo $cursusdata['betaaldatum']; ?> at the latest.
-      </p>
+        The entire fee is to be paid on <?php echo $cursusdata['betaaldatum']; ?> at the latest.</p>
+      <p class="citaat">Marieke van Dantzig: “La Pellegrina is a week-long immersion in music with lots of fun and friendly like-minded people!”</p>
       <h3>Prices </h3>
       <p>The course fee - <strong><?php echo euro_en($cursusdata['prijs_volledig']); ?></strong>
         per person - includes accomodation in double rooms (with private
@@ -113,7 +112,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <strong><?php echo euro_en($cursusdata['prijs_student']); ?></strong>
         per course, per person. Please send us a copy or scan of your
         registration with an university or other institution of higher
-        education, or of your passport as proof of age.</p>
+        education, or of your passport as proof of age.
+      </p>
       <h4>Reduction for early applicants </h4>
       <p>If you apply<strong> before
           <?php echo $cursusdata['beslisdatum']; ?></strong> you will receive
