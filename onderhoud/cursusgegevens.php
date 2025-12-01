@@ -140,8 +140,9 @@ foreach ($cursussen as &$cursus) {
             <th>Kamperen:</th>
             <th>Toe-<br>
               hoorder:</th>
-            <th>Elektra 1pp:</th>
-            <th>Elektra 2pp:</th>
+            <th>PB 1pp:</th>
+            <th>PB 2pp:</th>
+            <th>PB 1 in 2pp:</th>
             <th>diner:</th>
             <th width="0%">Korting<br>
               eigen<br>
@@ -174,9 +175,9 @@ foreach ($cursussen as &$cursus) {
             <td class="w3-center"><input name="<?php echo $i . '_' ?>meerpers" type="text" value="<?php echo $c['meerpers']; ?>" size="3"></td>
             <td class="w3-center"><input name="<?php echo $i . '_' ?>kamperen" type="text" value="<?php echo $c['kamperen']; ?>" size="3"></td>
             <td class="w3-center"><input name="<?php echo $i . '_' ?>toehoorder" type="text" value="<?php echo $c['toehoorder']; ?>" size="3"></td>
-            <td class="w3-center"><input name="<?php echo $i . '_' ?>PB 1pp" type="text" value="<?php echo $c['hotel_1pp']; ?>" size="3"></td>
-            <td class="w3-center"><input name="<?php echo $i . '_' ?>PB 2pp" type="text" value="<?php echo $c['hotel_2pp']; ?>" size="3"></td>
-            <td class="w3-center"><input name="<?php echo $i . '_' ?>PB 1 in 2pp" type="text" value="<?php echo $c['hotel_1_2pp']; ?>" size="3"></td>
+            <td class="w3-center"><input name="<?php echo $i . '_' ?>hotel_1pp" type="text" value="<?php echo $c['hotel_1pp']; ?>" size="3"></td>
+            <td class="w3-center"><input name="<?php echo $i . '_' ?>hotel_2pp" type="text" value="<?php echo $c['hotel_2pp']; ?>" size="3"></td>
+            <td class="w3-center"><input name="<?php echo $i . '_' ?>hotel_1_2pp" type="text" value="<?php echo $c['hotel_1_2pp']; ?>" size="3"></td>
             <td class="w3-center"><input name="<?php echo $i . '_' ?>diner" type="text" value="<?php echo $c['diner']; ?>" size="3"></td>
             <td class="w3-center"><input name="<?php echo $i . '_' ?>korting_eigen_acc" type="text" value="<?php echo $c['korting_eigen_acc']; ?>" size="3"></td>
             <td class="w3-center"><input name="<?php echo $i . '_' ?>korting_meer" type="text" value="<?php echo $c['korting_meer']; ?>" size="3"></td>
