@@ -151,7 +151,7 @@ else
 // printf('$query_inschrijving = '. $query_inschrijving);
 
 $inschrijving = select_query($query_inschrijving, 'InschId');
-$aantal_inschrijvingen = count($inschrijving);
+if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving); else $aantal_inschrijvingen = 0;
 // end Recordset Inschrijvingen van een deelnemer
 
 // begin Recordset Cursusnamen
