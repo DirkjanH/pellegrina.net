@@ -63,6 +63,7 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
 		  kamperen = ?,
 		  hotel_2pp = ?,
 		  hotel_1pp = ?,
+		  hotel_1_2pp = ?,
 		  eigen_acc = ?,
 		  storting_fonds = ?,
 		  donatie = ?,
@@ -114,6 +115,7 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
   $statement->bindParam(31, $_POST['kamperen'], PDO::PARAM_INT);
   $statement->bindParam(32, $_POST['hotel_2pp'], PDO::PARAM_INT);
   $statement->bindParam(33, $_POST['hotel_1pp'], PDO::PARAM_INT);
+  $statement->bindParam(33, $_POST['hotel_1_2pp'], PDO::PARAM_INT);
   $statement->bindParam(34, $_POST['eigen_acc'], PDO::PARAM_INT);
   $statement->bindParam(35, $_POST['storting_fonds'], PDO::PARAM_INT);
   $statement->bindParam(36, $_POST['donatie'], PDO::PARAM_STR);
