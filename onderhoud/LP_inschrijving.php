@@ -219,7 +219,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
         </tr>
         <?php
         if (isset($inschrijving['InschId'])) $_POST['InschId'] = $inschrijving['InschId'];
-        if (count($inschrijving) > 1) {
+        if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving); else $aantal_inschrijvingen = 0;
+        if ($aantal_inschrijvingen > 1) {
           echo "<tr><td colspan=\"3\">";
           echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
           echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"InschId\" size=\"{$aantal_inschrijvingen}\" >";
