@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 //Connection statement
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php';
@@ -71,20 +71,15 @@ foreach ($cursussen as &$cursus) {
     strtotime($cursus['datum_eind'])
   ));
 }
-// end Recordset cursusgegevens
 
 ?>
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-
-  <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>Cursusgegevens <?php echo $jaar; ?></title>
   <style type="text/css">
     th {
