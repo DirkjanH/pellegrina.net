@@ -381,7 +381,7 @@ d($instrumententabel);
 						<td class="iks">
 							<?php if ($curs['eenpersoons'] == 1) echo 'X'; ?>&nbsp;</td>
 						<td class="iks">
-							<?php if ($curs['eenpersoons'] != 1 and $curs['hotel_1pp'] != 1 and $curs['meerpers'] != 1 and $curs['hotel_2pp'] != 1 and $curs['eigen_acc'] != 1 and $curs['kamperen'] != 1) echo 'X'; ?> &nbsp;
+							<?php if ($curs['eenpersoons'] != 1 and $curs['hotel_1pp'] != 1 and $curs['meerpers'] != 1 and $curs['hotel_2pp'] != 1 and $curs['hotel_1_2pp'] != 1 and $curs['eigen_acc'] != 1 and $curs['kamperen'] != 1) echo 'X'; ?> &nbsp;
 						</td>
 						<td class="iks">
 							<?php if ($curs['meerpers'] == 1) echo 'X'; ?>
