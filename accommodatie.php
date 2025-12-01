@@ -98,6 +98,8 @@ $query_Cursus = "SELECT
   i.hotel_2pp,
   i.hotel_1pp,
   i.eigen_acc,
+  i.hotel_1_2pp,
+  i.eigen_acc,
   i.acc_wens,
   a.postcode,
   i.opmerkingen 
@@ -215,6 +217,20 @@ WHERE i.CursusId_FK = {$CursusId}
 d($query_acc);
 
 $aantal_hotel_2pp = select_query($query_acc, 0);
+
+$query_acc = "SELECT count(*) FROM
+  dlnmr d,
+  inschrijving i
+WHERE i.CursusId_FK = {$CursusId} 
+  AND d.dlnmrid = i.dlnmrid_fk 
+  AND {$selecteer}
+  {$ook_niet_aangenomen} {$ook_gepostuleerd}
+  AND NOT (afgewezen <=> 1)
+  AND hotel_1_2pp = 1";
+
+d($query_acc);
+
+$aantal_hotel_1_2pp = select_query($query_acc, 0);
 
 $aantal_tweepersoons = $aantal_deelnemers - $aantal_eenpersoons - $aantal_meerpersoons - $aantal_eigenacc - $aantal_kamperen - $aantal_hotel_1pp - $aantal_hotel_2pp;
 
@@ -337,6 +353,9 @@ d($instrumententabel);
 					<th><input type="submit" name="sorteer" value="Hotel 2-pp:" accesskey="T"><br>
 						<span class="nadruk">Aantal: <?php echo $aantal_hotel_2pp; ?></span>
 					</th>
+					<th><input type="submit" name="sorteer" value="Hotel 1 in 2-pp:"><br>
+						<span class="nadruk">Aantal: <?php echo $aantal_hotel_1_2pp; ?></span>
+					</th>
 					<th><input type="submit" name="sorteer" value="Eigen acc.:" accesskey="A">
 						<br>
 						<span class="nadruk">Aantal: <?php echo $aantal_eigenacc; ?></span>
@@ -371,6 +390,8 @@ d($instrumententabel);
 							<?php if ($curs['hotel_1pp'] == 1) echo 'X'; ?>&nbsp;</td>
 						<td class="iks">
 							<?php if ($curs['hotel_2pp'] == 1) echo 'X'; ?>&nbsp;</td>
+						<td class="iks">
+							<?php if ($curs['hotel_1_2pp'] == 1) echo 'X'; ?>&nbsp;</td>
 						<td class="iks">
 							<?php if ($curs['eigen_acc'] == 1) echo 'X'; ?> &nbsp;
 						</td>
