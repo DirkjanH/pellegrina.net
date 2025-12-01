@@ -5,9 +5,13 @@ error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
+$editFormAction = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . $_SERVER['QUERY_STRING'] : "");
+
+$editFormAction = str_replace('SID', '', $editFormAction);
+
 Kint::$enabled_mode = false;
 
-d($_SESSION, $_POST);
+d($_SESSION, $_GET, $_POST, $_SERVER['REQUEST_URI'], $editFormAction);
 
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 elseif (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'];
