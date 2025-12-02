@@ -151,7 +151,8 @@ else
 // printf('$query_inschrijving = '. $query_inschrijving);
 
 $inschrijving = select_query($query_inschrijving, 'InschId');
-if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving); else $aantal_inschrijvingen = 0;
+if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving);
+else $aantal_inschrijvingen = 0;
 // end Recordset Inschrijvingen van een deelnemer
 
 // begin Recordset Cursusnamen
@@ -211,15 +212,16 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
               <input name="DlnmrId" id="DlnmrId" type="hidden" value="<?php if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId']; ?>" size="5" />
               <input type="submit" name="Submit" value="Zoek">
               (alle inschrijvingen van de afgelopen jaren:
-              <input name="alles" id="alles" type="checkbox" 
-              <?php if (isset($_SESSION['alles']) and stristr($_SESSION['alles'], 'on') !== false) echo 'checked'; ?>>
+              <input name="alles" id="alles" type="checkbox"
+                <?php if (isset($_SESSION['alles']) and stristr($_SESSION['alles'], 'on') !== false) echo 'checked'; ?>>
               )
             </form>
           </td>
         </tr>
         <?php
         if (isset($inschrijving['InschId'])) $_POST['InschId'] = $inschrijving['InschId'];
-        if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving); else $aantal_inschrijvingen = 0;
+        if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving);
+        else $aantal_inschrijvingen = 0;
         if ($aantal_inschrijvingen > 1) {
           echo "<tr><td colspan=\"3\">";
           echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
@@ -261,9 +263,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Instrumentalist:</td>
-            <td colspan="3"><input type="checkbox" name="instrumentalist" id="instr_checkbox" value="1" <?php if (!(strcmp($ins['instrumentalist'], "1"))) {
-                                                                                                          echo "checked";
-                                                                                                        } ?> /></td>
+            <td colspan="3"><input type="checkbox" name="instrumentalist" id="instr_checkbox" value="1"
+                <?php if (!(strcmp($ins['instrumentalist'], "1"))) echo "checked"; ?> /></td>
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Instrumenten:</td>
@@ -297,13 +298,11 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Zanger:</td>
-            <td><input type="checkbox" name="zanger" id="zang_checkbox" value="1" <?php if (!(strcmp($ins['zanger'], "1"))) {
-                                                                                    echo "checked";
-                                                                                  } ?> /></td>
+            <td><input type="checkbox" name="zanger" id="zang_checkbox" value="1"
+                <?php if (!(strcmp($ins['zanger'], "1"))) echo "checked"; ?> /></td>
             <td align="right">solozanger:</td>
-            <td><input type="checkbox" name="solozanger" id="solozang_checkbox" value="1" <?php if (!(strcmp($ins['solozanger'], "1"))) {
-                                                                                            echo "checked";
-                                                                                          } ?> /></td>
+            <td><input type="checkbox" name="solozanger" id="solozang_checkbox" value="1"
+                <?php if (!(strcmp($ins['solozanger'], "1"))) echo "checked"; ?> /></td>
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Zangstem:</td>
@@ -327,9 +326,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Danser:</td>
-            <td><input type="checkbox" name="dans_checkbox" id="dans_checkbox" value="1" <?php if (!(strcmp($ins['danser'], "1"))) {
-                                                                                            echo "checked";
-                                                                                          } ?> /></td>
+            <td><input type="checkbox" name="dans_checkbox" id="dans_checkbox" value="1"
+                <?php if (!(strcmp($ins['danser'], "1"))) echo "checked"; ?> /></td>
             <td align="right">&nbsp;</td>
             <td>&nbsp;</td>
           </tr>
@@ -345,17 +343,14 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Toehoorder:</td>
-            <td><input type="checkbox" name="toehoorder" value="1" <?php if (!(strcmp($ins['toehoorder'], "1"))) {
-                                                                      echo "checked";
-                                                                    } ?> /></td>
+            <td><input type="checkbox" name="toehoorder" value="1"
+                <?php if (!(strcmp($ins['toehoorder'], "1"))) echo "checked"; ?> /></td>
             <td align="right">Maaltijdpas</td>
-            <td><input name="maaltijdpas" type="checkbox" id="maaltijdpas" value="1" <?php if (!(strcmp($ins['maaltijdpas'], "1"))) {
-                                                                                        echo "checked";
-                                                                                      } ?> />
+            <td><input name="maaltijdpas" type="checkbox" id="maaltijdpas" value="1"
+                <?php if (!(strcmp($ins['maaltijdpas'], "1"))) echo "checked"; ?> />
               &nbsp;&nbsp;&nbsp;&nbsp;ACMP&nbsp;&nbsp;
-              <input name="ACMP" type="checkbox" id="ACMP" value="1" <?php if (!(strcmp($ins['ACMP'], "1"))) {
-                                                                        echo "checked";
-                                                                      } ?> />
+              <input name="ACMP" type="checkbox" id="ACMP" value="1"
+                <?php if (!(strcmp($ins['ACMP'], "1"))) echo "checked"; ?> />
             </td>
           </tr>
           <tr valign="baseline">
@@ -366,40 +361,33 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">1-pp. internaat:</td>
-            <td><input type="checkbox" name="eenpersoons" value="1" <?php if (!(strcmp($ins['eenpersoons'], "1"))) {
-                                                                      echo "checked";
-                                                                    } ?> /></td>
+            <td><input type="checkbox" name="eenpersoons" value="1"
+                <?php if (!(strcmp($ins['eenpersoons'], "1"))) echo "checked"; ?> /></td>
             <td align="right" nowrap>kamperen:
-              <input type="checkbox" name="kamperen" value="1" <?php if (!(strcmp($ins['kamperen'], "1"))) {
-                                                                  echo "checked";
-                                                                } ?> />
+              <input type="checkbox" name="kamperen" value="1"
+                <?php if (!(strcmp($ins['kamperen'], "1"))) echo "checked"; ?> />
             </td>
             <td align="center">meerpersoons:
-              <input name="meerpers" type="checkbox" id="meerpers" value="1" <?php if (!(strcmp($ins['meerpers'], "1"))) {
-                                                                                echo "checked";
-                                                                              } ?> />
+              <input name="meerpers" type="checkbox" id="meerpers" value="1"
+                <?php if (!(strcmp($ins['meerpers'], "1"))) echo "checked"; ?> />
             </td>
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Hotel 2-pp.:</td>
-            <td><input type="checkbox" name="hotel_2pp" value="1" <?php if (!(strcmp($ins['hotel_2pp'], "1"))) {
-                                                                    echo "checked";
-                                                                  } ?> /></td>
+            <td><input type="checkbox" name="hotel_2pp" value="1"
+                <?php if (!(strcmp($ins['hotel_2pp'], "1"))) echo "checked"; ?> /></td>
             <td align="right" nowrap>Hotel 1-pp.:</td>
-            <td><input name="hotel_1pp" type="checkbox" id="hotel_1pp" value="1" <?php if (!(strcmp($ins['hotel_1pp'], "1"))) {
-                                                                                    echo "checked";
-                                                                                  } ?> />
+            <td><input name="hotel_1pp" type="checkbox" id="hotel_1pp" value="1"
+                <?php if (!(strcmp($ins['hotel_1pp'], "1"))) echo "checked"; ?> />
               &nbsp;&nbsp;&nbsp;eigen accommodatie:
-              <input name="eigen_acc" type="checkbox" id="eigen_acc" value="1" <?php if (!(strcmp($ins['eigen_acc'], "1"))) {
-                                                                                  echo "checked";
-                                                                                } ?> />
+              <input name="eigen_acc" type="checkbox" id="eigen_acc" value="1"
+                <?php if (!(strcmp($ins['eigen_acc'], "1"))) echo "checked"; ?> />
             </td>
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Storting_fonds:</td>
-            <td><input type="checkbox" name="storting_fonds" value="1" <?php if (!(strcmp($ins['storting_fonds'], "1"))) {
-                                                                          echo "checked";
-                                                                        } ?> /></td>
+            <td><input type="checkbox" name="storting_fonds" value="1"
+                <?php if (!(strcmp($ins['storting_fonds'], "1"))) echo "checked"; ?> /></td>
             <td align="right">Donatie:</td>
             <td>&euro;&nbsp;
               <input type="text" name="donatie" value="<?php echo stripslashes($ins['donatie']); ?>" size="6" />
@@ -436,13 +424,11 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
             <td>bus Praag: </td>
             <td>
               <p>heen:
-                <input name="busheen" type="checkbox" id="busheen" value="1" <?php if (!(strcmp($ins['busheen'], "1"))) {
-                                                                                echo "checked";
-                                                                              } ?> />
+                <input name="busheen" type="checkbox" id="busheen" value="1"
+                  <?php if (!(strcmp($ins['busheen'], "1"))) echo "checked"; ?> />
                 terug:
-                <input name="busterug" type="checkbox" id="busterug" value="1" <?php if (!(strcmp($ins['busterug'], "1"))) {
-                                                                                  echo "checked";
-                                                                                } ?> />
+                <input name="busterug" type="checkbox" id="busterug" value="1"
+                  <?php if (!(strcmp($ins['busterug'], "1"))) echo "checked"; ?> />
               </p>
             </td>
           </tr>
@@ -454,9 +440,7 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
           </tr>
           <tr valign="baseline">
             <td nowrap align="right">Aangenomen:</td>
-            <td><input <?php if (!(strcmp($ins['aangenomen'], 1))) {
-                          echo "checked";
-                        } ?> name="aangenomen" type="checkbox" id="aangenomen" value="1"></td>
+            <td><input <?php if (!(strcmp($ins['aangenomen'], 1))) echo "checked"; ?> name="aangenomen" type="checkbox" id="aangenomen" value="1"></td>
             <td>Inzeepdag:</td>
             <td><input type="text" name="inzeepdag" value="<?php echo stripslashes($ins['inzeepdag']); ?>" size="32" /></td>
           </tr>
@@ -480,10 +464,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
       </td>
       </tr>
       </table>
-      <!-- InstanceEndEditable -->
     </div>
   </div>
 </body>
-<!-- InstanceEnd -->
 
 </html>
