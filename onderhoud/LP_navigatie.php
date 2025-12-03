@@ -6,15 +6,15 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
 <html>
 <head>
     <style>
-    .flex-container {
-        display: flex;
-        flex-direction: row;
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
     }
 
     /* Make a one column-layout instead of three-column layout */
     @media (max-width: 600px) {
-        .flex-container {
-            flex-direction: column;
+        .container {
+            grid-template-columns: auto;
             width: 200px;
             float: left
         }
@@ -22,7 +22,7 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
 </head>
 <body>
     <form name="form1" method="post" href="<?php echo $editFormhref; ?>">
-        <div class="w3-bar w3-pale-yellow w3-border flex-container">
+        <div class="w3-bar w3-pale-yellow w3-border container">
             <div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a
                     class="button" href="LP_statistiek.php">Statistieken</a>
             </div>
@@ -40,8 +40,6 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
                     class="button" href="LP_wanbetalers.php">Aanm.
                     cursusgeld</a>
             </div>
-        </div>
-        <div class="w3-bar w3-pale-yellow w3-border flex-container">
             <div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a
                     class="button" href="LP_zwartelijst.php">Zwarte lijst</a>
             </div>
