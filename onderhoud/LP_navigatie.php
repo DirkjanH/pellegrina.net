@@ -15,6 +15,8 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
     @media (max-width: 600px) {
         .flex-container {
             flex-direction: column;
+            width: 200px;
+            float: left
         }
     </style>
 </head>
