@@ -8,6 +8,7 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
     <style>
     .container {
         display: grid;
+        grid-auto-flow: row;
         grid-template-columns: auto auto auto auto auto auto;
         row-gap: 10px;
         column-gap: 10px;
