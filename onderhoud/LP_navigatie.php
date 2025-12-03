@@ -34,8 +34,8 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
 <body>
     <form name="form1" method="post" href="<?php echo $editFormhref; ?>">
         <div class="container">
-            <div class="w3-button w3-mobile><a class=" button"
-                href="LP_statistiek.php">Statistieken</a>
+            <div class="grid_item"><a class="button"
+                    href="LP_statistiek.php">Statistieken</a>
             </div>
             <div class="grid_item"><a class="button"
                     href="LP_reminder.php">Aanmaning inschr.geld</a>
