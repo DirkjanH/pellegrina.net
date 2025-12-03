@@ -11,6 +11,7 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
         grid-template-columns: auto auto auto auto auto auto;
         row-gap: 10px;
         column-gap: 10px;
+        background-color: beige;
     }
 
     /* Make a one column-layout instead of three-column layout */
