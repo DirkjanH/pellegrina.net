@@ -5,10 +5,22 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
 <!DOCTYPE HTML>
 <html>
 <head>
+    <style>
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Make a one column-layout instead of three-column layout */
+    @media (max-width: 600px) {
+        .flex-container {
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
     <form name="form1" method="post" href="<?php echo $editFormhref; ?>">
-        <div class="w3-bar w3-pale-yellow w3-border" style="display: flex;">
+        <div class="w3-bar w3-pale-yellow w3-border flex-container">
             <div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a
                     class="button" href="LP_statistiek.php">Statistieken</a>
             </div>
@@ -27,7 +39,7 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
                     cursusgeld</a>
             </div>
         </div>
-        <div class="w3-bar w3-pale-yellow w3-border" style="display: flex;">
+        <div class="w3-bar w3-pale-yellow w3-border flex-container">
             <div class="w3-bar-item w3-button w3-mobile w3-hover-yellow"><a
                     class="button" href="LP_zwartelijst.php">Zwarte lijst</a>
             </div>
