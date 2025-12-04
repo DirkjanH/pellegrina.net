@@ -18,16 +18,16 @@ d($_POST);
 
 if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wissen"]) and ($_POST['Wissen'] == "Wissen")) {
 
-  $deleteSQL = sprintf(
-    "DELETE FROM inschrijving WHERE InschId=%s",
-    $_POST['InschId']
-  );
-  d($deleteSQL);
-  exec_query($deleteSQL);
+    $deleteSQL = sprintf(
+        "DELETE FROM inschrijving WHERE InschId=%s",
+        $_POST['InschId']
+    );
+    d($deleteSQL);
+    exec_query($deleteSQL);
 }
 
 if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wijzigen"]) and ($_POST['Wijzigen'] == "Wijzigen")) {
-  $statement = $db->prepare("
+    $statement = $db->prepare("
 		UPDATE inschrijving 
 		SET 
 		  aangenomen = ?,
@@ -82,70 +82,70 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
 		WHERE InschId = ?;");
 
 
-  $statement->bindParam(1, $_POST['aangenomen'], PDO::PARAM_INT);
-  $statement->bindParam(2, $_POST['instrumentalist'], PDO::PARAM_INT);
-  $statement->bindParam(3, $_POST['instrumenten'], PDO::PARAM_STR);
-  $statement->bindParam(4, $_POST['instr'], PDO::PARAM_STR);
-  $statement->bindParam(5, $_POST['niveau_i'], PDO::PARAM_STR);
-  $statement->bindParam(6, $_POST['ervaring_i'], PDO::PARAM_STR);
-  $statement->bindParam(7, $_POST['stukken_i'], PDO::PARAM_STR);
-  $statement->bindParam(8, $_POST['groot_ensemble1'], PDO::PARAM_INT);
-  $statement->bindParam(9, $_POST['groot_ensemble2'], PDO::PARAM_INT);
-  $statement->bindParam(10, $_POST['solozanger'], PDO::PARAM_INT);
-  $statement->bindParam(11, $_POST['zanger'], PDO::PARAM_INT);
-  $statement->bindParam(12, $_POST['zangstem'], PDO::PARAM_STR);
-  $statement->bindParam(13, $_POST['niveau_z'], PDO::PARAM_STR);
-  $statement->bindParam(14, $_POST['niveau_s'], PDO::PARAM_STR);
-  $statement->bindParam(15, $_POST['rol_z'], PDO::PARAM_STR);
-  $statement->bindParam(16, $_POST['ervaring_z'], PDO::PARAM_STR);
-  $statement->bindParam(17, $_POST['stukken_z'], PDO::PARAM_STR);
-  $statement->bindParam(18, $_POST['stukken_s'], PDO::PARAM_STR);
-  $statement->bindParam(19, $_POST['danser'], PDO::PARAM_INT);
-  $statement->bindParam(20, $_POST['niveau_d'], PDO::PARAM_STR);
-  $statement->bindParam(21, $_POST['ervaring_d'], PDO::PARAM_STR);
-  $statement->bindParam(22, $_POST['stukken_d'], PDO::PARAM_STR);
-  $statement->bindParam(23, $_POST['toehoorder'], PDO::PARAM_INT);
-  $statement->bindParam(24, $_POST['vervoer'], PDO::PARAM_STR);
-  $statement->bindParam(25, $_POST['busheen'], PDO::PARAM_BOOL);
-  $statement->bindParam(26, $_POST['busterug'], PDO::PARAM_BOOL);
-  $statement->bindParam(27, $_POST['bus_bijzonderheden'], PDO::PARAM_STR);
-  $statement->bindParam(28, $_POST['acc_wens'], PDO::PARAM_STR);
-  $statement->bindParam(29, $_POST['eenpersoons'], PDO::PARAM_INT);
-  $statement->bindParam(30, $_POST['meerpers'], PDO::PARAM_INT);
-  $statement->bindParam(31, $_POST['kamperen'], PDO::PARAM_INT);
-  $statement->bindParam(32, $_POST['hotel_2pp'], PDO::PARAM_INT);
-  $statement->bindParam(33, $_POST['hotel_1pp'], PDO::PARAM_INT);
-  $statement->bindParam(33, $_POST['hotel_1_2pp'], PDO::PARAM_INT);
-  $statement->bindParam(34, $_POST['eigen_acc'], PDO::PARAM_INT);
-  $statement->bindParam(35, $_POST['storting_fonds'], PDO::PARAM_INT);
-  $statement->bindParam(36, $_POST['donatie'], PDO::PARAM_STR);
-  $statement->bindParam(37, $_POST['opmerkingen'], PDO::PARAM_STR);
-  $statement->bindParam(38, $_POST['aanbet_bedrag'], PDO::PARAM_INT);
-  $statement->bindParam(39, $_POST['cursusgeld'], PDO::PARAM_INT);
-  $statement->bindParam(40, $_POST['voorl_bev'], PDO::PARAM_STR);
-  $statement->bindParam(41, $_POST['inzeepdag'], PDO::PARAM_STR);
-  $statement->bindParam(42, $_POST['afgewezen'], PDO::PARAM_INT);
-  $statement->bindParam(43, $_POST['datum_inschr'], PDO::PARAM_STR);
-  $statement->bindParam(44, $_POST['aanmaning_inschr'], PDO::PARAM_STR);
-  $statement->bindParam(45, $_POST['ACMP'], PDO::PARAM_STR);
-  $statement->bindParam(46, $_POST['DlnmrId_FK'], PDO::PARAM_INT);
-  $statement->bindParam(47, $_POST['CursusId_FK'], PDO::PARAM_INT);
-  $statement->bindParam(48, $_POST['maaltijdpas'], PDO::PARAM_INT);
-  $statement->bindParam(49, $_POST['InschId'], PDO::PARAM_INT);
+    $statement->bindParam(1, $_POST['aangenomen'], PDO::PARAM_INT);
+    $statement->bindParam(2, $_POST['instrumentalist'], PDO::PARAM_INT);
+    $statement->bindParam(3, $_POST['instrumenten'], PDO::PARAM_STR);
+    $statement->bindParam(4, $_POST['instr'], PDO::PARAM_STR);
+    $statement->bindParam(5, $_POST['niveau_i'], PDO::PARAM_STR);
+    $statement->bindParam(6, $_POST['ervaring_i'], PDO::PARAM_STR);
+    $statement->bindParam(7, $_POST['stukken_i'], PDO::PARAM_STR);
+    $statement->bindParam(8, $_POST['groot_ensemble1'], PDO::PARAM_INT);
+    $statement->bindParam(9, $_POST['groot_ensemble2'], PDO::PARAM_INT);
+    $statement->bindParam(10, $_POST['solozanger'], PDO::PARAM_INT);
+    $statement->bindParam(11, $_POST['zanger'], PDO::PARAM_INT);
+    $statement->bindParam(12, $_POST['zangstem'], PDO::PARAM_STR);
+    $statement->bindParam(13, $_POST['niveau_z'], PDO::PARAM_STR);
+    $statement->bindParam(14, $_POST['niveau_s'], PDO::PARAM_STR);
+    $statement->bindParam(15, $_POST['rol_z'], PDO::PARAM_STR);
+    $statement->bindParam(16, $_POST['ervaring_z'], PDO::PARAM_STR);
+    $statement->bindParam(17, $_POST['stukken_z'], PDO::PARAM_STR);
+    $statement->bindParam(18, $_POST['stukken_s'], PDO::PARAM_STR);
+    $statement->bindParam(19, $_POST['danser'], PDO::PARAM_INT);
+    $statement->bindParam(20, $_POST['niveau_d'], PDO::PARAM_STR);
+    $statement->bindParam(21, $_POST['ervaring_d'], PDO::PARAM_STR);
+    $statement->bindParam(22, $_POST['stukken_d'], PDO::PARAM_STR);
+    $statement->bindParam(23, $_POST['toehoorder'], PDO::PARAM_INT);
+    $statement->bindParam(24, $_POST['vervoer'], PDO::PARAM_STR);
+    $statement->bindParam(25, $_POST['busheen'], PDO::PARAM_BOOL);
+    $statement->bindParam(26, $_POST['busterug'], PDO::PARAM_BOOL);
+    $statement->bindParam(27, $_POST['bus_bijzonderheden'], PDO::PARAM_STR);
+    $statement->bindParam(28, $_POST['acc_wens'], PDO::PARAM_STR);
+    $statement->bindParam(29, $_POST['eenpersoons'], PDO::PARAM_INT);
+    $statement->bindParam(30, $_POST['meerpers'], PDO::PARAM_INT);
+    $statement->bindParam(31, $_POST['kamperen'], PDO::PARAM_INT);
+    $statement->bindParam(32, $_POST['hotel_2pp'], PDO::PARAM_INT);
+    $statement->bindParam(33, $_POST['hotel_1pp'], PDO::PARAM_INT);
+    $statement->bindParam(34, $_POST['hotel_1_2pp'], PDO::PARAM_INT);
+    $statement->bindParam(35, $_POST['eigen_acc'], PDO::PARAM_INT);
+    $statement->bindParam(36, $_POST['storting_fonds'], PDO::PARAM_INT);
+    $statement->bindParam(37, $_POST['donatie'], PDO::PARAM_STR);
+    $statement->bindParam(38, $_POST['opmerkingen'], PDO::PARAM_STR);
+    $statement->bindParam(39, $_POST['aanbet_bedrag'], PDO::PARAM_INT);
+    $statement->bindParam(40, $_POST['cursusgeld'], PDO::PARAM_INT);
+    $statement->bindParam(41, $_POST['voorl_bev'], PDO::PARAM_STR);
+    $statement->bindParam(42, $_POST['inzeepdag'], PDO::PARAM_STR);
+    $statement->bindParam(43, $_POST['afgewezen'], PDO::PARAM_INT);
+    $statement->bindParam(44, $_POST['datum_inschr'], PDO::PARAM_STR);
+    $statement->bindParam(45, $_POST['aanmaning_inschr'], PDO::PARAM_STR);
+    $statement->bindParam(46, $_POST['ACMP'], PDO::PARAM_STR);
+    $statement->bindParam(47, $_POST['DlnmrId_FK'], PDO::PARAM_INT);
+    $statement->bindParam(48, $_POST['CursusId_FK'], PDO::PARAM_INT);
+    $statement->bindParam(49, $_POST['maaltijdpas'], PDO::PARAM_INT);
+    $statement->bindParam(50, $_POST['InschId'], PDO::PARAM_INT);
 
-  $statement->execute();
+    $statement->execute();
 }
 
 // begin Recordset Inschrijvingen van een deelnemer
 $DlnmrId_FK = '-1';
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and !(isset($_POST["Leegmaken"]) and ($_POST['Leegmaken'] == "Leegmaken"))) {
-  $DlnmrId_FK = $_SESSION['DlnmrId'];
+    $DlnmrId_FK = $_SESSION['DlnmrId'];
 }
 if (isset($_SESSION['alles']) and $_SESSION['alles'] == 'on')
-  $query_inschrijving = "SELECT * FROM inschrijving WHERE DlnmrId_FK = {$DlnmrId_FK} 
+    $query_inschrijving = "SELECT * FROM inschrijving WHERE DlnmrId_FK = {$DlnmrId_FK} 
 	ORDER BY CursusId_FK ASC";
 else
-  $query_inschrijving = "SELECT * FROM inschrijving WHERE DlnmrId_FK = {$DlnmrId_FK} AND CursusId_FK BETWEEN 
+    $query_inschrijving = "SELECT * FROM inschrijving WHERE DlnmrId_FK = {$DlnmrId_FK} AND CursusId_FK BETWEEN 
 	{$eerstecursus} AND {$laatstecursus} ORDER BY CursusId_FK ASC";
 
 // printf('$query_inschrijving = '. $query_inschrijving);
@@ -161,7 +161,7 @@ $cursus = select_query("SELECT CursusId, cursusnaam_nl, YEAR(datum_begin) as jaa
 // begin Recordset Dlnmr voor deelnemersnaam
 $DlnmrId = '-1';
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '') {
-  $DlnmrId = $_SESSION['DlnmrId'];
+    $DlnmrId = $_SESSION['DlnmrId'];
 }
 $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
 
@@ -170,7 +170,6 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
 ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -223,29 +222,29 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                         </form>
                     </td>
                 </tr> <?php
-        if (isset($inschrijving['InschId'])) $_POST['InschId'] = $inschrijving['InschId'];
-        if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving);
-        else $aantal_inschrijvingen = 0;
-        if ($aantal_inschrijvingen > 1) {
-          echo "<tr><td colspan=\"3\">";
-          echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
-          echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"InschId\" size=\"{$aantal_inschrijvingen}\" >";
-          foreach ($inschrijving as $ins) {
-            echo "<option value=\"{$ins['InschId']}\"";
-            if (!(strcmp($ins['InschId'], $_SESSION['InschId']))) echo "SELECTED";
-            echo '>' . $cursus[$ins['CursusId_FK']]['cursusnaam_nl'];
-          }
-          echo "</option>\n</select>";
-          echo '<input name="DlnmrId" type="hidden" value="';
-          if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId'] . '" />';
-          if (isset($_SESSION['alles'])) echo "<input name=\"alles\" type=\"hidden\" value=\"on\">";
-          echo '<input type="submit" name="Submit" value="Zoek" />';
-          echo '</form></td></tr>';
-        }
-        if (isset($_SESSION['InschId'])) $ins = $inschrijving[$_SESSION['InschId']];
-        elseif (is_array($inschrijving)) $ins = current($inschrijving);
-        d($ins);
-        ?>
+                        if (isset($inschrijving['InschId'])) $_POST['InschId'] = $inschrijving['InschId'];
+                        if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving);
+                        else $aantal_inschrijvingen = 0;
+                        if ($aantal_inschrijvingen > 1) {
+                            echo "<tr><td colspan=\"3\">";
+                            echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
+                            echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"InschId\" size=\"{$aantal_inschrijvingen}\" >";
+                            foreach ($inschrijving as $ins) {
+                                echo "<option value=\"{$ins['InschId']}\"";
+                                if (!(strcmp($ins['InschId'], $_SESSION['InschId']))) echo "SELECTED";
+                                echo '>' . $cursus[$ins['CursusId_FK']]['cursusnaam_nl'];
+                            }
+                            echo "</option>\n</select>";
+                            echo '<input name="DlnmrId" type="hidden" value="';
+                            if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId'] . '" />';
+                            if (isset($_SESSION['alles'])) echo "<input name=\"alles\" type=\"hidden\" value=\"on\">";
+                            echo '<input type="submit" name="Submit" value="Zoek" />';
+                            echo '</form></td></tr>';
+                        }
+                        if (isset($_SESSION['InschId'])) $ins = $inschrijving[$_SESSION['InschId']];
+                        elseif (is_array($inschrijving)) $ins = current($inschrijving);
+                        d($ins);
+                        ?>
             </table>
             <form id="inschrijf" name="inschrijf" method="post"
                 action="<?php echo $editFormAction; ?>">
@@ -256,7 +255,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                             <p>Naam:</p>
                         </td>
                         <td colspan="2">
-                            <b><?php echo $dlnmr['naam']; ?>&nbsp;</b></td>
+                            <b><?php echo $dlnmr['naam']; ?>&nbsp;</b>
+                        </td>
                         <td width="247">Deelnemersnummer: <input
                                 name="DlnmrId_FK" type="text"
                                 value="<?php echo stripslashes($ins['DlnmrId_FK']); ?>"
@@ -312,16 +312,16 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                     <tr valign="baseline">
                         <td nowrap align="right">Groot_ensemble1:</td>
                         <td width="119"><input type="checkbox"
-                                name="groot_ensemble1" value="1"
-                                <?php if (!(strcmp($ins['groot_ensemble1'], "1"))) {
-                                                                                      echo "checked";
-                                                                                    } ?> /></td>
+                                name="groot_ensemble1" value="1" <?php if (!(strcmp($ins['groot_ensemble1'], "1"))) {
+                                                                        echo "checked";
+                                                                    } ?> />
+                        </td>
                         <td width="123" align="right" nowrap>Groot_ensemble2:
                         </td>
                         <td><input type="checkbox" name="groot_ensemble2"
                                 value="1" <?php if (!(strcmp($ins['groot_ensemble2'], "1"))) {
-                                                                          echo "checked";
-                                                                        } ?> />
+                                                echo "checked";
+                                            } ?> />
                         </td>
                     </tr>
                     <tr valign="baseline">
@@ -432,11 +432,14 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                         </td>
                     </tr>
                     <tr valign="baseline">
-                        <td nowrap align="right">Hotel 2-pp.:</td>
+                        <td nowrap align="right">Poortgebouw 2pp.:</td>
                         <td><input type="checkbox" name="hotel_2pp" value="1"
-                                <?php if (!(strcmp($ins['hotel_2pp'], "1"))) echo "checked"; ?> />
-                        </td>
-                        <td align="right" nowrap>Hotel 1-pp.:</td>
+                                <?php if (!(strcmp($ins['hotel_2pp'], "1"))) echo "checked"; ?> />&nbsp;&nbsp;&nbsp;Poortgebouw
+                            1 in 2pp: <input name="hotel_1pp" type="checkbox"
+                                id="hotel_1pp" value="1"
+                                <?php if (!(strcmp($ins['hotel_1pp'], "1"))) echo "checked"; ?>
+                                </td>
+                        <td align="right" nowrap>Poortgebouw 1pp.:</td>
                         <td><input name="hotel_1pp" type="checkbox"
                                 id="hotel_1pp" value="1"
                                 <?php if (!(strcmp($ins['hotel_1pp'], "1"))) echo "checked"; ?> />
@@ -547,7 +550,8 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                         <td
                             onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'], return document.MM_returnValue">
                             <input name="Wissen" type="submit" id="Wissen"
-                                value="Wissen"></td>
+                                value="Wissen">
+                        </td>
                         <td><input name="Leegmaken" type="submit" id="Leegmaken"
                                 value="Leegmaken" /><br>
                             <br><br>

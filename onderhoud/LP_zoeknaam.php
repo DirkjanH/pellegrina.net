@@ -1,5 +1,5 @@
 <?php
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($_REQUEST, $_POST, $_SESSION);
 
@@ -89,64 +89,66 @@ function check($input)
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <script type="text/javascript">
-        function ToonId(Id) {
-            document.getElementById('DlnmrId').value = Id;
-            document.getElementById('vinden').submit();
-        }
+    function ToonId(Id) {
+        document.getElementById('DlnmrId').value = Id;
+        document.getElementById('vinden').submit();
+    }
 
-        function wis() {
-            document.getElementById("zoeknaam2").value = "";
-        }
+    function wis() {
+        document.getElementById("zoeknaam2").value = "";
+    }
     </script>
 </head>
-
 <body>
     <div id="inhoud" class="w3-panel">
         <form id="vinden" method="post"
             action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <p><label>Naam: </label><input name="zoeknaam" type="text" id="zoeknaam" size="15" value="<?php echo $_POST['zoeknaam']; ?>"> <a href="javascript:wis()" class="w3-text-red w3-hover-white" style="text-decoration: none; padding: 10px;"><b>X</b></a><br>
+            <p><label>Naam: </label><input name="zoeknaam" type="text"
+                    id="zoeknaam" size="15"
+                    value="<?php echo $_POST['zoeknaam']; ?>"> <a
+                    href="javascript:wis()" class="w3-text-red w3-hover-white"
+                    style="text-decoration: none; padding: 10px;"><b>X</b></a><br>
                 <label>Alle deelnemers van ooit: </label><input
-                    name="oude_dlnrs" type="checkbox" id="oude_dlnrs"
-                    value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
+                    name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
                                     echo 'checked'; ?>><br>
                 <input type="radio" name="cursus" value="alles"
-                    onclick="javascript: submit();" <?php check('alles'); ?>><label> Alles</label><br>
+                    onclick="javascript: submit();"
+                    <?php check('alles'); ?>><label> Alles</label><br>
                 <input type="radio" name="cursus" value="1"
-                    onclick="javascript: submit();" <?php check('1'); ?>><label> 1. Romantiek in CB</label><br>
+                    onclick="javascript: submit();" <?php check('1'); ?>><label>
+                    1. Romantiek in CB</label><br>
                 <input type="radio" name="cursus" value="2"
-                    onclick="javascript: submit();" <?php check('2'); ?>><label> 2. Barok in NS</label><br>
+                    onclick="javascript: submit();" <?php check('2'); ?>><label>
+                    2. Barok in NS</label><br>
                 <input type="radio" name="cursus" value="nieuw"
-                    onclick="javascript: submit();" <?php check('nieuw'); ?>><label> Nieuwe inschrijvingen</label>
+                    onclick="javascript: submit();"
+                    <?php check('nieuw'); ?>><label> Nieuwe
+                    inschrijvingen</label>
             </p>
             <input name="zoek" type="hidden" id="zoek" value="zoek"> <?php if (isset($Inschr)) {
                                                                             d($aantal_ins, $Inschr);
-                                                                        ?>
-                <p> Kies een naam uit: <span class="klein"> (totaal:
-                        <?php echo $aantal_ins; ?>) </span>
-                </p>
-                <div id="navcontainer">
-                    <ul id="navlist">
-                        <?php foreach ($Inschr as $ins) { ?>
-                            <li class="active">
-                                <a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)";>
-                                    <?php
-                                    if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
-                                        echo ('<span class="grijs">');
-                                    echo "{$ins['naam']} <span class=\"klein\">({$ins['DlnmrId']})</span>";
-                                    if (is_null($ins['voorl_bev']))
-                                        echo " <span class=\"NogNietBevestigd\">###</span>";
-                                    if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
-                                        echo '</span>'; ?></a>
-                            </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-            <?php } ?>
+                                                                        ?> <p>
+                Kies een naam uit: <span class="klein"> (totaal:
+                    <?php echo $aantal_ins; ?>) </span>
+            </p>
+            <div id="navcontainer">
+                <ul id="navlist"> <?php foreach ($Inschr as $ins) { ?> <li
+                        class="active">
+                        <a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)"
+                            ;>
+                            <?php
+                                                                                if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
+                                                                                    echo ('<span class="grijs">');
+                                                                                echo "{$ins['naam']} <span class=\"klein\">({$ins['DlnmrId']})</span>";
+                                                                                if (is_null($ins['voorl_bev']))
+                                                                                    echo " <span class=\"NogNietBevestigd\">###</span>";
+                                                                                if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
+                                                                                    echo '</span>'; ?></a>
+                    </li> <?php } ?> </ul>
+            </div> <?php } ?>
         </form>
     </div>
 </body>
-
 </html>
