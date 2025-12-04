@@ -13,13 +13,13 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
         row-gap: 4px;
         column-gap: 4px;
         margin: 16px 8px 16px 8px;
-        border-top: 1pt solid black;
     }
 
     .grid_item {
         width: 200px;
         background-color: rgba(172, 227, 63, 0.8);
         text-align: center;
+        border: 1px solid grey;
     }
 
     /* Make a one column-layout instead of three-column layout */
