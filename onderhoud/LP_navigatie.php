@@ -14,6 +14,7 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
                         row-gap: 4px;
                         column-gap: 4px;
                         margin: 16px 8px 16px 8px;
+                        clear: both;
                 }
 
                 .grid_item {
