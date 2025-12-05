@@ -103,7 +103,7 @@ function LeesInschrijving($id, $cursusId)
 		  taal,
 		  email,
 		  i.toehoorder,
-		  i.eenpers,
+		  i.eenpersoons,
 		  i.hotel_1pp,
 		  i.hotel_2pp,
 		  i.hotel_1_2pp,
