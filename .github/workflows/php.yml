@@ -1,40 +1,24 @@
-name: PHP Composer
+- name: Set up PHP
+    uses: shivammathur/setup-php@v2
+    with:
+      php-version: '8.2'
+      tools: composer:v2
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  - name: Validate composer.json and composer.lock
+    run: composer validate --no-check-publish --no-check-lock
 
-permissions:
-  contents: read
+  - name: Cache Composer packages
+    uses: actions/cache@v3
+    with:
+      path: vendor
+      key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+      restore-keys: |
+        ${{ runner.os }}-php-
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+  - name: Install dependencies
+    run: composer install --prefer-dist --no-progress --no-interaction
 
-    steps:
-      - uses: actions/checkout@v4
+  - name: Update dependencies, but do NOT remove packages
+    run: composer update --prefer-dist --no-interaction
 
-      - name: Validate composer.json and composer.lock
-        run: composer validate --no-check-publish --no-check-lock
-
-      - name: Cache Composer packages
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-interaction
-
-      - name: Update dependencies, but do NOT remove packages
-        run: composer update --prefer-dist --no-interaction
-
-      # Optional: Run your test suite
-      # Uncomment if you have tests configured in composer.json ("test": "your-test-command")
-      # - name: Run test suite
-      #   run: composer run-script test
-      #
+    on: push: branches: [ "main" ] pull_request: branches: [ "main" ] workflow_dispatch:
