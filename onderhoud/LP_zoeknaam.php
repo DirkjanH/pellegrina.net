@@ -13,7 +13,7 @@ if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] =
 
 if (empty($_POST['oude_dlnrs'])) $_POST['oude_dlnrs'] = '';
 if (empty($_POST['cursus'])) {
-    $_POST['cursus'] = 'nieuw';
+    $_POST['cursus'] = 'alles';
     $_POST['zoek'] = 'zoek';
 }
 
@@ -82,25 +82,26 @@ if ((isset($_POST["zoek"])) && ($_POST["zoek"] == "zoek") and ($_POST["oude_dlnr
 
 function check($input)
 {
-    if (isset($_POST['cursus']) and $_POST['cursus'] == $input)
-        echo 'checked';
+    if (isset($_POST['cursus']) and $_POST['cursus'] == $input) echo 'checked';
 }
 
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <script type="text/javascript">
-    function ToonId(Id) {
-        document.getElementById('DlnmrId').value = Id;
-        document.getElementById('vinden').submit();
-    }
+        function ToonId(Id) {
+            document.getElementById('DlnmrId').value = Id;
+            document.getElementById('vinden').submit();
+        }
 
-    function wis() {
-        document.getElementById("zoeknaam2").value = "";
-    }
+        function wis() {
+            document.getElementById("zoeknaam").value = "";
+        }
     </script>
 </head>
+
 <body>
     <div id="inhoud" class="w3-panel">
         <form id="vinden" method="post"
@@ -112,7 +113,7 @@ function check($input)
                     style="text-decoration: none; padding: 10px;"><b>X</b></a><br>
                 <label>Alle deelnemers van ooit: </label><input
                     name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
-                                    echo 'checked'; ?>><br>
+                                                                                    echo 'checked'; ?>><br>
                 <input type="radio" name="cursus" value="alles"
                     onclick="javascript: submit();"
                     <?php check('alles'); ?>><label> Alles</label><br>
@@ -127,28 +128,26 @@ function check($input)
                     <?php check('nieuw'); ?>><label> Nieuwe
                     inschrijvingen</label>
             </p>
-            <input name="zoek" type="hidden" id="zoek" value="zoek"> <?php if (isset($Inschr)) {
-                                                                            d($aantal_ins, $Inschr);
-                                                                        ?> <p>
-                Kies een naam uit: <span class="klein"> (totaal:
-                    <?php echo $aantal_ins; ?>) </span>
-            </p>
+            <input name="zoek" type="hidden" id="zoek" value="zoek">
+            <?php if (isset($Inschr)) d($aantal_ins, $Inschr); ?> <p>Kies een
+                naam uit: <span class="klein">
+                    (totaal:<?php echo $aantal_ins; ?>) </span></p>
             <div id="navcontainer">
                 <ul id="navlist"> <?php foreach ($Inschr as $ins) { ?> <li
-                        class="active">
-                        <a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)"
-                            ;>
-                            <?php
-                                                                                if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
-                                                                                    echo ('<span class="grijs">');
-                                                                                echo "{$ins['naam']} <span class=\"klein\">({$ins['DlnmrId']})</span>";
-                                                                                if (is_null($ins['voorl_bev']))
-                                                                                    echo " <span class=\"NogNietBevestigd\">###</span>";
-                                                                                if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
-                                                                                    echo '</span>'; ?></a>
-                    </li> <?php } ?> </ul>
-            </div> <?php } ?>
+                            class="active">
+                            <a href="javascript:ToonId(<?php echo $ins['DlnmrId']; ?>)"
+                                ;> <?php
+                                        if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
+                                            echo ('<span class="grijs">');
+                                        echo "{$ins['naam']} <span class=\"klein\">({$ins['DlnmrId']})</span>";
+                                        if (is_null($ins['voorl_bev']))
+                                            echo " <span class=\"NogNietBevestigd\">###</span>";
+                                        if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
+                                            echo '</span>'; ?></a>
+                        </li> <?php } ?> </ul>
+            </div>
         </form>
     </div>
 </body>
+
 </html>
