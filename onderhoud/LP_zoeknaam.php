@@ -146,6 +146,8 @@ function check($input)
                                             echo '</span>'; ?></a>
                         </li> <?php } ?> </ul>
             </div>
+            <input type="hidden" name="DlnmrId" id="DlnmrId"
+                value="<?php echo isset($_SESSION['DlnmrId']) ? $_SESSION['DlnmrId'] : ''; ?>">
         </form>
     </div>
 </body>
