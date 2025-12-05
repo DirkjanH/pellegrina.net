@@ -142,7 +142,7 @@ $onbekend = select_query($query_onbekend);
 	<link rel="stylesheet" href="/css/onderhoud.css">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<link rel="stylesheet" href="/css/zoeknaam.css">
+	<link rel="stylesheet" href="/css/zoeknaam.css" type="text/css">
 	<SCRIPT TYPE="text/javascript">
 		<!--
 		function ZoekCursus(nr) {

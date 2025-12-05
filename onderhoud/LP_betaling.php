@@ -185,8 +185,8 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>LP betalingen</title>
-	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/zoeknaam.css">
+	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+	<link rel="stylesheet" href="/css/zoeknaam.css" type="text/css">
 	<meta charset="utf-8">
 	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 		function SetInschId(Id) {
