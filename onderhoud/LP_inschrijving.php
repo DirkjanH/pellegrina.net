@@ -78,7 +78,7 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
 		  ACMP = ?,
 		  DlnmrId_FK = ?,
 		  CursusId_FK = ?,
-		  maaltijdpas = ?
+		  diner = ?
 		WHERE InschId = ?;");
 
 
@@ -130,7 +130,7 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
     $statement->bindParam(46, $_POST['ACMP'], PDO::PARAM_STR);
     $statement->bindParam(47, $_POST['DlnmrId_FK'], PDO::PARAM_INT);
     $statement->bindParam(48, $_POST['CursusId_FK'], PDO::PARAM_INT);
-    $statement->bindParam(49, $_POST['maaltijdpas'], PDO::PARAM_INT);
+    $statement->bindParam(49, $_POST['diner'], PDO::PARAM_INT);
     $statement->bindParam(50, $_POST['InschId'], PDO::PARAM_INT);
 
     $statement->execute();
@@ -448,6 +448,9 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                             &nbsp;&nbsp;&nbsp;eigen accommodatie: <input
                                 name="eigen_acc" type="checkbox" id="eigen_acc"
                                 value="1"
+                                <?php if (!(strcmp($ins['eigen_acc'], "1"))) echo "checked"; ?> />&nbsp;&nbsp;&nbsp;diner
+                            bij eigen accommodatie: <input name="diner"
+                                type="checkbox" id="diner" value="1"
                                 <?php if (!(strcmp($ins['eigen_acc'], "1"))) echo "checked"; ?> />
                         </td>
                     </tr>
