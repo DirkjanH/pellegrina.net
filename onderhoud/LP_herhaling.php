@@ -138,18 +138,12 @@ $onbekend = select_query($query_onbekend);
 		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>LP Herhalingsconcerten</title>
-	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/onderhoud.css">
-	<meta charset="utf-8">
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/zoeknaam.css" type="text/css">
 	<SCRIPT TYPE="text/javascript">
-		<!--
 		function ZoekCursus(nr) {
 			document.zoek.cursus.value = nr;
 			document.zoek.submit();
-		}
-		-->
 	</SCRIPT>
 </head>
 
