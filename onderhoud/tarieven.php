@@ -15,6 +15,9 @@ function cursusgeld($ins)
 	$toehoorder    		= $cursus[$ins['CursusId']]['toehoorder'];
 	$eenpers       		= $cursus[$ins['CursusId']]['eenpers'];
 	$meerpers      		= $cursus[$ins['CursusId']]['meerpers'];
+	$hotel_1pp      	= $cursus[$ins['CursusId']]['hotel_1pp'];
+	$hotel_2pp      	= $cursus[$ins['CursusId']]['hotel_2pp'];
+	$hotel_1_2pp      	= $cursus[$ins['CursusId']]['hotel_1_2pp'];
 	$kamperen      		= $cursus[$ins['CursusId']]['kamperen'];
 	$eigen_acc     		= $cursus[$ins['CursusId']]['korting_eigen_acc'];
 	$korting_vroeg 		= $cursus[$ins['CursusId']]['korting_vroeg'];
@@ -24,8 +27,7 @@ function cursusgeld($ins)
 
 	$actiedatum = $cursus[$ins['CursusId']]['datum_korting'];
 
-	d($ins);
-	d($cursus, $cursusId, $cursus_offset);
+	d($ins, $cursus, $cursusId, $cursus_offset);
 
 	// bereken het cursusgeld
 
@@ -79,13 +81,49 @@ function cursusgeld($ins)
 		$regelEN .= "Participation summer school@@@{$b_cursusprijs}";
 	}
 
-	if ($ins['eenpersoons']) {
+	if ($ins['eenpersoons'] && $cursusId == 1) {
 		$cursusgeld += $eenpers;
 		$b_eenpers = bedrag($eenpers);
 		$wensenNL .= ", plus supplement voor eenpersoons kamer";
 		$wensenEN .= ", plus supplement for a single room";
 		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_eenpers}";
 		$regelEN .= "###Supplement for single room@@@{$b_eenpers}";
+	}
+
+	if ($ins['eenpersoons'] && $cursusId == 2) {
+		$cursusgeld += $eenpers;
+		$b_eenpers = bedrag($eenpers);
+		$wensenNL .= ", plus supplement voor eenpersoons kamer in het Gastenverblijf";
+		$wensenEN .= ", plus supplement for a single room in the Guest House (Gastenverblijf)";
+		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_eenpers}";
+		$regelEN .= "###Supplement for single room@@@{$b_eenpers}";
+	}
+
+	if ($ins['hotel_1pp']) {
+		$cursusgeld += $hotel_1pp;
+		$b_hotel_1pp = bedrag($hotel_1pp);
+		$wensenNL .= ", plus supplement voor eenpersoons kamer in het Poortgebouw";
+		$wensenEN .= ", plus supplement for a single room in the Gate House (Poortgebouw)";
+		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_1pp}";
+		$regelEN .= "###Supplement for single room@@@{$b_hotel_1pp}";
+	}
+
+	if ($ins['hotel_2pp']) {
+		$cursusgeld += $hotel_2pp;
+		$b_hotel_2pp = bedrag($hotel_2pp);
+		$wensenNL .= ", plus supplement voor plaats in een tweepersoons kamer met eigen sanitair in het Poortgebouw";
+		$wensenEN .= ", plus supplement for a place in a double room with private bathroom facilities in the Gate House (Poortgebouw)";
+		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_2pp}";
+		$regelEN .= "###Supplement for single room@@@{$b_hotel_2pp}";
+	}
+
+	if ($ins['hotel_1_2pp']) {
+		$cursusgeld += $hotel_1_2pp;
+		$b_hotel_1_2pp = bedrag($hotel_1_2pp);
+		$wensenNL .= ", plus supplement voor een eenpersoons kamer met eigen sanitair in het Poortgebouw";
+		$wensenEN .= ", plus supplement for a single room with private bathroom facilities in the Gate House (Poortgebouw)";
+		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_1_2pp}";
+		$regelEN .= "###Supplement for single room@@@{$b_hotel_1_2pp}";
 	}
 
 	if ($ins['meerpers']) {

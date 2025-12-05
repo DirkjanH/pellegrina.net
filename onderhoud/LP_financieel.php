@@ -317,19 +317,25 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 <!DOCTYPE HTML>
 
 <head>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<META NAME="robots" CONTENT="noindex, nofollow">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-
-	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+	<link rel="manifest"
+		href="https://pellegrina.net/Images/Logos/site.webmanifest">
+	<link rel="mask-icon"
+		href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
+		color="#5bbad5">
+	<link rel="shortcut icon"
+		href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+	<meta name="msapplication-config"
+		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>LP voorlopige bevestiging</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
@@ -344,9 +350,13 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 	<SCRIPT TYPE="text/javascript">
 		function ConfirmMsg() {
 			if (self.document.update.voorl_bev.checked) {
-				document.MM_returnValue = confirm('Deze gegevens zijn al bevestigd. Wil je nog een bevestiging sturen?');
+				document.MM_returnValue = confirm(
+					'Deze gegevens zijn al bevestigd. Wil je nog een bevestiging sturen?'
+				);
 			} else if (self.document.update.aanbet_bedrag.value < 90) {
-				document.MM_returnValue = confirm('Heb je het inschrijfgeld correct ingevuld? Het lijkt te laag');
+				document.MM_returnValue = confirm(
+					'Heb je het inschrijfgeld correct ingevuld? Het lijkt te laag'
+				);
 			}
 		}
 
@@ -357,14 +367,11 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 </head>
 
 <body>
-	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php'); ?>
-	</div>
+	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
 	<div id="mainframe">
-		<header id="navigatiebalk">
-			<?php require_once('LP_navigatie.php'); ?>
+		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage">
+		<div id="mainpage" class="w3-panel w3-white">
 			<table class="w3-table" style="max-width: 1000px;">
 				<tr>
 					<td colspan="5">
@@ -396,10 +403,10 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						} else
 							$insch = $inschrijving[0];
 						d($insch);
-						?>
-				<tr>
+						?> <tr>
 					<td colspan="5">
-						<h2>Naam: <?php echo $dlnmr['naam']; ?> - Taal: <?php echo $dlnmr['taal']; ?> </h2>
+						<h2>Naam: <?php echo $dlnmr['naam']; ?> - Taal:
+							<?php echo $dlnmr['taal']; ?> </h2>
 					</td>
 				</tr>
 				<form action="<?php echo $editFormAction; ?>" method="POST"
@@ -420,14 +427,15 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						<td nowrap align="right">
 							<div align="right">Storting fonds:</div>
 						</td>
-						<td><input type="checkbox" name="storting_fonds" value="1" <?php if ($insch['storting_fonds'] == 1 or $insch['donatie'] > 0) {
-																						echo "checked";
-																					} ?> />
+						<td><input type="checkbox" name="storting_fonds"
+								value="1" <?php if ($insch['storting_fonds'] == 1 or $insch['donatie'] > 0) {
+												echo "checked";
+											} ?> />
 						</td>
 						<td>Gedoneerd bedrag: </td>
-						<td>&#8364;&nbsp; <input name="donatie" type="text" id="donatie"
-								value="<?php
-										echo $insch['donatie']; ?>" size="6" />
+						<td>&#8364;&nbsp; <input name="donatie" type="text"
+								id="donatie" value="<?php
+													echo $insch['donatie']; ?>" size="6" />
 						</td>
 						<td>&nbsp;</td>
 					</tr>
@@ -435,33 +443,34 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						<td align="right" valign="top" nowrap>
 							<div align="right">Info kortingen: </div>
 						</td>
-						<td><input name="info_korting" type="checkbox" id="info_korting"
-								value="1" <?php if (!(strcmp($insch['info_korting'], 1))) {
-												echo "checked";
-											} ?> />
+						<td><input name="info_korting" type="checkbox"
+								id="info_korting" value="1" <?php if (!(strcmp($insch['info_korting'], 1))) {
+																echo "checked";
+															} ?> />
 						</td>
 						<td>Toegekende korting:</td>
-						<td>&#8364;&nbsp; <input name="korting" type="text" id="korting"
-								value="<?php
-										echo $insch['korting']; ?>" size="6" />
+						<td>&#8364;&nbsp; <input name="korting" type="text"
+								id="korting" value="<?php
+													echo $insch['korting']; ?>" size="6" />
 						</td>
 						<td>Voor: <span class="nadruk">[aanbrengen van apart
-								vermelden]</span> <input name="aangebracht" type="text"
-								id="aangebracht" value="<?php
-														echo $insch['aangebracht']; ?>" size="20" />
+								vermelden]</span> <input name="aangebracht"
+								type="text" id="aangebracht" value="<?php
+																	echo $insch['aangebracht']; ?>" size="20" />
 						</td>
 					</tr>
 					<tr valign="middle">
-						<td align="right" valign="top" nowrap>Meer dan één cursus:</td>
-						<td><input name="meerdaneen" type="checkbox" id="meerdaneen"
-								value="1" <?php if (!(strcmp($insch['meerdaneen'], 1))) {
-												echo "checked";
-											} ?> />
+						<td align="right" valign="top" nowrap>Meer dan één
+							cursus:</td>
+						<td><input name="meerdaneen" type="checkbox"
+								id="meerdaneen" value="1" <?php if (!(strcmp($insch['meerdaneen'], 1))) {
+																echo "checked";
+															} ?> />
 						</td>
 						<td>Extra cursusgeld:</td>
-						<td>&#8364;&nbsp; <input name="extra" type="text" id="extra"
-								value="<?php
-										echo $insch['extra']; ?>" size="6" />
+						<td>&#8364;&nbsp; <input name="extra" type="text"
+								id="extra" value="<?php
+													echo $insch['extra']; ?>" size="6" />
 						</td>
 						<td>&nbsp;</td>
 					</tr>
@@ -469,12 +478,12 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						<td nowrap align="right">
 							<div align="right">Aangenomen:</div>
 						</td>
-						<td><input name="aangenomen" type="checkbox" id="aangenomen"
-								value="1" <?php if (!(strcmp($insch['aangenomen'], 1))) {
-												echo "checked";
-											} ?> />
-							<label>Leeftijd:&nbsp; <input name="geb_datum" type="text"
-									id="geb_datum" size="2"
+						<td><input name="aangenomen" type="checkbox"
+								id="aangenomen" value="1" <?php if (!(strcmp($insch['aangenomen'], 1))) {
+																echo "checked";
+															} ?> />
+							<label>Leeftijd:&nbsp; <input name="geb_datum"
+									type="text" id="geb_datum" size="2"
 									value="<?php echo $dlnmr['leeftijd']; ?>">
 							</label>
 						</td>
@@ -497,6 +506,9 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 													$ins['kamperen'] = $insch['kamperen'];
 													$ins['meerpers'] = $insch['meerpers'];
 													$ins['eenpersoons'] = $insch['eenpersoons'];
+													$ins['hotel_1pp'] = $insch['hotel_1pp'];
+													$ins['hotel_2pp'] = $insch['hotel_2pp'];
+													$ins['hotel_1_2pp'] = $insch['hotel_1_2pp'];
 													$ins['storting_fonds'] = $insch['storting_fonds'];
 													$ins['donatie'] = $insch['donatie'];
 													$ins['PayPal'] = $insch['PayPal'];
@@ -513,19 +525,19 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 													d($ins);
 													d($factuur);
 
-													?>
-							<div align="right">Cursusgeld:</div>
+													?> <div align="right">Cursusgeld:</div>
 						</td>
-						<td>&#8364;&nbsp; <input type="text" name="cursusgeld" value="<?php if (
-																							isset($_GET['DlnmrId'])
-																							and $_GET['DlnmrId'] > 0
-																						)
-																							echo (float) $factuur['cursusgeld']; ?>" size="6" />
+						<td>&#8364;&nbsp; <input type="text" name="cursusgeld"
+								value="<?php if (
+											isset($_GET['DlnmrId'])
+											and $_GET['DlnmrId'] > 0
+										)
+											echo (float) $factuur['cursusgeld']; ?>" size="6" />
 						</td>
 						<td align="right" nowrap>Betaald inschrijfgeld:</td>
-						<td>&#8364;&nbsp; <input type="text" name="aanbet_bedrag"
-								id="aanbet_bedrag" value="<?php
-															echo (float) $insch['aanbet_bedrag']; ?>" size="6" />
+						<td>&#8364;&nbsp; <input type="text"
+								name="aanbet_bedrag" id="aanbet_bedrag" value="<?php
+																				echo (float) $insch['aanbet_bedrag']; ?>" size="6" />
 							<INPUT TYPE="button" NAME="inschr" VALUE="€ 300"
 								onClick="self.document.update.aanbet_bedrag.value='300'">
 						</td>
@@ -542,28 +554,25 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 																	} ?> />&nbsp; </td>
 						<td>PayPal-betaling:</td>
 						<td><input name="PayPal" type="checkbox" id="PayPal" <?php if ($insch['PayPal'] == 1)
-																					echo "checked"; ?>
-								value="1" />&nbsp;</td>
+																					echo "checked"; ?> value="1" />&nbsp;</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr valign="baseline">
 						<td align="right" valign="top" nowrap>
 							<div align="right">Wensen</div>
 						</td>
-						<td colspan="4"><textarea
-								name="wensen"><?php
-												if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
-													echo $factuur['wensen']; ?></textarea>
+						<td colspan="4"><textarea name="wensen"><?php
+																if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
+																	echo $factuur['wensen']; ?></textarea>
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td align="right" valign="top" nowrap>
 							<div align="right">Donatie </div>
 						</td>
-						<td colspan="4"><textarea
-								name="donatietxt"><?php
-													if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
-														echo $factuur['donatie']; ?></textarea>
+						<td colspan="4"><textarea name="donatietxt"><?php
+																	if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
+																		echo $factuur['donatie']; ?></textarea>
 						</td>
 					</tr>
 					<tr valign="middle">
@@ -610,8 +619,7 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 			</tr>
 			</table>
 		</div>
-	</div>
-	<?php ob_end_flush(); ?>
+	</div> <?php ob_end_flush(); ?>
 </body>
 
 </html>
