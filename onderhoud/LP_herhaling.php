@@ -236,10 +236,8 @@ $onbekend = select_query($query_onbekend);
 				<?php $aantal_onbekend = lijst($onbekend); ?> <p>Totaal nog niet
 					gereageerd: <?php echo $aantal_onbekend ?></p>
 			</div>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>
