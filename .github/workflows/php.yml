@@ -33,6 +33,3 @@ jobs:
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-interaction
-
-      - name: Update dependencies, but do NOT remove packages
-        run: composer update --prefer-dist --no-interaction
