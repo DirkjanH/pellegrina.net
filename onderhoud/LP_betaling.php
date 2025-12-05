@@ -161,7 +161,6 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -230,7 +229,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 								if (!(strcmp($ins['CursusId_FK'], $_GET['cursus']))) {
 									echo "SELECTED";
 								}
-								echo '>' . $cursusnaam[$ins['CursusId_FK']][NL];
+								echo '>' . $cursusnaam[$ins['CursusId_FK']]['NL'];
 							}
 							echo "</option>\n</select>";
 							echo '<input name="DlnmrId" type="hidden" value="';
@@ -245,7 +244,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 							<h2>Naam:&nbsp;<?php echo $ins['naam']; ?></h2>
 							<?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
-			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']][NL]}</b></p>"; ?> <input name="aanbet_bedrag"
+			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
 								type="hidden" value="<?php
 														echo $ins['aanbet_bedrag']; ?>">
 							<input name="InschId" id="InschId" type="hidden"
@@ -372,10 +371,8 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 			</td>
 			</tr>
 			</table>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>
