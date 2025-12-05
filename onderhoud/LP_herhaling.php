@@ -144,6 +144,7 @@ $onbekend = select_query($query_onbekend);
 		function ZoekCursus(nr) {
 			document.zoek.cursus.value = nr;
 			document.zoek.submit();
+		}
 	</SCRIPT>
 </head>
 
