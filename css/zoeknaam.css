@@ -5,6 +5,7 @@ div#mainframe {
 
 div#mainpage {
     margin-top: 25px;
+    clear: both;
 }
 
 div#zoeknaam {
