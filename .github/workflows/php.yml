@@ -1,4 +1,4 @@
-name: PHP CI
+name: PHP composer install
 
 on:
   push:
@@ -33,3 +33,6 @@ jobs:
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Run tests
+        run: vendor/bin/phpunit
