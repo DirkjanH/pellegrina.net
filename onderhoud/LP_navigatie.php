@@ -29,7 +29,8 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
                         .container {
                                 grid-template-columns: auto;
                                 width: 200px;
-                                float: left
+                                float: left;
+                                clear: both;
                         }
         </style>
 </head>
