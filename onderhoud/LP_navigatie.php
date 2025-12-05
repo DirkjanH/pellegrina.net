@@ -32,6 +32,7 @@ $editFormhref = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . 
                                 float: left;
                                 clear: both;
                         }
+                }
         </style>
 </head>
 

@@ -344,7 +344,7 @@ d($inschrijving);
 										id="Wijzigadres" value="Wijzig adres" />
 								</td>
 								<td
-									onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?']; return document.MM_returnValue">
+									onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'); return document.MM_returnValue">
 									<input name="Wissen" type="submit"
 										id="Wissen" value="Wissen">
 								</td>

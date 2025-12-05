@@ -541,7 +541,7 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                                 name="afgewezen" type="checkbox" id="afgewezen"
                                 value="1"></td>
                         <td
-                            onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'], return document.MM_returnValue">
+                            onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'); return document.MM_returnValue">
                             &nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
@@ -550,7 +550,7 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
                         <td><input name="Wijzigen" type="submit" id="Wijzigen"
                                 value="Wijzigen" /></td>
                         <td
-                            onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'], return document.MM_returnValue">
+                            onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'); return document.MM_returnValue">
                             <input name="Wissen" type="submit" id="Wissen"
                                 value="Wissen">
                         </td>
