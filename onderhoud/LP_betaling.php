@@ -184,15 +184,11 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 	<meta name="msapplication-config"
 		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP betalingen</title>
-	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
 	<meta charset="utf-8">
 	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-		<!--
 		function SetInschId(Id) {
 			try {
 				document.form.InschId.value = Id;
@@ -205,19 +201,15 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 				}
 			}
 		}
-		// 
-		-->
 	</SCRIPT>
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
 	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
-	<div id="inhoud">
+	<div id="mainframe">
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
 			<table width="100%" border="0" align="left">
 				<tr>
 					<td colspan="2">

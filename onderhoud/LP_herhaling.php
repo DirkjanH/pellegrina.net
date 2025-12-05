@@ -17,12 +17,12 @@ d($_POST);
 $cursus = $eerstecursus + 1;
 if (isset($_GET['cursus']) and ($_GET['cursus'] != "")) $cursus = $_GET['cursus'] + $cursus_offset;
 
-$herhaling[$cursus] = "donderdag/zaterdag maart 2020";
+$herhaling[$cursus] = "donderdag/zaterdag februari 2026";
 
 // begin Recordset instrumententabel
 $query_instrumenten = "SELECT * FROM instr ORDER BY id ASC";
 $instrumenten = select_query($query_instrumenten);
-$totalRows_instrumenten = count($instrumenten);
+if (is_array($instrumenten)) $totalRows_instrumenten = count($instrumenten);
 foreach ($instrumenten as $instr) $instrumententabel[$instr['id']] = $instr['nl'];
 d($instrumententabel);
 
@@ -114,34 +114,34 @@ $onbekend = select_query($query_onbekend);
 
 ?>
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<META NAME="robots" CONTENT="noindex, nofollow">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-
-	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+	<link rel="manifest"
+		href="https://pellegrina.net/Images/Logos/site.webmanifest">
+	<link rel="mask-icon"
+		href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
+		color="#5bbad5">
+	<link rel="shortcut icon"
+		href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+	<meta name="msapplication-config"
+		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP Herhalingsconcerten</title>
-	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 	<link rel="stylesheet" href="/css/onderhoud.css">
-	<!-- InstanceBeginEditable name="head" -->
-
 	<meta charset="utf-8">
-
-	<link rel="stylesheet" href="../css/pellegrina_stijlen.css" type="text/css">
-	<link rel="stylesheet" href="../css/w3.css" type="text/css">
+	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<SCRIPT TYPE="text/javascript">
 		<!--
 		function ZoekCursus(nr) {
@@ -150,80 +150,90 @@ $onbekend = select_query($query_onbekend);
 		}
 		-->
 	</SCRIPT>
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
-	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php'); ?>
-	</div>
-	<div id="inhoud">
-		<header id="navigatiebalk">
-			<?php require_once('LP_navigatie.php'); ?>
+	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+	<div id="mainframe">
+		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<!-- InstanceBeginEditable name="Mainpage" -->
 			<table class="w3-table">
 				<tr>
 					<td colspan="3">
-						<form id="zoek" name="zoek" method="get" action="<?php echo $editFormAction; ?>">
-							<table width="100%" border="1" align="left" cellpadding="5" class="onzichtbaar">
+						<form id="zoek" name="zoek" method="get"
+							action="<?php echo $editFormAction; ?>">
+							<table width="100%" border="1" align="left"
+								cellpadding="5" class="onzichtbaar">
 								<tr>
-									<td><input name="DlnmrId" type="input" value="<?php if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId']; ?>" size="5" />
-										<input type="submit" name="Submit" value="Zoek">
-										&nbsp;
+									<td><input name="DlnmrId" type="input"
+											value="<?php if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId']; ?>"
+											size="5" />
+										<input type="submit" name="Submit"
+											value="Zoek"> &nbsp;
 									</td>
-									<td>Cursus:
-										<input type="radio" name="cursus" value="1" <?php
-																					if (isset($_GET['cursus']) and ($_GET['cursus'] == "1")) echo 'checked'; ?> onClick="ZoekCursus(1)">
-										I klassiek&nbsp;
-										<input type="radio" name="cursus" value="2" <?php
-																					if (isset($_GET['cursus']) and ($_GET['cursus'] == "2")) echo 'checked'; ?> onClick="ZoekCursus(2)">
-										II romantisch
-									</td>
+									<td>Cursus: <input type="radio"
+											name="cursus" value="1"
+											<?php
+											if (isset($_GET['cursus']) and ($_GET['cursus'] == "1")) echo 'checked'; ?>
+											onClick="ZoekCursus(1)"> I
+										klassiek&nbsp; <input type="radio"
+											name="cursus" value="2"
+											<?php
+											if (isset($_GET['cursus']) and ($_GET['cursus'] == "2")) echo 'checked'; ?>
+											onClick="ZoekCursus(2)"> II
+										romantisch </td>
 								</tr>
 							</table>
 						</form>
 					</td>
 				</tr>
 			</table>
-			<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
+			<form action="<?php echo $editFormAction; ?>" method="POST"
+				name="update" id="update">
 				<h4>Cursus: <em><?php echo $cursusnaam[$cursus]; ?></em></h4>
 				<h2><?php $instrumenten = instrument($deelnemer['instr']);
 					if ($deelnemer['naam'] != '') echo $deelnemer['naam'] . ', ' . $instrumenten; ?>
 				</h2>
 				<p>
-					<label>Neemt |
-						<input type="radio" name="herhaling" value="1" id="herhaling_1" <?php
-																						if ($deelnemer['herhaling'] == "1") echo 'checked'; ?>>
-						wel | </label>
-					<label><input type="radio" name="herhaling" value="0" id="herhaling_0" <?php
-																							if ($deelnemer['herhaling'] != "1") echo 'checked'; ?>>
-						niet | </label>
-					<label><input type="radio" name="herhaling" value="2" id="herhaling_2" <?php
-																							if ($deelnemer['herhaling'] == "2") echo 'checked'; ?>>
-						[weet nog niet] | </label>deel aan herhalingsconcert <?php echo $herhaling[$cursus] ?>
+					<label>Neemt | <input type="radio" name="herhaling"
+							value="1" id="herhaling_1" <?php
+														if ($deelnemer['herhaling'] == "1") echo 'checked'; ?>> wel |
+					</label>
+					<label><input type="radio" name="herhaling" value="0"
+							id="herhaling_0" <?php
+												if ($deelnemer['herhaling'] != "1") echo 'checked'; ?>> niet |
+					</label>
+					<label><input type="radio" name="herhaling" value="2"
+							id="herhaling_2" <?php
+												if ($deelnemer['herhaling'] == "2") echo 'checked'; ?>> [weet nog
+						niet] | </label>deel aan herhalingsconcert
+					<?php echo $herhaling[$cursus] ?>
 				</p>
-				<label class="w3-left">Opmerkingen: <textarea name="herhaling_txt" cols="70" rows="1" id="herhaling_txt"><?php echo $deelnemer['herhaling_txt']; ?></textarea></label>
+				<label class="w3-left">Opmerkingen: <textarea
+						name="herhaling_txt" cols="70" rows="1"
+						id="herhaling_txt"><?php echo $deelnemer['herhaling_txt']; ?></textarea></label>
 				<div class="w3-left">
-					<input class="w3-btn w3-margin-left w3-green" type="submit" name="verzend" value="Update deelname herhalingsconcert" />
+					<input class="w3-btn w3-margin-left w3-green" type="submit"
+						name="verzend"
+						value="Update deelname herhalingsconcert" />
 				</div>
 			</form>
 			<div class="w3-panel w3-container w3-left">
 				<hr>
-				<h3>Geregistreerde deelnemers herhalingsconcert <?php echo $cursusnaam[$cursus] ?>:</h3>
-				<?php $aantal_inschrijving = lijst($inschrijving); ?>
-				<p>Totaal deelnemers: <?php echo $aantal_inschrijving ?></p>
-
+				<h3>Geregistreerde deelnemers herhalingsconcert
+					<?php echo $cursusnaam[$cursus] ?>:</h3>
+				<?php $aantal_inschrijving = lijst($inschrijving); ?> <p>Totaal
+					deelnemers: <?php echo $aantal_inschrijving ?></p>
 				<hr>
 				<h3>Niet mee doen:</h3>
-				<?php $aantal_uitschrijving = lijst($uitschrijving); ?>
-				<p>Totaal niet-deelnemers: <?php echo $aantal_uitschrijving ?></p>
-
+				<?php $aantal_uitschrijving = lijst($uitschrijving); ?> <p>
+					Totaal niet-deelnemers: <?php echo $aantal_uitschrijving ?>
+				</p>
 				<hr>
 				<h3>Nog niet gereageerd hebben:</h3>
-				<?php $aantal_onbekend = lijst($onbekend); ?>
-				<p>Totaal nog niet gereageerd: <?php echo $aantal_onbekend ?></p>
+				<?php $aantal_onbekend = lijst($onbekend); ?> <p>Totaal nog niet
+					gereageerd: <?php echo $aantal_onbekend ?></p>
 			</div>
 			<!-- InstanceEndEditable -->
 		</div>

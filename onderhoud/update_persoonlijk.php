@@ -1,7 +1,7 @@
 <?php
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1);
-error_reporting(E_ALL); 
+error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
@@ -114,18 +114,14 @@ d($inschrijving);
 <head>
 	<title>Update persoonlijke gegevens</title>
 	<script type="text/javascript">
-		//<!--
 		function ToonId(Id) {
 			parent.mainFrame.document.zoek.DlnmrId.value = Id;
 			parent.mainFrame.document.zoek.Submit.click();
 		}
-		-- >
-		<
-		!--
+
 		function GP_popupConfirmMsg(msg) { //v1.0
 			document.MM_returnValue = confirm(msg);
 		}
-		// -->
 	</script>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 </head>
@@ -133,43 +129,59 @@ d($inschrijving);
 <body>
 	<table width="600" border="0" align="left">
 		<td>
-			<form id="zoek" name="zoek" method="get" action="<?php echo $editFormAction; ?>">
-				<input name="DlnmrId" type="hidden" value="<?php if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId']; ?>" />
-				<input type="submit" name="Submit" value="Zoek" style="display: none;">
+			<form id="zoek" name="zoek" method="get"
+				action="<?php echo $editFormAction; ?>">
+				<input name="DlnmrId" type="hidden"
+					value="<?php if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId']; ?>" />
+				<input type="submit" name="Submit" value="Zoek"
+					style="display: none;">
 			</form>
-			<form name="inschrijvingsform" method="POST" id="inschrijvingsform" action="<?php echo $editFormAction; ?>">
+			<form name="inschrijvingsform" method="POST" id="inschrijvingsform"
+				action="<?php echo $editFormAction; ?>">
 				<table border="1" align="left">
 					<tr valign="baseline">
 						<td nowrap align="right">Voornaam:</td>
-						<td colspan="3"><input type="text" name="voornaam" value="<?php echo $inschrijving['voornaam']; ?>" size="45" />
+						<td colspan="3"><input type="text" name="voornaam"
+								value="<?php echo $inschrijving['voornaam']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Tussenvoegsels:</td>
-						<td colspan="3"><input type="text" name="tussenvoegsels" value="<?php echo $inschrijving['tussenvoegsels']; ?>" size="45" />
+						<td colspan="3"><input type="text" name="tussenvoegsels"
+								value="<?php echo $inschrijving['tussenvoegsels']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Achternaam:</td>
-						<td colspan="3"><input type="text" name="achternaam" value="<?php echo $inschrijving['achternaam']; ?>" size="45" />
+						<td colspan="3"><input type="text" name="achternaam"
+								value="<?php echo $inschrijving['achternaam']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Naam:</td>
-						<td colspan="3"><input type="text" name="naam" value="<?php echo $inschrijving['naam']; ?>" size="45" />
+						<td colspan="3"><input type="text" name="naam"
+								value="<?php echo $inschrijving['naam']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Geboortedatum:</td>
-						<td colspan="3"><input type="text" name="geboortedatum" value="<?php echo $inschrijving['geboortedatum']; ?>" size="10" /> &nbsp;Password:&nbsp;
-							<input name="password" type="text" id="password" size="4" value="<?php
-																								echo $inschrijving['password']; ?>" maxlength="4"> &nbsp;student:&nbsp;
-							<input name="student" type="checkbox" id="student" value="1" <?php if (!(strcmp($inschrijving['student'], "1"))) {
-																								echo "checked";
-																							} ?>> &nbsp;oost:&nbsp;
-							<input name="oost" type="checkbox" id="student" value="1" <?php if (!(strcmp($inschrijving['oost'], "1"))) {
-																							echo "checked";
-																						} ?>>
+						<td colspan="3"><input type="text" name="geboortedatum"
+								value="<?php echo $inschrijving['geboortedatum']; ?>"
+								size="10" /> &nbsp;Password:&nbsp; <input
+								name="password" type="text" id="password"
+								size="4" value="<?php
+												echo $inschrijving['password']; ?>" maxlength="4">
+							&nbsp;student:&nbsp; <input name="student"
+								type="checkbox" id="student" value="1" <?php if (!(strcmp($inschrijving['student'], "1"))) {
+																			echo "checked";
+																		} ?>> &nbsp;oost:&nbsp; <input name="oost"
+								type="checkbox" id="student" value="1" <?php if (!(strcmp($inschrijving['oost'], "1"))) {
+																			echo "checked";
+																		} ?>>
 						</td>
 					</tr>
 					<tr valign="baseline">
@@ -177,42 +189,49 @@ d($inschrijving);
 						<td valign="bottom">
 							<table>
 								<tr>
-									<td><input type="radio" name="geslacht" value="M" <?php if (!(strcmp($inschrijving['geslacht'], "M"))) {
-																							echo "CHECKED";
-																						} ?> /> Man
-									</td>
-									<td><input type="radio" name="geslacht" value="V" <?php if (!(strcmp($inschrijving['geslacht'], "V"))) {
-																							echo "CHECKED";
-																						} ?> /> Vrouw
-									</td>
+									<td><input type="radio" name="geslacht"
+											value="M" <?php if (!(strcmp($inschrijving['geslacht'], "M"))) {
+															echo "CHECKED";
+														} ?> /> Man </td>
+									<td><input type="radio" name="geslacht"
+											value="V" <?php if (!(strcmp($inschrijving['geslacht'], "V"))) {
+															echo "CHECKED";
+														} ?> /> Vrouw </td>
 								</tr>
 							</table>
 						<td align="right" valign="bottom" nowrap>Taal:</td>
-						<td valign="bottom"><input type="text" name="taal" value="<?php echo $inschrijving['taal']; ?>" size="4" />
+						<td valign="bottom"><input type="text" name="taal"
+								value="<?php echo $inschrijving['taal']; ?>"
+								size="4" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Kent cursus via: </td>
 						<td colspan="3">
-							<?php echo $inschrijving['publiciteit']; ?>&nbsp;</td>
+							<?php echo $inschrijving['publiciteit']; ?>&nbsp;
+						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Aanbrenger:&nbsp;</td>
 						<td colspan="3">
-							<?php echo $inschrijving['naam_aanbrenger']; ?>&nbsp;</td>
+							<?php echo $inschrijving['naam_aanbrenger']; ?>&nbsp;
+						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Opm. over publ. </td>
 						<td colspan="3">
-							<textarea name="publiciteit" cols="45" rows="2" id="publiciteit"><?php echo $inschrijving['publiciteit_tx']; ?>&nbsp;</textarea>
+							<textarea name="publiciteit" cols="45" rows="2"
+								id="publiciteit"><?php echo $inschrijving['publiciteit_tx']; ?>&nbsp;</textarea>
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Telefoon:</td>
-						<td colspan="2"><input type="text" name="telefoon" value="<?php if (empty($tel) or $tel == '') echo $inschrijving['telefoon'];
-																					else echo $tel; ?>" size="45" />
+						<td colspan="2"><input type="text" name="telefoon"
+								value="<?php if (empty($tel) or $tel == '') echo $inschrijving['telefoon'];
+										else echo $tel; ?>" size="45" />
 						</td>
-						<td rowspan="2" valign="middle"><input name="bewerk" type="submit" id="bewerk" value="bewerk" />
+						<td rowspan="2" valign="middle"><input name="bewerk"
+								type="submit" id="bewerk" value="bewerk" />
 						</td>
 					</tr>
 					<tr valign="baseline">
@@ -229,48 +248,77 @@ d($inschrijving);
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">Dieet:</td>
-						<td colspan="3"><input type="text" name="dieet" value="<?php echo $inschrijving['dieet']; ?>" size="45" />
+						<td colspan="3"><input type="text" name="dieet"
+								value="<?php echo $inschrijving['dieet']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">1e inschrijving :</td>
-						<td colspan="3"><input type="text" name="eerste_inschrijving" value="<?php
-																								echo $inschrijving['eerste_inschrijving']; ?>" size="45" />
+						<td colspan="3"><input type="text"
+								name="eerste_inschrijving" value="<?php
+																	echo $inschrijving['eerste_inschrijving']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td nowrap align="right">AdresId:</td>
-						<td colspan="3"><input type="text" name="AdresId" value="<?php echo $inschrijving['AdresId']; ?>" size="45" />
+						<td colspan="3"><input type="text" name="AdresId"
+								value="<?php echo $inschrijving['AdresId']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
-						<td colspan="4" align="right" nowrap class="nadruk">De gegevens hieronder veranderen met &quot;Wijzig adres&quot;</td>
+						<td colspan="4" align="right" nowrap class="nadruk">De
+							gegevens hieronder veranderen met &quot;Wijzig
+							adres&quot;</td>
 					</tr>
 					<tr valign="baseline">
 						<td align="right" nowrap>Adres:</td>
-						<td colspan="3"><input name="adres" type="text" id="adres" value="<?php echo $inschrijving['adres']; ?>" size="45" />
+						<td colspan="3"><input name="adres" type="text"
+								id="adres"
+								value="<?php echo $inschrijving['adres']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td align="right" nowrap>Postcode:</td>
-						<td colspan="3"><input name="postcode" type="text" value="<?php echo $inschrijving['postcode']; ?>" size="45" />
+						<td colspan="3"><input name="postcode" type="text"
+								value="<?php echo $inschrijving['postcode']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td align="right" nowrap>Plaats:</td>
-						<td colspan="3"><input name="plaats" type="text" value="<?php echo $inschrijving['plaats']; ?>" size="45" />
+						<td colspan="3"><input name="plaats" type="text"
+								value="<?php echo $inschrijving['plaats']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
 						<td align="right" nowrap>Land:</td>
-						<td colspan="3"><input name="land" type="text" value="<?php echo $inschrijving['land']; ?>" size="45" />
+						<td colspan="3"><input name="land" type="text"
+								value="<?php echo $inschrijving['land']; ?>"
+								size="45" />
 						</td>
 					</tr>
 					<tr valign="baseline">
-						<td nowrap align="right"><input name="Wijzigdlnmr" type="submit" id="Wijzigdlnmr" value="Wijzig dlnmr" onClick="ToonId(<?php echo $_GET['DlnmrId']; ?>)" /></td>
-						<td><input name="Wijzigadres" type="submit" id="Wijzigadres" value="Wijzig adres" onClick="ToonId(<?php echo $_GET['DlnmrId']; ?>)" /></td>
-						<td onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'];return document.MM_returnValue"><input name="Wissen" type="submit" id="Wissen" value="Wissen"></td>
-						<td><input name="Leegmaken" type="submit" id="Leegmaken" value="Leegmaken" /></td>
+						<td nowrap align="right"><input name="Wijzigdlnmr"
+								type="submit" id="Wijzigdlnmr"
+								value="Wijzig dlnmr"
+								onClick="ToonId(<?php echo $_GET['DlnmrId']; ?>)" />
+						</td>
+						<td><input name="Wijzigadres" type="submit"
+								id="Wijzigadres" value="Wijzig adres"
+								onClick="ToonId(<?php echo $_GET['DlnmrId']; ?>)" />
+						</td>
+						<td
+							onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'];return document.MM_returnValue">
+							<input name="Wissen" type="submit" id="Wissen"
+								value="Wissen">
+						</td>
+						<td><input name="Leegmaken" type="submit" id="Leegmaken"
+								value="Leegmaken" /></td>
 					</tr>
 				</table>
 			</form>

@@ -170,6 +170,7 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -195,11 +196,12 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
     <link rel="stylesheet" href="/css/zoeknaam.css">
     <SCRIPT>
-    function GP_popupConfirmMsg(msg) { //v1.0
-        document.MM_returnValue = confirm(msg);
-    }
+        function GP_popupConfirmMsg(msg) { //v1.0
+            document.MM_returnValue = confirm(msg);
+        }
     </SCRIPT>
 </head>
+
 <body>
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
@@ -567,4 +569,5 @@ $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
         </div>
     </div>
 </body>
+
 </html>
