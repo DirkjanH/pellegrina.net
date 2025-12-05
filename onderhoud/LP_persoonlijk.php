@@ -203,10 +203,10 @@ d($inschrijving);
 									&nbsp;student:&nbsp; <input name="student"
 										type="checkbox" id="student" value="1" <?php if (!(strcmp($inschrijving['student'], "1"))) {
 																					echo "checked";
-																				} ?>> &nbsp;oost:&nbsp; <input name="oost"
-										type="checkbox" id="student" value="1" <?php if (!(strcmp($inschrijving['oost'], "1"))) {
-																					echo "checked";
-																				} ?>>
+																				} ?>> &nbsp;oost:&nbsp; <input name="oost" type="checkbox"
+										id="student" value="1" <?php if (!(strcmp($inschrijving['oost'], "1"))) {
+																	echo "checked";
+																} ?>>
 								</td>
 							</tr>
 							<tr valign="baseline">
@@ -289,8 +289,7 @@ d($inschrijving);
 								<td nowrap align="right">1e inschrijving :</td>
 								<td colspan="3"><input type="text"
 										name="eerste_inschrijving" value="<?php
-																			echo $inschrijving['eerste_inschrijving']; ?>"
-										size="45" />
+																			echo $inschrijving['eerste_inschrijving']; ?>" size="45" />
 								</td>
 							</tr>
 							<tr valign="baseline">
@@ -345,7 +344,7 @@ d($inschrijving);
 										id="Wijzigadres" value="Wijzig adres" />
 								</td>
 								<td
-									onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?'];return document.MM_returnValue">
+									onClick="GP_popupConfirmMsg('Moeten deze gegevens werkelijk gewist worden?']; return document.MM_returnValue">
 									<input name="Wissen" type="submit"
 										id="Wissen" value="Wissen">
 								</td>
