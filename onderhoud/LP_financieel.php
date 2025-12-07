@@ -8,7 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 use Pelago\Emogrifier\CssInliner;
 use PhpParser\Node\Expr\Isset_;
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_SESSION);
 
