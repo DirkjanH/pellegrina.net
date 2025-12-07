@@ -191,7 +191,7 @@ function cursusgeld($ins)
 			$aangebrachtEN = ' for ' . $ins['aangebracht'];
 		}
 		$cursusgeld -= ($ins['korting']);
-		$b_korting = bedrag($korting);
+		$b_korting = bedrag($ins['korting']);
 		$wensenNL .= ", minus een extra toegekende korting van €&nbsp;{$ins['korting']}{$aangebrachtNL}";
 		$wensenEN .= ", minus an additionally granted reduction of EUR&nbsp;{$ins['korting']}{$aangebrachtEN}";
 		$regelNL .= "###Extra toegekende korting{$aangebrachtNL}@@@-{$b_korting}";
@@ -201,7 +201,7 @@ function cursusgeld($ins)
 	// extra cursusgeld:
 	if (isset($ins['extra']) and $ins['extra'] > 0) {
 		$cursusgeld += ($ins['extra']);
-		$b_extra = bedrag($extra);
+		$b_extra = bedrag($ins['extra']);
 		$wensenNL .= ", plus extra cursusgeld wegens speciale afspraak van €&nbsp;{$ins['extra']}";
 		$wensenEN .= ", plus an additional fee for special requirements of EUR&nbsp;{$ins['extra']}";
 		$regelNL .= "###Extra cursusgeld wegens speciale afspraak@@@{$b_extra}";
