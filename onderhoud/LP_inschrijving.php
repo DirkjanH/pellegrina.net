@@ -222,7 +222,7 @@ d($cursus, $dlnmr, $inschrijving);
                             <input type="submit" name="Submit" value="Zoek">
                             (alle inschrijvingen van de afgelopen jaren: <input
                                 name="alles" id="alles" type="checkbox"
-                                <?php if (isset($_POST['alles']) and stristr($_SESSION['alles'], 'on') !== false) echo 'checked'; ?>>
+                                <?php if (isset($_POST['alles']) and stristr($_POST['alles'], 'on') !== false) echo 'checked'; ?>>
                             )
                         </form>
                     </td>
