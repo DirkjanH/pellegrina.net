@@ -133,6 +133,7 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
     $statement->bindParam(49, $_POST['diner'], PDO::PARAM_INT);
     $statement->bindParam(50, $_POST['InschId'], PDO::PARAM_INT);
 
+    d($statement);
     $statement->execute();
 }
 
@@ -148,7 +149,7 @@ else
     $query_inschrijving = "SELECT * FROM inschrijving WHERE DlnmrId_FK = {$DlnmrId_FK} AND CursusId_FK BETWEEN 
 	{$eerstecursus} AND {$laatstecursus} ORDER BY CursusId_FK ASC";
 
-// printf('$query_inschrijving = '. $query_inschrijving);
+d($query_inschrijving);
 
 $inschrijving = select_query($query_inschrijving, 'InschId');
 if (is_array($inschrijving)) $aantal_inschrijvingen = count($inschrijving);
@@ -164,6 +165,8 @@ if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '') {
     $DlnmrId = $_SESSION['DlnmrId'];
 }
 $dlnmr = select_query("SELECT naam FROM dlnmr WHERE DlnmrId = {$DlnmrId};", 1);
+
+d($cursus, $dlnmr, $inschrijving);
 
 // end Recordset
 
