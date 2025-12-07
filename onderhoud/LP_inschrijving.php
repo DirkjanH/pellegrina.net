@@ -13,6 +13,8 @@ if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $DlnmrId = $_SESSION['
 elseif (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'];
 else $DlnmrId = -1;
 
+$_SESSION['alles'] = '';
+
 d($_SESSION);
 d($_POST);
 
