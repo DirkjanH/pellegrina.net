@@ -233,7 +233,7 @@ d($cursus, $dlnmr, $inschrijving);
                         if ($aantal_inschrijvingen > 1) {
                             echo "<tr><td colspan=\"3\">";
                             echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
-                            echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"InschId\" size=\"{$aantal_inschrijvingen}\" >";
+                            echo "<form action=\"{$editFormAction}\" method=\"post\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"InschId\" size=\"{$aantal_inschrijvingen}\" >";
                             foreach ($inschrijving as $ins) {
                                 echo "<option value=\"{$ins['InschId']}\"";
                                 if (!(strcmp($ins['InschId'], $_SESSION['InschId']))) echo "SELECTED";
@@ -246,7 +246,7 @@ d($cursus, $dlnmr, $inschrijving);
                             echo '<input type="submit" name="Submit" value="Zoek" />';
                             echo '</form></td></tr>';
                         }
-                        if (isset($_SESSION['InschId'])) $ins = $inschrijving[$_SESSION['InschId']];
+                        if (isset($_POST['InschId'])) $ins = $inschrijving[$_POST['InschId']];
                         elseif (is_array($inschrijving)) $ins = current($inschrijving);
                         d($_POST, $ins);
                         ?>
