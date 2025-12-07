@@ -377,7 +377,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 	<div id="mainframe">
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage" class="w3-panel w3-white">
+		<div id="mainpage" class="w3-panel w3-white" style="max-width: 600px;">
 			<table border="0" align="left" width="100%" class="w3-table">
 				<tr>
 					<td colspan="5">
