@@ -250,11 +250,11 @@ d($cursus, $dlnmr, $inschrijving);
                         }
                         if (isset($_POST['InschId'])) $ins = $inschrijving[$_POST['InschId']];
                         elseif (is_array($inschrijving)) $ins = current($inschrijving);
-                        d($_POST, $ins);
+                        d('Joehoe!', $_POST, $ins);
                         ?>
-            </table> <?php d("Joehoe!");
-                        d($ins); ?> <form id="inschrijf" name="inschrijf"
-                method="post" action="<?php echo $editFormAction; ?>">
+            </table>
+            <form id="inschrijf" name="inschrijf" method="post"
+                action="<?php echo $editFormAction; ?>">
                 <p>&nbsp;</p>
                 <table width="626" border="0" style="clear: both;">
                     <tr valign="baseline">
