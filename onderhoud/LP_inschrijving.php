@@ -66,6 +66,7 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
 		  hotel_1pp = %s,
 		  hotel_1_2pp = %s,
 		  eigen_acc = %s,
+		  diner = %s,
 		  storting_fonds = %s,
 		  donatie = %s,
 		  opmerkingen = %s,
@@ -78,8 +79,7 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
 		  aanmaning_inschr = %s,
 		  ACMP = %s,
 		  DlnmrId_FK = %s,
-		  CursusId_FK = %s,
-		  diner = %s
+		  CursusId_FK = %s
 		WHERE InschId = %s;",
         quote($_POST['aangenomen']),
         quote($_POST['instrumentalist']),
@@ -109,13 +109,14 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
         quote($_POST['busterug']),
         quote($_POST['bus_bijzonderheden']),
         quote($_POST['acc_wens']),
-        quote($_POST['eenpersoons']),
-        quote($_POST['meerpers']),
-        quote($_POST['kamperen']),
-        quote($_POST['hotel_2pp']),
-        quote($_POST['hotel_1pp']),
-        quote($_POST['hotel_1_2pp']),
-        quote($_POST['eigen_acc']),
+        isset($_POST['eenpersoons']) ? "1" : "0",
+        isset($_POST['meerpers']) ? "1" : "0",
+        isset($_POST['kamperen']) ? "1" : "0",
+        isset($_POST['hotel_2pp']) ? "1" : "0",
+        isset($_POST['hotel_1pp']) ? "1" : "0",
+        isset($_POST['hotel_1_2pp']) ? "1" : "0",
+        isset($_POST['eigen_acc']) ? "1" : "0",
+        isset($_POST['diner']) ? "1" : "0",
         quote($_POST['storting_fonds']),
         quote($_POST['donatie']),
         quote($_POST['opmerkingen']),
@@ -129,7 +130,6 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
         quote($_POST['ACMP']),
         quote($_POST['DlnmrId_FK']),
         quote($_POST['CursusId_FK']),
-        quote($_POST['diner']),
         quote($_POST['InschId'])
     );
     d($updateSQL);
