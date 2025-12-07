@@ -29,114 +29,111 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wis
 }
 
 if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wijzigen"]) and ($_POST['Wijzigen'] == "Wijzigen")) {
-    $statement = $db->prepare("
-		UPDATE inschrijving 
-		SET 
-		  aangenomen = ?,
-		  instrumentalist = ?,
-		  instrumenten = ?,
-		  `instr` = ?,
-		  niveau_i = ?,
-		  ervaring_i = ?,
-		  stukken_i = ?,
-		  groot_ensemble1 = ?,
-		  groot_ensemble2 = ?,
-		  solozanger = ?,
-		  zanger = ?,
-		  zangstem = ?,
-		  niveau_z = ?,
-		  niveau_s = ?,
-		  rol_z = ?,
-		  ervaring_z = ?,
-		  stukken_z = ?,
-		  stukken_s = ?,
-		  danser = ?,
-		  niveau_d = ?,
-		  ervaring_d = ?,
-		  stukken_d = ?,
-		  toehoorder = ?,
-		  vervoer = ?,
-		  busheen = ?,
-		  busterug = ?,
-		  bus_bijzonderheden = ?,
-		  acc_wens = ?,
-		  eenpersoons = ?,
-		  meerpers = ?,
-		  kamperen = ?,
-		  hotel_2pp = ?,
-		  hotel_1pp = ?,
-		  hotel_1_2pp = ?,
-		  eigen_acc = ?,
-		  storting_fonds = ?,
-		  donatie = ?,
-		  opmerkingen = ?,
-		  aanbet_bedrag = ?,
-		  cursusgeld = ?,
-		  voorl_bev = ?,
-		  inzeepdag = ?,
-		  afgewezen = ?,
-		  datum_inschr = ?,
-		  aanmaning_inschr = ?,
-		  ACMP = ?,
-		  DlnmrId_FK = ?,
-		  CursusId_FK = ?,
-		  diner = ?
-		WHERE InschId = ?;");
-
-
-    $statement->bindParam(1, $_POST['aangenomen'], PDO::PARAM_INT);
-    $statement->bindParam(2, $_POST['instrumentalist'], PDO::PARAM_INT);
-    $statement->bindParam(3, $_POST['instrumenten'], PDO::PARAM_STR);
-    $statement->bindParam(4, $_POST['instr'], PDO::PARAM_STR);
-    $statement->bindParam(5, $_POST['niveau_i'], PDO::PARAM_STR);
-    $statement->bindParam(6, $_POST['ervaring_i'], PDO::PARAM_STR);
-    $statement->bindParam(7, $_POST['stukken_i'], PDO::PARAM_STR);
-    $statement->bindParam(8, $_POST['groot_ensemble1'], PDO::PARAM_INT);
-    $statement->bindParam(9, $_POST['groot_ensemble2'], PDO::PARAM_INT);
-    $statement->bindParam(10, $_POST['solozanger'], PDO::PARAM_INT);
-    $statement->bindParam(11, $_POST['zanger'], PDO::PARAM_INT);
-    $statement->bindParam(12, $_POST['zangstem'], PDO::PARAM_STR);
-    $statement->bindParam(13, $_POST['niveau_z'], PDO::PARAM_STR);
-    $statement->bindParam(14, $_POST['niveau_s'], PDO::PARAM_STR);
-    $statement->bindParam(15, $_POST['rol_z'], PDO::PARAM_STR);
-    $statement->bindParam(16, $_POST['ervaring_z'], PDO::PARAM_STR);
-    $statement->bindParam(17, $_POST['stukken_z'], PDO::PARAM_STR);
-    $statement->bindParam(18, $_POST['stukken_s'], PDO::PARAM_STR);
-    $statement->bindParam(19, $_POST['danser'], PDO::PARAM_INT);
-    $statement->bindParam(20, $_POST['niveau_d'], PDO::PARAM_STR);
-    $statement->bindParam(21, $_POST['ervaring_d'], PDO::PARAM_STR);
-    $statement->bindParam(22, $_POST['stukken_d'], PDO::PARAM_STR);
-    $statement->bindParam(23, $_POST['toehoorder'], PDO::PARAM_INT);
-    $statement->bindParam(24, $_POST['vervoer'], PDO::PARAM_STR);
-    $statement->bindParam(25, $_POST['busheen'], PDO::PARAM_BOOL);
-    $statement->bindParam(26, $_POST['busterug'], PDO::PARAM_BOOL);
-    $statement->bindParam(27, $_POST['bus_bijzonderheden'], PDO::PARAM_STR);
-    $statement->bindParam(28, $_POST['acc_wens'], PDO::PARAM_STR);
-    $statement->bindParam(29, $_POST['eenpersoons'], PDO::PARAM_INT);
-    $statement->bindParam(30, $_POST['meerpers'], PDO::PARAM_INT);
-    $statement->bindParam(31, $_POST['kamperen'], PDO::PARAM_INT);
-    $statement->bindParam(32, $_POST['hotel_2pp'], PDO::PARAM_INT);
-    $statement->bindParam(33, $_POST['hotel_1pp'], PDO::PARAM_INT);
-    $statement->bindParam(34, $_POST['hotel_1_2pp'], PDO::PARAM_INT);
-    $statement->bindParam(35, $_POST['eigen_acc'], PDO::PARAM_INT);
-    $statement->bindParam(36, $_POST['storting_fonds'], PDO::PARAM_INT);
-    $statement->bindParam(37, $_POST['donatie'], PDO::PARAM_STR);
-    $statement->bindParam(38, $_POST['opmerkingen'], PDO::PARAM_STR);
-    $statement->bindParam(39, $_POST['aanbet_bedrag'], PDO::PARAM_INT);
-    $statement->bindParam(40, $_POST['cursusgeld'], PDO::PARAM_INT);
-    $statement->bindParam(41, $_POST['voorl_bev'], PDO::PARAM_STR);
-    $statement->bindParam(42, $_POST['inzeepdag'], PDO::PARAM_STR);
-    $statement->bindParam(43, $_POST['afgewezen'], PDO::PARAM_INT);
-    $statement->bindParam(44, $_POST['datum_inschr'], PDO::PARAM_STR);
-    $statement->bindParam(45, $_POST['aanmaning_inschr'], PDO::PARAM_STR);
-    $statement->bindParam(46, $_POST['ACMP'], PDO::PARAM_STR);
-    $statement->bindParam(47, $_POST['DlnmrId_FK'], PDO::PARAM_INT);
-    $statement->bindParam(48, $_POST['CursusId_FK'], PDO::PARAM_INT);
-    $statement->bindParam(49, $_POST['diner'], PDO::PARAM_INT);
-    $statement->bindParam(50, $_POST['InschId'], PDO::PARAM_INT);
-
-    d($statement);
-    $statement->execute();
+    $updateSQL = sprintf(
+        "UPDATE inschrijving SET 
+		  aangenomen = %s,
+		  instrumentalist = %s,
+		  instrumenten = %s,
+		  `instr` = %s,
+		  niveau_i = %s,
+		  ervaring_i = %s,
+		  stukken_i = %s,
+		  groot_ensemble1 = %s,
+		  groot_ensemble2 = %s,
+		  solozanger = %s,
+		  zanger = %s,
+		  zangstem = %s,
+		  niveau_z = %s,
+		  niveau_s = %s,
+		  rol_z = %s,
+		  ervaring_z = %s,
+		  stukken_z = %s,
+		  stukken_s = %s,
+		  danser = %s,
+		  niveau_d = %s,
+		  ervaring_d = %s,
+		  stukken_d = %s,
+		  toehoorder = %s,
+		  vervoer = %s,
+		  busheen = %s,
+		  busterug = %s,
+		  bus_bijzonderheden = %s,
+		  acc_wens = %s,
+		  eenpersoons = %s,
+		  meerpers = %s,
+		  kamperen = %s,
+		  hotel_2pp = %s,
+		  hotel_1pp = %s,
+		  hotel_1_2pp = %s,
+		  eigen_acc = %s,
+		  storting_fonds = %s,
+		  donatie = %s,
+		  opmerkingen = %s,
+		  aanbet_bedrag = %s,
+		  cursusgeld = %s,
+		  voorl_bev = %s,
+		  inzeepdag = %s,
+		  afgewezen = %s,
+		  datum_inschr = %s,
+		  aanmaning_inschr = %s,
+		  ACMP = %s,
+		  DlnmrId_FK = %s,
+		  CursusId_FK = %s,
+		  diner = %s
+		WHERE InschId = %s;",
+        quote($_POST['aangenomen']),
+        quote($_POST['instrumentalist']),
+        quote($_POST['instrumenten']),
+        quote($_POST['instr']),
+        quote($_POST['niveau_i']),
+        quote($_POST['ervaring_i']),
+        quote($_POST['stukken_i']),
+        quote($_POST['groot_ensemble1']),
+        quote($_POST['groot_ensemble2']),
+        quote($_POST['solozanger']),
+        quote($_POST['zanger']),
+        quote($_POST['zangstem']),
+        quote($_POST['niveau_z']),
+        quote($_POST['niveau_s']),
+        quote($_POST['rol_z']),
+        quote($_POST['ervaring_z']),
+        quote($_POST['stukken_z']),
+        quote($_POST['stukken_s']),
+        quote($_POST['danser']),
+        quote($_POST['niveau_d']),
+        quote($_POST['ervaring_d']),
+        quote($_POST['stukken_d']),
+        quote($_POST['toehoorder']),
+        quote($_POST['vervoer']),
+        quote($_POST['busheen']),
+        quote($_POST['busterug']),
+        quote($_POST['bus_bijzonderheden']),
+        quote($_POST['acc_wens']),
+        quote($_POST['eenpersoons']),
+        quote($_POST['meerpers']),
+        quote($_POST['kamperen']),
+        quote($_POST['hotel_2pp']),
+        quote($_POST['hotel_1pp']),
+        quote($_POST['hotel_1_2pp']),
+        quote($_POST['eigen_acc']),
+        quote($_POST['storting_fonds']),
+        quote($_POST['donatie']),
+        quote($_POST['opmerkingen']),
+        quote($_POST['aanbet_bedrag']),
+        quote($_POST['cursusgeld']),
+        quote($_POST['voorl_bev']),
+        quote($_POST['inzeepdag']),
+        quote($_POST['afgewezen']),
+        quote($_POST['datum_inschr']),
+        quote($_POST['aanmaning_inschr']),
+        quote($_POST['ACMP']),
+        quote($_POST['DlnmrId_FK']),
+        quote($_POST['CursusId_FK']),
+        quote($_POST['diner']),
+        quote($_POST['InschId'])
+    );
+    d($updateSQL);
+    exec_query($updateSQL);
 }
 
 // begin Recordset Inschrijvingen van een deelnemer
