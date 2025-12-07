@@ -250,10 +250,6 @@ d($cursus, $dlnmr, $inschrijving);
                         }
                         if (isset($_POST['InschId'])) $ins = $inschrijving[$_POST['InschId']];
                         elseif (is_array($inschrijving)) $ins = current($inschrijving);
-                        else {
-                            $ins = [];
-                            echo "Hier is iets fout gegaan<br>";
-                        }
                         d($_POST, $ins);
                         ?>
             </table>
