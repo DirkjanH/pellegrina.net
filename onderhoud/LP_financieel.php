@@ -89,8 +89,9 @@ function LeesInschrijving($id, $cursusId)
 		$cursuszoek = 'AND CursusId = ' . $cursusId;
 
 	// begin Recordset 'zoek inschrijving'
-	$query_inschrijving = sprintf(
-		"SELECT
+	if (isset($id) and $id > 0) {
+		$query_inschrijving = sprintf(
+			"SELECT
 		  voornaam,
 		  naam,
 		  adres,
@@ -138,20 +139,21 @@ function LeesInschrijving($id, $cursusId)
 			 {$cursuszoek}
 			 AND DlnmrId_FK=%s 
 		ORDER BY CursusId_FK, achternaam ASC",
-		quote($eerstecursus),
-		quote($laatstecursus),
-		quote($id)
-	);
+			quote($eerstecursus),
+			quote($laatstecursus),
+			quote($id)
+		);
 
-	d($query_inschrijving);
+		d($query_inschrijving);
 
-	$inschrijving = select_query($query_inschrijving);
-	if (is_array($inschrijving))
-		$aantal_inschrijvingen = count($inschrijving);
-	else
-		$aantal_inschrijvingen = 0;
+		$inschrijving = select_query($query_inschrijving);
+		if (is_array($inschrijving))
+			$aantal_inschrijvingen = count($inschrijving);
+		else
+			$aantal_inschrijvingen = 0;
 
-	d($inschrijving);
+		d($inschrijving);
+	}
 
 	// end Recordset
 }
