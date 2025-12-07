@@ -173,7 +173,6 @@ d($cursus, $dlnmr, $inschrijving);
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -199,12 +198,11 @@ d($cursus, $dlnmr, $inschrijving);
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
     <link rel="stylesheet" href="/css/zoeknaam.css">
     <SCRIPT>
-        function GP_popupConfirmMsg(msg) { //v1.0
-            document.MM_returnValue = confirm(msg);
-        }
+    function GP_popupConfirmMsg(msg) { //v1.0
+        document.MM_returnValue = confirm(msg);
+    }
     </SCRIPT>
 </head>
-
 <body>
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
@@ -236,7 +234,7 @@ d($cursus, $dlnmr, $inschrijving);
                             echo "<form action=\"{$editFormAction}\" method=\"post\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"InschId\" size=\"{$aantal_inschrijvingen}\" >";
                             foreach ($inschrijving as $ins) {
                                 echo "<option value=\"{$ins['InschId']}\"";
-                                if (!(strcmp($ins['InschId'], $_SESSION['InschId']))) echo "SELECTED";
+                                if (!(strcmp($ins['InschId'], $_POST['InschId']))) echo "SELECTED";
                                 echo '>' . $cursus[$ins['CursusId_FK']]['cursusnaam_nl'];
                             }
                             echo "</option>\n</select>";
@@ -575,5 +573,4 @@ d($cursus, $dlnmr, $inschrijving);
         </div>
     </div>
 </body>
-
 </html>
