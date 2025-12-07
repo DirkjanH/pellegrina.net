@@ -1,5 +1,5 @@
 <?php
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_POST, $_SESSION);
 
@@ -113,9 +113,8 @@ function check($input)
                     href="javascript:wis()" class="w3-text-red w3-hover-white"
                     style="text-decoration: none; padding: 10px;"><b>X</b></a><br>
                 <label>Alle deelnemers van ooit: </label><input
-                    name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1"
-                    <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
-                        echo 'checked'; ?>><br>
+                    name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
+                                                                                    echo 'checked'; ?>><br>
                 <input type="radio" name="cursus" value="alles"
                     onclick="javascript: submit();"
                     <?php check('alles'); ?>><label> Alles</label><br>
@@ -130,11 +129,10 @@ function check($input)
                     <?php check('nieuw'); ?>><label> Nieuwe
                     inschrijvingen</label>
             </p>
-            <input name="zoek" type="hidden" id="zoek" value="zoek">
-            <?php if (empty($Inschr)) {
-                $Inschr = $_SESSION['Inschr'];
-            }
-            d($aantal_ins, $Inschr); ?> <p>Kies een naam uit: <span
+            <input name="zoek" type="hidden" id="zoek" value="zoek"> <?php if (empty($Inschr)) {
+                                                                            $Inschr = $_SESSION['Inschr'];
+                                                                        }
+                                                                        d($aantal_ins, $Inschr); ?> <p>Kies een naam uit: <span
                     class="klein">(totaal:<?php echo $aantal_ins; ?>)</span></p>
             <div id="navcontainer">
                 <ul id="navlist"> <?php foreach ($Inschr as $ins) { ?> <li

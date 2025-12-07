@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_SESSION, $_GET, $_POST, $_SERVER['REQUEST_URI'], $editFormAction);
 
