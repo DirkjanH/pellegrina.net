@@ -442,9 +442,9 @@ d($cursus, $dlnmr, $inschrijving);
                         <td nowrap align="right">Poortgebouw 2pp.:</td>
                         <td><input type="checkbox" name="hotel_2pp" value="1"
                                 <?php if (!(strcmp($ins['hotel_2pp'], "1"))) echo "checked"; ?> />&nbsp;&nbsp;&nbsp;Poortgebouw
-                            1 in 2pp: <input name="hotel_1pp" type="checkbox"
-                                id="hotel_1pp" value="1"
-                                <?php if (!(strcmp($ins['hotel_1pp'], "1"))) echo "checked"; ?>
+                            1 in 2pp: <input name="hotel_1_2pp" type="checkbox"
+                                id="hotel_1_2pp" value="1"
+                                <?php if (!(strcmp($ins['hotel_1_2pp'], "1"))) echo "checked"; ?>
                                 </td>
                         <td align="right" nowrap>Poortgebouw 1pp.:</td>
                         <td><input name="hotel_1pp" type="checkbox"
@@ -456,7 +456,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 <?php if (!(strcmp($ins['eigen_acc'], "1"))) echo "checked"; ?> />&nbsp;&nbsp;&nbsp;diner
                             bij eigen accommodatie: <input name="diner"
                                 type="checkbox" id="diner" value="1"
-                                <?php if (!(strcmp($ins['eigen_acc'], "1"))) echo "checked"; ?> />
+                                <?php if (!(strcmp($ins['diner'], "1"))) echo "checked"; ?> />
                         </td>
                     </tr>
                     <tr valign="baseline">
