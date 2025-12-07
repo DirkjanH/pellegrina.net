@@ -101,24 +101,29 @@ if (isset($zwartelijst) and is_array($zwartelijst)) $aantal_zwl = count($zwartel
 else $aantal_zwl = 0;
 // end Recordset deelname alle ingeschrevenen zwarte lijst
 ?>
-
 <!DOCTYPE HTML>
 <html>
 
 <head>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<META NAME="robots" CONTENT="noindex, nofollow">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-
-	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+	<link rel="manifest"
+		href="https://pellegrina.net/Images/Logos/site.webmanifest">
+	<link rel="mask-icon"
+		href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
+		color="#5bbad5">
+	<link rel="shortcut icon"
+		href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+	<meta name="msapplication-config"
+		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>LP zwarte lijst</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
@@ -137,105 +142,107 @@ else $aantal_zwl = 0;
 </head>
 
 <body>
-	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php'); ?>
-	</div>
+	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
 	<div id="mainframe">
-		<header id="navigatiebalk">
-			<?php require_once('LP_navigatie.php'); ?>
+		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage">
-				<table class="onzichtbaar">
-					<tr>
-						<td colspan="3">
-							<form id="zoek" name="zoek" method="GET" action="<?php echo $editFormAction; ?>">
-								<table width="100%" border="1" align="left" cellpadding="5">
-									<tr>
-										<td><input name="DlnmrId" type="input" value="<?php if (isset($DlnmrId))
-																							echo $DlnmrId; ?>" size="5" />
-											<input type="submit" name="Submit" value="Zoek"> &nbsp;
-										</td>
-									</tr>
-								</table>
-							</form>
-						</td>
-					</tr>
-				</table>
-				<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
-					<div class="w3-card-4 w3-margin-top">
-						<table class="w3-table w3-white w3-border-blue-gray" cellspacing="0" cellpadding="5">
-							<tr>
-								<td width="25%" rowspan="2" valign="top">
-									<h2>
-										<?php if ($deelnemer['naam'] != '') echo $deelnemer['naam']; ?>
-									</h2>
-								</td>
-								<td>
-									<label>
-										<div align="right">Categorie:</div>
-									</label>
-								</td>
-								<td class="categorie1"><label>
-										<input type="radio" name="categorie" value="1" <?php if ($deelnemer['categorie'] == "1") echo 'checked'; ?>>
-										waarschuwing</label>
-								</td>
-								<td class="categorie2"><label>
-										<input type="radio" name="categorie" value="2" <?php if ($deelnemer['categorie'] == "2") echo 'checked'; ?>>
-										def. ontzegging</label>
-								</td>
-								<td><input type="submit" name="verzend" value="Voeg toe" />
-									<input type="submit" name="verzend" value="Update" />
-									<input type="submit" name="verzend" value="Wis">
-								</td>
-							</tr>
-							<tr>
-								<td valign="top">
-									<label>
-										<div align="right">Opmerkingen: </div>
-									</label>
-								</td>
-								<td colspan="3">
-									<textarea name="opmerkingen" cols="60" rows="3" id="opmerkingen"><?php
-																										echo $deelnemer['opmerkingen']; ?></textarea>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<?php if ($aantal_zwl > 0) {
-						echo '<br><hr>'; ?>
-						<table class="w3-table w3-striped w3-border-blue-gray">
-							<caption align="top" class="w3-large w3-text-blue-grey">
-								Geregistreerde personen op zwarte lijst:
-							</caption>
-							<tr>
-								<th width="20%" scope="col">Naam:&nbsp;</th>
-								<th width="20%" scope="col">Instrument/stem:&nbsp;</th>
-								<th scope="col">Datum:&nbsp;</th>
-								<th scope="col">Opmerkingen:&nbsp;</th>
-							</tr>
-							<?php foreach ($zwartelijst as $zwl) { ?>
+		<div id="mainpage" style="max-width: 900px;" class="w3-panel w3-white">
+			<table class="onzichtbaar">
+				<tr>
+					<td colspan="3">
+						<form id="zoek" name="zoek" method="GET"
+							action="<?php echo $editFormAction; ?>">
+							<table width="100%" border="1" align="left"
+								cellpadding="5">
 								<tr>
-									<td class="<?php echo 'categorie' . $zwl['categorie']; ?>">
-										<a href="<?php echo $_SERVER['PHP_SELF'] . '?DlnmrId=' . $zwl['DlnmrId']; ?>">
-											<?php echo $zwl['naam']; ?>
-										</a>&nbsp;
+									<td><input name="DlnmrId" type="input"
+											value="<?php if (isset($DlnmrId))
+														echo $DlnmrId; ?>" size="5" />
+										<input type="submit" name="Submit"
+											value="Zoek"> &nbsp;
 									</td>
-									<td>
-										<?php echo instrument($zwl['instr']); ?>&nbsp;</td>
-									<td>
-										<?php echo $zwl['datum']; ?>&nbsp;</td>
-									<td>
-										<?php echo $zwl['opmerkingen']; ?>&nbsp;</td>
 								</tr>
-						<?php }
-						} ?>
-						</table>
-						<?php echo "<p>Totaal aantal personen op de zwarte lijst: {$aantal_zwl}</p>"; ?>
-				</form>
-				</p>
-			</div>
-			<!-- InstanceEndEditable -->
+							</table>
+						</form>
+					</td>
+				</tr>
+			</table>
+			<form action="<?php echo $editFormAction; ?>" method="POST"
+				name="update" id="update">
+				<div class="w3-card-4 w3-margin-top">
+					<table class="w3-table w3-white w3-border-blue-gray"
+						cellspacing="0" cellpadding="5">
+						<tr>
+							<td width="25%" rowspan="2" valign="top">
+								<h2> <?php if ($deelnemer['naam'] != '') echo $deelnemer['naam']; ?>
+								</h2>
+							</td>
+							<td>
+								<label>
+									<div align="right">Categorie:</div>
+								</label>
+							</td>
+							<td class="categorie1"><label>
+									<input type="radio" name="categorie"
+										value="1"
+										<?php if ($deelnemer['categorie'] == "1") echo 'checked'; ?>>
+									waarschuwing</label>
+							</td>
+							<td class="categorie2"><label>
+									<input type="radio" name="categorie"
+										value="2"
+										<?php if ($deelnemer['categorie'] == "2") echo 'checked'; ?>>
+									def. ontzegging</label>
+							</td>
+							<td><input type="submit" name="verzend"
+									value="Voeg toe" />
+								<input type="submit" name="verzend"
+									value="Update" />
+								<input type="submit" name="verzend" value="Wis">
+							</td>
+						</tr>
+						<tr>
+							<td valign="top">
+								<label>
+									<div align="right">Opmerkingen: </div>
+								</label>
+							</td>
+							<td colspan="3">
+								<textarea name="opmerkingen" cols="60" rows="3"
+									id="opmerkingen"><?php
+														echo $deelnemer['opmerkingen']; ?></textarea>
+							</td>
+						</tr>
+					</table>
+				</div> <?php if ($aantal_zwl > 0) {
+							echo '<br><hr>'; ?> <table
+						class="w3-table w3-striped w3-border-blue-gray">
+						<caption align="top" class="w3-large w3-text-blue-grey">
+							Geregistreerde personen op zwarte lijst: </caption>
+						<tr>
+							<th width="20%" scope="col">Naam:&nbsp;</th>
+							<th width="20%" scope="col">Instrument/stem:&nbsp;</th>
+							<th scope="col">Datum:&nbsp;</th>
+							<th scope="col">Opmerkingen:&nbsp;</th>
+						</tr> <?php foreach ($zwartelijst as $zwl) { ?> <tr>
+								<td
+									class="<?php echo 'categorie' . $zwl['categorie']; ?>">
+									<a
+										href="<?php echo $_SERVER['PHP_SELF'] . '?DlnmrId=' . $zwl['DlnmrId']; ?>">
+										<?php echo $zwl['naam']; ?> </a>&nbsp;
+								</td>
+								<td> <?php echo instrument($zwl['instr']); ?>&nbsp;</td>
+								<td> <?php echo $zwl['datum']; ?>&nbsp;</td>
+								<td> <?php echo $zwl['opmerkingen']; ?>&nbsp;</td>
+							</tr> <?php }
+							} ?>
+					</table>
+					<?php echo "<p>Totaal aantal personen op de zwarte lijst: {$aantal_zwl}</p>"; ?>
+			</form>
+			</p>
 		</div>
+		<!-- InstanceEndEditable -->
+	</div>
 </body>
 
 </html>
