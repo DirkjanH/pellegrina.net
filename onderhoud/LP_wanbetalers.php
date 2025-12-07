@@ -155,23 +155,29 @@ if (isset($wanbetalers) and is_array($wanbetalers)) $totalRows_wanbetalers = cou
 d($query_wanbetalers);
 
 ?>
-
 <!DOCTYPE HTML>
 <html>
 
 <head>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<META NAME="robots" CONTENT="noindex, nofollow">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+	<link rel="manifest"
+		href="https://pellegrina.net/Images/Logos/site.webmanifest">
+	<link rel="mask-icon"
+		href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
+		color="#5bbad5">
+	<link rel="shortcut icon"
+		href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+	<meta name="msapplication-config"
+		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>LP aanmaning cursusgeld</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
@@ -187,19 +193,16 @@ d($query_wanbetalers);
 </head>
 
 <body>
-	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php'); ?>
-	</div>
+	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
 	<div id="mainframe">
-		<header id="navigatiebalk">
-			<?php require_once('LP_navigatie.php'); ?>
+		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage">
-			<h2>Verzend reminder aan deelnemers die hun cursusgeld nog niet hebben voldaan </h2>
+		<div id="mainpage" class="w3-panel w3-white">
+			<h2>Verzend reminder aan deelnemers die hun cursusgeld nog niet
+				hebben voldaan </h2>
 			<br>
-
-			<p>In totaal <?php echo $totalRows_wanbetalers; ?> deelnemers hebben nog openstaand cursusgeld</p>
-
+			<p>In totaal <?php echo $totalRows_wanbetalers; ?> deelnemers hebben
+				nog openstaand cursusgeld</p>
 			<form action="" method="post" name="zoek" id="zoek">
 				<table border="1" cellpadding="2" cellspacing="0">
 					<tr>
@@ -211,40 +214,47 @@ d($query_wanbetalers);
 						<th>Dagen sinds rekening:&nbsp;</th>
 						<th>Aanmaning reeds verzonden:&nbsp;</th>
 						<th>Opmerkingen:&nbsp;</th>
-					</tr>
-					<?php foreach ($wanbetalers as $i => $wanbetaler) {
-						$a = '';
-						if (isset($wanbetaler['aanmaning']) and $wanbetaler['aanmaning'] != '') $a = $wanbetaler['aanmaning'];
-					?>
-						<tr>
-							<td><input name="C<?php echo $i; ?>" type="checkbox" value="<?php echo $wanbetaler['InschId'] . '" ';
-																						if (isset($wanbetaler['rekening_opmerking']) and stripos($wanbetaler['rekening_opmerking'], 'cash')) echo (' disabled ');
-																						?>" </td>
+					</tr> <?php foreach ($wanbetalers as $i => $wanbetaler) {
+								$a = '';
+								if (isset($wanbetaler['aanmaning']) and $wanbetaler['aanmaning'] != '') $a = $wanbetaler['aanmaning'];
+							?> <tr>
+							<td><input name="C<?php echo $i; ?>" type="checkbox"
+									value="<?php echo $wanbetaler['InschId'] . '" ';
+											if (isset($wanbetaler['rekening_opmerking']) and stripos($wanbetaler['rekening_opmerking'], 'cash')) echo (' disabled ');
+											?>" </td>
 							<td><?php echo $wanbetaler['naam']; ?>&nbsp;</td>
 							<td>
-								<div align="center"><?php echo $wanbetaler['CursusId_FK']; ?>&nbsp;</div>
+								<div align="center">
+									<?php echo $wanbetaler['CursusId_FK']; ?>&nbsp;
+								</div>
 							</td>
 							<td>
-								<div align="right"><?php echo euro2($wanbetaler['schuld']); ?>&nbsp;</div>
+								<div align="right">
+									<?php echo euro2($wanbetaler['schuld']); ?>&nbsp;
+								</div>
 							</td>
-							<td><?php echo $wanbetaler['rekening_verzonden']; ?>&nbsp;</td>
+							<td><?php echo $wanbetaler['rekening_verzonden']; ?>&nbsp;
+							</td>
 							<td>
-								<div align="right"><?php echo $wanbetaler['dagen']; ?>&nbsp;</div>
+								<div align="right">
+									<?php echo $wanbetaler['dagen']; ?>&nbsp;</div>
 							</td>
 							<td>
 								<div align="center"><?php echo $a; ?>&nbsp;</div>
 							</td>
-							<td><?php echo $wanbetaler['rekening_opmerking']; ?>&nbsp;</td>
-						</tr>
-					<?php  } ?>
+							<td><?php echo $wanbetaler['rekening_opmerking']; ?>&nbsp;
+							</td>
+						</tr> <?php  } ?>
 				</table>
 				<p>
 					<label>
-						<input name="alle" type="checkbox" id="alle" value="1" OnClick="switchAll()">
-						Selecteer alle namen</label>
-					<input name="aanmanen" type="submit" id="aanmanen" value="aanmanen">
+						<input name="alle" type="checkbox" id="alle" value="1"
+							OnClick="switchAll()"> Selecteer alle namen</label>
+					<input name="aanmanen" type="submit" id="aanmanen"
+						value="aanmanen">
 				</p>
-				<input name="aantal" type="hidden" value="<?php echo $totalRows_wanbetalers; ?>">
+				<input name="aantal" type="hidden"
+					value="<?php echo $totalRows_wanbetalers; ?>">
 			</form>
 		</div>
 	</div>

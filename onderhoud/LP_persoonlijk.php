@@ -5,10 +5,6 @@ error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
-$editFormAction = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" . $_SERVER['QUERY_STRING'] : "");
-
-$editFormAction = str_replace('SID', '', $editFormAction);
-
 Kint::$enabled_mode = false;
 
 d($_SESSION, $_GET, $_POST, $_SERVER['REQUEST_URI'], $editFormAction);
@@ -107,7 +103,6 @@ d($inschrijving);
 ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -145,7 +140,7 @@ d($inschrijving);
 	<div id="mainframe">
 		<header id="navigatiebalk"><?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage">
+		<div id="mainpage" class="w3-panel w3-white">
 			<table border="0" align="left" width="100%">
 				<td>
 					<form id="zoek" name="zoek" method="get"
@@ -356,10 +351,8 @@ d($inschrijving);
 					</form>
 					</tr>
 			</table>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>

@@ -143,7 +143,7 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 	<div id="mainframe">
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage">
+		<div id="mainpage" class="w3-panel w3-white">
 			<h2>Verzend reminder aan deelnemers die nog niet hun inschrijfgeld
 				hebben overgemaakt</h2><br>
 			<p>In totaal <?php echo $totalRows_wanbetalers; ?> deelnemers hebben
