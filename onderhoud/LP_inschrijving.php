@@ -252,9 +252,9 @@ d($cursus, $dlnmr, $inschrijving);
                         elseif (is_array($inschrijving)) $ins = current($inschrijving);
                         d($_POST, $ins);
                         ?>
-            </table> <?php echo "Joehoe!<br>";
-                        d($ins); ?> <form id="inschrijf" name="inschrijf" method="post"
-                action="<?php echo $editFormAction; ?>">
+            </table> <?php d("Joehoe!");
+                        d($ins); ?> <form id="inschrijf" name="inschrijf"
+                method="post" action="<?php echo $editFormAction; ?>">
                 <p>&nbsp;</p>
                 <table width="626" border="0" style="clear: both;">
                     <tr valign="baseline">
