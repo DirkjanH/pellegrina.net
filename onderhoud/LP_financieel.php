@@ -83,12 +83,10 @@ d($cursus);
 
 function LeesInschrijving($id, $cursusId)
 {
-
 	global $eerstecursus, $laatstecursus, $inschrijf, $inschrijving, $aantal_inschrijvingen;
 
 	if (isset($cursusId) and $cursusId > 0)
 		$cursuszoek = 'AND CursusId = ' . $cursusId;
-
 
 	// begin Recordset 'zoek inschrijving'
 	$query_inschrijving = sprintf(
@@ -212,7 +210,7 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 	d($updateSQL);
 	exec_query($updateSQL);
 
-	if (isset($_SESSION['DlnmrId']) && isset($_SESSION['cursus']))
+	if (isset($_SESSION['DlnmrId']) && $_SESSION['DlnmrId'] != 0 && isset($_SESSION['cursus']) && $_SESSION['cursus'] != 0)
 		LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 
 	// lees de tekst-file
