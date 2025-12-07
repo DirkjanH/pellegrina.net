@@ -193,8 +193,9 @@ d($cursus, $dlnmr, $inschrijving);
     <div id="mainframe">
         <header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
         </header>
-        <div id="mainpage"> <?php Kint::$enabled_mode = false; ?> <table
-                width="600" border="0" align="left" style="clear: both;">
+        <div id="mainpage" class="w3-panel w3-white">
+            <?php Kint::$enabled_mode = false; ?> <table width="600" border="0"
+                align="left" style="clear: both;">
                 <tr>
                     <td colspan="3">
                         <form id="zoek" name="zoek" method="post"
