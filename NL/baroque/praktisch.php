@@ -237,7 +237,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           <td>Meerprijs tweepersoonskamer in het Poortgebouw met eigen
             sanitair als eenpersoonskamer</td>
           <td class="geld">
-            <?php echo euro($cursusdata['hotel_1-2pp']); ?></td>
+            <?php echo euro($cursusdata['hotel_1_2pp']); ?></td>
           <td class="geld">
             <?php echo euro($cursusdata['hotel_1_2pp']); ?></td>
         </tr>
