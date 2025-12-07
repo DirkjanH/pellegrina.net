@@ -383,8 +383,9 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 					<td colspan="5">
 						<form id="zoek" name="zoek" method="get"
 							action="<?php echo $editFormAction; ?>"> Id: <input
-								name="DlnmrId" type="text" value="<?php if (isset($_SESSION['DlnmrId']))
-																		echo $_SESSION['DlnmrId']; ?>" size="5" />
+								name="DlnmrId" type="text"
+								value="<?php if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId']; ?>"
+								size="5" />
 							<input type="submit" name="Submit" value="Zoek">
 						</form>
 					</td>
@@ -395,15 +396,12 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 							echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$aantal_inschrijvingen}\" >";
 							foreach ($inschrijving as $i => $inschr) {
 								echo "<option value=\"{$inschr['CursusId_FK']}\"";
-								if (!(strcmp($inschr['CursusId_FK'], $_SESSION['cursus']))) {
-									echo "SELECTED";
-								}
+								if (!(strcmp($inschr['CursusId_FK'], $_SESSION['cursus']))) echo "SELECTED";
 								echo '>' . $cursus[$inschr['CursusId_FK']]['NL'];
 							}
 							echo "</option>\n</select>";
 							echo '<input name="DlnmrId" type="hidden" value="';
-							if (isset($_SESSION['DlnmrId']))
-								echo $_SESSION['DlnmrId'] . '" />';
+							if (isset($_SESSION['DlnmrId'])) echo $_SESSION['DlnmrId'] . '" />';
 							echo '<input type="submit" name="Submit" value="Zoek">';
 							echo '</form></td></tr>';
 						} else
