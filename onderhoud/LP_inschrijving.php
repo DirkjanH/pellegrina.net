@@ -248,7 +248,7 @@ d($cursus, $dlnmr, $inschrijving);
                         }
                         if (isset($_SESSION['InschId'])) $ins = $inschrijving[$_SESSION['InschId']];
                         elseif (is_array($inschrijving)) $ins = current($inschrijving);
-                        d($ins);
+                        d($_POST, $ins);
                         ?>
             </table>
             <form id="inschrijf" name="inschrijf" method="post"
