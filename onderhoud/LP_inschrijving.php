@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 if (isset($_POST['alles']) and $_POST['alles'] != '') $_SESSION['alles'] = $_POST['alles'];
 
@@ -193,7 +193,7 @@ d($cursus, $dlnmr, $inschrijving);
     <div id="mainframe">
         <header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
         </header>
-        <div id="mainpage"> <?php Kint::$enabled_mode = true; ?> <table
+        <div id="mainpage"> <?php Kint::$enabled_mode = false; ?> <table
                 width="600" border="0" align="left" style="clear: both;">
                 <tr>
                     <td colspan="3">
