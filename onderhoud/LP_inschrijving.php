@@ -103,7 +103,6 @@ if (isset($_POST['InschId']) and ($_POST['InschId'] != "") and isset($_POST["Wij
         isset($_POST['eigen_acc']) ? "1" : "0",
         isset($_POST['diner']) ? "1" : "0",
         isset($_POST['storting_fonds']) ? "1" : "0",
-        isset($_POST['eenpersoons']) ? "1" : "0",
         quote($_POST['donatie']),
         quote($_POST['opmerkingen']),
         quote($_POST['aanbet_bedrag']),
@@ -232,7 +231,7 @@ d($cursus, $dlnmr, $inschrijving);
                         }
                         if (isset($_POST['InschId'])) $ins = $inschrijving[$_POST['InschId']];
                         elseif (is_array($inschrijving)) $ins = current($inschrijving);
-                        d('Joehoe!', $_POST, $ins);
+                        d($_POST, $ins);
                         ?>
             </table>
             <form id="inschrijf" name="inschrijf" method="post"
