@@ -13,7 +13,7 @@ if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $DlnmrId = $_SESSION['
 elseif (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '') $DlnmrId = $_SESSION['DlnmrId'];
 else $DlnmrId = -1;
 
-$_SESSION['alles'] = '';
+unset($_SESSION['alles']);
 
 d($_SESSION);
 d($_POST);
@@ -144,7 +144,7 @@ $DlnmrId_FK = '-1';
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and !(isset($_POST["Leegmaken"]) and ($_POST['Leegmaken'] == "Leegmaken"))) {
     $DlnmrId_FK = $_SESSION['DlnmrId'];
 }
-if (isset($_SESSION['alles']) and $_SESSION['alles'] == 'on')
+if (isset($_POST['alles']) and $_POST['alles'] == 'on')
     $query_inschrijving = "SELECT * FROM inschrijving WHERE DlnmrId_FK = {$DlnmrId_FK} 
 	ORDER BY CursusId_FK ASC";
 else
