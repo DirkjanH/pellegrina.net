@@ -38,15 +38,15 @@ if (isset($_SESSION['DlnmrId']) and ($_SESSION['DlnmrId'] != "") and isset($_POS
 // Update gegevens	
 if (isset($_SESSION['DlnmrId']) and ($_SESSION['DlnmrId'] != "") and isset($_POST["Wijzigdlnmr"]) and ($_POST['Wijzigdlnmr'] == "Wijzig dlnmr")) {
 	$updateSQL = sprintf(
-		"UPDATE dlnmr SET voornaam=%s, tussenvoegsels=%s, achternaam=%s, naam=%s, geboortedatum=%s, geslacht=%s, student=%s, oost=%s, taal=%s, telefoon=%s, mobiel=%s, email=%s, dieet=%s, eerste_inschrijving=%s, AdresId_FK=%s, password=%s WHERE DlnmrId=%s",
+		"UPDATE dlnmr SET voornaam=%s, tussenvoegsels=%s, achternaam=%s, naam=%s, geboortedatum=%s, geslacht=%s, student=%s, oost=%s, taal=%s, telefoon=%s, mobiel=%s, email=%s, dieet=%s, eerste_inschrijving=%s, AdresId_FK=%s, `password`=%s WHERE DlnmrId=%s",
 		quote($_POST['voornaam']),
 		quote($_POST['tussenvoegsels']),
 		quote($_POST['achternaam']),
 		quote($_POST['naam']),
 		quote($_POST['geboortedatum']),
 		quote($_POST['geslacht']),
-		quote(isset($_POST['student']) ? "true" : "", "defined", "'1'", "'0'"),
-		quote(isset($_POST['oost']) ? "true" : "", "defined", "'1'", "'0'"),
+		isset($_POST['student']) ? "1" : "0",
+		isset($_POST['oost']) ? "1" : "0",
 		quote($_POST['taal']),
 		quote($_POST['telefoon']),
 		quote($_POST['mobiel']),
