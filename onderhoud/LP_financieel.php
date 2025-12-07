@@ -6,16 +6,15 @@ error_reporting(E_ERROR);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
 use Pelago\Emogrifier\CssInliner;
+use PhpParser\Node\Expr\Isset_;
 
 Kint::$enabled_mode = true;
 
-d($_REQUEST, $_POST, $_SESSION);
+d($_REQUEST, $_SESSION);
 
 ob_start();
 
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
-if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
-	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
 
 // Kies tarievenmodule:
 require_once("tarieven.php");
@@ -160,12 +159,12 @@ function LeesInschrijving($id, $cursusId)
 }
 
 if (
-	empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == ""
+	empty($_SESSION['DlnmrId']) or $_SESSION['DlnmrId'] == ""
 	or $_POST['leegmaken'] == 'Leegmaken'
 )
 	$id = -1;
 else
-	$id = $_GET['DlnmrId'];
+	$id = $_SESSION['DlnmrId'];
 
 if ((isset($_POST["update"])) && ($_POST["update"] == "Update aanmelding")) {
 	$updateSQL = sprintf(
@@ -213,7 +212,8 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 	d($updateSQL);
 	exec_query($updateSQL);
 
-	LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
+	if (isset($_SESSION['DlnmrId']) && isset($_SESSION['cursus']))
+		LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 
 	// lees de tekst-file
 	$actiedatum = $cursus[$_POST['CursusId_FK']]['datum_korting'];
@@ -315,7 +315,7 @@ d($query_dlnmr);
 
 $dlnmr = select_query($query_dlnmr, 1);
 
-LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
+LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 
 // end Recordset
 
@@ -383,8 +383,8 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 					<td colspan="5">
 						<form id="zoek" name="zoek" method="get"
 							action="<?php echo $editFormAction; ?>"> Id: <input
-								name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-																		echo $_GET['DlnmrId']; ?>" size="5" />
+								name="DlnmrId" type="text" value="<?php if (isset($_SESSION['DlnmrId']))
+																		echo $_SESSION['DlnmrId']; ?>" size="5" />
 							<input type="submit" name="Submit" value="Zoek">
 						</form>
 					</td>
@@ -395,15 +395,15 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 							echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$aantal_inschrijvingen}\" >";
 							foreach ($inschrijving as $i => $inschr) {
 								echo "<option value=\"{$inschr['CursusId_FK']}\"";
-								if (!(strcmp($inschr['CursusId_FK'], $_GET['cursus']))) {
+								if (!(strcmp($inschr['CursusId_FK'], $_SESSION['cursus']))) {
 									echo "SELECTED";
 								}
 								echo '>' . $cursus[$inschr['CursusId_FK']]['NL'];
 							}
 							echo "</option>\n</select>";
 							echo '<input name="DlnmrId" type="hidden" value="';
-							if (isset($_GET['DlnmrId']))
-								echo $_GET['DlnmrId'] . '" />';
+							if (isset($_SESSION['DlnmrId']))
+								echo $_SESSION['DlnmrId'] . '" />';
 							echo '<input type="submit" name="Submit" value="Zoek">';
 							echo '</form></td></tr>';
 						} else
@@ -535,8 +535,8 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 						</td>
 						<td>&#8364;&nbsp; <input type="text" name="cursusgeld"
 								value="<?php if (
-											isset($_GET['DlnmrId'])
-											and $_GET['DlnmrId'] > 0
+											isset($_SESSION['DlnmrId'])
+											and $_SESSION['DlnmrId'] > 0
 										)
 											echo (float) $factuur['cursusgeld']; ?>" size="6" />
 						</td>
@@ -568,7 +568,7 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 							<div align="right">Wensen</div>
 						</td>
 						<td colspan="4"><textarea name="wensen"><?php
-																if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
+																if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] > 0)
 																	echo $factuur['wensen']; ?></textarea>
 						</td>
 					</tr>
@@ -577,7 +577,7 @@ LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 							<div align="right">Donatie </div>
 						</td>
 						<td colspan="4"><textarea name="donatietxt"><?php
-																	if (isset($_GET['DlnmrId']) and $_GET['DlnmrId'] > 0)
+																	if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] > 0)
 																		echo $factuur['donatie']; ?></textarea>
 						</td>
 					</tr>
