@@ -17,8 +17,8 @@ if (empty($_POST['cursus'])) {
     $_POST['zoek'] = 'zoek';
 }
 
-if (isset($_POST['cursus']) && $_POST['cursus'] != '') $_SESSION['cursus'] = $_POST['cursus'];
-if (isset($_SESSION['cursus']) && $_SESSION['cursus'] != '' && empty($_POST['cursus'])) $_POST['cursus'] = $_SESSION['cursus'];
+if (isset($_POST['cursus']) && $_POST['cursus'] != '') $_SESSION['cursuskeuze'] = $_POST['cursus'];
+if (isset($_SESSION['cursuskeuze']) && $_SESSION['cursuskeuze'] != '' && empty($_POST['cursus'])) $_POST['cursus'] = $_SESSION['cursuskeuze'];
 
 if ((isset($_POST["zoek"])) and ($_POST["zoek"] == "zoek") and ($_POST["oude_dlnrs"] == 1)) {
 
@@ -116,8 +116,9 @@ function check($input)
                     href="javascript:wis()" class="w3-text-red w3-hover-white"
                     style="text-decoration: none; padding: 10px;"><b>X</b></a><br>
                 <label>Alle deelnemers van ooit: </label><input
-                    name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1" <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
-                                                                                    echo 'checked'; ?>><br>
+                    name="oude_dlnrs" type="checkbox" id="oude_dlnrs" value="1"
+                    <?php if (isset($_POST['oude_dlnrs']) and $_POST['oude_dlnrs'] != '')
+                        echo 'checked'; ?>><br>
                 <input type="radio" name="cursus" value="alles"
                     onclick="javascript: submit();"
                     <?php check('alles'); ?>><label> Alles</label><br>
@@ -132,10 +133,11 @@ function check($input)
                     <?php check('nieuw'); ?>><label> Nieuwe
                     inschrijvingen</label>
             </p>
-            <input name="zoek" type="hidden" id="zoek" value="zoek"> <?php if (empty($Inschr)) {
-                                                                            $Inschr = $_SESSION['Inschr'];
-                                                                        }
-                                                                        d($aantal_ins, $Inschr); ?> <p>Kies een naam uit: <span
+            <input name="zoek" type="hidden" id="zoek" value="zoek">
+            <?php if (empty($Inschr)) {
+                $Inschr = $_SESSION['Inschr'];
+            }
+            d($aantal_ins, $Inschr); ?> <p>Kies een naam uit: <span
                     class="klein">(totaal:<?php echo $aantal_ins; ?>)</span></p>
             <div id="navcontainer">
                 <ul id="navlist"> <?php foreach ($Inschr as $ins) { ?> <li
