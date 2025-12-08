@@ -1,6 +1,7 @@
 div#mainframe {
     float: left;
     max-width: 1000px;
+    background-color: white;
 }
 
 div#mainpage {
