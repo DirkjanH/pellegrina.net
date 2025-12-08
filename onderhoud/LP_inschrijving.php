@@ -434,7 +434,8 @@ d($cursus, $dlnmr, $inschrijving);
                         <td><input type="checkbox" name="storting_fonds"
                                 value="1"
                                 <?php if (!(strcmp($ins['storting_fonds'], "1"))) echo "checked"; ?> /><label
-                                for="storting_fonds">Storting_fonds:</label>
+                                for="storting_fonds">&nbsp;Storting
+                                fonds</label>
                         </td>
                         <td align="right">Donatie:</td>
                         <td>&euro;&nbsp; <input type="text" name="donatie"
