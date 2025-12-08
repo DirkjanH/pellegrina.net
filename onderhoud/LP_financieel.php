@@ -79,6 +79,8 @@ foreach ($cursussen as $cur) {
 
 d($cursus);
 
+$_SESSION['cursus'] = $_POST['CursusId_FK'];
+
 // end Recordset cursusgegevens
 
 function LeesInschrijving($id, $cursusId)
