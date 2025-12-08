@@ -8,11 +8,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 use Pelago\Emogrifier\CssInliner;
 use PhpParser\Node\Expr\Isset_;
 
+ob_start();
+
 Kint::$enabled_mode = false;
 
 d($_REQUEST, $_SESSION);
-
-ob_start();
 
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 

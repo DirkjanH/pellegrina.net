@@ -17,6 +17,9 @@ if (empty($_POST['cursus'])) {
     $_POST['zoek'] = 'zoek';
 }
 
+if (isset($_POST['cursus']) && $_POST['cursus'] != '') $_SESSION['cursus'] = $_POST['cursus'];
+if (isset($_SESSION['cursus']) && $_SESSION['cursus'] != '' && empty($_POST['cursus'])) $_POST['cursus'] = $_SESSION['cursus'];
+
 if ((isset($_POST["zoek"])) and ($_POST["zoek"] == "zoek") and ($_POST["oude_dlnrs"] == 1)) {
 
     // begin Recordset
