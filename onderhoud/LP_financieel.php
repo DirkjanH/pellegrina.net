@@ -297,7 +297,7 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 
 	d($mail);
 
-	if ($_POST['afgewezen'] != 'on' or $insch['afgewezen' != 1]) {
+	/*	if ($_POST['afgewezen'] != 'on' or $insch['afgewezen' != 1]) {
 		if (!$mail->Send()) {
 			echo "Bericht kon niet verzonden worden.<br>";
 			echo "Mailer Error: " . $mail->ErrorInfo;
@@ -305,6 +305,7 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 		} else
 			echo "<p class=\"w3-red w3-small\">Bericht verzonden</p>";
 	}
+			*/
 } // update & verzend voorlopige bevestiging 
 
 // begin Recordset 'dlnmr' voor deelnemersnaam
