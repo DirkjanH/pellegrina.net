@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 
 d($_SESSION, $_POST);
