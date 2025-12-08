@@ -445,8 +445,8 @@ d($cursus, $dlnmr, $inschrijving);
                         <input name="storting_fonds" type="hidden"
                             value="<?php if ($ins['donatie'] > 0) echo 1; ?>">
                     </tr>
-                    <tr>
-                        <td nowrap align="right">Acc_wens:</td>
+                    <tr valign="baseline">
+                        <td nowrap align="right">Accommodatie- wens:</td>
                         <td colspan="3"><textarea name="acc_wens" cols="80"
                                 rows="5"><?php echo stripslashes($ins['acc_wens']); ?></textarea>
                         </td>
@@ -484,7 +484,7 @@ d($cursus, $dlnmr, $inschrijving);
                         <td><input name="voorl_bev" type="text" id="voorl_bev"
                                 value="<?php echo stripslashes($ins['voorl_bev']); ?>"
                                 size="10" /></td>
-                        <td>bus Praag: </td>
+                        <td>bus vanaf station:</td>
                         <td>
                             <p>heen: <input name="busheen" type="checkbox"
                                     id="busheen" value="1"
