@@ -72,17 +72,18 @@ a.button {
     font-size: small;
 }
 
+#navigatiebalk {
+    margin: 16px 8px 16px 8px;
+    clear: both;
+}
+
 .container {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: auto auto auto auto auto;
     row-gap: 4px;
     column-gap: 4px;
-    margin: 16px 8px 16px 8px;
-    clear: both;
     color: #000 !important;
-    background-color: #fff !important;
-    justify-content: space-evenly;
 }
 
 .grid_item {
