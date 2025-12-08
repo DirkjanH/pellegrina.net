@@ -4,16 +4,12 @@ div#mainframe {
 }
 
 div#mainpage {
-    margin-top: 25px;
+    padding-top: 16px;
     clear: both;
-    color: #000 !important;
-    background-color: #fff !important;
 }
 
 div#zoeknaam {
     float: left;
-    color: #000 !important;
-    background-color: #fff !important;
 }
 
 div#navigatie {
