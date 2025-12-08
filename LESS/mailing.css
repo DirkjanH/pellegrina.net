@@ -1,0 +1,150 @@
+@charset "utf-8";
+@import '/css/w3.css';
+/* mailing.less Versie 1.0 auteur: Dirkjan Horringa */
+body {
+  font: 15px 'Alegreya Sans', Verdana, sans-serif;
+}
+p,
+td,
+li,
+a {
+  font-size: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  color: #381B1B;
+  font: bold 180%/1.5em "Cambria", "serif";
+}
+h2 {
+  font-family: "Cambria", "serif";
+  color: #C7352E;
+  text-align: left;
+  padding-bottom: -15px;
+  font: bold 2em;
+  letter-spacing: 0.06em;
+  padding-top: 0.63em;
+}
+h3 {
+  font-family: "Cambria", "serif";
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3B7E36;
+  letter-spacing: 0.1em;
+  padding-top: 0.63em;
+}
+h4 {
+  font-family: "Cambria", "serif";
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #0054A8;
+  letter-spacing: 0.06em;
+  padding-top: 0.63em;
+  margin-bottom: -0.2em;
+}
+h5 {
+  font-size: 110%;
+  font-weight: bold;
+  color: #862437;
+  text-align: center;
+}
+ul {
+  list-style-image: none;
+  text-align: left;
+  font-size: 13px;
+  list-style: square outside none;
+}
+li {
+  padding-bottom: 0.31em;
+}
+table {
+  border-collapse: collapse;
+  border: none;
+}
+a:active {
+  color: #60F;
+  text-decoration: underline;
+}
+a:link {
+  color: #63C;
+  text-decoration: underline;
+}
+a:visited {
+  color: #636;
+  text-decoration: underline;
+}
+a:hover {
+  color: #63F;
+  text-decoration: underline;
+}
+img {
+  border: 1px solid black;
+}
+img.geenlijn {
+  border: none;
+}
+.chamber {
+  color: #C01115;
+}
+.baroque {
+  color: #D17F00;
+}
+.classical {
+  color: #106D8C;
+}
+.romantic {
+  color: #044EFA;
+}
+.groot {
+  font-size: 150%;
+  text-align: left;
+}
+.nadruk {
+  color: #F00;
+  font-weight: bold;
+  font-size: 80%;
+}
+.kleinkap {
+  font-variant: small-caps;
+}
+.klein {
+  font-size: 70%;
+}
+.grijs {
+  color: #999;
+}
+.centreer {
+  text-align: center;
+}
+.opvallend {
+  color: #090;
+}
+.inleiding {
+  font: 150% Georgia, "Times New Roman", Times, serif;
+  margin-top: 10px;
+}
+.onzichtbaar {
+  display: none;
+}
+th {
+  font-style: italic;
+  color: black;
+  font-size: 13px;
+  background: #E697A7;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+p.volvoor {
+  font-weight: bold;
+  background: #FFCACA;
+  border: 1px solid #CC0000;
+  padding-left: 10px;
+  color: #CC0000;
+}
+p.plaatsvoor {
+  font-weight: bold;
+  background: #C4FFC4;
+  border: 1px solid #009700;
+  padding-left: 10px;
+  color: #009700;
+}
