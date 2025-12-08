@@ -192,7 +192,7 @@ if ((isset($_POST["update"])) && ($_POST["update"] == "Update aanmelding")) {
 } // update 
 
 if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")) {
-	$updateSQL = sprintf(
+	$bevestigSQL = sprintf(
 		"UPDATE inschrijving SET storting_fonds=%s, donatie=%F, aanbetaling=now(), aangebracht=%s, aangenomen=%s, 		
 	afgewezen=%s, voorl_bev=CURDATE(), info_korting=%s,
 	korting=%F, extra=%F, aanbet_bedrag=%F, PayPal=%s, meerdaneen=%s, cursusgeld=%F WHERE InschId=%s",
@@ -211,8 +211,8 @@ if ((isset($_POST["bevestig"])) && ($_POST["bevestig"] == "Bevestig aanmelding")
 		quote($_POST['InschId'])
 	);
 
-	d($updateSQL);
-	exec_query($updateSQL);
+	d($bevestigSQL);
+	exec_query($bevestigSQL);
 
 	if (isset($_SESSION['DlnmrId']) && $_SESSION['DlnmrId'] != 0 && isset($_SESSION['cursus']) && $_SESSION['cursus'] != 0)
 		LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
@@ -429,7 +429,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 																		echo $insch['InschId']; ?>">
 						</td>
 					</tr>
-					<tr valign="baseline">
+					<tr>
 						<td nowrap align="right">
 							<div align="right">Storting fonds:</div>
 						</td>
@@ -480,7 +480,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 						</td>
 						<td>&nbsp;</td>
 					</tr>
-					<tr valign="baseline">
+					<tr>
 						<td nowrap align="right">
 							<div align="right">Aangenomen:</div>
 						</td>
@@ -501,7 +501,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 						</td>
 						<td>&nbsp;</td>
 					</tr>
-					<tr valign="baseline">
+					<tr>
 						<td nowrap align="right"> <?php // bereken cursusgeld
 
 													$ins['oost'] = $dlnmr['oost'];
@@ -549,7 +549,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 						</td>
 						<td>&nbsp;</td>
 					</tr>
-					<tr valign="baseline">
+					<tr>
 						<td>
 							<div align="right">Voorlopige bevestiging:
 								<?php d($insch['voorl_bev']); ?> </div>
@@ -563,7 +563,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 																					echo "checked"; ?> value="1" />&nbsp;</td>
 						<td>&nbsp;</td>
 					</tr>
-					<tr valign="baseline">
+					<tr>
 						<td align="right" valign="top" nowrap>
 							<div align="right">Wensen</div>
 						</td>
@@ -572,7 +572,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 																	echo $factuur['wensen']; ?></textarea>
 						</td>
 					</tr>
-					<tr valign="baseline">
+					<tr>
 						<td align="right" valign="top" nowrap>
 							<div align="right">Donatie </div>
 						</td>
@@ -591,21 +591,21 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 													echo stripslashes($_POST['opmerking']); ?></textarea>
 						</td>
 					</tr>
-					<tr valign="baseline">
+					<tr>
 						<td>&nbsp;</td>
-						<td valign="baseline">
+						<td>
 							<div class="rechts">
 								<input name="update" type="submit"
 									value="Update aanmelding" />
 							</div>
 						</td>
-						<td valign="baseline">&nbsp;</td>
-						<td valign="baseline"
+						<td>&nbsp;</td>
+						<td
 							onClick="ConfirmMsg();return self.document.MM_returnValue">
 							<input type="submit" name="bevestig"
 								value="Bevestig aanmelding" />
 						</td>
-						<td valign="baseline"
+						<td
 							onClick="ConfirmMsg();return self.document.MM_returnValue">
 							&nbsp;</td>
 					</tr>
