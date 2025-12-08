@@ -84,6 +84,9 @@ a.button {
     column-gap: 4px;
     margin: 16px 8px 16px 8px;
     clear: both;
+    color: #000 !important;
+    background-color: #fff !important;
+    justify-content: space-evenly;
 }
 
 .grid_item {
