@@ -75,3 +75,30 @@ a.button {
     text-decoration: none;
     font-size: small;
 }
+
+.container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 4px;
+    column-gap: 4px;
+    margin: 16px 8px 16px 8px;
+    clear: both;
+}
+
+.grid_item {
+    width: 180px;
+    background-color: palegoldenrod;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+/* Make a one column-layout instead of three-column layout */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: auto;
+        width: 200px;
+        float: left;
+        clear: both;
+    }
+}
