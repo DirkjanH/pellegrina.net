@@ -33,10 +33,10 @@ WHERE voorl_bev IS NULL
 	AND achternaam NOT LIKE '%YYY%'
 	AND achternaam NOT LIKE '%ZZZ%'
 	AND geboortedatum != 0
+	and aanbet_bedrag = 0 or aanbet_bedrag IS NULL
 	AND (rekening_opmerking IS NULL OR rekening_opmerking NOT LIKE '%cash%')
 	AND NOT(afgewezen <=> 1)
-	AND CursusId_FK BETWEEN {$eerstecursus}
-	AND {$laatstecursus}
+	AND CursusId_FK BETWEEN {$eerstecursus} AND {$laatstecursus}
 ORDER BY dagen DESC";
 
 d($query_wanbetalers);
@@ -143,9 +143,9 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 	<div id="mainframe">
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
-		<div id="mainpage" class="w3-panel w3-white" style="max-width: 900px;">
-			<h2>Verzend reminder aan deelnemers die nog niet hun inschrijfgeld
-				hebben overgemaakt</h2><br>
+		<div id="mainpage">
+			<h3>Verzend reminder aan deelnemers die nog niet hun inschrijfgeld
+				hebben overgemaakt</h3><br>
 			<p>In totaal <?php echo $totalRows_wanbetalers; ?> deelnemers hebben
 				nog geen inschrijfgeld betaald</p>
 			<form action="" method="post" name="zoek" id="zoek">
