@@ -154,7 +154,7 @@ function LeesInschrijving($id, $cursusId)
 		else
 			$aantal_inschrijvingen = 0;
 
-		d($inschrijving);
+		d($inschrijving, $aantal_inschrijvingen);
 	}
 
 	// end Recordset
