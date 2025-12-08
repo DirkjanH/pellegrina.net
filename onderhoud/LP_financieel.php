@@ -12,7 +12,7 @@ ob_start();
 
 Kint::$enabled_mode = true;
 
-d($_REQUEST, $_SESSION);
+d($_REQUEST, $_POST, $_SESSION);
 
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 
