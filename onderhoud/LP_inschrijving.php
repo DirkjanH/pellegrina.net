@@ -298,21 +298,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 rows="5"><?php echo stripslashes($ins['stukken_i']); ?></textarea>
                         </td>
                     </tr>
-                    <tr>
-                        <td nowrap align="right">Groot_ensemble1:</td>
-                        <td width="119"><input type="checkbox"
-                                name="groot_ensemble1" value="1" <?php if (!(strcmp($ins['groot_ensemble1'], "1"))) {
-                                                                        echo "checked";
-                                                                    } ?> />
-                        </td>
-                        <td width="123" align="right" nowrap>Groot_ensemble2:
-                        </td>
-                        <td><input type="checkbox" name="groot_ensemble2"
-                                value="1" <?php if (!(strcmp($ins['groot_ensemble2'], "1"))) {
-                                                echo "checked";
-                                            } ?> />
-                        </td>
-                    </tr>
+                    <hr>
                     <tr>
                         <td nowrap align="right">Zanger:</td>
                         <td><input type="checkbox" name="zanger"
