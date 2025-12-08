@@ -194,6 +194,7 @@ $query_cursus = "SELECT
     , eenpers
     , hotel_2pp
     , hotel_1pp
+    , hotel_1_2pp
     , meerpers
     , kamperen
     , toehoorder
@@ -238,6 +239,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		$ins['eenpersoons'] = $inschr['eenpersoons'];
 		$ins['hotel_2pp'] = $inschr['hotel_2pp'];
 		$ins['hotel_1pp'] = $inschr['hotel_1pp'];
+		$ins['hotel_1_2pp'] = $inschr['hotel_1_2pp'];
 		$ins['kamperen'] = $inschr['kamperen'];
 		$ins['meerpers'] = $inschr['meerpers'];
 		$ins['storting_fonds'] = $inschr['storting_fonds'];
@@ -297,8 +299,8 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			$mail_text = str_replace("{datum_betaling}", $datum_betaling, $mail_text);
 			$mail_text = str_replace("{tebetalen}", $tebetalen, $mail_text);
 			$mail_text = str_replace("{wensen}", stripslashes($inschr['wensen']), $mail_text);
-			if ($factuur[donatie] > 0)
-				$mail_text = str_replace("{donatie}", $inschr[donatie], $mail_text);
+			if ($factuur['donatie'] > 0)
+				$mail_text = str_replace("{donatie}", $inschr['donatie'], $mail_text);
 			else $mail_text = str_replace("{donatie}", '', $mail_text);
 
 			// stuur een mail
@@ -374,7 +376,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<table width="90%" border="0" align="left">
+			<table width="90%" class="w3-table" align="left">
 				<tr>
 					<td colspan="2">
 						<form id="zoek" name="zoek" method="get"
