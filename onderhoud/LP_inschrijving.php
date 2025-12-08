@@ -378,51 +378,52 @@ d($cursus, $dlnmr, $inschrijving);
                     <tr valign="baseline">
                         <td>>&nbsp;</td>
                         <td colspan="3">
-                            <table width="100%" border="0" cellpadding="5">
+                            <table width="100%" class="w3-table" border="0"
+                                cellpadding="5">
                                 <tr>
                                     <td><input type="checkbox"
                                             name="eenpersoons" value="1"
                                             <?php if (!(strcmp($ins['eenpersoons'], "1"))) echo "checked"; ?> /><label
-                                            for="eenpersoons">>&nbsp;1pp
+                                            for="eenpersoons">&nbsp;1pp
                                             (GV)</label>
                                     </td>
                                     <td><input type="checkbox" name="hotel_1pp"
                                             value="1"
                                             <?php if (!(strcmp($ins['hotel_1pp'], "1"))) echo "checked"; ?> /><label
-                                            for="hotel_1pp">>&nbsp;1pp
-                                            PG</label></td>
+                                            for="hotel_1pp">&nbsp;1pp PG</label>
+                                    </td>
                                     <td><input type="checkbox" name="hotel_2pp"
                                             value="1"
                                             <?php if (!(strcmp($ins['hotel_2pp'], "1"))) echo "checked"; ?> /><label
-                                            for="hotel_2pp">>&nbsp;2pp
-                                            PG</label></td>
+                                            for="hotel_2pp">&nbsp;2pp PG</label>
+                                    </td>
                                     <td><input type="checkbox"
                                             name="hotel_1_2pp" value="1"
                                             <?php if (!(strcmp($ins['hotel_1_2pp'], "1"))) echo "checked"; ?> /><label
-                                            for="hotel_1_2pp">>&nbsp;1pp in 2pp
+                                            for="hotel_1_2pp">&nbsp;1pp in 2pp
                                             PG</label></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox" name="kamperen"
                                             value="1"
                                             <?php if (!(strcmp($ins['kamperen'], "1"))) echo "checked"; ?> /><label
-                                            for="kamperen">>&nbsp;kamperen</label>
+                                            for="kamperen">&nbsp;kamperen</label>
                                     </td>
                                     <td><input type="checkbox" name="meerpers"
                                             value="1"
                                             <?php if (!(strcmp($ins['meerpers'], "1"))) echo "checked"; ?> /><label
-                                            for="meerpers">>&nbsp;meerpers.</label>
+                                            for="meerpers">&nbsp;meerpers.</label>
                                     </td>
                                     <td><input type="checkbox" name="eigen_acc"
                                             value="1"
                                             <?php if (!(strcmp($ins['eigen_acc'], "1"))) echo "checked"; ?> /><label
-                                            for="eigen_acc">>&nbsp;eigen
+                                            for="eigen_acc">&nbsp;eigen
                                             acc.</label>
                                     </td>
                                     <td><input type="checkbox" name="diner"
                                             value="1"
                                             <?php if (!(strcmp($ins['diner'], "1"))) echo "checked"; ?> /><label
-                                            for="diner">>&nbsp;diner bij eigen
+                                            for="diner">&nbsp;diner bij eigen
                                             acc.</label></td>
                                 </tr>
                             </table>
