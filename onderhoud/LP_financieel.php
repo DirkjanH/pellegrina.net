@@ -19,6 +19,9 @@ if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] =
 // Kies tarievenmodule:
 require_once("tarieven.php");
 
+unset($_SESSION['cursus']);
+unset($_SESSION['Inschr']);
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailfuncties.inc.php';
 
 $query_cursus = "SELECT
