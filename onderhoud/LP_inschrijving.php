@@ -446,7 +446,7 @@ d($cursus, $dlnmr, $inschrijving);
                             value="<?php if ($ins['donatie'] > 0) echo 1; ?>">
                     </tr>
                     <tr valign="baseline">
-                        <td nowrap align="right">Accommodatie- wens:</td>
+                        <td nowrap align="right" valign="top">Acc. wens:</td>
                         <td colspan="3"><textarea name="acc_wens" cols="80"
                                 rows="5"><?php echo stripslashes($ins['acc_wens']); ?></textarea>
                         </td>
