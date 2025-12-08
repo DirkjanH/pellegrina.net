@@ -10,7 +10,7 @@ use PhpParser\Node\Expr\Isset_;
 
 ob_start();
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_SESSION);
 
@@ -18,9 +18,6 @@ if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] =
 
 // Kies tarievenmodule:
 require_once("tarieven.php");
-
-unset($_SESSION['cursus']);
-unset($_SESSION['Inschr']);
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailfuncties.inc.php';
 
