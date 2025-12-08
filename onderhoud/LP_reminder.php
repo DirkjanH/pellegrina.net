@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 
 d($_SESSION, $_POST);
@@ -145,7 +145,7 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 		</header>
 		<div id="mainpage">
 			<h3>Verzend reminder aan deelnemers die nog niet hun inschrijfgeld
-				hebben overgemaakt</h3><br>
+				hebben overgemaakt</h3>
 			<p>In totaal <?php echo $totalRows_wanbetalers; ?> deelnemers hebben
 				nog geen inschrijfgeld betaald</p>
 			<form action="" method="post" name="zoek" id="zoek">
