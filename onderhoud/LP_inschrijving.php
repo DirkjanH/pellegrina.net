@@ -239,7 +239,7 @@ d($cursus, $dlnmr, $inschrijving);
                 action="<?php echo $editFormAction; ?>">
                 <p>&nbsp;</p>
                 <table width="626" border="0" style="clear: both;">
-                    <tr valign="baseline">
+                    <tr>
                         <td width="119" align="right" nowrap>
                             <p>Naam:</p>
                         </td>
@@ -252,7 +252,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 size="3">
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Cursus:</td>
                         <td colspan="3">
                             <?php if ($ins['CursusId_FK'] != "") echo "Inschrijving nr. <input name=\"InschId\" type=\"text\" class=\"uit\" value=\"{$ins['InschId']}\" size=\"2\">&nbsp;&nbsp;<b>{$cursus[$ins['CursusId_FK']]['cursusnaam_nl']}</b>"; ?>
@@ -260,7 +260,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 value="<?php echo stripslashes($ins['CursusId_FK']); ?>">
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Instrumentalist:</td>
                         <td colspan="3"><input type="checkbox"
                                 name="instrumentalist" id="instr_checkbox"
@@ -268,37 +268,37 @@ d($cursus, $dlnmr, $inschrijving);
                                 <?php if (!(strcmp($ins['instrumentalist'], "1"))) echo "checked"; ?> />
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Instrumenten:</td>
                         <td colspan="3"><input type="text" name="instrumenten"
                                 value="<?php echo stripslashes($ins['instrumenten']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Instr. &amp; zangstem:</td>
                         <td colspan="3"><input type="text" name="instr"
                                 value="<?php echo stripslashes($ins['instr']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Niveau_i:</td>
                         <td colspan="3"><input type="text" name="niveau_i"
                                 value="<?php echo stripslashes($ins['niveau_i']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Ervaring_i:</td>
                         <td colspan="3"><input type="text" name="ervaring_i"
                                 value="<?php echo stripslashes($ins['ervaring_i']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right" valign="top">Stukken_i:</td>
                         <td colspan="3"><textarea name="stukken_i" cols="80"
                                 rows="5"><?php echo stripslashes($ins['stukken_i']); ?></textarea>
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Groot_ensemble1:</td>
                         <td width="119"><input type="checkbox"
                                 name="groot_ensemble1" value="1" <?php if (!(strcmp($ins['groot_ensemble1'], "1"))) {
@@ -313,7 +313,7 @@ d($cursus, $dlnmr, $inschrijving);
                                             } ?> />
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Zanger:</td>
                         <td><input type="checkbox" name="zanger"
                                 id="zang_checkbox" value="1"
@@ -325,7 +325,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 <?php if (!(strcmp($ins['solozanger'], "1"))) echo "checked"; ?> />
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Zangstem:</td>
                         <td><input type="text" name="zangstem"
                                 value="<?php echo stripslashes($ins['zangstem']); ?>"
@@ -335,7 +335,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 value="<?php echo stripslashes($ins['rol_z']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Niveau_z:</td>
                         <td><input type="text" name="niveau_z"
                                 value="<?php echo stripslashes($ins['niveau_z']); ?>"
@@ -345,27 +345,27 @@ d($cursus, $dlnmr, $inschrijving);
                                 value="<?php echo stripslashes($ins['niveau_s']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Ervaring_z:</td>
                         <td colspan="3"><input type="text" name="ervaring_z"
                                 value="<?php echo stripslashes($ins['ervaring_z']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right" valign="top">Stukken_z:</td>
                         <td colspan="3"><textarea name="stukken_z" cols="80"
                                 rows="5"><?php echo stripslashes($ins['stukken_z']); ?></textarea>
                         </td>
                     </tr>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Toehoorder:</td>
                         <td><input type="checkbox" name="toehoorder" value="1"
                                 <?php if (!(strcmp($ins['toehoorder'], "1"))) echo "checked"; ?> />
                         </td>
                         <td>&nbsp;</td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">vervoer:</td>
                         <td><input type="text" name="vervoer"
                                 value="<?php echo stripslashes($ins['vervoer']); ?>"
@@ -375,7 +375,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 value="<?php echo stripslashes($ins['korting']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td>&nbsp;</td>
                         <td colspan="3">
                             <table width="100%" class="w3-table w3-panel"
@@ -429,7 +429,7 @@ d($cursus, $dlnmr, $inschrijving);
                             </table>
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td>&nbsp;</td>
                         <td><input type="checkbox" name="storting_fonds"
                                 value="1"
@@ -445,19 +445,19 @@ d($cursus, $dlnmr, $inschrijving);
                         <input name="storting_fonds" type="hidden"
                             value="<?php if ($ins['donatie'] > 0) echo 1; ?>">
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right" valign="top">Acc. wens:</td>
                         <td colspan="3"><textarea name="acc_wens" cols="80"
                                 rows="5"><?php echo stripslashes($ins['acc_wens']); ?></textarea>
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right" valign="top">Opmerkingen:</td>
                         <td colspan="3"><textarea name="opmerkingen" cols="80"
                                 rows="5"><?php echo stripslashes($ins['opmerkingen']); ?></textarea>
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Aanbetaald bedr.:</td>
                         <td>&euro;&nbsp; <input type="text" name="aanbet_bedrag"
                                 value="<?php echo stripslashes($ins['aanbet_bedrag']); ?>"
@@ -469,7 +469,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 size="6" />
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Datum inschr.:</td>
                         <td><input type="text" name="datum_inschr"
                                 value="<?php echo stripslashes($ins['datum_inschr']); ?>"
@@ -479,7 +479,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 value="<?php echo stripslashes($ins['aanmaning_inschr']); ?>"
                                 size="10" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Voorlopige bev.: </td>
                         <td><input name="voorl_bev" type="text" id="voorl_bev"
                                 value="<?php echo stripslashes($ins['voorl_bev']); ?>"
@@ -495,7 +495,7 @@ d($cursus, $dlnmr, $inschrijving);
                             </p>
                         </td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>Bijzonderheden</td>
@@ -503,7 +503,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 value="<?php echo stripslashes($ins['bus_bijzonderheden']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Aangenomen:</td>
                         <td><input
                                 <?php if (!(strcmp($ins['aangenomen'], 1))) echo "checked"; ?>
@@ -514,7 +514,7 @@ d($cursus, $dlnmr, $inschrijving);
                                 value="<?php echo stripslashes($ins['inzeepdag']); ?>"
                                 size="32" /></td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">Afgewezen:</td>
                         <td><input
                                 <?php if (!(strcmp($ins['afgewezen'], 1))) echo "checked"; ?>
@@ -525,7 +525,7 @@ d($cursus, $dlnmr, $inschrijving);
                             &nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
-                    <tr valign="baseline">
+                    <tr>
                         <td nowrap align="right">&nbsp;</td>
                         <td><input name="Wijzigen" type="submit" id="Wijzigen"
                                 value="Wijzigen" /></td>
