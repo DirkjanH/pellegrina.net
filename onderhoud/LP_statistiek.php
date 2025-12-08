@@ -194,7 +194,7 @@ while ($i <= ($laatstecursus)) {
 	<meta name="theme-color" content="#ffffff">
 	<title>LP statistiek</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/zoeknaam.css">
+	<link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
 
 <body>

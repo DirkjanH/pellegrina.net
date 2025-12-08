@@ -180,7 +180,7 @@ d($cursus, $dlnmr, $inschrijving);
     <meta name="theme-color" content="#ffffff">
     <title>LP bewerk inschrijving</title>
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-    <link rel="stylesheet" href="/css/zoeknaam.css">
+    <link rel="stylesheet" href="/css/LP_onderhoud.css">
     <SCRIPT>
         function GP_popupConfirmMsg(msg) { //v1.0
             document.MM_returnValue = confirm(msg);

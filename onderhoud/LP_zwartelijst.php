@@ -127,7 +127,7 @@ else $aantal_zwl = 0;
 	<meta name="theme-color" content="#ffffff">
 	<title>LP zwarte lijst</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/zoeknaam.css">
+	<link rel="stylesheet" href="/css/LP_onderhoud.css">
 	<style type="text/css">
 		<!-- 
 		.categorie1 {

@@ -139,7 +139,7 @@ $onbekend = select_query($query_onbekend);
 	<meta name="theme-color" content="#ffffff">
 	<title>LP Herhalingsconcerten</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<link rel="stylesheet" href="/css/zoeknaam.css" type="text/css">
+	<link rel="stylesheet" href="/css/LP_onderhoud.css" type="text/css">
 	<SCRIPT TYPE="text/javascript">
 		function ZoekCursus(nr) {
 			document.zoek.cursus.value = nr;

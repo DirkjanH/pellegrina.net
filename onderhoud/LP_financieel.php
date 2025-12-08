@@ -345,7 +345,7 @@ LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
 	<meta name="theme-color" content="#ffffff">
 	<title>LP voorlopige bevestiging</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/zoeknaam.css">
+	<link rel="stylesheet" href="/css/LP_onderhoud.css">
 	<style type="text/css">
 		textarea {
 			width: 100%;

@@ -360,7 +360,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 	<meta name="theme-color" content="#ffffff">
 	<title>LP rekeningen maken</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/zoeknaam.css">
+	<link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
 
 <body>

@@ -127,7 +127,7 @@ if ((isset($_POST["aanmanen"])) && ($_POST["aanmanen"] == "aanmanen")) {
 	<meta name="theme-color" content="#ffffff">
 	<title>LP aanmaning inschrijfgeld</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<link rel="stylesheet" href="/css/zoeknaam.css" type="text/css">
+	<link rel="stylesheet" href="/css/LP_onderhoud.css" type="text/css">
 	<script LANGUAGE="JavaScript" TYPE="text/javascript">
 		function switchAll() {
 			for (var j = 0; j < <?php echo $totalRows_wanbetalers; ?>; j++) {
