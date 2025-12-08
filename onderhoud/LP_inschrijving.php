@@ -376,10 +376,10 @@ d($cursus, $dlnmr, $inschrijving);
                                 size="32" /></td>
                     </tr>
                     <tr valign="baseline">
-                        <td>>&nbsp;</td>
+                        <td>&nbsp;</td>
                         <td colspan="3">
-                            <table width="100%" class="w3-table" border="0"
-                                cellpadding="5">
+                            <table width="100%" class="w3-table w3-panel"
+                                border="0" cellpadding="5">
                                 <tr>
                                     <td><input type="checkbox"
                                             name="eenpersoons" value="1"
