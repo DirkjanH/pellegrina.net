@@ -36,7 +36,7 @@ WHERE voorl_bev IS NULL
 	and aanbet_bedrag = 0 or aanbet_bedrag IS NULL
 	AND (rekening_opmerking IS NULL OR rekening_opmerking NOT LIKE '%cash%')
 	AND NOT(afgewezen <=> 1)
-	AND CursusId_FK > {$cursus_offset}
+	AND CursusId_FK between {$eerstecursus} AND {$laatstecursus}
 	
 ORDER BY dagen DESC";
 
