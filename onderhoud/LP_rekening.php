@@ -67,8 +67,6 @@ if ($id == -1) {
   student,
   meerdaneen,
   eigen_acc,
-  i.maaltijdpas,
-  ACMP,
   rekening_verzonden,
   CursusId_FK,
   DlnmrId_FK,
@@ -345,18 +343,25 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 <html>
 
 <head>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<META NAME="robots" CONTENT="noindex, nofollow">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-	<link rel="manifest" href="https://pellegrina.net/Images/Logos/site.webmanifest">
-	<link rel="mask-icon" href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="https://pellegrina.net/Images/Logos/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+	<link rel="manifest"
+		href="https://pellegrina.net/Images/Logos/site.webmanifest">
+	<link rel="mask-icon"
+		href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
+		color="#5bbad5">
+	<link rel="shortcut icon"
+		href="https://pellegrina.net/Images/Logos/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+	<meta name="msapplication-config"
+		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>LP rekeningen maken</title>
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
@@ -364,54 +369,52 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 </head>
 
 <body>
-	<div id="zoeknaam">
-		<?php require_once('LP_zoeknaam.php'); ?>
-	</div>
+	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
 	<div id="mainframe">
-		<header id="navigatiebalk">
-			<?php require_once('LP_navigatie.php'); ?>
+		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
 			<table width="90%" border="0" align="left">
 				<tr>
 					<td colspan="2">
-						<form id="zoek" name="zoek" method="get" action="<?php echo $editFormAction; ?>">
-							Id:
-							<input name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-																			echo $_GET['DlnmrId']; ?>" size="5" />
+						<form id="zoek" name="zoek" method="get"
+							action="<?php echo $editFormAction; ?>"> Id: <input
+								name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+																		echo $_GET['DlnmrId']; ?>" size="5" />
 							<input type="submit" name="Submit" value="Zoek">
-							Rekening al verzonden:
-							<input name="rekening_verzonden" type="checkbox" id="rekening_verzonden" <?php
-																										if (isset($inschr['rekening_verzonden']) and $inschr['rekening_verzonden'] != '') echo 'checked'; ?> value="1">
+							Rekening al verzonden: <input
+								name="rekening_verzonden" type="checkbox"
+								id="rekening_verzonden"
+								<?php
+								if (isset($inschr['rekening_verzonden']) and $inschr['rekening_verzonden'] != '') echo 'checked'; ?>
+								value="1">
 						</form>
 					</td>
-				</tr>
-				<?php
-				if (isset($aantal_inschrijvingen) and $aantal_inschrijvingen > 1) {
-					d($inschrijving);
-					echo "<tr><td colspan=\"3\">";
-					echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
-					echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$aantal_inschrijvingen}\" >";
-					foreach ($inschrijving as $in) {
-						echo "<option value=\"{$in['CursusId_FK']}\"";
-						if (!(strcmp($in['CursusId_FK'], $_GET['cursus']))) {
-							echo "SELECTED";
-						}
-						echo '>' . $cursus[$in['CursusId_FK']]['NL'];
-					}
-					echo "</option>\n</select>";
-					echo '<input name="DlnmrId" type="hidden" value="';
-					if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
-					echo '<input type="submit" name="Submit" value="Zoek">';
-					echo '</form></td></tr>';
+				</tr> <?php
+						if (isset($aantal_inschrijvingen) and $aantal_inschrijvingen > 1) {
+							d($inschrijving);
+							echo "<tr><td colspan=\"3\">";
+							echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
+							echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$aantal_inschrijvingen}\" >";
+							foreach ($inschrijving as $in) {
+								echo "<option value=\"{$in['CursusId_FK']}\"";
+								if (!(strcmp($in['CursusId_FK'], $_GET['cursus']))) {
+									echo "SELECTED";
+								}
+								echo '>' . $cursus[$in['CursusId_FK']]['NL'];
+							}
+							echo "</option>\n</select>";
+							echo '<input name="DlnmrId" type="hidden" value="';
+							if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
+							echo '<input type="submit" name="Submit" value="Zoek">';
+							echo '</form></td></tr>';
 
-					foreach ($inschrijving as $key => $inschrijf)
-						if (isset($_GET['cursus']) and $inschrijf['CursusId_FK'] != $_GET['cursus']) unset($inschrijving[$key]);
-					$_SESSION['inschrijving'] = $inschrijving;
-					d($inschrijving);
-				}
-				?>
-				<tr>
+							foreach ($inschrijving as $key => $inschrijf)
+								if (isset($_GET['cursus']) and $inschrijf['CursusId_FK'] != $_GET['cursus']) unset($inschrijving[$key]);
+							$_SESSION['inschrijving'] = $inschrijving;
+							d($inschrijving);
+						}
+						?> <tr>
 					<td colspan="2">
 						<h2>Naam:&nbsp;<?php if ($id != -1) echo $inschr['naam']; ?><br>
 						</h2>
@@ -419,12 +422,15 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 				</tr>
 				<tr>
 					<td colspan="2">
-						<form action="<?php echo $editFormAction; ?>" method="POST" name="update" id="update">
+						<form action="<?php echo $editFormAction; ?>"
+							method="POST" name="update" id="update">
 							<p>
-								<input type="submit" name="verzend" value="Maak rekeningen" />
-								&nbsp;&nbsp;
-								<label>Daadwerkelijk verzenden:
-									<input name="verzenden" type="checkbox" id="verzenden" value="1" <?php if (isset($_POST['verzenden'])) echo 'checked'; ?>>
+								<input type="submit" name="verzend"
+									value="Maak rekeningen" /> &nbsp;&nbsp;
+								<label>Daadwerkelijk verzenden: <input
+										name="verzenden" type="checkbox"
+										id="verzenden" value="1"
+										<?php if (isset($_POST['verzenden'])) echo 'checked'; ?>>
 								</label>
 								<br>
 							</p>
@@ -433,8 +439,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 				</tr>
 			</table>
 		</div>
-	</div>
-	<?php ob_end_flush(); ?>
+	</div> <?php ob_end_flush(); ?>
 </body>
 
 </html>
