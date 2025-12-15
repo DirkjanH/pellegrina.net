@@ -10,7 +10,7 @@ use Pelago\Emogrifier\CssInliner;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 $locale = 'nl';
 
@@ -167,7 +167,7 @@ d($to, $naam, $subject, $mail_text);
 
 // bericht ter bevestiging:
 
-//if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding')) echo "De email is niet verzonden!<br>";
+if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding')) echo "De email is niet verzonden!<br>";
 ?>
 <!DOCTYPE HTML>
 <html>
