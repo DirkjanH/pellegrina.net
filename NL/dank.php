@@ -10,7 +10,7 @@ use Pelago\Emogrifier\CssInliner;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailfuncties.inc.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 $locale = 'nl';
 
@@ -55,7 +55,7 @@ foreach ($zangst as $zangs) if ($zangs < 100) $zangstem[] = $instrumententabel[$
 if (isset($instr)) $instrumentenlijst = implode(', ', $instr);
 if (isset($zangstem)) $zangstem = implode(', ', $zangstem);
 
-d($instrumenten, $instrumentenlijst, $deelnemer_query, $dlnmr, $cursus_query, $cursus, $instrumententabel, $ins, $zangstem);
+d($instrumenten, $instrumentenlijst, $deelnemer_query, $dlnmr, $cursus_query, $cursus, $instrumententabel, $ins, $zangstem, $cursus_offset);
 
 // gegevens voor het mailtje:
 $to = stripslashes($dlnmr['email']);
@@ -167,7 +167,7 @@ d($to, $naam, $subject, $mail_text);
 
 // bericht ter bevestiging:
 
-if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding')) echo "De email is niet verzonden!<br>";
+//if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding')) echo "De email is niet verzonden!<br>";
 ?>
 <!DOCTYPE HTML>
 <html>
