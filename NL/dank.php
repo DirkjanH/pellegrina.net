@@ -91,7 +91,11 @@ if (isset($dlnmr['toehoorder']) and $dlnmr['toehoorder'] > 0) {
 	$message .= "<li>Je hebt je geregistreerd als toehoorder.</li>\n";
 }
 
-if (isset($dlnmr['eenpersoons']) and $dlnmr['eenpersoons'] > 0) {
+if (isset($dlnmr['eenpersoons']) and $dlnmr['eenpersoons'] > 0 && $dlnmr['CursusId_FK'] - $cursus_offset == 1) {
+	$message .= "<li>Je hebt een eenpersoonskamer in het conservatorium gereserveerd. Het aantal is er beperkt. Ze zullen worden toegewezen na de definitieve toelating op {$cursus['datum_beslissing']}, in volgorde van inschrijving.</li>\n";
+}
+
+if (isset($dlnmr['eenpersoons']) and $dlnmr['eenpersoons'] > 0 && $dlnmr['CursusId_FK'] - $cursus_offset == 2) {
 	$message .= "<li>Je hebt een eenpersoonskamer in het Gastenverblijf gereserveerd. Het aantal is er beperkt. Ze zullen worden toegewezen na de definitieve toelating op {$cursus['datum_beslissing']}, in volgorde van inschrijving.</li>\n";
 }
 
@@ -165,23 +169,22 @@ d($to, $naam, $subject, $mail_text);
 
 if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding')) echo "De email is niet verzonden!<br>";
 ?>
-
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
+<!-- InstanceBegin template="/Templates/LP algemeen NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-
 	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>Hartelijk dank voor je inschrijving!</title>
 	<!-- InstanceEndEditable -->
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
+	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
+		type="text/css">
 	<!-- InstanceBeginEditable name="head" -->
 	<!-- InstanceEndEditable -->
 </head>
@@ -190,7 +193,8 @@ if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP A
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
 	<div id="inhoud">
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
-		<div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+		<div id="main">
+			<!-- InstanceBeginEditable name="mainpage" -->
 			<?php echo $message; ?>
 			<!-- InstanceEndEditable -->
 			<h2> <a href="javascript: history.go(-1)">Terug</a></h2>
