@@ -43,6 +43,64 @@ $_SERVER['QUERY_STRING'] .= strip_tags('SID');
 $editFormAction = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" .
     $_SERVER['QUERY_STRING'] : "");
 
+function safestrtotime($szFormat, $szDate)
+{
+    if (!isset($szDate))
+        $szDate = date("Y-m-d H:i:s");
+
+    $szTemp = "00-00-0000";
+    $arryMatch = array();
+    if (preg_match(
+        '%(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])%',
+        $szDate,
+        $arryMatch
+    )) {
+        // Date is in the format of Y-m-d
+        $arryTemp = preg_split('%[- /.]%', $arryMatch[0]);
+        $arryDate['m'] = $arryTemp[1];
+        $arryDate['d'] = $arryTemp[2];
+        $arryDate['Y'] = $arryTemp[0];
+        //$szTemp = .'-'.$arryTemp[2].'-'.$arryTemp[0];
+    } elseif (preg_match(
+        '%(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d%',
+        $szDate,
+        $arryMatch
+    )) {
+        // Date is in the format of d-m-Y
+        $arryTemp = preg_split('%[- /.]%', $arryMatch[0]);
+        $arryDate['m'] = $arryTemp[1];
+        $arryDate['d'] = $arryTemp[0];
+        $arryDate['Y'] = $arryTemp[2];
+        //$szTemp = $arryTemp[1].'-'.$arryTemp[2].'-'.$arryTemp[2];
+    } elseif (preg_match(
+        '%(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d%',
+        $szDate,
+        $arryMatch
+    )) {
+        // Date is in the format of m-d-Y
+        $arryTemp = preg_split('%[- /.]%', $arryMatch[0]);
+        $arryDate['m'] = $arryTemp[0];
+        $arryDate['d'] = $arryTemp[1];
+        $arryDate['Y'] = $arryTemp[2];
+        //$szTemp = $arryTemp[0].'-'.$arryTemp[1].'-'.$arryTemp[2];
+    }
+
+    if (!checkdate($arryDate['m'], $arryDate['d'], $arryDate['Y'])) {
+        return -1;
+    }
+
+    $nJD = gregoriantojd($arryDate['m'], $arryDate['d'], $arryDate['Y']);
+
+    $szTemp = str_replace('Y', $arryDate['Y'], $szFormat);
+    $szTemp = str_replace('m', $arryDate['m'], $szTemp);
+    $szTemp = str_replace('d', $arryDate['d'], $szTemp);
+    $szTemp = str_replace('D', jddayofweek($nJD, 2), $szTemp);
+    $szTemp = str_replace('F', jdmonthname($nJD, 1), $szTemp);
+
+    //echo $szTemp;
+    return $szTemp;
+}
+
 // validate user input
 // $input: variable to be validated
 // $type: nofilter, alpha, numeric, alnum, email, url, ip
