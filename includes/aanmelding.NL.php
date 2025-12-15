@@ -1,6 +1,6 @@
 <?php
 // stel php in dat deze fouten weergeeft
-//ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once('GeneratePassword.php');
@@ -90,7 +90,7 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	if (isset($_POST['instr'])) $ins = $_POST['instr'];
 	if (isset($_POST['toehoorder'])) $ins[] = 500;
 	$instrumenten = implode(', ', (array)$ins); // alleen instrumenten & toehoorders
-	if (isset($_POST['zangstem']) AND $_POST['zangstem'] != '') $ins[] = $_POST['zangstem'];
+	if (isset($_POST['zangstem']) and $_POST['zangstem'] != '') $ins[] = $_POST['zangstem'];
 	$instr = implode(', ', (array)$ins); // alle functies
 
 	if (isset($_POST['rol_z'])) $rol_z = implode(', ', $_POST['rol_z']);
@@ -133,7 +133,8 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'verzenden')) {
 	}
 
 	// check geboortedatum:
-	if (empty($_POST['geboortedatum'])
+	if (
+		empty($_POST['geboortedatum'])
 		or (safestrtotime('Y-m-d', $_POST['geboortedatum']) == '1970-01-01')
 		or (safestrtotime('Y', $_POST['geboortedatum']) < (date('Y') - $maximumleeftijd))
 		or (safestrtotime('Y', $_POST['geboortedatum']) > (date('Y') - $minimumleeftijd))
