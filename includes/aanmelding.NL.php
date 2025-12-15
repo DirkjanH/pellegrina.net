@@ -56,7 +56,7 @@ if (isset($oude_gegevens) and is_array($oude_gegevens)) {
 		$_POST['instr'] = $instr;
 		$instr = implode(', ', $_POST['instr']);
 	}
-	$geboortedatum = strtotime('Y-m-d', $_POST['geboortedatum']);
+	$geboortedatum = strtotime($_POST['geboortedatum']);
 } else $zoekresultaat = "<tr><td class=\"nadruk\">Dit is geen geldig password.</td></tr>";
 
 d($instrumentcodetabel, $_POST);
