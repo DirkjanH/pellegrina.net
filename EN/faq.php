@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <title>Naamloos document</title>
 </head>
+
 <body>
     <h2 class="begin">Frequently Asked Questions</h2>
     <div class="w3-card-2 w3-padding"><B>How are chamber music ensembles put
@@ -24,7 +26,7 @@
         to bring your favorite sheet music. </div>
     <div class="w3-card-2 w3-padding"><B>How should I pay?</B> <em>La
             Pellegrina</em> offers two methods of payment. You may either
-        transfer your payment into account NL33 ASNB 0707 2500 72 (BIC ASNB
+        transfer your payment into account NL60 BUNQ 2177 4957 25 (BIC ASNB
         NL21) of <em>La Pellegrina</em>, Utrecht, the Netherlands. If this is
         not practical, payment in cash on the spot is also possible by mutual
         agreement. See the <a href="praktisch.php" target="_self">Prices &amp;
@@ -44,6 +46,8 @@
         the journey. But you may be able to find your travel partners as a list
         of participants will be available after the decision about
         participation,
-        <strong><?php echo $cursusdata['beslisdatum']; ?></strong>. </div>
+        <strong><?php echo $cursusdata['beslisdatum']; ?></strong>.
+    </div>
 </body>
+
 </html>

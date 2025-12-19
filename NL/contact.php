@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -12,6 +13,7 @@
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
+
 <body>
     <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Contact</h2>
@@ -24,7 +26,7 @@
     <p>Kamer van Koophandel Utrecht nr. 30090647 </p>
     <p>BTW NL001344674B18</p>
     <h4>Bankrekening</h4>
-    <p>NL33 ASNB 0707 2500 72 (BIC ASNB NL21) t.n.v. La Pellegrina, Utrecht</p>
+    <p>NL60 BUNQ 2177 4957 25 (BIC BUNQ NL2A) t.n.v. La Pellegrina, Utrecht</p>
     <h2>Colofon</h2>
     <h4>Tekst</h4>
     <p>Dirkjan Horringa</p>
@@ -76,4 +78,5 @@
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
+
 </html>

@@ -136,12 +136,12 @@ switch ($dlnmr['betaalstatus']) {
 		$message .= "<p>We have received your deposit in our account. If that payment was made using a bank account, the full amount of {$cursus['inschrijfgeld']} has been received. Please note that if the payment was made by credit card, the credit card company has deducted a commission of about 3&nbsp;%. We will offset this against the next payment.</p>";
 		break;
 	case 'transfer':
-		$message .= "<p>Your registration will be processed immediately once we have received payment of the deposit on our bank account <strong>NL33 ASNB 0707 2500 72</strong> in the name of La Pellegrina, Utrecht. For bank transfers from outside the EU: BIC ASNB NL21. The deposit is {$course['enrolment fee']} or half of the total course amount due if it is less than {$cursus['inschrijfgeld']} </p>";
+		$message .= "<p>Your registration will be processed immediately once we have received payment of the deposit on our bank account <strong>NL60 BUNQ 2177 4957 25</strong> in the name of La Pellegrina, Utrecht. For bank transfers from outside the EU: BIC BUNQ NL2A. The deposit is {$course['enrolment fee']} or half of the total course amount due if it is less than {$cursus['inschrijfgeld']} </p>";
 		break;
 	default:
 		$message .= "<p>For some reason we have not (yet) received your deposit. The payment may have failed or been aborted by yourself. In that case no money has been debited from your account.<br>
 			It is also possible that the payment has not yet been processed. Therefore, it makes sense to refresh this page (Ctrl-R) and see if the payment is then reported.<br>
-			Your registration will be processed immediately once we have received payment of the deposit of {$cursus['inschrijfgeld']} in our bank account <strong>NL33 ASNB 0707 2500 72</strong> in the name of La Pellegrina, Utrecht. For bank transfers from outside the EU: BIC ASNB NL21. Czech participants can pay their deposit in CZK to Komerční Banka account 538940301/0100.</p>";
+			Your registration will be processed immediately once we have received payment of the deposit of {$cursus['inschrijfgeld']} in our bank account <strong>NL60 BUNQ 2177 4957 25</strong> in the name of La Pellegrina, Utrecht. For bank transfers from outside the EU: BIC BUNQ NL2A. Czech participants can pay their deposit in CZK to Komerční Banka account 538940301/0100.</p>";
 		break;
 }
 

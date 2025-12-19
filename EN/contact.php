@@ -21,7 +21,7 @@
   <p>VAT NL001344674B18</p>
   <h4>Bank details</h4>
   <ul>
-    <li>NL33 ASNB 0707 2500 72 (BIC ASNB NL21) in name of <em>La
+    <li>NL60 BUNQ 2177 4957 25 (BIC BUNQ NL2A) in name of <em>La
         Pellegrina</em>, Utrecht</li>
     <li>For payments from Czechia: CZ44 0100 0000 0005 3894 0301 (BIC
       KOMBCZPPXXX) in name of Dirk Johannes Horringa, Utrecht</li>

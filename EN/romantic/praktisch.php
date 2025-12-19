@@ -90,14 +90,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         the registration form. You can pay the deposit of
         <strong><?php echo euro_en($cursusdata['inschrijfgeld']); ?></strong>
         electronically at the same time as registering, or separately
-        transferring your payment to bank account NL33 ASNB 0707 2500 72 in name
+        transferring your payment to bank account NL60 BUNQ 2177 4957 25 in name
         of <em>La Pellegrina</em>, Utrecht, Netherlands (for transfers from
-        outside the European Union: BIC ASNB NL21). Our electronic payment
+        outside the European Union: BIC BUNQ NL2A). Our electronic payment
         service accepts credit cards, but as credit card companies deduct a
         commission of about 3 %, we will offset this against your next payment.
         We will then send you provisional confirmation of your registration.
         Deposits will of course be refunded to applicants who cannot be placed.
-        The entire fee is to be paid on <?php echo $cursusdata['betaaldatum']; ?> at the latest.</p>
+        The entire fee is to be paid on <?php echo $cursusdata['betaaldatum']; ?> at the latest.
+      </p>
       <p class="citaat">Marieke van Dantzig: “La Pellegrina is a week-long immersion in music with lots of fun and friendly like-minded people!”</p>
       <h3>Prices </h3>
       <p>The course fee - <strong><?php echo euro_en($cursusdata['prijs_volledig']); ?></strong>

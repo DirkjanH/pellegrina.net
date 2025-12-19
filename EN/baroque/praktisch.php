@@ -94,9 +94,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         filling out the registration form. You can pay the deposit of
         <strong><?php echo euro_en($cursusdata['inschrijfgeld']); ?></strong>
         electronically at the same time as registering, or by separately
-        transferring your payment to bank account NL33 ASNB 0707 2500 72
+        transferring your payment to bank account NL60 BUNQ 2177 4957 25
         in name of <em>La Pellegrina</em>, Utrecht, Netherlands (for
-        transfers from outside the European Union: BIC ASNB NL21). Our
+        transfers from outside the European Union: BIC BUNQ NL2A). Our
         electronic payment service accepts credit cards, but as credit
         card companies deduct a commission of about 3 %, we will offset
         this against your next payment. We will then send you

@@ -136,12 +136,12 @@ switch ($dlnmr['betaalstatus']) {
 		$message .= "<p>We hebben je aanbetaling ontvangen op onze rekening. Indien die betaling is gedaan met een bankrekening is het volledige bedrag van {$cursus['inschrijfgeld']} ontvangen. NB. indien de betaling is gedaan met een creditcard, heeft de creditcard-maatschappij daarvan een commissie van ca. 3&nbsp;%  afgetrokken. Dit verrekenen wij met de volgende betaling.</p>\n";
 		break;
 	case 'transfer':
-		$message .= "<p>Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling hebben ontvangen op onze bankrekening <strong>NL33 ASNB 0707 2500 72</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC ASNB NL21. De aanbetaling bedraagt {$cursus['inschrijfgeld']} of de helft van het totaal verschuldigde cursusbedrag als dat lager is dan {$cursus['inschrijfgeld']} </p>\n";
+		$message .= "<p>Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. De aanbetaling bedraagt {$cursus['inschrijfgeld']} of de helft van het totaal verschuldigde cursusbedrag als dat lager is dan {$cursus['inschrijfgeld']} </p>\n";
 		break;
 	default:
 		$message .= "<p>Om een of andere reden hebben we je aanbetaling (nog) niet ontvangen. Het kan zijn dat de betaling niet is gelukt of door jezelf is afgebroken. Er is dan geen geld van je rekening afgeschreven.<br>
 			Het kan ook zijn dat de betaling nog niet verwerkt is. Daarom is het zinvol om deze pagina even te verversen (Ctrl-R) en te zien of de betaling dan wel wordt gemeld.<br>
-			Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling van {$cursus['inschrijfgeld']} hebben ontvangen op onze bankrekening <strong>NL33 ASNB 0707 2500 72</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC ASNB NL21. Tsjechische deelnemers kunnen hun aanbetaling in CZK overmaken op <strong>rekening 538940301/0100 van Komerční Banka</strong>.</p>\n";
+			Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling van {$cursus['inschrijfgeld']} hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. Tsjechische deelnemers kunnen hun aanbetaling in CZK overmaken op <strong>rekening 538940301/0100 van Komerční Banka</strong>.</p>\n";
 		break;
 }
 

@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <title>Naamloos document</title>
 </head>
+
 <body>
     <h2 class="begin">Vaak gestelde vragen </h2>
     <div class="w3-card-2 w3-padding"><b>Hoe worden de kamermuziekensembles
@@ -24,7 +26,7 @@
         plekke. Het is aan te raden om je eigen bladmuziek mee te nemen. </div>
     <div class="w3-card-2 w3-padding"><b>Hoe kan ik betalen?</b> <i>La
             Pellegrina</i> accepteert betalingen via rekening NL33 ASNB 0707
-        2500 72 (voor buitenlandse betalingen: BIC ASNB NL21) t.n.v. La
+        2500 72 (voor buitenlandse betalingen: BIC BUNQ NL2A) t.n.v. La
         Pellegrina te Utrecht. Als dit niet praktisch is, is betaling in
         contanten ter plekke in overleg ook mogelijk.</div>
     <div class="w3-card-2 w3-padding"><strong>Hoe wordt er gereisd naar České
@@ -43,6 +45,8 @@
         samen willen reizen met elkaar in contact te brengen, wordt na het
         beslismoment over deelname,
         <strong><?php echo $cursusdata['beslisdatum']; ?></strong>, een
-        deelnemerslijst gepubliceerd. </div>
+        deelnemerslijst gepubliceerd.
+    </div>
 </body>
+
 </html>

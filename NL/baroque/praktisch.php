@@ -97,7 +97,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         ingevuld moet worden. De aanbetaling van
         <strong><?php echo euro($cursusdata['inschrijfgeld']); ?></strong>
         kun je gelijk met de aanmelding betalen, of apart overmaken op
-        rekening <strong>NL33 ASNB 0707 2500 72 </strong>t.n.v. <em>La
+        rekening <strong>NL60 BUNQ 2177 4957 25 </strong>t.n.v. <em>La
           Pellegrina</em> te Utrecht. Je ontvangt dan een voorlopige
         bevestiging van inschrijving. Als je niet geplaatst kunt worden,
         wordt de aanbetaling uiteraard teruggestort. Het volledige

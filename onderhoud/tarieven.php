@@ -223,7 +223,7 @@ function cursusgeld($ins)
 			$donatieEN = "Many thanks for your pledged contribution into the reduction fund.";
 		}
 	} else {
-		$donatieNL = "Mocht je alsnog hiervoor wat willen schenken, dan kan dat door overmaking op onze rekening NL33 ASNB 0707 2500 72 onder vermelding van 'kortingfonds'.";
+		$donatieNL = "Mocht je alsnog hiervoor wat willen schenken, dan kan dat door overmaking op onze rekening NL60 BUNQ 2177 4957 25 onder vermelding van 'kortingfonds'.";
 		$donatieEN = "If you feel like donating to this fund, please include it in your next payment, mentioning 'reduction fund'.";
 	}
 
