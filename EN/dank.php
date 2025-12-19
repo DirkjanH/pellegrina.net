@@ -171,38 +171,25 @@ if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP A
 ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
-
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<!-- CSS: -->
-	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<!-- InstanceBeginEditable name="doctitle" -->
-	<title>Thank you for registering!</title>
-	<!-- InstanceEndEditable -->
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
-		type="text/css">
-	<!-- InstanceBeginEditable name="head" -->
-	<!-- InstanceEndEditable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+    <title>Thank you for registering!</title>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+    <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
+        type="text/css">
 </head>
-
 <body>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-	<div id="inhoud">
-		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-		<div id="main">
-			<!-- InstanceBeginEditable name="mainpage" -->
-			<?php echo $message; ?>
-			<!-- InstanceEndEditable -->
-			<h2> <a href="javascript: history.go(-1)">Back</a></h2>
-			<p>&nbsp;</p>
-		</div>
-	</div>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
+    <div id="inhoud">
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
+        <div id="main"> <?php echo $message; ?> <h2> <a
+                    href="javascript: history.go(-1)">Back</a></h2>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd -->
-
 </html>
