@@ -10,7 +10,7 @@ use PhpParser\Node\Expr\Isset_;
 
 ob_start();
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_POST, $_SESSION);
 
