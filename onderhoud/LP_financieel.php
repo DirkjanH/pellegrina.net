@@ -317,7 +317,9 @@ d($query_dlnmr);
 
 $dlnmr = select_query($query_dlnmr, 1);
 
+
 LeesInschrijving($_SESSION['DlnmrId'], $_SESSION['cursus']);
+if (isset($_GET['DlnmrId']) or isset($_GET['cursus'])) LeesInschrijving($_GET['DlnmrId'], $_GET['cursus']);
 
 // end Recordset
 
