@@ -103,7 +103,7 @@ $cursusnr = 1 + $cursus_offset; ?>
                 </ul>
             </div>
             <h2 class="onzichtbaar">Some chamber music works</h2>
-            <div>
+            <div class="onzichtbaar">
                 <h2>Works for the final concert</h2>
                 <h3>Dvořák - Symphonic poem 'The Golden Spinning Wheel' op. 109
                 </h3>
@@ -147,8 +147,6 @@ $cursusnr = 1 + $cursus_offset; ?>
                                 target="_blank">Double bass <b>(with
                                     bowings)</b></a></li>
                     </ul>
-                </div>
-                <div class="onzichtbaar">
                     <h3>Joseph Haydn - Missa in Tempore Belli (Paukenmesse)</h3>
                     <p><a href="../pdf/2025-1/Haydn_Paukenmesse_-_Conductor_Score.pdf"
                             target="_blank">Full score</a></p>
