@@ -205,9 +205,10 @@ function getisp($ip = '')
                         registration starts December 1!</div>
                 </div>
                 <div id="" class="bannergroen onzichtbaar">
-                    <div class="">Inschrijving voor zomer 2026 is gestart!</div>
-                    <div class="">Registration for summer 2026 has started!
-                    </div>
+                    <div class="onzichtbaar">Inschrijving voor zomer 2026 is
+                        gestart!</div>
+                    <div class="onzichtbaar">Registration for summer 2026 has
+                        started! </div>
                 </div>
                 <div id="bannerteksten" class="banneroranje">
                     <div class="">Nog enkele plaatsen beschikbaar... </div>
