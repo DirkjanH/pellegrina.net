@@ -166,11 +166,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>České Budějovice (Tsjechië), 30 juli - 9 augustus
 							<?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor onzichtbaar">Het koor heeft nog enkele
+					<p class="plaatsvoor">Nog plaats voor fagot, hoorn, piano en
+						strijkers in alle groepen<br> het koor heeft nog enkele
 						plekken in alle groepen, met name voor sopranen en
 						bassen</p>
-					<p class="volvoor onzichtbaar">De cursus is vol voor alle
-						instrumenten</p>
+					<p class="volvoor">De cursus is vol voor fluit, hobo en
+						klarinet</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="baroque/index.php"><span
@@ -181,12 +182,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>Klooster Nieuw Sion, Diepenveen, 13 - 19 augustus
 							<?php echo $jaar ?></li>
 					</ul>
-					<p class="plaatsvoor onzichtbaar">Er is nog plaats voor twee
-						continuospelers (orgel/clavecimbel/theorbe), die kunnen
-						spelen vanaf een becijferde bas</p>
-					<p class="volvoor onzichtbaar">Deze cursus is vol voor alle
-						stemsoorten en voor alle instrumenten behalve continuo
+					<p class="plaatsvoor">Er is nog plaats voor baroktrombones &
+						-trompetten, een traverso, enkele violen en altviolen en
+						clavecimbel/orgel/theorbe. <br>Er is ook nog plaats voor
+						enkele tenoren en bassen met solistische capaciteiten
 					</p>
+					<p class="volvoor">Deze cursus is vol voor sopranen, mezzos
+						en alten en voor cello en contrabas</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="https://pellegrina.kinskytrio.cz/"

@@ -184,8 +184,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19
 							August <?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Still place for traverso, some more
-						baroque violins/violas and a continuo player
+					<p class="plaatsvoor">Still place for baroque trombones
+						&amp; trumpets, a traverso, some more baroque
+						violins/violas and a continuo player
 						(organ/harpsichord/theorbo) who can play from figured
 						bass</p>
 					<p class="volvoor">The course is full for sopranos, mezzos
