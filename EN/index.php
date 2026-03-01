@@ -186,9 +186,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 					</ul>
 					<p class="plaatsvoor">Still place for baroque trombones
 						&amp; trumpets, a traverso, some more baroque
-						violins/violas and a continuo player
-						(organ/harpsichord/theorbo) who can play from figured
-						bass</p>
+						violins/violas and organ/harpsichord/theorbo<br>There is
+						also room for a few tenors and basses with soloist
+						abilities</p>
 					<p class="volvoor">The course is full for sopranos, mezzos
 						and altos, as well as for cello and double bass</p>
 				</div>
