@@ -163,9 +163,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>České Budějovice (Czechia), 30 July - 9 August
 							<?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Places for bassoon, horn, piano and
-						strings in all groups. The choir has a few places in all
-						voice groups, in particular for sopranos and basses</p>
+					<p class="plaatsvoor">Still place for bassoon, horn, piano
+						and strings in all groups. The choir has a few places in
+						all voice groups, in particular for sopranos and basses
+					</p>
 					<p class="volvoor">The course is full for flute, oboe and
 						clarinet</p>
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české
