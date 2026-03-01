@@ -19,20 +19,14 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title><?php echo $cursusdata['cursusnaam_nl']; ?></title>
-  <!-- InstanceEndEditable -->
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-  <!-- InstanceBeginEditable name="head" -->
-  <!-- InstanceEndEditable -->
   <!-- Facebook Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -68,40 +62,40 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
-      <!-- InstanceBeginEditable name="mainpage" -->
       <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
       <ul>
-        <li>Voor: ( koor)zangers (SATB), strijkers, blazers en
-          pianisten; ook voor bestaande kamermuziekensembles</li>
+        <li>Voor: (koor)zangers SATB, strijkers, blazers en pianisten;
+          ook voor bestaande kamermuziekensembles</li>
         <li>Intensieve begeleiding door ervaren docenten: Martina
           Bernášková, Petr Bernášek, Pavel Hořejší, Dirkjan Horringa,
-          Libor Nováček, Mitchell Sandler, Rudolf
-          Sternadel, Jitka Vlašánková en anderen</li>
-        <li>Instrumentalisten: kamermuziek én groot symfonisch
-          orkest</li>
-        <li>Kamermuziek: iedereen speelt in twee, van tevoren gevormde ensembles</li>
-        <li>Centraal werk voor iedereen: Dvořáks cantate <em>Svatební košile</em> (Het Bruidshemd) op. 69</li>
+          Libor Nováček, Mitchell Sandler, Rudolf Sternadel, Jitka
+          Vlašánková en anderen</li>
+        <li>Instrumentalisten: kamermuziek én groot symfonisch orkest
+        </li>
+        <li>Kamermuziek: iedereen speelt in twee, van tevoren gevormde
+          ensembles</li>
+        <li>Centraal werk voor iedereen: Dvořáks cantate <em>Svatební
+            košile</em> (Het Bruidshemd) op. 69</li>
         <li>Koor: naast Het Bruidshemd met orkest werkt het koor ook aan
           kamerkoorrepertoire, a capella en met piano</li>
         <li>In het conservatorium van České Budějovice, Zuid-Bohemen,
           Tsjechië</li>
-        <li>Met <em>Mozart Concerto Event</em>: deelnemers kunnen een (deel van een) soloconcert of een aria van Mozart
-          of een tijdgenoot spelen of zingen; de overige deelnemers en docenten vormen een ad hoc orkest
-          dat de begeleiding van blad speelt</li>
+        <li>Met <em>Mozart Concerto Event</em>: deelnemers kunnen een
+          (deel van een) soloconcert of een aria van Mozart of een
+          tijdgenoot spelen of zingen; de overige deelnemers en
+          docenten vormen een ad hoc orkest dat de begeleiding van
+          blad speelt</li>
       </ul>
-      <p class="plaatsvoor onzichtbaar">Nog plaatsen beschikbaar voor
-        piano, viool en altviool. Het koor heeft nog enkele plaatsen in
-        alle groepen, met name voor bassen</p>
-      <p class="onzichtbaar">Deze cursus is vol voor alle instrumenten en
-        stemmen</p>
-      <p><a href="cursus.php" class="onzichtbaar">Lees meer over deze
-          cursus</a></p>
-      <!-- InstanceEndEditable -->
+      <p class="plaatsvoor">Nog plaatsen beschikbaar voor fagot, hoorn,
+        piano en strijkers in alle groepen. Het koor heeft nog enkele
+        plaatsen in alle groepen, met name voor sopranen en bassen</p>
+      <p class="volvoor">Deze cursus is vol voor fluit, hobo en klarinet
+      </p>
+      <p><a href="cursus.php" class="">Lees meer over deze cursus</a></p>
       <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
   </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>

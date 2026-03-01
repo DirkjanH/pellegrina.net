@@ -1,14 +1,11 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 ?>
-
 <!DOCTYPE HTML>
 <html>
 
 <head>
-	<title>La Pellegrina&nbsp;
-		<?php echo $jaar ?>
-	</title>
+	<title>La Pellegrina&nbsp; <?php echo $jaar ?> </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/w3.css">
@@ -44,8 +41,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 		! function(f, b, e, v, n, t, s) {
 			if (f.fbq) return;
 			n = f.fbq = function() {
-				n.callMethod ?
-					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+				n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+					arguments)
 			};
 			if (!f._fbq) f._fbq = n;
 			n.push = n;
@@ -62,7 +59,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 		fbq('init', '537749209897328');
 		fbq('track', 'PageView');
 	</script>
-	<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
 	<!-- End Facebook Pixel Code -->
 </head>
 
@@ -78,82 +76,133 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-
 	<div id="inhoud">
 		<div id="envelop" class="w3-hide-small w3-hide-medium">
-			<div id="banner" class="">
-				<div class="bannergroen">Registration for summer 2026 has started!</div>
+			<div id="banner" class="onzichtbaar">
+				<div class="bannergroen onzichtbaar">Registration for summer
+					2026 has started!</div>
 			</div>
 			<div id="" class="onzichtbaar">
-				<div class="bannergeel" style="font-size: 100%;">Registration for summer 2026 starts on December 1!</div>
+				<div class="bannergeel" style="font-size: 100%;">Registration
+					for summer 2026 starts on December 1!</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
-				<div class="bannergeel">Who registers before March 1, receives a EUR 50 red.</div>
+				<div class="bannergeel">Who registers before March 1, receives a
+					EUR 50 red.</div>
 			</div>
-			<div id="banner" class="onzichtbaar">
-				<div class="banneroranje onzichtbaar">Last places available...</div>
+			<div id="banner" class="">
+				<div class="banneroranje">Last places available...</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannerrood">The 2026 courses are fully booked</div>
 			</div>
 		</div>
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-
 		<div id="main" class="w3-row-padding">
 			<div class="w3-card-2 w3-padding w3-margin-bottom w3-half">
-				<h2 class="LP_colour">Music projects for every musician with a professional attitude</h2>
+				<h2 class="LP_colour">Music projects for every musician with a
+					professional attitude</h2>
 				<div class="w3-panel w3-yellow onzichtbaar">
-					<h3 class="w3-text-black">Please note: the dates of both courses have changed</h3>
-					<p>Due to changes at the conservatory in České Budějovice, both courses had to be scheduled a little later. </p>
+					<h3 class="w3-text-black">Please note: the dates of both
+						courses have changed</h3>
+					<p>Due to changes at the conservatory in České Budějovice,
+						both courses had to be scheduled a little later. </p>
 				</div>
-				<p>The
-					<?php echo $jaar ?> summer courses: two projects where you can immerse yourself in a warm bath of beautiful music, with first-class teachers and like-minded souls. The
-					<?php echo $jaar ?> projects are open to experienced musicians. Whether you are an amateur or a professional, a professional attitude is paramount at La Pellegrina. Of course you come well prepared to a course, of course you like it when others do so too. Does this appeal to you? Then please continue reading...</p>
+				<p>The <?php echo $jaar ?> summer courses: two projects where
+					you can immerse yourself in a warm bath of beautiful music,
+					with first-class teachers and like-minded souls. The
+					<?php echo $jaar ?> projects are open to experienced
+					musicians. Whether you are an amateur or a professional, a
+					professional attitude is paramount at La Pellegrina. Of
+					course you come well prepared to a course, of course you
+					like it when others do so too. Does this appeal to you? Then
+					please continue reading...</p>
 				<p>This page gives an overview of the courses in
-					<?php echo $jaar ?>. The baroque course takes place in the former monastery Nieuw Sion in the woods of Salland near Deventer. The course around Haydn and Mozart will take place in the Czech Republic, Europe's most musical country. The venue is the conservatoire of České Budějovice, 120 km south of Prague.</p>
-				<p>Click on the course titles for more information. <b>From 1 December, all information will be complete and registration will be open again</b>.</p>
-				<p>Please don't hesitate to contact Dirkjan Horringa in case you have any questions, by mail (<a href="mailto:info@pellegrina.net">info@pellegrina.net</a>) or by phone (+31 619 224 758).</p>
+					<?php echo $jaar ?>. The baroque course takes place in the
+					former monastery Nieuw Sion in the woods of Salland near
+					Deventer. The course around Haydn and Mozart will take place
+					in the Czech Republic, Europe's most musical country. The
+					venue is the conservatoire of České Budějovice, 120 km south
+					of Prague.</p>
+				<p>Click on the course titles for more information. <b>From 1
+						December, all information will be complete and
+						registration will be open again</b>.</p>
+				<p>Please don't hesitate to contact Dirkjan Horringa in case you
+					have any questions, by mail (<a
+						href="mailto:info@pellegrina.net">info@pellegrina.net</a>)
+					or by phone (+31 619 224 758).</p>
 				<p class="w3-center w3-panel">In cooperation with<br>
-					<a href="http://www.acmp.net" target="_blank"><img src="../Images/Logos/ACMP_CMYK.jpg" width="200" height="104" alt="" /></a>
+					<a href="http://www.acmp.net" target="_blank"><img
+							src="../Images/Logos/ACMP_CMYK.jpg" width="200"
+							height="104" alt="" /></a>
 				</p>
 				<div class="w3-content w3-center">
-					<p><a href="/NL/index.php"><img src="/Images/Logos/Vlag_NL.jpg" alt="Ga naar de Nederlandstalige site" width="34" height="24" border="0" class="w3-image" /></a>
+					<p><a href="/NL/index.php"><img
+								src="/Images/Logos/Vlag_NL.jpg"
+								alt="Ga naar de Nederlandstalige site"
+								width="34" height="24" border="0"
+								class="w3-image" /></a>
 					</p>
-					<div class="fb-like" data-href="http://www.facebook.com/pages/La-Pellegrina/443675859011335?ref=hl" data-send="true" data-width="300" data-show-faces="false" data-action="recommend" data-font="verdana">
+					<div class="fb-like"
+						data-href="http://www.facebook.com/pages/La-Pellegrina/443675859011335?ref=hl"
+						data-send="true" data-width="300"
+						data-show-faces="false" data-action="recommend"
+						data-font="verdana">
 					</div>
 				</div>
 			</div>
 			<div class="w3-half">
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="romantic/index.php"><span class="romantic">Dvořák's Spectre's Bride, for orchestra, choir and soloists</span></a></h3>
-					<p>for instrumentalists &amp; (choir &amp; solo) singers, with chamber music and chamber choir<br>
+					<h3><a href="romantic/index.php"><span
+								class="romantic">Dvořák's Spectre's Bride, for
+								orchestra, choir and soloists</span></a></h3>
+					<p>for instrumentalists &amp; (choir &amp; solo) singers,
+						with chamber music and chamber choir<br>
 					</p>
 					<ul>
-						<li>České Budějovice (Czechia), 30 July - 9 August <?php echo $jaar ?>
-						</li>
+						<li>České Budějovice (Czechia), 30 July - 9 August
+							<?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor onzichtbaar">The choir has a few places in all voice groups, in particular for sopranos and basses</p>
-					<p class="volvoor onzichtbaar">The course is full for all instruments</p>
-					<p class="onzichtbaar">*: Speciální výhodná cena pro české houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové) ubytování a stravování za Kč 4.000. Jenom napište &quot;ANKST&quot; na přihlášce v poli &quot;Remarks and additional information</p>
+					<p class="plaatsvoor">Places for bassoon, horn, piano and
+						strings in all groups. The choir has a few places in all
+						voice groups, in particular for sopranos and basses</p>
+					<p class="volvoor">The course is full for flute, oboe and
+						clarinet</p>
+					<p class="onzichtbaar">*: Speciální výhodná cena pro české
+						houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové)
+						ubytování a stravování za Kč 4.000. Jenom napište
+						&quot;ANKST&quot; na přihlášce v poli &quot;Remarks and
+						additional information</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="baroque/index.php"><span class="baroque">Baroque music from Central Europe in 415 Hz</span></a></h3>
+					<h3><a href="baroque/index.php"><span
+								class="baroque">Baroque music from Central
+								Europe in 415 Hz</span></a></h3>
 					<p>for singers &amp; period instruments</p>
 					<ul>
-						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19 August <?php echo $jaar ?>
-						</li>
+						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19
+							August <?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor onzichtbaar">Still place for two continuo players (organ/harpsichord/theorbo), who can play from figured bass</p>
-					<p class="volvoor onzichtbaar">The course is full for all voice types, as well as for all instruments, except continuo</p>
+					<p class="plaatsvoor">Still place for traverso, some more
+						baroque violins/violas and a continuo player
+						(organ/harpsichord/theorbo) who can play from figured
+						bass</p>
+					<p class="volvoor">The course is full for sopranos, mezzos
+						and altos, as well as for cello and double bass</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
-					<h3><a href="https://pellegrina.kinskytrio.cz/" target="_blank"><span class="chamber">Extra: Play chamber music with the Kinsky Trio Prague & Friends</span></a></h3>
+					<h3><a href="https://pellegrina.kinskytrio.cz/"
+							target="_blank"><span class="chamber">Extra: Play
+								chamber music with the Kinsky Trio Prague &
+								Friends</span></a></h3>
 					<p>play with a professional chamber musician in a group </p>
 					<ul>
-						<li>České Budějovice (Czechia), 18 - 26 July <?php echo $jaar ?>
-						</li>
+						<li>České Budějovice (Czechia), 18 - 26 July
+							<?php echo $jaar ?> </li>
 					</ul>
-					<p class="nadruk">N.B. This course is organized by and under the responsibility of the Kinsky Trio Prague, in collaboration with <em>La Pellegrina</em>
+					<p class="nadruk">N.B. This course is organized by and under
+						the responsibility of the Kinsky Trio Prague, in
+						collaboration with <em>La Pellegrina</em>
 					</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
@@ -168,7 +217,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 				window.olark || (function(c) {
 					var f = window,
 						d = document,
-						l = f.location.protocol == "https:" ? "https:" : "http:",
+						l = f.location.protocol == "https:" ? "https:" :
+						"http:",
 						z = c.name,
 						r = "load";
 					var nt = function() {
@@ -197,11 +247,18 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 							a.P(r);
 							f[z](r)
 						}
-						f.addEventListener ? f.addEventListener(r, s, false) : f.attachEvent("on" + r, s);
+						f.addEventListener ? f.addEventListener(r, s,
+							false) : f.attachEvent("on" + r, s);
 						var ld = function() {
 							function p(hd) {
 								hd = "head";
-								return ["<", hd, "></", hd, "><", i, ' onl' + 'oad="var d=', g, ";d.getElementsByTagName('head')[0].", j, "(d.", h, "('script')).", k, "='", l, "//", a.l, "'", '"', "></", i, ">"].join("")
+								return ["<", hd, "></", hd, "><", i,
+									' onl' + 'oad="var d=', g,
+									";d.getElementsByTagName('head')[0].",
+									j, "(d.", h, "('script')).",
+									k, "='", l, "//", a.l, "'",
+									'"', "></", i, ">"
+								].join("")
 							}
 							var i = "body",
 								m = d[i];
@@ -222,7 +279,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 							m.insertBefore(n, m.firstChild).id = z;
 							b.frameBorder = "0";
 							b.id = z + "-loader";
-							if (/MSIE[ ]+6/.test(navigator.userAgent)) {
+							if (/MSIE[ ]+6/.test(navigator
+									.userAgent)) {
 								b.src = "javascript:false"
 							}
 							b.allowTransparency = "true";
@@ -231,7 +289,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 								b.contentWindow[g].open()
 							} catch (w) {
 								c[e] = d[e];
-								o = "javascript:var d=" + g + ".open();d.domain='" + d.domain + "';";
+								o = "javascript:var d=" + g +
+									".open();d.domain='" + d
+									.domain + "';";
 								b[k] = o + "void(0);"
 							}
 							try {
@@ -239,7 +299,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 								t.write(p());
 								t.close()
 							} catch (x) {
-								b[k] = o + 'd.write("' + p().replace(/"/g, String.fromCharCode(92) + '"') + '");d.close();'
+								b[k] = o + 'd.write("' + p()
+									.replace(/"/g, String
+										.fromCharCode(92) + '"') +
+									'");d.close();'
 							}
 							a.P(2)
 						};
@@ -255,15 +318,16 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 				olark.identify('5575-684-10-1480'); /*]]>*/
 			</script>
 			<noscript>
-				<p><a href="https://www.olark.com/site/5575-684-10-1480/contact" title="Contact us" target="_blank">Questions? Feedback? Use this chat app. Please send in your registration only via the form on the website</a></p>
+				<p><a href="https://www.olark.com/site/5575-684-10-1480/contact"
+						title="Contact us" target="_blank">Questions? Feedback?
+						Use this chat app. Please send in your registration only
+						via the form on the website</a></p>
 			</noscript>
-
 			<!-- end olark code -->
 		</div>
-	</div>
-	<?php
-	require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
-	?>
+	</div> <?php
+			require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
+			?>
 </body>
 
 </html>
