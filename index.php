@@ -1,6 +1,7 @@
 <?php // stel php in dat deze fouten weergeeft //ini_set('display_errors', 1);
 error_reporting(E_ALL);
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+
 use function PHP81_BC\strftime;
 
 Kint::$enabled_mode = false;
@@ -198,19 +199,19 @@ function getisp($ip = '')
             <div id="banner">
                 <div id="" class="bannergeel onzichtbaar"
                     style="font-size: 75%;">
-                    <div class="onzichtbaar">Data zomer 2026 zijn gewijzigd; inschrijving start 1
-                        december!</div>
-                    <div class="onzichtbaar">Dates summer 2026 have changed; registration starts December 1!</div>
+                    <div class="onzichtbaar">Data zomer 2026 zijn gewijzigd;
+                        inschrijving start 1 december!</div>
+                    <div class="onzichtbaar">Dates summer 2026 have changed;
+                        registration starts December 1!</div>
                 </div>
-                <div id="bannerteksten" class="bannergroen">
+                <div id="" class="bannergroen onzichtbaar">
                     <div class="">Inschrijving voor zomer 2026 is gestart!</div>
-                    <div class="">Registration for summer 2026 has started!</div>
+                    <div class="">Registration for summer 2026 has started!
+                    </div>
                 </div>
-                <div id="" class="banneroranje onzichtbaar">
-                    <div class="onzichtbaar">Nog enkele plaatsen beschikbaar...
-                    </div>
-                    <div class="onzichtbaar">A few last places available...
-                    </div>
+                <div id="bannerteksten" class="banneroranje">
+                    <div class="">Nog enkele plaatsen beschikbaar... </div>
+                    <div class="">A few last places available... </div>
                 </div>
                 <div id="" class="bannerrood onzichtbaar">
                     <div class="onzichtbaar">De cursussen in 2026 zijn helemaal
@@ -245,23 +246,24 @@ function getisp($ip = '')
             </script>
             <div class="w3-card-8">
                 <div class="w3-row-padding w3-light-grey">
-                    <div class="w3-card-4 w3-white w3-margin-top w3-quarter w3-padding">
+                    <div
+                        class="w3-card-4 w3-white w3-margin-top w3-quarter w3-padding">
                         <h1>
                             <a href="NL" target="_self"><img
                                     src="Images/Logos/Vlag_NL.jpg"
                                     alt="Nederlands" width="34" height="24"
-                                    border="0"
-                                    align="absmiddle">Cursusprogramma
+                                    border="0" align="absmiddle">Cursusprogramma
                                 <?php echo $jaar ?> </a>
                         </h1>
-                        <p class="w3-margin-top"><a href="NL" target="_self">Twee zomercursussen voor
+                        <p class="w3-margin-top"><a href="NL"
+                                target="_self">Twee zomercursussen voor
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
                         <ol><a href="NL" target="_self">
                                 <li class="klein"><b>Dvořáks Bruidshemd</i></b>
                                     - 30 juli - 9 augustus</li>
-                                <li class="klein"><b>Barok in Centraal Europa</b> - 13 -
-                                    19 augustus</li>
+                                <li class="klein"><b>Barok in Centraal
+                                        Europa</b> - 13 - 19 augustus</li>
                             </a></ol>
                     </div></a>
                     <div id="carroussel" class="w3-panel w3-section w3-half">
@@ -317,14 +319,14 @@ function getisp($ip = '')
                                     width="34" height="24" border="0"
                                     align="absmiddle">Course Programme
                                 <?php echo $jaar ?></a></h1>
-                        <p class="w3-margin-top"><a href="EN" target="_self">Two summer schools for
-                                accomplished amateur musicians and
-                                professionals:</a></p>
+                        <p class="w3-margin-top"><a href="EN" target="_self">Two
+                                summer schools for accomplished amateur
+                                musicians and professionals:</a></p>
                         <ol><a href="EN" target="_self">
-                                <li class="klein"><b>Dvořák's Spectre's Bride</b> - 30 July - 9 August
-                                </li>
-                                <li class="klein"><b>Baroque in Central Europe</b> - 13 -
-                                    19 August</li>
+                                <li class="klein"><b>Dvořák's Spectre's
+                                        Bride</b> - 30 July - 9 August </li>
+                                <li class="klein"><b>Baroque in Central
+                                        Europe</b> - 13 - 19 August</li>
                             </a></ol>
                     </div>
                 </div>
