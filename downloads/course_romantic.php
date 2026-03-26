@@ -103,7 +103,7 @@ $cursusnr = 1 + $cursus_offset; ?>
                 </ul>
             </div>
             <h2 class="onzichtbaar">Some chamber music works</h2>
-            <div class="onzichtbaar">
+            <div class="">
                 <h2>Work for the final concert</h2>
                 <h3>Dvořák - Cantata 'Svatební košile' (The Spectre's Bride) op.
                     109 </h3>
@@ -112,43 +112,73 @@ $cursusnr = 1 + $cursus_offset; ?>
                 <p>Singers can download and print the <a
                         href="../pdf/2026-1/SK_piano_reduction_A4.pdf"
                         target="_blank">vocal score</a></p>
+                <p><a
+                        href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html">This
+                        page by former participant Marrie Kardol gives practice
+                        file for all choruses of Svatební košile</a></p>
                 <div class="cols3">
                     <ul>
                         <li><a href="../pdf/2026-1/Flauto 1.pdf"
                                 target="_blank">Flute I</a></li>
                         <li><a href="../pdf/2026-1/Flauto 2.pdf"
                                 target="_blank">Flute II</a></li>
-                        <li><a href="../pdf/2026-1/Zlatý_kolovrat_-_Oboe_1-2,_English_Horn.pdf"
-                                target="_blank">Oboe I/II, Cor anglais</a></li>
-                        <li><a href="../pdf/2026-1/Zlatý_kolovrat_-_Clarinet_1-2.pdf"
-                                target="_blank">Clarinet I/II</a></li>
-                        <li><a href="../pdf/2026-1/Zlatý_kolovrat_-_Bassoon_1-2,_Contrabassoon.pdf"
-                                target="_blank">Bassoon I/II, Contrabassoon</a>
-                        </li>
-                        <li><a href="../pdf/2026-1/Zlatý_kolovrat_-_Horn_1-4.pdf"
-                                target="_blank">Horn I/II/III/IV</a></li>
-                        <li><a href="../pdf/2026-1/Zlatý_kolovrat_-_Trumpet_1-2.pdf"
-                                target="_blank">Trumpet I/II</a></li>
-                        <li><a href="../pdf/2026-1/Zlatý_kolovrat_-_Trombone_1-3,_Tuba.pdf"
-                                target="_blank">Trombones I/II/III, Tuba</a>
-                        </li>
-                        <li><a href="../pdf/2026-1/Zlatý_kolovrat_-_Timpani,_Bass_Drum,_Cymbals,_Triangle.pdf"
-                                target="_blank">Timpani & other percussion</a>
+                        <li><a href="../pdf/2026-1/Oboe 1.pdf"
+                                target="_blank">Oboe I</a></li>
+                        <li><a href="../pdf/2026-1/Oboe 2.pdf"
+                                target="_blank">Oboe II</a></li>
+                        <li><a href="../pdf/2026-1/Anglický roh.pdf"
+                                target="_blank">Cor anglais</a></li>
+                        <li><a href="../pdf/2026-1/Clarinetto 1.pdf"
+                                target="_blank">Clarinet I</a></li>
+                        <li><a href="../pdf/2026-1/Clarinetto 2.pdf"
+                                target="_blank">Clarinet II</a></li>
+                        <li><a href="../pdf/2026-1/Svatební košile - Bass clarinet - Bass Clarinet in Bb.pdf"
+                                target="_blank">Bass Clarinet</a></li>
+                        <li><a href="../pdf/2026-1/bassoon 1.pdf"
+                                target="_blank">Bassoon I</a></li>
+                        <li><a href="../pdf/2026-1/bassoon 2.pdf"
+                                target="_blank">Bassoon II</a></li>
+                        <li><a href="../pdf/2026-1/Corno 1.pdf"
+                                target="_blank">Horn I</a></li>
+                        <li><a href="../pdf/2026-1/Corno 2.pdf"
+                                target="_blank">Horn II</a></li>
+                        <li><a href="../pdf/2026-1/Corno 3.pdf"
+                                target="_blank">Horn III</a></li>
+                        <li><a href="../pdf/2026-1/Corno 4.pdf"
+                                target="_blank">Horn IV</a></li>
+                        <li><a href="../pdf/2026-1/Tromba 1.pdf"
+                                target="_blank">Trumpet I</a></li>
+                        <li><a href="../pdf/2026-1/Tromba 2.pdf"
+                                target="_blank">Trumpet II</a></li>
+                        <li><a href="../pdf/2026-1/Trombone 1.pdf"
+                                target="_blank">Trombone I</a></li>
+                        <li><a href="../pdf/2026-1/Trombone 2.pdf"
+                                target="_blank">Trombone II</a></li>
+                        <li><a href="../pdf/2026-1/Trombone 3.pdf"
+                                target="_blank">Trombone III</a></li>
+                        <li><a href="../pdf/2026-1/Tuba.pdf"
+                                target="_blank">Tuba</a></li>
+                        <li><a href="../pdf/2026-1/Timpani.pdf"
+                                target="_blank">Timpani</a>
+                        <li><a href="../pdf/2026-1/Svatební košile - Triangle, Tam-tam, Orchestral Bells.pdf"
+                                target="_blank">Other percussion</a>
+                        <li><a href="../pdf/2026-1/ARPA I.pdf"
+                                target="_blank">Harp</a>
                         </li>
                         <li style="break-before: column;"><a
-                                href="../pdf/2026-1/Zlatý kolovrat - Violins I - With bowings.pdf"
+                                href="../pdf/2026-1/Violino I.pdf"
                                 target="_blank">Violin I <b>(with
                                     bowings)</b></a></li>
-                        <li><a href="../pdf/2026-1/Zlatý kolovrat - Violins II - With bowings.pdf"
+                        <li><a href="../pdf/2026-1/Violino II.pdf"
                                 target="_blank">Violin II <b>(with
                                     bowings)</b></a></li>
-                        <li><a href="../pdf/2026-1/Zlaty Kolovrat, viola (with bowings).pdf"
+                        <li><a href="../pdf/2026-1/Viola.pdf"
                                 target="_blank">Viola <b>(with bowings)</b></a>
                         </li>
-                        <li><a href="../pdf/2026-1/Zlaty Kolovrat, violoncello (with bowings).pdf"
+                        <li><a href="../pdf/2026-1/Violoncello.pdf"
                                 target="_blank">Cello <b>(with bowings)</b></a>
                         </li>
-                        <li><a href="../pdf/2026-1/Zlaty Kolovrat, contrabasso (with bowings).pdf"
+                        <li><a href="../pdf/2026-1/Contrabasso.pdf"
                                 target="_blank">Double bass <b>(with
                                     bowings)</b></a></li>
                     </ul>
