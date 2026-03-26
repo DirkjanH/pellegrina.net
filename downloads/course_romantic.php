@@ -108,14 +108,14 @@ $cursusnr = 1 + $cursus_offset; ?>
                     109 </h2>
                 <ul>
                     <li><a href="../pdf/2026-1/Dvořák - Svatební košíle - score A4.pdf"
-                            target="_blank">Full score</a></li>
+                            target="_blank">Full orchestral score</a></li>
                     <li>Singers can download and print the <a
                             href="../pdf/2026-1/SK_piano_reduction_A4.pdf"
                             target="_blank">vocal score</a></li>
                     <li>This page by former participant Marrie Kardol gives <a
                             href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html"
-                            target="_blank">practice file for all choruses of
-                            Svatební košile</a></li>
+                            target="_blank">practice files for all voices of all
+                            choruses of Svatební košile</a></li>
                 </ul>
                 <div class="cols3">
                     <ul>
