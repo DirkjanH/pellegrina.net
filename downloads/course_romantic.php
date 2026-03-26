@@ -112,10 +112,10 @@ $cursusnr = 1 + $cursus_offset; ?>
                 <p>Singers can download and print the <a
                         href="../pdf/2026-1/SK_piano_reduction_A4.pdf"
                         target="_blank">vocal score</a></p>
-                <p><a
-                        href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html">This
-                        page by former participant Marrie Kardol gives practice
-                        file for all choruses of Svatební košile</a></p>
+                <p>This page by former participant Marrie Kardol gives <a
+                        href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html"
+                        target="_blank">practice file for all choruses of
+                        Svatební košile</a></p>
                 <div class="cols3">
                     <ul>
                         <li><a href="../pdf/2026-1/Flauto 1.pdf"
