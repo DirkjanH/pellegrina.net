@@ -184,9 +184,9 @@ $cursusnr = 1 + $cursus_offset; ?>
                                     bowings)</b></a></li>
                     </ul>
                 </div>
-                <p><a href="https://open.spotify.com/playlist/6Q0jeTv8wp11eJyxItIBCB?si=3446d002e0fe45ce"
-                        target="_blank">Excellent recordings on Spotify to get
-                        an impression of the music</a></p>
+                <p><a href="https://open.spotify.com/album/73Uv153nrk6FVPqSyyKYX2?si=sixd0MEBQy-ksQLYL98WkQ"
+                        target="_blank">Excellent recording on Spotify to get an
+                        impression of Dvořák's <i>Spectre's Bride</i></a></p>
                 <h2> <a href="javascript: history.go(-1)">Back</a></h2>
                 <p>&nbsp;</p>
             </div>
