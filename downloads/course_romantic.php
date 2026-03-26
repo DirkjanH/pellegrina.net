@@ -104,18 +104,19 @@ $cursusnr = 1 + $cursus_offset; ?>
             </div>
             <h2 class="onzichtbaar">Some chamber music works</h2>
             <div class="">
-                <h2>Work for the final concert</h2>
-                <h3>Dvořák - Cantata 'Svatební košile' (The Spectre's Bride) op.
-                    109 </h3>
-                <p><a href="../pdf/2026-1/Dvořák - Svatební košíle - score A4.pdf"
-                        target="_blank">Full score</a></p>
-                <p>Singers can download and print the <a
-                        href="../pdf/2026-1/SK_piano_reduction_A4.pdf"
-                        target="_blank">vocal score</a></p>
-                <p>This page by former participant Marrie Kardol gives <a
-                        href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html"
-                        target="_blank">practice file for all choruses of
-                        Svatební košile</a></p>
+                <h2>Dvořák - Cantata 'Svatební košile' (The Spectre's Bride) op.
+                    109 </h2>
+                <ul>
+                    <li><a href="../pdf/2026-1/Dvořák - Svatební košíle - score A4.pdf"
+                            target="_blank">Full score</a></li>
+                    <li>Singers can download and print the <a
+                            href="../pdf/2026-1/SK_piano_reduction_A4.pdf"
+                            target="_blank">vocal score</a></li>
+                    <li>This page by former participant Marrie Kardol gives <a
+                            href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html"
+                            target="_blank">practice file for all choruses of
+                            Svatební košile</a></li>
+                </ul>
                 <div class="cols3">
                     <ul>
                         <li><a href="../pdf/2026-1/Flauto 1.pdf"
