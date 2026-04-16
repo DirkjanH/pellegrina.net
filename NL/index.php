@@ -186,9 +186,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						altviolen en clavecimbel/orgel/theorbe. <br>Er is ook
 						nog plaats voor enkele tenoren met solistische
 						capaciteiten </p>
-					<p class="volvoor">Deze cursus is vol voor sopranen, mezzos
-						en alten en voor blaasinstrumenten, cello en contrabas
-					</p>
+					<p class="volvoor">Deze cursus is vol voor sopranen, mezzos,
+						alten en bassen, en voor blaasinstrumenten, cello en
+						contrabas </p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom onzichtbaar">
 					<h3><a href="https://pellegrina.kinskytrio.cz/"
