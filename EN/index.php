@@ -184,15 +184,14 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19
 							August <?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Still place for baroque trombones
-						&amp; trumpets, a traverso, some more baroque
+					<p class="plaatsvoor">Still place for some more baroque
 						violins/violas and organ/harpsichord/theorbo<br>There is
-						also room for a few tenors and basses with solistic
-						abilities</p>
+						also room for a few tenors with solistic abilities</p>
 					<p class="volvoor">The course is full for sopranos, mezzos
-						and altos, as well as for cello and double bass</p>
+						and altos, as well as for wind instruments, cello and
+						double bass</p>
 				</div>
-				<div class="w3-card-2 w3-padding w3-margin-bottom">
+				<div class="w3-card-2 w3-padding w3-margin-bottom onzichtbaar">
 					<h3><a href="https://pellegrina.kinskytrio.cz/"
 							target="_blank"><span class="chamber">Extra: Play
 								chamber music with the Kinsky Trio Prague &
