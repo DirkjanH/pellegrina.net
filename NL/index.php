@@ -171,7 +171,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						plekken in alle groepen, met name voor sopranen en
 						bassen</p>
 					<p class="volvoor">De cursus is vol voor fluit, hobo en
-						klarinet</p>
+						klarinet (een klarinettist die ook basklarinet speelt
+						kan nog wel worden geplaatst)</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="baroque/index.php"><span
