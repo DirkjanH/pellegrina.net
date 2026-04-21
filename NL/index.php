@@ -183,13 +183,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>Klooster Nieuw Sion, Diepenveen, 13 - 19 augustus
 							<?php echo $jaar ?></li>
 					</ul>
-					<p class="plaatsvoor">Er is nog plaats voor enkele violen en
-						altviolen en clavecimbel/orgel/theorbe. <br>Er is ook
-						nog plaats voor enkele tenoren met solistische
-						capaciteiten </p>
+					<p class="plaatsvoor">Er is nog plaats voor een tenor met
+						solistische capaciteiten </p>
 					<p class="volvoor">Deze cursus is vol voor sopranen, mezzos,
-						alten en bassen, en voor blaasinstrumenten, cello en
-						contrabas </p>
+						alten en bassen, en voor alle instrumenten</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom onzichtbaar">
 					<h3><a href="https://pellegrina.kinskytrio.cz/"

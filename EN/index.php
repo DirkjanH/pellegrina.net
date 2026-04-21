@@ -185,12 +185,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19
 							August <?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Still place for some more baroque
-						violins/violas and organ/harpsichord/theorbo<br>There is
-						also room for a few tenors with solistic abilities</p>
+					<p class="plaatsvoor">Still place for a tenor with solistic
+						abilities</p>
 					<p class="volvoor">The course is full for sopranos, mezzos,
-						altos and basses, as well as for wind instruments, cello
-						and double bass</p>
+						altos and basses, as well as for all instruments</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom onzichtbaar">
 					<h3><a href="https://pellegrina.kinskytrio.cz/"
