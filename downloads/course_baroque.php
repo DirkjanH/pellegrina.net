@@ -152,10 +152,10 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Hasse, Johann Adolph - Miserere in c moll</h4>
-                        <div class="cols2 w3-padding w3-border w3-lightgrey">
+                        <div class="w3-panel w3-border w3-light-grey">
                                 <p><b>N.B.</b> only the following sections of this Miserere will
                                         be performed:</p>
-                                <ul>
+                                <div class="cols2         <ul>
                                         <li>I. Miserere mei Deus</li>
                                         <li>II.Tibi soli peccavi</li>
                                         <li>IV. Libera me de sanguinibus Deus</li>
@@ -163,87 +163,94 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         </p>
-                        <div class="cols3">
-                                <ul class="cols3">
-                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_score.pdf"
-                                                        target="_blank">Hasse - Miserere in c moll - Full
-                                                        score</a></li>
-                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
-                                                        target="_blank">Hasse - Miserere in c moll - Violin
-                                                        I</a></li>
-                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
-                                                        target="_blank">Hasse - Miserere in c moll - Violin
-                                                        I</a></li>
-                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino II.pdf"
-                                                        target="_blank">Hasse - Miserere in c moll - Violin
-                                                        II</a></li>
-                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola I-II.pdf"
-                                                        target="_blank">Hasse - Miserere in c moll - Viola
-                                                        I-II</a></li>
-                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola III.pdf"
-                                                        target="_blank">Hasse - Miserere in c moll - Viola
-                                                        III</a></li>
-                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violoncello-Contrabbasso.pdf"
-                                                        target="_blank">Hasse - Miserere in c moll - Cello,
-                                                        double bass</a></li>
-                                </ul>
-                        </div>
-                        <h4>Heinichen, Johann David - Confitebor S.32</h4>
-                        <p>At the moment only the score of this work is available. The parts
-                                still need to be prepared.</p>
-                        <ul>
-                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen-Confitebor_tibi_SATB_SeiH_32.pdf"
-                                                target="_blank">Heinichen - Confitebor S.32 - Full
-                                                score</a></li>
-                        </ul>
-                        <h4>Biber, Heinrich - Requiem in f</h4>
-                        <div class="cols3">
+                        <div class=" cols3">
+                                        <ul class="cols3">
+                                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_score.pdf"
+                                                                target="_blank">Hasse - Miserere in c moll -
+                                                                Full score</a></li>
+                                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
+                                                                target="_blank">Hasse - Miserere in c moll -
+                                                                Violin I</a></li>
+                                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
+                                                                target="_blank">Hasse - Miserere in c moll -
+                                                                Violin I</a></li>
+                                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino II.pdf"
+                                                                target="_blank">Hasse - Miserere in c moll -
+                                                                Violin II</a></li>
+                                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola I-II.pdf"
+                                                                target="_blank">Hasse - Miserere in c moll -
+                                                                Viola I-II</a></li>
+                                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola III.pdf"
+                                                                target="_blank">Hasse - Miserere in c moll -
+                                                                Viola III</a></li>
+                                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violoncello-Contrabbasso.pdf"
+                                                                target="_blank">Hasse - Miserere in c moll -
+                                                                Cello, double bass</a></li>
+                                        </ul>
+                                </div>
+                                <h4>Heinichen, Johann David - Confitebor S.32</h4>
+                                <p>At the moment only the score of this work is available. The
+                                        parts still need to be prepared.</p>
                                 <ul>
-                                        <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_FS_PML.pdf"
-                                                        target="_blank">Biber - Requiem in f - Full
-                                                        score</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_VS_PML.pdf"
-                                                        target="_blank">Biber - Requiem in f - Vocal
-                                                        score</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violin I.pdf"
-                                                        target="_blank">Biber - Requiem in f - Violin I</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violin II.pdf"
-                                                        target="_blank">Biber - Requiem in f - Violin II</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola I.pdf"
-                                                        target="_blank">Biber - Requiem in f - Viola I</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola II.pdf"
-                                                        target="_blank">Biber - Requiem in f - Viola II</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola III.pdf"
-                                                        target="_blank">Biber - Requiem in f - Viola III</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violone.pdf"
-                                                        target="_blank">Biber - Requiem in f - Violone</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Alto trombone.pdf"
-                                                        target="_blank">Biber - Requiem in f - Alto
-                                                        trombone</a>
-                                        </li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Tenor trombone.pdf"
-                                                        target="_blank">Biber - Requiem in f - Tenor
-                                                        trombone</a></li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Bass trombone.pdf"
-                                                        target="_blank">Biber - Requiem in f - Bass
-                                                        trombone, bassoon</a></li>
-                                        <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - BC.pdf"
-                                                        target="_blank">Biber - Requiem in f - BC</a></li>
+                                        <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen-Confitebor_tibi_SATB_SeiH_32.pdf"
+                                                        target="_blank">Heinichen - Confitebor S.32 - Full
+                                                        score</a></li>
                                 </ul>
+                                <h4>Biber, Heinrich - Requiem in f</h4>
+                                <div class="cols3">
+                                        <ul>
+                                                <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_FS_PML.pdf"
+                                                                target="_blank">Biber - Requiem in f - Full
+                                                                score</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_VS_PML.pdf"
+                                                                target="_blank">Biber - Requiem in f - Vocal
+                                                                score</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violin I.pdf"
+                                                                target="_blank">Biber - Requiem in f - Violin
+                                                                I</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violin II.pdf"
+                                                                target="_blank">Biber - Requiem in f - Violin
+                                                                II</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola I.pdf"
+                                                                target="_blank">Biber - Requiem in f - Viola
+                                                                I</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola II.pdf"
+                                                                target="_blank">Biber - Requiem in f - Viola
+                                                                II</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola III.pdf"
+                                                                target="_blank">Biber - Requiem in f - Viola
+                                                                III</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violone.pdf"
+                                                                target="_blank">Biber - Requiem in f -
+                                                                Violone</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Alto trombone.pdf"
+                                                                target="_blank">Biber - Requiem in f - Alto
+                                                                trombone</a>
+                                                </li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Tenor trombone.pdf"
+                                                                target="_blank">Biber - Requiem in f - Tenor
+                                                                trombone</a></li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Bass trombone.pdf"
+                                                                target="_blank">Biber - Requiem in f - Bass
+                                                                trombone, bassoon</a></li>
+                                                <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - BC.pdf"
+                                                                target="_blank">Biber - Requiem in f - BC</a>
+                                                </li>
+                                        </ul>
+                                </div>
+                                <h2> <a href="javascript: history.go(-1)">Back</a></h2>
+                                <p>&nbsp;</p>
                         </div>
-                        <h2> <a href="javascript: history.go(-1)">Back</a></h2>
-                        <p>&nbsp;</p>
                 </div>
-        </div>
-        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+                <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
 </html>
