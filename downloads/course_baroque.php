@@ -92,91 +92,48 @@ $cursusnr = 2 + $cursus_offset; ?>
                                                 target="_blank">Cello</a></li>
                         </div>
                         <h2>Tutti programme</h2>
+                        <h4>Hasse, Johann Adolph - Miserere in c moll</h4>
+                        <h4>Heinichen, Johann David - Confitebor S.32</h4>
+                        <h4>Biber, Heinrich - Requiem in f</h4>
                         <p>All works we are going to perform are now available here. Please
                                 print and study what you need. The string parts will soon have
                                 bowings; string players will be notified.</p>
                         <p>Singers, please print out the vocal scores and bring them with
                                 you. Study the choral parts as well as your solo parts. </p>
-                        <h4>Purcell - Welcome to all the pleasures (Z.339)</h4>
-                        <p>We will perform this Cecilia Ode in its entirety.</p>
+                        <h4>Heinichen, Johann David - Concerto à 7 S.215</h4>
                         <ul>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - score_met streken PV.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - Full score <b>with bowings</b></a></li>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - Vocal score.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - Vocal score</a></li>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - Violin 1.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - Violin 1</a></li>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - Violin 2.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - Violin 2</a></li>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - Viola.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - Viola</a></li>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - Cello-Bass.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - Cello, bass, bassoon</a></li>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - Figured Bass.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - Figured bass</a></li>
-                                <li><a href="/pdf/2025-2/Purcell - Welcome - BC realisation.pdf"
-                                                target="_blank">Purcell - Welcome to all the pleasures
-                                                (Z.339) - BC realisation</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen/HeinichenJ.D.-Concertoà7S.215-(S,A,Streicher,Orgel).pdf"
+                                                target="_blank">Full score</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen/HeinichenJ.D.-Concertoà7S.215-Violine1.pdf"
+                                                target="_blank">Violin 1</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen/HeinichenJ.D.-Concertoà7S.215-Violine2.pdf"
+                                                target="_blank">Violin 2</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen/HeinichenJ.D.-Concertoà7S.215-Viola.pdf"
+                                                target="_blank">Viola</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen/HeinichenJ.D.-Concertoà7S.215-Cello-Bass.pdf"
+                                                target="_blank">Cello</a></li>
                         </ul>
-                        <h4>Handel - Pastiche of movements from Handel's Utrecht Te Deum &
-                                Jubilate and Ode for St. Cecilia's Day</h4>
-                        <p>We have made a pastiche of movements from the Utrecht Te Deum &
-                                Jubilate and the Ode for St. Cecilia's Day, whch is adapted to
-                                the instruments and voices we have during the summer school.</p>
+                        <h4>Biber, Heinrich - De Profundis</h4>
                         <ul>
-                                <li><a href="/pdf\2025-2\Handel - Pastiche - score_met streken PV.pdf"
-                                                target="_blank">Handel - Pastiche - Full score <b>with
-                                                        bowings</b>, also for continuo players</a>
+                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis.pdf"
+                                                target="_blank">Biber, Heinrich - De Profundis - Full
+                                                score</a>
                                 </li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - vocal score.pdf"
-                                                target="_blank">Handel - Pastiche - Vocal score (in
-                                                modern clefs)</a></li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - flute.pdf"
-                                                target="_blank">Handel - Pastiche - Flute</a></li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - oboe 1.pdf"
-                                                target="_blank">Handel - Pastiche - Oboe 1</a></li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - oboe 2.pdf"
-                                                target="_blank">Handel - Pastiche - Oboe 2</a></li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - bassoon.pdf"
-                                                target="_blank">Handel - Pastiche - Bassoon</a></li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - violin 1.pdf"
-                                                target="_blank">Handel - Pastiche - Violin 1</a>
-                                </li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - violin 2.pdf"
-                                                target="_blank">Handel - Pastiche - Violin 2</a>
-                                </li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - violin 3.pdf"
-                                                target="_blank">Handel - Pastiche - Violin 3</a>
-                                </li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - viola.pdf"
-                                                target="_blank">Handel - Pastiche - Viola</a></li>
-                                <li><a href="/pdf/2025-2/Handel - Pastiche - cello-bass.pdf"
-                                                target="_blank">Handel - Pastiche - Cello & Double
-                                                bass</a></li>
-                                <li><a href="/pdf/2025-2/The soft complaining flute - Lute.pdf"
-                                                target="_blank">Handel - The soft complaining flute -
-                                                Lute part</a></li>
                         </ul>
-                        <h4>Purcell - selection from Hail, bright Cecilia (Z.328)</h4>
+                        <h4>Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
                         <p>We will perform only a few movements of this Cecilia Ode. The
                                 score and the parts only contain those movements.</p>
                         <ul>
-                                <li><a href="/pdf\2025-2\Purcell_selection from Hail, bright Cecilia (Z.328)_score (sharp)_met streken PV.pdf"
-                                                target="_blank">Purcell - Hail! Bright Cecilia - Score
-                                                <b>with bowings</b></a></li>
-                                <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Vocal_score.pdf"
-                                                _blank">Purcell - Hail! Bright Cecilia - Vocal score</a>
-                                </li>
-                                <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_1.pdf"
-                                                target="_blank">Purcell - Hail! Bright Cecilia - Oboe
-                                                1</a></li>
+                                <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Partitur.pdf"
+                                                target="_blank">Zelenka - Ecce - Partitur</a></li>
+                                <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Soprano.pdf"
+                                                target="_blank">Zelenka - Ecce - Soprano</a></li>
+                                <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Alto.pdf"
+                                                target="_blank">Zelenka - Ecce - Alto</a></li>
+                                <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Tenor.pdf"
+                                                target="_blank">Zelenka - Ecce - Tenor</a></li>
+                                <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Bass.pdf"
+                                                target="_blank">Zelenka - Ecce - Bass</a></li>
                                 <li><a href="/pdf/2025-2/Purcell_Hail!_Bright_Cecilia-Oboe_2.pdf"
                                                 target="_blank">Purcell - Hail! Bright Cecilia - Oboe
                                                 2</a></li>
