@@ -56,7 +56,7 @@ $cursusnr = 2 + $cursus_offset; ?>
                                                         xxxx="https://pellegrina.net/ensemblelijst_2.php"
                                                         target="_blank">Chamber music ensembles</a></td>
                                         <td class="w3-center"><a
-                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTU_T6ifuUO40FAMPOA-I_v5GOIo00yKUIFCEbkuEyQ9VCw05pTswkFi7Z1UiQCtne9X9GzTNMKx7sS/pub?gid=0&single=true&output=pdf"
+                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTU_T6ifuUO40FAMPOA-I_v5GOIo00yKUIFCEbkuEyQ9VCw05pTswkFi7Z1UiQCtne9X9GzTNMKx7sS/pubhtml?gid=0&single=true"
                                                         target="_blank">Overview of accommodation</a></td>
                                         <td class="w3-center"><a
                                                         href="https://docs.google.com/document/d/1ODcgAmuTYIfNC9DKLaU0f6zed2uJvaJ6aoiIGp2Sb1A/edit?usp=sharing"
