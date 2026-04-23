@@ -60,8 +60,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                             href="https://docs.google.com/document/d/1ODcgAmuTYIfNC9DKLaU0f6zed2uJvaJ6aoiIGp2Sb1A/edit?usp=sharing"
                             target="_blank">Accommodation near Nieuw Sion</a>
                     </td>
-                    <td class="w3-center grijs"><a
-                            xxxx="https://docs.google.com/document/d/e/2PACX-1vR0BKIajpm4-nOAroibUrQvxcH3--ygr9AV_fK2kCJnBLBMadigy9w5p-DBcYMNZQjJKQyZ0Nf9Jo-S/pub"
+                    <td class="w3-center"><a
+                            href="https://docs.google.com/document/d/e/2PACX-1vSXywNgXj36DpMyjGpYuh20GpRdJugAzvmj8zXUthx0mOB2Lx9zzAeSFcepXTpQTveO17gRBWNCZ5Of/pub"
                             target="_blank">Daily program</a></td>
                     <td class="w3-center grijs"><a
                             xxxx="https://www.pellegrina.net/barok2025/"
