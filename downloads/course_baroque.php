@@ -154,12 +154,14 @@ $cursusnr = 2 + $cursus_offset; ?>
                         <h4>Hasse, Johann Adolph - Miserere in c moll</h4>
                         <p><b>N.B.</b> only the following sections of this Miserere will be
                                 performed:
-                        <ul>
-                                <li>I. Miserere mei Deus</li>
-                                <li>II.Tibi soli peccavi</li>
-                                <li>IV. Libera me de sanguinibus Deus</li>
-                                <li>V. Quoniam si voluisses</li>
-                        </ul>
+                        <div class="cols2">
+                                <ul>
+                                        <li>I. Miserere mei Deus</li>
+                                        <li>II.Tibi soli peccavi</li>
+                                        <li>IV. Libera me de sanguinibus Deus</li>
+                                        <li>V. Quoniam si voluisses</li>
+                                </ul>
+                        </div>
                         </p>
                         <div class="cols3">
                                 <ul class="cols3">
