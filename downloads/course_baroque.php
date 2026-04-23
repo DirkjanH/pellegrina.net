@@ -121,6 +121,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Biber, Heinrich - De Profundis</h4>
+                        <p>At the moment only the score of this work is available. The parts
+                                still need to be prepared.</p>
                         <ul>
                                 <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis.pdf"
                                                 target="_blank">Biber, Heinrich - De Profundis - Full
@@ -128,8 +130,6 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </li>
                         </ul>
                         <h4>Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
-                        <p>We will perform only a few movements of this Cecilia Ode. The
-                                score and the parts only contain those movements.</p>
                         <div class="cols3">
                                 <ul>
                                         <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Partitur.pdf"
@@ -152,7 +152,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Hasse, Johann Adolph - Miserere in c moll</h4>
-                        <p>Only the following sections of this Miserere will be performed:
+                        <p><b>N.B.</b> only the following sections of this Miserere will be
+                                performed:
                         <ul>
                                 <li>I. Miserere mei Deus</li>
                                 <li>II.Tibi soli peccavi</li>
@@ -186,6 +187,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Heinichen, Johann David - Confitebor S.32</h4>
+                        <p>At the moment only the score of this work is available. The parts
+                                still need to be prepared.</p>
                         <ul>
                                 <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen-Confitebor_tibi_SATB_SeiH_32.pdf"
                                                 target="_blank">Heinichen - Confitebor S.32 - Full
