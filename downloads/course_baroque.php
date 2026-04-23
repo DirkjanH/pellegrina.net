@@ -203,12 +203,10 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 <ul>
                                         <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_FS_PML.pdf"
                                                         target="_blank">Biber - Requiem in f - Full
-                                                        score</a>
-                                        </li>
+                                                        score</a></li>
                                         <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_VS_PML.pdf"
                                                         target="_blank">Biber - Requiem in f - Vocal
-                                                        score</a>
-                                        </li>
+                                                        score</a></li>
                                         <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violin I.pdf"
                                                         target="_blank">Biber - Requiem in f - Violin I</a>
                                         </li>
@@ -228,15 +226,14 @@ $cursusnr = 2 + $cursus_offset; ?>
                                                         target="_blank">Biber - Requiem in f - Violone</a>
                                         </li>
                                         <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Alto trombone.pdf"
-                                                        target="_blank">Biber - Requiem in f - Alto
-                                                        trombone</a>
-                                        </li>
+                                                        target="_blank">Biber - Requiem in f - Alto trombone
+                                                        (also viola da gamba)</a></li>
                                         <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Tenor trombone.pdf"
                                                         target="_blank">Biber - Requiem in f - Tenor
-                                                        trombone</a></li>
+                                                        trombone (also viola da gamba)</a></li>
                                         <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Bass trombone.pdf"
-                                                        target="_blank">Biber - Requiem in f - Bass
-                                                        trombone, bassoon</a></li>
+                                                        target="_blank">Biber - Requiem in f - Bass trombone
+                                                        (also viola da gamba)</a></li>
                                         <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - BC.pdf"
                                                         target="_blank">Biber - Requiem in f - BC</a>
                                         </li>
