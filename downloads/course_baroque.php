@@ -116,7 +116,7 @@ $cursusnr = 2 + $cursus_offset; ?>
                                                         target="_blank">Violin 2</a></li>
                                         <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_viola.pdf"
                                                         target="_blank">Viola</a></li>
-                                        <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_cello.pdf"
+                                        <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_basso.pdf"
                                                         target="_blank">Cello, double bass, bassoon</a></li>
                                 </ul>
                         </div>
