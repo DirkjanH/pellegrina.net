@@ -144,33 +144,21 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_score.pdf"
                                                 target="_blank">Hasse - Miserere in c moll - Full
                                                 score</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
                                                 target="_blank">Hasse - Miserere in c moll - Violin
                                                 I</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
                                                 target="_blank">Hasse - Miserere in c moll - Violin
                                                 I</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino II.pdf"
                                                 target="_blank">Hasse - Miserere in c moll - Violin
                                                 II</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola I-II.pdf"
                                                 target="_blank">Hasse - Miserere in c moll - Viola
                                                 I-II</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola III.pdf"
                                                 target="_blank">Hasse - Miserere in c moll - Viola
                                                 III</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violoncello-Contrabbasso.pdf"
                                                 target="_blank">Hasse - Miserere in c moll - Cello,
                                                 double bass</a></li>
@@ -186,54 +174,32 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_FS_PML.pdf"
                                                 target="_blank">Biber - Requiem in f - Full score</a>
                                 </li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_VS_PML.pdf"
                                                 target="_blank">Biber - Requiem in f - Vocal score</a>
                                 </li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violin I.pdf"
                                                 target="_blank">Biber - Requiem in f - Violin I</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violin II.pdf"
                                                 target="_blank">Biber - Requiem in f - Violin II</a>
                                 </li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola I.pdf"
                                                 target="_blank">Biber - Requiem in f - Viola I</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola II.pdf"
                                                 target="_blank">Biber - Requiem in f - Viola II</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola III.pdf"
                                                 target="_blank">Biber - Requiem in f - Viola III</a>
                                 </li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Violone.pdf"
                                                 target="_blank">Biber - Requiem in f - Violone</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Alto trombone.pdf"
                                                 target="_blank">Biber - Requiem in f - Alto trombone</a>
                                 </li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Tenor trombone.pdf"
                                                 target="_blank">Biber - Requiem in f - Tenor
                                                 trombone</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Bass trombone.pdf"
                                                 target="_blank">Biber - Requiem in f - Bass trombone,
                                                 bassoon</a></li>
-                        </ul>
-                        <ul>
                                 <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - BC.pdf"
                                                 target="_blank">Biber - Requiem in f - BC</a></li>
                         </ul>
