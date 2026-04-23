@@ -148,29 +148,31 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 <li>V. Quoniam si voluisses</li>
                         </ul>
                         </p>
-                        <ul class="cols3">
-                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_score.pdf"
-                                                target="_blank">Hasse - Miserere in c moll - Full
-                                                score</a></li>
-                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
-                                                target="_blank">Hasse - Miserere in c moll - Violin
-                                                I</a></li>
-                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
-                                                target="_blank">Hasse - Miserere in c moll - Violin
-                                                I</a></li>
-                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino II.pdf"
-                                                target="_blank">Hasse - Miserere in c moll - Violin
-                                                II</a></li>
-                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola I-II.pdf"
-                                                target="_blank">Hasse - Miserere in c moll - Viola
-                                                I-II</a></li>
-                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola III.pdf"
-                                                target="_blank">Hasse - Miserere in c moll - Viola
-                                                III</a></li>
-                                <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violoncello-Contrabbasso.pdf"
-                                                target="_blank">Hasse - Miserere in c moll - Cello,
-                                                double bass</a></li>
-                        </ul>
+                        <div class="cols3">
+                                <ul class="cols3">
+                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_score.pdf"
+                                                        target="_blank">Hasse - Miserere in c moll - Full
+                                                        score</a></li>
+                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
+                                                        target="_blank">Hasse - Miserere in c moll - Violin
+                                                        I</a></li>
+                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
+                                                        target="_blank">Hasse - Miserere in c moll - Violin
+                                                        I</a></li>
+                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino II.pdf"
+                                                        target="_blank">Hasse - Miserere in c moll - Violin
+                                                        II</a></li>
+                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola I-II.pdf"
+                                                        target="_blank">Hasse - Miserere in c moll - Viola
+                                                        I-II</a></li>
+                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Viola III.pdf"
+                                                        target="_blank">Hasse - Miserere in c moll - Viola
+                                                        III</a></li>
+                                        <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violoncello-Contrabbasso.pdf"
+                                                        target="_blank">Hasse - Miserere in c moll - Cello,
+                                                        double bass</a></li>
+                                </ul>
+                        </div>
                         <h4>Heinichen, Johann David - Confitebor S.32</h4>
                         <ul>
                                 <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen-Confitebor_tibi_SATB_SeiH_32.pdf"
