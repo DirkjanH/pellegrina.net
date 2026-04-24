@@ -148,8 +148,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                                                         Cello, double bass, bassoon, BC</a>
                                         </li>
                                         <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_organo.pdf"
-                                                        target="_blank">Biber, Heinrich - De Profundis -
-                                                        Organ realisation</a>
+                                                        target="_blank">Biber, Heinrich - De Profundis - BC
+                                                        with blank stave for organ realisation</a>
                                         </li>
                                 </ul>
                         </div>
