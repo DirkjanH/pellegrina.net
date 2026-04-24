@@ -121,36 +121,38 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Biber, Heinrich - De Profundis</h4>
-                        <ul>
-                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis.pdf"
-                                                target="_blank">Biber, Heinrich - De Profundis - Full
-                                                score</a>
-                                </li>
-                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino1.pdf"
-                                                target="_blank">Biber, Heinrich - De Profundis - Violin
-                                                1</a>
-                                </li>
-                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino2.pdf"
-                                                target="_blank">Biber, Heinrich - De Profundis - Violin
-                                                2</a>
-                                </li>
-                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola1.pdf"
-                                                target="_blank">Biber, Heinrich - De Profundis - Viola
-                                                1</a>
-                                </li>
-                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola2.pdf"
-                                                target="_blank">Biber, Heinrich - De Profundis - Viola
-                                                2</a>
-                                </li>
-                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_BC.pdf"
-                                                target="_blank">Biber, Heinrich - De Profundis - Cello,
-                                                double bass, bassoon, BC</a>
-                                </li>
-                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_organo.pdf"
-                                                target="_blank">Biber, Heinrich - De Profundis - Organ
-                                                realisation</a>
-                                </li>
-                        </ul>
+                        <div class="cols3">
+                                <ul>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Full score</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino1.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Violin 1</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino2.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Violin 2</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola1.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Viola 1</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola2.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Viola 2</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_BC.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Cello, double bass, bassoon, BC</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_organo.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Organ realisation</a>
+                                        </li>
+                                </ul>
+                        </div>
                         <h4>Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
                         <div class="cols3">
                                 <ul>
