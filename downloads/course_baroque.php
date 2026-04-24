@@ -45,7 +45,7 @@ $cursusnr = 2 + $cursus_offset; ?>
                                         <th>List of participants</th>
                                         <th>Chamber music formations</th>
                                         <th>Room divisions </th>
-                                        <th>Accommodation near Nieuw Sion</th>
+                                        <th>Accommodation near <br>Nieuw Sion</th>
                                         <th>Daily program</th>
                                         <th>Flyer concert</th>
                                 </tr>
