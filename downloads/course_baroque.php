@@ -121,12 +121,34 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Biber, Heinrich - De Profundis</h4>
-                        <p>At the moment only the score of this work is available. The parts
-                                still need to be prepared.</p>
                         <ul>
                                 <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis.pdf"
                                                 target="_blank">Biber, Heinrich - De Profundis - Full
                                                 score</a>
+                                </li>
+                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino1.pdf"
+                                                target="_blank">Biber, Heinrich - De Profundis - Violin
+                                                1</a>
+                                </li>
+                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino2.pdf"
+                                                target="_blank">Biber, Heinrich - De Profundis - Violin
+                                                2</a>
+                                </li>
+                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola1.pdf"
+                                                target="_blank">Biber, Heinrich - De Profundis - Viola
+                                                1</a>
+                                </li>
+                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola2.pdf"
+                                                target="_blank">Biber, Heinrich - De Profundis - Viola
+                                                2</a>
+                                </li>
+                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_BC.pdf"
+                                                target="_blank">Biber, Heinrich - De Profundis - Cello,
+                                                double bass, bassoon, BC</a>
+                                </li>
+                                <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_organo.pdf"
+                                                target="_blank">Biber, Heinrich - De Profundis - Organ
+                                                realisation</a>
                                 </li>
                         </ul>
                         <h4>Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
@@ -191,12 +213,22 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Heinichen, Johann David - Confitebor S.32</h4>
-                        <p>At the moment only the score of this work is available. The parts
-                                still need to be prepared.</p>
                         <ul>
-                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen-Confitebor_tibi_SATB_SeiH_32.pdf"
+                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Full Score.pdf"
                                                 target="_blank">Heinichen - Confitebor S.32 - Full
                                                 score</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 1.pdf"
+                                                target="_blank">Heinichen - Confitebor S.32 - Violin
+                                                1</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 2.pdf"
+                                                target="_blank">Heinichen - Confitebor S.32 - Violin
+                                                2</a></li>
+                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Viola.pdf"
+                                                target="_blank">Heinichen - Confitebor S.32 - Viola</a>
+                                </li>
+                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violoncello.pdf"
+                                                target="_blank">Heinichen - Confitebor S.32 - Cello,
+                                                double bass</a></li>
                         </ul>
                         <h4>Biber, Heinrich - Requiem in f</h4>
                         <div class="cols3">
