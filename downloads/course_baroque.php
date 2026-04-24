@@ -213,23 +213,26 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 </ul>
                         </div>
                         <h4>Heinichen, Johann David - Confitebor S.32</h4>
-                        <ul>
-                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Full Score.pdf"
-                                                target="_blank">Heinichen - Confitebor S.32 - Full
-                                                score</a></li>
-                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 1.pdf"
-                                                target="_blank">Heinichen - Confitebor S.32 - Violin
-                                                1</a></li>
-                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 2.pdf"
-                                                target="_blank">Heinichen - Confitebor S.32 - Violin
-                                                2</a></li>
-                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Viola.pdf"
-                                                target="_blank">Heinichen - Confitebor S.32 - Viola</a>
-                                </li>
-                                <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violoncello.pdf"
-                                                target="_blank">Heinichen - Confitebor S.32 - Cello,
-                                                double bass</a></li>
-                        </ul>
+                        <div class="cols3">
+                                <ul>
+                                        <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Full Score.pdf"
+                                                        target="_blank">Heinichen - Confitebor S.32 - Full
+                                                        score</a></li>
+                                        <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 1.pdf"
+                                                        target="_blank">Heinichen - Confitebor S.32 - Violin
+                                                        1</a></li>
+                                        <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 2.pdf"
+                                                        target="_blank">Heinichen - Confitebor S.32 - Violin
+                                                        2</a></li>
+                                        <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Viola.pdf"
+                                                        target="_blank">Heinichen - Confitebor S.32 -
+                                                        Viola</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violoncello.pdf"
+                                                        target="_blank">Heinichen - Confitebor S.32 - Cello,
+                                                        double bass</a></li>
+                                </ul>
+                        </div>
                         <h4>Biber, Heinrich - Requiem in f</h4>
                         <div class="cols3">
                                 <ul>
