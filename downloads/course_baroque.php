@@ -60,7 +60,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                                                         target="_blank">Overview of accommodation</a></td>
                                         <td class="w3-center"><a
                                                         href="https://docs.google.com/document/d/1ODcgAmuTYIfNC9DKLaU0f6zed2uJvaJ6aoiIGp2Sb1A/edit?usp=sharing"
-                                                        target="_blank">Accommodation near Nieuw Sion</a>
+                                                        target="_blank">Accommodation near <br>Nieuw
+                                                        Sion</a>
                                         </td>
                                         <td class="w3-center"><a
                                                         href="https://docs.google.com/document/d/e/2PACX-1vSXywNgXj36DpMyjGpYuh20GpRdJugAzvmj8zXUthx0mOB2Lx9zzAeSFcepXTpQTveO17gRBWNCZ5Of/pub"
