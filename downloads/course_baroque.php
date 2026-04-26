@@ -172,10 +172,6 @@ $cursusnr = 2 + $cursus_offset; ?>
                                                         target="_blank">Biber, Heinrich - De Profundis - BC
                                                         part with empty stave</a>
                                         </li>
-                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_organo.pdf"
-                                                        target="_blank">Biber, Heinrich - De Profundis - BC
-                                                        with blank stave for organ realisation</a>
-                                        </li>
                                 </ul>
                         </div>
                         <h4>Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
