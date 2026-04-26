@@ -124,29 +124,53 @@ $cursusnr = 2 + $cursus_offset; ?>
                         <h4>Biber, Heinrich - De Profundis</h4>
                         <div class="cols3">
                                 <ul>
-                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis.pdf"
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Full Score.pdf"
                                                         target="_blank">Biber, Heinrich - De Profundis -
                                                         Full score</a>
                                         </li>
-                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino1.pdf"
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Voices & BC.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Vocal score & BC</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Cornetto ripieno.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Recorders, oboes</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Alto Trombone ripieno.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Alto trombone</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Tenor Trombone ripieno.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Tenor trombone</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Bass Trombone ripieno.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis -
+                                                        Bass trombone, bassoon</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Violino primo.pdf"
                                                         target="_blank">Biber, Heinrich - De Profundis -
                                                         Violin 1</a>
                                         </li>
-                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_violino2.pdf"
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Violino secundo.pdf"
                                                         target="_blank">Biber, Heinrich - De Profundis -
                                                         Violin 2</a>
                                         </li>
-                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola1.pdf"
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Viola prima.pdf"
                                                         target="_blank">Biber, Heinrich - De Profundis -
                                                         Viola 1</a>
                                         </li>
-                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_viola2.pdf"
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Viola secunda.pdf"
                                                         target="_blank">Biber, Heinrich - De Profundis -
                                                         Viola 2</a>
                                         </li>
-                                        <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_BC.pdf"
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Cello, double bass.pdf"
                                                         target="_blank">Biber, Heinrich - De Profundis -
-                                                        Cello, double bass, bassoon, BC</a>
+                                                        Cello, double bass, BC</a>
+                                        </li>
+                                        <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Organo.pdf"
+                                                        target="_blank">Biber, Heinrich - De Profundis - BC
+                                                        part with empty stave</a>
                                         </li>
                                         <li><a href="/pdf/2026-2/Biber_DP/Biber_DeProfundis_organo.pdf"
                                                         target="_blank">Biber, Heinrich - De Profundis - BC
