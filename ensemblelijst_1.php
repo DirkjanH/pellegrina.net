@@ -165,6 +165,8 @@ $ruimtes = select_query($query_ruimtes);
 foreach ($ruimtes as $r) {
 	$ruimte[$r['Id']] = $r['aanduiding'];
 }
+d($query_ruimtes, $ruimtes, $ruimte);
+
 // end Recordset Ruimtes
 
 function ruimtecodes()
