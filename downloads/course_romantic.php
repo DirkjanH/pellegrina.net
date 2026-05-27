@@ -56,11 +56,9 @@ $cursusnr = 1 + $cursus_offset; ?>
                                                         href="https://www.google.com/maps/d/u/0/edit?mid=1zv5-hN4rGS_fZVT6gYvyPTuxC86MaC0&usp=sharing"
                                                         target="_blank">Map of České Budějovice, with all
                                                         venues</a></td>
-                                        <td class="w3-center "><a <a
-                                                        href="../part_list.php?cursus=1"
+                                        <td class="w3-center"><a href="../part_list.php?cursus=1"
                                                         target="_blank">List of participants</a></td>
-                                        <td class="w3-center grijs"><a <a
-                                                        xxxx="../ensemblelijst_1.php"
+                                        <td class="w3-center"><a href="../ensemblelijst_1.php"
                                                         target="_blank">Chamber music formations</a></td>
                                         <td class="w3-center grijs"><a
                                                         xxxx="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9ZgCzJD_eApDVSvp_h8V96-q9pyA9jerBBeaCdVVWXek3HPJ4ngrlGfL-WihiCUphxWCpl7JyplG6/pubhtml?gid=701953541&single=true"
