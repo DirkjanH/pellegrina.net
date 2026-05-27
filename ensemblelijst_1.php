@@ -173,8 +173,8 @@ d($query_ruimtes, $ruimtes, $ruimte);
 function ruimtecodes()
 {
 	global $ruimte, $locatie;
+	d($ruimtes, $locatie);
 	if (isset($ruimtes) and count($ruimtes) > 0) {
-		d($ruimtes, $locatie);
 		echo '<div style="float: left;"><hr><h3>Key to the classroom codes:</h3><p class="spelers">';
 		foreach ($ruimtes as $r => $code) {
 			$t = $code . ' = ' . $r['omschrijving'];
