@@ -170,7 +170,7 @@ foreach ($ruimtes as $r) {
 function ruimtecodes()
 {
 	global $ruimtes, $doc, $locatie;
-	if (isset($doc) and count($doc) > 0) {
+	if (isset($ruimtes) and count($ruimtes) > 0) {
 		echo '<div style="float: left;"><hr><h3>Key to the classroom codes:</h3><p class="spelers">';
 		foreach ($ruimtes as $r) {
 			$t = $r['aanduiding'] . ' = ' . $r['omschrijving'];
