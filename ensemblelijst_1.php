@@ -53,6 +53,7 @@ $query_cursus = sprintf(
 $cursus = select_query($query_cursus, 1);
 $cursusnaam = $cursus['cursusnaam_en'];
 $locatie = $cursus['locatie'];
+d($query_cursus, $cursus, $cursusnaam, $locatie);
 // end Recordset Cursusnamen
 
 // begin Recordset Ensembles
