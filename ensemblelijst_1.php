@@ -167,12 +167,11 @@ foreach ($ruimtes as $r) {
 	$ruimte[$r['Id']] = $r['aanduiding'];
 }
 d($query_ruimtes, $ruimtes, $ruimte);
-
 // end Recordset Ruimtes
 
 function ruimtecodes()
 {
-	global $ruimte, $locatie;
+	global $ruimtes, $locatie;
 	d($ruimtes, $locatie);
 	if (isset($ruimtes) and count($ruimtes) > 0) {
 		echo '<div style="float: left;"><hr><h3>Key to the classroom codes:</h3><p class="spelers">';
