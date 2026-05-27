@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($_GET);
 d($_POST);
@@ -282,16 +282,17 @@ function CursusZoek(Nr) {
             <div class="w3-panel"> <?php
 									$i = 1;
 									foreach ($ensembles as $i => $ensemble) {
+										d($ensemble);
 										$ens = '<h2>' . ($i + 1) . '. ';
-										if ($ensemble['link'] != '') {
+										if (isset($ensemble['link']) && $ensemble['link'] != '') {
 											$ensemble['link'] = rawurldecode($ensemble['link']);
 											$ens .= "<a href=\"{$ensemble['link']}\" target=\"_blank\">";
 										}
 										$ens .= stripslashes($ensemble['stuk']);
-										if ($ensemble['link'] != '') $ens .= "</a>";
+										if (isset($ensemble['link']) && $ensemble['link'] != '') $ens .= "</a>";
 										if ($ensemble['docent1'] > 0) $ens .= '&nbsp;&nbsp;' . $doc[$ensemble['docent1']]['code'];
 										if ($ensemble['docent2'] > 0) $ens .= '/' . $doc[$ensemble['docent2']]['code'];
-										if ($ensemble['ruimte'] > 0) $ens .= ' (' . $ruimte[$ensemble['ruimte']] . ')';
+										if (isset($ensemble['ruimte']) && $ensemble['ruimte'] > 0) $ens .= ' (' . $ruimte[$ensemble['ruimte']] . ')';
 										if ($ensemble['definitief'] > 0) $ens .= '&nbsp;<img src="Images/Logos/ok.png" alt="confirmed" class="geenlijn">';
 										elseif ($ensemble['compleet'] > 0) $ens .= '&nbsp;<img src="Images/Logos/question.png" alt="not confirmed" class="geenlijn">';
 										$ens .= '</h2>';
