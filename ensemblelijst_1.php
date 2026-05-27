@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($_GET);
 d($_POST);
@@ -171,6 +171,7 @@ function ruimtecodes()
 {
 	global $ruimte, $locatie;
 	if (isset($ruimte) and count($ruimte) > 0) {
+		d($ruimte, $locatie);
 		echo '<div style="float: left;"><hr><h3>Key to the classroom codes:</h3><p class="spelers">';
 		foreach ($ruimte as $r => $code) {
 			$t = $code . ' = ' . $r['omschrijving'];
