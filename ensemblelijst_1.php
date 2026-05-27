@@ -174,9 +174,9 @@ function ruimtecodes()
 {
 	global $ruimte, $locatie;
 	if (isset($ruimtes) and count($ruimtes) > 0) {
-		d($ruimte, $locatie);
+		d($ruimtes, $locatie);
 		echo '<div style="float: left;"><hr><h3>Key to the classroom codes:</h3><p class="spelers">';
-		foreach ($ruimte as $r => $code) {
+		foreach ($ruimtes as $r => $code) {
 			$t = $code . ' = ' . $r['omschrijving'];
 			if ($locatie == 'CB') {
 				$t .= ' (floor ' . $r['verdieping'] . ')<br>';
