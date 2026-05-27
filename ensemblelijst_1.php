@@ -175,8 +175,8 @@ function ruimtecodes()
 	d($ruimtes, $locatie);
 	if (isset($ruimtes) and count($ruimtes) > 0) {
 		echo '<div style="float: left;"><hr><h3>Key to the classroom codes:</h3><p class="spelers">';
-		foreach ($ruimtes as $r => $aanduiding) {
-			$t = $aanduiding . ' = ' . $r['omschrijving'];
+		foreach ($ruimtes as $r) {
+			$t = $r['aanduiding'] . ' = ' . $r['omschrijving'];
 			if ($locatie == 'CB') {
 				$t .= ' (floor ' . $r['verdieping'] . ')<br>';
 				$t = str_replace('floor 0', 'ground floor', $t);
