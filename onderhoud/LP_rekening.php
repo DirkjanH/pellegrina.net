@@ -160,6 +160,8 @@ ORDER BY CursusId_FK, achternaam ASC",
 
 	if (empty($inschrijving) or $inschrijving == FALSE) $inschrijving = select_query($query_inschrijving);
 	$aantal_inschrijvingen = count($inschrijving);
+
+	$inschrijving['korting'] = (float)$inschrijving['korting'];
 }
 // end Recordset inschrijving
 
