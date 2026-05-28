@@ -337,21 +337,27 @@ $cursusnr = 2 + $cursus_offset; ?>
             </div>
             <h4>Division of the solo sections for singers in the afternoon
                 programme</h4>
-            <table style="width: 94.0064%; height: 590.637px;">
+            <table class="w3-table w3-bordered w3-striped">
                 <tbody>
                     <tr style="height: 20.6182px;">
                         <td style="width: 11.7611%; height: 20.6182px;">
-                            <strong>Composer</strong></td>
+                            <strong>Composer</strong>
+                        </td>
                         <td style="width: 14.0228%; height: 20.6182px;">
-                            <strong>Work</strong></td>
+                            <strong>Work</strong>
+                        </td>
                         <td style="width: 15.7568%; height: 20.6182px;">
-                            <strong>Movement</strong></td>
+                            <strong>Movement</strong>
+                        </td>
                         <td style="width: 19.1494%; height: 20.6182px;">
-                            <strong>Soli</strong></td>
+                            <strong>Soli</strong>
+                        </td>
                         <td style="width: 3.61879%; height: 20.6182px;">
-                            <strong>Choir</strong></td>
+                            <strong>Choir</strong>
+                        </td>
                         <td style="width: 35.6602%; height: 20.6182px;">
-                            <strong>Cast</strong></td>
+                            <strong>Cast</strong>
+                        </td>
                     </tr>
                     <tr style="height: 20.6182px;">
                         <td style="width: 11.7611%; height: 20.6182px;">
@@ -453,9 +459,11 @@ $cursusnr = 2 + $cursus_offset; ?>
                         <td style="width: 15.7568%; height: 20.6182px;"><s>III.
                                 Ecce enim iniquitatibus</s></td>
                         <td style="width: 19.1494%; height: 20.6182px;">
-                            <s>ssaa</s></td>
+                            <s>ssaa</s>
+                        </td>
                         <td style="width: 3.61879%; height: 20.6182px;">
-                            <s>SSAA</s></td>
+                            <s>SSAA</s>
+                        </td>
                         <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
                         </td>
                     </tr>
@@ -493,9 +501,11 @@ $cursusnr = 2 + $cursus_offset; ?>
                         <td style="width: 15.7568%; height: 20.6182px;"><s>VI.
                                 Benigne fac</s></td>
                         <td style="width: 19.1494%; height: 20.6182px;">
-                            <s>ssaa</s></td>
+                            <s>ssaa</s>
+                        </td>
                         <td style="width: 3.61879%; height: 20.6182px;">
-                            <s>SSAA</s></td>
+                            <s>SSAA</s>
+                        </td>
                         <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
                         </td>
                     </tr>
@@ -509,7 +519,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                         <td style="width: 19.1494%; height: 20.6182px;">&nbsp;
                         </td>
                         <td style="width: 3.61879%; height: 20.6182px;">
-                            <s>SSAA</s></td>
+                            <s>SSAA</s>
+                        </td>
                         <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
                         </td>
                     </tr>
@@ -523,7 +534,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                         <td style="width: 19.1494%; height: 20.6182px;">&nbsp;
                         </td>
                         <td style="width: 3.61879%; height: 20.6182px;">
-                            <s>SSAA</s></td>
+                            <s>SSAA</s>
+                        </td>
                         <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
                         </td>
                     </tr>
