@@ -211,6 +211,7 @@ function cursusgeld($ins)
 	// bedankje donatie:
 	if (isset($ins['storting_fonds']) and $ins['storting_fonds'] > 0) {
 		if ($ins['donatie'] != "" and $ins['donatie'] > 0) {
+			$cursusgeld += $ins['donatie'];
 			$b_donatie = bedrag($ins['donatie']);
 			$regelNL .= "###Donatie aan het kortingsfonds@@@{$b_donatie}";
 			$regelEN .= "###Contribution to the reduction fund@@@{$b_donatie}";
