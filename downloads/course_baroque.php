@@ -52,8 +52,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                                 <tr>
                                         <td class="w3-center"><a href="../part_list.php?cursus=2"
                                                         target="_blank">List of participants</a></td>
-                                        <td class="w3-center grijs"><a
-                                                        xxxx="https://pellegrina.net/ensemblelijst_2.php"
+                                        <td class="w3-center"><a
+                                                        href="https://pellegrina.net/ensemblelijst_2.php"
                                                         target="_blank">Chamber music ensembles</a></td>
                                         <td class="w3-center"><a
                                                         href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTU_T6ifuUO40FAMPOA-I_v5GOIo00yKUIFCEbkuEyQ9VCw05pTswkFi7Z1UiQCtne9X9GzTNMKx7sS/pubhtml?gid=0&single=true"
