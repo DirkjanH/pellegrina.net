@@ -111,7 +111,7 @@ $cursusnr = 2 + $cursus_offset; ?>
             </div>
             <p>In Biber's Requiem, the sopranos and altos will be divided as
                 follows in the choral sections:</p>
-            <div class="w3-panel w3-border w3-light-grey w3-left">
+            <div class="w3-panel w3-border w3-light-grey w3-clear">
                 <p><i>Soprano 1:</i><br>Rhona Lonergan<br>Joyce Vermeer<br>Anne
                     Hodgkinson</p>
                 <p><i>Soprano 2:</i><br>Anke Muusse<br>Birthe Rubehn<br>Vivian
