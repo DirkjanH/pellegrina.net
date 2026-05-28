@@ -98,8 +98,6 @@ ORDER BY CursusId_FK, achternaam ASC",
 		quote($laatstecursus)
 	);
 
-	d($query_inschrijving);
-
 	$inschrijving = select_query($query_inschrijving);
 	if ($inschrijving) echo 'Totaal te versturen rekeningen: ' . count($inschrijving) . '<br>';
 } else { // ook naar mensen die al een rekening ontvingen
@@ -169,7 +167,7 @@ ORDER BY CursusId_FK, achternaam ASC",
 }
 // end Recordset inschrijving
 
-d($inschrijving);
+d($query_inschrijving, $inschrijving);
 
 $query_cursus = "SELECT
     CursusId
