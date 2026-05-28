@@ -100,7 +100,6 @@ ORDER BY CursusId_FK, achternaam ASC",
 	d($query_inschrijving);
 
 	$inschrijving = select_query($query_inschrijving);
-	d($inschrijving);
 	if ($inschrijving) echo 'Totaal te versturen rekeningen: ' . count($inschrijving) . '<br>';
 } else { // ook naar mensen die al een rekening ontvingen
 	$query_inschrijving = sprintf(
@@ -167,6 +166,8 @@ ORDER BY CursusId_FK, achternaam ASC",
 	$aantal_inschrijvingen = count($inschrijving);
 }
 // end Recordset inschrijving
+
+d($inschrijving);
 
 $query_cursus = "SELECT
     CursusId
@@ -254,7 +255,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		$ins['PayPal'] = $inschr['paypal'];
 		$ins['meerdaneen'] = $inschr['meerdaneen'];
 		$ins['eigen_acc'] = $inschr['eigen_acc'];
-		$ins['korting'] = bedrag($inschr['korting']);
+		$ins['korting'] = str2num($inschr['korting']);
 		$ins['extra'] = bedrag($inschr['extra']);
 		$ins['CursusId'] = $inschr['CursusId_FK'];
 
