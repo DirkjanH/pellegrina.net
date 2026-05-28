@@ -98,7 +98,7 @@ $cursusnr = 2 + $cursus_offset; ?>
             <p>The singers will be divided as follows in the choral sections:
             </p>
             <div class="w3-panel w3-border w3-light-grey w3-clear">
-                <div class="w3-left">
+                <div class="w3-left w3-margin-right">
                     <p><i>Soprano:</i><br>Rhona Lonergan<br>Anke Muusse<br>Joyce
                         Vermeer<br>Anne Hodgkinson<br>Birthe Rubehn</p>
                     <p><i>Alto:</i><br>Hilda Houtkoop<br>Vivian
