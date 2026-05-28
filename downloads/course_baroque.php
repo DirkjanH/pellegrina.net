@@ -97,22 +97,28 @@ $cursusnr = 2 + $cursus_offset; ?>
                 you. Study the choral parts as well as your solo parts.</p>
             <p>The singers will be divided as follows in the choral sections:
             </p>
-            <p><i>Soprano:</i><br>Rhona Lonergan<br>Anke Muusse<br>Joyce
-                Vermeer<br>Anne Hodgkinson<br>Birthe Rubehn</p>
-            <p><i>Alto:</i><br>Hilda Houtkoop<br>Vivian Stemerdink<br>Marie
-                Brummelhuis<br>Jana Dvořáčková<br>Marleen van Reenen</p>
-            <p><i>Tenor:</i><br>Joost Fransen<br>Jonathan Greene</p>
-            <p><i>Bass:</i><br>Jurgen van der Ent<br>Jan Dvořáček<br>Frits
-                Muusse<br>Peter van Zaanen<br>Pierre Eijgenraam<br>Stefan Op de
-                Beek</p>
-            <p>In Biber's Requiem, the singers will be divided as follows in the
-                choral sections: </p>
-            <p><i>Soprano 1:</i><br>Rhona Lonergan<br>Joyce Vermeer<br>Anne
-                Hodgkinson</p>
-            <p><i>Soprano 2:</i><br>Anke Muusse<br>Birthe Rubehn<br>Vivian
-                Stemerdink<br>Marie Brummelhuis</p>
-            <p><i>Alto:</i><br>Hilda Houtkoop<br>Jana Dvořáčková<br>Marleen van
-                Reenen</p>
+            <div class="w3-panel w3-border w3-light-grey w3-left">
+                <p><i>Soprano:</i><br>Rhona Lonergan<br>Anke Muusse<br>Joyce
+                    Vermeer<br>Anne Hodgkinson<br>Birthe Rubehn</p>
+                <p><i>Alto:</i><br>Hilda Houtkoop<br>Vivian Stemerdink<br>Marie
+                    Brummelhuis<br>Jana Dvořáčková<br>Marleen van Reenen</p>
+            </div>
+            <div class="w3-panel w3-border w3-light-grey w3-left">
+                <p><i>Tenor:</i><br>Joost Fransen<br>Jonathan Greene</p>
+                <p><i>Bass:</i><br>Jurgen van der Ent<br>Jan Dvořáček<br>Frits
+                    Muusse<br>Peter van Zaanen<br>Pierre Eijgenraam<br>Stefan Op
+                    de Beek</p>
+            </div>
+            <p>In Biber's Requiem, the sopranos and altos will be divided as
+                follows in the choral sections:</p>
+            <div class="w3-panel w3-border w3-light-grey w3-left">
+                <p><i>Soprano 1:</i><br>Rhona Lonergan<br>Joyce Vermeer<br>Anne
+                    Hodgkinson</p>
+                <p><i>Soprano 2:</i><br>Anke Muusse<br>Birthe Rubehn<br>Vivian
+                    Stemerdink<br>Marie Brummelhuis</p>
+                <p><i>Alto:</i><br>Hilda Houtkoop<br>Jana Dvořáčková<br>Marleen
+                    van Reenen</p>
+            </div>
             <h4>Heinichen, Johann David - Concerto à 7 S.215</h4>
             <div class="cols3">
                 <ul>
