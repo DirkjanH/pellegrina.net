@@ -157,7 +157,7 @@ function cursusgeld($ins)
 	// korting voor eigen accommodatie:
 	if (isset($ins['eigen_acc']) and $ins['eigen_acc']) {
 		$cursusgeld -= ($eigen_acc);
-		$b_eigen_acc = bedrag($eigen_acc);
+		$b_eigen_acc = bedrag($eigen_acc * -1);
 		$wensenNL .= ", minus korting voor eigen accommodatie";
 		$wensenEN .= ", minus reduction for arranging your own accommodation";
 		$regelNL .= "###Korting voor eigen accommodatie@@@{$b_eigen_acc}";
