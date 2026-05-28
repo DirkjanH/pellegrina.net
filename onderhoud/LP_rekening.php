@@ -17,6 +17,7 @@ ob_start();
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
 	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
+if (isset($_GET['reset']) and $_GET['reset'] == 'Wis') unset($_SESSION['DlnmrId']);
 
 // Kies tarievenmodule:
 require_once("tarieven.php");
@@ -30,7 +31,6 @@ function send_alert($msg)
 if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
 
-if (isset($_GET['reset']) and $_GET['reset'] == 'Wis') $_SESSION['DlnmrId'] = '';
 
 // begin Recordset inschrijving
 
