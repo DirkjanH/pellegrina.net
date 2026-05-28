@@ -86,7 +86,7 @@ $cursusnr = 2 + $cursus_offset; ?>
                         target="_blank">Violin 2</a></li>
                 <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Viola.pdf"
                         target="_blank">Viola</a></li>
-                <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Cello-Bass.pdf"
+                <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Cello-B<br></p>ss.pdf"
                         target="_blank">Cello</a></li>
             </div>
             <h2>Tutti programme</h2>
@@ -97,27 +97,22 @@ $cursusnr = 2 + $cursus_offset; ?>
                 you. Study the choral parts as well as your solo parts.</p>
             <p>The singers will be divided as follows in the choral sections:
             </p>
-            <p><i>Soprano:</i></p>
-            <p>Rhona Lonergan<br>Anke Muusse<br>Joyce Vermeer<br>Anne
-                Hodgkinson<br>Birthe Rubehn</p>
-            <p><i>Alto:</i></p>
-            <p>Hilda Houtkoop<br>Vivian Stemerdink<br>Marie Brummelhuis<br>Jana
-                Dvořáčková<br>Marleen van Reenen</p>
+            <p><i>Soprano:</i><br>Rhona Lonergan<br>Anke Muusse<br>Joyce
+                Vermeer<br>Anne Hodgkinson<br>Birthe Rubehn</p>
+            <p><i>Alto:</i><br>Hilda Houtkoop<br>Vivian Stemerdink<br>Marie
+                Brummelhuis<br>Jana Dvořáčková<br>Marleen van Reenen</p>
+            <p><i>Tenor:</i><br>Joost Fransen<br>Jonathan Greene</p>
+            <p><i>Bass:</i><br>Jurgen van der Ent<br>Jan Dvořáček<br>Frits
+                Muusse<br>Peter van Zaanen<br>Pierre Eijgenraam<br>Stefan Op de
+                Beek</p>
             <p>In Biber's Requiem, the singers will be divided as follows in the
                 choral sections: </p>
-            <p><i>Soprano 1:</i></p>
-            <p>Rhona Lonergan<br>Joyce Vermeer<br>Anne Hodgkinson</p>
-            <p><i>Soprano 2:</i></p>
-            <p>Anke Muusse<br>Birthe Rubehn<br>Vivian Stemerdink<br>Marie
-                Brummelhuis</p>
-            <p><i>Alto:</i></p>
-            <p>Hilda Houtkoop<br>Jana Dvořáčková<br>Marleen van Reenen</p>
-            <p><i>Tenor:</i></p>
-            <p>Joost Fransen<br>Jonathan Greene<br>
-            </p>
-            <p><i>Bass:</i></p>
-            <p>Jurgen van der Ent<br>Jan Dvořáček<br>Frits Muusse<br>Peter van
-                Zaanen<br>Pierre Eijgenraam<br>Stefan Op de Beek</p>
+            <p><i>Soprano 1:</i><br>Rhona Lonergan<br>Joyce Vermeer<br>Anne
+                Hodgkinson</p>
+            <p><i>Soprano 2:</i><br>Anke Muusse<br>Birthe Rubehn<br>Vivian
+                Stemerdink<br>Marie Brummelhuis</p>
+            <p><i>Alto:</i><br>Hilda Houtkoop<br>Jana Dvořáčková<br>Marleen van
+                Reenen</p>
             <h4>Heinichen, Johann David - Concerto à 7 S.215</h4>
             <div class="cols3">
                 <ul>
