@@ -255,7 +255,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		$ins['PayPal'] = $inschr['paypal'];
 		$ins['meerdaneen'] = $inschr['meerdaneen'];
 		$ins['eigen_acc'] = $inschr['eigen_acc'];
-		$ins['korting'] = str2num($inschr['korting']);
+		$ins['korting'] = bedrag($inschr['korting']);
 		$ins['extra'] = bedrag($inschr['extra']);
 		$ins['CursusId'] = $inschr['CursusId_FK'];
 
@@ -267,7 +267,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		$factuurbedrag = intval($factuur['cursusgeld']);
 
 		if ($factuurbedrag != $cursusgeld) {
-			$boodschap = "{$inschr['naam']} heeft € {$factuurbedrag} berekend cursusgeld en € {$cursusgeld} cursusgeld volgens de database";
+			$boodschap = "{$inschr['naam']} (inschri9jving nr. {$inschr['InschId']}) heeft € {$factuurbedrag} berekend cursusgeld en € {$cursusgeld} cursusgeld volgens de database";
 			send_alert($boodschap);
 		}
 
