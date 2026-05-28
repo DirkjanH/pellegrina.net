@@ -164,7 +164,7 @@ function cursusgeld($ins)
 		$regelEN .= "###Reduction for arranging your own accommodation@@@{$b_eigen_acc}";
 	}
 
-	// supplement voor maaltijdpas:
+	// supplement voor diner bij eigen acc.:
 	if (isset($ins['diner']) and $ins['diner'] == '1') {
 		$cursusgeld += $diner;
 		$b_diner = bedrag($diner);
