@@ -263,6 +263,8 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 
 		$factuur = cursusgeld($ins);
 
+		d($factuur);
+
 		$cursusgeld = intval($inschr['cursusgeld']);
 		$factuurbedrag = intval($factuur['cursusgeld']);
 
