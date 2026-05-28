@@ -384,7 +384,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                                 name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
 																		echo $_GET['DlnmrId']; ?>" size="5" />
                             <input type="submit" name="Submit" value="Zoek">
-                            <input type="reset" name="Reset" value="Wis">
+                            <input type="submit" name="Reset" value="Wis">
                             Rekening al verzonden: <input
                                 name="rekening_verzonden" type="checkbox"
                                 id="rekening_verzonden"
