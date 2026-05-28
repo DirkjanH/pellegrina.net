@@ -101,12 +101,16 @@ $cursusnr = 2 + $cursus_offset; ?>
                 <div class="w3-left w3-margin-right">
                     <p><i>Soprano:</i><br>Rhona Lonergan<br>Anke Muusse<br>Joyce
                         Vermeer<br>Anne Hodgkinson<br>Birthe Rubehn</p>
+                </div>
+                <div class="w3-left w3-margin-right">
                     <p><i>Alto:</i><br>Hilda Houtkoop<br>Vivian
                         Stemerdink<br>Marie Brummelhuis<br>Jana
                         Dvořáčková<br>Marleen van Reenen</p>
                 </div>
-                <div class="w3-left">
+                <div class="w3-left w3-margin-right">
                     <p><i>Tenor:</i><br>Joost Fransen<br>Jonathan Greene</p>
+                </div>
+                <div class="w3-left w3-margin-right">
                     <p><i>Bass:</i><br>Jurgen van der Ent<br>Jan
                         Dvořáček<br>Frits Muusse<br>Peter van Zaanen<br>Pierre
                         Eijgenraam<br>Stefan Op de Beek</p>
