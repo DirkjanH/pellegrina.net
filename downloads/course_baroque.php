@@ -335,6 +335,453 @@ $cursusnr = 2 + $cursus_offset; ?>
                     </li>
                 </ul>
             </div>
+            <h4>Division of the solo sections for singers in the afternoon
+                programme</h4>
+            <table style="width: 94.0064%; height: 590.637px;">
+                <tbody>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">
+                            <strong>Composer</strong></td>
+                        <td style="width: 14.0228%; height: 20.6182px;">
+                            <strong>Work</strong></td>
+                        <td style="width: 15.7568%; height: 20.6182px;">
+                            <strong>Movement</strong></td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <strong>Soli</strong></td>
+                        <td style="width: 3.61879%; height: 20.6182px;">
+                            <strong>Choir</strong></td>
+                        <td style="width: 35.6602%; height: 20.6182px;">
+                            <strong>Cast</strong></td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">
+                            Heinichen, Johann David</td>
+                        <td style="width: 14.0228%; height: 20.6182px;">
+                            <div>
+                                <div>Concerto &agrave; 7 S.215</div>
+                            </div>
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">
+                            instruments only</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">Biber,
+                            Heinrich</td>
+                        <td style="width: 14.0228%; height: 20.6182px;">De
+                            Profundis</td>
+                        <td style="width: 15.7568%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">satb
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">SATB
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Birthe,
+                            Marleen, Jonathan, Stefan</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">Zelenka,
+                            Jan Dismas</td>
+                        <td style="width: 14.0228%; height: 20.6182px;">
+                            <div>
+                                <div>Ecce nunc benedicite, ZWV 99</div>
+                            </div>
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">satb
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">SATB
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Vivian,
+                            Hilda, Jan, Frits</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">Hasse,
+                            Johann Adolph</td>
+                        <td style="width: 14.0228%; height: 20.6182px;">
+                            <div>
+                                <div>Miserere in c moll</div>
+                            </div>
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">ssaa
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">SSAA
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">I.
+                            Miserere mei Deus</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">ssaa
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">SSAA
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Irma,
+                            Anne, Marie, Jana</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">II.Tibi
+                            soli peccavi</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">s</td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Joyce
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;"><s>III.
+                                Ecce enim iniquitatibus</s></td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <s>ssaa</s></td>
+                        <td style="width: 3.61879%; height: 20.6182px;">
+                            <s>SSAA</s></td>
+                        <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">IV.
+                            Libera me de sanguinibus Deus</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">aa</td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Marie,
+                            Jana</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">V.
+                            Quoniam si voluisses</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">s</td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Anne
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;"><s>VI.
+                                Benigne fac</s></td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <s>ssaa</s></td>
+                        <td style="width: 3.61879%; height: 20.6182px;">
+                            <s>SSAA</s></td>
+                        <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;"><s>VII.
+                                Gloria Patri</s></td>
+                        <td style="width: 19.1494%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">
+                            <s>SSAA</s></td>
+                        <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;"><s>VIII.
+                                Sicut erat - Amen</s></td>
+                        <td style="width: 19.1494%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">
+                            <s>SSAA</s></td>
+                        <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">
+                            Heinichen, Johann David</td>
+                        <td style="width: 14.0228%; height: 20.6182px;">
+                            <div>
+                                <div>Confitebor S.32</div>
+                            </div>
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">satb
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">SATB
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Birthe,
+                            Vivian, Joost, Peter</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">Biber,
+                            Heinrich</td>
+                        <td style="width: 14.0228%; height: 20.6182px;">Requiem
+                            in f</td>
+                        <td style="width: 15.7568%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">SSATB
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Te decet
+                            hymnus</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>bar then SSATB</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Jurgen,
+                            then Rhona, Anke, Marleen, Jonathan</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Kyrie
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>SSATB soli until m76</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Rhona,
+                            Anke, Marleen, Jonathan, Jurgen</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Quantus
+                            tremor - Tuba mirum</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>SSATB soli until m 52</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Vivian
+                            &amp; Hilda, later Jan &amp; Frits, then Jana as A
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Judex
+                            ergo</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>B then SSA until m.84</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Jurgen,
+                            then Vivian, Hilda, Jana, Jan, Frits</td>
+                    </tr>
+                    <tr style="height: 25.6545px;">
+                        <td style="width: 11.7611%; height: 25.6545px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 25.6545px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 25.6545px;">
+                            Recordare</td>
+                        <td style="width: 19.1494%; height: 25.6545px;">
+                            <div>
+                                <div>S1, AT, ripieno from m.109</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 25.6545px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 25.6545px;">Rhona,
+                            Irma, Marleen, Joost, then m.121 Vivian, Hilda,
+                            Marleen, Jonathan, Stefan</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Inter
+                            oves</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>SSATB until m.135, short T solo m.160-162
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">m.
+                            159-162 Joost, then ripieno</td>
+                    </tr>
+                    <tr style="height: 23.2545px;">
+                        <td style="width: 11.7611%; height: 23.2545px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 23.2545px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 23.2545px;">
+                            Offertorium Domine Jesu</td>
+                        <td style="width: 19.1494%; height: 23.2545px;">
+                            <div>
+                                <div>B until m.10</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 23.2545px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 23.2545px;">Jurgen,
+                            then m.19 Rhona, Anke, Marleen, Jonathan, Frits</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Libera
+                            eas</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>SSATB -rip from m.47</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">&nbsp;
+                        </td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Hostias
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>S1, AT, then B</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Joyce,
+                            Marleen, Joost, Peter</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Osanna
+                        </td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>SSATB until m.44</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Rhona,
+                            Anke, Marleen, Jan, Frits</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">
+                            Benedictus</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">S1, A, B
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Rhona,
+                            Jana, Jurgen</td>
+                    </tr>
+                    <tr style="height: 26.2727px;">
+                        <td style="width: 11.7611%; height: 26.2727px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 26.2727px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 26.2727px;">Agnus
+                        </td>
+                        <td style="width: 19.1494%; height: 26.2727px;">
+                            <div>
+                                <div>SSATB - rip from m.29</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 26.2727px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 26.2727px;">Birthe,
+                            Anne, Marleen, Joost, Jurgen, from 25 Anne S1,
+                            Birthe S2</td>
+                    </tr>
+                    <tr style="height: 20.6182px;">
+                        <td style="width: 11.7611%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 14.0228%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 15.7568%; height: 20.6182px;">Communio
+                            Lux Aeterna</td>
+                        <td style="width: 19.1494%; height: 20.6182px;">
+                            <div>
+                                <div>SSATB for only 7 measures</div>
+                            </div>
+                        </td>
+                        <td style="width: 3.61879%; height: 20.6182px;">&nbsp;
+                        </td>
+                        <td style="width: 35.6602%; height: 20.6182px;">Anne,
+                            Birthe, Marleen, Joost, Jurgen</td>
+                    </tr>
+                </tbody>
+            </table>
             <h2> <a href="javascript: history.go(-1)">Back</a></h2>
             <p>&nbsp;</p>
         </div>
