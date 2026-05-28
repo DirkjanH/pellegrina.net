@@ -30,7 +30,7 @@ function send_alert($msg)
 if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
 
-if (isset($_GET['reset']) and $_GET['reset'] == 'Wis') empty($_SESSION['DlnmrId']);
+if (isset($_GET['reset']) and $_GET['reset'] == 'Wis') $_SESSION['DlnmrId'] = '';
 
 // begin Recordset inschrijving
 
