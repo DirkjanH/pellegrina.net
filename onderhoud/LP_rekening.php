@@ -255,6 +255,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		$ins['PayPal'] = $inschr['paypal'];
 		$ins['meerdaneen'] = $inschr['meerdaneen'];
 		$ins['eigen_acc'] = $inschr['eigen_acc'];
+		$ins['diner'] = $inschr['diner'];
 		$ins['korting'] = str2num($inschr['korting']);
 		$ins['extra'] = bedrag($inschr['extra']);
 		$ins['CursusId'] = $inschr['CursusId_FK'];
