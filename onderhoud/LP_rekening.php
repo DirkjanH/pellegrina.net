@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($_REQUEST, $_GET, $_POST, $_SESSION);
 
@@ -343,56 +343,54 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<META NAME="robots" CONTENT="noindex, nofollow">
-	<link rel="apple-touch-icon" sizes="180x180"
-		href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-	<link rel="manifest"
-		href="https://pellegrina.net/Images/Logos/site.webmanifest">
-	<link rel="mask-icon"
-		href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
-		color="#5bbad5">
-	<link rel="shortcut icon"
-		href="https://pellegrina.net/Images/Logos/favicon.ico">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config"
-		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<title>LP rekeningen maken</title>
-	<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
-	<link rel="stylesheet" href="/css/LP_onderhoud.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <META NAME="robots" CONTENT="noindex, nofollow">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+    <link rel="manifest"
+        href="https://pellegrina.net/Images/Logos/site.webmanifest">
+    <link rel="mask-icon"
+        href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
+        color="#5bbad5">
+    <link rel="shortcut icon"
+        href="https://pellegrina.net/Images/Logos/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config"
+        content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>LP rekeningen maken</title>
+    <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
+    <link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
-
 <body>
-	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
-	<div id="mainframe">
-		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
-		</header>
-		<div id="mainpage">
-			<table width="90%" class="w3-table" align="left">
-				<tr>
-					<td colspan="2">
-						<form id="zoek" name="zoek" method="get"
-							action="<?php echo $editFormAction; ?>"> Id: <input
-								name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+    <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+    <div id="mainframe">
+        <header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
+        </header>
+        <div id="mainpage">
+            <table width="90%" class="w3-table" align="left">
+                <tr>
+                    <td colspan="2">
+                        <form id="zoek" name="zoek" method="get"
+                            action="<?php echo $editFormAction; ?>"> Id: <input
+                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
 																		echo $_GET['DlnmrId']; ?>" size="5" />
-							<input type="submit" name="Submit" value="Zoek">
-							Rekening al verzonden: <input
-								name="rekening_verzonden" type="checkbox"
-								id="rekening_verzonden"
-								<?php
+                            <input type="submit" name="Submit" value="Zoek">
+                            Rekening al verzonden: <input
+                                name="rekening_verzonden" type="checkbox"
+                                id="rekening_verzonden"
+                                <?php
 								if (isset($inschr['rekening_verzonden']) and $inschr['rekening_verzonden'] != '') echo 'checked'; ?>
-								value="1">
-						</form>
-					</td>
-				</tr> <?php
+                                value="1">
+                        </form>
+                    </td>
+                </tr> <?php
 						if (isset($aantal_inschrijvingen) and $aantal_inschrijvingen > 1) {
 							d($inschrijving);
 							echo "<tr><td colspan=\"3\">";
@@ -417,31 +415,30 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 							d($inschrijving);
 						}
 						?> <tr>
-					<td colspan="2">
-						<h2>Naam:&nbsp;<?php if ($id != -1) echo $inschr['naam']; ?><br>
-						</h2>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<form action="<?php echo $editFormAction; ?>"
-							method="POST" name="update" id="update">
-							<p>
-								<input type="submit" name="verzend"
-									value="Maak rekeningen" /> &nbsp;&nbsp;
-								<label>Daadwerkelijk verzenden: <input
-										name="verzenden" type="checkbox"
-										id="verzenden" value="1"
-										<?php if (isset($_POST['verzenden'])) echo 'checked'; ?>>
-								</label>
-								<br>
-							</p>
-						</form>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</div> <?php ob_end_flush(); ?>
+                    <td colspan="2">
+                        <h2>Naam:&nbsp;<?php if ($id != -1) echo $inschr['naam']; ?><br>
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <form action="<?php echo $editFormAction; ?>"
+                            method="POST" name="update" id="update">
+                            <p>
+                                <input type="submit" name="verzend"
+                                    value="Maak rekeningen" /> &nbsp;&nbsp;
+                                <label>Daadwerkelijk verzenden: <input
+                                        name="verzenden" type="checkbox"
+                                        id="verzenden" value="1"
+                                        <?php if (isset($_POST['verzenden'])) echo 'checked'; ?>>
+                                </label>
+                                <br>
+                            </p>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div> <?php ob_end_flush(); ?>
 </body>
-
 </html>
