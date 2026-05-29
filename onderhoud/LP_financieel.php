@@ -60,7 +60,8 @@ $query_cursus = "SELECT
   toehoorder,
   korting_vroeg,
   korting_meer,
-  korting_eigen_acc
+  korting_eigen_acc,
+  diner
 FROM
   cursus
 WHERE cursusId BETWEEN {$eerstecursus}
