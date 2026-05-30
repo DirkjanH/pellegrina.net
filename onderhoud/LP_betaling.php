@@ -71,6 +71,7 @@ d($query_inschrijving);
 if ($query_inschrijving != '') {
 	$inschrijving = select_query($query_inschrijving);
 	if (is_array($inschrijving)) $totalRows_inschrijving = count($inschrijving);
+	else $totalRows_inschrijving = 0;
 }
 // end Recordset
 
@@ -93,7 +94,8 @@ ORDER BY CursusId_FK, achternaam ASC";
 d($query_openstaand);
 
 $openstaand = select_query($query_openstaand);
-$totalRows_openstaand = count($openstaand);
+if (is_array($openstaand)) $totalRows_openstaand = count($openstaand);
+else $totalRows_openstaand = 0;
 // end Recordset Openstaande rekeningen
 
 // begin Recordset Openstaand bedrag
