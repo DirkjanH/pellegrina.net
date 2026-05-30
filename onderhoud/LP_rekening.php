@@ -17,8 +17,8 @@ if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrI
 if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
 if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
-    unset($_SESSION, $_GET, $_POST, $_REQUEST, $_SESSION['DlnmrId']);
-    d($_SESSION, $_GET, $_POST, $_REQUEST, $_SESSION['DlnmrId']);
+    unset($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_REQUEST, $_SESSION['DlnmrId']);
+    d($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_REQUEST, $_SESSION['DlnmrId']);
     header("Location: " . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
     $id = -1;
     exit();
