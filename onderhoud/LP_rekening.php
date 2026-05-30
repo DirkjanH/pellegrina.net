@@ -387,7 +387,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 </head>
 
 <body>
-    <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+    <div id="zoek"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
         <header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
         </header>
@@ -397,8 +397,9 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']) and $_GET['Reset'] != 'Wis')
-                                                                        echo $_GET['DlnmrId']; ?>"
+                                name="DlnmrId" type="text"
+                                value="<?php if (isset($_GET['DlnmrId']) and $_GET['Reset'] != 'Wis')
+                                            echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
