@@ -255,32 +255,32 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                         </td>
                     </tr>
                     <tr valign="baseline">
-                        <td align="right" nowrap>
+                        <td width="200 align=" right" nowrap>
                             <div align="right">Cursusgeld:</div>
                         </td>
                         <td><?php echo euro2($ins['cursusgeld']); ?></td>
                     </tr>
                     <tr valign="baseline">
-                        <td>
+                        <td width="200">
                             <div align="right">Gedoneerd bedrag: </div>
                         </td>
                         <td><?php echo euro2($ins['donatie']); ?></td>
                     </tr>
                     <tr valign="baseline">
-                        <td align="right" nowrap>
+                        <td width="200" align="right" nowrap>
                             <div align="right">Totaal te betalen: </div>
                         </td>
                         <td><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?>&nbsp;
                         </td>
                     </tr>
                     <tr valign="baseline">
-                        <td align="right" nowrap>
+                        <td width="200" align="right" nowrap>
                             <div align="right">Al betaald:</div>
                         </td>
                         <td><?php echo euro2($ins['aanbet_bedrag']); ?></td>
                     </tr>
                     <tr valign="middle">
-                        <td align="right" valign="top" nowrap>
+                        <td width="200" align="right" valign="top" nowrap>
                             <div align="right">Nog openstaand </div>
                         </td>
                         <td valign="top" nowrap>
@@ -296,7 +296,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                                     value="Postbank" checked> Postbank</label>
                             <label>
                                 <input type="radio" name="betaalwijze"
-                                    value="KB"> KB</label>
+                                    value="KB">KB</label>
                             <label>
                                 <input type="radio" name="betaalwijze"
                                     value="PayPal"> PayPal</label>
