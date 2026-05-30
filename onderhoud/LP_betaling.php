@@ -213,8 +213,8 @@ $openstaand_giraal = euro($openstaand_bedrag['totaal'] - $openstaand_cashbedrag[
 		<div id="mainpage">
 			<form id="zoek" name="zoek" method="get"
 				action="<?php echo $editFormAction; ?>"> Id: <input
-					name="DlnmrId" type="text" value="<?php if (isset($_POST['DlnmrId']))
-															echo $_POST['DlnmrId']; ?>" size="5" />
+					name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+															echo $_GET['DlnmrId']; ?>" size="5" />
 				<input type="submit" name="Submit" value="Zoek">
 			</form> <?php
 					if ($totalRows_inschrijving > 1) {
