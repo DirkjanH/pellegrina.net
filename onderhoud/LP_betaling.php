@@ -189,10 +189,10 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/LP_onderhoud.css" type="text/css">
 	<style>
-		#navcontainer,
-		#navcontainer ul,
-		#navcontainer li,
-		#navcontainer a {
+		#openstaand,
+		#openstaand ul,
+		#openstaand li,
+		#openstaand a {
 			width: 300px;
 		}
 	</style>
@@ -346,7 +346,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 					<tr valign="baseline">
 						<td colspan="2">
 							<p class="groot">Nog openstaande rekeningen:</p>
-							<div id="navcontainer">
+							<div id="openstaand">
 								<ul id="navlist"> <?php
 													foreach ($openstaand as $open) {
 														$grijs = TRUE;
