@@ -17,23 +17,18 @@ ob_start();
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
 	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
-if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
-	unset($_SESSION['DlnmrId']);
-	unset($_GET['DlnmrId']);
-}
+if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') unset($_SESSION, $_GET, $_POST);
 
 // Kies tarievenmodule:
 require_once("tarieven.php");
 
 function send_alert($msg)
 {
-
 	echo "<script language=\"javascript\">alert(\"{$msg}\");</script>";
 }  //end function 
 
 if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
-
 
 // begin Recordset inschrijving
 
@@ -99,7 +94,7 @@ ORDER BY CursusId_FK, achternaam ASC",
 	);
 
 	$inschrijving = select_query($query_inschrijving);
-	if ($inschrijving) echo 'Totaal te versturen rekeningen: ' . count($inschrijving) . '<br>';
+	if (isset($inschrijving) and is_array($inschrijving)) echo 'Totaal te versturen rekeningen: ' . count($inschrijving) . '<br>';
 } else { // ook naar mensen die al een rekening ontvingen
 	$query_inschrijving = sprintf(
 		"SELECT
