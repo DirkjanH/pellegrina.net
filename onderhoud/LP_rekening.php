@@ -51,6 +51,7 @@ if ($id == -1) {
   eenpersoons,
   i.hotel_2pp, 
   i.hotel_1pp,
+  i.hotel_1_2pp,
   i.kamperen,
   i.meerpers,
   aangenomen,
@@ -269,7 +270,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 		$factuurbedrag = intval($factuur['cursusgeld']);
 
 		if ($factuurbedrag != $cursusgeld) {
-			$boodschap = "{$inschr['naam']} (inschri9jving nr. {$inschr['InschId']}) heeft € {$factuurbedrag} berekend cursusgeld en € {$cursusgeld} cursusgeld volgens de database";
+			$boodschap = "{$inschr['naam']} (inschrijving nr. {$inschr['InschId']}) heeft € {$factuurbedrag} berekend cursusgeld en € {$cursusgeld} cursusgeld volgens de database";
 			send_alert($boodschap);
 		}
 
