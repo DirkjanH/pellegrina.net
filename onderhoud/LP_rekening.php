@@ -19,7 +19,10 @@ if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrI
 	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
 if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
-if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') unset($_SESSION, $_GET, $_POST, $_REQUEST);
+if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
+	unset($_SESSION, $_GET, $_POST, $_REQUEST);
+	d($_SESSION, $_GET, $_POST, $_REQUEST);
+}
 
 // Kies tarievenmodule:
 require_once("tarieven.php");
