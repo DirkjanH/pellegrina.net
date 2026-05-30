@@ -193,7 +193,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 		#navcontainer ul,
 		#navcontainer li,
 		#navcontainer a {
-			width: 400px;
+			width: 300px;
 		}
 	</style>
 	<meta charset="utf-8">
@@ -346,33 +346,33 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 					<tr valign="baseline">
 						<td colspan="2">
 							<p class="groot">Nog openstaande rekeningen:</p>
-							<div id="navcontainer" style="width: 400px;">
-								<ul id="navlist" style="width: 400px;"> <?php
-																		foreach ($openstaand as $open) {
-																			$grijs = TRUE;
-																			if (stripos($open['rekening_opmerking'], 'Betaling ter plekke in cash') === FALSE)
-																				$grijs =  FALSE;
-																			$bedrag = $open['cursusgeld'] + $open['donatie']
-																				- $open['aanbet_bedrag'];
-																			$opens = '<li id="active"><a href="javascript:SetInschId(';
-																			$opens .= $open['InschId'] . ')">';
-																			if ($grijs) $opens .= '<span class="grijs">';
-																			$opens .= $open['naam'] . ' (';
-																			$opens .= euro2($bedrag);
-																			$opens .= ")";
-																			if ($grijs) $opens .= '</span>';
-																			$opens .= "</a></li>\n";
-																			echo $opens;
-																		}
-																		echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}<br>";
-																		foreach ($openstaand_bedrag as $key => $value) {
-																			if (strpos($key, 'totaal') === false) {
-																				echo "Cursus {$key}: ";
-																				echo $value . " | ";
-																			}
-																		}
-																		echo '</p>';
-																		?> </ul>
+							<div id="navcontainer">
+								<ul id="navlist"> <?php
+													foreach ($openstaand as $open) {
+														$grijs = TRUE;
+														if (stripos($open['rekening_opmerking'], 'Betaling ter plekke in cash') === FALSE)
+															$grijs =  FALSE;
+														$bedrag = $open['cursusgeld'] + $open['donatie']
+															- $open['aanbet_bedrag'];
+														$opens = '<li id="active"><a href="javascript:SetInschId(';
+														$opens .= $open['InschId'] . ')">';
+														if ($grijs) $opens .= '<span class="grijs">';
+														$opens .= $open['naam'] . ' (';
+														$opens .= euro2($bedrag);
+														$opens .= ")";
+														if ($grijs) $opens .= '</span>';
+														$opens .= "</a></li>\n";
+														echo $opens;
+													}
+													echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}<br>";
+													foreach ($openstaand_bedrag as $key => $value) {
+														if (strpos($key, 'totaal') === false) {
+															echo "Cursus {$key}: ";
+															echo $value . " | ";
+														}
+													}
+													echo '</p>';
+													?> </ul>
 							</div> 
 						</td>
 					</tr>
