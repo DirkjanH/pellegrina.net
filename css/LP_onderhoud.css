@@ -96,7 +96,9 @@ a.button {
 
 .container {
     display: flex;
-    background-color: #f1f1f1;
+    background-color: #e2cfcf;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .container div {
