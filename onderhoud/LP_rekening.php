@@ -311,6 +311,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			if ($factuur['donatie'] > 0)
 				$mail_text = str_replace("{donatie}", $inschr['donatie'], $mail_text);
 			else $mail_text = str_replace("{donatie}", '', $mail_text);
+
 			d($mail_text);
 
 			// stuur een mail
@@ -327,7 +328,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			$mail->AltBody = strip_tags($mail_text);
 
 			if (!($_POST['verzenden'])) {
-				echo "<p>De mail-tekst is:</p><div class=\"w3-panel w3-info w3-clear\">{$mail_text}</div><hr>";
+				echo "<p>De mail-tekst is:</p><div class=\"w3-panel w3-white w3-info w3-clear\">{$mail_text}</div><hr>";
 			} else {
 				if (!$mail->Send()) {
 					echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) kon niet verzonden worden.<br>";
