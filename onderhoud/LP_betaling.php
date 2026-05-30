@@ -225,7 +225,7 @@ $openstaand_giraal = euro($openstaand_bedrag['totaal'] - $openstaand_cashbedrag[
 </head>
 
 <body>
-	<div id="zoek"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+	<div id="zoeknm"> <?php require_once('LP_zoeknaam.php'); ?> </div>
 	<div id="mainframe">
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>

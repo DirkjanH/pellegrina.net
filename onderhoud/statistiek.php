@@ -210,7 +210,7 @@ while ($i <= ($laatstecursus)) {
 </head>
 
 <body>
-	<div id="zoek">
+	<div id="zoeknm">
 		<?php require_once('zoeknaam_nieuw.php'); ?>
 	</div>
 	<div id="inhoud">

@@ -378,7 +378,7 @@ if (isset($_GET['DlnmrId']) or isset($_GET['cursus'])) LeesInschrijving($_GET['D
 </head>
 
 <body>
-	<div id="zoek"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+	<div id="zoeknm"> <?php require_once('LP_zoeknaam.php'); ?> </div>
 	<div id="mainframe">
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
