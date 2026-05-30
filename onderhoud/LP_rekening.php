@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
-Kint::$enabled_mode = true;
+Kint::$enabled_mode = false;
 
 d($_REQUEST, $_GET, $_POST, $_SESSION);
 
@@ -387,9 +387,8 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text"
-                                value="<?php if (isset($_GET['DlnmrId']))
-                                            echo $_GET['DlnmrId']; ?>"
+                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+                                                                        echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
