@@ -151,9 +151,9 @@ $openstaand_cashbedrag['totaal'] = 0;
 foreach ($cashbedrag as $i => $cashbedr) {
 	$openstaand_cashbedrag[$i + 1] = $cashbedr['tebetalen'];
 	$openstaand_cashbedrag['totaal'] += $openstaand_cashbedrag[$i + 1];
-	$openstaand_cashbedrag[$i + 1] = euro2($openstaand_cashbedrag[$i + 1]);
+	$openstaand_cashbedrag[$i + 1] = euro($openstaand_cashbedrag[$i + 1]);
 }
-$openstaand_cashbedrag['Etotaal'] = euro2($openstaand_cashbedrag['totaal']);
+$openstaand_cashbedrag['Etotaal'] = euro($openstaand_cashbedrag['totaal']);
 d($openstaand_cashbedrag);
 
 // end Recordset Cash te betalen
@@ -350,7 +350,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 							$opens .= $open['InschId'] . ')">';
 							if ($grijs) $opens .= '<span class="grijs">';
 							$opens .= $open['naam'] . ' (';
-							$opens .= euro2($bedrag);
+							$opens .= euro($bedrag);
 							$opens .= ")";
 							if ($grijs) $opens .= '</span>';
 							$opens .= "</a></li>\n";
