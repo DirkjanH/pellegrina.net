@@ -248,7 +248,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
         $ins['storting_fonds'] = $inschr['storting_fonds'];
         $ins['aangebracht'] = $inschr['aangebracht'];
         $ins['tijdig'] = $inschr['tijdig'];
-        $ins['donatie'] = bedrag($inschr['donatie']);
+        $ins['donatie'] = $inschr['donatie'];
         $ins['PayPal'] = $inschr['paypal'];
         $ins['meerdaneen'] = $inschr['meerdaneen'];
         $ins['eigen_acc'] = $inschr['eigen_acc'];
@@ -305,7 +305,8 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
             $mail_text = str_replace("{datum_betaling}", $datum_betaling, $mail_text);
             $mail_text = str_replace("{tebetalen}", $tebetalen, $mail_text);
             $mail_text = str_replace("{wensen}", stripslashes($inschr['wensen']), $mail_text);
-            $mail_text = str_replace("{donatie}", $factuur['donatie'], $mail_text);
+            if ($inschr['donatie'] > 0) $mail_text = str_replace("{donatie}", $factuur['donatie'], $mail_text);
+            else $mail_text = str_replace("{donatie}", '', $mail_text);
 
             d($mail_text);
 
