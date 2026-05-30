@@ -219,16 +219,16 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<table width="100%" border="0" align="left">
+			<table width="100%" border="0" align="left" class="w3-table, w3-panel>
 				<tr>
-					<td colspan="2">
-						<form id="zoek" name="zoek" method="get"
-							action="<?php echo $editFormAction; ?>"> Id: <input
-								name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-																		echo $_GET['DlnmrId']; ?>" size="5" />
-							<input type="submit" name="Submit" value="Zoek">
-						</form>
-					</td>
+					<td colspan=" 2">
+				<form id="zoek" name="zoek" method="get"
+					action="<?php echo $editFormAction; ?>"> Id: <input
+						name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+																echo $_GET['DlnmrId']; ?>" size="5" />
+					<input type="submit" name="Submit" value="Zoek">
+				</form>
+				</td>
 				</tr> <?php
 						if ($totalRows_inschrijving > 1) {
 							echo "<tr><td colspan=\"3\">";
