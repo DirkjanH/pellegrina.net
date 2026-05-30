@@ -129,7 +129,7 @@ a.button {
     color: white;
 }
 
-#navcontainer ul {
+#openstaand ul {
     list-style-type: none;
 }
 
@@ -137,7 +137,7 @@ a.button {
     border-bottom: none;
 }
 
-#openstaand li.active a {
+#openstaand li a {
     text-decoration: none;
 }
 
