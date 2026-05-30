@@ -327,8 +327,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			$mail->AltBody = strip_tags($mail_text);
 
 			if (!($_POST['verzenden'])) {
-				echo "De mail-tekst is: <br>{$mail_text}";
-				echo '<br><hr><br>';
+				echo "<p>De mail-tekst is:</p><div class=\"w3-panel w3-info w3-clear\">{$mail_text}</div><hr>";
 			} else {
 				if (!$mail->Send()) {
 					echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) kon niet verzonden worden.<br>";
