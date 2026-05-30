@@ -22,6 +22,7 @@ if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
 if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
     unset($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
+    $_SESSION['DlnmrId'] = '';
     d($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
     d($_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST']
         . explode('?', $_SERVER['REQUEST_URI'], 2)[0]);
@@ -397,8 +398,9 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-                                                                        echo $_GET['DlnmrId']; ?>"
+                                name="DlnmrId" type="text"
+                                value="<?php if (isset($_GET['DlnmrId']))
+                                            echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
