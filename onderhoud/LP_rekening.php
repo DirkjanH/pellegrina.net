@@ -9,6 +9,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 Kint::$enabled_mode = false;
 
 d($_REQUEST, $_GET, $_POST, $_SESSION);
+if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
+    unset($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
+    d($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
+}
 
 if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
