@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($_REQUEST, $_GET, $_POST, $_SESSION);
 
@@ -16,12 +16,12 @@ ob_start();
 
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
-	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
+    $_GET['DlnmrId'] = $_SESSION['DlnmrId'];
 if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
 if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
-	unset($_SESSION, $_GET, $_POST, $_REQUEST);
-	d($_SESSION, $_GET, $_POST, $_REQUEST);
+    unset($_SESSION, $_GET, $_POST, $_REQUEST);
+    d($_SESSION, $_GET, $_POST, $_REQUEST);
 }
 
 // Kies tarievenmodule:
@@ -29,15 +29,15 @@ require_once("tarieven.php");
 
 function send_alert($msg)
 {
-	echo "<script language=\"javascript\">alert(\"{$msg}\");</script>";
+    echo "<script language=\"javascript\">alert(\"{$msg}\");</script>";
 }  //end function 
 
 
 // begin Recordset inschrijving
 
 if ($id == -1) {
-	$query_inschrijving = sprintf(
-		"SELECT
+    $query_inschrijving = sprintf(
+        "SELECT
   voornaam,
   naam,
   adres,
@@ -93,15 +93,15 @@ WHERE DlnmrId = DlnmrId_FK
     AND rekening_verzonden Is Null
 --	AND cursusgeld + donatie - korting - aanbet_bedrag != 0
 ORDER BY CursusId_FK, achternaam ASC",
-		quote($eerstecursus),
-		quote($laatstecursus)
-	);
+        quote($eerstecursus),
+        quote($laatstecursus)
+    );
 
-	$inschrijving = select_query($query_inschrijving);
-	if (isset($inschrijving) and is_array($inschrijving)) echo 'Totaal te versturen rekeningen: ' . count($inschrijving) . '<br>';
+    $inschrijving = select_query($query_inschrijving);
+    if (isset($inschrijving) and is_array($inschrijving)) echo 'Totaal te versturen rekeningen: ' . count($inschrijving) . '<br>';
 } else { // ook naar mensen die al een rekening ontvingen
-	$query_inschrijving = sprintf(
-		"SELECT
+    $query_inschrijving = sprintf(
+        "SELECT
   voornaam,
   naam,
   adres,
@@ -156,13 +156,13 @@ WHERE DlnmrId = DlnmrId_FK
     AND CursusId_FK BETWEEN %s AND %s
 	AND DlnmrId_FK=%s 
 ORDER BY CursusId_FK, achternaam ASC",
-		quote($eerstecursus),
-		quote($laatstecursus),
-		quote($id)
-	);
+        quote($eerstecursus),
+        quote($laatstecursus),
+        quote($id)
+    );
 
-	if (empty($inschrijving) or $inschrijving == FALSE) $inschrijving = select_query($query_inschrijving);
-	$aantal_inschrijvingen = count($inschrijving);
+    if (empty($inschrijving) or $inschrijving == FALSE) $inschrijving = select_query($query_inschrijving);
+    $aantal_inschrijvingen = count($inschrijving);
 }
 // end Recordset inschrijving
 
@@ -214,8 +214,8 @@ ORDER BY datum_begin";
 //echo "query_cursus = {$query_cursus}<br><br>";
 $cursus = select_query($query_cursus, 'CursusId');
 foreach ($cursus as &$cur) {
-	$cur['NL'] = $cur['cursusnaam_nl'] . ' ' . $jaar;
-	$cur['EN'] = $cur['cursusnaam_en'] . ' ' . $jaar;
+    $cur['NL'] = $cur['cursusnaam_nl'] . ' ' . $jaar;
+    $cur['EN'] = $cur['cursusnaam_en'] . ' ' . $jaar;
 }
 d($cursus);
 // end Recordset cursusgegevens
@@ -234,125 +234,126 @@ fclose($fh);
 
 if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 
-	$totaal_rekeningen = 0;
-	foreach ($inschrijving as $inschr) {
+    $totaal_rekeningen = 0;
+    foreach ($inschrijving as $inschr) {
 
-		$ins['oost'] = $inschr['oost'];
-		$ins['student'] = $inschr['student'];
-		$ins['leeftijd'] = $inschr['leeftijd'];
-		$ins['taal'] = $inschr['taal'];
-		$ins['toehoorder'] = $inschr['toehoorder'];
-		$ins['eenpersoons'] = $inschr['eenpersoons'];
-		$ins['hotel_2pp'] = $inschr['hotel_2pp'];
-		$ins['hotel_1pp'] = $inschr['hotel_1pp'];
-		$ins['hotel_1_2pp'] = $inschr['hotel_1_2pp'];
-		$ins['kamperen'] = $inschr['kamperen'];
-		$ins['meerpers'] = $inschr['meerpers'];
-		$ins['storting_fonds'] = $inschr['storting_fonds'];
-		$ins['aangebracht'] = $inschr['aangebracht'];
-		$ins['tijdig'] = $inschr['tijdig'];
-		$ins['donatie'] = bedrag($inschr['donatie']);
-		$ins['PayPal'] = $inschr['paypal'];
-		$ins['meerdaneen'] = $inschr['meerdaneen'];
-		$ins['eigen_acc'] = $inschr['eigen_acc'];
-		$ins['diner'] = $inschr['diner'];
-		$ins['korting'] = str2num($inschr['korting']);
-		$ins['extra'] = bedrag($inschr['extra']);
-		$ins['CursusId'] = $inschr['CursusId_FK'];
+        $ins['oost'] = $inschr['oost'];
+        $ins['student'] = $inschr['student'];
+        $ins['leeftijd'] = $inschr['leeftijd'];
+        $ins['taal'] = $inschr['taal'];
+        $ins['toehoorder'] = $inschr['toehoorder'];
+        $ins['eenpersoons'] = $inschr['eenpersoons'];
+        $ins['hotel_2pp'] = $inschr['hotel_2pp'];
+        $ins['hotel_1pp'] = $inschr['hotel_1pp'];
+        $ins['hotel_1_2pp'] = $inschr['hotel_1_2pp'];
+        $ins['kamperen'] = $inschr['kamperen'];
+        $ins['meerpers'] = $inschr['meerpers'];
+        $ins['storting_fonds'] = $inschr['storting_fonds'];
+        $ins['aangebracht'] = $inschr['aangebracht'];
+        $ins['tijdig'] = $inschr['tijdig'];
+        $ins['donatie'] = bedrag($inschr['donatie']);
+        $ins['PayPal'] = $inschr['paypal'];
+        $ins['meerdaneen'] = $inschr['meerdaneen'];
+        $ins['eigen_acc'] = $inschr['eigen_acc'];
+        $ins['diner'] = $inschr['diner'];
+        $ins['korting'] = str2num($inschr['korting']);
+        $ins['extra'] = bedrag($inschr['extra']);
+        $ins['CursusId'] = $inschr['CursusId_FK'];
 
-		d($ins);
+        d($ins);
 
-		$factuur = cursusgeld($ins);
+        $factuur = cursusgeld($ins);
 
-		d($factuur);
+        d($factuur);
 
-		$cursusgeld = intval($inschr['cursusgeld']);
-		$factuurbedrag = intval($factuur['cursusgeld']);
+        $cursusgeld = intval($inschr['cursusgeld']);
+        $factuurbedrag = intval($factuur['cursusgeld']);
 
-		if ($factuurbedrag != $cursusgeld) {
-			$boodschap = "{$inschr['naam']} (inschrijving nr. {$inschr['InschId']}) heeft € {$factuurbedrag} berekend cursusgeld en € {$cursusgeld} cursusgeld volgens de database";
-			send_alert($boodschap);
-		}
+        if ($factuurbedrag != $cursusgeld) {
+            $boodschap = "{$inschr['naam']} (inschrijving nr. {$inschr['InschId']}) heeft € {$factuurbedrag} berekend cursusgeld en € {$cursusgeld} cursusgeld volgens de database";
+            send_alert($boodschap);
+        }
 
 
-		// kies de tekst-file
-		if ($inschr['taal'] == "NL") {
-			$mail_text = $rek_NL;
-			setlocale(LC_ALL, "nl_NL");
-		} else {
-			$mail_text = $rek_EN;
-			setlocale(LC_ALL, 'en_US.UTF-8');
-		}
+        // kies de tekst-file
+        if ($inschr['taal'] == "NL") {
+            $mail_text = $rek_NL;
+            setlocale(LC_ALL, "nl_NL");
+        } else {
+            $mail_text = $rek_EN;
+            setlocale(LC_ALL, 'en_US.UTF-8');
+        }
 
-		$totaal = $inschr['cursusgeld'] + $inschr['donatie'];
+        $totaal = $inschr['cursusgeld'] + $inschr['donatie'];
 
-		if ($totaal > 0) {
-			$totaal_euro = bedrag($totaal);
-			$tebetalen = bedrag($inschr['cursusgeld'] + $inschr['donatie'] - $inschr['aanbet_bedrag']);
-			$inschr['cursusgeld'] = bedrag($inschr['cursusgeld']);
-			$inschr['donatie'] = bedrag($inschr['donatie']);
-			$inschr['aanbet_bedrag'] = bedrag($inschr['aanbet_bedrag'] * -1);
-			$adresblok = $inschr['naam'] . '<br>' . $inschr['adres'] . '<br>' .
-				$inschr['postcode'] . ' ' . $inschr['plaats'] . '<br>';
-			if ($inschr['land'] != 'Netherlands' and $inschr['land'] != 'Nederland')
-				$adresblok .= $inschr['land'] . '<br>';
-			$mail_text = str_replace("{adresblok}", $adresblok, $mail_text);
-			$mail_text = str_replace("{voornaam}", $inschr['voornaam'], $mail_text);
-			$mail_text = str_replace("{cursus}", $cursus[$inschr['CursusId_FK']][$inschr['taal']], $mail_text);
-			$mail_text = str_replace("{nr}", $inschr['InschId'], $mail_text);
-			$mail_text = str_replace("{datum}", strftime('%D'), $mail_text);
-			$mail_text = str_replace("{factuurregels}", $factuur['regels'], $mail_text);
-			$mail_text = str_replace("{aanbet_bedrag}", $inschr['aanbet_bedrag'], $mail_text);
-			$mail_text = str_replace("{cursusgeld}", $totaal_euro, $mail_text);
-			$datum_betaling = strftime('%e %B %Y', strtotime($cursus[$inschr['CursusId_FK']]['datum_betaling']));
-			$mail_text = str_replace("{datum_betaling}", $datum_betaling, $mail_text);
-			$mail_text = str_replace("{tebetalen}", $tebetalen, $mail_text);
-			$mail_text = str_replace("{wensen}", stripslashes($inschr['wensen']), $mail_text);
-			if ($factuur['donatie'] > 0)
-				$mail_text = str_replace("{donatie}", $inschr['donatie'], $mail_text);
-			else $mail_text = str_replace("{donatie}", '', $mail_text);
+        if ($totaal > 0) {
+            $totaal_euro = bedrag($totaal);
+            $tebetalen = bedrag($inschr['cursusgeld'] + $inschr['donatie'] - $inschr['aanbet_bedrag']);
+            $inschr['cursusgeld'] = bedrag($inschr['cursusgeld']);
+            $inschr['donatie'] = bedrag($inschr['donatie']);
+            $inschr['aanbet_bedrag'] = bedrag($inschr['aanbet_bedrag'] * -1);
+            $adresblok = $inschr['naam'] . '<br>' . $inschr['adres'] . '<br>' .
+                $inschr['postcode'] . ' ' . $inschr['plaats'] . '<br>';
+            if ($inschr['land'] != 'Netherlands' and $inschr['land'] != 'Nederland')
+                $adresblok .= $inschr['land'] . '<br>';
+            $mail_text = str_replace("{adresblok}", $adresblok, $mail_text);
+            $mail_text = str_replace("{voornaam}", $inschr['voornaam'], $mail_text);
+            $mail_text = str_replace("{cursus}", $cursus[$inschr['CursusId_FK']][$inschr['taal']], $mail_text);
+            $mail_text = str_replace("{nr}", $inschr['InschId'], $mail_text);
+            $mail_text = str_replace("{datum}", strftime('%D'), $mail_text);
+            $mail_text = str_replace("{factuurregels}", $factuur['regels'], $mail_text);
+            $mail_text = str_replace("{aanbet_bedrag}", $inschr['aanbet_bedrag'], $mail_text);
+            $mail_text = str_replace("{cursusgeld}", $totaal_euro, $mail_text);
+            $datum_betaling = strftime('%e %B %Y', strtotime($cursus[$inschr['CursusId_FK']]['datum_betaling']));
+            $mail_text = str_replace("{datum_betaling}", $datum_betaling, $mail_text);
+            $mail_text = str_replace("{tebetalen}", $tebetalen, $mail_text);
+            $mail_text = str_replace("{wensen}", stripslashes($inschr['wensen']), $mail_text);
+            if ($factuur['donatie'] > 0)
+                $mail_text = str_replace("{donatie}", $inschr['donatie'], $mail_text);
+            else $mail_text = str_replace("{donatie}", '', $mail_text);
 
-			d($mail_text);
+            d($mail_text);
 
-			// stuur een mail
-			$mail = new LPmailer();
-			$mail->AddAddress(stripslashes($inschr['email']), stripslashes($inschr['naam']));
-			if ($inschr['taal'] == "NL") $mail->Subject = "La Pellegrina rekening";
-			else $mail->Subject = "La Pellegrina invoice";
-			$mail->SetFrom('info@pellegrina.net', 'La Pellegrina');
-			$mail->AddCC("info@pellegrina.net", "La Pellegrina PHP mailer");
-			$mail->Body    = $mail_text;
+            // stuur een mail
+            $mail = new LPmailer();
+            $mail->AddAddress(stripslashes($inschr['email']), stripslashes($inschr['naam']));
+            if ($inschr['taal'] == "NL") $mail->Subject = "La Pellegrina rekening";
+            else $mail->Subject = "La Pellegrina invoice";
+            $mail->SetFrom('info@pellegrina.net', 'La Pellegrina');
+            $mail->AddCC("info@pellegrina.net", "La Pellegrina PHP mailer");
+            $mail->Body    = $mail_text;
 
-			$nr = $totaal_rekeningen + 1;
+            $nr = $totaal_rekeningen + 1;
 
-			$mail->AltBody = strip_tags($mail_text);
+            $mail->AltBody = strip_tags($mail_text);
 
-			if (!($_POST['verzenden'])) {
-				echo "<p>De mail-tekst is:</p><div class=\"w3-panel w3-white w3-info w3-clear\">{$mail_text}</div><hr style=\"border:2px solid red;\">";
-			} else {
-				if (!$mail->Send()) {
-					echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) kon niet verzonden worden.<br>";
-					echo "Mailer Error: " . $mail->ErrorInfo;
-					exit();
-				}
-				echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) verzonden.<br>";
+            if (!($_POST['verzenden'])) {
+                echo "<p>De mail-tekst is:</p><div class=\"w3-panel w3-white w3-info w3-clear\">{$mail_text}</div><hr style=\"border:2px solid red;\">";
+            } else {
+                if (!$mail->Send()) {
+                    echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) kon niet verzonden worden.<br>";
+                    echo "Mailer Error: " . $mail->ErrorInfo;
+                    exit();
+                }
+                echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) verzonden.<br>";
 
-				$update_inschrijving = sprintf(
-					"UPDATE inschrijving SET rekening_verzonden=NOW() WHERE InschId=%s",
-					quote($inschr['InschId'])
-				);
-				exec_query($update_inschrijving);
-				$totaal_rekeningen++;
-			}
-		} // als totaalbedrag > 0
-	} // einde deze rekening
+                $update_inschrijving = sprintf(
+                    "UPDATE inschrijving SET rekening_verzonden=NOW() WHERE InschId=%s",
+                    quote($inschr['InschId'])
+                );
+                exec_query($update_inschrijving);
+                $totaal_rekeningen++;
+            }
+        } // als totaalbedrag > 0
+    } // einde deze rekening
 
-	echo 'Totaal verzonden rekeningen: ' . $totaal_rekeningen . '<br>';
+    echo 'Totaal verzonden rekeningen: ' . $totaal_rekeningen . '<br>';
 } // einde verzend rekeningen
 
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -378,6 +379,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
     <link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
+
 <body>
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
@@ -390,42 +392,42 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
                                 name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-																		echo $_GET['DlnmrId']; ?>" size="5" />
+                                                                        echo $_GET['DlnmrId']; ?>" size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
                             Rekening al verzonden: <input
                                 name="rekening_verzonden" type="checkbox"
                                 id="rekening_verzonden"
                                 <?php
-								if (isset($inschr['rekening_verzonden']) and $inschr['rekening_verzonden'] != '') echo 'checked'; ?>
+                                if (isset($inschr['rekening_verzonden']) and $inschr['rekening_verzonden'] != '') echo 'checked'; ?>
                                 value="1">
                         </form>
                     </td>
                 </tr> <?php
-						if (isset($aantal_inschrijvingen) and $aantal_inschrijvingen > 1) {
-							d($inschrijving);
-							echo "<tr><td colspan=\"3\">";
-							echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
-							echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$aantal_inschrijvingen}\" >";
-							foreach ($inschrijving as $in) {
-								echo "<option value=\"{$in['CursusId_FK']}\"";
-								if (!(strcmp($in['CursusId_FK'], $_GET['cursus']))) {
-									echo "SELECTED";
-								}
-								echo '>' . $cursus[$in['CursusId_FK']]['NL'];
-							}
-							echo "</option>\n</select>";
-							echo '<input name="DlnmrId" type="hidden" value="';
-							if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
-							echo '<input type="submit" name="Submit" value="Zoek">';
-							echo '</form></td></tr>';
+                        if (isset($aantal_inschrijvingen) and $aantal_inschrijvingen > 1) {
+                            d($inschrijving);
+                            echo "<tr><td colspan=\"3\">";
+                            echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
+                            echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$aantal_inschrijvingen}\" >";
+                            foreach ($inschrijving as $in) {
+                                echo "<option value=\"{$in['CursusId_FK']}\"";
+                                if (!(strcmp($in['CursusId_FK'], $_GET['cursus']))) {
+                                    echo "SELECTED";
+                                }
+                                echo '>' . $cursus[$in['CursusId_FK']]['NL'];
+                            }
+                            echo "</option>\n</select>";
+                            echo '<input name="DlnmrId" type="hidden" value="';
+                            if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
+                            echo '<input type="submit" name="Submit" value="Zoek">';
+                            echo '</form></td></tr>';
 
-							foreach ($inschrijving as $key => $inschrijf)
-								if (isset($_GET['cursus']) and $inschrijf['CursusId_FK'] != $_GET['cursus']) unset($inschrijving[$key]);
-							$_SESSION['inschrijving'] = $inschrijving;
-							d($inschrijving);
-						}
-						?> <tr>
+                            foreach ($inschrijving as $key => $inschrijf)
+                                if (isset($_GET['cursus']) and $inschrijf['CursusId_FK'] != $_GET['cursus']) unset($inschrijving[$key]);
+                            $_SESSION['inschrijving'] = $inschrijving;
+                            d($inschrijving);
+                        }
+                        ?> <tr>
                     <td colspan="2">
                         <h2>Naam:&nbsp;<?php if ($id != -1) echo $inschr['naam']; ?><br>
                         </h2>
@@ -452,4 +454,5 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
         </div>
     </div> <?php ob_end_flush(); ?>
 </body>
+
 </html>
