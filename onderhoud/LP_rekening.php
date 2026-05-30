@@ -334,7 +334,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
             $mail->AltBody = strip_tags($mail_text);
 
             if (!($_POST['verzenden'])) {
-                echo "<p>De mail-tekst is:</p><div class=\"w3-panel w3-white w3-info w3-clear\">{$mail_text}</div><hr style=\"border:2px solid red;\">";
+                echo "<p>De mail-tekst is:</p><div class=\"w3-panel w3-white w3-info w3-clear\">{$mail_text}</div><hr>";
             } else {
                 if (!$mail->Send()) {
                     echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) kon niet verzonden worden.<br>";
@@ -359,6 +359,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -384,6 +385,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
     <link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
+
 <body>
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
@@ -396,7 +398,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
                                 name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']) and $_GET['Reset'] != 'Wis')
-                                            echo $_GET['DlnmrId']; ?>"
+                                                                        echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
@@ -459,4 +461,5 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
         </div>
     </div> <?php ob_end_flush(); ?>
 </body>
+
 </html>

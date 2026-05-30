@@ -94,6 +94,18 @@ a.button {
     border: 1px solid grey;
 }
 
+#openstaand,
+#openstaand ul,
+#openstaand li,
+#openstaand a {
+    width: 300px;
+}
+
+hr {
+    border: 1px solid red;
+    margin: 16px 0;
+}
+
 /* Make a one column-layout instead of three-column layout */
 @media (max-width: 600px) {
     .container {
