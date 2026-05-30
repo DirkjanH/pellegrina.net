@@ -305,9 +305,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
             $mail_text = str_replace("{datum_betaling}", $datum_betaling, $mail_text);
             $mail_text = str_replace("{tebetalen}", $tebetalen, $mail_text);
             $mail_text = str_replace("{wensen}", stripslashes($inschr['wensen']), $mail_text);
-            if ($factuur['donatie'] > 0)
-                $mail_text = str_replace("{donatie}", $inschr['donatie'], $mail_text);
-            else $mail_text = str_replace("{donatie}", '', $mail_text);
+            $mail_text = str_replace("{donatie}", $factuur['donatie'], $mail_text);
 
             d($mail_text);
 
@@ -388,9 +386,8 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text"
-                                value="<?php if (isset($_GET['DlnmrId']))
-                                            echo $_GET['DlnmrId']; ?>"
+                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+                                                                        echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
