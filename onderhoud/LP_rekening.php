@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/LPmailer.inc.php');
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 d($_REQUEST, $_GET, $_POST, $_SESSION);
 if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
@@ -360,6 +360,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -385,6 +386,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
     <link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
+
 <body>
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
@@ -398,7 +400,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                             action="<?php echo $editFormAction; ?>"> Id: <input
                                 name="DlnmrId" type="text"
                                 value="<?php if (isset($_GET['DlnmrId']) and $_GET['Reset'] != 'Wis')
-                                                                        echo $_GET['DlnmrId']; ?>"
+                                            echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
@@ -461,4 +463,5 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
         </div>
     </div> <?php ob_end_flush(); ?>
 </body>
+
 </html>
