@@ -338,7 +338,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 					<tr valign="baseline">
 						<td colspan="2">
 							<p class="groot">Nog openstaande rekeningen:</p>
-							<div id="navcontainer" style="width: 300px;">
+							<div id="navcontainer" style="width: 400px;">
 								<ul id="navlist"> <?php
 													foreach ($openstaand as $open) {
 														$grijs = TRUE;
