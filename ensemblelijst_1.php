@@ -66,6 +66,164 @@ ORDER BY ensemble.Id ASC",
 $ensembles = select_query($query_ensembles);
 $totalRows_ensembles = count($ensembles);
 // end Recordset Ensembles
+if (empty($_SESSION['Set'])) $_SESSION['Set'] = 1;
+
+if (isset($_POST['Set'])) $_SESSION['Set'] = $_POST['Set'];
+
+// begin Recordset
+$query_instrumenten = "SELECT * FROM instr ORDER BY id ASC";
+$instrumenten = select_query($query_instrumenten);
+$totalRows_instrumenten = count($instrumenten);
+foreach ($instrumenten as $instrument) {
+	$instrumententabel[$instrument['id']] = $instrument['en'];
+}
+// end Recordset
+
+function instrument($instr)
+{
+	global $instrumententabel;
+	$ins = explode(', ', $instr);
+	unset($instrumenten);
+	foreach ($ins as $in) $instrumenten[] = $instrumententabel[$in];
+	$instrumenten = implode(', ', $instrumenten);
+	return $instrumenten;
+}
+
+$pdfdirectory = '/pdf/';
+
+if (empty($_SESSION['Set'])) $_SESSION['Set'] = 1;
+if (empty($_SESSION['Cursus'])) $_SESSION['Cursus'] = 1;
+
+if (isset($_POST['Set'])) $_SESSION['Set'] = $_POST['Set'];
+if (isset($_POST['Cursus'])) $_SESSION['Cursus'] = $_POST['Cursus'];
+
+// begin Recordset Cursusnamen
+$query_cursus = sprintf(
+	"SELECT cursusnaam_en, locatie FROM cursus WHERE CursusId=%s",
+	GetSQLValueString(($_SESSION['Cursus'] + $cursus_offset), "int")
+);
+$cursus = select_query($query_cursus, 1);
+$cursusnaam = $cursus['cursusnaam_en'];
+$locatie = $cursus['locatie'];
+d($query_cursus, $cursus, $cursusnaam, $locatie);
+// end Recordset Cursusnamen
+
+// begin Recordset Ensembles
+$query_ensembles = sprintf(
+	"SELECT CONCAT_WS(', ', componist, titel) as stuk, ensemble.opmerking, ensemble.Id as ensembleId, docent1, docent2, ruimte, link, definitief, compleet FROM ensemble, werk WHERE CursusId_FK=%s AND `set`=%s AND WerkId = werk.Id AND WerkId > 0
+ORDER BY ensemble.Id ASC",
+	GetSQLValueString(($_SESSION['Cursus'] + $cursus_offset), "int"),
+	GetSQLValueString($_SESSION['Set'], "int")
+);
+$ensembles = select_query($query_ensembles);
+$totalRows_ensembles = count($ensembles);
+// end Recordset Ensembles
+if (empty($_SESSION['Set'])) $_SESSION['Set'] = 1;
+
+if (isset($_POST['Set'])) $_SESSION['Set'] = $_POST['Set'];
+
+// begin Recordset
+$query_instrumenten = "SELECT * FROM instr ORDER BY id ASC";
+$instrumenten = select_query($query_instrumenten);
+$totalRows_instrumenten = count($instrumenten);
+foreach ($instrumenten as $instrument) {
+	$instrumententabel[$instrument['id']] = $instrument['en'];
+}
+// end Recordset
+
+function instrument($instr)
+{
+	global $instrumententabel;
+	$ins = explode(', ', $instr);
+	unset($instrumenten);
+	foreach ($ins as $in) $instrumenten[] = $instrumententabel[$in];
+	$instrumenten = implode(', ', $instrumenten);
+	return $instrumenten;
+}
+
+$pdfdirectory = '/pdf/';
+
+if (empty($_SESSION['Set'])) $_SESSION['Set'] = 1;
+if (empty($_SESSION['Cursus'])) $_SESSION['Cursus'] = 1;
+
+if (isset($_POST['Set'])) $_SESSION['Set'] = $_POST['Set'];
+if (isset($_POST['Cursus'])) $_SESSION['Cursus'] = $_POST['Cursus'];
+
+// begin Recordset Cursusnamen
+$query_cursus = sprintf(
+	"SELECT cursusnaam_en, locatie FROM cursus WHERE CursusId=%s",
+	GetSQLValueString(($_SESSION['Cursus'] + $cursus_offset), "int")
+);
+$cursus = select_query($query_cursus, 1);
+$cursusnaam = $cursus['cursusnaam_en'];
+$locatie = $cursus['locatie'];
+d($query_cursus, $cursus, $cursusnaam, $locatie);
+// end Recordset Cursusnamen
+
+// begin Recordset Ensembles
+$query_ensembles = sprintf(
+	"SELECT CONCAT_WS(', ', componist, titel) as stuk, ensemble.opmerking, ensemble.Id as ensembleId, docent1, docent2, ruimte, link, definitief, compleet FROM ensemble, werk WHERE CursusId_FK=%s AND `set`=%s AND WerkId = werk.Id AND WerkId > 0
+ORDER BY ensemble.Id ASC",
+	GetSQLValueString(($_SESSION['Cursus'] + $cursus_offset), "int"),
+	GetSQLValueString($_SESSION['Set'], "int")
+);
+$ensembles = select_query($query_ensembles);
+$totalRows_ensembles = count($ensembles);
+// end Recordset Ensembles
+if (empty($_SESSION['Set'])) $_SESSION['Set'] = 1;
+
+if (isset($_POST['Set'])) $_SESSION['Set'] = $_POST['Set'];
+
+// begin Recordset
+$query_instrumenten = "SELECT * FROM instr ORDER BY id ASC";
+$instrumenten = select_query($query_instrumenten);
+$totalRows_instrumenten = count($instrumenten);
+foreach ($instrumenten as $instrument) {
+	$instrumententabel[$instrument['id']] = $instrument['en'];
+}
+// end Recordset
+
+function instrument($instr)
+{
+	global $instrumententabel;
+	$ins = explode(', ', $instr);
+	unset($instrumenten);
+	foreach ($ins as $in) $instrumenten[] = $instrumententabel[$in];
+	$instrumenten = implode(', ', $instrumenten);
+	return $instrumenten;
+}
+
+$pdfdirectory = '/pdf/';
+
+if (empty($_SESSION['Set'])) $_SESSION['Set'] = 1;
+if (empty($_SESSION['Cursus'])) $_SESSION['Cursus'] = 1;
+
+if (isset($_POST['Set'])) $_SESSION['Set'] = $_POST['Set'];
+if (isset($_POST['Cursus'])) $_SESSION['Cursus'] = $_POST['Cursus'];
+
+// begin Recordset Cursusnamen
+$query_cursus = sprintf(
+	"SELECT cursusnaam_en, locatie FROM cursus WHERE CursusId=%s",
+	GetSQLValueString(($_SESSION['Cursus'] + $cursus_offset), "int")
+);
+$cursus = select_query($query_cursus, 1);
+$cursusnaam = $cursus['cursusnaam_en'];
+$locatie = $cursus['locatie'];
+// end Recordset Cursusnamen
+
+// begin Recordset Ensembles
+$query_ensembles = sprintf(
+	"SELECT CONCAT_WS(', ', componist, titel) as stuk, ensemble.opmerking, ensemble.Id as ensembleId, docent1, docent2, ruimte, link, definitief, compleet FROM ensemble, werk WHERE CursusId_FK=%s AND `set`=%s AND WerkId = werk.Id AND WerkId > 0
+ORDER BY ensemble.Id ASC",
+	GetSQLValueString(($_SESSION['Cursus'] + $cursus_offset), "int"),
+	GetSQLValueString($_SESSION['Set'], "int")
+);
+d($query_ensembles);
+$ensembles = select_query($query_ensembles);
+if (is_array($ensembles)) 	$totalRows_ensembles = count($ensembles);
+else $totalRows_ensembles = 0;
+d($totalRows_ensembles);
+// end Recordset Ensembles
 
 // begin Recordset Docenten
 $query_docenten = sprintf(
@@ -83,7 +241,6 @@ foreach ($docenten as $docent) {
 
 function ensembleleden($id)
 {
-
 	global $inschrijf;
 	$query_ensembleleden = "SELECT naam, InstrId as instrument, bepaling FROM ensemblelid as e INNER JOIN inschrijving as i
 	ON e.InschId=i.InschId LEFT JOIN dlnmr as d ON d.DlnmrId=i.DlnmrId_FK WHERE EnsembleId = {$id} 
@@ -99,7 +256,6 @@ function ensembleleden($id)
 
 function geenensemble()
 {
-
 	global $inschrijf, $cursus_offset;
 	$query_ensembleleden = sprintf(
 		"SELECT naam, i.instr FROM inschrijving as i
@@ -124,7 +280,6 @@ function geenensemble()
 
 function nulensemble()
 {
-
 	global $inschrijf, $cursus_offset;
 	$query_ensembleleden = sprintf(
 		"SELECT naam, i.instr FROM ensemblelid as e
@@ -149,7 +304,6 @@ function nulensemble()
 
 function tutorcodes()
 {
-
 	global $doc;
 	if (isset($doc) and count($doc) > 0) {
 		echo '<div style="float: left; margin-right: 40px;"><hr><h3>Key to the tutor codes:</h3><p class="spelers">';
@@ -166,7 +320,6 @@ $ruimtes = select_query($query_ruimtes);
 foreach ($ruimtes as $r) {
 	$ruimte[$r['Id']] = $r['aanduiding'];
 }
-d($query_ruimtes, $ruimtes, $ruimte);
 // end Recordset Ruimtes
 
 function ruimtecodes()
@@ -195,122 +348,129 @@ function ruimtecodes()
 ?>
 <!DOCTYPE HTML>
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-<!--
-function ToggleSet() {
-    if (document.getElementById('Set').value == 1 || !(document.getElementById(
-            'Set').value)) document.getElementById('Set').value = 2;
-    else if (document.getElementById('Set').value != 1) document.getElementById(
-        'Set').value = 1;
-    document.getElementById('cursus_set').submit();
-}
+	<!--
+	function ToggleSet() {
+		if (document.getElementById('Set').value == 1 || !(document.getElementById(
+				'Set').value)) document.getElementById('Set').value = 2;
+		else if (document.getElementById('Set').value != 1) document.getElementById(
+			'Set').value = 1;
+		document.getElementById('cursus_set').submit();
+	}
 
-function TuttiSet() {
-    document.getElementById('Set').value = 0;
-    document.getElementById('cursus_set').submit();
-}
+	function TuttiSet() {
+		document.getElementById('Set').value = 0;
+		document.getElementById('cursus_set').submit();
+	}
 
-function CursusZoek(Nr) {
-    document.getElementById('Cursus').value = Nr;
-    document.getElementById('cursus_set').submit();
-}
--->
+	function CursusZoek(Nr) {
+		document.getElementById('Cursus').value = Nr;
+		document.getElementById('cursus_set').submit();
+	}
+	-->
 </SCRIPT>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <title>List of ensemble formation, course nr.
-        <?php echo $_SESSION['Cursus'] ?></title>
-    <meta name="robots" content="noindex, nofollow">
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>List of ensemble formation, course nr.
+		<?php echo $_SESSION['Cursus'] ?></title>
+	<meta name="robots" content="noindex, nofollow">
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
+		type="text/css">
+	<link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-    <div id="inhoud">
-        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
-        <div id="main">
-            <div id="cursus_form">
-                <form id="cursus_set" method="post"
-                    action="<?php echo $editFormAction; ?>">
-                    <div class="w3-panel w3-center">
-                        <h1><?php echo $cursusnaam; ?></h1>
-                        <input type="hidden" name="Cursus" id="Cursus"
-                            value="<?php echo $_SESSION['Cursus']; ?>">
-                        <input type="hidden" name="Set" id="Set"
-                            value="<?php echo $_SESSION['Set']; ?>">
-                        <h2 class="set<?php echo $_SESSION['Set']; ?>">Chamber
-                            Music Formations d.d. <?php echo date('d-m-Y') ?>,
-                            set <span class="formation">nr.
-                                <?php echo $_SESSION['Set']; ?></span></h2>
-                        <p>Please use these buttons to move from set to set:
-                            <button name="set" type="button"
-                                onClick="ToggleSet()"
-                                class="w3-btn w3-pale-yellow w3-border w3-round-medium">Go
-                                to <strong>other</strong> chamber music
-                                set</button>
-                            <button name="tutti" type="button"
-                                onClick="TuttiSet()"
-                                class="w3-btn w3-pale-yellow w3-border w3-round-medium">Tutti
-                                programme</button>
-                        </p>
-                    </div>
-                    <div class="w3-panel">
-                        <div
-                            class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border w3-border-blue">
-                            <h6>N.B.: Ensembles can be marked with the following
-                                icons: </h6>
-                            <ol>
-                                <li><img src="Images/Logos/ok.png"
-                                        alt="confirmed"
-                                        class="geenlijn">&nbsp;means: this
-                                    ensemble is complete and the work has been
-                                    fixed</li>
-                                <li><img src="Images/Logos/question.png"
-                                        alt="confirmed"
-                                        class="geenlijn">&nbsp;means: this
-                                    ensemble is complete, but the work still has
-                                    to be decided. Please take up contact with
-                                    the other members and/or the tutor to
-                                    discuss what to play and let <em>La
-                                        Pellegrina</em> know the outcome.</li>
-                            </ol>
-                        </div>
-                </form>
-            </div>
-            <div class="w3-panel"> <?php
-									$i = 1;
-									foreach ($ensembles as $i => $ensemble) {
-										d($ensemble);
-										$ens = '<h2>' . ($i + 1) . '. ';
-										if (isset($ensemble['link']) && $ensemble['link'] != '') {
-											$ensemble['link'] = rawurldecode($ensemble['link']);
-											$ens .= "<a href=\"{$ensemble['link']}\" target=\"_blank\">";
-										}
-										$ens .= stripslashes($ensemble['stuk']);
-										if (isset($ensemble['link']) && $ensemble['link'] != '') $ens .= "</a>";
-										if ($ensemble['docent1'] > 0) $ens .= '&nbsp;&nbsp;' . $doc[$ensemble['docent1']]['code'];
-										if ($ensemble['docent2'] > 0) $ens .= '/' . $doc[$ensemble['docent2']]['code'];
-										if (isset($ensemble['ruimte']) && $ensemble['ruimte'] > 0) $ens .= ' (' . $ruimte[$ensemble['ruimte']] . ')';
-										if ($ensemble['definitief'] > 0) $ens .= '&nbsp;<img src="Images/Logos/ok.png" alt="confirmed" class="geenlijn">';
-										elseif ($ensemble['compleet'] > 0) $ens .= '&nbsp;<img src="Images/Logos/question.png" alt="not confirmed" class="geenlijn">';
-										$ens .= '</h2>';
-										echo $ens;
-										ensembleleden($ensemble['ensembleId']);
-										if ($ensemble['opmerking'] != "") echo '<p class="opmerking">' . $ensemble['opmerking'] . '</p>';
-									}
-									nulensemble();
-									geenensemble();
-									tutorcodes();
-									ruimtecodes();
-									?> </div>
-            <!-- InstanceEndEditable -->
-            <h2> <a href="javascript: history.go(-1)">Back</a></h2>
-            <p>&nbsp;</p>
-        </div>
-    </div>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
+	<div id="inhoud">
+		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
+		<div id="main">
+			<div id="cursus_form">
+				<form id="cursus_set" method="post"
+					action="<?php echo $editFormAction; ?>">
+					<div class="w3-panel w3-center">
+						<h1><?php echo $cursusnaam; ?></h1>
+						<input type="hidden" name="Cursus" id="Cursus"
+							value="<?php echo $_SESSION['Cursus']; ?>">
+						<input type="hidden" name="Set" id="Set"
+							value="<?php echo $_SESSION['Set']; ?>">
+						<h2 class="set<?php echo $_SESSION['Set']; ?>">Chamber
+							Music Formations d.d. <?php echo date('d-m-Y') ?>,
+							set <span class="formation">nr.
+								<?php echo $_SESSION['Set']; ?></span></h2>
+						<p>Please use these buttons to move from set to set:
+							<button name="set" type="button"
+								onClick="ToggleSet()"
+								class="w3-btn w3-pale-yellow w3-border w3-round-medium">Go
+								to <strong>other</strong> chamber music
+								set</button>
+							<button name="tutti" type="button"
+								onClick="TuttiSet()"
+								class="w3-btn w3-pale-yellow w3-border w3-round-medium">Tutti
+								programme</button>
+						</p>
+					</div>
+					<div class="w3-panel">
+						<div
+							class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border w3-border-blue">
+							<h6>N.B.: Ensembles can be marked with the following
+								icons: </h6>
+							<ol>
+								<li><img src="Images/Logos/ok.png"
+										alt="confirmed"
+										class="geenlijn">&nbsp;means: this
+									ensemble is complete and the work has been
+									fixed</li>
+								<li><img src="Images/Logos/question.png"
+										alt="confirmed"
+										class="geenlijn">&nbsp;means: this
+									ensemble is complete, but the work still has
+									to be decided. Please take up contact with
+									the other members and/or the tutor to
+									discuss what to play and let <em>La
+										Pellegrina</em> know the outcome.</li>
+							</ol>
+						</div>
+				</form> <?php
+						$i = 1;
+						if (is_array($ensembles)) {
+							foreach ($ensembles as $i => $ensemble) {
+								$ens = '<h2>' . ($i + 1) . '. ';
+								if (isset($ensemble['link']) && $ensemble['link'] != '') {
+									$ensemble['link'] = rawurldecode($ensemble['link']);
+									$ens .= "<a href=\"{$ensemble['link']}\" target=\"_blank\">";
+								}
+								$ens .= stripslashes($ensemble['stuk']);
+								if (isset($ensemble['link']) && $ensemble['link'] != '') $ens .= "</a>";
+								if ($ensemble['docent1'] > 0) $ens .= '&nbsp;&nbsp;' . $doc[$ensemble['docent1']]['code'];
+								if ($ensemble['docent2'] > 0) $ens .= '/' . $doc[$ensemble['docent2']]['code'];
+								if (isset($ensemble['ruimte']) && $ensemble['ruimte'] > 0) $ens .= ' (' . $ruimte[$ensemble['ruimte']] . ')';
+								if ($ensemble['definitief'] > 0) $ens .= '&nbsp;<img src="Images/Logos/ok.png" alt="confirmed" class="geenlijn">';
+								elseif ($ensemble['compleet'] > 0) $ens .= '&nbsp;<img src="Images/Logos/question.png" alt="not confirmed" class="geenlijn">';
+								$ens .= '</h2>';
+								echo $ens;
+								ensembleleden($ensemble['ensembleId']);
+								if ($ensemble['opmerking'] != "") echo '<p class="opmerking">' . $ensemble['opmerking'] . '</p>';
+							}
+						} else {
+							echo '<h2>No ensembles have been formed yet for this set.</h2>';
+						}
+						nulensemble();
+						geenensemble();
+						tutorcodes();
+						ruimtecodes();
+						?>
+			</div>
+			<h2> <a href="javascript: history.go(-1)">Back</a></h2>
+			<p>&nbsp;</p>
+		</div>
+	</div>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd -->
+
 </html>
