@@ -29,8 +29,6 @@ if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
         . explode('?', $_SERVER['REQUEST_URI'], 2)[0]);
     header("Location: " . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST']
         . explode('?', $_SERVER['REQUEST_URI'], 2)[0]);
-    $id = -1;
-    exit();
 }
 
 // Kies tarievenmodule:
@@ -361,7 +359,6 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -387,7 +384,6 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
     <link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
-
 <body>
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
@@ -399,8 +395,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text"
-                                value="<?php if (isset($_GET['DlnmrId']) and $_GET['Reset'] != 'Wis')
+                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']) and $_GET['Reset'] != 'Wis')
                                             echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
@@ -464,5 +459,4 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
         </div>
     </div> <?php ob_end_flush(); ?>
 </body>
-
 </html>
