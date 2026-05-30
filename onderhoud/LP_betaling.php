@@ -120,9 +120,9 @@ $openstaand_bedrag['totaal'] = 0;
 foreach ($bedrag as $i => $bedr) {
 	$openstaand_bedrag[$i + 1] = $bedr['tebetalen'];
 	$openstaand_bedrag['totaal'] += $openstaand_bedrag[$i + 1];
-	$openstaand_bedrag[$i + 1] = euro2($openstaand_bedrag[$i + 1]);
+	$openstaand_bedrag[$i + 1] = euro($openstaand_bedrag[$i + 1]);
 }
-$openstaand_bedrag['Etotaal'] = euro2($openstaand_bedrag['totaal']);
+$openstaand_bedrag['Etotaal'] = euro($openstaand_bedrag['totaal']);
 
 d($openstaand_bedrag);
 
@@ -158,70 +158,68 @@ d($openstaand_cashbedrag);
 
 // end Recordset Cash te betalen
 
-$openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag['totaal']);
+$openstaand_giraal = euro($openstaand_bedrag['totaal'] - $openstaand_cashbedrag['totaal']);
 
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<META NAME="robots" CONTENT="noindex, nofollow">
-	<link rel="apple-touch-icon" sizes="180x180"
-		href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
-	<link rel="manifest"
-		href="https://pellegrina.net/Images/Logos/site.webmanifest">
-	<link rel="mask-icon"
-		href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
-		color="#5bbad5">
-	<link rel="shortcut icon"
-		href="https://pellegrina.net/Images/Logos/favicon.ico">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config"
-		content="https://pellegrina.net/Images/Logos/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<title>LP betalingen</title>
-	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<link rel="stylesheet" href="/css/LP_onderhoud.css" type="text/css">
-	<meta charset="utf-8">
-	<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-		function SetInschId(Id) {
-			try {
-				document.form.InschId.value = Id;
-				document.form.Verwerk.value = '';
-				document.form.submit();
-			} catch (err) {
-				alert('Dit werkt niet...;');
-				for (var i in err) {
-					alert(i + ': ' + err(i));
-				}
-			}
-		}
-	</SCRIPT>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <META NAME="robots" CONTENT="noindex, nofollow">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://pellegrina.net/Images/Logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://pellegrina.net/Images/Logos/favicon-16x16.png">
+    <link rel="manifest"
+        href="https://pellegrina.net/Images/Logos/site.webmanifest">
+    <link rel="mask-icon"
+        href="https://pellegrina.net/Images/Logos/safari-pinned-tab.svg"
+        color="#5bbad5">
+    <link rel="shortcut icon"
+        href="https://pellegrina.net/Images/Logos/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config"
+        content="https://pellegrina.net/Images/Logos/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>LP betalingen</title>
+    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+    <link rel="stylesheet" href="/css/LP_onderhoud.css" type="text/css">
+    <meta charset="utf-8">
+    <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+    function SetInschId(Id) {
+        try {
+            document.form.InschId.value = Id;
+            document.form.Verwerk.value = '';
+            document.form.submit();
+        } catch (err) {
+            alert('Dit werkt niet...;');
+            for (var i in err) {
+                alert(i + ': ' + err(i));
+            }
+        }
+    }
+    </SCRIPT>
 </head>
-
 <body>
-	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
-	<div id="mainframe">
-		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
-		</header>
-		<div id="mainpage">
-			<table width="100%" border="0" align="left" class="w3-table, w3-panel>
+    <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+    <div id="mainframe">
+        <header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
+        </header>
+        <div id="mainpage">
+            <table width="100%" border="0" align="left" class="w3-table, w3-panel>
 				<tr>
 					<td colspan=" 2">
-				<form id="zoek" name="zoek" method="get"
-					action="<?php echo $editFormAction; ?>"> Id: <input
-						name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+                <form id="zoek" name="zoek" method="get"
+                    action="<?php echo $editFormAction; ?>"> Id: <input
+                        name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
 																echo $_GET['DlnmrId']; ?>" size="5" />
-					<input type="submit" name="Submit" value="Zoek">
-				</form>
-				</td>
-				</tr> <?php
+                    <input type="submit" name="Submit" value="Zoek">
+                </form>
+                </td>
+                </tr> <?php
 						if ($totalRows_inschrijving > 1) {
 							echo "<tr><td colspan=\"3\">";
 							echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
@@ -240,106 +238,106 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 							echo '</form></td></tr>';
 						} else $ins = $inschrijving[0];
 						?> <form action="<?php echo $editFormAction; ?>" method="POST"
-					name="form" id="form">
-					<tr>
-						<td height="50" colspan="2" valign="top">
-							<h2>Naam:&nbsp;<?php echo $ins['naam']; ?></h2>
-							<?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
+                    name="form" id="form">
+                    <tr>
+                        <td height="50" colspan="2" valign="top">
+                            <h2>Naam:&nbsp;<?php echo $ins['naam']; ?></h2>
+                            <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-								type="hidden" value="<?php
+                                type="hidden" value="<?php
 														echo $ins['aanbet_bedrag']; ?>">
-							<input name="InschId" id="InschId" type="hidden"
-								value="<?php
+                            <input name="InschId" id="InschId" type="hidden"
+                                value="<?php
 										echo $ins['InschId']; ?>">
-							<input name="CursusId_FK" type="hidden" value="<?php
+                            <input name="CursusId_FK" type="hidden" value="<?php
 																			echo $ins['CursusId_FK']; ?>">
-						</td>
-					</tr>
-					<tr valign="baseline">
-						<td width="200 align=" right" nowrap>
-							<div align="right">Cursusgeld:</div>
-						</td>
-						<td><?php echo euro2($ins['cursusgeld']); ?></td>
-					</tr>
-					<tr valign="baseline">
-						<td width="200">
-							<div align="right">Gedoneerd bedrag: </div>
-						</td>
-						<td><?php echo euro2($ins['donatie']); ?></td>
-					</tr>
-					<tr valign="baseline">
-						<td width="200" align="right" nowrap>
-							<div align="right">Totaal te betalen: </div>
-						</td>
-						<td><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?>&nbsp;
-						</td>
-					</tr>
-					<tr valign="baseline">
-						<td width="200" align="right" nowrap>
-							<div align="right">Al betaald:</div>
-						</td>
-						<td><?php echo euro2($ins['aanbet_bedrag']); ?></td>
-					</tr>
-					<tr valign="middle">
-						<td width="200" align="right" valign="top" nowrap>
-							<div align="right">Nog openstaand </div>
-						</td>
-						<td valign="top" nowrap>
-							<?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>&nbsp;
-						</td>
-					</tr>
-					<tr valign="middle">
-						<td colspan="2" valign="top" nowrap>Betaling d.d. <input
-								name="datum" type="text" id="datum" size="10"
-								value="<?php echo $_SESSION['datum'] ?>"> per
-							<label>
-								<input name="betaalwijze" type="radio"
-									value="Postbank" checked> Postbank</label>
-							<label>
-								<input type="radio" name="betaalwijze"
-									value="KB">KB</label>
-							<label>
-								<input type="radio" name="betaalwijze"
-									value="PayPal"> PayPal</label>
-							<label>
-								<input type="radio" name="betaalwijze"
-									value="kas"> kas van &nbsp;&#8364;&nbsp;
-								<input name="betaling" type="text" id="betaling"
-									size="5"
-									value="<?php echo ($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>">
-								&nbsp;Betaling tijdens cursus in contanten
-								afgesproken: <input name="cash" type="checkbox"
-									value="1"
-									<?php if (isset($_POST['cash'])) echo 'checked'; ?>>
-							</label>
-						</td>
-					</tr>
-					<tr valign="middle">
-						<td colspan="2" valign="top" nowrap>
-							<div align="left">Opmerkingen over de betaling:<br>
-								<textarea name="rekening_opmerking" cols="80"
-									rows="3"
-									id="rekening_opmerking"><?php
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="200 align=" right" nowrap>
+                            <div align="right">Cursusgeld:</div>
+                        </td>
+                        <td><?php echo euro($ins['cursusgeld']); ?></td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="200">
+                            <div align="right">Gedoneerd bedrag: </div>
+                        </td>
+                        <td><?php echo euro($ins['donatie']); ?></td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="200" align="right" nowrap>
+                            <div align="right">Totaal te betalen: </div>
+                        </td>
+                        <td><?php echo euro($ins['cursusgeld'] + $ins['donatie']); ?>&nbsp;
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="200" align="right" nowrap>
+                            <div align="right">Al betaald:</div>
+                        </td>
+                        <td><?php echo euro($ins['aanbet_bedrag']); ?></td>
+                    </tr>
+                    <tr valign="middle">
+                        <td width="200" align="right" valign="top" nowrap>
+                            <div align="right">Nog openstaand </div>
+                        </td>
+                        <td valign="top" nowrap>
+                            <?php echo euro($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>&nbsp;
+                        </td>
+                    </tr>
+                    <tr valign="middle">
+                        <td colspan="2" valign="top" nowrap>Betaling d.d. <input
+                                name="datum" type="text" id="datum" size="10"
+                                value="<?php echo $_SESSION['datum'] ?>"> per
+                            <label>
+                                <input name="betaalwijze" type="radio"
+                                    value="Postbank" checked> Postbank</label>
+                            <label>
+                                <input type="radio" name="betaalwijze"
+                                    value="KB">KB</label>
+                            <label>
+                                <input type="radio" name="betaalwijze"
+                                    value="PayPal"> PayPal</label>
+                            <label>
+                                <input type="radio" name="betaalwijze"
+                                    value="kas"> kas van &nbsp;&#8364;&nbsp;
+                                <input name="betaling" type="text" id="betaling"
+                                    size="5"
+                                    value="<?php echo ($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>">
+                                &nbsp;Betaling tijdens cursus in contanten
+                                afgesproken: <input name="cash" type="checkbox"
+                                    value="1"
+                                    <?php if (isset($_POST['cash'])) echo 'checked'; ?>>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr valign="middle">
+                        <td colspan="2" valign="top" nowrap>
+                            <div align="left">Opmerkingen over de betaling:<br>
+                                <textarea name="rekening_opmerking" cols="80"
+                                    rows="3"
+                                    id="rekening_opmerking"><?php
 															if ($ins['rekening_opmerking'] != "") echo stripslashes($ins['rekening_opmerking']); ?></textarea>
-							</div>
-						</td>
-					</tr>
-					<tr valign="baseline">
-						<td>&nbsp;</td>
-						<td valign="baseline">
-							<div class="links">
-								<input name="Verwerk" type="submit"
-									class="fotobijschrift" id="Verwerk"
-									value="Verwerk betaling" />
-							</div>
-						</td>
-					</tr>
-				</form>
-			</table>
-			</ <h2>Nog openstaande rekeningen:</h2>
-			<div id="openstaand">
-				<ul> <?php
+                            </div>
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td>&nbsp;</td>
+                        <td valign="baseline">
+                            <div class="links">
+                                <input name="Verwerk" type="submit"
+                                    class="fotobijschrift" id="Verwerk"
+                                    value="Verwerk betaling" />
+                            </div>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </ <h2>Nog openstaande rekeningen:</h2>
+            <div id="openstaand">
+                <ul> <?php
 						foreach ($openstaand as $open) {
 							$grijs = TRUE;
 							if (stripos($open['rekening_opmerking'], 'Betaling ter plekke in cash') === FALSE)
@@ -357,10 +355,9 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 							echo $opens;
 						}
 						?> </ul>
-			</div> 
-			<?php echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}</p>"; ?>
-		</div>
-	</div>
+            </div> 
+            <?php echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}</p>"; ?>
+        </div>
+    </div>
 </body>
-
 </html>
