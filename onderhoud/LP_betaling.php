@@ -356,9 +356,9 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 							$opens .= "</a></li>\n";
 							echo $opens;
 						}
-						echo '</p>';
-						?> </ul> <?php echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}</p>"; ?>
+						echo '</p>'; ?> </ul>
 			</div> 
+			<?php echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}</p>"; ?>
 		</div>
 	</div>
 </body>
