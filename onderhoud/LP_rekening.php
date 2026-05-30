@@ -10,16 +10,16 @@ Kint::$enabled_mode = true;
 
 d($_REQUEST, $_GET, $_POST, $_SESSION);
 
-if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
-    unset($_SESSION, $_GET, $_POST, $_REQUEST);
-    d($_SESSION, $_GET, $_POST, $_REQUEST);
-}
 if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
     $_GET['DlnmrId'] = $_SESSION['DlnmrId'];
 if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
 else $id = $_GET['DlnmrId'];
+if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
+    unset($_SESSION, $_GET, $_POST, $_REQUEST, $_SESSION['DlnmrId']);
+    d($_SESSION, $_GET, $_POST, $_REQUEST, $_SESSION['DlnmrId']);
+}
 
 // Kies tarievenmodule:
 require_once("tarieven.php");
@@ -387,8 +387,9 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-                                                                        echo $_GET['DlnmrId']; ?>"
+                                name="DlnmrId" type="text"
+                                value="<?php if (isset($_GET['DlnmrId']))
+                                            echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
