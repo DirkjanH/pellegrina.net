@@ -111,6 +111,28 @@ a.button {
     list-style-type: none;
 }
 
+#openstaand ul {
+    margin: 0;
+    padding: 0;
+}
+
+#openstaand ul a:link,
+#openstaand ul a:visited {
+    display: block;
+    color: black;
+}
+
+#openstaand ul a:hover,
+#openstaand ul a:active {
+    display: block;
+    background-color: grey;
+    color: white;
+}
+
+#navcontainer ul {
+    list-style-type: none;
+}
+
 #openstaand li.active {
     border-bottom: none;
 }
