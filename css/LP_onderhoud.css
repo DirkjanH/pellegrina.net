@@ -101,19 +101,10 @@ a.button {
     margin-bottom: 20px;
 }
 
-#openstaand li {
-    padding-bottom: 0;
-    line-height: 1.2em;
-    font-size: 13px;
-}
-
-#openstaand ul {
-    list-style-type: none;
-}
-
 #openstaand ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 #openstaand ul a:link,
@@ -125,16 +116,13 @@ a.button {
 #openstaand ul a:hover,
 #openstaand ul a:active {
     display: block;
-    background-color: grey;
-    color: white;
+    background-color: rgb(251, 219, 219);
 }
 
-#openstaand ul {
-    list-style-type: none;
-}
-
-#openstaand li.active {
-    border-bottom: none;
+#openstaand li {
+    padding-bottom: 0;
+    line-height: 1.4em;
+    font-size: 13px;
 }
 
 #openstaand li a {
