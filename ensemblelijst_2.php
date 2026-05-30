@@ -85,7 +85,6 @@ foreach ($docenten as $docent) {
 
 function ensembleleden($id)
 {
-
 	global $inschrijf;
 	$query_ensembleleden = "SELECT naam, InstrId as instrument, bepaling FROM ensemblelid as e INNER JOIN inschrijving as i
 	ON e.InschId=i.InschId LEFT JOIN dlnmr as d ON d.DlnmrId=i.DlnmrId_FK WHERE EnsembleId = {$id} 
@@ -101,7 +100,6 @@ function ensembleleden($id)
 
 function geenensemble()
 {
-
 	global $inschrijf, $cursus_offset;
 	$query_ensembleleden = sprintf(
 		"SELECT naam, i.instr FROM inschrijving as i
@@ -126,7 +124,6 @@ function geenensemble()
 
 function nulensemble()
 {
-
 	global $inschrijf, $cursus_offset;
 	$query_ensembleleden = sprintf(
 		"SELECT naam, i.instr FROM ensemblelid as e
@@ -151,7 +148,6 @@ function nulensemble()
 
 function tutorcodes()
 {
-
 	global $doc;
 	if (isset($doc) and count($doc) > 0) {
 		echo '<div style="float: left; margin-right: 40px;"><hr><h3>Key to the tutor codes:</h3><p class="spelers">';
@@ -286,23 +282,27 @@ function ruimtecodes()
 						</div>
 				</form> <?php
 						$i = 1;
-						foreach ($ensembles as $i => $ensemble) {
-							$ens = '<h2>' . ($i + 1) . '. ';
-							if (isset($ensemble['link']) && $ensemble['link'] != '') {
-								$ensemble['link'] = rawurldecode($ensemble['link']);
-								$ens .= "<a href=\"{$ensemble['link']}\" target=\"_blank\">";
+						if (is_array($ensembles)) {
+							foreach ($ensembles as $i => $ensemble) {
+								$ens = '<h2>' . ($i + 1) . '. ';
+								if (isset($ensemble['link']) && $ensemble['link'] != '') {
+									$ensemble['link'] = rawurldecode($ensemble['link']);
+									$ens .= "<a href=\"{$ensemble['link']}\" target=\"_blank\">";
+								}
+								$ens .= stripslashes($ensemble['stuk']);
+								if (isset($ensemble['link']) && $ensemble['link'] != '') $ens .= "</a>";
+								if ($ensemble['docent1'] > 0) $ens .= '&nbsp;&nbsp;' . $doc[$ensemble['docent1']]['code'];
+								if ($ensemble['docent2'] > 0) $ens .= '/' . $doc[$ensemble['docent2']]['code'];
+								if (isset($ensemble['ruimte']) && $ensemble['ruimte'] > 0) $ens .= ' (' . $ruimte[$ensemble['ruimte']] . ')';
+								if ($ensemble['definitief'] > 0) $ens .= '&nbsp;<img src="Images/Logos/ok.png" alt="confirmed" class="geenlijn">';
+								elseif ($ensemble['compleet'] > 0) $ens .= '&nbsp;<img src="Images/Logos/question.png" alt="not confirmed" class="geenlijn">';
+								$ens .= '</h2>';
+								echo $ens;
+								ensembleleden($ensemble['ensembleId']);
+								if ($ensemble['opmerking'] != "") echo '<p class="opmerking">' . $ensemble['opmerking'] . '</p>';
 							}
-							$ens .= stripslashes($ensemble['stuk']);
-							if (isset($ensemble['link']) && $ensemble['link'] != '') $ens .= "</a>";
-							if ($ensemble['docent1'] > 0) $ens .= '&nbsp;&nbsp;' . $doc[$ensemble['docent1']]['code'];
-							if ($ensemble['docent2'] > 0) $ens .= '/' . $doc[$ensemble['docent2']]['code'];
-							if (isset($ensemble['ruimte']) && $ensemble['ruimte'] > 0) $ens .= ' (' . $ruimte[$ensemble['ruimte']] . ')';
-							if ($ensemble['definitief'] > 0) $ens .= '&nbsp;<img src="Images/Logos/ok.png" alt="confirmed" class="geenlijn">';
-							elseif ($ensemble['compleet'] > 0) $ens .= '&nbsp;<img src="Images/Logos/question.png" alt="not confirmed" class="geenlijn">';
-							$ens .= '</h2>';
-							echo $ens;
-							ensembleleden($ensemble['ensembleId']);
-							if ($ensemble['opmerking'] != "") echo '<p class="opmerking">' . $ensemble['opmerking'] . '</p>';
+						} else {
+							echo '<h2>No ensembles have been formed yet for this set.</h2>';
 						}
 						nulensemble();
 						geenensemble();
