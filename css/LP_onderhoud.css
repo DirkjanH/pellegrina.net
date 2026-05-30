@@ -94,11 +94,18 @@ a.button {
     border: 1px solid grey;
 }
 
-#openstaand,
-#openstaand ul,
-#openstaand li,
-#openstaand a {
+#openstaand {
     width: 300px;
+    background-color: white;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#openstaand li {
+    padding-bottom: 0;
+    line-height: 1.2em;
+    font-size: 13px;
+    text-decoration: none;
 }
 
 hr {
