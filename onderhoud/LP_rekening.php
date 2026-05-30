@@ -19,6 +19,8 @@ else $id = $_GET['DlnmrId'];
 if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
     unset($_SESSION, $_GET, $_POST, $_REQUEST, $_SESSION['DlnmrId']);
     d($_SESSION, $_GET, $_POST, $_REQUEST, $_SESSION['DlnmrId']);
+    header("Location: " . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
+    exit();
 }
 
 // Kies tarievenmodule:
@@ -387,8 +389,9 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-                                                                        echo $_GET['DlnmrId']; ?>"
+                                name="DlnmrId" type="text"
+                                value="<?php if (isset($_GET['DlnmrId']))
+                                            echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             <input type="submit" name="Reset" value="Wis">
