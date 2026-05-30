@@ -105,6 +105,17 @@ a.button {
     padding-bottom: 0;
     line-height: 1.2em;
     font-size: 13px;
+}
+
+#openstaand ul {
+    list-style-type: none;
+}
+
+#openstaand li.active {
+    border-bottom: none;
+}
+
+#openstaand li.active a {
     text-decoration: none;
 }
 
