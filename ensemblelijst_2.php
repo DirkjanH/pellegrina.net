@@ -62,8 +62,11 @@ ORDER BY ensemble.Id ASC",
 	GetSQLValueString(($_SESSION['Cursus'] + $cursus_offset), "int"),
 	GetSQLValueString($_SESSION['Set'], "int")
 );
+d($query_ensembles);
 $ensembles = select_query($query_ensembles);
-$totalRows_ensembles = count($ensembles);
+if (is_array($ensembles)) 	$totalRows_ensembles = count($ensembles);
+else $totalRows_ensembles = 0;
+d($totalRows_ensembles);
 // end Recordset Ensembles
 
 // begin Recordset Docenten
