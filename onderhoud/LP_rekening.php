@@ -311,6 +311,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 			if ($factuur['donatie'] > 0)
 				$mail_text = str_replace("{donatie}", $inschr['donatie'], $mail_text);
 			else $mail_text = str_replace("{donatie}", '', $mail_text);
+			d($mail_text);
 
 			// stuur een mail
 			$mail = new LPmailer();
@@ -330,11 +331,11 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 				echo '<br><hr><br>';
 			} else {
 				if (!$mail->Send()) {
-					echo "Bericht nr. {$nr} aan {$inschr['naam']} kon niet verzonden worden.<br>";
+					echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) kon niet verzonden worden.<br>";
 					echo "Mailer Error: " . $mail->ErrorInfo;
 					exit();
 				}
-				echo "Bericht nr. {$nr} aan {$inschr['naam']} verzonden.<br>";
+				echo "Bericht nr. {$nr} aan {$inschr['naam']} ({$inschr['InschId']}) verzonden.<br>";
 
 				$update_inschrijving = sprintf(
 					"UPDATE inschrijving SET rekening_verzonden=NOW() WHERE InschId=%s",
