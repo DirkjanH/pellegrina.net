@@ -34,6 +34,9 @@ if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
 	header("Location: " . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST']
 		. explode('?', $_SERVER['REQUEST_URI'], 2)[0]);
 }
+
+d($_REQUEST, $_GET, $_POST, $_SESSION);
+
 // begin Recordset Cursussen
 $query_cursussen = "SELECT * FROM cursus WHERE CursusId > {$cursus_offset} ORDER BY CursusId ASC";
 
