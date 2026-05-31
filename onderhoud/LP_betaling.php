@@ -19,7 +19,7 @@ if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
 }
 
 if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
-if (isset($_SESSION['inschrijving']) and !empty($_SESSION['inschrijving'])) $_SESSION['cursus'] = $_GET['cursus'];
+if (isset($_GET['cursus'])) $_SESSION['cursus'] = $_GET['cursus'];
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
 	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
