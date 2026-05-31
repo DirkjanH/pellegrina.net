@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-Kint::$enabled_mode = false;
+Kint::$enabled_mode = true;
 
 if (!(isset($_SESSION['datum']) && $_SESSION['datum'] != "")) $_SESSION['datum'] = date("d-m-Y");
 if (isset($_POST['datum']) && $_POST['datum'] != "") $_SESSION['datum'] = $_POST['datum'];
