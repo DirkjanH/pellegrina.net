@@ -19,6 +19,7 @@ if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
 }
 
 if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
+if (empty($_SESSION['InschId']) and isset($_GET['InschId'])) $_SESSION['InschId'] = $_GET['InschId'];
 if (isset($_GET['cursus'])) $_SESSION['cursus'] = $_GET['cursus'];
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
@@ -253,6 +254,8 @@ $openstaand_giraal = euro($openstaand_bedrag['totaal'] - $openstaand_cashbedrag[
 						echo "</option>\n</select>";
 						echo '<input name="DlnmrId" type="hidden" value="';
 						if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
+						echo '<input name="InschId" type="hidden" value="';
+						if (isset($_GET['InschId'])) echo $_GET['InschId'] . '" />';
 						echo '<input type="submit" name="Submit" value="Zoek">';
 						echo '</form>';
 					} else $ins = $inschrijving[0];
