@@ -255,7 +255,7 @@ $openstaand_giraal = euro($openstaand_bedrag['totaal'] - $openstaand_cashbedrag[
 						echo '<input name="DlnmrId" type="hidden" value="';
 						if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
 						echo '<input name="InschId" type="hidden" value="';
-						if (isset($_GET['InschId'])) echo $_GET['InschId'] . '" />';
+						if (isset($ins['InschId'])) echo $ins['InschId'] . '" />';
 						echo '<input type="submit" name="Submit" value="Zoek">';
 						echo '</form>';
 					} else $ins = $inschrijving[0];
