@@ -113,8 +113,8 @@ function cursusgeld($ins)
 		$b_hotel_2pp = bedrag($hotel_2pp);
 		$wensenNL .= ", plus supplement voor plaats in een tweepersoons kamer met eigen sanitair in het Poortgebouw";
 		$wensenEN .= ", plus supplement for a place in a double room with private bathroom facilities in the Gate House (Poortgebouw)";
-		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_2pp}";
-		$regelEN .= "###Supplement for single room@@@{$b_hotel_2pp}";
+		$regelNL .= "###Supplement voor plaats in een tweepersoons kamer met eigen sanitair in het Poortgebouw@@@{$b_hotel_2pp}";
+		$regelEN .= "###Supplement for a place in a double room with private bathroom facilities in the Gate House (Poortgebouw)@@@{$b_hotel_2pp}";
 	}
 
 	if ($ins['hotel_1_2pp']) {
