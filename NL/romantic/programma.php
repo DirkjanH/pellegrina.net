@@ -120,9 +120,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           gered door het uitspreken van een smeekbede aan de Maagd
           Maria en door de aankondiging van de nieuwe dag met het
           verschijnen van de eerste zonnestralen.</p>
-        <p><a href="Text_SB.php" target="_blank">De volledige
-            Tsjechische tekst met Engelse vertaling is hier te
-            vinden.</a></p>
+        <p><a href="https://www.pellegrina.net/EN/romantic/Text_SB.php"
+            target="_blank">De volledige Tsjechische tekst met
+            Engelse vertaling is hier te vinden.</a></p>
         <h4>Structuur van de compositie</h4>
         <p>De aard van de tekst bepaalt de vorm van de cantate. De
           dialoog tussen het meisje en de levende dode wordt gezongen
