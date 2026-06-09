@@ -91,7 +91,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 					EUR 50 red.</div>
 			</div>
 			<div id="banner" class="">
-				<div class="banneroranje">Last places available...</div>
+				<div class="banneroranje">Last few places available...</div>
 			</div>
 			<div id="banner" class="onzichtbaar">
 				<div class="bannerrood">The 2026 courses are fully booked</div>
@@ -163,13 +163,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>České Budějovice (Czechia), 30 July - 9 August
 							<?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Still place for bassoon, horn, piano
-						and strings in all groups. The choir has a few places in
-						all voice groups, in particular for sopranos and basses
-					</p>
-					<p class="volvoor">The course is full for flute, oboe and
-						clarinet (a clarinetist who also plays the bass clarinet
-						can still be placed)</p>
+					<p class="plaatsvoor">Still place for a bassoon and a double
+						bass. The choir has a few places in all voice groups, in
+						particular for sopranos and basses </p>
+					<p class="volvoor">The course is full for all other
+						instruments</p>
 					<p class="onzichtbaar">*: Speciální výhodná cena pro české
 						houslisty a violisty: kurs 2 nebo 3 včetně (dvoulůžkové)
 						ubytování a stravování za Kč 4.000. Jenom napište
@@ -185,10 +183,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>Priory Nieuw Sion, Diepenveen (Netherlands), 13 - 19
 							August <?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Still place for a tenor with solistic
-						abilities</p>
-					<p class="volvoor">The course is full for sopranos, mezzos,
-						altos and basses, as well as for all instruments</p>
+					<p class="plaatsvoor onzichtbaar">Still place for a tenor
+						with solistic abilities</p>
+					<p class="volvoor">The course is full for all voices and all
+						instruments</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom onzichtbaar">
 					<h3><a href="https://pellegrina.kinskytrio.cz/"

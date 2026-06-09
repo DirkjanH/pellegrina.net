@@ -96,8 +96,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 					50 korting</div>
 			</div>
 			<div id="banner" class="">
-				<div class="banneroranje">Nog enkele plaatsen beschikbaar...
-				</div>
+				<div class="banneroranje">Nog enkele laatste plaatsen
+					beschikbaar... </div>
 			</div>
 			<div id="" class="onzichtbaar">
 				<div class="bannerrood">De cursussen in 2026 zijn helemaal vol
@@ -166,13 +166,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>České Budějovice (Tsjechië), 30 juli - 9 augustus
 							<?php echo $jaar ?> </li>
 					</ul>
-					<p class="plaatsvoor">Nog plaats voor fagot, hoorn, piano en
-						strijkers in alle groepen<br> het koor heeft nog enkele
-						plekken in alle groepen, met name voor sopranen en
-						bassen</p>
-					<p class="volvoor">De cursus is vol voor fluit, hobo en
-						klarinet (een klarinettist die ook basklarinet speelt
-						kan nog wel worden geplaatst)</p>
+					<p class="plaatsvoor">Nog plaats voor fagot en
+						contrabas<br>het koor heeft nog enkele plekken in alle
+						groepen, met name voor sopranen en bassen</p>
+					<p class="volvoor">De cursus is vol voor alle overige
+						instrumenten</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom">
 					<h3><a href="baroque/index.php"><span
@@ -183,10 +181,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 						<li>Klooster Nieuw Sion, Diepenveen, 13 - 19 augustus
 							<?php echo $jaar ?></li>
 					</ul>
-					<p class="plaatsvoor">Er is nog plaats voor een tenor met
-						solistische capaciteiten </p>
-					<p class="volvoor">Deze cursus is vol voor sopranen, mezzos,
-						alten en bassen, en voor alle instrumenten</p>
+					<p class="plaatsvoor onzichtbaar">Er is nog plaats voor een
+						tenor met solistische capaciteiten </p>
+					<p class="volvoor">Deze cursus is vol voor alle stemsoorte
+						en alle instrumenten</p>
 				</div>
 				<div class="w3-card-2 w3-padding w3-margin-bottom onzichtbaar">
 					<h3><a href="https://pellegrina.kinskytrio.cz/"
