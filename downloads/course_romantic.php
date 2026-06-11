@@ -116,6 +116,10 @@ $cursusnr = 1 + $cursus_offset; ?>
                                                         href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html"
                                                         target="_blank">practice files for all voices of all
                                                         choruses of Svatební košile</a></li>
+                                        <li><a href="https://www.youtube.com/watch?v=rtV3tieUcmM"
+                                                        target="_blank">This Youtube clip contains the text
+                                                        of Svatební košile, slowly spoken by excellent Czech
+                                                        actors and subitled in English</a></li>
                                 </ul>
                                 <div class="cols3">
                                         <ul>
