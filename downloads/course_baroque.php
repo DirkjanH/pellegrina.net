@@ -133,18 +133,20 @@ $cursusnr = 2 + $cursus_offset; ?>
                 </div>
             </div>
             <h4>Heinichen, Johann David - Concerto à 7 S.215</h4>
+            <p class="nadruk">A new edition has been made by Lea, extending the
+                recorder parts with the tutti sections and giving more common
+                clefs in the 2nd violin. The string and recorder parts still
+                need to be added.</p>
             <div class="cols3">
                 <ul>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_score.pdf"
+                    <li><a href="/pdf/2026-2/Heinichen/Heinichen, Johann David - Concerto à 7 S.215.pdf"
                             target="_blank">Full score</a></li>
                     <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_flauto_I.pdf"
                             target="_blank">Flute 1</a></li>
                     <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_flauto_II.pdf"
                             target="_blank">Flute 2</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_oboe_I.pdf"
-                            target="_blank">Oboe 1</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_oboe_II.pdf"
-                            target="_blank">Oboe 2</a></li>
+                    <li><a href="/pdf/2026-2/Heinichen/hein 215-1 test _oboe 1_oboe 2 geheel.pdf"
+                            target="_blank">Oboe 1/2</a></li>
                     <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_violino_I.pdf"
                             target="_blank">Violin 1</a></li>
                     <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_violino_II.pdf"
