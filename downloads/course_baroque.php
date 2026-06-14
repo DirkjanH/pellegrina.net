@@ -2,6 +2,7 @@
 $cursusnr = 2 + $cursus_offset; ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -19,19 +20,20 @@ $cursusnr = 2 + $cursus_offset; ?>
     <!-- InstanceBeginEditable name="head" -->
     <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-    h3 {
-        margin: 25px 0px 15px;
-        padding: 0px;
-    }
+        h3 {
+            margin: 25px 0px 15px;
+            padding: 0px;
+        }
 
-    table#parts tr,
-    td {
-        margin: 10px 5px;
-        padding: 5px;
-    }
+        table#parts tr,
+        td {
+            margin: 10px 5px;
+            padding: 5px;
+        }
     </style>
     <!-- InstanceEndEditable -->
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud">
@@ -141,19 +143,17 @@ $cursusnr = 2 + $cursus_offset; ?>
                 <ul>
                     <li><a href="/pdf/2026-2/Heinichen/Heinichen, Johann David - Concerto à 7 S.215.pdf"
                             target="_blank">Full score</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_flauto_I.pdf"
-                            target="_blank">Flute 1</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_flauto_II.pdf"
-                            target="_blank">Flute 2</a></li>
+                    <li><a href="/pdf/2026-2/Heinichen/hein 215 recorders 1 and 2.pdf"
+                            target="_blank">Flute 1/2</a></li>
                     <li><a href="/pdf/2026-2/Heinichen/hein 215-1 test _oboe 1_oboe 2 geheel.pdf"
                             target="_blank">Oboe 1/2</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_violino_I.pdf"
+                    <li><a href="/pdf/2026-2/Heinichen/hein 215 vi 1.pdf"
                             target="_blank">Violin 1</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_violino_II.pdf"
+                    <li><a href="/pdf/2026-2/Heinichen/hein 215 vi 2.pdf"
                             target="_blank">Violin 2</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_viola.pdf"
+                    <li><a href="/pdf/2026-2/Heinichen/hein 215-viola.pdf"
                             target="_blank">Viola</a></li>
-                    <li><a href="/pdf/2026-2/Heinichen/heinichen_concerto_basso.pdf"
+                    <li><a href="/pdf/2026-2/Heinichen/Heinichen 215 bassi.pdf"
                             target="_blank">Cello, double bass, bassoon</a>
                     </li>
                 </ul>
@@ -802,4 +802,5 @@ $cursusnr = 2 + $cursus_offset; ?>
     </div>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
+
 </html>
