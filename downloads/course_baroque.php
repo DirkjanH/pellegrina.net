@@ -137,8 +137,7 @@ $cursusnr = 2 + $cursus_offset; ?>
             <h4>Heinichen, Johann David - Concerto à 7 S.215</h4>
             <p class="nadruk">A new edition has been made by Lea, extending the
                 recorder parts with the tutti sections and giving more common
-                clefs in the 2nd violin. The string and recorder parts still
-                need to be added.</p>
+                clefs in the 2nd violin. Please only use this new edition.</p>
             <div class="cols3">
                 <ul>
                     <li><a href="/pdf/2026-2/Heinichen/Heinichen, Johann David - Concerto à 7 S.215.pdf"
