@@ -11,32 +11,8 @@ Kint::$enabled_mode = false;
 if (!(isset($_SESSION['datum']) && $_SESSION['datum'] != "")) $_SESSION['datum'] = date("d-m-Y");
 if (isset($_POST['datum']) && $_POST['datum'] != "") $_SESSION['datum'] = $_POST['datum'];
 
-d($_REQUEST, $_GET, $_POST, $_SESSION);
-if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
-	unset($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
-	$_SESSION['DlnmrId'] = $_POST['DlnmrId'] = $_GET['DlnmrId'] = '-1';
-	d($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
-}
-
-if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
-if (empty($_SESSION['InschId']) and isset($_GET['InschId'])) $_SESSION['InschId'] = $_GET['InschId'];
-if (isset($_GET['cursus'])) $_SESSION['cursus'] = $_GET['cursus'];
-if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
-if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
-	$_GET['DlnmrId'] = $_SESSION['DlnmrId'];
-if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
-else $id = $_GET['DlnmrId'];
-if (isset($_GET['Reset']) and $_GET['Reset'] == 'Wis') {
-	unset($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
-	$_SESSION['DlnmrId'] = $_POST['DlnmrId'] = $_GET['DlnmrId'] = '-1';
-	d($_SESSION, $_GET, $_GET['DlnmrId'], $_POST, $_POST['DlnmrId'], $_REQUEST, $_SESSION['DlnmrId']);
-	d($_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST']
-		. explode('?', $_SERVER['REQUEST_URI'], 2)[0]);
-	header("Location: " . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST']
-		. explode('?', $_SERVER['REQUEST_URI'], 2)[0]);
-}
-
-d($_REQUEST, $_GET, $_POST, $_SESSION);
+d($_POST);
+d($_SESSION);
 
 // begin Recordset Cursussen
 $query_cursussen = "SELECT * FROM cursus WHERE CursusId > {$cursus_offset} ORDER BY CursusId ASC";
@@ -95,7 +71,6 @@ d($query_inschrijving);
 if ($query_inschrijving != '') {
 	$inschrijving = select_query($query_inschrijving);
 	if (is_array($inschrijving)) $totalRows_inschrijving = count($inschrijving);
-	else $totalRows_inschrijving = 0;
 }
 // end Recordset
 
@@ -118,8 +93,7 @@ ORDER BY CursusId_FK, achternaam ASC";
 d($query_openstaand);
 
 $openstaand = select_query($query_openstaand);
-if (is_array($openstaand)) $totalRows_openstaand = count($openstaand);
-else $totalRows_openstaand = 0;
+$totalRows_openstaand = count($openstaand);
 // end Recordset Openstaande rekeningen
 
 // begin Recordset Openstaand bedrag
@@ -144,9 +118,9 @@ $openstaand_bedrag['totaal'] = 0;
 foreach ($bedrag as $i => $bedr) {
 	$openstaand_bedrag[$i + 1] = $bedr['tebetalen'];
 	$openstaand_bedrag['totaal'] += $openstaand_bedrag[$i + 1];
-	$openstaand_bedrag[$i + 1] = euro($openstaand_bedrag[$i + 1]);
+	$openstaand_bedrag[$i + 1] = euro2($openstaand_bedrag[$i + 1]);
 }
-$openstaand_bedrag['Etotaal'] = euro($openstaand_bedrag['totaal']);
+$openstaand_bedrag['Etotaal'] = euro2($openstaand_bedrag['totaal']);
 
 d($openstaand_bedrag);
 
@@ -175,14 +149,14 @@ $openstaand_cashbedrag['totaal'] = 0;
 foreach ($cashbedrag as $i => $cashbedr) {
 	$openstaand_cashbedrag[$i + 1] = $cashbedr['tebetalen'];
 	$openstaand_cashbedrag['totaal'] += $openstaand_cashbedrag[$i + 1];
-	$openstaand_cashbedrag[$i + 1] = euro($openstaand_cashbedrag[$i + 1]);
+	$openstaand_cashbedrag[$i + 1] = euro2($openstaand_cashbedrag[$i + 1]);
 }
-$openstaand_cashbedrag['Etotaal'] = euro($openstaand_cashbedrag['totaal']);
+$openstaand_cashbedrag['Etotaal'] = euro2($openstaand_cashbedrag['totaal']);
 d($openstaand_cashbedrag);
 
 // end Recordset Cash te betalen
 
-$openstaand_giraal = euro($openstaand_bedrag['totaal'] - $openstaand_cashbedrag['totaal']);
+$openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag['totaal']);
 
 ?>
 <!DOCTYPE HTML>
@@ -230,117 +204,173 @@ $openstaand_giraal = euro($openstaand_bedrag['totaal'] - $openstaand_cashbedrag[
 </head>
 
 <body>
-	<div id="zoeknm"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+	<div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
 	<div id="mainframe">
 		<header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
 		</header>
 		<div id="mainpage">
-			<form id="zoek" name="zoek" method="get"
-				action="<?php echo $editFormAction; ?>"> Id: <input
-					name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']) and $_GET['Reset'] != 'Wis')
-															echo $_GET['DlnmrId']; ?>" size="5" />
-				<input type="submit" name="Submit" value="Zoek">
-			</form> <?php
-					if ($totalRows_inschrijving > 1) {
-						echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
-						echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$totalRows_inschrijving}\" >";
-						foreach ($inschrijving as $ins) {
-							echo "<option value=\"{$ins['CursusId_FK']}\"";
-							if (!(strcmp($ins['CursusId_FK'], $_GET['cursus']))) {
-								echo "SELECTED";
+			<table width="100%" border="0" align="left">
+				<tr>
+					<td colspan="2">
+						<form id="zoek" name="zoek" method="get"
+							action="<?php echo $editFormAction; ?>"> Id: <input
+								name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+																		echo $_GET['DlnmrId']; ?>" size="5" />
+							<input type="submit" name="Submit" value="Zoek">
+						</form>
+					</td>
+				</tr> <?php
+						if ($totalRows_inschrijving > 1) {
+							echo "<tr><td colspan=\"3\">";
+							echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
+							echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$totalRows_inschrijving}\" >";
+							foreach ($inschrijving as $ins) {
+								echo "<option value=\"{$ins['CursusId_FK']}\"";
+								if (!(strcmp($ins['CursusId_FK'], $_GET['cursus']))) {
+									echo "SELECTED";
+								}
+								echo '>' . $cursusnaam[$ins['CursusId_FK']]['NL'];
 							}
-							echo '>' . $cursusnaam[$ins['CursusId_FK']]['NL'];
-						}
-						echo "</option>\n</select>";
-						echo '<input name="DlnmrId" type="hidden" value="';
-						if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
-						echo '<input name="InschId" type="hidden" value="';
-						if (isset($ins['InschId'])) echo $ins['InschId'] . '" />';
-						echo '<input type="submit" name="Submit" value="Zoek">';
-						echo '</form>';
-					} else $ins = $inschrijving[0];
-					?> <form action="<?php echo $editFormAction; ?>" method="POST" name="form"
-				id="form">
-				<h2>Naam:&nbsp;<?php echo $ins['naam']; ?></h2>
-				<?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
+							echo "</option>\n</select>";
+							echo '<input name="DlnmrId" type="hidden" value="';
+							if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
+							echo '<input type="submit" name="Submit" value="Zoek">';
+							echo '</form></td></tr>';
+						} else $ins = $inschrijving[0];
+						?> <form action="<?php echo $editFormAction; ?>" method="POST"
+					name="form" id="form">
+					<tr>
+						<td height="50" colspan="2" valign="top">
+							<h2>Naam:&nbsp;<?php echo $ins['naam']; ?></h2>
+							<?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-					type="hidden" value="<?php
-											echo $ins['aanbet_bedrag']; ?>">
-				<input name="InschId" id="InschId" type="hidden" value="<?php
-																		echo $ins['InschId']; ?>">
-				<input name="CursusId_FK" type="hidden" value="<?php
-																echo $ins['CursusId_FK']; ?>">
-				<div class="flexcontainer">
-					<div>Cursusgeld: <?php echo euro($ins['cursusgeld']); ?>
-					</div>
-					<div>Gedoneerd bedrag: <?php echo euro($ins['donatie']); ?>
-					</div>
-					<div>Totaal te betalen:
-						<?php echo euro($ins['cursusgeld'] + $ins['donatie']); ?>
-					</div>
-					<div>Al betaald: <?php echo euro($ins['aanbet_bedrag']); ?>
-					</div>
-					<div>Nog openstaand:
-						<?php echo euro($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>
-					</div>
-				</div>
-				<div>
-					<p>Betaling d.d. <input name="datum" type="text" id="datum"
-							size="10" value="<?php echo $_SESSION['datum'] ?>">
-						per <label>
-							<input name="betaalwijze" type="radio"
-								value="Postbank" checked> Postbank</label>
-						<label>
-							<input type="radio" name="betaalwijze"
-								value="KB">KB</label>
-						<label>
-							<input type="radio" name="betaalwijze"
-								value="PayPal"> PayPal</label>
-						<label>
-							<input type="radio" name="betaalwijze" value="kas">
-							kas van &nbsp;&#8364;&nbsp; <input name="betaling"
-								type="text" id="betaling" size="5"
-								value="<?php echo ($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>">
-							&nbsp;Betaling tijdens cursus in contanten
-							afgesproken: <input name="cash" type="checkbox"
-								value="1"
-								<?php if (isset($_POST['cash'])) echo 'checked'; ?>>
-						</label>
-					</p>
-				</div>
-				<div align="left">Opmerkingen over de betaling:<br>
-					<textarea name="rekening_opmerking" cols="80" rows="3"
-						id="rekening_opmerking"><?php
-												if ($ins['rekening_opmerking'] != "") echo stripslashes($ins['rekening_opmerking']); ?></textarea>
-				</div>
-				<div class="links">
-					<input name="Verwerk" type="submit" class="fotobijschrift"
-						id="Verwerk" value="Verwerk betaling" />
-				</div>
-			</form>
-			<h2>Nog openstaande rekeningen:</h2>
-			<div id="openstaand">
-				<ul> <?php
-						foreach ($openstaand as $open) {
-							$grijs = TRUE;
-							if (stripos($open['rekening_opmerking'], 'Betaling ter plekke in cash') === FALSE)
-								$grijs =  FALSE;
-							$bedrag = $open['cursusgeld'] + $open['donatie']
-								- $open['aanbet_bedrag'];
-							$opens = '<li id="active"><a href="javascript:SetInschId(';
-							$opens .= $open['InschId'] . ')">';
-							if ($grijs) $opens .= '<span class="grijs">';
-							$opens .= $open['naam'] . ' (';
-							$opens .= euro($bedrag);
-							$opens .= ")";
-							if ($grijs) $opens .= '</span>';
-							$opens .= "</a></li>\n";
-							echo $opens;
-						}
-						?> </ul>
-			</div> 
-			<?php echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}</p>"; ?>
+								type="hidden" value="<?php
+														echo $ins['aanbet_bedrag']; ?>">
+							<input name="InschId" id="InschId" type="hidden"
+								value="<?php
+										echo $ins['InschId']; ?>">
+							<input name="CursusId_FK" type="hidden" value="<?php
+																			echo $ins['CursusId_FK']; ?>">
+						</td>
+					</tr>
+					<tr valign="baseline">
+						<td width="100" align="right" nowrap>
+							<div align="right">Cursusgeld:</div>
+						</td>
+						<td><?php echo euro2($ins['cursusgeld']); ?></td>
+					</tr>
+					<tr valign="baseline">
+						<td width="100">
+							<div align="right">Gedoneerd bedrag: </div>
+						</td>
+						<td><?php echo euro2($ins['donatie']); ?></td>
+					</tr>
+					<tr valign="baseline">
+						<td width="100" align="right" nowrap>
+							<div align="right">Totaal te betalen: </div>
+						</td>
+						<td><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?>&nbsp;
+						</td>
+					</tr>
+					<tr valign="baseline">
+						<td width="100" align="right" nowrap>
+							<div align="right">Al betaald:</div>
+						</td>
+						<td><?php echo euro2($ins['aanbet_bedrag']); ?></td>
+					</tr>
+					<tr valign="middle">
+						<td width="100" align="right" valign="top" nowrap>
+							<div align="right">Nog openstaand </div>
+						</td>
+						<td valign="top" nowrap>
+							<?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>&nbsp;
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td colspan="2" valign="top" nowrap>Betaling d.d. <input
+								name="datum" type="text" id="datum" size="10"
+								value="<?php echo $_SESSION['datum'] ?>"> per
+							<label>
+								<input name="betaalwijze" type="radio"
+									value="Postbank" checked> Postbank</label>
+							<label>
+								<input type="radio" name="betaalwijze"
+									value="KB"> KB</label>
+							<label>
+								<input type="radio" name="betaalwijze"
+									value="PayPal"> PayPal</label>
+							<label>
+								<input type="radio" name="betaalwijze"
+									value="kas"> kas van &nbsp;&#8364;&nbsp;
+								<input name="betaling" type="text" id="betaling"
+									size="5"
+									value="<?php echo ($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>">
+								&nbsp;Betaling tijdens cursus in contanten
+								afgesproken: <input name="cash" type="checkbox"
+									value="1"
+									<?php if (isset($_POST['cash'])) echo 'checked'; ?>>
+							</label>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td colspan="2" valign="top" nowrap>
+							<div align="left">Opmerkingen over de betaling:<br>
+								<textarea name="rekening_opmerking" cols="80"
+									rows="3"
+									id="rekening_opmerking"><?php
+															if ($ins['rekening_opmerking'] != "") echo stripslashes($ins['rekening_opmerking']); ?></textarea>
+							</div>
+						</td>
+					</tr>
+					<tr valign="baseline">
+						<td>&nbsp;</td>
+						<td valign="baseline">
+							<div class="links">
+								<input name="Verwerk" type="submit"
+									class="fotobijschrift" id="Verwerk"
+									value="Verwerk betaling" />
+							</div>
+						</td>
+					</tr>
+					<tr valign="baseline">
+						<td colspan="2">
+							<p class="groot">Nog openstaande rekeningen:</p>
+							<div id="navcontainer" style="width: 300px;">
+								<ul id="navlist"> <?php
+													foreach ($openstaand as $open) {
+														$grijs = TRUE;
+														if (stripos($open['rekening_opmerking'], 'Betaling ter plekke in cash') === FALSE)
+															$grijs =  FALSE;
+														$bedrag = $open['cursusgeld'] + $open['donatie']
+															- $open['aanbet_bedrag'];
+														$opens = '<li id="active"><a href="javascript:SetInschId(';
+														$opens .= $open['InschId'] . ')">';
+														if ($grijs) $opens .= '<span class="grijs">';
+														$opens .= $open['naam'] . ' (';
+														$opens .= euro2($bedrag);
+														$opens .= ")";
+														if ($grijs) $opens .= '</span>';
+														$opens .= "</a></li>\n";
+														echo $opens;
+													}
+													echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}<br>";
+													foreach ($openstaand_bedrag as $key => $value) {
+														if (strpos($key, 'totaal') === false) {
+															echo "Cursus {$key}: ";
+															echo $value . " | ";
+														}
+													}
+													echo '</p>';
+													?> </ul>
+							</div> 
+						</td>
+					</tr>
+				</form>
+			</table>
+			</td>
+			</tr>
+			</table>
 		</div>
 	</div>
 </body>

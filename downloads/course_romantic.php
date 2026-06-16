@@ -54,15 +54,17 @@ $cursusnr = 1 + $cursus_offset; ?>
                             href="https://www.google.com/maps/d/u/0/edit?mid=1zv5-hN4rGS_fZVT6gYvyPTuxC86MaC0&usp=sharing"
                             target="_blank">Map of České Budějovice, with all
                             venues</a></td>
-                    <td class="w3-center"><a href="../part_list.php?cursus=1"
+                    <td class="w3-center "><a <a
+                            href="../part_list.php?cursus=1"
                             target="_blank">List of participants</a></td>
-                    <td class="w3-center"><a href="../ensemblelijst_1.php"
+                    <td class="w3-center grijs"><a <a
+                            xxxx="../ensemblelijst_1.php"
                             target="_blank">Chamber music formations</a></td>
                     <td class="w3-center grijs"><a
                             xxxx="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9ZgCzJD_eApDVSvp_h8V96-q9pyA9jerBBeaCdVVWXek3HPJ4ngrlGfL-WihiCUphxWCpl7JyplG6/pubhtml?gid=701953541&single=true"
                             target="_blank">Accommodation overview</a></td>
-                    <td class="w3-center"><a
-                            href="https://docs.google.com/document/d/e/2PACX-1vRUkk_0waRcC8g61gO4ZJ4R7X6HgWfE6qzX_apk7CmH65i-Gfxwk-ibgYBkyKZ4mxU8QueVfoZ9jdzg/pub"
+                    <td class="w3-center grijs"><a
+                            xxxx="2026-1 daily programme.pdf"
                             target="_blank">Daily program</a></td>
                     <td class="w3-center grijs"><a
                             xxxx="https://www.horringa.net/"
@@ -108,16 +110,13 @@ $cursusnr = 1 + $cursus_offset; ?>
                     <li><a href="../pdf/2026-1/Dvořák - Svatební košíle - score A4.pdf"
                             target="_blank">Full orchestral score</a></li>
                     <li>Singers can download and print the <a
-                            href="../pdf/2026-1/SK_piano_reduction_A4.pdf"
-                            target="_blank">vocal score</a></li>
+                            href="../pdf/2026-1/Dvořák - Svatební košile - piano reduction.pdf"
+                            target="_blank">NEW & MUCH IMPROVED vocal score</a>
+                    </li>
                     <li>This page by former participant Marrie Kardol gives <a
                             href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html"
                             target="_blank">practice files for all voices of all
                             choruses of Svatební košile</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=rtV3tieUcmM"
-                            target="_blank">This Youtube clip contains the text
-                            of Svatební košile, slowly spoken by excellent Czech
-                            actors and subitled in English</a></li>
                 </ul>
                 <div class="cols3">
                     <ul>
@@ -189,11 +188,11 @@ $cursusnr = 1 + $cursus_offset; ?>
                 <p><a href="https://open.spotify.com/album/73Uv153nrk6FVPqSyyKYX2?si=sixd0MEBQy-ksQLYL98WkQ"
                         target="_blank">Excellent recording on Spotify to get an
                         impression of Dvořák's <i>Spectre's Bride</i></a></p>
+                <h2> <a href="javascript: history.go(-1)">Back</a></h2>
                 <p><a href="../MP3/Svatební košile Op.69.m4a"
                         target="_blank">Another excellent recording, a historic
                         recording from 1961, of Dvořák's <i>Spectre's
                             Bride</i></a></p>
-                <h2> <a href="javascript: history.go(-1)">Back</a></h2>
                 <p>&nbsp;</p>
             </div>
         </div>

@@ -113,8 +113,8 @@ function cursusgeld($ins)
 		$b_hotel_2pp = bedrag($hotel_2pp);
 		$wensenNL .= ", plus supplement voor plaats in een tweepersoons kamer met eigen sanitair in het Poortgebouw";
 		$wensenEN .= ", plus supplement for a place in a double room with private bathroom facilities in the Gate House (Poortgebouw)";
-		$regelNL .= "###Supplement voor plaats in een tweepersoons kamer met eigen sanitair in het Poortgebouw@@@{$b_hotel_2pp}";
-		$regelEN .= "###Supplement for a place in a double room with private bathroom facilities in the Gate House (Poortgebouw)@@@{$b_hotel_2pp}";
+		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_2pp}";
+		$regelEN .= "###Supplement for single room@@@{$b_hotel_2pp}";
 	}
 
 	if ($ins['hotel_1_2pp']) {
@@ -157,14 +157,14 @@ function cursusgeld($ins)
 	// korting voor eigen accommodatie:
 	if (isset($ins['eigen_acc']) and $ins['eigen_acc']) {
 		$cursusgeld -= ($eigen_acc);
-		$b_eigen_acc = bedrag($eigen_acc * -1);
+		$b_eigen_acc = bedrag($eigen_acc);
 		$wensenNL .= ", minus korting voor eigen accommodatie";
 		$wensenEN .= ", minus reduction for arranging your own accommodation";
 		$regelNL .= "###Korting voor eigen accommodatie@@@{$b_eigen_acc}";
 		$regelEN .= "###Reduction for arranging your own accommodation@@@{$b_eigen_acc}";
 	}
 
-	// supplement voor diner bij eigen acc.:
+	// supplement voor maaltijdpas:
 	if (isset($ins['diner']) and $ins['diner'] == '1') {
 		$cursusgeld += $diner;
 		$b_diner = bedrag($diner);

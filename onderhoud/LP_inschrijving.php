@@ -189,7 +189,7 @@ d($cursus, $dlnmr, $inschrijving);
 </head>
 
 <body>
-    <div id="zoeknm"> <?php require_once('LP_zoeknaam.php'); ?> </div>
+    <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
         <header id="navigatiebalk"> <?php require_once('LP_navigatie.php'); ?>
         </header>
