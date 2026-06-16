@@ -188,13 +188,13 @@ $cursusnr = 1 + $cursus_offset; ?>
                 <p><a href="https://open.spotify.com/album/73Uv153nrk6FVPqSyyKYX2?si=sixd0MEBQy-ksQLYL98WkQ"
                         target="_blank">Excellent recording on Spotify to get an
                         impression of Dvořák's <i>Spectre's Bride</i></a></p>
-                <h2> <a href="javascript: history.go(-1)">Back</a></h2>
                 <p><a href="../MP3/Svatební košile Op.69.m4a"
                         target="_blank">Another excellent recording, a historic
                         recording from 1961, of Dvořák's <i>Spectre's
                             Bride</i></a></p>
                 <p>&nbsp;</p>
             </div>
+            <h2> <a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
