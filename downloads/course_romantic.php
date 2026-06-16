@@ -192,7 +192,6 @@ $cursusnr = 1 + $cursus_offset; ?>
                         target="_blank">Another excellent recording, a historic
                         recording from 1961, of Dvořák's <i>Spectre's
                             Bride</i></a></p>
-                <p>&nbsp;</p>
             </div>
             <h2> <a href="javascript: history.go(-1)">Back</a></h2>
         </div>
