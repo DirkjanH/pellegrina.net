@@ -115,6 +115,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                         Dvořáček<br>Frits Muusse<br>Peter van Zaanen<br>Pierre
                         Eijgenraam<br>Stefan Op de Beek</p>
                 </div>
+            </div>
+            <div class="w3-panel w3-border w3-light-grey w3-clear">
                 <p>In Hasse's Miserere only the women sing, in this division:
                 </p>
                 <div class="w3-panel w3-border w3-light-grey w3-clear">
@@ -483,7 +485,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                             <td style="width: 14.0228%; height: 20.6182px;">
                                 &nbsp; </td>
                             <td style="width: 15.7568%; height: 20.6182px;">
-                                <s>III. Ecce enim iniquitatibus</s></td>
+                                <s>III. Ecce enim iniquitatibus</s>
+                            </td>
                             <td style="width: 19.1494%; height: 20.6182px;">
                                 <s>ssaa</s>
                             </td>
@@ -527,7 +530,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                             <td style="width: 14.0228%; height: 20.6182px;">
                                 &nbsp; </td>
                             <td style="width: 15.7568%; height: 20.6182px;">
-                                <s>VI. Benigne fac</s></td>
+                                <s>VI. Benigne fac</s>
+                            </td>
                             <td style="width: 19.1494%; height: 20.6182px;">
                                 <s>ssaa</s>
                             </td>
@@ -543,7 +547,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                             <td style="width: 14.0228%; height: 20.6182px;">
                                 &nbsp; </td>
                             <td style="width: 15.7568%; height: 20.6182px;">
-                                <s>VII. Gloria Patri</s></td>
+                                <s>VII. Gloria Patri</s>
+                            </td>
                             <td style="width: 19.1494%; height: 20.6182px;">
                                 &nbsp; </td>
                             <td style="width: 3.61879%; height: 20.6182px;">
@@ -558,7 +563,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                             <td style="width: 14.0228%; height: 20.6182px;">
                                 &nbsp; </td>
                             <td style="width: 15.7568%; height: 20.6182px;">
-                                <s>VIII. Sicut erat - Amen</s></td>
+                                <s>VIII. Sicut erat - Amen</s>
+                            </td>
                             <td style="width: 19.1494%; height: 20.6182px;">
                                 &nbsp; </td>
                             <td style="width: 3.61879%; height: 20.6182px;">
