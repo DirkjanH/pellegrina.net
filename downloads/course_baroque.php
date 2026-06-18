@@ -127,7 +127,7 @@ $cursusnr = 2 + $cursus_offset; ?>
                         Muusse<br>Birthe Rubehn</p>
                 </div>
                 <div class="w3-left w3-margin-right">
-                    <p><i>Alto 1:</i><br>Hilda Houtkoop<br><br>Vivian
+                    <p><i>Alto 1:</i><br>Hilda Houtkoop<br>Vivian
                         Stemerdink<br>Marie Brummelhuis</p>
                 </div>
                 <div class="w3-left w3-margin-right">
