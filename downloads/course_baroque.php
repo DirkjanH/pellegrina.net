@@ -116,9 +116,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                         Eijgenraam<br>Stefan Op de Beek</p>
                 </div>
             </div>
+            <p>In Hasse's Miserere only the women sing, in this division: </p>
             <div class="w3-panel w3-border w3-light-grey w3-clear">
-                <p>In Hasse's Miserere only the women sing, in this division:
-                </p>
                 <div class="w3-panel w3-border w3-light-grey w3-clear">
                     <div class="w3-left w3-margin-right">
                         <p><i>Soprano 1:</i><br>Rhona Lonergan<br>Anne
