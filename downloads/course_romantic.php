@@ -62,7 +62,8 @@ $cursusnr = 1 + $cursus_offset; ?>
                     <td class="w3-center grijs"><a
                             xxxx="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9ZgCzJD_eApDVSvp_h8V96-q9pyA9jerBBeaCdVVWXek3HPJ4ngrlGfL-WihiCUphxWCpl7JyplG6/pubhtml?gid=701953541&single=true"
                             target="_blank">Accommodation overview</a></td>
-                    <td class="w3-center"><a href="2026-1 daily programme.pdf"
+                    <td class="w3-center"><a
+                            href="https://docs.google.com/document/d/e/2PACX-1vRUkk_0waRcC8g61gO4ZJ4R7X6HgWfE6qzX_apk7CmH65i-Gfxwk-ibgYBkyKZ4mxU8QueVfoZ9jdzg/pub"
                             target="_blank">Daily program</a></td>
                     <td class="w3-center grijs"><a
                             xxxx="https://www.horringa.net/"
