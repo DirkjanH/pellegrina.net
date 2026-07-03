@@ -13,6 +13,11 @@ div#zoeknm {
     float: left;
 }
 
+div#zoeknaam {
+    float: left;
+    margin-right: 16px;
+}
+
 div#navigatie {
     width: 210px;
     font-size: 12px;
