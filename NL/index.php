@@ -93,11 +93,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
                 <div class="bannergeel">Wie zich vóór 1 maart aanmeldt, krijgt €
                     50 korting</div>
             </div>
-            <div id="banner" class="">
+            <div id="" class="onzichtbaar">
                 <div class="banneroranje">Nog enkele laatste plaatsen
                     beschikbaar... </div>
             </div>
-            <div id="" class="onzichtbaar">
+            <div id="banner" class="">
                 <div class="bannerrood">De cursussen in 2026 zijn helemaal vol
                 </div>
             </div>
@@ -212,8 +212,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     </div>
     </div>
     <div class="onzichtbaar">Nog enkele plaatsen beschikbaar</div> <?php
-																	require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
-																	?>
+                                                                    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
+                                                                    ?>
     <!-- begin olark code -->
     <script data-cfasync="false" type='text/javascript'>
     /*<![CDATA[*/
