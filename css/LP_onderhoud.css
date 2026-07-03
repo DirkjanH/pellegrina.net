@@ -16,6 +16,8 @@ div#zoeknm {
 div#navigatie {
     width: 210px;
     font-size: 12px;
+    float: left;
+    margin-left: 16px;
 }
 
 #navcontainer {
