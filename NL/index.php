@@ -164,11 +164,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
                         <li>České Budějovice (Tsjechië), 30 juli - 9 augustus
                             <?php echo $jaar ?> </li>
                     </ul>
-                    <p class="plaatsvoor">Nog plaats voor een fagot en een
-                        contrabas<br>het koor heeft nog enkele plekken in alle
-                        groepen, met name voor sopranen en bassen</p>
-                    <p class="volvoor">De cursus is vol voor alle overige
-                        instrumenten</p>
+                    <p class="plaatsvoor onzichtbaar">Nog plaats voor een fagot
+                        en een contrabas<br>het koor heeft nog enkele plekken in
+                        alle groepen, met name voor sopranen en bassen</p>
+                    <p class="volvoor">De cursus is vol voor alle instrumenten
+                        en stemsoorten</p>
                 </div>
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3><a href="baroque/index.php"><span
@@ -181,7 +181,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
                     </ul>
                     <p class="plaatsvoor onzichtbaar">Er is nog plaats voor een
                         tenor met solistische capaciteiten </p>
-                    <p class="volvoor">Deze cursus is vol voor alle stemsoorte
+                    <p class="volvoor">Deze cursus is vol voor alle stemsoorten
                         en alle instrumenten</p>
                 </div>
                 <div class="w3-card-2 w3-padding w3-margin-bottom onzichtbaar">
