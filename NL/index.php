@@ -1,4 +1,5 @@
 <?php
+// Laad globale includes en initialisaties
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 ?>
 <!DOCTYPE HTML>
@@ -9,14 +10,16 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+    <!-- Functie om content secties in/uit te klappen -->
     <script type="text/javascript">
+    // Toggle zichtbaarheid van een element aan/uit
     function klapdiensten(id) {
         if (document.getElementById(id)) {
             var cont = document.getElementById(id).style;
             if (cont.display == "block") {
-                cont.display = "none";
+                cont.display = "none"; // Verberg element
             } else {
-                cont.display = "block";
+                cont.display = "block"; // Toon element
             }
             return false;
         } else {
@@ -24,9 +27,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
         }
     }
     </script>
+    <!-- Stijlsheets laden -->
     <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <link href="../css/openingspagina.css" rel="stylesheet" type="text/css">
     <link href="../css/banner.css" rel="stylesheet" type="text/css">
+    <!-- IE 9 en hoger: gradientfilter uitschakelen -->
     <!--[if gte IE 9]>
   <style type="text/css">
     .gradient {
@@ -34,7 +39,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     }
   </style>
 <![endif]-->
-    <!-- Facebook Pixel Code -->
+    <!-- Facebook Pixel Code voor conversie tracking -->
     <script>
     ! function(f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -64,6 +69,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     <!-- End Facebook Pixel Code -->
 </head>
 <body>
+    <!-- Facebook SDK initialisatie -->
     <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -74,9 +80,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
+    <!-- Hoofd content container -->
     <div id="inhoud">
+        <!-- Desktop versie van de pagina -->
         <div id="envelop" class="w3-hide-small w3-hide-medium">
+            <!-- Header laden -->
             <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
+            <!-- Banner berichten: zichtbaarheid wordt via JavaScript beheerd -->
             <div id="" class="onzichtbaar">
                 <div class="bannergeel">De inschrijving voor zomer 2026 start 1
                     december!</div>
@@ -102,7 +112,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
                 </div>
             </div>
         </div>
+        <!-- Hoofd content met twee kolommen -->
         <div id="main" class="w3-row-padding">
+            <!-- Linkerkolom: beschrijving en informatie -->
             <div class="w3-card-2 w3-padding w3-margin-bottom w3-half">
                 <h2 class="kolom LP_colour">Muziekprojecten voor iedere muzikant
                     met een professionele instelling</h2>
@@ -153,6 +165,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
                 </div>
                 </td>
             </div>
+            <!-- Rechterkolom: cursuskaarten -->
             <div class="w3-half">
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3><a href="romantic/index.php"><span
@@ -211,9 +224,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     </div>
     </div>
     </div>
-    <div class="onzichtbaar">Nog enkele plaatsen beschikbaar</div> <?php
-                                                                    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
-                                                                    ?>
+    <!-- Verborgen tekst voor zoekmachines -->
+    <div class="onzichtbaar">Nog enkele plaatsen beschikbaar</div>
+    <!-- Footer laden --> <?php
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
+    ?>
+    <!-- Olark live chat widget voor klantcontact -->
     <!-- begin olark code -->
     <script data-cfasync="false" type='text/javascript'>
     /*<![CDATA[*/
