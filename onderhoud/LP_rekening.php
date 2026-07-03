@@ -1,6 +1,6 @@
 <?php //Connection statement
 // stel php in dat deze fouten weergeeft
-ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
@@ -160,7 +160,9 @@ ORDER BY CursusId_FK, achternaam ASC",
 	);
 
 	if (empty($inschrijving) or $inschrijving == FALSE) $inschrijving = select_query($query_inschrijving);
-	$aantal_inschrijvingen = count($inschrijving);
+	if (isset($inschrijving) and is_array($inschrijving)) {
+		$aantal_inschrijvingen = count($inschrijving);
+	}
 }
 
 // Query cursusgegevens (datums, prijzen, voorwaarden)
