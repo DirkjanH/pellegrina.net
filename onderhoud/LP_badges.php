@@ -116,7 +116,7 @@ function get_car_sign($country)
         'tsjechie' => 'CZ',
         'czech republic' => 'CZ',
         'czechia' => 'CZ',
-        'cesko' => 'CZ',
+        'česko' => 'CZ',
         'slowakije' => 'SK',
         'slovakia' => 'SK',
         'griekenland' => 'GR',
