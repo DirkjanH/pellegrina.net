@@ -149,7 +149,7 @@ $deelnemers_q = "SELECT d.naam, d.achternaam, a.land, i.instr, i.zangstem
 FROM dlnmr d
 JOIN adres a ON d.adresid_FK = a.adresid
 JOIN inschrijving i ON d.dlnmrid = i.dlnmrid_fk
-WHERE i.CursusId_FK = {$CursusId}";
+WHERE i.CursusId_FK = {$CursusId} AND i.aangenomen = 1 AND NOT (i.afgewezen <=> 1)";
 $deelnemers = select_query($deelnemers_q);
 if (is_array($deelnemers)) {
     foreach ($deelnemers as $r) {
