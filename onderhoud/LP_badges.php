@@ -231,39 +231,43 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
     $pages = array_chunk($result, $per_page);
     header('Content-Type: text/html; charset=utf-8');
 ?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>LP Badges - Print</title>
-    <!-- Verbinding maken met Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- De specifieke link voor Alegreya (Medium / 500) -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/css/LP_badges.css">
-</head>
-<body> <?php
+    <!doctype html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>LP Badges - Print</title>
+        <!-- Verbinding maken met Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- De specifieke link voor Alegreya (Medium / 500) -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/LP_badges.css">
+    </head>
+
+    <body> <?php
             foreach ($pages as $page) {
                 echo '<div class="page">';
                 foreach ($page as $item) {
                     $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
                     $country_code = $item['country_code'] ?? '';
-                    $nat = $country_code !== '' ? htmlspecialchars("({$country_code})", ENT_QUOTES) : '';
+                    if ($country_code !== '') {
+                        $name .= ' ' . htmlspecialchars("({$country_code})", ENT_QUOTES);
+                    }
                     $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
                     $instrs = htmlspecialchars($instrs, ENT_QUOTES);
                     echo "<div class=\"badge\">";
                     echo "<div class=\"name\">{$name}</div>";
-                    if ($nat !== '') echo "<div class=\"nationality\">{$nat}</div>";
                     if ($instrs !== '') echo "<div class=\"instruments\">{$instrs}</div>";
                     echo "</div>";
                 }
                 echo '</div>';
             }
             ?> </body>
-</html> <?php
+
+    </html> <?php
             exit;
         }
 
@@ -271,28 +275,31 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
         if (empty($_GET['json']) || $_GET['json'] != '1') {
             // Toon formulier om extra regels toe te voegen en knop om JSON te tonen
             ?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>LP Badges - invoer (onderhoud)</title>
-</head>
-<body>
-    <h2>LP Badges - extra deelnemers toevoegen</h2>
-    <form method="get">
-        <input type="hidden" name="cursus"
-            value="<?php echo htmlspecialchars($_GET['cursus'] ?? '', ENT_QUOTES); ?>">
-        <label for="extra">Voer regels in (één per
-            regel):<br>naam#nationaliteit#instrument</label><br>
-        <textarea name="extra" id="extra" rows="6"
-            cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea><br>
-        <button type="submit" name="json" value="1">Toon JSON met extra
-            regels</button>
-    </form>
-    <h3>Huidige resultaten (preview)</h3>
-    <pre><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
-</body>
-</html><?php
+    <!doctype html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>LP Badges - invoer (onderhoud)</title>
+    </head>
+
+    <body>
+        <h2>LP Badges - extra deelnemers toevoegen</h2>
+        <form method="get">
+            <input type="hidden" name="cursus"
+                value="<?php echo htmlspecialchars($_GET['cursus'] ?? '', ENT_QUOTES); ?>">
+            <label for="extra">Voer regels in (één per
+                regel):<br>naam#nationaliteit#instrument</label><br>
+            <textarea name="extra" id="extra" rows="6"
+                cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea><br>
+            <button type="submit" name="json" value="1">Toon JSON met extra
+                regels</button>
+        </form>
+        <h3>Huidige resultaten (preview)</h3>
+        <pre><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
+    </body>
+
+    </html><?php
             exit;
         }
 
