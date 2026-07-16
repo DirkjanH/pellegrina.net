@@ -192,7 +192,7 @@ if (is_array($docenten)) {
         // Voor docenten gebruiken we 'vak' als subject; het kan al een naam zijn
         $vak = trim($r['vak'] ?? '');
         $instruments_en = [];
-        if ($vak !== '') $instruments_en[] = $vak;
+        if ($vak !== '') $instruments_en[] = $vak . ' (tutor)';
         $result[] = [
             'role' => 'tutor',
             'name' => $naam,
