@@ -175,6 +175,7 @@ if (is_array($deelnemers)) {
             'role' => 'participant',
             'name' => $naam,
             'nationality' => $nationaliteit,
+            'car_sign' => get_car_sign($nationaliteit),
             'instruments_en' => array_values(array_unique($instruments_en)),
         ];
     }
@@ -198,6 +199,7 @@ if (is_array($docenten)) {
             'role' => 'tutor',
             'name' => $naam,
             'nationality' => $nationaliteit,
+            'car_sign' => get_car_sign($nationaliteit),
             'instruments_en' => $instruments_en,
         ];
     }
@@ -221,6 +223,7 @@ if (!empty($_REQUEST['extra'])) {
             'role' => 'extra',
             'name' => $naam,
             'nationality' => $nationaliteit,
+            'car_sign' => get_car_sign($nationaliteit),
             'instruments_en' => $instrument !== '' ? [$instrument] : [],
         ];
     }
@@ -244,12 +247,19 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
                 echo '<div class="page">';
                 foreach ($page as $item) {
                     $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
-                    $nat = $item['nationality'] ?? '';
-                    $carsign = '';
-                    if ($nat !== '') {
-                        $carsign = get_car_sign($nat);
+                    $orig_nat = $item['nationality'] ?? '';
+                    $carsign = $item['car_sign'] ?? '';
+                    // Format: 'Country (SIGN)' if country known, else '(SIGN)' if only sign
+                    if ($orig_nat !== '' && $carsign !== '') {
+                        $nat_display = "{$orig_nat} ({$carsign})";
+                    } elseif ($orig_nat !== '') {
+                        $nat_display = $orig_nat;
+                    } elseif ($carsign !== '') {
+                        $nat_display = "({$carsign})";
+                    } else {
+                        $nat_display = '';
                     }
-                    $nat = htmlspecialchars($carsign !== '' ? "({$carsign})" : '', ENT_QUOTES);
+                    $nat = htmlspecialchars($nat_display, ENT_QUOTES);
                     $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
                     $instrs = htmlspecialchars($instrs, ENT_QUOTES);
                     echo "<div class=\"badge\">";
