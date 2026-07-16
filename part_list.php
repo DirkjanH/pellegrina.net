@@ -205,9 +205,11 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                                     foreach ($deelnemers as $dlnmr) {
                                         $ins = explode(', ', trim($dlnmr['instr']));
                                         $zangst = explode(', ', trim($dlnmr['zangstem']));
+                                        // Verwerk instrument- en zangstemcodes naar leesbare waarden (debug)
                                         d($ins, $zangst);
                                         unset($instr);
                                         unset($zangstem);
+                                        // Instrumentcodes: >=100 = instrument, <100 = zangstem
                                         foreach ($ins as $in) if ($in >= 100) $instr[] = $instrumententabel[$in];
                                         foreach ($zangst as $zangs) if ($zangs < 100) $zangstem[] = $instrumententabel[$zangs];
                                         if (isset($instr)) $instr = implode(', ', $instr);
@@ -246,6 +248,7 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                         <input name="gepostuleerd" type="hidden"
                             value="<?php echo $_GET['gepostuleerd']; ?>">
             </form>
+            <!-- Docenten / tutors voor deze cursus -->
             <h2>Tutors:</h2>
             <table style="margin-top: 0px">
                 <tr>
@@ -256,6 +259,7 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                     <th><i>Email:</i></th>
                     <th><i>Subject:</i></th>
                 </tr> <?php
+                        // Toon docenten/tutors in een tabel
                         foreach ($docenten as $docent) {
                         ?> <tr>
                     <td class="klein"><?php echo $docent['naam']; ?>&nbsp;</td>
