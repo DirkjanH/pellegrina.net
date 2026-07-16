@@ -103,6 +103,7 @@ function get_car_sign($country)
         'norge' => 'N',
         'zweden' => 'S',
         'sweden' => 'S',
+        'sverige' => 'S',
         'denemarken' => 'DK',
         'denmark' => 'DK',
         'dk' => 'DK',
