@@ -242,7 +242,7 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- De specifieke link voor Alegreya (Medium / 500) -->
     <link
-        href="https://fonts.googleapis.com/css2?family=AlegreyaSans:ital,wght@0,500;1,500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/LP_badges.css">
 </head>
