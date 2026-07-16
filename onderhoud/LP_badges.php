@@ -1,5 +1,5 @@
 <?php
-// LP_badges.php
+// LP_badges.php (verplaatst naar onderhoud)
 // Maakt een array met namen, nationaliteiten en Engelse instrumentnamen
 // van deelnemers en docenten voor een gegeven cursus. Ondersteunt extra
 // handmatige invoer in het format: naam#nationaliteit#instrument
@@ -106,38 +106,40 @@ if (!empty($_REQUEST['extra'])) {
     }
 }
 
-// Als de caller geen JSON wil (geen json=1), toon een eenvoudige HTML-formulier
 // Drukweergave: 2 kolommen x 14 rijen per A4-pagina
 if (isset($_GET['print']) && $_GET['print'] == '1') {
     $per_page = 28; // 2 * 14
     $pages = array_chunk($result, $per_page);
     header('Content-Type: text/html; charset=utf-8');
-?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>LP Badges - Print</title>
-    <link rel="stylesheet" href="/css/LP_badges.css">
-</head>
-<body> <?php
-        foreach ($pages as $page) {
-            echo '<div class="page">';
-            foreach ($page as $item) {
-                $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
-                $nat = htmlspecialchars($item['nationality'] ?? '', ENT_QUOTES);
-                $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
-                $instrs = htmlspecialchars($instrs, ENT_QUOTES);
-                echo "<div class=\"badge\">";
-                echo "<div class=\"name\">{$name}</div>";
-                if ($nat !== '') echo "<div class=\"nationality\">{$nat}</div>";
-                if ($instrs !== '') echo "<div class=\"instruments\">{$instrs}</div>";
-                echo "</div>";
-            }
-            echo '</div>';
+    ?>
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>LP Badges - Print</title>
+        <link rel="stylesheet" href="/onderhoud/LP_badges.css">
+    </head>
+    <body>
+    <?php
+    foreach ($pages as $page) {
+        echo '<div class="page">';
+        foreach ($page as $item) {
+            $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
+            $nat = htmlspecialchars($item['nationality'] ?? '', ENT_QUOTES);
+            $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
+            $instrs = htmlspecialchars($instrs, ENT_QUOTES);
+            echo "<div class=\"badge\">";
+            echo "<div class=\"name\">{$name}</div>";
+            if ($nat !== '') echo "<div class=\"nationality\">{$nat}</div>";
+            if ($instrs !== '') echo "<div class=\"instruments\">{$instrs}</div>";
+            echo "</div>";
         }
-        ?> </body>
-</html> <?php
+        echo '</div>';
+    }
+    ?>
+    </body>
+    </html>
+    <?php
     exit;
 }
 
@@ -149,7 +151,7 @@ if (empty($_GET['json']) || $_GET['json'] != '1') {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>LP Badges - invoer</title>
+    <title>LP Badges - invoer (onderhoud)</title>
 </head>
 <body>
     <h2>LP Badges - extra deelnemers toevoegen</h2>
@@ -167,10 +169,10 @@ if (empty($_GET['json']) || $_GET['json'] != '1') {
     <pre><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
 </body>
 </html><?php
-            exit;
-        }
+    exit;
+}
 
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+header('Content-Type: application/json; charset=utf-8');
+echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-            ?>
+?>
