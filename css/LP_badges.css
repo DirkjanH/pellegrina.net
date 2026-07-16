@@ -30,7 +30,7 @@ body {
 
 .badge {
     box-sizing: border-box;
-    border: 1px dotted #111111;
+    border: 0px dotted #111111;
     padding: 3mm;
     display: flex;
     flex-direction: column;
@@ -43,17 +43,18 @@ body {
 .badge .name {
     font-weight: 700;
     font-size: 12pt;
+    color: black;
 }
 
 .badge .nationality {
-    font-size: 9pt;
-    color: #333;
+    font-size: 11pt;
+    color: black;
     margin-top: 2mm;
 }
 
 .badge .instruments {
     font-size: 10pt;
-    color: #555;
+    color: black;
     margin-top: 3mm;
 }
 
