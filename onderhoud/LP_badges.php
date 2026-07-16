@@ -237,6 +237,13 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
 <head>
     <meta charset="utf-8">
     <title>LP Badges - Print</title>
+    <!-- Verbinding maken met Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- De specifieke link voor Alegreya (Medium / 500) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/LP_badges.css">
 </head>
 <body> <?php
