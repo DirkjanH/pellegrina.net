@@ -76,8 +76,8 @@ $cursusnr = 1 + $cursus_offset; ?>
             <h2>Chamber Choir Repertoire</h2>
             <ul>
                 <li><a href="../pdf/2026-1/chamberchoir_2026.pdf"
-                        target="_blank">Chamber Choir Repertoire 2026</a> (105
-                    pages)</li>
+                        target="_blank">Chamber Choir Repertoire 2026 <b>(new,
+                            improved version)</b></a> (105 pages)</li>
             </ul>
             <div class="onzichtbaar">
                 <p>Some MIDI files of the chamber choir repertoire</p>
