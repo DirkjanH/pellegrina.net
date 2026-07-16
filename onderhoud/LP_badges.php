@@ -111,7 +111,6 @@ function get_car_sign($country)
         'polen' => 'PL',
         'poland' => 'PL',
         'portugal' => 'P',
-        'portugal' => 'P',
         'hongarije' => 'H',
         'hungary' => 'H',
         'tsjechie' => 'CZ',
@@ -226,9 +225,9 @@ if (!empty($_REQUEST['extra'])) {
     }
 }
 
-// Drukweergave: 2 kolommen x 14 rijen per A4-pagina
+// Drukweergave: 2 kolommen x 7 rijen per A4-pagina
 if (isset($_GET['print']) && $_GET['print'] == '1') {
-    $per_page = 28; // 2 * 14
+    $per_page = 14; // 2 * 7
     $pages = array_chunk($result, $per_page);
     header('Content-Type: text/html; charset=utf-8');
 ?>
