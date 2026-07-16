@@ -20,7 +20,7 @@ body {
     box-sizing: border-box;
     width: 210mm;
     height: 297mm;
-    padding: 10mm;
+    padding: 19mm, 30mm;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: calc((297mm - 20mm) / 7);
