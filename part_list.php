@@ -64,7 +64,7 @@ $toehoorders_Cursus = select_query("SELECT count(*) FROM inschrijving WHERE Curs
 
 $cursusnaam = select_query("SELECT cursusnaam_en, YEAR(datum_begin) as jaar FROM cursus WHERE CursusId = {$CursusId}", 1);
 
-$Docenten = select_query("SELECT naam, CONCAT(adres, \", \", PC, \" \", plaats, \", \", land) as adres, telefoon, mobiel, email, cd.vak FROM cursus as c, cursusdocenten AS cd, docenten AS d WHERE CursusId_FK = {$CursusId} AND cd.DocId_FK = d.DocId AND c.CursusId = cd.CursusID_FK ORDER BY d.achternaam");
+$docenten = select_query("SELECT naam, CONCAT(adres, \", \", PC, \" \", plaats, \", \", land) as adres, telefoon, mobiel, email, cd.vak FROM cursus as c, cursusdocenten AS cd, docenten AS d WHERE CursusId_FK = {$CursusId} AND cd.DocId_FK = d.DocId AND c.CursusId = cd.CursusID_FK ORDER BY d.achternaam");
 
 d($deelnemers_query, $deelnemers, $docenten);
 
@@ -79,175 +79,195 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <html>
-
 <head>
-	<title>List of participants</title>
-	<style type="text/css">
-		<!--
-		body {
-			margin-left: 20px;
-			margin-top: 20px;
-			margin-right: 20px;
-		}
+    <title>List of participants</title>
+    <style type="text/css">
+    <!--
+    body {
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
 
-		table {
-			/* [disabled]table-layout: auto; */
-			width: 100%;
-			border: 3px double #000000;
-			border-collapse: collapse;
-		}
+    table {
+        /* [disabled]table-layout: auto; */
+        width: 100%;
+        border: 3px double #000000;
+        border-collapse: collapse;
+    }
 
-		td {
-			border: 1px solid #000000;
-			padding: 0.4em;
-		}
+    td {
+        border: 1px solid #000000;
+        padding: 0.4em;
+    }
 
-		td.iks {
-			text-align: center;
-		}
+    td.iks {
+        text-align: center;
+    }
 
-		tr.gepostuleerd {
-			background: #FCF;
-		}
+    tr.gepostuleerd {
+        background: #FCF;
+    }
 
-		tr.niet_aangenomen {
-			background: #9FC;
-		}
+    tr.niet_aangenomen {
+        background: #9FC;
+    }
 
-		tr.afgewezen {
-			background: pink;
-		}
+    tr.afgewezen {
+        background: pink;
+    }
 
-		div#inhoud {
-			margin-left: 0px;
-			border: none;
-			background-color: white;
-		}
+    div#inhoud {
+        margin-left: 0px;
+        border: none;
+        background-color: white;
+    }
 
-		div#header {
-			border: none;
-			background-color: white;
-		}
-		-->
-	</style>
-	<style type="text/css" media="print">
-		<!--
-		.no-print {
-			display: none;
-		}
+    div#header {
+        border: none;
+        background-color: white;
+    }
+    -->
+    </style>
+    <style type="text/css" media="print">
+    <!--
+    .no-print {
+        display: none;
+    }
 
-		div#inhoud,
-		div#top {
-			margin-left: 0px;
-			border: none;
-		}
+    div#inhoud,
+    div#top {
+        margin-left: 0px;
+        border: none;
+    }
 
-		div#top img {
-			border: hidden;
-		}
-		-->
-	</style>
-
+    div#top img {
+        border: hidden;
+    }
+    -->
+    </style>
 </head>
-
 <body>
-	<div id="inhoud">
-		<div id="header" class="no-print w3-center w3-padding-top"><img class="geenlijn" src="Images/Logos/Pellegrina.gif" width="402" height="75" alt="La Pellegrina" /></div>
-		<div class="w3-content">
-			<form action="<?php echo $editFormAction; ?>" method="get" name="form" id="form">
-				<input name="cursus" type="hidden" value="<?php echo $_GET['cursus']; ?>">
-				<input name="niet_aangenomen" type="hidden" value="<?php echo $_GET['niet_aangenomen']; ?>">
-				<input name="gecanceld" type="hidden" value="<?php echo $_GET['gecanceld']; ?>">
-				<h2>Course <em><?php echo $cursusnaam['cursusnaam_en'] . '</em>&nbsp;' . $jaar . '</h2><p>' . $aantal_deelnemers; ?> participants<?php if ($toehoorders_Cursus > 0) echo ", including {$toehoorders_Cursus} auditor(s)"; ?>
-						</p>
-						<p class="nadruk">You can sort this list on name, address, instruments, singing voice or transportation method by pressing the buttons in the heading</p>
-						<table>
-							<tr>
-								<th><input type="submit" name="sorteer" value="Name:" accesskey="N"></th>
-								<th><input type="submit" name="sorteer" value="Address:" accesskey="A"></th>
-								<th>Telephone:</th>
-								<th>Mobile:</th>
-								<th>E-mail:</th>
-								<th><input type="submit" name="sorteer" value="Instruments:" accesskey="I"></th>
-								<?php if ($CursusId != $eerstecursus + 2) echo '<th><input type="submit" name="sorteer" value="Singing voice:" accesskey="V"></th>' ?>
-								<th><input type="submit" name="sorteer" value="Transport:" accesskey="T"></th>
-							</tr>
-							<?php
-							foreach ($deelnemers as $dlnmr) {
-								$ins = explode(', ', trim($dlnmr['instr']));
-								$zangst = explode(', ', trim($dlnmr['zangstem']));
-								d($ins, $zangst);
-								unset($instr);
-								unset($zangstem);
-								foreach ($ins as $in) if ($in >= 100) $instr[] = $instrumententabel[$in];
-								foreach ($zangst as $zangs) if ($zangs < 100) $zangstem[] = $instrumententabel[$zangs];
-								if (isset($instr)) $instr = implode(', ', $instr);
-								if (isset($zangstem)) $zangstem = implode(', ', $zangstem);
+    <div id="inhoud">
+        <div id="header" class="no-print w3-center w3-padding-top"><img
+                class="geenlijn" src="Images/Logos/Pellegrina.gif" width="402"
+                height="75" alt="La Pellegrina" /></div>
+        <div class="w3-content">
+            <form action="<?php echo $editFormAction; ?>" method="get"
+                name="form" id="form">
+                <input name="cursus" type="hidden"
+                    value="<?php echo $_GET['cursus']; ?>">
+                <input name="niet_aangenomen" type="hidden"
+                    value="<?php echo $_GET['niet_aangenomen']; ?>">
+                <input name="gecanceld" type="hidden"
+                    value="<?php echo $_GET['gecanceld']; ?>">
+                <h2>Course
+                    <em><?php echo $cursusnaam['cursusnaam_en'] . '</em>&nbsp;' . $jaar . '</h2><p>' . $aantal_deelnemers; ?>
+                        participants<?php if ($toehoorders_Cursus > 0) echo ", including {$toehoorders_Cursus} auditor(s)"; ?>
+                        </p>
+                        <p class="nadruk">You can sort this list on name,
+                            address, instruments, singing voice or
+                            transportation method by pressing the buttons in the
+                            heading</p>
+                        <table>
+                            <tr>
+                                <th><input type="submit" name="sorteer"
+                                        value="Name:" accesskey="N"></th>
+                                <th><input type="submit" name="sorteer"
+                                        value="Address:" accesskey="A"></th>
+                                <th>Telephone:</th>
+                                <th>Mobile:</th>
+                                <th>E-mail:</th>
+                                <th><input type="submit" name="sorteer"
+                                        value="Instruments:" accesskey="I"></th>
+                                <?php if ($CursusId != $eerstecursus + 2) echo '<th><input type="submit" name="sorteer" value="Singing voice:" accesskey="V"></th>' ?>
+                                <th><input type="submit" name="sorteer"
+                                        value="Transport:" accesskey="T"></th>
+                            </tr> <?php
+									foreach ($deelnemers as $dlnmr) {
+										$ins = explode(', ', trim($dlnmr['instr']));
+										$zangst = explode(', ', trim($dlnmr['zangstem']));
+										d($ins, $zangst);
+										unset($instr);
+										unset($zangstem);
+										foreach ($ins as $in) if ($in >= 100) $instr[] = $instrumententabel[$in];
+										foreach ($zangst as $zangs) if ($zangs < 100) $zangstem[] = $instrumententabel[$zangs];
+										if (isset($instr)) $instr = implode(', ', $instr);
+										if (isset($zangstem)) $zangstem = implode(', ', $zangstem);
+									?> <tr <?php if ($dlnmr['aangenomen'] != 1) echo 'class="niet_aangenomen"';
+											if ($dlnmr['afgewezen'] == 1) echo 'class="afgewezen"';
+											if (
+												strpos($dlnmr['achternaam'], "XXX") !== false or strpos($dlnmr['achternaam'], "YYY")
+												!== false or strpos($dlnmr['achternaam'], "ZZZ") !== false
+											) echo 'class="gepostuleerd"';
+											?>>
+                                <td class="klein">
+                                    <?php echo $dlnmr['naam']; ?>&nbsp;</td>
+                                <td class="klein">
+                                    <?php echo $dlnmr['adres']; ?>&nbsp;</td>
+                                <td class="klein">
+                                    <?php echo $dlnmr['telefoon']; ?>&nbsp;</td>
+                                <td class="klein">
+                                    <?php echo $dlnmr['mobiel']; ?>&nbsp;</td>
+                                <td class="klein">
+                                    <?php echo $dlnmr['email']; ?>&nbsp;</td>
+                                <td class="klein">
+                                    <?php if (isset($instr)) echo $instr; ?>&nbsp;$docenten
+                                </td> <?php if ($CursusId != $eerstecursus + 2) echo '<td class="klein">';
+											if (isset($zangstem)) echo $zangstem; ?>
+                                <?php if ($CursusId != $eerstecursus) echo '&nbsp;</td>' ?>
+                                <td class="klein">
+                                    <?php echo $dlnmr['vervoer']; ?>&nbsp;</td>
+                            </tr> <?php
+									}
+										?>
+                        </table>
+                        <input name="niet_aangenomen" type="hidden"
+                            value="<?php echo $_GET['niet_aangenomen']; ?>">
+                        <input name="gepostuleerd" type="hidden"
+                            value="<?php echo $_GET['gepostuleerd']; ?>">
+            </form>
+            <h2>Tutors:</h2>
+            <table style="margin-top: 0px">
+                <tr>
+                    <th><i>Name:</i></th>
+                    <th><i>Address:</i></th>
+                    <th><i>Telephone:</i></th>
+                    <th><i>Mobile:</i></th>
+                    <th><i>Email:</i></th>
+                    <th><i>Subject:</i></th>
+                </tr> <?php
+						foreach ($docenten as $docent) {
+						?> <tr>
+                    <td class="klein"><?php echo $docent['naam']; ?>&nbsp;</td>
+                    <td class="klein"><?php echo $docent['adres']; ?>&nbsp;</td>
+                    <td class="klein"><?php echo $docent['telefoon']; ?>&nbsp;
+                    </td>
+                    <td class="klein"><?php echo $docent['mobiel']; ?>&nbsp;
+                    </td>
+                    <td class="klein"><?php echo $docent['email']; ?>&nbsp;</td>
+                    <td class="klein"><?php echo $docent['vak']; ?>&nbsp;</td>
+                </tr> <?php
+						}
 							?>
-								<tr <?php if ($dlnmr['aangenomen'] != 1) echo 'class="niet_aangenomen"';
-									if ($dlnmr['afgewezen'] == 1) echo 'class="afgewezen"';
-									if (
-										strpos($dlnmr['achternaam'], "XXX") !== false or strpos($dlnmr['achternaam'], "YYY")
-										!== false or strpos($dlnmr['achternaam'], "ZZZ") !== false
-									) echo 'class="gepostuleerd"';
-									?>>
-									<td class="klein"><?php echo $dlnmr['naam']; ?>&nbsp;</td>
-									<td class="klein"><?php echo $dlnmr['adres']; ?>&nbsp;</td>
-									<td class="klein"><?php echo $dlnmr['telefoon']; ?>&nbsp;</td>
-									<td class="klein"><?php echo $dlnmr['mobiel']; ?>&nbsp;</td>
-									<td class="klein"><?php echo $dlnmr['email']; ?>&nbsp;</td>
-									<td class="klein"><?php if (isset($instr)) echo $instr; ?>&nbsp;</td>
-									<?php if ($CursusId != $eerstecursus + 2) echo '<td class="klein">';
-									if (isset($zangstem)) echo $zangstem; ?>
-									<?php if ($CursusId != $eerstecursus) echo '&nbsp;</td>' ?>
-									<td class="klein"><?php echo $dlnmr['vervoer']; ?>&nbsp;</td>
-								</tr>
-							<?php
-							}
-							?>
-						</table>
-						<input name="niet_aangenomen" type="hidden" value="<?php echo $_GET['niet_aangenomen']; ?>">
-						<input name="gepostuleerd" type="hidden" value="<?php echo $_GET['gepostuleerd']; ?>">
-			</form>
-			<h2>Tutors:</h2>
-			<table style="margin-top: 0px">
-				<tr>
-					<th><i>Name:</i></th>
-					<th><i>Address:</i></th>
-					<th><i>Telephone:</i></th>
-					<th><i>Mobile:</i></th>
-					<th><i>Email:</i></th>
-					<th><i>Subject:</i></th>
-				</tr>
-				<?php
-				foreach ($Docenten as $docent) {
-				?>
-					<tr>
-						<td class="klein"><?php echo $docent['naam']; ?>&nbsp;</td>
-						<td class="klein"><?php echo $docent['adres']; ?>&nbsp;</td>
-						<td class="klein"><?php echo $docent['telefoon']; ?>&nbsp;</td>
-						<td class="klein"><?php echo $docent['mobiel']; ?>&nbsp;</td>
-						<td class="klein"><?php echo $docent['email']; ?>&nbsp;</td>
-						<td class="klein"><?php echo $docent['vak']; ?>&nbsp;</td>
-					</tr>
-				<?php
-				}
-				?>
-			</table>
-			<p>&nbsp;</p>
-		</div>
-	</div>
-	<a title="Real Time Web Analytics" href="https://getclicky.com/66381795"><img alt="Real Time Web Analytics" src="https://static.getclicky.com/media/links/badge.gif" border="0" /></a>
-	<script src="https://static.getclicky.com/js" type="text/javascript"></script>
-	<script type="text/javascript">
-		try {
-			clicky.init(66381795);
-		} catch (err) {}
-	</script>
-	<noscript>
-		<p><img alt="Clicky" width="1" height="1" src="https://in.getclicky.com/66381795ns.gif" /></p>
-	</noscript>
+            </table>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    <a title="Real Time Web Analytics"
+        href="https://getclicky.com/66381795"><img alt="Real Time Web Analytics"
+            src="https://static.getclicky.com/media/links/badge.gif"
+            border="0" /></a>
+    <script src="https://static.getclicky.com/js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    try {
+        clicky.init(66381795);
+    } catch (err) {}
+    </script>
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1"
+                src="https://in.getclicky.com/66381795ns.gif" /></p>
+    </noscript>
 </body>
-
-</html>
-<?php ob_end_flush(); ?>
+</html> <?php ob_end_flush(); ?>

@@ -5,7 +5,6 @@ $cursusnr = 1 + $cursus_offset; ?>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <title>Travel info <?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?>
     </title>
