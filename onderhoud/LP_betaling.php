@@ -376,32 +376,61 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                             <hr style="margin-top: 20px;">
                             <p><strong>Huidige inschrijving:</strong></p>
                             <div style="font-size: 12px;">
-                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                    <div style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;"><strong>Cursus:</strong></div>
-                                    <div style="flex: 1; min-width: 200px;"><?php echo $cursusnaam[$ins['CursusId_FK']]['NL']; ?></div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        <strong>Cursus:</strong></div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo $cursusnaam[$ins['CursusId_FK']]['NL']; ?>
+                                    </div>
                                 </div>
-                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                    <div style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">Cursusgeld:</div>
-                                    <div style="flex: 1; min-width: 200px;"><?php echo euro2($ins['cursusgeld']); ?></div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        Cursusgeld:</div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo euro2($ins['cursusgeld']); ?>
+                                    </div>
                                 </div>
-                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                    <div style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">Gedoneerd:</div>
-                                    <div style="flex: 1; min-width: 200px;"><?php echo euro2($ins['donatie']); ?></div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        Gedoneerd:</div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo euro2($ins['donatie']); ?>
+                                    </div>
                                 </div>
-                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding-top: 8px; border-top: 1px solid #ccc;">
-                                    <div style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;"><strong>Totaal:</strong></div>
-                                    <div style="flex: 1; min-width: 200px;"><strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?></strong></div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding-top: 8px; border-top: 1px solid #ccc;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        <strong>Totaal:</strong></div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?></strong>
+                                    </div>
                                 </div>
-                                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                    <div style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">Al betaald:</div>
-                                    <div style="flex: 1; min-width: 200px;"><?php echo euro2($ins['aanbet_bedrag']); ?></div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        Al betaald:</div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo euro2($ins['aanbet_bedrag']); ?>
+                                    </div>
                                 </div>
-                                <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 8px; border-top: 1px solid #ccc;">
-                                    <div style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;"><strong>Openstaand:</strong></div>
-                                    <div style="flex: 1; min-width: 200px;"><strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?></strong></div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 8px; border-top: 1px solid #ccc;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        <strong>Openstaand:</strong></div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?></strong>
+                                    </div>
                                 </div>
-                            </div>
-                            <?php } ?>
+                            </div> <?php } ?>
                         </td>
                     </tr>
                 </form>

@@ -330,6 +330,10 @@ $cursusnr = 2 + $cursus_offset; ?>
                     <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola I.pdf"
                             target="_blank">Biber - Requiem in f - Viola I</a>
                     </li>
+                    <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola I (violino).pdf"
+                            target="_blank">Biber - Requiem in f - Viola I (in
+                            vioolsleutel)</a>
+                    </li>
                     <li><a href="/pdf/2026-2/Biber/Biber - Requiem f - Viola II.pdf"
                             target="_blank">Biber - Requiem in f - Viola II</a>
                     </li>
