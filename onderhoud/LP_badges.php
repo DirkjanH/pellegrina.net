@@ -22,6 +22,126 @@ if (is_array($instrumenten)) {
     }
 }
 
+// Helper: zet een landnaam om naar het internationale kenteken (car sign)
+function get_car_sign($country)
+{
+    if (empty($country)) return '';
+    $s = mb_strtolower(trim($country), 'UTF-8');
+    // Verwijder enkele tekens en normaliseer accenten voor eenvoudige matching
+    $s = str_replace(["'", "’", "."], ['', '', ''], $s);
+    $s = strtr($s, [
+        'á' => 'a',
+        'à' => 'a',
+        'ä' => 'a',
+        'â' => 'a',
+        'ã' => 'a',
+        'å' => 'a',
+        'ç' => 'c',
+        'é' => 'e',
+        'è' => 'e',
+        'ë' => 'e',
+        'ê' => 'e',
+        'í' => 'i',
+        'ì' => 'i',
+        'ï' => 'i',
+        'î' => 'i',
+        'ñ' => 'n',
+        'ó' => 'o',
+        'ò' => 'o',
+        'ö' => 'o',
+        'ô' => 'o',
+        'õ' => 'o',
+        'ú' => 'u',
+        'ù' => 'u',
+        'ü' => 'u',
+        'û' => 'u',
+        'ý' => 'y',
+        'ÿ' => 'y',
+        'š' => 's',
+        'ž' => 'z'
+    ]);
+
+    $map = [
+        'nederland' => 'NL',
+        'netherlands' => 'NL',
+        'nl' => 'NL',
+        'belgie' => 'B',
+        'belgië' => 'B',
+        'belgium' => 'B',
+        'be' => 'B',
+        'duitsland' => 'D',
+        'germany' => 'D',
+        'deutschland' => 'D',
+        'd' => 'D',
+        'oosterijk' => 'A',
+        'osterreich' => 'A',
+        'austria' => 'A',
+        'a' => 'A',
+        'frankrijk' => 'F',
+        'france' => 'F',
+        'f' => 'F',
+        'spanje' => 'E',
+        'espana' => 'E',
+        'spain' => 'E',
+        'e' => 'E',
+        'italie' => 'I',
+        'italia' => 'I',
+        'italy' => 'I',
+        'i' => 'I',
+        'zwitserland' => 'CH',
+        'switzerland' => 'CH',
+        'suisse' => 'CH',
+        'verenigd koninkrijk' => 'GB',
+        'united kingdom' => 'GB',
+        'uk' => 'GB',
+        'gb' => 'GB',
+        'verenigde staten' => 'USA',
+        'united states' => 'USA',
+        'usa' => 'USA',
+        'noorwegen' => 'N',
+        'norway' => 'N',
+        'norge' => 'N',
+        'zweden' => 'S',
+        'sweden' => 'S',
+        'denemarken' => 'DK',
+        'denmark' => 'DK',
+        'dk' => 'DK',
+        'finland' => 'FIN',
+        'suomi' => 'FIN',
+        'polen' => 'PL',
+        'poland' => 'PL',
+        'portugal' => 'P',
+        'portugal' => 'P',
+        'hongarije' => 'H',
+        'hungary' => 'H',
+        'tsjechie' => 'CZ',
+        'czech republic' => 'CZ',
+        'czechia' => 'CZ',
+        'slowakije' => 'SK',
+        'slovakia' => 'SK',
+        'griekenland' => 'GR',
+        'greece' => 'GR',
+        'hellas' => 'GR',
+        'ierland' => 'IRL',
+        'ireland' => 'IRL',
+        'rusland' => 'RUS',
+        'russia' => 'RUS',
+        'australie' => 'AUS',
+        'australia' => 'AUS',
+        'canada' => 'CDN',
+        'can' => 'CDN'
+    ];
+
+    if (isset($map[$s])) return $map[$s];
+
+    // Als de waarde zelf al een korte code is (2-3 letters), gebruik die
+    $up = strtoupper($country);
+    if (preg_match('/^[A-Z]{2,3}$/', $up)) return $up;
+
+    // Fallback: geef de oorspronkelijke landtekst terug (niet ideal)
+    return $country;
+}
+
 $result = [];
 
 // Haal deelnemers op: naam en land + instrumentencodes
@@ -34,7 +154,7 @@ $deelnemers = select_query($deelnemers_q);
 if (is_array($deelnemers)) {
     foreach ($deelnemers as $r) {
         // Volledige naam
-        $naam = trim(($r['naam'] ?? '') . ' ' . ($r['achternaam'] ?? ''));
+        $naam = trim($r['naam'] ?? '');
         // Nationaliteit / land
         $nationaliteit = $r['land'] ?? '';
         // Combineer instrument- en zangstemcodes en map naar Engelse namen
@@ -68,7 +188,7 @@ WHERE cd.CursusID_FK = {$CursusId}";
 $docenten = select_query($docenten_q);
 if (is_array($docenten)) {
     foreach ($docenten as $r) {
-        $naam = trim(($r['naam'] ?? '') . ' ' . ($r['achternaam'] ?? ''));
+        $naam = trim($r['naam'] ?? '');
         $nationaliteit = $r['land'] ?? '';
         // Voor docenten gebruiken we 'vak' als subject; het kan al een naam zijn
         $vak = trim($r['vak'] ?? '');
@@ -112,69 +232,65 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
     $pages = array_chunk($result, $per_page);
     header('Content-Type: text/html; charset=utf-8');
 ?>
-    <!doctype html>
-    <html>
-
-    <head>
-        <meta charset="utf-8">
-        <title>LP Badges - Print</title>
-        <link rel="stylesheet" href="/css/LP_badges.css">
-    </head>
-
-    <body>
-        <?php
-        foreach ($pages as $page) {
-            echo '<div class="page">';
-            foreach ($page as $item) {
-                $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
-                $nat = htmlspecialchars($item['nationality'] ?? '', ENT_QUOTES);
-                $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
-                $instrs = htmlspecialchars($instrs, ENT_QUOTES);
-                echo "<div class=\"badge\">";
-                echo "<div class=\"name\">{$name}</div>";
-                if ($nat !== '') echo "<div class=\"nationality\">{$nat}</div>";
-                if ($instrs !== '') echo "<div class=\"instruments\">{$instrs}</div>";
-                echo "</div>";
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LP Badges - Print</title>
+    <link rel="stylesheet" href="/css/LP_badges.css">
+</head>
+<body> <?php
+            foreach ($pages as $page) {
+                echo '<div class="page">';
+                foreach ($page as $item) {
+                    $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
+                    $nat = $item['nationality'] ?? '';
+                    $carsign = '';
+                    if ($nat !== '') {
+                        $carsign = get_car_sign($nat);
+                    }
+                    $nat = htmlspecialchars($carsign !== '' ? "({$carsign})" : '', ENT_QUOTES);
+                    $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
+                    $instrs = htmlspecialchars($instrs, ENT_QUOTES);
+                    echo "<div class=\"badge\">";
+                    echo "<div class=\"name\">{$name}</div>";
+                    if ($nat !== '') echo "<div class=\"nationality\">{$nat}</div>";
+                    if ($instrs !== '') echo "<div class=\"instruments\">{$instrs}</div>";
+                    echo "</div>";
+                }
+                echo '</div>';
             }
-            echo '</div>';
+            ?> </body>
+</html> <?php
+            exit;
         }
-        ?>
-    </body>
 
-    </html>
-<?php
-    exit;
-}
-
-// Als de caller geen JSON wil (geen json=1), toon een eenvoudige HTML-formulier
-if (empty($_GET['json']) || $_GET['json'] != '1') {
-    // Toon formulier om extra regels toe te voegen en knop om JSON te tonen
-?>
-    <!doctype html>
-    <html>
-
-    <head>
-        <meta charset="utf-8">
-        <title>LP Badges - invoer (onderhoud)</title>
-    </head>
-
-    <body>
-        <h2>LP Badges - extra deelnemers toevoegen</h2>
-        <form method="get">
-            <input type="hidden" name="cursus"
-                value="<?php echo htmlspecialchars($_GET['cursus'] ?? '', ENT_QUOTES); ?>">
-            <label for="extra">Voer regels in (één per
-                regel):<br>naam#nationaliteit#instrument</label><br>
-            <textarea name="extra" id="extra" rows="6"
-                cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea><br>
-            <button type="submit" name="json" value="1">Toon JSON met extra
-                regels</button>
-        </form>
-        <h3>Huidige resultaten (preview)</h3>
-        <pre><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
-    </body>
-
-    </html><?php
+        // Als de caller geen JSON wil (geen json=1), toon een eenvoudige HTML-formulier
+        if (empty($_GET['json']) || $_GET['json'] != '1') {
+            // Toon formulier om extra regels toe te voegen en knop om JSON te tonen
+            ?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LP Badges - invoer (onderhoud)</title>
+</head>
+<body>
+    <h2>LP Badges - extra deelnemers toevoegen</h2>
+    <form method="get">
+        <input type="hidden" name="cursus"
+            value="<?php echo htmlspecialchars($_GET['cursus'] ?? '', ENT_QUOTES); ?>">
+        <label for="extra">Voer regels in (één per
+            regel):<br>naam#nationaliteit#instrument</label><br>
+        <textarea name="extra" id="extra" rows="6"
+            cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea><br>
+        <button type="submit" name="json" value="1">Toon JSON met extra
+            regels</button>
+    </form>
+    <h3>Huidige resultaten (preview)</h3>
+    <pre><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
+</body>
+</html><?php
             exit;
         }
 
