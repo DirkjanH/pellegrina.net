@@ -1,5 +1,8 @@
 <?php
-// stel php in dat deze fouten weergeeft
+// Script: toont de deelnemerslijst voor een cursus
+// Commentaar in het Nederlands toegevoegd
+
+// (zet ini_set('display_errors', 1) alleen aan tijdens development)
 //ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -9,65 +12,80 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
 ob_start();
 
+// Schakel Kint debug helper uit tenzij nodig
 Kint::$enabled_mode = false;
 
+// Debug: toon inkomende request-parameters (verwijder voor productie)
 d($_REQUEST);
-
 $CursusId = $eerstecursus;
+// Bepaal welke cursus getoond wordt (standaard eerste cursus, kan via GET overschreven worden)
+
+
 if (isset($_GET['cursus']) and $_GET['cursus'] > 0)
-	$CursusId = $_GET['cursus'] + $cursus_offset; // cursusnummer
+    $CursusId = $_GET['cursus'] + $cursus_offset; // cursusnummer
+// Filter: toon standaard alleen deelnemers die zijn aangenomen
 if (empty($_GET['niet_aangenomen']) or $_GET['niet_aangenomen'] != 1)
-	$ook_niet_aangenomen = 'AND i.aangenomen = 1'; // niet-aangenomen deelnemers uitsluiten
+    $ook_niet_aangenomen = 'AND i.aangenomen = 1'; // niet-aangenomen deelnemers uitsluiten
 else
-	$ook_niet_aangenomen = '';
+    $ook_niet_aangenomen = '';
+// Filter: verwijder standaard 'gepostuleerde' (placeholder) deelnemers
 if (empty($_GET['gepostuleerd']) or $_GET['gepostuleerd'] != 1)
-	$ook_gepostuleerd = 'AND NOT (d.achternaam LIKE "%XXX%" OR d.achternaam LIKE "%YYY%" OR d.achternaam LIKE "%ZZZ%")'; // geen gepostuleerde deelnemers
+    $ook_gepostuleerd = 'AND NOT (d.achternaam LIKE "%XXX%" OR d.achternaam LIKE "%YYY%" OR d.achternaam LIKE "%ZZZ%")'; // geen gepostuleerde deelnemers
 else
-	$ook_gepostuleerd = '';
+    $ook_gepostuleerd = '';
+// Filter: toon standaard geen afgewezen of gecancelde inschrijvingen
 if (empty($_GET['gecanceld']) or $_GET['gecanceld'] != 1)
-	$ook_gecanceld = 'AND NOT (afgewezen <=> 1)'; // geen afgewezen of gecancelde deelnemers
+    $ook_gecanceld = 'AND NOT (afgewezen <=> 1)'; // geen afgewezen of gecancelde deelnemers
 else
-	$ook_gecanceld = '';
+    $ook_gecanceld = '';
 
 $sorteer = 'd.achternaam';
+// Standaard sortering: achternaam
 
+// Indien via formulier gesorteerd, zet de juiste ORDER BY expressie
 if (isset($_GET['sorteer']) and $_GET['sorteer'] != "")
-	switch ($_GET['sorteer']) {
-		case "Name:":
-			$sorteer = 'd.achternaam';
-			break;
-		case "Address:":
-			$sorteer = 'a.postcode, d.achternaam';
-			break;
-		case "Instruments:":
-			$sorteer = 'i.instrumenten, d.achternaam';
-			break;
-		case "Singing voice:":
-			$sorteer = 'i.zangstem, i.instrumenten, d.achternaam';
-			break;
-		case "Transport:":
-			$sorteer = 'i.vervoer, d.achternaam';
-			break;
-	}
+    switch ($_GET['sorteer']) {
+        case "Name:":
+            $sorteer = 'd.achternaam';
+            break;
+        case "Address:":
+            $sorteer = 'a.postcode, d.achternaam';
+            break;
+        case "Instruments:":
+            $sorteer = 'i.instrumenten, d.achternaam';
+            break;
+        case "Singing voice:":
+            $sorteer = 'i.zangstem, i.instrumenten, d.achternaam';
+            break;
+        case "Transport:":
+            $sorteer = 'i.vervoer, d.achternaam';
+            break;
+    }
 
+// Debug: toon actieve sortering en filters (kan verwijderd worden)
 d($sorteer, $ook_gepostuleerd, $ook_niet_aangenomen, $ook_gecanceld);
 
-// begin Recordset
 $deelnemers_query = "SELECT d.naam, d.achternaam, CONCAT(a.plaats, \", \", a.land) as \"adres\", d.telefoon, d.mobiel, d.email, i.instr, i.instrumenten, i.toehoorder, i.zangstem, i.vervoer, i.aangenomen, i.afgewezen FROM dlnmr d, adres a, inschrijving i WHERE i.CursusId_FK = {$CursusId} AND d.adresid_FK = a.adresid AND d.dlnmrid = i.dlnmrid_fk  {$ook_niet_aangenomen} {$ook_gepostuleerd} {$ook_gecanceld} ORDER BY {$sorteer} ASC";
+// SQL: haal deelnemers met bijbehorend adres en inschrijving
 $deelnemers = select_query($deelnemers_query);
-$aantal_deelnemers = 0;
-if (is_array($deelnemers)) $aantal_deelnemers = count($deelnemers);
+$aantal_deelnemers = is_array($deelnemers) ? count($deelnemers) : 0;
 
 d($deelnemers_query, $aantal_deelnemers);
 
+// Tel het aantal toehoorders (auditors) voor deze cursus
 $toehoorders_Cursus = select_query("SELECT count(*) FROM inschrijving WHERE CursusId_FK = {$CursusId} AND toehoorder = 1 and NOT (afgewezen <=> 1)", 0);
 
+
+// Haal cursusnaam en jaar op
 $cursusnaam = select_query("SELECT cursusnaam_en, YEAR(datum_begin) as jaar FROM cursus WHERE CursusId = {$CursusId}", 1);
 
+// Haal docenten/tutors en contactgegevens op
 $docenten = select_query("SELECT naam, CONCAT(adres, \", \", PC, \" \", plaats, \", \", land) as adres, telefoon, mobiel, email, cd.vak FROM cursus as c, cursusdocenten AS cd, docenten AS d WHERE CursusId_FK = {$CursusId} AND cd.DocId_FK = d.DocId AND c.CursusId = cd.CursusID_FK ORDER BY d.achternaam");
 
 d($deelnemers_query, $deelnemers, $docenten);
 
+
+// Bouw lookup-tabel voor instrumenten (id => naam)
 $instrumenten = select_query("SELECT * FROM instr ORDER BY id ASC");
 foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['en'];
 
@@ -184,23 +202,23 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                                 <th><input type="submit" name="sorteer"
                                         value="Transport:" accesskey="T"></th>
                             </tr> <?php
-									foreach ($deelnemers as $dlnmr) {
-										$ins = explode(', ', trim($dlnmr['instr']));
-										$zangst = explode(', ', trim($dlnmr['zangstem']));
-										d($ins, $zangst);
-										unset($instr);
-										unset($zangstem);
-										foreach ($ins as $in) if ($in >= 100) $instr[] = $instrumententabel[$in];
-										foreach ($zangst as $zangs) if ($zangs < 100) $zangstem[] = $instrumententabel[$zangs];
-										if (isset($instr)) $instr = implode(', ', $instr);
-										if (isset($zangstem)) $zangstem = implode(', ', $zangstem);
-									?> <tr <?php if ($dlnmr['aangenomen'] != 1) echo 'class="niet_aangenomen"';
-											if ($dlnmr['afgewezen'] == 1) echo 'class="afgewezen"';
-											if (
-												strpos($dlnmr['achternaam'], "XXX") !== false or strpos($dlnmr['achternaam'], "YYY")
-												!== false or strpos($dlnmr['achternaam'], "ZZZ") !== false
-											) echo 'class="gepostuleerd"';
-											?>>
+                                    foreach ($deelnemers as $dlnmr) {
+                                        $ins = explode(', ', trim($dlnmr['instr']));
+                                        $zangst = explode(', ', trim($dlnmr['zangstem']));
+                                        d($ins, $zangst);
+                                        unset($instr);
+                                        unset($zangstem);
+                                        foreach ($ins as $in) if ($in >= 100) $instr[] = $instrumententabel[$in];
+                                        foreach ($zangst as $zangs) if ($zangs < 100) $zangstem[] = $instrumententabel[$zangs];
+                                        if (isset($instr)) $instr = implode(', ', $instr);
+                                        if (isset($zangstem)) $zangstem = implode(', ', $zangstem);
+                                    ?> <tr <?php if ($dlnmr['aangenomen'] != 1) echo 'class="niet_aangenomen"';
+                                            if ($dlnmr['afgewezen'] == 1) echo 'class="afgewezen"';
+                                            if (
+                                                strpos($dlnmr['achternaam'], "XXX") !== false or strpos($dlnmr['achternaam'], "YYY")
+                                                !== false or strpos($dlnmr['achternaam'], "ZZZ") !== false
+                                            ) echo 'class="gepostuleerd"';
+                                            ?>>
                                 <td class="klein">
                                     <?php echo $dlnmr['naam']; ?>&nbsp;</td>
                                 <td class="klein">
@@ -213,14 +231,15 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                                     <?php echo $dlnmr['email']; ?>&nbsp;</td>
                                 <td class="klein">
                                     <?php if (isset($instr)) echo $instr; ?>&nbsp;$docenten
-                                </td> <?php if ($CursusId != $eerstecursus + 2) echo '<td class="klein">';
-											if (isset($zangstem)) echo $zangstem; ?>
+                                </td>
+                                <?php if ($CursusId != $eerstecursus + 2) echo '<td class="klein">';
+                                        if (isset($zangstem)) echo $zangstem; ?>
                                 <?php if ($CursusId != $eerstecursus) echo '&nbsp;</td>' ?>
                                 <td class="klein">
                                     <?php echo $dlnmr['vervoer']; ?>&nbsp;</td>
                             </tr> <?php
-									}
-										?>
+                                    }
+                                        ?>
                         </table>
                         <input name="niet_aangenomen" type="hidden"
                             value="<?php echo $_GET['niet_aangenomen']; ?>">
@@ -237,8 +256,8 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                     <th><i>Email:</i></th>
                     <th><i>Subject:</i></th>
                 </tr> <?php
-						foreach ($docenten as $docent) {
-						?> <tr>
+                        foreach ($docenten as $docent) {
+                        ?> <tr>
                     <td class="klein"><?php echo $docent['naam']; ?>&nbsp;</td>
                     <td class="klein"><?php echo $docent['adres']; ?>&nbsp;</td>
                     <td class="klein"><?php echo $docent['telefoon']; ?>&nbsp;
@@ -248,8 +267,8 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                     <td class="klein"><?php echo $docent['email']; ?>&nbsp;</td>
                     <td class="klein"><?php echo $docent['vak']; ?>&nbsp;</td>
                 </tr> <?php
-						}
-							?>
+                        }
+                            ?>
             </table>
             <p>&nbsp;</p>
         </div>
