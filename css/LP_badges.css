@@ -20,7 +20,7 @@ body {
     box-sizing: border-box;
     width: 210mm;
     height: 297mm;
-    padding: 19mm, 30mm;
+    padding: 19mm 30mm;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: calc((297mm - 20mm) / 7);
@@ -52,7 +52,7 @@ body {
 }
 
 .badge .instruments {
-    font-size: 8pt;
+    font-size: 10pt;
     color: #555;
     margin-top: 3mm;
 }
