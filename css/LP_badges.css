@@ -30,7 +30,7 @@ body {
 
 .badge {
     box-sizing: border-box;
-    border: 1px dotted #e8e8e8;
+    border: 1px dotted #111111;
     padding: 3mm;
     display: flex;
     flex-direction: column;
