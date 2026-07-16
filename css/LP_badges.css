@@ -1,5 +1,5 @@
 /* LP_badges.css (moved back from onderhoud)
-   Layout voor badges: 2 kolommen x 14 rijen per A4-pagina (28 per pagina)
+   Layout voor badges: 2 kolommen x 7 rijen per A4-pagina (14 per pagina)
 */
 @page {
     size: A4;
@@ -23,7 +23,7 @@ body {
     padding: 10mm;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: calc((297mm - 20mm) / 14);
+    grid-auto-rows: calc((297mm - 20mm) / 7);
     gap: 4mm;
     page-break-after: always;
 }
