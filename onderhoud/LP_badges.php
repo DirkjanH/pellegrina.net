@@ -17,6 +17,12 @@ if ($cursusIndex > 0) {
     $CursusId = $cursusIndex + $cursus_offset;
 }
 
+$cursusName = '';
+$cursusRow = select_query("SELECT cursusnaam_en FROM cursus WHERE CursusId = {$CursusId}", 1);
+if (is_array($cursusRow) && !empty($cursusRow['cursusnaam_en'])) {
+    $cursusName = $cursusRow['cursusnaam_en'];
+}
+
 // Opbouw instrument lookup tabel (id => Engelse naam)
 $instrumententabel = [];
 $instrumenten = select_query("SELECT id, en FROM instr ORDER BY id ASC");
@@ -292,6 +298,8 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                     onclick="updatePreview()">Update preview</button>
                 <button class="w3-button w3-green w3-margin-top" type="button"
                     onclick="printPreview()">Print</button>
+                <button class="w3-button w3-black w3-margin-top" type="button"
+                    onclick="saveHtml()">Opslaan als HTML</button>
             </div>
             <div class="w3-half">
                 <label class="w3-text"><b>Preview</b></label>
@@ -309,6 +317,22 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     function printPreview() {
         updatePreview();
         window.print();
+    }
+
+    function saveHtml() {
+        const html = document.getElementById('htmlEditor').value;
+        const blob = new Blob([html], {
+            type: 'text/html'
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download =
+            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", $cursusName ?: "LP_badges"); ?>.html';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
     }
     window.onload = updatePreview;
     </script>
