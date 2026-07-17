@@ -33,11 +33,27 @@ body {
     border: 0px dotted #111111;
     padding: 3mm;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     overflow: hidden;
+}
+
+.badge-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.badge-logo {
+    width: 150px;
+    height: auto;
+    flex: 0 0 auto;
+}
+
+.badge-text {
+    margin-left: 20px;
+    text-align: left;
+    flex: 1;
 }
 
 .badge .name {

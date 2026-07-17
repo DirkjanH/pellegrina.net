@@ -253,8 +253,13 @@ function build_print_pages_html($result)
             $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
             $instrs = htmlspecialchars($instrs, ENT_QUOTES);
             $html .= "<div class=\"badge\">";
+            $html .= "<div class=\"badge-row\">";
+            $html .= "<img class=\"badge-logo\" src=\"https://pellegrina.net/Images/Logos/P-final.jpg\" alt=\"P logo\">";
+            $html .= "<div class=\"badge-text\">";
             $html .= "<div class=\"name\">{$name}</div>";
             if ($instrs !== '') $html .= "<div class=\"instruments\">{$instrs}</div>";
+            $html .= "</div>";
+            $html .= "</div>";
             $html .= "</div>";
         }
         $html .= '</div>';
