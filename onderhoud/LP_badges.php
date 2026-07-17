@@ -343,14 +343,15 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
 
     function saveHtml() {
         const html = document.getElementById('htmlEditor').value;
-        const blob = new Blob([html], {
+        const fullDoc = `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`;
+        const blob = new Blob([fullDoc], {
             type: 'text/html'
         });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
         link.download =
-            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", ($cursusName ?: "LP_badges") . "_Badges"); ?>.html';
+            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", "LP_badges_" . ($cursusName ?: "Badges")); ?>.html';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
