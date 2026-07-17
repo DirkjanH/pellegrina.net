@@ -273,7 +273,7 @@ $cursusnr = 2 + $cursus_offset; ?>
                 </div>
                 <p>Division of the strings: violin 1: Femke, Birgit, Corinne,
                     Maille, Barbara; violin 2: Louis, Eliane, Karin, Lea; viola:
-                    Renske (I), Peter (II), Baukje(III, only the bottom notes
+                    Baukje (I), Renske (II), Peter (III, only the bottom notes
                     when two-part); cello: Karel, Sanne, Franca, Patrick; double
                     bass: Hendrik.</p>
             </div>
