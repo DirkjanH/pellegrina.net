@@ -231,12 +231,97 @@ if (!empty($_REQUEST['extra'])) {
     }
 }
 
-// Drukweergave: 2 kolommen x 7 rijen per A4-pagina
-if (isset($_GET['print']) && $_GET['print'] == '1') {
+function build_print_pages_html($result)
+{
     $per_page = 14; // 2 * 7
     $pages = array_chunk($result, $per_page);
+    $html = '';
+    foreach ($pages as $page) {
+        $html .= '<div class="page">';
+        foreach ($page as $item) {
+            $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
+            $country_code = $item['country_code'] ?? '';
+            if ($country_code !== '') {
+                $name .= ' ' . htmlspecialchars("({$country_code})", ENT_QUOTES);
+            }
+            $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
+            $instrs = htmlspecialchars($instrs, ENT_QUOTES);
+            $html .= "<div class=\"badge\">";
+            $html .= "<div class=\"name\">{$name}</div>";
+            if ($instrs !== '') $html .= "<div class=\"instruments\">{$instrs}</div>";
+            $html .= "</div>";
+        }
+        $html .= '</div>';
+    }
+    return $html;
+}
+
+// Bewerkbare printweergave
+if (isset($_GET['editor']) && $_GET['editor'] == '1') {
+    $printHtml = build_print_pages_html($result);
     header('Content-Type: text/html; charset=utf-8');
-?>
+    ?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LP Badges - HTML-editor</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/LP_badges.css">
+    <style>
+    #editorPreview {
+        min-height: 800px;
+    }
+    </style>
+</head>
+<body class="w3-light-grey">
+    <div class="w3-container w3-content w3-card-4 w3-padding-24"
+        style="max-width:1200px; margin-top:24px;">
+        <h2 class="w3-center">LP Badges - HTML-editor</h2>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <label class="w3-text"><b>HTML-editor</b></label>
+                <textarea id="htmlEditor" class="w3-input w3-border"
+                    rows="26"><?php echo htmlspecialchars($printHtml, ENT_QUOTES); ?></textarea>
+                <button class="w3-button w3-blue w3-margin-top" type="button"
+                    onclick="updatePreview()">Update preview</button>
+                <button class="w3-button w3-green w3-margin-top" type="button"
+                    onclick="printPreview()">Print</button>
+            </div>
+            <div class="w3-half">
+                <label class="w3-text"><b>Preview</b></label>
+                <div id="editorPreview" class="w3-white w3-padding w3-border">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function updatePreview() {
+        document.getElementById('editorPreview').innerHTML = document
+            .getElementById('htmlEditor').value;
+    }
+
+    function printPreview() {
+        updatePreview();
+        window.print();
+    }
+    window.onload = updatePreview;
+    </script>
+</body>
+</html> <?php
+    exit;
+}
+
+// Drukweergave: 2 kolommen x 7 rijen per A4-pagina
+if (isset($_GET['print']) && $_GET['print'] == '1') {
+    $printHtml = build_print_pages_html($result);
+    header('Content-Type: text/html; charset=utf-8');
+    ?>
 <!doctype html>
 <html>
 <head>
@@ -251,28 +336,10 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
         rel="stylesheet">
     <link rel="stylesheet" href="/css/LP_badges.css">
 </head>
-<body> <?php
-            foreach ($pages as $page) {
-                echo '<div class="page">';
-                foreach ($page as $item) {
-                    $name = htmlspecialchars($item['name'] ?? '', ENT_QUOTES);
-                    $country_code = $item['country_code'] ?? '';
-                    if ($country_code !== '') {
-                        $name .= ' ' . htmlspecialchars("({$country_code})", ENT_QUOTES);
-                    }
-                    $instrs = isset($item['instruments_en']) && is_array($item['instruments_en']) ? implode(', ', $item['instruments_en']) : '';
-                    $instrs = htmlspecialchars($instrs, ENT_QUOTES);
-                    echo "<div class=\"badge\">";
-                    echo "<div class=\"name\">{$name}</div>";
-                    if ($instrs !== '') echo "<div class=\"instruments\">{$instrs}</div>";
-                    echo "</div>";
-                }
-                echo '</div>';
-            }
-            ?> </body>
+<body> <?php echo $printHtml; ?> </body>
 </html> <?php
-            exit;
-        }
+    exit;
+}
 
         // Als de caller geen JSON wil (geen json=1), toon een eenvoudige HTML-formulier
         if (empty($_GET['json']) || $_GET['json'] != '1') {
@@ -309,8 +376,8 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
             <br><br>
             <button class="w3-button w3-blue" type="submit" name="json"
                 value="1">Toon JSON met extra regels</button>
-            <button class="w3-button w3-green" type="submit" name="print"
-                value="1">Open printbestand</button>
+            <button class="w3-button w3-green" type="submit" name="editor"
+                value="1">Open bewerkbaar printbestand</button>
         </form>
         <hr>
         <h3 class="w3-center">Huidige resultaten (preview)</h3>
