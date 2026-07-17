@@ -35,145 +35,149 @@ $cursus['totaal']['korting'] = 0;
 // Loop door alle cursussen van dit jaar
 while ($i <= ($laatstecursus)) {
 
-	// Bepaal het ID van de vorig jaar cursus voor vergelijking
-	switch ($i) {
-		case $cursus_offset + 1:
-			$oud = 60; // romantiek cursus vorig jaar
-			break;
-		case $cursus_offset + 2:
-			$oud = 61; // barok cursus vorig jaar
-			break;
-	}
+    // Bepaal het ID van de vorig jaar cursus voor vergelijking
+    switch ($i) {
+        case $cursus_offset + 1:
+            $oud = 60; // romantiek cursus vorig jaar
+            break;
+        case $cursus_offset + 2:
+            $oud = 61; // barok cursus vorig jaar
+            break;
+    }
 
-	// Aantal deelnemers vorig jaar (voor vergelijking groeipercentage)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND CursusId_FK = {$oud} AND NOT (afgewezen <=> 1) AND datum_inschr <= DATE_SUB(NOW(), INTERVAL 1 Year)";
-	d($tel_query);
-	d($deelnemers_vorigjaar[$i] = select_query($tel_query, 0));
-	$deelnemers_vorigjaar['totaal'] += $deelnemers_vorigjaar[$i];
+    // Aantal deelnemers vorig jaar (voor vergelijking groeipercentage)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND CursusId_FK = {$oud} AND NOT (afgewezen <=> 1) AND datum_inschr <= DATE_SUB(NOW(), INTERVAL 1 Year)";
+    d($tel_query);
+    d($deelnemers_vorigjaar[$i] = select_query($tel_query, 0));
+    $deelnemers_vorigjaar['totaal'] += $deelnemers_vorigjaar[$i];
 
-	// Totaal inschrijvingen (aangenomen en nog in behandeling)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and NOT (afgewezen <=> 1)";
-	$deelnemers[$i] = select_query($tel_query, 0);
-	$deelnemers['totaal'] += $deelnemers[$i];
+    // Totaal inschrijvingen (aangenomen en nog in behandeling)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and NOT (afgewezen <=> 1)";
+    $deelnemers[$i] = select_query($tel_query, 0);
+    $deelnemers['totaal'] += $deelnemers[$i];
 
-	// Aangenomen deelnemers (actief ingeschreven)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and aangenomen = 1 and NOT (afgewezen <=> 1) ";
-	$aangenomen[$i] = select_query($tel_query, 0);
-	$aangenomen['totaal'] += $aangenomen[$i];
+    // Aangenomen deelnemers (actief ingeschreven)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and aangenomen = 1 and NOT (afgewezen <=> 1) ";
+    $aangenomen[$i] = select_query($tel_query, 0);
+    $aangenomen['totaal'] += $aangenomen[$i];
 
-	// Toehoordes (niet actief deelnemend)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and toehoorder = 1 and NOT (afgewezen <=> 1) ";
-	$toehoorder[$i] = select_query($tel_query, 0);
-	$toehoorder['totaal'] += $toehoorder[$i];
+    // Toehoordes (niet actief deelnemend)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and toehoorder = 1 and NOT (afgewezen <=> 1) ";
+    $toehoorder[$i] = select_query($tel_query, 0);
+    $toehoorder['totaal'] += $toehoorder[$i];
 
-	// Studenten (niet Oost-Europa)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and oost != 1 and student = 1 and NOT (afgewezen <=> 1) ";
-	$student[$i] = select_query($tel_query, 0);
-	$student['totaal'] += $student[$i];
+    // Studenten (niet Oost-Europa)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and oost != 1 and student = 1 and NOT (afgewezen <=> 1) ";
+    $student[$i] = select_query($tel_query, 0);
+    $student['totaal'] += $student[$i];
 
-	// Oost-Europese deelnemers (geen studenten)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and oost = 1 and student != 1 and NOT (afgewezen <=> 1) ";
-	$oost[$i] = select_query($tel_query, 0);
-	$oost['totaal'] += $oost[$i];
+    // Oost-Europese deelnemers (geen studenten)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and oost = 1 and student != 1 and NOT (afgewezen <=> 1) ";
+    $oost[$i] = select_query($tel_query, 0);
+    $oost['totaal'] += $oost[$i];
 
-	// Studenten van Oost-Europa (combinatie categorie)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and student = 1 and oost = 1 and NOT (afgewezen <=> 1) ";
-	$ooststudent[$i] = select_query($tel_query, 0);
-	$ooststudent['totaal'] += $ooststudent[$i];
+    // Studenten van Oost-Europa (combinatie categorie)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and student = 1 and oost = 1 and NOT (afgewezen <=> 1) ";
+    $ooststudent[$i] = select_query($tel_query, 0);
+    $ooststudent['totaal'] += $ooststudent[$i];
 
-	// Donateurs (deelnemers met donatie)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and donatie > 0 and NOT (afgewezen <=> 1) ";
-	$donateurs[$i] = select_query($tel_query, 0);
-	$donateurs['totaal'] += $donateurs[$i];
+    // Donateurs (deelnemers met donatie)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr WHERE DlnmrId=DlnmrId_FK AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} and donatie > 0 and NOT (afgewezen <=> 1) ";
+    $donateurs[$i] = select_query($tel_query, 0);
+    $donateurs['totaal'] += $donateurs[$i];
 
-	// Vroege inschrijvers (ingeschreven voor korting einddatum)
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr, cursus WHERE DlnmrId=DlnmrId_FK AND CursusId=CursusId_FK 
+    // Vroege inschrijvers (ingeschreven voor korting einddatum)
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr, cursus WHERE DlnmrId=DlnmrId_FK AND CursusId=CursusId_FK 
 	AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} 
 	and datum_inschr <= datum_korting AND aangenomen = 1 AND NOT(afgewezen <=> 1)";
-	$vroeg[$i] = select_query($tel_query, 0);
-	$vroeg['totaal'] += $vroeg[$i];
+    $vroeg[$i] = select_query($tel_query, 0);
+    $vroeg['totaal'] += $vroeg[$i];
 
-	// Nieuwe deelnemers (ingeschreven sinds december)
-	$eerste_inschrijving = ($jaar - 1) . '-12-01';
-	$tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr, cursus WHERE DlnmrId=DlnmrId_FK AND CursusId=CursusId_FK 
+    // Nieuwe deelnemers (ingeschreven sinds december)
+    $eerste_inschrijving = ($jaar - 1) . '-12-01';
+    $tel_query = "SELECT COUNT(*) as aantal FROM inschrijving, dlnmr, cursus WHERE DlnmrId=DlnmrId_FK AND CursusId=CursusId_FK 
 	AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" 
 	AND geboortedatum != 0  AND CursusId_FK = {$i} 
 	and eerste_inschrijving >= '{$eerste_inschrijving}' and NOT (afgewezen <=> 1) ";
-	$nieuw[$i] = select_query($tel_query, 0);
-	$nieuw['totaal'] += $nieuw[$i];
+    $nieuw[$i] = select_query($tel_query, 0);
+    $nieuw['totaal'] += $nieuw[$i];
 
-	// Leeftijd statistieken (gemiddelde, minimum, maximum)
-	$tel_query = "SELECT ROUND(AVG((YEAR(CURDATE())- YEAR(geboortedatum)) - (RIGHT(CURDATE(),5)<RIGHT(geboortedatum,5)))) as gemiddelde, 
+    // Leeftijd statistieken (gemiddelde, minimum, maximum)
+    $tel_query = "SELECT ROUND(AVG((YEAR(CURDATE())- YEAR(geboortedatum)) - (RIGHT(CURDATE(),5)<RIGHT(geboortedatum,5)))) as gemiddelde, 
 	MIN((YEAR(CURDATE())- YEAR(geboortedatum)) - (RIGHT(CURDATE(),5)<RIGHT(geboortedatum,5))) as min, 
 	MAX((YEAR(CURDATE())- YEAR(geboortedatum)) - (RIGHT(CURDATE(),5)<RIGHT(geboortedatum,5))) as max 
 	FROM inschrijving, dlnmr, cursus WHERE DlnmrId=DlnmrId_FK AND CursusId=CursusId_FK 
 	AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" AND geboortedatum != 0  AND CursusId_FK = {$i} 
 	and NOT (afgewezen <=> 1) AND NOT (inschrijving.toehoorder <=> 1)";
-	$tel = select_query($tel_query, 1);
-	$leeftijd['gemiddelde'][$i] = $tel['gemiddelde']; // gemiddelde leeftijd 
-	$leeftijd['min'][$i] = $tel['min'];
-	$leeftijd['max'][$i] = $tel['max'];
+    $tel = select_query($tel_query, 1);
+    $leeftijd['gemiddelde'][$i] = $tel['gemiddelde']; // gemiddelde leeftijd 
+    $leeftijd['min'][$i] = $tel['min'];
+    $leeftijd['max'][$i] = $tel['max'];
 
-	// Bereken aantal deelnemers tegen volledige prijs (niet student, niet oost-europa, niet toehoorder)
-	$gewoon[$i] = $aangenomen[$i] - $student[$i] - $oost[$i] - $ooststudent[$i] - $toehoorder[$i];
+    // Bereken aantal deelnemers tegen volledige prijs (niet student, niet oost-europa, niet toehoorder)
+    $gewoon[$i] = $aangenomen[$i] - $student[$i] - $oost[$i] - $ooststudent[$i] - $toehoorder[$i];
 
-	// Financiële informatie per cursus (inkomsten en kortingen)
-	$cursussen = select_query("select sum(cursusgeld) as cursusgeld, sum(aanbet_bedrag) as aanbet_bedrag, 
+    // Financiële informatie per cursus (inkomsten en kortingen)
+    $cursussen = select_query("select sum(cursusgeld) as cursusgeld, sum(aanbet_bedrag) as aanbet_bedrag, 
 	sum(donatie) as donatie, sum(korting) as korting from inschrijving, dlnmr WHERE DlnmrId_FK = DlnmrId 
 	AND aangenomen = 1 AND NOT(afgewezen <=> 1) AND achternaam NOT LIKE \"%XXX%\" AND achternaam NOT LIKE \"%YYY%\" AND achternaam NOT LIKE \"%ZZZ%\" 
 	AND geboortedatum != 0 AND cursusid_fk = {$i}");
-	d($cursussen);
-	foreach ($cursussen as $rij) {
-		$cursus[$i] = $rij;
-		$cursus['totaal']['cursusgeld'] += $rij['cursusgeld'];
-		$cursus['totaal']['aanbet_bedrag'] += $rij['aanbet_bedrag'];
-		$cursus['totaal']['donatie'] += $rij['donatie'];
-		$cursus['totaal']['korting'] += $rij['korting'];
-	}
+    d($cursussen);
+    foreach ($cursussen as $rij) {
+        $cursus[$i] = $rij;
+        $cursus['totaal']['cursusgeld'] += $rij['cursusgeld'];
+        $cursus['totaal']['aanbet_bedrag'] += $rij['aanbet_bedrag'];
+        $cursus['totaal']['donatie'] += $rij['donatie'];
+        $cursus['totaal']['korting'] += $rij['korting'];
+    }
 
-	// Aantal passagiers voor busservice heenreis
-	$query_busheen = "SELECT count(*) as heen FROM inschrijving WHERE aangenomen = 1 AND busheen = 1 AND cursusid_fk = {$i} and NOT (afgewezen <=> 1) ";
-	$cursus[$i]['busheen'] = select_query($query_busheen, 0);
+    // Aantal passagiers voor busservice heenreis
+    $query_busheen = "SELECT count(*) as heen FROM inschrijving WHERE aangenomen = 1 AND busheen = 1 AND cursusid_fk = {$i} and NOT (afgewezen <=> 1) ";
+    $cursus[$i]['busheen'] = select_query($query_busheen, 0);
 
-	// Aantal passagiers voor busservice terugreis
-	$query_busterug = "SELECT count(*) as terug FROM inschrijving WHERE aangenomen = 1 AND busterug = 1 AND cursusid_fk = {$i} and NOT (afgewezen <=> 1) ";
-	$cursus[$i]['busterug'] = select_query($query_busterug, 0);
+    // Aantal passagiers voor busservice terugreis
+    $query_busterug = "SELECT count(*) as terug FROM inschrijving WHERE aangenomen = 1 AND busterug = 1 AND cursusid_fk = {$i} and NOT (afgewezen <=> 1) ";
+    $cursus[$i]['busterug'] = select_query($query_busterug, 0);
 
-	// Eenpersoons kameraccommodatie (deelnemers)
-	$query_Eenp = "SELECT InschId FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eenpersoons = 1 and NOT (afgewezen <=> 1)";
-	$Eenp = select_query($query_Eenp);
-	if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp);
-	else $Eenp_aantal[$i] = 0;
+    // Eenpersoons kameraccommodatie (deelnemers)
+    $query_Eenp = "SELECT InschId FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eenpersoons = 1 and NOT (afgewezen <=> 1)";
+    $Eenp = select_query($query_Eenp);
+    if (is_array($Eenp)) $Eenp_aantal[$i] = count($Eenp);
+    else $Eenp_aantal[$i] = 0;
 
-	// Kampeeraccommodatie
-	$query_kamperen = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND kamperen = 1 and NOT (afgewezen <=> 1)";
-	$kamperen_aantal[$i] = select_query($query_kamperen, 0);
+    // Kampeeraccommodatie
+    $query_kamperen = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND kamperen = 1 and NOT (afgewezen <=> 1)";
+    $kamperen_aantal[$i] = select_query($query_kamperen, 0);
 
-	// Meerpersoons kameraccommodatie
-	$query_meerpers = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND meerpers = 1 and NOT (afgewezen <=> 1)";
-	$meerpers_aantal[$i] = select_query($query_meerpers, 0);
+    // Meerpersoons kameraccommodatie
+    $query_meerpers = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND meerpers = 1 and NOT (afgewezen <=> 1)";
+    $meerpers_aantal[$i] = select_query($query_meerpers, 0);
 
-	// Eigen accommodatie
-	$query_eigenacc = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eigen_acc = 1 and NOT (afgewezen <=> 1)";
-	$eigenacc_aantal[$i] = select_query($query_eigenacc, 0);
+    // Eigen accommodatie
+    $query_eigenacc = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND eigen_acc = 1 and NOT (afgewezen <=> 1)";
+    $eigenacc_aantal[$i] = select_query($query_eigenacc, 0);
 
-	// Hotel tweepersoons kamers
-	$query_hotel_2pp = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND hotel_2pp = 1 and NOT (afgewezen <=> 1)";
-	$hotel_2pp_aantal[$i] = select_query($query_hotel_2pp, 0);
+    // Diner bij eigen accommodatie
+    $query_diner = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND diner = 1 and NOT (afgewezen <=> 1)";
+    $diner_aantal[$i] = select_query($query_diner, 0);
 
-	// Hotel eenpersoons kamers
-	$query_hotel_1pp = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND hotel_1pp = 1 and NOT (afgewezen <=> 1)";
-	$hotel_1pp_aantal[$i] = select_query($query_hotel_1pp, 0);
+    // Hotel tweepersoons kamers
+    $query_hotel_2pp = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND hotel_2pp = 1 and NOT (afgewezen <=> 1)";
+    $hotel_2pp_aantal[$i] = select_query($query_hotel_2pp, 0);
 
-	// Hotel eenpersoons in tweepersoons kamers
-	$query_hotel_1_2pp = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND hotel_1_2pp = 1 and NOT (afgewezen <=> 1)";
-	$hotel_1_2pp_aantal[$i] = select_query($query_hotel_1_2pp, 0);
+    // Hotel eenpersoons kamers
+    $query_hotel_1pp = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND hotel_1pp = 1 and NOT (afgewezen <=> 1)";
+    $hotel_1pp_aantal[$i] = select_query($query_hotel_1pp, 0);
 
-	// Afgewezen inschrijvingen
-	$query_afgewezen = "SELECT count(*) FROM inschrijving WHERE CursusId_FK = {$i} AND afgewezen <=> 1";
-	$afgewezen_aantal[$i] = select_query($query_afgewezen, 0);
+    // Hotel eenpersoons in tweepersoons kamers
+    $query_hotel_1_2pp = "SELECT count(*) FROM inschrijving WHERE aangenomen = 1 AND CursusId_FK = {$i} AND hotel_1_2pp = 1 and NOT (afgewezen <=> 1)";
+    $hotel_1_2pp_aantal[$i] = select_query($query_hotel_1_2pp, 0);
 
-	$i++;
+    // Afgewezen inschrijvingen
+    $query_afgewezen = "SELECT count(*) FROM inschrijving WHERE CursusId_FK = {$i} AND afgewezen <=> 1";
+    $afgewezen_aantal[$i] = select_query($query_afgewezen, 0);
+
+    $i++;
 }
 
 ?>
@@ -220,10 +224,10 @@ while ($i <= ($laatstecursus)) {
                 <!-- Rijen met gegevens per cursus -->
                 <tr> <?php
 
-						$i = $cursus_offset + 1;
+                        $i = $cursus_offset + 1;
 
-						while ($i <= ($aantal_cursussen + $cursus_offset)) {
-						?> <td valign="top">
+                        while ($i <= ($aantal_cursussen + $cursus_offset)) {
+                        ?> <td valign="top">
                         <p><b>Cursus <?php echo $i ?>: </b>
                         </p>
                         <ul>
@@ -301,13 +305,14 @@ while ($i <= ($laatstecursus)) {
                             <li>Al betaald:&nbsp;
                                 <?php echo euro($cursus[$i]['aanbet_bedrag']); ?>
                             </li>
-                            <li>Nog te ontvangen:&nbsp; <?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting'] -
-																$cursus[$i]['aanbet_bedrag']); ?> </li>
+                            <li>Nog te ontvangen:&nbsp;
+                                <?php echo euro($cursus[$i]['cursusgeld'] + $cursus[$i]['donatie'] - $cursus[$i]['korting'] -
+                                                                $cursus[$i]['aanbet_bedrag']); ?> </li>
                         </ul>
                     </td> <?php
-								$i++;
-							}
-								?> </tr>
+                                $i++;
+                            }
+                                ?> </tr>
                 <tr>
                     <td colspan="<?php echo $aantal_cursussen; ?>" valign="top">
                         <p>Totaal aangenomen deelnemers:&nbsp;
@@ -329,11 +334,13 @@ while ($i <= ($laatstecursus)) {
                             <?php echo euro($cursus['totaal']['cursusgeld'] + $cursus['totaal']['donatie'] - $cursus['totaal']['korting'] - $cursus['totaal']['aanbet_bedrag']); ?>
                             | gemiddelde leeftijd
                             <?php $meer = $aangenomen['totaal'] - $deelnemers_vorigjaar['totaal'];
-							if (isset($aangenomen['totaal']) and $aangenomen['totaal'] > 0) $percentage_meer = round(($meer / $aangenomen['totaal']) * 100);
-							if (isset($leeftijd['gemiddelde']) and $leeftijd['gemiddelde'] > 0) echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?>
+                            if (isset($aangenomen['totaal']) and $aangenomen['totaal'] > 0) $percentage_meer = round(($meer / $aangenomen['totaal']) * 100);
+                            if (isset($leeftijd['gemiddelde']) and $leeftijd['gemiddelde'] > 0) echo round(array_sum($leeftijd['gemiddelde']) / (count($leeftijd['gemiddelde']))); ?>
                             | aantal deelnemers vorig jaar
-                            <?php echo $deelnemers_vorigjaar['totaal']; ?> (<?php if ($meer >= 0) echo '+';
-																			echo $meer . ' = ' . $percentage_meer . '%'; ?>) </p>
+                            <?php echo $deelnemers_vorigjaar['totaal']; ?>
+                            (<?php if ($meer >= 0) echo '+';
+                                                                            echo $meer . ' = ' . $percentage_meer . '%'; ?>)
+                        </p>
                     </td>
                 </tr>
             </table>
