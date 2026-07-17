@@ -232,7 +232,7 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
                                 <td class="klein">
                                     <?php echo $dlnmr['email']; ?>&nbsp;</td>
                                 <td class="klein">
-                                    <?php if (isset($instr)) echo $instr; ?>&nbsp;$docenten
+                                    <?php if (isset($instr)) echo $instr; ?>&nbsp;
                                 </td>
                                 <?php if ($CursusId != $eerstecursus + 2) echo '<td class="klein">';
                                         if (isset($zangstem)) echo $zangstem; ?>
