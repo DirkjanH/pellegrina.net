@@ -7,10 +7,14 @@
 require_once($_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
-// Bepaal cursus-id (GET parameter 'cursus', anders eerste cursus)
-$CursusId = $eerstecursus;
+// Bepaal cursus-index en cursus-id (GET parameter 'cursus', anders eerste cursus)
+$cursusIndex = 1;
 if (isset($_GET['cursus']) && is_numeric($_GET['cursus']) && $_GET['cursus'] > 0) {
-    $CursusId = (int)$_GET['cursus'] + $cursus_offset;
+    $cursusIndex = (int)$_GET['cursus'];
+}
+$CursusId = $eerstecursus;
+if ($cursusIndex > 0) {
+    $CursusId = $cursusIndex + $cursus_offset;
 }
 
 // Opbouw instrument lookup tabel (id => Engelse naam)
@@ -284,10 +288,21 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
 <body>
     <div class="w3-container w3-content w3-card-4 w3-padding-32"
         style="max-width: 900px; margin-top: 32px;">
+        <div class="w3-bar w3-margin-bottom">
+            <a href="?cursus=1"
+                class="w3-bar-item w3-button<?php if ($cursusIndex === 1) echo ' w3-blue'; ?>">Cursus
+                1</a>
+            <a href="?cursus=2"
+                class="w3-bar-item w3-button<?php if ($cursusIndex === 2) echo ' w3-blue'; ?>">Cursus
+                2</a>
+            <a href="?cursus=<?php echo $cursusIndex; ?>&amp;print=1<?php if (!empty($_REQUEST['extra'])) echo '&amp;extra=' . urlencode($_REQUEST['extra']); ?>"
+                target="_blank" class="w3-bar-item w3-button w3-green">Open
+                printbestand</a>
+        </div>
         <h2 class="w3-center">LP Badges - extra deelnemers toevoegen</h2>
         <form class="w3-container" method="get">
             <input type="hidden" name="cursus"
-                value="<?php echo htmlspecialchars($_GET['cursus'] ?? '', ENT_QUOTES); ?>">
+                value="<?php echo htmlspecialchars($cursusIndex, ENT_QUOTES); ?>">
             <label class="w3-text"><b>Invoer</b></label>
             <textarea class="w3-input w3-border" name="extra" id="extra"
                 rows="6"
