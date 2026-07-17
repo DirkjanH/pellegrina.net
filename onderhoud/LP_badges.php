@@ -441,6 +441,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                     JSON</button>
                 <input id="jsonFileInput" type="file" accept="application/json"
                     style="display:none" onchange="loadJsonFile(event)">
+                <p class="w3-text">Aantal badges: <?php echo count($result); ?></p>
             </form>
             <hr>
             <h3 class="w3-center">Huidige resultaten (preview)</h3>
@@ -456,6 +457,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                     'extra_raw' => $_REQUEST['extra'] ?? '',
                     'cursus' => $cursusIndex,
                     'cursus_name' => $cursusName,
+                    'count' => count($result),
                 ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE); ?>;
 
             function downloadJson() {
@@ -531,6 +533,10 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         }
 
         header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        $out = [
+            'count' => count($result),
+            'result' => $result,
+        ];
+        echo json_encode($out, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
             ?>
