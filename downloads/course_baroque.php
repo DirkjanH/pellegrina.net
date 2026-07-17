@@ -157,8 +157,9 @@ $cursusnr = 2 + $cursus_offset; ?>
                 clefs in the 2nd violin. Please only use this new edition.</p>
             <div class="cols3">
                 <ul>
-                    <li><a href="/pdf/2026-2/Heinichen/Heinichen, Johann David - Concerto à 7 S.215.pdf"
-                            target="_blank">Full score</a></li>
+                    <li><a href="/pdf/2026-2/Heinichen/Heinichen, Johann David - Concerto à 7 S.215 Full score -met streken.pdf"
+                            target="_blank">Full score <b>with bowings</b></a>
+                    </li>
                     <li><a href="/pdf/2026-2/Heinichen/hein 215 recorders 1 and 2.pdf"
                             target="_blank">Flute 1/2</a></li>
                     <li><a href="/pdf/2026-2/Heinichen/hein 215-1 test _oboe 1_oboe 2 geheel.pdf"
@@ -177,9 +178,9 @@ $cursusnr = 2 + $cursus_offset; ?>
             <h4>Biber, Heinrich - De Profundis</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Full Score.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Full score</a>
+                    <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Full Score met streken.pdf"
+                            target="_blank">Biber, Heinrich - De Profundis
+                            <b>Full score with bowings</b></a>
                     </li>
                     <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Voices & BC.pdf"
                             target="_blank">Biber, Heinrich - De Profundis -
@@ -230,8 +231,9 @@ $cursusnr = 2 + $cursus_offset; ?>
             <h4>Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Partitur.pdf"
-                            target="_blank">Zelenka - Ecce - Score</a></li>
+                    <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Partitur MET STREKEN.pdf"
+                            target="_blank">Zelenka - Ecce - Score <b>with
+                                bowings</b></a></li>
                     <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Oboe1.pdf"
                             target="_blank">Zelenka - Ecce - Oboe 1</a></li>
                     <li><a href="/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Oboe2.pdf"
@@ -268,9 +270,10 @@ $cursusnr = 2 + $cursus_offset; ?>
             </p>
             <div class=" cols3">
                 <ul class="cols3">
-                    <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_score.pdf"
+                    <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_score met ALLE streken deel 1, 2 4 en 5.pdf"
                             target="_blank">Hasse - Miserere in c moll - Full
-                            score</a></li>
+                            score <b>with bowings in movements 1, 2, 4 and
+                                5</b></a></li>
                     <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
                             target="_blank">Hasse - Miserere in c moll - Violin
                             I</a></li>
@@ -294,9 +297,9 @@ $cursusnr = 2 + $cursus_offset; ?>
             <h4>Heinichen, Johann David - Confitebor S.32</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Full Score.pdf"
+                    <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Full Score - met STREKEN.pdf"
                             target="_blank">Heinichen - Confitebor S.32 - Full
-                            score</a></li>
+                            score <b>with bowings</b></a></li>
                     <li><a href="/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 1.pdf"
                             target="_blank">Heinichen - Confitebor S.32 - Violin
                             1</a></li>
@@ -315,9 +318,9 @@ $cursusnr = 2 + $cursus_offset; ?>
             <h4>Biber, Heinrich - Requiem in f</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_FS_PML.pdf"
-                            target="_blank">Biber - Requiem in f - Full
-                            score</a></li>
+                    <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_Full score with bowings.pdf"
+                            target="_blank">Biber - Requiem in f - Full score
+                            <b>with bowings</b></a></li>
                     <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_VS_PML.pdf"
                             target="_blank">Biber - Requiem in f - Vocal
                             score</a></li>
