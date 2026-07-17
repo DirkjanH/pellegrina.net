@@ -328,7 +328,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         const link = document.createElement('a');
         link.href = url;
         link.download =
-            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", $cursusName ?: "LP_badges"); ?>.html';
+            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", ($cursusName ?: "LP_badges") . "_Badges"); ?>.html';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
