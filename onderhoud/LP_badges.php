@@ -271,7 +271,7 @@ function build_print_pages_html($result)
 if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     $printHtml = build_print_pages_html($result);
     header('Content-Type: text/html; charset=utf-8');
-    ?>
+?>
 <!doctype html>
 <html>
 <head>
@@ -360,14 +360,14 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     </script>
 </body>
 </html> <?php
-    exit;
-}
+            exit;
+        }
 
-// Drukweergave: 2 kolommen x 7 rijen per A4-pagina
-if (isset($_GET['print']) && $_GET['print'] == '1') {
-    $printHtml = build_print_pages_html($result);
-    header('Content-Type: text/html; charset=utf-8');
-    ?>
+        // Drukweergave: 2 kolommen x 7 rijen per A4-pagina
+        if (isset($_GET['print']) && $_GET['print'] == '1') {
+            $printHtml = build_print_pages_html($result);
+            header('Content-Type: text/html; charset=utf-8');
+            ?>
 <!doctype html>
 <html>
 <head>
@@ -384,8 +384,8 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
 </head>
 <body> <?php echo $printHtml; ?> </body>
 </html> <?php
-    exit;
-}
+            exit;
+        }
 
         // Als de caller geen JSON wil (geen json=1), toon een eenvoudige HTML-formulier
         if (empty($_GET['json']) || $_GET['json'] != '1') {
