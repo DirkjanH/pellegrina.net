@@ -303,20 +303,37 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
             </div>
             <div class="w3-half">
                 <label class="w3-text"><b>Preview</b></label>
-                <div id="editorPreview" class="w3-white w3-padding w3-border">
-                </div>
+                <iframe id="editorPreview" class="w3-white w3-border"
+                    style="width:100%; min-height:800px; border:1px solid #ccc;"></iframe>
             </div>
         </div>
     </div>
     <script>
     function updatePreview() {
-        document.getElementById('editorPreview').innerHTML = document
-            .getElementById('htmlEditor').value;
+        const previewFrame = document.getElementById('editorPreview');
+        const html = document.getElementById('htmlEditor').value;
+        const fullDoc =
+            `<!doctype html><html><head><meta charset="utf-8"><title>Preview</title><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`;
+        previewFrame.srcdoc = fullDoc;
     }
 
     function printPreview() {
-        updatePreview();
-        window.print();
+        const html = document.getElementById('htmlEditor').value;
+        const printWindow = window.open('', '_blank');
+        if (!printWindow) {
+            alert(
+                'Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
+            return;
+        }
+        printWindow.document.open();
+        printWindow.document.write(
+            `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - Print</title><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`
+            );
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.onload = function() {
+            printWindow.print();
+        };
     }
 
     function saveHtml() {
