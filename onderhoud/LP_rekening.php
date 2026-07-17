@@ -292,7 +292,11 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
             $totaal_euro = bedrag($totaal);
             $tebetalen = bedrag($inschr['cursusgeld'] + $inschr['donatie'] - $inschr['aanbet_bedrag']);
             $inschr['cursusgeld'] = bedrag($inschr['cursusgeld']);
-            $inschr['donatie'] = 'Hartelijk dank voor je toegezegde donatie van ' . bedrag($inschr['donatie']) . ' voor het kortingsfonds.';
+            if (($inschr['taal'] == "NL") and $inschr['donatie'] > 0) {
+                $inschr['donatie'] = 'Hartelijk dank voor je donatie van ' . bedrag($inschr['donatie']) . ' voor het kortingsfonds.';
+            } elseif (($inschr['taal'] == "EN") and $inschr['donatie'] > 0) {
+                $inschr['donatie'] = 'Thank you very much for your donation of ' . bedrag($inschr['donatie']) . ' for the reduction fund.';
+            } else $inschr['donatie'] = '';
             $inschr['aanbet_bedrag'] = bedrag($inschr['aanbet_bedrag'] * -1);
             $adresblok = $inschr['naam'] . '<br>' . $inschr['adres'] . '<br>' .
                 $inschr['postcode'] . ' ' . $inschr['plaats'] . '<br>';
@@ -390,9 +394,8 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text"
-                                value="<?php if (isset($_GET['DlnmrId']))
-                                                                        echo $_GET['DlnmrId']; ?>"
+                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
+                                            echo $_GET['DlnmrId']; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             Rekening al verzonden: <input
