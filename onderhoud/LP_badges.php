@@ -343,7 +343,8 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
 
     function saveHtml() {
         const html = document.getElementById('htmlEditor').value;
-        const fullDoc = `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`;
+        const fullDoc =
+            `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`;
         const blob = new Blob([fullDoc], {
             type: 'text/html'
         });
@@ -425,18 +426,24 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                 value="1">Toon JSON met extra regels</button>
             <button class="w3-button w3-green" type="submit" name="editor"
                 value="1">Open bewerkbaar printbestand</button>
-            <button class="w3-button w3-teal" type="button" onclick="downloadJson()">Sla complete JSON op</button>
-            <button class="w3-button w3-orange" type="button" onclick="document.getElementById('jsonFileInput').click();">Laad JSON</button>
-            <input id="jsonFileInput" type="file" accept="application/json" style="display:none" onchange="loadJsonFile(event)">
+            <button class="w3-button w3-teal" type="button"
+                onclick="downloadJson()">Sla complete JSON op</button>
+            <button class="w3-button w3-orange" type="button"
+                onclick="document.getElementById('jsonFileInput').click();">Laad
+                JSON</button>
+            <input id="jsonFileInput" type="file" accept="application/json"
+                style="display:none" onchange="loadJsonFile(event)">
         </form>
         <hr>
         <h3 class="w3-center">Huidige resultaten (preview)</h3>
         <div class="w3-light-grey w3-padding">
-            <pre id="jsonPreview"><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
+            <pre
+                id="jsonPreview"><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
         </div>
     </div>
     <script>
-    const lpBadgesData = <?php echo json_encode([
+    const lpBadgesData =
+        <?php echo json_encode([
         'result' => $result,
         'extra_raw' => $_REQUEST['extra'] ?? '',
         'cursus' => $cursusIndex,
@@ -444,9 +451,16 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE); ?>;
 
     function downloadJson() {
-        const filename = '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", "LP_badges_" . ($cursusName ?: "Badges")); ?>.json';
-        const payload = JSON.stringify(lpBadgesData, null, 2);
-        const blob = new Blob([payload], { type: 'application/json' });
+        const filename =
+            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", "LP_badges_" . ($cursusName ?: "Badges")); ?>.json';
+        const currentExtra = document.getElementById('extra').value;
+        const payloadObject = Object.assign({}, lpBadgesData, {
+            extra_raw: currentExtra
+        });
+        const payload = JSON.stringify(payloadObject, null, 2);
+        const blob = new Blob([payload], {
+            type: 'application/json'
+        });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
@@ -464,28 +478,29 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         reader.onload = function(e) {
             try {
                 const data = JSON.parse(e.target.result);
-                const currentExtra = document.getElementById('extra').value.trim();
+                const currentExtra = document.getElementById('extra').value
+                    .trim();
                 let extraText = currentExtra;
-
                 if (data.extra_raw !== undefined) {
                     extraText = data.extra_raw;
                 } else if (Array.isArray(data.result)) {
-                    const extras = data.result
-                        .filter(item => item.role === 'extra')
-                        .map(item => {
-                            const name = item.name || '';
-                            const country = item.country_code || '';
-                            const instr = Array.isArray(item.instruments_en) ? item.instruments_en.join(', ') : (item.instruments_en || '');
-                            return `${name}#${country}#${instr}`;
-                        })
-                        .filter(line => line.trim() !== '');
+                    const extras = data.result.filter(item => item.role ===
+                        'extra').map(item => {
+                        const name = item.name || '';
+                        const country = item.country_code || '';
+                        const instr = Array.isArray(item
+                                .instruments_en) ? item
+                            .instruments_en.join(', ') : (item
+                                .instruments_en || '');
+                        return `${name}#${country}#${instr}`;
+                    }).filter(line => line.trim() !== '');
                     if (extras.length > 0) {
                         extraText = extras.join('\n');
                     }
                 }
-
                 document.getElementById('extra').value = extraText;
-                document.getElementById('jsonPreview').textContent = JSON.stringify(data, null, 2);
+                document.getElementById('jsonPreview').textContent = JSON
+                    .stringify(data, null, 2);
                 const params = new URLSearchParams();
                 params.set('cursus', lpBadgesData.cursus || '1');
                 params.set('editor', '1');
