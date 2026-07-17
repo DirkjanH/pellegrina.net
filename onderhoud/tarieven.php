@@ -104,8 +104,8 @@ function cursusgeld($ins)
 		$b_hotel_1pp = bedrag($hotel_1pp);
 		$wensenNL .= ", plus supplement voor eenpersoons kamer in het Poortgebouw";
 		$wensenEN .= ", plus supplement for a single room in the Gate House (Poortgebouw)";
-		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_1pp}";
-		$regelEN .= "###Supplement for single room@@@{$b_hotel_1pp}";
+		$regelNL .= "###Supplement voor eenpersoons kamer in het Poortgebouw@@@{$b_hotel_1pp}";
+		$regelEN .= "###Supplement for single room in the Gate House (Poortgebouw)@@@{$b_hotel_1pp}";
 	}
 
 	if ($ins['hotel_2pp']) {
@@ -113,8 +113,8 @@ function cursusgeld($ins)
 		$b_hotel_2pp = bedrag($hotel_2pp);
 		$wensenNL .= ", plus supplement voor plaats in een tweepersoons kamer met eigen sanitair in het Poortgebouw";
 		$wensenEN .= ", plus supplement for a place in a double room with private bathroom facilities in the Gate House (Poortgebouw)";
-		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_2pp}";
-		$regelEN .= "###Supplement for single room@@@{$b_hotel_2pp}";
+		$regelNL .= "###Supplement voor plaats in tweepersoons kamer met eigen sanitair in het Poortgebouw@@@{$b_hotel_2pp}";
+		$regelEN .= "###Supplement for place in double room with private bathroom facilities in the Gate House (Poortgebouw)@@@{$b_hotel_2pp}";
 	}
 
 	if ($ins['hotel_1_2pp']) {
@@ -122,8 +122,8 @@ function cursusgeld($ins)
 		$b_hotel_1_2pp = bedrag($hotel_1_2pp);
 		$wensenNL .= ", plus supplement voor een eenpersoons kamer met eigen sanitair in het Poortgebouw";
 		$wensenEN .= ", plus supplement for a single room with private bathroom facilities in the Gate House (Poortgebouw)";
-		$regelNL .= "###Supplement voor eenpersoons kamer@@@{$b_hotel_1_2pp}";
-		$regelEN .= "###Supplement for single room@@@{$b_hotel_1_2pp}";
+		$regelNL .= "###Supplement voor eenpersoons kamer met eigen sanitair in het Poortgebouw@@@{$b_hotel_1_2pp}";
+		$regelEN .= "###Supplement for single room with private bathroom facilities in the Gate House (Poortgebouw)@@@{$b_hotel_1_2pp}";
 	}
 
 	if ($ins['meerpers']) {
