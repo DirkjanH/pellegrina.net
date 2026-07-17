@@ -277,9 +277,6 @@ $cursusnr = 2 + $cursus_offset; ?>
                     <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
                             target="_blank">Hasse - Miserere in c moll - Violin
                             I</a></li>
-                    <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
-                            target="_blank">Hasse - Miserere in c moll - Violin
-                            I</a></li>
                     <li><a href="/pdf/2026-2/Hasse/Miserere-Hasse_Violino II.pdf"
                             target="_blank">Hasse - Miserere in c moll - Violin
                             II</a></li>
