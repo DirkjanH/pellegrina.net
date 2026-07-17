@@ -279,21 +279,31 @@ if (isset($_GET['print']) && $_GET['print'] == '1') {
 <head>
     <meta charset="utf-8">
     <title>LP Badges - invoer (onderhoud)</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-    <h2>LP Badges - extra deelnemers toevoegen</h2>
-    <form method="get">
-        <input type="hidden" name="cursus"
-            value="<?php echo htmlspecialchars($_GET['cursus'] ?? '', ENT_QUOTES); ?>">
-        <label for="extra">Voer regels in (één per
-            regel):<br>naam#nationaliteit#instrument</label><br>
-        <textarea name="extra" id="extra" rows="6"
-            cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea><br>
-        <button type="submit" name="json" value="1">Toon JSON met extra
-            regels</button>
-    </form>
-    <h3>Huidige resultaten (preview)</h3>
-    <pre><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
+    <div class="w3-container w3-content w3-card-4 w3-padding-32"
+        style="max-width: 900px; margin-top: 32px;">
+        <h2 class="w3-center">LP Badges - extra deelnemers toevoegen</h2>
+        <form class="w3-container" method="get">
+            <input type="hidden" name="cursus"
+                value="<?php echo htmlspecialchars($_GET['cursus'] ?? '', ENT_QUOTES); ?>">
+            <label class="w3-text"><b>Invoer</b></label>
+            <textarea class="w3-input w3-border" name="extra" id="extra"
+                rows="6"
+                cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea>
+            <small>Voer regels in (één per regel):
+                naam#nationaliteit#instrument</small>
+            <br><br>
+            <button class="w3-button w3-blue" type="submit" name="json"
+                value="1">Toon JSON met extra regels</button>
+        </form>
+        <hr>
+        <h3 class="w3-center">Huidige resultaten (preview)</h3>
+        <div class="w3-light-grey w3-padding">
+            <pre><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
+        </div>
+    </div>
 </body>
 </html><?php
             exit;
