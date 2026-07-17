@@ -176,6 +176,10 @@ $cursusnr = 2 + $cursus_offset; ?>
                 </ul>
             </div>
             <h4>Biber, Heinrich - De Profundis</h4>
+            <p>Division of the strings: violin 1: Femke, Birgit, Corinne,
+                Maille, Barbara; violin 2: Louis, Eliane, Karin, Lea; viola 1:
+                Peter, Renske; viola 2: Baukje; cello: Karel, Sanne, Franca,
+                Patrick; double bass: Hendrik.</p>
             <div class="cols3">
                 <ul>
                     <li><a href="/pdf/2026-2/Biber_DP/Biber - De profundis - Full Score met streken.pdf"
@@ -266,6 +270,11 @@ $cursusnr = 2 + $cursus_offset; ?>
                         <li>V. Quoniam si voluisses</li>
                     </ul>
                 </div>
+                <p>Division of the strings: violin 1: Femke, Birgit, Corinne,
+                    Maille, Barbara; violin 2: Louis, Eliane, Karin, Lea; viola:
+                    Renske (I), Peter (II), Baukje(III, only the bottom notes
+                    when two-part); cello: Karel, Sanne, Franca, Patrick; double
+                    bass: Hendrik.</p>
             </div>
             </p>
             <div class=" cols3">
@@ -313,6 +322,12 @@ $cursusnr = 2 + $cursus_offset; ?>
                 </ul>
             </div>
             <h4>Biber, Heinrich - Requiem in f</h4>
+            <p>Division of the strings: violin 1: Femke, Birgit, Maille,
+                Barbara; violin 2: Louis, Eliane, Karin; viola I (on violin?):
+                Corinne, Lea; viola II: Peter, Renske; viola III: Baukje; cello:
+                Karel, Sanne, Franca, Patrick; double bass: Hendrik. The gambas
+                double the trombone parts: Stephanie, alto; Eugenia, tenor;
+                Désirée, bass.</p>
             <div class="cols3">
                 <ul>
                     <li><a href="/pdf/2026-2/Biber/Biber_Requiem_in_f_Full score with bowings.pdf"
