@@ -2,6 +2,7 @@
 $cursusnr = 2 + $cursus_offset; ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -19,19 +20,20 @@ $cursusnr = 2 + $cursus_offset; ?>
     <!-- InstanceBeginEditable name="head" -->
     <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-    h3 {
-        margin: 25px 0px 15px;
-        padding: 0px;
-    }
+        h3 {
+            margin: 25px 0px 15px;
+            padding: 0px;
+        }
 
-    table#parts tr,
-    td {
-        margin: 10px 5px;
-        padding: 5px;
-    }
+        table#parts tr,
+        td {
+            margin: 10px 5px;
+            padding: 5px;
+        }
     </style>
     <!-- InstanceEndEditable -->
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud">
@@ -63,8 +65,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                     <td class="w3-center"><a
                             href="https://docs.google.com/document/d/e/2PACX-1vSXywNgXj36DpMyjGpYuh20GpRdJugAzvmj8zXUthx0mOB2Lx9zzAeSFcepXTpQTveO17gRBWNCZ5Of/pub"
                             target="_blank">Daily program</a></td>
-                    <td class="w3-center grijs"><a
-                            xxxx="https://www.pellegrina.net/barok2025/"
+                    <td class="w3-center"><a
+                            href="https://www.pellegrina.net/barok2026/"
                             target="_blank">Information & reservation
                             concert</a></td>
                 </tr>
@@ -843,4 +845,5 @@ $cursusnr = 2 + $cursus_offset; ?>
     </div>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
+
 </html>
