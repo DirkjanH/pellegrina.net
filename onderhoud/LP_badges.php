@@ -432,10 +432,14 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                 <br><br>
                 <button class="w3-button w3-blue" type="submit" name="json"
                     value="1">Toon JSON met extra regels</button>
+                <button class="w3-button w3-indigo" type="button"
+                    onclick="previewJson()">Preview JSON</button>
                 <button class="w3-button w3-green" type="submit" name="editor"
                     value="1">Open bewerkbaar printbestand</button>
                 <button class="w3-button w3-teal" type="button"
                     onclick="downloadJson()">Sla complete JSON op</button>
+                <button class="w3-button w3-purple" type="button"
+                    onclick="printJson()">Print JSON</button>
                 <button class="w3-button w3-orange" type="button"
                     onclick="document.getElementById('jsonFileInput').click();">Laad
                     JSON</button>
@@ -446,8 +450,13 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
             <hr>
             <h3 class="w3-center">Huidige resultaten (preview)</h3>
             <div class="w3-light-grey w3-padding">
+                <label class="w3-text"><b>JSON preview</b></label>
                 <pre
                     id="jsonPreview"><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
+            </div>
+            <div class="w3-white w3-border w3-padding" style="margin-top:16px;">
+                <label class="w3-text"><b>Badge layout preview</b></label>
+                <div id="badgeLayoutPreview" style="min-height:240px;"></div>
             </div>
         </div>
         <script>
@@ -459,6 +468,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                     'cursus_name' => $cursusName,
                     'count' => count($result),
                 ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE); ?>;
+            let loadedJsonData = null;
 
             function downloadJson() {
                 const filename =
@@ -479,6 +489,76 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                 link.click();
                 document.body.removeChild(link);
                 URL.revokeObjectURL(url);
+            }
+
+            function buildBadgeHtml(data) {
+                const perPage = 14;
+                const pages = [];
+                for (let i = 0; i < data.length; i += perPage) {
+                    pages.push(data.slice(i, i + perPage));
+                }
+                let html = '';
+                pages.forEach(page => {
+                    html += '<div class="page">';
+                    page.forEach(item => {
+                        const name = item.name ? item.name : '';
+                        const countryCode = item.country_code ? item.country_code : '';
+                        const countryLabel = countryCode ? ` (${countryCode})` : '';
+                        const instruments = Array.isArray(item.instruments_en) ? item.instruments_en.join(', ') : (item.instruments_en || '');
+                        html += '<div class="badge">';
+                        html += '<div class="badge-row">';
+                        html += '<img class="badge-logo" src="https://pellegrina.net/Images/Logos/P-final.jpg" alt="P logo">';
+                        html += '<div class="badge-text">';
+                        html += `<div class="name">${escapeHtml(name + countryLabel)}</div>`;
+                        if (instruments) {
+                            html += `<div class="instruments">${escapeHtml(instruments)}</div>`;
+                        }
+                        html += '</div>';
+                        html += '</div>';
+                        html += '</div>';
+                    });
+                    html += '</div>';
+                });
+                return html;
+            }
+
+            function escapeHtml(value) {
+                return value
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function previewJson() {
+                const jsonData = loadedJsonData || lpBadgesData;
+                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (Array.isArray(jsonData) ? jsonData : []);
+                const badgeHtml = buildBadgeHtml(resultData);
+                document.getElementById('badgeLayoutPreview').innerHTML = badgeHtml;
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+                previewJson();
+            });
+
+            function printJson() {
+                const jsonData = loadedJsonData || lpBadgesData;
+                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (Array.isArray(jsonData) ? jsonData : []);
+                const badgeHtml = buildBadgeHtml(resultData);
+                const printWindow = window.open('', '_blank');
+                if (!printWindow) {
+                    alert('Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
+                    return;
+                }
+                const fullHtml = `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - JSON Print</title><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${badgeHtml}</body></html>`;
+                printWindow.document.open();
+                printWindow.document.write(fullHtml);
+                printWindow.document.close();
+                printWindow.focus();
+                printWindow.onload = function() {
+                    printWindow.print();
+                };
             }
 
             function loadJsonFile(event) {
@@ -508,9 +588,11 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                                 extraText = extras.join('\n');
                             }
                         }
+                        loadedJsonData = data;
                         document.getElementById('extra').value = extraText;
                         document.getElementById('jsonPreview').textContent = JSON
                             .stringify(data, null, 2);
+                        previewJson();
                         const params = new URLSearchParams();
                         params.set('cursus', lpBadgesData.cursus || '1');
                         params.set('editor', '1');
