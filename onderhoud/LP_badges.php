@@ -406,6 +406,9 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         <meta charset="utf-8">
         <title>LP Badges - invoer (onderhoud)</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://pellegrina.net/css/LP_badges.css" rel="stylesheet">
     </head>
 
     <body>
@@ -502,16 +505,23 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                     html += '<div class="page">';
                     page.forEach(item => {
                         const name = item.name ? item.name : '';
-                        const countryCode = item.country_code ? item.country_code : '';
-                        const countryLabel = countryCode ? ` (${countryCode})` : '';
-                        const instruments = Array.isArray(item.instruments_en) ? item.instruments_en.join(', ') : (item.instruments_en || '');
+                        const countryCode = item.country_code ? item
+                            .country_code : '';
+                        const countryLabel = countryCode ?
+                            ` (${countryCode})` : '';
+                        const instruments = Array.isArray(item
+                                .instruments_en) ? item.instruments_en
+                            .join(', ') : (item.instruments_en || '');
                         html += '<div class="badge">';
                         html += '<div class="badge-row">';
-                        html += '<img class="badge-logo" src="https://pellegrina.net/Images/Logos/P-final.jpg" alt="P logo">';
+                        html +=
+                            '<img class="badge-logo" src="https://pellegrina.net/Images/Logos/P-final.jpg" alt="P logo">';
                         html += '<div class="badge-text">';
-                        html += `<div class="name">${escapeHtml(name + countryLabel)}</div>`;
+                        html +=
+                            `<div class="name">${escapeHtml(name + countryLabel)}</div>`;
                         if (instruments) {
-                            html += `<div class="instruments">${escapeHtml(instruments)}</div>`;
+                            html +=
+                                `<div class="instruments">${escapeHtml(instruments)}</div>`;
                         }
                         html += '</div>';
                         html += '</div>';
@@ -523,35 +533,34 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
             }
 
             function escapeHtml(value) {
-                return value
-                    .replace(/&/g, '&amp;')
-                    .replace(/</g, '&lt;')
-                    .replace(/>/g, '&gt;')
-                    .replace(/"/g, '&quot;')
-                    .replace(/'/g, '&#39;');
+                return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g,
+                    '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
             }
 
             function previewJson() {
                 const jsonData = loadedJsonData || lpBadgesData;
-                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (Array.isArray(jsonData) ? jsonData : []);
+                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (
+                    Array.isArray(jsonData) ? jsonData : []);
                 const badgeHtml = buildBadgeHtml(resultData);
                 document.getElementById('badgeLayoutPreview').innerHTML = badgeHtml;
             }
-
             window.addEventListener('DOMContentLoaded', () => {
                 previewJson();
             });
 
             function printJson() {
                 const jsonData = loadedJsonData || lpBadgesData;
-                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (Array.isArray(jsonData) ? jsonData : []);
+                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (
+                    Array.isArray(jsonData) ? jsonData : []);
                 const badgeHtml = buildBadgeHtml(resultData);
                 const printWindow = window.open('', '_blank');
                 if (!printWindow) {
-                    alert('Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
+                    alert(
+                        'Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
                     return;
                 }
-                const fullHtml = `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - JSON Print</title><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${badgeHtml}</body></html>`;
+                const fullHtml =
+                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - JSON Print</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${badgeHtml}</body></html>`;
                 printWindow.document.open();
                 printWindow.document.write(fullHtml);
                 printWindow.document.close();
