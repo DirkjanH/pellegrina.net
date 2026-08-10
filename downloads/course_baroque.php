@@ -2,7 +2,6 @@
 $cursusnr = 2 + $cursus_offset; ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -20,20 +19,19 @@ $cursusnr = 2 + $cursus_offset; ?>
     <!-- InstanceBeginEditable name="head" -->
     <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-        h3 {
-            margin: 25px 0px 15px;
-            padding: 0px;
-        }
+    h3 {
+        margin: 25px 0px 15px;
+        padding: 0px;
+    }
 
-        table#parts tr,
-        td {
-            margin: 10px 5px;
-            padding: 5px;
-        }
+    table#parts tr,
+    td {
+        margin: 10px 5px;
+        padding: 5px;
+    }
     </style>
     <!-- InstanceEndEditable -->
 </head>
-
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud">
@@ -101,8 +99,9 @@ $cursusnr = 2 + $cursus_offset; ?>
             </p>
             <div class="w3-panel w3-border w3-light-grey w3-clear">
                 <div class="w3-left w3-margin-right">
-                    <p><i>Soprano:</i><br>Rhona Lonergan<br>Anke Muusse<br>Joyce
-                        Vermeer<br>Anne Hodgkinson<br>Birthe Rubehn</p>
+                    <p><i>Soprano:</i><br>Irma van Dalen<br> Rhona
+                        Lonergan<br>Anke Muusse<br>Joyce Vermeer<br>Anne
+                        Hodgkinson<br>Birthe Rubehn</p>
                 </div>
                 <div class="w3-left w3-margin-right">
                     <p><i>Alto:</i><br>Hilda Houtkoop<br>Vivian
@@ -121,8 +120,8 @@ $cursusnr = 2 + $cursus_offset; ?>
             <p>In Hasse's Miserere only the women sing, in this division: </p>
             <div class="w3-panel w3-border w3-light-grey w3-clear">
                 <div class="w3-left w3-margin-right">
-                    <p><i>Soprano 1:</i><br>Rhona Lonergan<br>Anne Hodgkinson
-                    </p>
+                    <p><i>Soprano 1:</i><br>Irma van Dalen<br>Rhona
+                        Lonergan<br>Anne Hodgkinson </p>
                 </div>
                 <div class="w3-left w3-margin-right">
                     <p><i>Soprano 2:</i><br>Joyce Vermeer<br>Anke
@@ -141,8 +140,8 @@ $cursusnr = 2 + $cursus_offset; ?>
                 follows in the choral sections:</p>
             <div class="w3-panel w3-border w3-light-grey w3-clear">
                 <div class="w3-left w3-margin-right">
-                    <p><i>Soprano 1:</i><br>Rhona Lonergan<br>Joyce
-                        Vermeer<br>Anne Hodgkinson</p>
+                    <p><i>Soprano 1:</i><br>Irma van Dalen<br>Rhona
+                        Lonergan<br>Anne Hodgkinson</p>
                 </div>
                 <div class="w3-left w3-margin-right">
                     <p><i>Soprano 2:</i><br>Anke Muusse<br>Birthe
@@ -845,5 +844,4 @@ $cursusnr = 2 + $cursus_offset; ?>
     </div>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-
 </html>
