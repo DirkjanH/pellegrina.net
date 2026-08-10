@@ -284,7 +284,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         <link
             href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="/css/LP_badges.css">
+        <link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css">
         <style>
             #editorPreview {
                 min-height: 800px;
@@ -320,7 +320,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                 const previewFrame = document.getElementById('editorPreview');
                 const html = document.getElementById('htmlEditor').value;
                 const fullDoc =
-                    `<!doctype html><html><head><meta charset="utf-8"><title>Preview</title><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`;
+                    `<!doctype html><html><head><meta charset="utf-8"><title>Preview</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${html}</body></html>`;
                 previewFrame.srcdoc = fullDoc;
             }
 
@@ -334,7 +334,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
                 }
                 printWindow.document.open();
                 printWindow.document.write(
-                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - Print</title><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`
+                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - Print</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${html}</body></html>`
                 );
                 printWindow.document.close();
                 printWindow.focus();
@@ -346,7 +346,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
             function saveHtml() {
                 const html = document.getElementById('htmlEditor').value;
                 const fullDoc =
-                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/LP_badges.css"></head><body>${html}</body></html>`;
+                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${html}</body></html>`;
                 const blob = new Blob([fullDoc], {
                     type: 'text/html'
                 });
@@ -386,7 +386,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         <link
             href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="/css/LP_badges.css">
+        <link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css">
     </head>
 
     <body> <?php echo $printHtml; ?> </body>
