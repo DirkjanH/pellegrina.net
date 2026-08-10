@@ -7,6 +7,12 @@
 require_once($_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 
+$cssPath = $_SERVER['DOCUMENT_ROOT'] . '/css/LP_badges.css';
+$cssVersion = '';
+if (file_exists($cssPath)) {
+    $cssVersion = '?v=' . filemtime($cssPath);
+}
+
 // Bepaal cursus-index en cursus-id (GET parameter 'cursus', anders eerste cursus)
 $cursusIndex = 1;
 if (isset($_GET['cursus']) && is_numeric($_GET['cursus']) && $_GET['cursus'] > 0) {
@@ -272,99 +278,97 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     $printHtml = build_print_pages_html($result);
     header('Content-Type: text/html; charset=utf-8');
 ?>
-    <!doctype html>
-    <html>
-
-    <head>
-        <meta charset="utf-8">
-        <title>LP Badges - HTML-editor</title>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css">
-        <style>
-            #editorPreview {
-                min-height: 800px;
-            }
-        </style>
-    </head>
-
-    <body class="w3-light-grey">
-        <div class="w3-container w3-content w3-card-4 w3-padding-24"
-            style="max-width:1200px; margin-top:24px;">
-            <h2 class="w3-center">LP Badges - HTML-editor</h2>
-            <div class="w3-row-padding">
-                <div class="w3-half">
-                    <label class="w3-text"><b>HTML-editor</b></label>
-                    <textarea id="htmlEditor" class="w3-input w3-border"
-                        rows="26"><?php echo htmlspecialchars($printHtml, ENT_QUOTES); ?></textarea>
-                    <button class="w3-button w3-blue w3-margin-top" type="button"
-                        onclick="updatePreview()">Update preview</button>
-                    <button class="w3-button w3-green w3-margin-top" type="button"
-                        onclick="printPreview()">Print</button>
-                    <button class="w3-button w3-black w3-margin-top" type="button"
-                        onclick="saveHtml()">Opslaan als HTML</button>
-                </div>
-                <div class="w3-half">
-                    <label class="w3-text"><b>Preview</b></label>
-                    <iframe id="editorPreview" class="w3-white w3-border"
-                        style="width:100%; min-height:800px; border:1px solid #ccc;"></iframe>
-                </div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LP Badges - HTML-editor</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://pellegrina.net/css/LP_badges.css<?php echo $cssVersion; ?>">
+    <style>
+    #editorPreview {
+        min-height: 800px;
+    }
+    </style>
+</head>
+<body class="w3-light-grey">
+    <div class="w3-container w3-content w3-card-4 w3-padding-24"
+        style="max-width:1200px; margin-top:24px;">
+        <h2 class="w3-center">LP Badges - HTML-editor</h2>
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <label class="w3-text"><b>HTML-editor</b></label>
+                <textarea id="htmlEditor" class="w3-input w3-border"
+                    rows="26"><?php echo htmlspecialchars($printHtml, ENT_QUOTES); ?></textarea>
+                <button class="w3-button w3-blue w3-margin-top" type="button"
+                    onclick="updatePreview()">Update preview</button>
+                <button class="w3-button w3-green w3-margin-top" type="button"
+                    onclick="printPreview()">Print</button>
+                <button class="w3-button w3-black w3-margin-top" type="button"
+                    onclick="saveHtml()">Opslaan als HTML</button>
+            </div>
+            <div class="w3-half">
+                <label class="w3-text"><b>Preview</b></label>
+                <iframe id="editorPreview" class="w3-white w3-border"
+                    style="width:100%; min-height:800px; border:1px solid #ccc;"></iframe>
             </div>
         </div>
-        <script>
-            function updatePreview() {
-                const previewFrame = document.getElementById('editorPreview');
-                const html = document.getElementById('htmlEditor').value;
-                const fullDoc =
-                    `<!doctype html><html><head><meta charset="utf-8"><title>Preview</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${html}</body></html>`;
-                previewFrame.srcdoc = fullDoc;
-            }
+    </div>
+    <script>
+    function updatePreview() {
+        const previewFrame = document.getElementById('editorPreview');
+        const html = document.getElementById('htmlEditor').value;
+        const fullDoc =
+            `<!doctype html><html><head><meta charset="utf-8"><title>Preview</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css<?php echo $cssVersion; ?>"></head><body>${html}</body></html>`;
+        previewFrame.srcdoc = fullDoc;
+    }
 
-            function printPreview() {
-                const html = document.getElementById('htmlEditor').value;
-                const printWindow = window.open('', '_blank');
-                if (!printWindow) {
-                    alert(
-                        'Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
-                    return;
-                }
-                printWindow.document.open();
-                printWindow.document.write(
-                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - Print</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${html}</body></html>`
-                );
-                printWindow.document.close();
-                printWindow.focus();
-                printWindow.onload = function() {
-                    printWindow.print();
-                };
-            }
+    function printPreview() {
+        const html = document.getElementById('htmlEditor').value;
+        const printWindow = window.open('', '_blank');
+        if (!printWindow) {
+            alert(
+                'Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
+            return;
+        }
+        printWindow.document.open();
+        printWindow.document.write(
+            `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - Print</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css<?php echo $cssVersion; ?>"></head><body>${html}</body></html>`
+            );
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.onload = function() {
+            printWindow.print();
+        };
+    }
 
-            function saveHtml() {
-                const html = document.getElementById('htmlEditor').value;
-                const fullDoc =
-                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${html}</body></html>`;
-                const blob = new Blob([fullDoc], {
-                    type: 'text/html'
-                });
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download =
-                    '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", "LP_badges_" . ($cursusName ?: "Badges")); ?>.html';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-            }
-            window.onload = updatePreview;
-        </script>
-    </body>
-
-    </html> <?php
+    function saveHtml() {
+        const html = document.getElementById('htmlEditor').value;
+        const fullDoc =
+            `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css<?php echo $cssVersion; ?>"></head><body>${html}</body></html>`;
+        const blob = new Blob([fullDoc], {
+            type: 'text/html'
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download =
+            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", "LP_badges_" . ($cursusName ?: "Badges")); ?>.html';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
+    window.onload = updatePreview;
+    </script>
+</body>
+</html> <?php
             exit;
         }
 
@@ -373,25 +377,23 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
             $printHtml = build_print_pages_html($result);
             header('Content-Type: text/html; charset=utf-8');
             ?>
-    <!doctype html>
-    <html>
-
-    <head>
-        <meta charset="utf-8">
-        <title>LP Badges - Print</title>
-        <!-- Verbinding maken met Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- De specifieke link voor Alegreya (Medium / 500) -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css">
-    </head>
-
-    <body> <?php echo $printHtml; ?> </body>
-
-    </html> <?php
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LP Badges - Print</title>
+    <!-- Verbinding maken met Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- De specifieke link voor Alegreya (Medium / 500) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://pellegrina.net/css/LP_badges.css<?php echo $cssVersion; ?>">
+</head>
+<body> <?php echo $printHtml; ?> </body>
+</html> <?php
             exit;
         }
 
@@ -399,227 +401,226 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         if (empty($_GET['json']) || $_GET['json'] != '1') {
             // Toon formulier om extra regels toe te voegen en knop om JSON te tonen
             ?>
-    <!doctype html>
-    <html>
-
-    <head>
-        <meta charset="utf-8">
-        <title>LP Badges - invoer (onderhoud)</title>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://pellegrina.net/css/LP_badges.css" rel="stylesheet">
-    </head>
-
-    <body>
-        <div class="w3-container w3-content w3-card-4 w3-padding-32"
-            style="max-width: 900px; margin-top: 32px;">
-            <div class="w3-bar w3-margin-bottom">
-                <a href="?cursus=1"
-                    class="w3-bar-item w3-button<?php if ($cursusIndex === 1) echo ' w3-blue'; ?>">Cursus
-                    1</a>
-                <a href="?cursus=2"
-                    class="w3-bar-item w3-button<?php if ($cursusIndex === 2) echo ' w3-blue'; ?>">Cursus
-                    2</a>
-            </div>
-            <h2 class="w3-center">LP Badges - extra deelnemers toevoegen</h2>
-            <form class="w3-container" method="get" target="_blank">
-                <input type="hidden" name="cursus"
-                    value="<?php echo htmlspecialchars($cursusIndex, ENT_QUOTES); ?>">
-                <label class="w3-text"><b>Invoer</b></label>
-                <textarea class="w3-input w3-border" name="extra" id="extra"
-                    rows="6"
-                    cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea>
-                <small>Voer regels in (één per regel):
-                    naam#nationaliteit#instrument</small>
-                <br><br>
-                <button class="w3-button w3-blue" type="submit" name="json"
-                    value="1">Toon JSON met extra regels</button>
-                <button class="w3-button w3-indigo" type="button"
-                    onclick="previewJson()">Preview JSON</button>
-                <button class="w3-button w3-green" type="submit" name="editor"
-                    value="1">Open bewerkbaar printbestand</button>
-                <button class="w3-button w3-teal" type="button"
-                    onclick="downloadJson()">Sla complete JSON op</button>
-                <button class="w3-button w3-purple" type="button"
-                    onclick="printJson()">Print JSON</button>
-                <button class="w3-button w3-orange" type="button"
-                    onclick="document.getElementById('jsonFileInput').click();">Laad
-                    JSON</button>
-                <input id="jsonFileInput" type="file" accept="application/json"
-                    style="display:none" onchange="loadJsonFile(event)">
-                <p class="w3-text">Aantal badges: <?php echo count($result); ?></p>
-            </form>
-            <hr>
-            <h3 class="w3-center">Huidige resultaten (preview)</h3>
-            <div class="w3-light-grey w3-padding">
-                <label class="w3-text"><b>JSON preview</b></label>
-                <pre
-                    id="jsonPreview"><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
-            </div>
-            <div class="w3-white w3-border w3-padding" style="margin-top:16px;">
-                <label class="w3-text"><b>Badge layout preview</b></label>
-                <div id="badgeLayoutPreview" style="min-height:240px;"></div>
-            </div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LP Badges - invoer (onderhoud)</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://pellegrina.net/css/LP_badges.css<?php echo $cssVersion; ?>"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="w3-container w3-content w3-card-4 w3-padding-32"
+        style="max-width: 900px; margin-top: 32px;">
+        <div class="w3-bar w3-margin-bottom">
+            <a href="?cursus=1"
+                class="w3-bar-item w3-button<?php if ($cursusIndex === 1) echo ' w3-blue'; ?>">Cursus
+                1</a>
+            <a href="?cursus=2"
+                class="w3-bar-item w3-button<?php if ($cursusIndex === 2) echo ' w3-blue'; ?>">Cursus
+                2</a>
         </div>
-        <script>
-            const lpBadgesData =
-                <?php echo json_encode([
+        <h2 class="w3-center">LP Badges - extra deelnemers toevoegen</h2>
+        <form class="w3-container" method="get" target="_blank">
+            <input type="hidden" name="cursus"
+                value="<?php echo htmlspecialchars($cursusIndex, ENT_QUOTES); ?>">
+            <label class="w3-text"><b>Invoer</b></label>
+            <textarea class="w3-input w3-border" name="extra" id="extra"
+                rows="6"
+                cols="80"><?php echo htmlspecialchars($_REQUEST['extra'] ?? '', ENT_QUOTES); ?></textarea>
+            <small>Voer regels in (één per regel):
+                naam#nationaliteit#instrument</small>
+            <br><br>
+            <button class="w3-button w3-blue" type="submit" name="json"
+                value="1">Toon JSON met extra regels</button>
+            <button class="w3-button w3-indigo" type="button"
+                onclick="previewJson()">Preview JSON</button>
+            <button class="w3-button w3-green" type="submit" name="editor"
+                value="1">Open bewerkbaar printbestand</button>
+            <button class="w3-button w3-teal" type="button"
+                onclick="downloadJson()">Sla complete JSON op</button>
+            <button class="w3-button w3-purple" type="button"
+                onclick="printJson()">Print JSON</button>
+            <button class="w3-button w3-orange" type="button"
+                onclick="document.getElementById('jsonFileInput').click();">Laad
+                JSON</button>
+            <input id="jsonFileInput" type="file" accept="application/json"
+                style="display:none" onchange="loadJsonFile(event)">
+            <p class="w3-text">Aantal badges: <?php echo count($result); ?></p>
+        </form>
+        <hr>
+        <h3 class="w3-center">Huidige resultaten (preview)</h3>
+        <div class="w3-light-grey w3-padding">
+            <label class="w3-text"><b>JSON preview</b></label>
+            <pre
+                id="jsonPreview"><?php echo htmlspecialchars(json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), ENT_QUOTES); ?></pre>
+        </div>
+        <div class="w3-white w3-border w3-padding" style="margin-top:16px;">
+            <label class="w3-text"><b>Badge layout preview</b></label>
+            <div id="badgeLayoutPreview" style="min-height:240px;"></div>
+        </div>
+    </div>
+    <script>
+    const lpBadgesData =
+        <?php echo json_encode([
                     'result' => $result,
                     'extra_raw' => $_REQUEST['extra'] ?? '',
                     'cursus' => $cursusIndex,
                     'cursus_name' => $cursusName,
                     'count' => count($result),
                 ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE); ?>;
-            let loadedJsonData = null;
+    let loadedJsonData = null;
 
-            function downloadJson() {
-                const filename =
-                    '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", "LP_badges_" . ($cursusName ?: "Badges")); ?>.json';
-                const currentExtra = document.getElementById('extra').value;
-                const payloadObject = Object.assign({}, lpBadgesData, {
-                    extra_raw: currentExtra
-                });
-                const payload = JSON.stringify(payloadObject, null, 2);
-                const blob = new Blob([payload], {
-                    type: 'application/json'
-                });
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = filename;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-            }
+    function downloadJson() {
+        const filename =
+            '<?php echo preg_replace("/[^A-Za-z0-9_-]+/", "_", "LP_badges_" . ($cursusName ?: "Badges")); ?>.json';
+        const currentExtra = document.getElementById('extra').value;
+        const payloadObject = Object.assign({}, lpBadgesData, {
+            extra_raw: currentExtra
+        });
+        const payload = JSON.stringify(payloadObject, null, 2);
+        const blob = new Blob([payload], {
+            type: 'application/json'
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
 
-            function buildBadgeHtml(data) {
-                const perPage = 14;
-                const pages = [];
-                for (let i = 0; i < data.length; i += perPage) {
-                    pages.push(data.slice(i, i + perPage));
+    function buildBadgeHtml(data) {
+        const perPage = 14;
+        const pages = [];
+        for (let i = 0; i < data.length; i += perPage) {
+            pages.push(data.slice(i, i + perPage));
+        }
+        let html = '';
+        pages.forEach(page => {
+            html += '<div class="page">';
+            page.forEach(item => {
+                const name = item.name ? item.name : '';
+                const countryCode = item.country_code ? item
+                    .country_code : '';
+                const countryLabel = countryCode ?
+                    ` (${countryCode})` : '';
+                const instruments = Array.isArray(item
+                        .instruments_en) ? item.instruments_en
+                    .join(', ') : (item.instruments_en || '');
+                html += '<div class="badge">';
+                html += '<div class="badge-row">';
+                html +=
+                    '<img class="badge-logo" src="https://pellegrina.net/Images/Logos/P-final.jpg" alt="P logo">';
+                html += '<div class="badge-text">';
+                html +=
+                    `<div class="name">${escapeHtml(name + countryLabel)}</div>`;
+                if (instruments) {
+                    html +=
+                        `<div class="instruments">${escapeHtml(instruments)}</div>`;
                 }
-                let html = '';
-                pages.forEach(page => {
-                    html += '<div class="page">';
-                    page.forEach(item => {
-                        const name = item.name ? item.name : '';
-                        const countryCode = item.country_code ? item
-                            .country_code : '';
-                        const countryLabel = countryCode ?
-                            ` (${countryCode})` : '';
-                        const instruments = Array.isArray(item
-                                .instruments_en) ? item.instruments_en
-                            .join(', ') : (item.instruments_en || '');
-                        html += '<div class="badge">';
-                        html += '<div class="badge-row">';
-                        html +=
-                            '<img class="badge-logo" src="https://pellegrina.net/Images/Logos/P-final.jpg" alt="P logo">';
-                        html += '<div class="badge-text">';
-                        html +=
-                            `<div class="name">${escapeHtml(name + countryLabel)}</div>`;
-                        if (instruments) {
-                            html +=
-                                `<div class="instruments">${escapeHtml(instruments)}</div>`;
-                        }
-                        html += '</div>';
-                        html += '</div>';
-                        html += '</div>';
-                    });
-                    html += '</div>';
-                });
-                return html;
-            }
-
-            function escapeHtml(value) {
-                return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g,
-                    '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-            }
-
-            function previewJson() {
-                const jsonData = loadedJsonData || lpBadgesData;
-                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (
-                    Array.isArray(jsonData) ? jsonData : []);
-                const badgeHtml = buildBadgeHtml(resultData);
-                document.getElementById('badgeLayoutPreview').innerHTML = badgeHtml;
-            }
-            window.addEventListener('DOMContentLoaded', () => {
-                previewJson();
+                html += '</div>';
+                html += '</div>';
+                html += '</div>';
             });
+            html += '</div>';
+        });
+        return html;
+    }
 
-            function printJson() {
-                const jsonData = loadedJsonData || lpBadgesData;
-                const resultData = Array.isArray(jsonData.result) ? jsonData.result : (
-                    Array.isArray(jsonData) ? jsonData : []);
-                const badgeHtml = buildBadgeHtml(resultData);
-                const printWindow = window.open('', '_blank');
-                if (!printWindow) {
-                    alert(
-                        'Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
-                    return;
-                }
-                const fullHtml =
-                    `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - JSON Print</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css"></head><body>${badgeHtml}</body></html>`;
-                printWindow.document.open();
-                printWindow.document.write(fullHtml);
-                printWindow.document.close();
-                printWindow.focus();
-                printWindow.onload = function() {
-                    printWindow.print();
-                };
-            }
+    function escapeHtml(value) {
+        return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g,
+            '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
 
-            function loadJsonFile(event) {
-                const file = event.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        const data = JSON.parse(e.target.result);
-                        const currentExtra = document.getElementById('extra').value
-                            .trim();
-                        let extraText = currentExtra;
-                        if (data.extra_raw !== undefined) {
-                            extraText = data.extra_raw;
-                        } else if (Array.isArray(data.result)) {
-                            const extras = data.result.filter(item => item.role ===
-                                'extra').map(item => {
-                                const name = item.name || '';
-                                const country = item.country_code || '';
-                                const instr = Array.isArray(item
-                                        .instruments_en) ? item
-                                    .instruments_en.join(', ') : (item
-                                        .instruments_en || '');
-                                return `${name}#${country}#${instr}`;
-                            }).filter(line => line.trim() !== '');
-                            if (extras.length > 0) {
-                                extraText = extras.join('\n');
-                            }
-                        }
-                        loadedJsonData = data;
-                        document.getElementById('extra').value = extraText;
-                        document.getElementById('jsonPreview').textContent = JSON
-                            .stringify(data, null, 2);
-                        previewJson();
-                        const params = new URLSearchParams();
-                        params.set('cursus', lpBadgesData.cursus || '1');
-                        params.set('editor', '1');
-                        params.set('extra', extraText);
-                        // Open the editor in a new tab with the parameters
-                        const url = '?' + params.toString();
-                        window.open(url, '_blank');
-                    } catch (err) {
-                        alert('Fout bij het laden van JSON: ' + err.message);
+    function previewJson() {
+        const jsonData = loadedJsonData || lpBadgesData;
+        const resultData = Array.isArray(jsonData.result) ? jsonData.result : (
+            Array.isArray(jsonData) ? jsonData : []);
+        const badgeHtml = buildBadgeHtml(resultData);
+        document.getElementById('badgeLayoutPreview').innerHTML = badgeHtml;
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+        previewJson();
+    });
+
+    function printJson() {
+        const jsonData = loadedJsonData || lpBadgesData;
+        const resultData = Array.isArray(jsonData.result) ? jsonData.result : (
+            Array.isArray(jsonData) ? jsonData : []);
+        const badgeHtml = buildBadgeHtml(resultData);
+        const printWindow = window.open('', '_blank');
+        if (!printWindow) {
+            alert(
+                'Kan het afdrukvenster niet openen. Controleer of pop-ups zijn toegestaan.');
+            return;
+        }
+        const fullHtml =
+            `<!doctype html><html><head><meta charset="utf-8"><title>LP Badges - JSON Print</title><link rel="stylesheet" href="https://pellegrina.net/css/LP_badges.css<?php echo $cssVersion; ?>"></head><body>${badgeHtml}</body></html>`;
+        printWindow.document.open();
+        printWindow.document.write(fullHtml);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.onload = function() {
+            printWindow.print();
+        };
+    }
+
+    function loadJsonFile(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const data = JSON.parse(e.target.result);
+                const currentExtra = document.getElementById('extra').value
+                    .trim();
+                let extraText = currentExtra;
+                if (data.extra_raw !== undefined) {
+                    extraText = data.extra_raw;
+                } else if (Array.isArray(data.result)) {
+                    const extras = data.result.filter(item => item.role ===
+                        'extra').map(item => {
+                        const name = item.name || '';
+                        const country = item.country_code || '';
+                        const instr = Array.isArray(item
+                                .instruments_en) ? item
+                            .instruments_en.join(', ') : (item
+                                .instruments_en || '');
+                        return `${name}#${country}#${instr}`;
+                    }).filter(line => line.trim() !== '');
+                    if (extras.length > 0) {
+                        extraText = extras.join('\n');
                     }
-                    event.target.value = '';
-                };
-                reader.readAsText(file, 'utf-8');
+                }
+                loadedJsonData = data;
+                document.getElementById('extra').value = extraText;
+                document.getElementById('jsonPreview').textContent = JSON
+                    .stringify(data, null, 2);
+                previewJson();
+                const params = new URLSearchParams();
+                params.set('cursus', lpBadgesData.cursus || '1');
+                params.set('editor', '1');
+                params.set('extra', extraText);
+                // Open the editor in a new tab with the parameters
+                const url = '?' + params.toString();
+                window.open(url, '_blank');
+            } catch (err) {
+                alert('Fout bij het laden van JSON: ' + err.message);
             }
-        </script>
-    </body>
-
-    </html><?php
+            event.target.value = '';
+        };
+        reader.readAsText(file, 'utf-8');
+    }
+    </script>
+</body>
+</html><?php
             exit;
         }
 
