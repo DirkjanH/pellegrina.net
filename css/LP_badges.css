@@ -30,7 +30,7 @@ body {
 
 .badge {
     box-sizing: border-box;
-    border: 0px dotted #111111;
+    border: 1px dotted #111111;
     padding: 3mm;
     display: flex;
     justify-content: center;
@@ -58,7 +58,7 @@ body {
 
 .badge .name {
     font-weight: 700;
-    font-size: 12pt;
+    font-size: 14pt;
     color: black;
 }
 
@@ -69,8 +69,8 @@ body {
 }
 
 .badge .instruments {
-    font-size: 10pt;
-    color: black;
+    font-size: 12pt;
+    color: rgb(156, 5, 5);
     margin-top: 3mm;
 }
 
