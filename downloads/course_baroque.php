@@ -1,12 +1,15 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php';
-$cursusnr = 2 + $cursus_offset; ?>
+$cursusnr = 2 + $cursus_offset;
+$cssVersion = '?v=' . time(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <!-- CSS: -->
-    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+    <link rel="stylesheet"
+        href="/css/pellegrina_stijlen.css<?php echo $cssVersion; ?>"
+        type="text/css">
     <!-- InstanceBeginEditable name="doctitle" -->
     <title>Information & scores
         <?php echo $cursussen[$cursusnr]['cursusnaam_en'] ?></title>
@@ -14,10 +17,11 @@ $cursusnr = 2 + $cursus_offset; ?>
     <!-- InstanceEndEditable -->
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
-        type="text/css">
+    <link href="/css/pagina_stijlen_algemeen.css<?php echo $cssVersion; ?>"
+        rel="stylesheet" type="text/css">
     <!-- InstanceBeginEditable name="head" -->
-    <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+    <link href="../css/pellegrina_stijlen.css<?php echo $cssVersion; ?>"
+        rel="stylesheet" type="text/css">
     <style type="text/css">
     h3 {
         margin: 25px 0px 15px;
