@@ -1014,6 +1014,12 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 			CKEDITOR.ClassicEditor.create(message, {
 				licenseKey: 'GPL',
 				language: 'nl',
+				removePlugins: [
+					'RealTimeCollaborativeEditing',
+					'RealTimeCollaborativeComments',
+					'RealTimeCollaborativeTrackChanges',
+					'Comments', 'TrackChanges', 'PresenceList', 'CloudServices'
+				],
 				link: {
 					decorators: {
 						openInNewTab: {
