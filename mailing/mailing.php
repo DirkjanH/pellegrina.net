@@ -30,6 +30,17 @@ $instrzang[2] = 'AND instrumentalist <=> 1';
 $instrzang[3] = 'AND zanger <=> 1';
 
 $aantal_kolommen = 5;
+$adressen = [];
+$inschrijving = [];
+$results = [];
+$pcgebieden = [];
+$cursusnaam = [];
+$aantal = 0;
+$nieuwsbrief = [
+	'subject' => '',
+	'message' => '',
+	'afzender' => ''
+];
 
 // De formulierkeuzes blijven tussen opeenvolgende POST-verzoeken beschikbaar.
 // Daardoor kan een gebruiker eerst adressen selecteren en daarna de nieuwsbrief
@@ -94,6 +105,7 @@ function lees_gdata($groep = '')
 {
 
 	global $voorzetsels, $leeg;
+	$results = [];
 	$adresbestand = '/var/www/vhosts/horringa.net/.local/share/contacts/contacts.csv'; // in map '.local/share/contacts'
 
 	// Google Contacts exporteert soms velden over meerdere regels; eerst worden
@@ -164,6 +176,7 @@ function lees_gdata($groep = '')
 function lees_outlook($input)
 {
 	global $voorzetsels, $leeg, $ctrlf, $enclosure;
+	$adressen = [];
 	$witregel = $ctrlf . $ctrlf;
 	$lijst = explode($witregel, $input);
 	// Outlook scheidt contacten met een lege regel; ontbreekt die scheiding,
@@ -201,6 +214,7 @@ function lees_outlook($input)
 function lees_distributielijst($input)
 {
 	global $voorzetsels, $leeg, $ctrlf, $enclosure;
+	$adressen = [];
 
 	//d($input);
 
@@ -238,6 +252,8 @@ function lees_distributielijst($input)
 function lees_access($input)
 {
 	global $voorzetsels, $leeg, $ctrlf, $enclosure;
+	$adressen = [];
+	$delimiter = ',';
 	if (strpos($input, '","'))
 		$delimiter = ',';
 	elseif (strpos($input, '";"'))
@@ -255,7 +271,7 @@ function lees_access($input)
 	// ... rewind the "file" so we can read what we just wrote...
 	rewind($fp);
 	// ... read the entire line into a variable...
-	unset($adressen);
+	$adressen = [];
 	$i = 0;
 	while (!feof($fp)) {
 		$tmp = fgetcsv($fp, 1000, $delimiter, $enclosure);
@@ -277,6 +293,8 @@ function lees_access($input)
 function lees_google($input)
 {
 	global $voorzetsels, $leeg, $enclosure;
+	$adressen = [];
+	$lijst = [];
 	$regelscheiding = ', ';
 	if (strpos($input, $regelscheiding) === false)
 		echo '<script language="javascript">confirm("Dit zijn geen Google-adressen. Wil je dit?")</script>;';
@@ -341,7 +359,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'alles':
 
-			unset($adressen);
+			$adressen = [];
 
 			$query_inschrijving = sprintf(
 				"SELECT DISTINCT
@@ -376,7 +394,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'niet-ingeschreven':
 
-			unset($adressen);
+			$adressen = [];
 
 			$query_inschrijving = sprintf(
 				"SELECT DISTINCT
@@ -438,7 +456,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'utrecht':
 
-			unset($adressen);
+			$adressen = [];
 			unset($_SESSION['adressen']);
 
 			$results = lees_gdata();
@@ -457,7 +475,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'culemborg':
 
-			unset($adressen);
+			$adressen = [];
 			unset($_SESSION['adressen']);
 
 			$results = lees_gdata();
@@ -474,7 +492,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'arnhem':
 
-			unset($adressen);
+			$adressen = [];
 			unset($_SESSION['adressen']);
 
 			$results = lees_gdata();
@@ -491,7 +509,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'afoort':
 
-			unset($adressen);
+			$adressen = [];
 			unset($_SESSION['adressen']);
 
 			$results = lees_gdata();
@@ -510,8 +528,9 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'postcodegebied':
 
-			unset($adressen);
+			$adressen = [];
 			unset($_SESSION['adressen']);
+			$pcgebieden = [];
 
 			d($_POST['postcodegebied']);
 			function viercijfers($code)
@@ -532,6 +551,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 				else $gebieden[0] = $pcg;
 				// var_dump($gebieden);
 				foreach ($gebieden as $gebied) {
+					$pc = ['', ''];
 					if (strpos($gebied, '-')) $pc = explode('-', $gebied);
 					// var_dump($pc);
 					$pc[0] = viercijfers($pc[0]);
@@ -585,7 +605,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 			break;
 
 		case 'emails':
-			unset($adressen);
+			$adressen = [];
 
 			$adr = explode("\n", stripslashes($_POST['outlook']));
 			$adres = array_unique($adr);
@@ -606,7 +626,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'cursus':
 
-			unset($adressen);
+			$adressen = [];
 
 			$query_inschrijving = sprintf(
 				"SELECT DISTINCT naam, voornaam, password, email, CursusId_FK 
@@ -637,7 +657,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 
 		case 'project':
 
-			unset($adressen);
+			$adressen = [];
 
 			$query_inschrijving = sprintf(
 				"SELECT naam, voornaam, password, email, CursusId_FK FROM project_aanmelding, dlnmr 
@@ -945,9 +965,11 @@ if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 		$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
 		$nieuwsbrief = select_query($query_messages, 1);
 
-		echo '<p>Totaal aantal adressen in deze mailing ' . $mailing_naam . ': ' . $mailing_aantal . '</p>';
-		echo '<p>Toon de mailing via <a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a></p>';
-		echo '<p>Ga naar <a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a> voor verzenden</p>';
+		if (isset($mailingId_FK)) {
+			echo '<p>Totaal aantal adressen in deze mailing ' . $_POST['subject'] . ': ' . $mailing_aantal . '</p>';
+			echo '<p>Toon de mailing via <a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a></p>';
+			echo '<p>Ga naar <a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a> voor verzenden</p>';
+		}
 		break; // einde verzend mailing
 }
 
@@ -982,13 +1004,15 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
-	<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js">
+	<script
+		src="https://cdn.ckeditor.com/ckeditor5/41.4.2/super-build/ckeditor.js">
 	</script>
 	<script type="text/javascript">
 		function initializeMessageEditor() {
 			var message = document.querySelector('#message');
 			if (!message) return;
-			ClassicEditor.create(message, {
+			CKEDITOR.ClassicEditor.create(message, {
+				licenseKey: 'GPL',
 				language: 'nl',
 				link: {
 					decorators: {
@@ -1002,10 +1026,14 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 						}
 					}
 				},
-				toolbar: ['heading', '|', 'bold', 'italic', 'link',
-					'blockQuote', 'insertTable', 'mediaEmbed', '|',
-					'bulletedList', 'numberedList', 'outdent', 'indent',
-					'|', 'undo', 'redo'
+				toolbar: ['heading', '|', 'fontFamily', 'fontSize', 'bold',
+					'italic', 'strikethrough', 'subscript',
+					'superscript', 'fontColor', 'fontBackgroundColor',
+					'highlight', '|', 'link', 'blockQuote', 'code',
+					'codeBlock', 'insertTable', 'mediaEmbed', '|',
+					'alignment', 'bulletedList', 'numberedList',
+					'outdent', 'indent', 'horizontalLine', 'pageBreak',
+					'removeFormat', 'sourceEditing', '|', 'undo', 'redo'
 				]
 			}).then(editor => {
 				document.getElementById('formulier').addEventListener(
@@ -1299,17 +1327,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC"
+					type="checkbox" id="CC" value="CC" <?php
+														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
+				CC <input name="test" type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
-					type="checkbox" id="test" value="test"
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
+					id="header" value="uit"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
-					name="header" type="checkbox" id="header" value="uit"
-					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
-						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-																			else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
+				<label><br> Afzender: <input name="afzender" type="text"
+						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+												else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
