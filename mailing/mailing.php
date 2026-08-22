@@ -1024,7 +1024,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 					'CKBox', 'CKBoxUtils', 'CKFinder', 'CKFinderUploadAdapter',
 					'CKBoxImageEdit', 'CKBoxImageEditEditing',
 					'CKBoxImageEditUI', 'EasyImage', 'ExportPdf', 'ExportWord',
-					'ImportWord'
+					'ImportWord', 'WProofreader', 'Pagination', 'DocumentOutline'
 				],
 				link: {
 					decorators: {
@@ -1038,14 +1038,10 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 						}
 					}
 				},
-				toolbar: ['heading', '|', 'fontFamily', 'fontSize', 'bold',
-					'italic', 'strikethrough', 'subscript',
-					'superscript', 'fontColor', 'fontBackgroundColor',
-					'highlight', '|', 'link', 'blockQuote', 'code',
-					'codeBlock', 'insertTable', 'mediaEmbed', '|',
-					'alignment', 'bulletedList', 'numberedList',
-					'outdent', 'indent', 'horizontalLine', 'pageBreak',
-					'removeFormat', 'sourceEditing', '|', 'undo', 'redo'
+				toolbar: ['undo', 'redo', '|', 'heading', '|', 'bold',
+					'italic', 'subscript', 'superscript', '|', 'link',
+					'bulletedList', 'numberedList', '|', 'blockQuote',
+					'insertTable', 'mediaEmbed'
 				]
 			}).then(editor => {
 				document.getElementById('formulier').addEventListener(
