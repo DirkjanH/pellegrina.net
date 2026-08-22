@@ -1125,6 +1125,13 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
             return true;
         }
     }
+
+    function toggleBerichten() {
+        var wrapper = document.getElementById('berichten_wrapper');
+        var knop = document.getElementById('berichten_header');
+        var geopend = wrapper.classList.toggle('berichten_open');
+        knop.setAttribute('aria-expanded', geopend ? 'true' : 'false');
+    }
     </script>
     <link
         href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,latin-ext'
@@ -1167,11 +1174,55 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 
     div#berichten_wrapper {
         width: 100%;
-        clear: all;
-        z-index: 1;
-        position: relative;
-        top: 0px;
-        right: 0px;
+        clear: both;
+        z-index: 10;
+        position: fixed;
+        top: 10px;
+        right: 0;
+        width: 400px;
+        max-width: calc(100vw - 20px);
+        background: #fff;
+        border: 1px solid #999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    }
+
+    #berichten_header {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border: 0;
+        background: #eee;
+        color: inherit;
+        font: inherit;
+        font-weight: bold;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    #berichten_inhoud {
+        display: none;
+        max-height: 80vh;
+        overflow: auto;
+    }
+
+    #berichten_wrapper.berichten_open #berichten_inhoud {
+        display: block;
+    }
+
+    @media (max-width: 600px) {
+        div#berichten_wrapper {
+            position: relative;
+            top: auto;
+            right: auto;
+            width: 100%;
+            max-width: none;
+            margin-top: 16px;
+            box-shadow: none;
+        }
+
+        #berichten_inhoud {
+            max-height: none;
+        }
     }
 
     div#message_area {
@@ -1393,41 +1444,46 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
         </div>
         </div>
         <div id="berichten_wrapper">
-            <table border="1" cellpadding="4" class="tablesorter"
-                id="berichten">
-                <thead>
-                    <tr>
-                        <th><label>Subject <span class="nadruk">(kies = Sh-Alt
-                                    F)</span>: <input type="text"
-                                    name="zoek_subject" id="zoek_subject"
-                                    accesskey="F"
-                                    value="<?php
+            <button type="button" id="berichten_header" aria-expanded="false"
+                aria-controls="berichten_inhoud" onclick="toggleBerichten()">
+                Opgeslagen nieuwsbrieven </button>
+            <div id="berichten_inhoud">
+                <table border="1" cellpadding="4" class="tablesorter"
+                    id="berichten">
+                    <thead>
+                        <tr>
+                            <th><label>Subject <span class="nadruk">(kies =
+                                        Sh-Alt F)</span>: <input type="text"
+                                        name="zoek_subject" id="zoek_subject"
+                                        accesskey="F"
+                                        value="<?php
 											if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') echo $_POST['zoek_subject'] ?>">
-                                <input name="subject" type="submit" id="subject"
-                                    value="zoek">
-                            </label>
-                        </th>
-                        <th width="13%">Datum:</th>
-                        <th width="22%">Afzender:</th>
-                    </tr>
-                </thead>
-                <tbody> <?php
+                                    <input name="subject" type="submit"
+                                        id="subject" value="zoek">
+                                </label>
+                            </th>
+                            <th width="13%">Datum:</th>
+                            <th width="22%">Afzender:</th>
+                        </tr>
+                    </thead>
+                    <tbody> <?php
 						$query_messages = "SELECT * FROM messages WHERE {$where} order by datum desc";
 						$nieuwsbrieven = $db->Query($query_messages);
 						foreach ($nieuwsbrieven as $nieuwsbrief_x) {
 							$afzender = strrrchr($nieuwsbrief_x['afzender'], '#');
 							$datum = strrrchr($nieuwsbrief_x['datum'], ' ');
 						?> <tr>
-                        <td><a
-                                onClick="messageZoek(<?php echo $nieuwsbrief_x['messageId']; ?>)">
-                                <?php echo stripslashes($nieuwsbrief_x['subject']); ?></a>&nbsp;
-                        </td>
-                        <td><?php echo $datum; ?>&nbsp;</td>
-                        <td><?php echo $afzender; ?>&nbsp;</td>
-                    </tr> <?php
+                            <td><a
+                                    onClick="messageZoek(<?php echo $nieuwsbrief_x['messageId']; ?>)">
+                                    <?php echo stripslashes($nieuwsbrief_x['subject']); ?></a>&nbsp;
+                            </td>
+                            <td><?php echo $datum; ?>&nbsp;</td>
+                            <td><?php echo $afzender; ?>&nbsp;</td>
+                        </tr> <?php
 							}
 								?> </tbody>
-            </table>
+                </table>
+            </div>
         </div>
     </form>
 </body>
