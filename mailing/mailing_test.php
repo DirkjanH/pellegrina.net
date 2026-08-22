@@ -981,32 +981,35 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
     <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
-    <script
-        src="/vendor/tinymce/tinymce/tinymce.min.js?apiKey=qe1ss57qvki0ff97cxn83w9ip261wi2tkee1b76opnd2kc8j">
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js">
     </script>
     <script type="text/javascript">
-    tinymce.init({
-        selector: 'textarea#message',
-        license_key: 'gpl',
+    ClassicEditor.create(document.querySelector('#message'), {
         language: 'nl',
-        language_url: '/taal_voor_tinymce/langs/nl.js', // site absolute URL
-        browser_spellcheck: true,
-        height: '1500px',
-        width: '100%',
-        menubar: 'tools view',
-        plugins: 'image imagetools emoticons fullscreen print code preview fullpage searchreplace autolink autoresize directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime lists wordcount imagetools textpattern help spellchecker',
-        toolbar: 'formatselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | link image media pageembed code | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat | addcomment link fullscreen emoticons image',
-        default_link_target: "_blank",
-        link_assume_external_targets: true,
-        link_context_toolbar: true,
-        relative_urls: false,
-        remove_script_host: false,
-        document_base_url: "https://www.pellegrina.net/",
-        convert_urls: false,
-        relative_urls: false,
-        contextmenu: true,
-        content_css: ['/css/mailing.css']
-    });
+        link: {
+            decorators: {
+                openInNewTab: {
+                    mode: 'manual',
+                    label: 'Openen in nieuw tabblad',
+                    attributes: {
+                        target: '_blank',
+                        rel: 'noopener noreferrer'
+                    }
+                }
+            }
+        },
+        toolbar: ['heading', '|', 'bold', 'italic', 'link',
+            'blockQuote', 'insertTable', 'mediaEmbed', '|',
+            'bulletedList', 'numberedList', 'outdent', 'indent',
+            '|', 'undo', 'redo'
+        ]
+    }).then(editor => {
+        document.getElementById('formulier').addEventListener('submit',
+            () => {
+                editor.updateSourceElement();
+            });
+    }).catch(error => console.error('CKEditor kon niet worden gestart:',
+        error));
 
     function Selecteer(code, Nr) {
         switch (code) {
@@ -1176,6 +1179,14 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
         display: inline-block;
         width: 100%;
         overflow: hidden;
+    }
+
+    #message_area .ck-editor {
+        width: 100%;
+    }
+
+    #message_area .ck-editor__editable_inline {
+        min-height: 1500px;
     }
     -->
     </style>
