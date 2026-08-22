@@ -1020,7 +1020,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 					'RealTimeCollaborativeTrackChanges',
 					'Comments', 'TrackChanges', 'PresenceList', 'CloudServices',
 					'CKBox', 'CKBoxUtils', 'CKFinder', 'CKFinderUploadAdapter',
-					'EasyImage'
+					'CKBoxImageEdit', 'CKBoxImageEditEditing',
+					'CKBoxImageEditUI', 'EasyImage'
 				],
 				link: {
 					decorators: {
