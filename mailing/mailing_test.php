@@ -1145,6 +1145,12 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 		rel='stylesheet' type='text/css'> <?php include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/jquery_opdrachten.php');
 											?> <style type="text/css">
 		<!--
+		html,
+		body {
+			height: 100%;
+			overflow: hidden;
+		}
+
 		body {
 			padding: 0 10px;
 		}
@@ -1218,12 +1224,13 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 
 		@media (max-width: 600px) {
 			div#berichten_wrapper {
-				position: relative;
+				position: fixed;
 				top: auto;
-				right: auto;
+				bottom: 0;
+				left: 0;
+				right: 0;
 				width: 100%;
 				max-width: none;
-				margin-top: 16px;
 				box-shadow: none;
 			}
 
@@ -1234,17 +1241,31 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 
 		div#message_area {
 			z-index: 1;
-			display: inline-block;
+			display: block;
 			width: 100%;
-			overflow: hidden;
+			height: 100vh;
+			box-sizing: border-box;
+			overflow-x: hidden;
+			overflow-y: auto;
 		}
 
 		#message_area .ck-editor {
+			display: flex;
+			flex-direction: column;
 			width: 100%;
+			height: calc(100vh - 260px);
+			min-height: 300px;
+		}
+
+		#message_area .ck-editor__main {
+			min-height: 0;
+			flex: 1;
 		}
 
 		#message_area .ck-editor__editable_inline {
-			min-height: 1500px;
+			height: 100%;
+			min-height: 0;
+			overflow-y: auto;
 		}
 		-->
 	</style>
@@ -1278,17 +1299,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = "su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC" <?php
-														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
-				CC <input name="test" type="checkbox" id="test" value="test"
+					type="checkbox" id="CC" value="CC"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
-					id="header" value="uit"
+					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
+					type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
-				<label><br> Afzender: <input name="afzender" type="text"
-						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-												else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
+					name="header" type="checkbox" id="header" value="uit"
+					<?php
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
+						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+																			else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
