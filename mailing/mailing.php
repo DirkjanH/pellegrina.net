@@ -1031,7 +1031,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
-	<script src="https://cdn.ckeditor.com/4.22.1/standard-all/ckeditor.js">
+	<script src="https://cdn.ckeditor.com/4.25.2-lts/standard-all/ckeditor.js">
 	</script>
 	<script src="./main.js"></script>
 	<script type="text/javascript">
@@ -1339,17 +1339,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC" <?php
-														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
-				CC <input name="test" type="checkbox" id="test" value="test"
+					type="checkbox" id="CC" value="CC"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
-					id="header" value="uit"
+					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
+					type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
-				<label><br> Afzender: <input name="afzender" type="text"
-						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-												else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
+					name="header" type="checkbox" id="header" value="uit"
+					<?php
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
+						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+																			else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
