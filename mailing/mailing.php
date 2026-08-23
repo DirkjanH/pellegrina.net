@@ -1031,39 +1031,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
-	<script src="https://cdn.ckeditor.com/ckeditor5/48.4.0/ckeditor5.umd.js"
-		crossorigin></script>
-	<script src="https://cdn.ckeditor.com/ckeditor5/48.4.0/translations/nl.umd.js"
-		crossorigin></script>
+	<script src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@41.4.2/build/ckeditor.js"></script>
 	<script src="./main.js"></script>
 	<script type="text/javascript">
 		function initializeMessageEditor() {
 			var message = document.querySelector('#message');
 			if (!message) return;
-			CKEDITOR.ClassicEditor.create(message, {
-				licenseKey: 'GPL',
-				language: 'nl',
-				removePlugins: [
-					'RealTimeCollaborativeEditing',
-					'RealTimeCollaborativeComments',
-					'RealTimeCollaborativeTrackChanges',
-					'RealTimeCollaborativeRevisionHistory', 'Comments',
-					'TrackChanges', 'PresenceList', 'CloudServices',
-					'RevisionHistory', 'CKBox', 'CKBoxUtils', 'CKFinder',
-					'CKFinderUploadAdapter', 'CKBoxImageEdit',
-					'CKBoxImageEditEditing', 'CKBoxImageEditUI', 'EasyImage',
-					'ExportPdf', 'ExportWord', 'ImportWord', 'WProofreader',
-					'Pagination', 'DocumentOutline'
-				],
+			ClassicEditor.create(message, {
 				toolbar: [
-					'undo', 'redo', '|', 'sourceEditing', 'heading', 'style',
-					'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
-					'highlight', '|', 'bold', 'italic', 'underline',
-					'strikethrough', 'subscript', 'superscript', 'removeFormat',
-					'|', 'alignment', 'bulletedList', 'numberedList', 'todoList',
-					'outdent', 'indent', 'link', 'blockQuote', 'insertTable',
-					'codeBlock', 'horizontalLine', 'pageBreak',
-					'specialCharacters', 'mediaEmbed'
+					'heading', '|', 'bold', 'italic', 'link',
+					'bulletedList', 'numberedList', 'blockQuote',
+					'insertTable', 'undo', 'redo'
 				]
 			}).then(editor => {
 				document.getElementById('formulier').addEventListener(
