@@ -1031,23 +1031,34 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
-	<script src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@41.4.2/build/ckeditor.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@41.4.2/build/ckeditor.js">
+	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-build-classic@41.4.2/build/translations/nl.js">
+	</script>
 	<script src="./main.js"></script>
 	<script type="text/javascript">
 		function initializeMessageEditor() {
 			var message = document.querySelector('#message');
 			if (!message) return;
 			ClassicEditor.create(message, {
-				toolbar: [
-					'heading', '|', 'bold', 'italic', 'link',
-					'bulletedList', 'numberedList', 'blockQuote',
-					'insertTable', 'undo', 'redo'
+				language: 'nl',
+				toolbar: ['undo', 'redo', '|', 'sourceEditing', 'heading',
+					'fontSize', 'fontFamily', 'fontColor',
+					'fontBackgroundColor', 'highlight', '|', 'bold',
+					'italic', 'underline', 'strikethrough', 'subscript',
+					'superscript', 'removeFormat', '|', 'alignment',
+					'bulletedList', 'numberedList', 'outdent', 'indent',
+					'link', 'blockQuote', 'insertTable', 'code',
+					'codeBlock', 'htmlEmbed', 'horizontalLine',
+					'pageBreak', 'mediaEmbed'
 				]
 			}).then(editor => {
 				document.getElementById('formulier').addEventListener(
 					'submit',
 					() => {
-						editor.updateSourceElement();
+						message.value = editor.getData();
 					});
 			}).catch(error => console.error('CKEditor kon niet worden gestart:',
 				error));
