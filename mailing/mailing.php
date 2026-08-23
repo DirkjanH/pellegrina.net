@@ -1031,7 +1031,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
-	<script src="https://cdn.ckeditor.com/4.25.2-lts/standard-all/ckeditor.js">
+	<script src="https://cdn.ckeditor.com/4.22.1/standard-all/ckeditor.js">
 	</script>
 	<script src="./main.js"></script>
 	<script type="text/javascript">
