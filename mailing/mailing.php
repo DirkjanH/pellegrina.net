@@ -1031,22 +1031,48 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
-	<script src="https://cdn.ckeditor.com/4.22.1/standard-all/ckeditor.js">
-	</script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/48.4.0/ckeditor5.umd.js"
+		crossorigin></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/48.4.0/translations/nl.umd.js"
+		crossorigin></script>
 	<script src="./main.js"></script>
 	<script type="text/javascript">
 		function initializeMessageEditor() {
 			var message = document.querySelector('#message');
 			if (!message) return;
-			CKEDITOR.replace(message, {
+			CKEDITOR.ClassicEditor.create(message, {
+				licenseKey: 'GPL',
 				language: 'nl',
-				removePlugins: 'exportpdf,exportword,cloudservices',
-				toolbar: 'Full'
-			});
-			document.getElementById('formulier').addEventListener('submit',
-				function() {
-					CKEDITOR.instances.message.updateElement();
-				});
+				removePlugins: [
+					'RealTimeCollaborativeEditing',
+					'RealTimeCollaborativeComments',
+					'RealTimeCollaborativeTrackChanges',
+					'RealTimeCollaborativeRevisionHistory', 'Comments',
+					'TrackChanges', 'PresenceList', 'CloudServices',
+					'RevisionHistory', 'CKBox', 'CKBoxUtils', 'CKFinder',
+					'CKFinderUploadAdapter', 'CKBoxImageEdit',
+					'CKBoxImageEditEditing', 'CKBoxImageEditUI', 'EasyImage',
+					'ExportPdf', 'ExportWord', 'ImportWord', 'WProofreader',
+					'Pagination', 'DocumentOutline'
+				],
+				toolbar: [
+					'undo', 'redo', '|', 'sourceEditing', 'heading', 'style',
+					'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor',
+					'highlight', '|', 'bold', 'italic', 'underline',
+					'strikethrough', 'subscript', 'superscript', 'removeFormat',
+					'|', 'alignment', 'bulletedList', 'numberedList', 'todoList',
+					'outdent', 'indent', 'link', 'blockQuote', 'insertTable',
+					'codeBlock', 'horizontalLine', 'pageBreak',
+					'specialCharacters', 'mediaEmbed'
+				]
+			}).then(editor => {
+				document.getElementById('formulier').addEventListener(
+					'submit',
+					() => {
+						editor.updateSourceElement();
+					});
+			}).catch(error => console.error('CKEditor kon niet worden gestart:',
+				error));
 		}
 		document.addEventListener('DOMContentLoaded', initializeMessageEditor);
 
@@ -1281,7 +1307,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			overflow-y: auto;
 		}
 
-		#message_area .cke {
+		#message_area .ck-editor {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
@@ -1289,12 +1315,12 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			min-height: 300px;
 		}
 
-		#message_area .cke_contents {
+		#message_area .ck-editor__main {
 			min-height: 0;
 			flex: 1;
 		}
 
-		#message_area .cke_wysiwyg_frame {
+		#message_area .ck-editor__editable_inline {
 			height: 100%;
 			min-height: 0;
 			overflow-y: auto;
