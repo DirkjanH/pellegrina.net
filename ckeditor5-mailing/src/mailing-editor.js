@@ -25,6 +25,7 @@ import { Heading } from "@ckeditor/ckeditor5-heading"
 import { Highlight } from "@ckeditor/ckeditor5-highlight"
 import { HorizontalLine } from "@ckeditor/ckeditor5-horizontal-line"
 import { HtmlEmbed } from "@ckeditor/ckeditor5-html-embed"
+import { GeneralHtmlSupport } from "@ckeditor/ckeditor5-html-support"
 import {
 	Image,
 	ImageCaption,
@@ -72,6 +73,7 @@ MailingEditor.builtinPlugins = [
 	Highlight,
 	HorizontalLine,
 	HtmlEmbed,
+	GeneralHtmlSupport,
 	Image,
 	ImageCaption,
 	ImageInsert,
