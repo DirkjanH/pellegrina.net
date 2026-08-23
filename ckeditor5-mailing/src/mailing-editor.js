@@ -3,6 +3,7 @@ import { Alignment } from "@ckeditor/ckeditor5-alignment"
 import { Autoformat } from "@ckeditor/ckeditor5-autoformat"
 import {
 	Bold,
+	Code,
 	Italic,
 	Strikethrough,
 	Subscript,
@@ -10,7 +11,7 @@ import {
 	Underline,
 } from "@ckeditor/ckeditor5-basic-styles"
 import { BlockQuote } from "@ckeditor/ckeditor5-block-quote"
-import { Code, CodeBlock } from "@ckeditor/ckeditor5-code-block"
+import { CodeBlock } from "@ckeditor/ckeditor5-code-block"
 import { Essentials } from "@ckeditor/ckeditor5-essentials"
 import { FindAndReplace } from "@ckeditor/ckeditor5-find-and-replace"
 import {
@@ -49,6 +50,7 @@ import { Style } from "@ckeditor/ckeditor5-style"
 import { Table, TableToolbar } from "@ckeditor/ckeditor5-table"
 import { Undo } from "@ckeditor/ckeditor5-undo"
 import "@ckeditor/ckeditor5-theme-lark/theme/theme.css"
+import "@ckeditor/ckeditor5-core/dist/translations/nl.js"
 
 class MailingEditor extends ClassicEditor {}
 

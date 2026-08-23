@@ -2,6 +2,7 @@ const path = require("path")
 const { styles } = require("@ckeditor/ckeditor5-dev-utils")
 
 module.exports = {
+	context: __dirname,
 	mode: "production",
 	entry: "./src/mailing-editor.js",
 	output: {
@@ -13,6 +14,10 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.svg$/,
+				use: ["raw-loader"],
+			},
 			{
 				test: /\.css$/,
 				use: [
