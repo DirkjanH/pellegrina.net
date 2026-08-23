@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/google_contacts.php';
 
 use Pelago\Emogrifier\CssInliner;
 use function \PHP81_BC\strftime;
@@ -109,74 +110,16 @@ function super_unique($array, $key)
 
 function lees_gdata($groep = '')
 {
-
 	global $voorzetsels, $leeg;
-	$results = [];
-	$adresbestand = '/var/www/vhosts/horringa.net/.local/share/contacts/contacts.csv'; // in map '.local/share/contacts'
-
-	// Google Contacts exporteert soms velden over meerdere regels; eerst worden
-	// die regeleinden hersteld, daarna kan iedere regel als CSV worden gelezen.
-	if ((file_exists($adresbestand)) !== FALSE) {
-		$datastring_converted = file_get_contents($adresbestand);
-		$reg_expr = '#Keywords,\d\d\d\d-\d\d-\d\d\n#';
-		d($reg_expr, $datastring_converted);
-		//$datastring_converted = substr($datastring_converted, strpos($datastring_converted, 'Type,Jot 2 - Value' . PHP_EOL) + 19);
-		$datastring_converted = preg_replace($reg_expr, '#$#', $datastring_converted);
-		d($datastring_converted);
-		$datastring_converted = str_replace(',,' . PHP_EOL, '#$#', $datastring_converted);
-		$datastring_converted = str_replace('- Value' . PHP_EOL, '- Value#$#', $datastring_converted);
-		$datastring_converted = str_replace(PHP_EOL, '|', $datastring_converted);
-		$datastring_converted = str_replace('#$#', ',,' . PHP_EOL, $datastring_converted);
-		d($datastring_converted);
-		$lines = explode(PHP_EOL, $datastring_converted);
-
-		$velden = str_getcsv($lines[0], ",", "\"");
-		unset($lines[0]); // Kolom headers
-		d($lines, $velden);
-
-		$voornaam = array_search('First Name', $velden);
-		$middelnaam = array_search('Middle Name', $velden);
-		$achternaam = array_search('Last Name', $velden);
-		$group = array_search('Labels', $velden);
-		$email1 = array_search('E-mail 1 - Value', $velden);
-		$email2 = array_search('E-mail 2 - Value', $velden);
-		$pc1 = array_search('Address 1 - Postal Code', $velden);
-		$pc2 = array_search('Address 2 - Postal Code', $velden);
-		d($voornaam, $middelnaam, $achternaam, $group, $email1, $email2, $pc1, $pc2);
-
-		foreach ($lines as $line) {
-			// Alleen contacten met een e-mailadres en zonder uitsluitingslabel
-			// kunnen ontvanger worden. De optionele groep verfijnt die selectie.
-			$data = str_getcsv($line, ",", "\"");
-			if (((isset($data[$email1]) and $data[$email1] !== '') or (isset($data[$email2]) and $data[$email2] !== '')) and (strstr($data[$group], 'Geen folders') === false)) {
-				unset($adres);
-				$adres['naam'] = str_replace('  ', ' ', ($data[$voornaam] . ' ' . $data[$middelnaam] . ' ' . $data[$achternaam]));
-				$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $data[$voornaam]));
-				if ($data[$email1] != '') $adres['email'] = $data[$email1];
-				else $adres['email'] = $data[$email2];
-				if (strstr($adres['email'], ' ::: ')) $adres['email'] = substr($adres['email'], 0, strpos($adres['email'], ' ::: '));
-				if ($data[$pc1] != '') $adres['postcode'] = $data[$pc1];
-				else $adres['postcode'] = $data[$pc2];
-				//			if (strstr($adres['postcode'], ' ::: ')) $adres['postcode'] = substr($adres['postcode'], 0, strpos($adres['postcode'], ' ::: '));
-				if (isset($adres['postcode']) and $adres['postcode'] != '' and preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) $adres['land'] = 'NL';
-				$adres['groep'] = $data[$group];
-				//	d($adres);
-				if (isset($groep) and $groep != '') {
-					if (strstr($adres['groep'], $groep)) {
-						if (!(strstr($groep, 'LaPel') and strstr($data[31], 'LaPel niet')))
-							$results[] = $adres;
-					}
-				} else $results[] = $adres;
-			}
-			//else echo('Pech!<br>');
+	$results = google_contacts_read($groep);
+	foreach ($results as &$adres) {
+		$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $adres['voornaam']));
+		if ($adres['postcode'] !== '' && preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) {
+			$adres['land'] = 'NL';
 		}
-	} else echo ('Bestand contacts.csv staat niet hier<br>');
-
-	$results = sort_array($results, 'postcode');
-
-	d($results, $_SERVER);
-
-	return $results;
+	}
+	unset($adres);
+	return sort_array($results, 'postcode');
 }
 
 function lees_outlook($input)
@@ -1339,17 +1282,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
                 <br>
                 <input name="verzenden" type="checkbox" id="verzenden"
                     value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-                    type="checkbox" id="CC" value="CC"
+                    type="checkbox" id="CC" value="CC" <?php
+					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
+                CC <input name="test" type="checkbox" id="test" value="test"
                     <?php
-														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
-                    type="checkbox" id="test" value="test"
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
+                    id="header" value="uit"
                     <?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
-                    name="header" type="checkbox" id="header" value="uit"
-                    <?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
-                        name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-												else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
+                <label><br> Afzender: <input name="afzender" type="text"
+                        id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+																			else echo 'La Pellegrina'; ?>">
                 </label> ; <label>Mail-adres afzender: <input
                         name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
@@ -1357,6 +1300,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
             </p>
             <hr>
             <h2>Verzend mailing aan deelnemers </h2>
+            <p><a href="/mailing/google_contacts_callback.php">Google Contacts
+                    koppelen</a></p>
             <table width="100%" class="w3-table-all" border=1>
                 <tr>
                     <td><strong>taalkeuze:</strong></td>

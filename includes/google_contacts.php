@@ -1,0 +1,175 @@
+<?php
+
+use League\OAuth2\Client\Provider\Google;
+use League\OAuth2\Client\Token\AccessToken;
+
+function google_contacts_provider(): Google
+{
+    $redirectUri = getenv('GOOGLE_CONTACTS_REDIRECT_URI');
+    if (!$redirectUri) {
+        throw new RuntimeException('GOOGLE_CONTACTS_REDIRECT_URI is niet ingesteld.');
+    }
+
+    return new Google([
+        'clientId' => getenv('GOOGLE_CLIENT_ID'),
+        'clientSecret' => getenv('GOOGLE_CLIENT_SECRET'),
+        'redirectUri' => $redirectUri,
+    ]);
+}
+
+function google_contacts_authorization_url(): string
+{
+    $provider = google_contacts_provider();
+    $_SESSION['google_contacts_oauth_state'] = $provider->getState();
+
+    return $provider->getAuthorizationUrl([
+        'scope' => ['https://www.googleapis.com/auth/contacts.readonly'],
+        'access_type' => 'offline',
+        'prompt' => 'consent',
+    ]);
+}
+
+function google_contacts_access_token(): string
+{
+    if (empty($_SESSION['google_contacts_token'])) {
+        throw new RuntimeException('Google Contacts is nog niet gekoppeld.');
+    }
+
+    $token = new AccessToken($_SESSION['google_contacts_token']);
+    if ($token->hasExpired()) {
+        if (!$token->getRefreshToken()) {
+            throw new RuntimeException('De Google Contacts-koppeling is verlopen; autoriseer opnieuw.');
+        }
+        $token = google_contacts_provider()->getAccessToken('refresh_token', [
+            'refresh_token' => $token->getRefreshToken(),
+        ]);
+        $_SESSION['google_contacts_token'] = $token->jsonSerialize();
+    }
+
+    return $token->getToken();
+}
+
+function google_contacts_request(string $endpoint, array $parameters = []): array
+{
+    $url = 'https://people.googleapis.com/v1/' . ltrim($endpoint, '/') . '?' . http_build_query($parameters);
+    $curl = curl_init($url);
+    curl_setopt_array($curl, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . google_contacts_access_token()],
+        CURLOPT_TIMEOUT => 30,
+    ]);
+    $body = curl_exec($curl);
+    $status = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
+    $error = curl_error($curl);
+    curl_close($curl);
+
+    if ($body === false || $status < 200 || $status >= 300) {
+        throw new RuntimeException('Google People API-fout (' . $status . '): ' . ($error ?: $body));
+    }
+
+    $response = json_decode($body, true);
+    if (!is_array($response)) {
+        throw new RuntimeException('Google People API gaf geen geldige JSON terug.');
+    }
+
+    return $response;
+}
+
+function google_contacts_groups(): array
+{
+    $groups = [];
+    $pageToken = null;
+    do {
+        $parameters = [
+            'pageSize' => 1000,
+            'groupFields' => 'name,resourceName',
+        ];
+        if ($pageToken) {
+            $parameters['pageToken'] = $pageToken;
+        }
+        $response = google_contacts_request('contactGroups', $parameters);
+        foreach ($response['contactGroups'] ?? [] as $group) {
+            if (!empty($group['name']) && !empty($group['resourceName'])) {
+                $groups[$group['name']] = $group['resourceName'];
+            }
+        }
+        $pageToken = $response['nextPageToken'] ?? null;
+    } while ($pageToken);
+
+    return $groups;
+}
+
+function google_contacts_read(string $group = ''): array
+{
+    $groups = google_contacts_groups();
+    $groupNames = array_flip($groups);
+    $groupResourceName = '';
+    if ($group !== '') {
+        if (!isset($groups[$group])) {
+            return [];
+        }
+        $groupResourceName = $groups[$group];
+    }
+
+    $contacts = [];
+    $pageToken = null;
+    do {
+        $parameters = [
+            'pageSize' => 1000,
+            'personFields' => 'names,emailAddresses,addresses,memberships',
+            'sortOrder' => 'LAST_NAME_ASCENDING',
+        ];
+        if ($pageToken) {
+            $parameters['pageToken'] = $pageToken;
+        }
+        $response = google_contacts_request('people/me/connections', $parameters);
+        foreach ($response['connections'] ?? [] as $person) {
+            $memberships = $person['memberships'] ?? [];
+            $inGroup = $groupResourceName === '';
+            foreach ($memberships as $membership) {
+                if (($membership['contactGroupMembership']['contactGroupResourceName'] ?? '') === $groupResourceName) {
+                    $inGroup = true;
+                    break;
+                }
+            }
+            if (!$inGroup) {
+                continue;
+            }
+
+            $labels = [];
+            foreach ($memberships as $membership) {
+                $resourceName = $membership['contactGroupMembership']['contactGroupResourceName'] ?? '';
+                if (isset($groupNames[$resourceName])) {
+                    $labels[] = $groupNames[$resourceName];
+                }
+            }
+            if (in_array('Geen folders', $labels, true)) {
+                continue;
+            }
+
+            $email = '';
+            foreach ($person['emailAddresses'] ?? [] as $emailAddress) {
+                if (filter_var($emailAddress['value'] ?? '', FILTER_VALIDATE_EMAIL)) {
+                    $email = $emailAddress['value'];
+                    break;
+                }
+            }
+            if ($email === '') {
+                continue;
+            }
+
+            $name = $person['names'][0] ?? [];
+            $address = $person['addresses'][0] ?? [];
+            $contacts[] = [
+                'naam' => $name['displayName'] ?? $email,
+                'voornaam' => $name['givenName'] ?? '',
+                'email' => $email,
+                'postcode' => $address['postalCode'] ?? '',
+                'groep' => implode(', ', $labels),
+            ];
+        }
+        $pageToken = $response['nextPageToken'] ?? null;
+    } while ($pageToken);
+
+    return $contacts;
+}
