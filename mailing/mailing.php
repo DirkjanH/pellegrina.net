@@ -1040,16 +1040,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			if (!message) return;
 			CKEDITOR.replace(message, {
 				language: 'nl',
-				removePlugins: 'exportpdf,exportword,cloudservices,uploadimage',
-				toolbar: [
-					['Source', 'Undo', 'Redo', '-', 'Styles', 'Format',
-						'Font', 'FontSize', 'TextColor', 'BGColor', '-',
-						'Bold', 'Italic', 'Underline', 'Subscript',
-						'Superscript', '-', 'Link', 'Unlink', '-',
-						'BulletedList', 'NumberedList', 'Blockquote',
-						'Table'
-					]
-				]
+				removePlugins: 'exportpdf,exportword,cloudservices',
+				toolbar: 'Full'
 			});
 			document.getElementById('formulier').addEventListener('submit',
 				function() {
