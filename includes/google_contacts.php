@@ -154,6 +154,7 @@ function google_contacts_read(string $group = ''): array
     }
 
     $contacts = [];
+    $seenEmails = [];
     $pageToken = null;
     do {
         $parameters = [
@@ -199,6 +200,11 @@ function google_contacts_read(string $group = ''): array
             if ($email === '') {
                 continue;
             }
+            $emailKey = strtolower(trim($email));
+            if (isset($seenEmails[$emailKey])) {
+                continue;
+            }
+            $seenEmails[$emailKey] = true;
 
             $name = $person['names'][0] ?? [];
             $address = $person['addresses'][0] ?? [];
