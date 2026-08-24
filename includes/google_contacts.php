@@ -45,13 +45,14 @@ function google_contacts_provider(): Google
 function google_contacts_authorization_url(): string
 {
     $provider = google_contacts_provider();
-    $_SESSION['google_contacts_oauth_state'] = $provider->getState();
-
-    return $provider->getAuthorizationUrl([
+    $authorizationUrl = $provider->getAuthorizationUrl([
         'scope' => ['https://www.googleapis.com/auth/contacts.readonly'],
         'access_type' => 'offline',
-        'prompt' => 'consent',
+        'approval_prompt' => 'force',
     ]);
+    $_SESSION['google_contacts_oauth_state'] = $provider->getState();
+
+    return $authorizationUrl;
 }
 
 function google_contacts_access_token(): string
