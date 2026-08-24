@@ -93,7 +93,7 @@ if ($mailing_nr > 0) {
 		$temp = array();
 		// each column needs to have data inserted via the $temp array
 		$temp[] = array('v' => $adres['naam']);
-		$temp[] = array('v' => (round($adres['verschil_verzenden'] / 3600, 2)));
+		$temp[] = array('v' => (round($adres['verschil'] / 3600, 2)));
 
 		// insert the temp array into $rows
 		$rows[] = array('c' => $temp);
