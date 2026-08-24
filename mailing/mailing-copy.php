@@ -1282,17 +1282,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
                 <br>
                 <input name="verzenden" type="checkbox" id="verzenden"
                     value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-                    type="checkbox" id="CC" value="CC"
+                    type="checkbox" id="CC" value="CC" <?php
+					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
+                CC <input name="test" type="checkbox" id="test" value="test"
                     <?php
-														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
-                    type="checkbox" id="test" value="test"
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
+                    id="header" value="uit"
                     <?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
-                    name="header" type="checkbox" id="header" value="uit"
-                    <?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
-                        name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-												else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
+                <label><br> Afzender: <input name="afzender" type="text"
+                        id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+																			else echo 'La Pellegrina'; ?>">
                 </label> ; <label>Mail-adres afzender: <input
                         name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
@@ -1500,7 +1500,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
             </div>
         </div>
     </form>
-    <p><a href="https://pellegrina.net/privacyverklaring.htm">Privacy policy &
-            Terms of Service</a></p>
+    <p><a href="https://pellegrina.net/privacyverklaring_website.htm">Privacy
+            policy & Terms of Service</a></p>
 </body>
 </html> <?php ob_end_flush(); ?>
