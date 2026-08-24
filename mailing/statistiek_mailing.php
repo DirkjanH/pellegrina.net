@@ -49,6 +49,7 @@ $aantal_niet_geopend = 0;
 $aantal_verzonden = 0;
 $alles = true;
 $jsonTable = json_encode(['cols' => [], 'rows' => []]);
+$chartType = 'Histogram';
 $percentage_geopend = '';
 
 if (isset($_POST['mailing'])) {
@@ -103,6 +104,7 @@ if ($mailing_nr > 0) {
 
 	// encode the table as JSON
 	$jsonTable = json_encode($table);
+	$chartType = count($rows) === 1 ? 'ColumnChart' : 'Histogram';
 
 	d($jsonTable);
 } //if ($mailing_nr > 0)
@@ -164,7 +166,7 @@ if ($mailing_nr > 0) {
 			// Create our data table out of JSON data loaded from server.
 			var data = new google.visualization.DataTable(<?php echo $jsonTable ?>);
 
-			var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+			var chart = new google.visualization.<?php echo $chartType; ?>(document.getElementById('chart_div'));
 			chart.draw(data, options);
 		}
 
