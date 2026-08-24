@@ -2,6 +2,9 @@
 
 use League\OAuth2\Client\Provider\Google;
 use League\OAuth2\Client\Token\AccessToken;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Exception\RequestException;
 
 function google_contacts_config(): array
 {
@@ -51,6 +54,13 @@ function google_contacts_authorization_url(): string
         'approval_prompt' => 'force',
     ]);
     $_SESSION['google_contacts_oauth_state'] = $provider->getState();
+    setcookie('google_contacts_oauth_state', $provider->getState(), [
+        'expires' => time() + 600,
+        'path' => '/mailing',
+        'secure' => true,
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
 
     return $authorizationUrl;
 }
@@ -77,23 +87,29 @@ function google_contacts_access_token(): string
 
 function google_contacts_request(string $endpoint, array $parameters = []): array
 {
-    $url = 'https://people.googleapis.com/v1/' . ltrim($endpoint, '/') . '?' . http_build_query($parameters);
-    $curl = curl_init($url);
-    curl_setopt_array($curl, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . google_contacts_access_token()],
-        CURLOPT_TIMEOUT => 30,
-    ]);
-    $body = curl_exec($curl);
-    $status = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
-    $error = curl_error($curl);
-    curl_close($curl);
-
-    if ($body === false || $status < 200 || $status >= 300) {
-        throw new RuntimeException('Google People API-fout (' . $status . '): ' . ($error ?: $body));
+    $client = new Client(['timeout' => 30]);
+    try {
+        $response = $client->get(
+            'https://people.googleapis.com/v1/' . ltrim($endpoint, '/'),
+            [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . google_contacts_access_token(),
+                ],
+                'query' => $parameters,
+            ]
+        );
+        $data = json_decode((string) $response->getBody(), true);
+    } catch (GuzzleException $exception) {
+        $status = 0;
+        $body = $exception->getMessage();
+        if ($exception instanceof RequestException && $exception->hasResponse()) {
+            $status = $exception->getResponse()->getStatusCode();
+            $body = (string) $exception->getResponse()->getBody();
+        }
+        throw new RuntimeException('Google People API-fout (' . $status . '): ' . $body, 0, $exception);
     }
 
-    $response = json_decode($body, true);
+    $response = $data;
     if (!is_array($response)) {
         throw new RuntimeException('Google People API gaf geen geldige JSON terug.');
     }

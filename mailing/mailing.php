@@ -111,7 +111,17 @@ function super_unique($array, $key)
 function lees_gdata($groep = '')
 {
 	global $voorzetsels, $leeg;
-	$results = google_contacts_read($groep);
+	try {
+		$results = google_contacts_read($groep);
+	} catch (Throwable $exception) {
+		error_log('Google Contacts: ' . $exception->getMessage());
+		echo '<p><strong>Google Contacts-fout:</strong> ' . htmlspecialchars(
+			$exception->getMessage(),
+			ENT_QUOTES,
+			'UTF-8'
+		) . '</p>';
+		return [];
+	}
 	foreach ($results as &$adres) {
 		$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $adres['voornaam']));
 		if ($adres['postcode'] !== '' && preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) {

@@ -13,10 +13,13 @@ try {
     if (isset($_GET['error'])) {
         throw new RuntimeException('Google autorisatie is afgebroken.');
     }
-    if (empty($_GET['code']) || empty($_GET['state']) || !hash_equals(
-        $_SESSION['google_contacts_oauth_state'] ?? '',
-        $_GET['state']
-    )) {
+    $expectedState = $_SESSION['google_contacts_oauth_state']
+        ?? $_COOKIE['google_contacts_oauth_state']
+        ?? '';
+    if (
+        empty($_GET['code']) || empty($_GET['state']) || $expectedState === ''
+        || !hash_equals($expectedState, $_GET['state'])
+    ) {
         throw new RuntimeException('Ongeldige Google OAuth-state.');
     }
 
@@ -25,6 +28,13 @@ try {
     ]);
     $_SESSION['google_contacts_token'] = $token->jsonSerialize();
     unset($_SESSION['google_contacts_oauth_state']);
+    setcookie('google_contacts_oauth_state', '', [
+        'expires' => time() - 3600,
+        'path' => '/mailing',
+        'secure' => true,
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
     header('Location: /mailing/mailing.php?google_contacts=connected');
     exit;
 } catch (Throwable $exception) {
