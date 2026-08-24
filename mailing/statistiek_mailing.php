@@ -101,10 +101,18 @@ if ($mailing_nr > 0) {
 
 	// populate the table with rows of data
 	$table['rows'] = $rows;
+	if (count($rows) === 0) {
+		$table['rows'][] = [
+			'c' => [
+				['v' => 'Geen geopende mails'],
+				['v' => 0],
+			]
+		];
+	}
 
 	// encode the table as JSON
 	$jsonTable = json_encode($table);
-	$chartType = count($rows) === 1 ? 'ColumnChart' : 'Histogram';
+	$chartType = count($table['rows']) <= 1 ? 'ColumnChart' : 'Histogram';
 
 	d($jsonTable);
 } //if ($mailing_nr > 0)
