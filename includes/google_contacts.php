@@ -30,9 +30,13 @@ function google_contacts_config(): array
 function google_contacts_provider(): Google
 {
     $config = google_contacts_config();
+    $clientId = $config['clientId'];
+    if (!str_contains($clientId, '.apps.googleusercontent.com')) {
+        throw new RuntimeException('Google clientId lijkt geen OAuth-client-ID te zijn.');
+    }
 
     return new Google([
-        'clientId' => $config['clientId'],
+        'clientId' => $clientId,
         'clientSecret' => $config['clientSecret'],
         'redirectUri' => $config['redirectUri'],
     ]);
