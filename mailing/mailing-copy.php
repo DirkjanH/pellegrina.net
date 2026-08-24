@@ -1500,5 +1500,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
             </div>
         </div>
     </form>
+    <p><a href="https://pellegrina.net/Pellegrina_privacyverklaring.htm">Privacy
+            policy & Terms of Service</a></p>
 </body>
 </html> <?php ob_end_flush(); ?>
