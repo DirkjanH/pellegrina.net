@@ -3,17 +3,38 @@
 use League\OAuth2\Client\Provider\Google;
 use League\OAuth2\Client\Token\AccessToken;
 
-function google_contacts_provider(): Google
+function google_contacts_config(): array
 {
-    $redirectUri = getenv('GOOGLE_CONTACTS_REDIRECT_URI');
-    if (!$redirectUri) {
-        throw new RuntimeException('GOOGLE_CONTACTS_REDIRECT_URI is niet ingesteld.');
+    $configFile = '/var/www/vhosts/horringa.net/private/google_contacts.php';
+    $config = is_readable($configFile) ? require $configFile : [];
+
+    if (!is_array($config)) {
+        throw new RuntimeException('Google Contacts-configuratie is ongeldig.');
     }
 
+    $config += [
+        'clientId' => getenv('GOOGLE_CLIENT_ID') ?: '',
+        'clientSecret' => getenv('GOOGLE_CLIENT_SECRET') ?: '',
+        'redirectUri' => getenv('GOOGLE_CONTACTS_REDIRECT_URI') ?: '',
+    ];
+
+    foreach (['clientId', 'clientSecret', 'redirectUri'] as $key) {
+        if ($config[$key] === '') {
+            throw new RuntimeException('Google Contacts-configuratie ontbreekt: ' . $key);
+        }
+    }
+
+    return $config;
+}
+
+function google_contacts_provider(): Google
+{
+    $config = google_contacts_config();
+
     return new Google([
-        'clientId' => getenv('GOOGLE_CLIENT_ID'),
-        'clientSecret' => getenv('GOOGLE_CLIENT_SECRET'),
-        'redirectUri' => $redirectUri,
+        'clientId' => $config['clientId'],
+        'clientSecret' => $config['clientSecret'],
+        'redirectUri' => $config['redirectUri'],
     ]);
 }
 
