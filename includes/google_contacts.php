@@ -124,7 +124,7 @@ function google_contacts_groups(): array
     do {
         $parameters = [
             'pageSize' => 1000,
-            'groupFields' => 'name,resourceName',
+            'groupFields' => 'name',
         ];
         if ($pageToken) {
             $parameters['pageToken'] = $pageToken;
