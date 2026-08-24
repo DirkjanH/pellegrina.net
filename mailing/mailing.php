@@ -1313,9 +1313,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				</label>
 			</p>
 			<hr>
-			<h2>Verzend mailing aan deelnemers <a href="/mailing/google_contacts_callback.php">Google Contacts koppelen</a></h2>
-			<p><a href="/mailing/google_contacts_callback.php">Google Contacts
-					koppelen</a></p>
+			<h2>Verzend mailing aan deelnemers <small>[<a href="/mailing/google_contacts_callback.php">Google Contacts koppelen</a>]</small></h2>
 			<table width="100%" class="w3-table-all" border=1>
 				<tr>
 					<td><strong>taalkeuze:</strong></td>
