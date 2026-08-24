@@ -382,9 +382,9 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 										AND achternaam NOT LIKE \"%%ZZZ%%\"
 										AND taal %s %s
 									ORDER BY achternaam ASC",
+				GetSQLValueString($eerstecursus, "int"),
 				$taal[$_SESSION['taal']],
-				$instrzang[$_SESSION['instrzang']],
-				GetSQLValueString($eerstecursus, "int")
+				$instrzang[$_SESSION['instrzang']]
 			);
 
 			d($query_inschrijving);
