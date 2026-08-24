@@ -17,14 +17,46 @@ error_reporting(E_ALL);
 Kint::$enabled_mode = false;
 d($_POST);
 
+if (isset($_POST['delete_mailing'])) {
+	$deleteMailingId = filter_var($_POST['delete_mailing'], FILTER_VALIDATE_INT);
+	if ($deleteMailingId !== false && $deleteMailingId > 0) {
+		try {
+			$db->beginTransaction();
+			$deleteAdressen = $db->prepare('DELETE FROM mailing_adressen WHERE mailingId_FK = :mailingId');
+			$deleteAdressen->execute([':mailingId' => $deleteMailingId]);
+			$deleteMailing = $db->prepare('DELETE FROM mailing_opdrachten WHERE mailingId = :mailingId');
+			$deleteMailing->execute([':mailingId' => $deleteMailingId]);
+			$db->commit();
+			if (($_SESSION['mailing'] ?? null) == $deleteMailingId) {
+				unset($_SESSION['mailing']);
+			}
+		} catch (PDOException $exception) {
+			if ($db->inTransaction()) $db->rollBack();
+			echo '<p><strong>Verwijderen mislukt:</strong> ' . htmlspecialchars(
+				$exception->getMessage(),
+				ENT_QUOTES,
+				'UTF-8'
+			) . '</p>';
+		}
+	}
+}
+
 $mailings = select_query("SELECT * FROM mailing_opdrachten");
+$mailings = is_array($mailings) ? $mailings : [];
+$mailing = null;
+$aantal = 0;
+$aantal_niet_geopend = 0;
+$aantal_verzonden = 0;
+$alles = true;
+$jsonTable = json_encode(['cols' => [], 'rows' => []]);
+$percentage_geopend = '';
 
 if (isset($_POST['mailing'])) {
 	$mailing_nr = $_POST['mailing'];
-} else {
+} elseif (count($mailings) > 0) {
 	$mailing_nr = end($mailings)['MAILINGiD'];
 	//echo 'Mailing bestaat niet<br><br>';
-}
+} else $mailing_nr = 0;
 
 d($mailings);
 
@@ -141,6 +173,26 @@ if ($mailing_nr > 0) {
 			document.getElementById('form1').submit();
 		}
 	</script>
+	<style>
+		.delete-mailing {
+			width: 1.5em;
+			height: 1.5em;
+			padding: 0;
+			border: 0;
+			border-radius: 50%;
+			background: #d32f2f;
+			color: #fff;
+			font-size: 1em;
+			font-weight: bold;
+			line-height: 1.5em;
+			cursor: pointer;
+		}
+
+		.delete-mailing:hover,
+		.delete-mailing:focus {
+			background: #a51f1f;
+		}
+	</style>
 
 </head>
 
@@ -154,7 +206,7 @@ if ($mailing_nr > 0) {
 				if ($totaal > 0) $percentage_geopend = ' (' . round(($geopend / $totaal) * 100, 1) . ' %)';
 				else echo ('Geen mails verzonden<br>');
 				echo "<p class=\"w3-small\"><input TYPE=\"button\" class=\"w3-light-green w3-border-green\" onclick=\"javascript: formSubmit({$m['MAILINGiD']})\" value=\"{$m['MAILINGiD']}\"> 
-				{$m['subject']} $percentage_geopend</p>" . PHP_EOL;
+				{$m['subject']} $percentage_geopend <button type=\"submit\" class=\"delete-mailing\" name=\"delete_mailing\" value=\"{$m['MAILINGiD']}\" aria-label=\"Mailing wissen\" title=\"Mailing wissen\" onclick=\"return confirm('Deze mailing en alle bijbehorende adressen definitief wissen?');\">&times;</button></p>" . PHP_EOL;
 			} ?>
 			<input type="hidden" name="mailing" id="mailing" value="">
 		</form>
