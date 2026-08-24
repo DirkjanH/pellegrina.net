@@ -653,6 +653,8 @@ if (isset($inschrijving)) {
 		$adressen[$i]['email'] =  $insch['email'];
 		$adressen[$i]['DlnmrId'] =  $insch['DlnmrId'] ?? 0;
 	}
+	$adressen = super_unique($adressen, 'email');
+	$aantal = count($adressen);
 }
 
 foreach ($adressen as &$adres) {
