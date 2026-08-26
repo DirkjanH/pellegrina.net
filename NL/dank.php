@@ -168,19 +168,30 @@ d($to, $naam, $subject, $mail_text);
 $booking_reference = isset($_GET['res']) ? preg_replace('/[^a-zA-Z0-9_-]/', '', $_GET['res']) : '';
 $mail_sent_dir = $_SERVER['DOCUMENT_ROOT'] . '/mail_sent';
 $mail_sent_file = $booking_reference !== '' ? $mail_sent_dir . '/' . $booking_reference . '.sent' : '';
-$mail_already_sent = $mail_sent_file !== '' && file_exists($mail_sent_file);
+
+$db_mail_already_sent = isset($dlnmr['dankmail_verzonden']) && !empty($dlnmr['dankmail_verzonden']) && $dlnmr['dankmail_verzonden'] !== '0000-00-00' && $dlnmr['dankmail_verzonden'] !== '0000-00-00 00:00:00' && $dlnmr['dankmail_verzonden'] !== '0';
+$file_mail_already_sent = $mail_sent_file !== '' && file_exists($mail_sent_file);
+
+$mail_already_sent = $db_mail_already_sent || $file_mail_already_sent;
 
 if ($mail_sent_file !== '' && !is_dir($mail_sent_dir)) {
-	mkdir($mail_sent_dir, 0775, true);
+	@mkdir($mail_sent_dir, 0775, true);
 }
 
 // bericht ter bevestiging:
 if (!$mail_already_sent) {
-	$mail_verstuurd = LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding');
-	if (!$mail_verstuurd) {
-		echo "De email is niet verzonden!<br>";
-	} elseif ($mail_sent_file !== '') {
-		file_put_contents($mail_sent_file, time());
+	if (!empty($dlnmr) && !empty($to)) {
+		$mail_verstuurd = LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding');
+		if (!$mail_verstuurd) {
+			echo "De email is niet verzonden!<br>";
+		} else {
+			if (isset($dlnmr['InschId']) && !empty($dlnmr['InschId'])) {
+				exec_query("UPDATE inschrijving SET dankmail_verzonden = NOW() WHERE InschId = " . intval($dlnmr['InschId']));
+			}
+			if ($mail_sent_file !== '') {
+				@file_put_contents($mail_sent_file, time());
+			}
+		}
 	}
 } else {
 	echo "<p>Dit bevestigingsmail is voor deze boeking al eerder verzonden.</p>";
@@ -188,28 +199,25 @@ if (!$mail_already_sent) {
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<title>Hartelijk dank voor je inschrijving!</title>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
-		type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+    <title>Hartelijk dank voor je inschrijving!</title>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+    <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
+        type="text/css">
 </head>
-
 <body>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-	<div id="inhoud">
-		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
-		<div id="main"> <?php echo $message; ?> <h2> <a
-					href="javascript: history.go(-1)">Terug</a></h2>
-			<p>&nbsp;</p>
-		</div>
-	</div>
-	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
+    <div id="inhoud">
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
+        <div id="main"> <?php echo $message; ?> <h2> <a
+                    href="javascript: history.go(-1)">Terug</a></h2>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-
 </html>
