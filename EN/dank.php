@@ -165,9 +165,26 @@ $mail_text = str_replace("</html>", stripslashes($message) . "</body></html>", $
 
 d($to, $naam, $subject, $mail_text);
 
-// bericht ter bevestiging:
+$booking_reference = isset($_GET['res']) ? preg_replace('/[^a-zA-Z0-9_-]/', '', $_GET['res']) : '';
+$mail_sent_dir = $_SERVER['DOCUMENT_ROOT'] . '/mail_sent';
+$mail_sent_file = $booking_reference !== '' ? $mail_sent_dir . '/' . $booking_reference . '.sent' : '';
+$mail_already_sent = $mail_sent_file !== '' && file_exists($mail_sent_file);
 
-if (!LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding')) echo "The email was not sent!<br>";
+if ($mail_sent_file !== '' && !is_dir($mail_sent_dir)) {
+	mkdir($mail_sent_dir, 0775, true);
+}
+
+// bericht ter bevestiging:
+if (!$mail_already_sent) {
+	$mail_verstuurd = LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding');
+	if (!$mail_verstuurd) {
+		echo "The email was not sent!<br>";
+	} elseif ($mail_sent_file !== '') {
+		file_put_contents($mail_sent_file, time());
+	}
+} else {
+	echo "<p>This confirmation email has already been sent for this booking.</p>";
+}
 ?>
 <!DOCTYPE HTML>
 <html>
