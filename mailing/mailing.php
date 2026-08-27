@@ -1,4 +1,4 @@
-<?php //Connection statement
+<?php // Verbindingsdeclaratie
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1);
 error_reporting(E_ALL);
@@ -225,11 +225,11 @@ function lees_access($input)
 	$fp = fopen('php://temp', 'r+');
 	// Een tijdelijke stream geeft fgetcsv dezelfde delimiter- en quote-logica
 	// als bij een fysiek bestand, zonder de gebruikersinvoer op schijf te zetten.
-	// ... write $input to the "file" using fwrite()...
+	// Schrijf $input naar de tijdelijke stream met fwrite().
 	fwrite($fp, $input);
-	// ... rewind the "file" so we can read what we just wrote...
+	// Spoel de stream terug zodat de zojuist geschreven inhoud kan worden gelezen.
 	rewind($fp);
-	// ... read the entire line into a variable...
+	// Lees de volledige regel in een variabele.
 	$adressen = [];
 	$i = 0;
 	while (!feof($fp)) {
@@ -241,7 +241,7 @@ function lees_access($input)
 			$i++;
 		}
 	}
-	// ... close the "file"...
+	// Sluit de tijdelijke stream.
 	fclose($fp);
 
 	//d($adressen);
@@ -284,10 +284,10 @@ function lees_google($input)
 	return $adressen;
 }
 
-// Reverse search of strrchr.
+// Omgekeerd zoeken, vergelijkbaar met strrchr.
 function strrrchr($haystack, $needle)
 {
-	// Returns everything before $needle.
+	// Geeft alles vóór $needle terug.
 	return substr($haystack, 0, strpos($haystack, $needle));
 }
 
@@ -681,7 +681,7 @@ if (empty($_POST['selectie']) or $_POST['selectie'] == '') {
 		else $adres['verzenden'] = 'on';
 	}
 }
-// end Recordset inschrijving
+// Einde van recordset inschrijving
 
 d($_POST, $_SESSION, $adressen, $inschrijving);
 
@@ -1296,24 +1296,26 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC"
+					type="checkbox" id="CC" value="CC" <?php
+														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
+				CC <input name="test" type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
-					type="checkbox" id="test" value="test"
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
+					id="header" value="uit"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
-					name="header" type="checkbox" id="header" value="uit"
-					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
-						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-																			else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
+				<label><br> Afzender: <input name="afzender" type="text"
+						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+												else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
 				</label>
 			</p>
 			<hr>
-			<h2>Verzend mailing aan deelnemers <small>[<a href="/mailing/google_contacts_callback.php">Google Contacts koppelen</a>]</small></h2>
+			<h2>Verzend mailing aan deelnemers <small>[<a
+						href="/mailing/google_contacts_callback.php">Google
+						Contacts koppelen</a>]</small></h2>
 			<table width="100%" class="w3-table-all" border=1>
 				<tr>
 					<td><strong>taalkeuze:</strong></td>
@@ -1459,7 +1461,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 					<tr>
 						<th scope="col">Naam:</th>
 						<th scope="col">Bestand:</th>
-					</tr> <?php $max_no_files = 5; // Maximum number of images value to be set here
+					</tr> <?php $max_no_files = 5; // Hier wordt het maximumaantal afbeeldingen ingesteld.
 							for ($i = 1; $i <= $max_no_files; $i++) {
 								echo "<tr><td>File $i: </td><td>
 <input type=file name='files[]' class='bginput'></td></tr>";
