@@ -215,7 +215,7 @@ function getisp($ip = '')
                     <div class="onzichtbaar">A few last places available...
                     </div>
                 </div>
-                <div id="" class="bannerrood">
+                <div id="" class="bannerrood onzichtbaar">
                     <div class="">De cursussen in 2026 zijn helemaal vol</div>
                     <div class="">The 2026 courses are fully booked </div>
                 </div>
@@ -260,10 +260,10 @@ function getisp($ip = '')
                                 gevorderde amateurmusici en professionals:</a>
                         </p>
                         <ol><a href="NL" target="_self">
-                                <li class="klein"><b>Dvořáks Bruidshemd</i></b>
+                                <li class="klein"><b>Mendelssohns Elias</i></b>
                                     - 22 juli - 1 augustus 2027</li>
-                                <li class="klein"><b>Barok in Centraal
-                                        Europa</b> - 8 - 14 augustus 2027</li>
+                                <li class="klein"><b>Napolitaanse Barok</b> - 8
+                                    - 14 augustus 2027</li>
                             </a></ol>
                     </div></a>
                     <div id="carroussel" class="w3-panel w3-section w3-half">
@@ -323,10 +323,10 @@ function getisp($ip = '')
                                 summer schools for accomplished amateur
                                 musicians and professionals:</a></p>
                         <ol><a href="EN" target="_self">
-                                <li class="klein"><b>Dvořák's Spectre's
-                                        Bride</b> - 30 July - 9 August </li>
+                                <li class="klein"><b>Mendelssohns Elias</b> - 22
+                                    July - 1 August 2027</li>
                                 <li class="klein"><b>Baroque in Central
-                                        Europe</b> - 13 - 19 August</li>
+                                        Europe</b> - 8 - 14 August 2027</li>
                             </a></ol>
                     </div>
                 </div>
