@@ -199,7 +199,7 @@ function getisp($ip = '')
         <div id="envelop" class="w3-hide-small w3-hide-medium">
             <div id="banner">
                 <div id="bannerteksten" class="bannergeel"
-                    style="font-size: 75%;">
+                    style="font-size: 100%;">
                     <div class="">Inschrijving 2027 start 1 december!</div>
                     <div class="">Registration for 2027 starts December 1!</div>
                 </div>
