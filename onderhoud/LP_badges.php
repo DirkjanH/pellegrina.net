@@ -5,7 +5,7 @@
 // handmatige invoer in het format: naam#nationaliteit#instrument
 
 require_once($_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 
 $cssPath = $_SERVER['DOCUMENT_ROOT'] . '/css/LP_badges.css';
 $cssVersion = '';

@@ -4,7 +4,7 @@
 error_reporting(E_ALL);
 
 // Laad globale includes en vendor libraries
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
 // Debug tool uitschakelen

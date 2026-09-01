@@ -24,7 +24,7 @@ Kint::$enabled_mode = false;
 
 		<?php
 		//Connection statement
-		require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+		require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 
 		$query_cursussen = "SELECT cursusid, cursusnaam_en, plaats_kort AS plaats, YEAR(datum_begin) as jaar FROM cursus WHERE CursusId >= {$eerstecursus} AND CursusId <= {$laatstecursus}"; // AND  plaats_kort = 'Bechyně'";
 		$cursussen = select_query($query_cursussen);

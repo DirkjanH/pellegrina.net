@@ -1,5 +1,5 @@
 <?php //Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 $CursusId = $eerstecursus;
 
 if (isset($_GET['cursus']) and $_GET['cursus'] != "")

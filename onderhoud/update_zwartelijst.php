@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors', 1);
 error_reporting(E_ALL);

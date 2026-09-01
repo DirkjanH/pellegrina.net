@@ -10,7 +10,7 @@ Kint::$enabled_mode = false;
 d($_GET);
 d($_POST);
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 
 $_SESSION['Cursus'] = 1; // Romantic in České Budějovice 
 
@@ -317,8 +317,7 @@ function ruimtecodes()
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
-</html> d($_GET); d($_POST); require_once($_SERVER['DOCUMENT_ROOT'] .
-'/includes/includes2026.php'); $_SESSION['Cursus'] = 1; // Romantic in České
+</html> d($_GET); d($_POST); $_SESSION['Cursus'] = 1; // Romantic in České
 Budějovice if (empty($_SESSION['Set'])) $_SESSION['Set'] = 1; if
 (isset($_POST['Set'])) $_SESSION['Set'] = $_POST['Set']; // begin Recordset
 $query_instrumenten = "SELECT * FROM instr ORDER BY id ASC"; $instrumenten =

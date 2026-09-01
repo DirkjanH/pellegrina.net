@@ -1,9 +1,11 @@
 <?php
 // Laad globale includes en initialisaties
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
+$jaar = 2027;
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <title>La Pellegrina&nbsp; <?php echo $jaar ?> </title>
     <meta charset="utf-8">
@@ -12,20 +14,20 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <!-- Functie om content secties in/uit te klappen -->
     <script type="text/javascript">
-    // Toggle zichtbaarheid van een element aan/uit
-    function klapdiensten(id) {
-        if (document.getElementById(id)) {
-            var cont = document.getElementById(id).style;
-            if (cont.display == "block") {
-                cont.display = "none"; // Verberg element
+        // Toggle zichtbaarheid van een element aan/uit
+        function klapdiensten(id) {
+            if (document.getElementById(id)) {
+                var cont = document.getElementById(id).style;
+                if (cont.display == "block") {
+                    cont.display = "none"; // Verberg element
+                } else {
+                    cont.display = "block"; // Toon element
+                }
+                return false;
             } else {
-                cont.display = "block"; // Toon element
+                return true;
             }
-            return false;
-        } else {
-            return true;
         }
-    }
     </script>
     <!-- Stijlsheets laden -->
     <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
@@ -41,26 +43,26 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 <![endif]-->
     <!-- Facebook Pixel Code voor conversie tracking -->
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
@@ -68,17 +70,18 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     </noscript>
     <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
     <!-- Facebook SDK initialisatie -->
     <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- Hoofd content container -->
     <div id="inhoud">
@@ -174,8 +177,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
                     <p>voor instrumentalisten en (koor)zangers, met kamermuziek
                         en kamerkoor</p>
                     <ul>
-                        <li>České Budějovice (Tsjechië), 30 juli - 9 augustus
-                            <?php echo $jaar ?> </li>
+                        <li>České Budějovice (Tsjechië), 22 juli - 1 augustus
+                            2027</li>
                     </ul>
                     <p class="plaatsvoor onzichtbaar">Nog plaats voor een fagot
                         en een contrabas<br>het koor heeft nog enkele plekken in
@@ -189,8 +192,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
                                 in 415 Hz</span></a></h3>
                     <p>voor zangers &amp; 'oude' instrumenten </p>
                     <ul>
-                        <li>Klooster Nieuw Sion, Diepenveen, 13 - 19 augustus
-                            <?php echo $jaar ?></li>
+                        <li>Klooster Nieuw Sion, Diepenveen, 8 - 14 augustus
+                            2027</li>
                     </ul>
                     <p class="plaatsvoor onzichtbaar">Er is nog plaats voor een
                         tenor met solistische capaciteiten </p>
@@ -227,110 +230,110 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     <!-- Verborgen tekst voor zoekmachines -->
     <div class="onzichtbaar">Nog enkele plaatsen beschikbaar</div>
     <!-- Footer laden --> <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
-    ?>
+                            require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
+                            ?>
     <!-- Olark live chat widget voor klantcontact -->
     <!-- begin olark code -->
     <script data-cfasync="false" type='text/javascript'>
-    /*<![CDATA[*/
-    window.olark || (function(c) {
-        var f = window,
-            d = document,
-            l = f.location.protocol == "https:" ? "https:" : "http:",
-            z = c.name,
-            r = "load";
-        var nt = function() {
-            f[z] = function() {
-                (a.s = a.s || []).push(arguments)
-            };
-            var a = f[z]._ = {},
-                q = c.methods.length;
-            while (q--) {
-                (function(n) {
-                    f[z][n] = function() {
-                        f[z]("call", n, arguments)
-                    }
-                })(c.methods[q])
-            }
-            a.l = c.loader;
-            a.i = nt;
-            a.p = {
-                0: +new Date
-            };
-            a.P = function(u) {
-                a.p[u] = new Date - a.p[0]
-            };
+        /*<![CDATA[*/
+        window.olark || (function(c) {
+            var f = window,
+                d = document,
+                l = f.location.protocol == "https:" ? "https:" : "http:",
+                z = c.name,
+                r = "load";
+            var nt = function() {
+                f[z] = function() {
+                    (a.s = a.s || []).push(arguments)
+                };
+                var a = f[z]._ = {},
+                    q = c.methods.length;
+                while (q--) {
+                    (function(n) {
+                        f[z][n] = function() {
+                            f[z]("call", n, arguments)
+                        }
+                    })(c.methods[q])
+                }
+                a.l = c.loader;
+                a.i = nt;
+                a.p = {
+                    0: +new Date
+                };
+                a.P = function(u) {
+                    a.p[u] = new Date - a.p[0]
+                };
 
-            function s() {
-                a.P(r);
-                f[z](r)
-            }
-            f.addEventListener ? f.addEventListener(r, s, false) : f
-                .attachEvent("on" + r, s);
-            var ld = function() {
-                function p(hd) {
-                    hd = "head";
-                    return ["<", hd, "></", hd, "><", i,
-                        ' onl' + 'oad="var d=', g,
-                        ";d.getElementsByTagName('head')[0].",
-                        j, "(d.", h, "('script')).", k,
-                        "='", l, "//", a.l, "'", '"', "></",
-                        i, ">"
-                    ].join("")
+                function s() {
+                    a.P(r);
+                    f[z](r)
                 }
-                var i = "body",
-                    m = d[i];
-                if (!m) {
-                    return setTimeout(ld, 100)
-                }
-                a.P(1);
-                var j = "appendChild",
-                    h = "createElement",
-                    k = "src",
-                    n = d[h]("div"),
-                    v = n[j](d[h](z)),
-                    b = d[h]("iframe"),
-                    g = "document",
-                    e = "domain",
-                    o;
-                n.style.display = "none";
-                m.insertBefore(n, m.firstChild).id = z;
-                b.frameBorder = "0";
-                b.id = z + "-loader";
-                if (/MSIE[ ]+6/.test(navigator.userAgent)) {
-                    b.src = "javascript:false"
-                }
-                b.allowTransparency = "true";
-                v[j](b);
-                try {
-                    b.contentWindow[g].open()
-                } catch (w) {
-                    c[e] = d[e];
-                    o = "javascript:var d=" + g +
-                        ".open();d.domain='" + d.domain + "';";
-                    b[k] = o + "void(0);"
-                }
-                try {
-                    var t = b.contentWindow[g];
-                    t.write(p());
-                    t.close()
-                } catch (x) {
-                    b[k] = o + 'd.write("' + p().replace(/"/g,
-                            String.fromCharCode(92) + '"') +
-                        '");d.close();'
-                }
-                a.P(2)
+                f.addEventListener ? f.addEventListener(r, s, false) : f
+                    .attachEvent("on" + r, s);
+                var ld = function() {
+                    function p(hd) {
+                        hd = "head";
+                        return ["<", hd, "></", hd, "><", i,
+                            ' onl' + 'oad="var d=', g,
+                            ";d.getElementsByTagName('head')[0].",
+                            j, "(d.", h, "('script')).", k,
+                            "='", l, "//", a.l, "'", '"', "></",
+                            i, ">"
+                        ].join("")
+                    }
+                    var i = "body",
+                        m = d[i];
+                    if (!m) {
+                        return setTimeout(ld, 100)
+                    }
+                    a.P(1);
+                    var j = "appendChild",
+                        h = "createElement",
+                        k = "src",
+                        n = d[h]("div"),
+                        v = n[j](d[h](z)),
+                        b = d[h]("iframe"),
+                        g = "document",
+                        e = "domain",
+                        o;
+                    n.style.display = "none";
+                    m.insertBefore(n, m.firstChild).id = z;
+                    b.frameBorder = "0";
+                    b.id = z + "-loader";
+                    if (/MSIE[ ]+6/.test(navigator.userAgent)) {
+                        b.src = "javascript:false"
+                    }
+                    b.allowTransparency = "true";
+                    v[j](b);
+                    try {
+                        b.contentWindow[g].open()
+                    } catch (w) {
+                        c[e] = d[e];
+                        o = "javascript:var d=" + g +
+                            ".open();d.domain='" + d.domain + "';";
+                        b[k] = o + "void(0);"
+                    }
+                    try {
+                        var t = b.contentWindow[g];
+                        t.write(p());
+                        t.close()
+                    } catch (x) {
+                        b[k] = o + 'd.write("' + p().replace(/"/g,
+                                String.fromCharCode(92) + '"') +
+                            '");d.close();'
+                    }
+                    a.P(2)
+                };
+                ld()
             };
-            ld()
-        };
-        nt()
-    })({
-        loader: "static.olark.com/jsclient/loader0.js",
-        name: "olark",
-        methods: ["configure", "extend", "declare", "identify"]
-    });
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('5575-684-10-1480'); /*]]>*/
+            nt()
+        })({
+            loader: "static.olark.com/jsclient/loader0.js",
+            name: "olark",
+            methods: ["configure", "extend", "declare", "identify"]
+        });
+        /* custom configuration goes here (www.olark.com/documentation) */
+        olark.identify('5575-684-10-1480'); /*]]>*/
     </script>
     <noscript>
         <a href="https://www.olark.com/site/5575-684-10-1480/contact"
@@ -340,4 +343,5 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
     </noscript>
     <!-- end olark code -->
 </body>
+
 </html>
