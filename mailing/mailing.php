@@ -950,11 +950,11 @@ if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 		if (isset($mailingId_FK)) {
 			echo '<section class="mailing-result">';
 			echo '<div class="mailing-result-actions">';
+			echo '<button class="mailing-result-close" type="button" onclick="sluitMailingResultaat()">Sluiten</button>';
 			echo '<strong>Mailing nr. ' . $mailingId_FK . ' is klaargezet.</strong>';
 			echo '<span>Totaal aantal adressen: ' . ($mailing_aantal ?? 0) . '</span>';
 			echo '<a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a>';
 			echo '<a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a>';
-			echo '<button type="button" onclick="sluitMailingResultaat()">Sluiten</button>';
 			echo '</div>';
 			echo '<div class="mailing-result-names">';
 			foreach ($mailing_namen as $naam) {
@@ -1192,14 +1192,22 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 		.mailing-result-actions {
 			display: flex;
 			align-items: center;
+			flex-wrap: wrap;
 			gap: 12px;
-			padding: 12px;
+			padding: 12px 96px 12px 12px;
 			background: #eee;
 			border-bottom: 1px solid #999;
 		}
 
 		.mailing-result-actions a {
 			white-space: nowrap;
+		}
+
+		.mailing-result-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 1;
 		}
 
 		.mailing-result-names {
@@ -1367,17 +1375,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC" <?php
-														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
-				CC <input name="test" type="checkbox" id="test" value="test"
+					type="checkbox" id="CC" value="CC"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
-					id="header" value="uit"
+					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
+					type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
-				<label><br> Afzender: <input name="afzender" type="text"
-						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-												else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
+					name="header" type="checkbox" id="header" value="uit"
+					<?php
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
+						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+																			else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
