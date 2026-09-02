@@ -1015,7 +1015,6 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 					'pageBreak', 'mediaEmbed'
 				]
 			}).then(editor => {
-				plaatsBerichtenOnderEditor();
 				document.getElementById('formulier').addEventListener(
 					'submit',
 					() => {
@@ -1143,15 +1142,16 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 
 		function toggleBerichten() {
 			var wrapper = document.getElementById('berichten_wrapper');
-			var knop = document.getElementById('berichten_header');
+			var knop = document.getElementById('berichten_openen');
+			var kop = document.getElementById('berichten_header');
 			var geopend = wrapper.classList.toggle('berichten_open');
 			knop.setAttribute('aria-expanded', geopend ? 'true' : 'false');
-		}
-
-		function plaatsBerichtenOnderEditor() {
-			var wrapper = document.getElementById('berichten_wrapper');
-			var editor = document.querySelector('#message_area .ck-editor');
-			if (wrapper && editor) editor.after(wrapper);
+			kop.setAttribute('aria-expanded', geopend ? 'true' : 'false');
+			if (geopend) {
+				var knopPositie = knop.getBoundingClientRect();
+				wrapper.style.top = (knopPositie.bottom + 4) + 'px';
+				wrapper.style.left = knopPositie.left + 'px';
+			}
 		}
 	</script>
 	<link
@@ -1252,11 +1252,13 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 
 		div#berichten_wrapper {
 			display: none;
-			width: 400px;
-			max-width: 100%;
-			margin: 10px 0;
+			position: fixed;
+			z-index: 10;
+			width: min(600px, calc(100vw - 20px));
+			max-height: calc(100vh - 20px);
 			background: #fff;
 			border: 1px solid #999;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
 		}
 
 		#berichten_header {
@@ -1288,11 +1290,11 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 
 		@media (max-width: 600px) {
 			div#berichten_wrapper {
-				width: 100%;
+				width: calc(100vw - 20px);
 			}
 
 			#berichten_inhoud {
-				max-height: none;
+				max-height: calc(100vh - 100px);
 			}
 		}
 
@@ -1334,7 +1336,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 		<div id="message_area"> <strong>Subject:</strong>
 			<input name="subject" type="text" id="subject" size="70"
 				value="<?php echo stripslashes($nieuwsbrief['subject']); ?>">
-			<button type="button" aria-controls="berichten_inhoud"
+			<button type="button" id="berichten_openen" aria-expanded="false"
+				aria-controls="berichten_inhoud"
 				onclick="toggleBerichten()">Opgeslagen nieuwsbrieven</button>
 			<br>
 			<textarea name="message"
@@ -1358,17 +1361,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC" <?php
-														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
-				CC <input name="test" type="checkbox" id="test" value="test"
+					type="checkbox" id="CC" value="CC"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
-					id="header" value="uit"
+					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
+					type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
-				<label><br> Afzender: <input name="afzender" type="text"
-						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-												else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
+					name="header" type="checkbox" id="header" value="uit"
+					<?php
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
+						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+																			else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
