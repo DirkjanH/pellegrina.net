@@ -810,6 +810,7 @@ if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 		$mail_text = CssInliner::fromHtml(stripslashes($mail_text))->inlineCss($css)->render();
 
 		d($mail_text);
+		$mailing_namen = [];
 
 		if (isset($_SESSION['adressen'])) {
 
@@ -916,8 +917,7 @@ if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 				// Alleen adressen die niet expliciet zijn uitgezet, worden gekoppeld
 				// aan de opdracht; de overige blijven beschikbaar voor hergebruik.
 				if ($adres['verzenden'] != 'off') {
-					$nr = $key + 1;
-					echo ("Naam nr. $nr: {$adres['naam']}<br>");
+					$mailing_namen[] = $adres['naam'];
 					$smailingId_FK = $mailingId_FK;
 					$snaam = $adres['naam'];
 					$svoornaam = $adres['voornaam'];
@@ -948,9 +948,19 @@ if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 		$nieuwsbrief = select_query($query_messages, 1);
 
 		if (isset($mailingId_FK)) {
-			echo '<p>Totaal aantal adressen in deze mailing ' . $_POST['subject'] . ': ' . ($mailing_aantal ?? 0) . '</p>';
-			echo '<p>Toon de mailing via <a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a></p>';
-			echo '<p>Ga naar <a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a> voor verzenden</p>';
+			echo '<section class="mailing-result">';
+			echo '<div class="mailing-result-actions">';
+			echo '<strong>Mailing nr. ' . $mailingId_FK . ' is klaargezet.</strong>';
+			echo '<span>Totaal aantal adressen: ' . ($mailing_aantal ?? 0) . '</span>';
+			echo '<a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a>';
+			echo '<a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a>';
+			echo '</div>';
+			echo '<div class="mailing-result-names">';
+			foreach ($mailing_namen as $naam) {
+				echo '<span>' . htmlspecialchars($naam, ENT_QUOTES, 'UTF-8') . '</span>';
+			}
+			echo '</div>';
+			echo '</section>';
 		}
 		break; // einde verzend mailing
 }
@@ -1150,6 +1160,57 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 
 		body {
 			padding: 0 10px;
+		}
+
+		.mailing-result {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			z-index: 20;
+			max-width: 1100px;
+			max-height: calc(100vh - 20px);
+			margin: 0 auto;
+			background: #fff;
+			border: 1px solid #999;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+		}
+
+		.mailing-result-actions {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 12px;
+			background: #eee;
+			border-bottom: 1px solid #999;
+		}
+
+		.mailing-result-actions a {
+			white-space: nowrap;
+		}
+
+		.mailing-result-names {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+			gap: 4px 16px;
+			max-height: calc(100vh - 84px);
+			overflow-y: auto;
+			padding: 12px;
+		}
+
+		.mailing-result-names span {
+			overflow-wrap: anywhere;
+		}
+
+		@media (max-width: 600px) {
+			.mailing-result-actions {
+				flex-wrap: wrap;
+			}
+
+			.mailing-result-names {
+				grid-template-columns: 1fr;
+				max-height: calc(100vh - 132px);
+			}
 		}
 
 		#links {
