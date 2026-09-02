@@ -1015,6 +1015,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 					'pageBreak', 'mediaEmbed'
 				]
 			}).then(editor => {
+				plaatsBerichtenOnderEditor();
 				document.getElementById('formulier').addEventListener(
 					'submit',
 					() => {
@@ -1146,6 +1147,12 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			var geopend = wrapper.classList.toggle('berichten_open');
 			knop.setAttribute('aria-expanded', geopend ? 'true' : 'false');
 		}
+
+		function plaatsBerichtenOnderEditor() {
+			var wrapper = document.getElementById('berichten_wrapper');
+			var editor = document.querySelector('#message_area .ck-editor');
+			if (wrapper && editor) editor.after(wrapper);
+		}
 	</script>
 	<link
 		href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,latin-ext'
@@ -1244,17 +1251,12 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 		}
 
 		div#berichten_wrapper {
-			width: 100%;
-			clear: both;
-			z-index: 10;
-			position: fixed;
-			top: 10px;
-			right: 0;
+			display: none;
 			width: 400px;
-			max-width: calc(100vw - 20px);
+			max-width: 100%;
+			margin: 10px 0;
 			background: #fff;
 			border: 1px solid #999;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
 		}
 
 		#berichten_header {
@@ -1280,16 +1282,13 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			display: block;
 		}
 
+		#berichten_wrapper.berichten_open {
+			display: block;
+		}
+
 		@media (max-width: 600px) {
 			div#berichten_wrapper {
-				position: fixed;
-				top: auto;
-				bottom: 0;
-				left: 0;
-				right: 0;
 				width: 100%;
-				max-width: none;
-				box-shadow: none;
 			}
 
 			#berichten_inhoud {
@@ -1359,17 +1358,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC"
+					type="checkbox" id="CC" value="CC" <?php
+														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
+				CC <input name="test" type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
-					type="checkbox" id="test" value="test"
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
+					id="header" value="uit"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
-					name="header" type="checkbox" id="header" value="uit"
-					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
-						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-																			else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
+				<label><br> Afzender: <input name="afzender" type="text"
+						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+												else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
