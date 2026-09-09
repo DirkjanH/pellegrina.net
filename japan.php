@@ -32,7 +32,7 @@
     <div id="main">
       <div class="japans">
         <h1>2027年コース案内(概要)</h1>
-        <h4>(2026 年12月更新)</h4>
+        <h4>(2026 年9月更新)</h4>
         <div class="fotocenter"><img src="Images/japan.jpg"
             class="w3-image"
             alt="Japanese participants playing chamber music in Czechia">
