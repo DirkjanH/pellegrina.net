@@ -10,8 +10,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 if (class_exists('Kint')) {
     Kint::$enabled_mode = false;
 }
-if (function_exists('d')) {
-    function d($_GET, $_POST, $_SESSION) {}
+if (!function_exists('d')) {
+    function d() {}
 }
 
 // Initialiseer sessie datum (standaard vandaag)
