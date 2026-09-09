@@ -105,11 +105,14 @@
 							Rodríguez Miranda (viola da gamba, barokní tánec),
 							Mitchell Sandler (zpěv) a Edoardo Valorz (basso
 							continuo)</li>
-						<li>Díla pro všechny: hudba z
-							Vídně/Prahy/Drážďan/Kroměříže od autorů jako Fux,
-							Caldara, Biber, Zelenka, Michna, Vejvanovský a
-							Schmelzer. Ústředními díly jsou Requiem f moll od
-							Bibera a Miserere c moll ZWV 57 od Zelenky</li>
+						<li>Během každodenních odpoledních zkoušek všichni
+							zpěváci a instrumentalisté společně pracují na
+							strhujícím programu neapolského baroka (1650 –
+							1750), který zahrnuje mistrovská díla pro orchestr,
+							sólisty a sbor od skladatelů jako Pergolesi,
+							Scarlatti, Durante a Leo a který bude jako
+							slavnostní závěr letní školy uveden v kostele
+							kláštera Nieuw Sion.</li>
 						<li>Každé dopoledne hraní barokní hudby v menších
 							instrumentálních, vokálních, nebo smíšených vokálně
 							intrumentálních ansámblech</li>
