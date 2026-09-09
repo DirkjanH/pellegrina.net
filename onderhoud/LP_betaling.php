@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Laad globale includes en vendor libraries
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 
 // Kint is development-only; production must not fail when it is not installed.
 if (class_exists('Kint')) {
@@ -182,7 +182,6 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -212,21 +211,20 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
     <meta charset="utf-8">
     <!-- JavaScript functie voor inschrijving selecteren -->
     <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-        function SetInschId(Id) {
-            try {
-                document.form.InschId.value = Id;
-                document.form.Verwerk.value = '';
-                document.form.submit();
-            } catch (err) {
-                alert('Dit werkt niet...;');
-                for (var i in err) {
-                    alert(i + ': ' + err(i));
-                }
+    function SetInschId(Id) {
+        try {
+            document.form.InschId.value = Id;
+            document.form.Verwerk.value = '';
+            document.form.submit();
+        } catch (err) {
+            alert('Dit werkt niet...;');
+            for (var i in err) {
+                alert(i + ': ' + err(i));
             }
         }
+    }
     </SCRIPT>
 </head>
-
 <body>
     <!-- Zoeknaam formulier -->
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
@@ -272,111 +270,111 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                             echo '<tr><td colspan="2"><p>Geen inschrijving gevonden voor deze deelnemer.</p></td></tr>';
                         }
                         ?> <?php if ($ins !== []) { ?><form
-                        action="<?php echo $editFormAction; ?>" method="POST"
-                        name="form" id="form">
-                        <tr>
-                            <td height="50" colspan="2" valign="top">
-                                <h2>Naam:&nbsp;<?php echo $ins['naam']; ?></h2>
-                                <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
+                    action="<?php echo $editFormAction; ?>" method="POST"
+                    name="form" id="form">
+                    <tr>
+                        <td height="50" colspan="2" valign="top">
+                            <h2>Naam:&nbsp;<?php echo $ins['naam']; ?></h2>
+                            <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-                                    type="hidden" value="<?php
-                                                            echo $ins['aanbet_bedrag']; ?>">
-                                <input name="InschId" id="InschId" type="hidden"
-                                    value="<?php
+                                type="hidden" value="<?php
+                                            echo $ins['aanbet_bedrag']; ?>">
+                            <input name="InschId" id="InschId" type="hidden"
+                                value="<?php
                                             echo $ins['InschId']; ?>">
-                                <input name="CursusId_FK" type="hidden" value="<?php
-                                                                                echo $ins['CursusId_FK']; ?>">
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td width="100" align="right" nowrap>
-                                <div align="right">Cursusgeld:</div>
-                            </td>
-                            <td><?php echo euro2($ins['cursusgeld']); ?></td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td width="100">
-                                <div align="right">Gedoneerd bedrag: </div>
-                            </td>
-                            <td><?php echo euro2($ins['donatie']); ?></td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td width="100" align="right" nowrap>
-                                <div align="right">Totaal te betalen: </div>
-                            </td>
-                            <td><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?>&nbsp;
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td width="100" align="right" nowrap>
-                                <div align="right">Al betaald:</div>
-                            </td>
-                            <td><?php echo euro2($ins['aanbet_bedrag']); ?></td>
-                        </tr>
-                        <tr valign="middle">
-                            <td width="100" align="right" valign="top" nowrap>
-                                <div align="right">Nog openstaand </div>
-                            </td>
-                            <td valign="top" nowrap>
-                                <?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>&nbsp;
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td colspan="2" valign="top" nowrap>
-                                <!-- Betaaldatum, betaalwijze en bedrag selectie -->
-                                Betaling d.d. <input name="datum" type="text"
-                                    id="datum" size="10"
-                                    value="<?php echo $_SESSION['datum'] ?>"> per
-                                <label>
-                                    <input name="betaalwijze" type="radio"
-                                        value="Postbank" checked> Postbank</label>
-                                <label>
-                                    <input type="radio" name="betaalwijze"
-                                        value="KB"> KB</label>
-                                <label>
-                                    <input type="radio" name="betaalwijze"
-                                        value="PayPal"> PayPal</label>
-                                <label>
-                                    <input type="radio" name="betaalwijze"
-                                        value="kas"> kas van &nbsp;&#8364;&nbsp;
-                                    <input name="betaling" type="text" id="betaling"
-                                        size="5"
-                                        value="<?php echo ($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>">
-                                    &nbsp;
-                                    <!-- Checkbox voor cash ter plekse afgesproken -->
-                                    Betaling tijdens cursus in contanten
-                                    afgesproken: <input name="cash" type="checkbox"
-                                        value="1"
-                                        <?php if (isset($_POST['cash'])) echo 'checked'; ?>>
-                                </label>
-                            </td>
-                        </tr>
-                        <tr valign="middle">
-                            <td colspan="2" valign="top" nowrap>
-                                <div align="left">Opmerkingen over de betaling:<br>
-                                    <textarea name="rekening_opmerking" cols="80"
-                                        rows="3"
-                                        id="rekening_opmerking"><?php
+                            <input name="CursusId_FK" type="hidden" value="<?php
+                                            echo $ins['CursusId_FK']; ?>">
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="100" align="right" nowrap>
+                            <div align="right">Cursusgeld:</div>
+                        </td>
+                        <td><?php echo euro2($ins['cursusgeld']); ?></td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="100">
+                            <div align="right">Gedoneerd bedrag: </div>
+                        </td>
+                        <td><?php echo euro2($ins['donatie']); ?></td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="100" align="right" nowrap>
+                            <div align="right">Totaal te betalen: </div>
+                        </td>
+                        <td><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?>&nbsp;
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td width="100" align="right" nowrap>
+                            <div align="right">Al betaald:</div>
+                        </td>
+                        <td><?php echo euro2($ins['aanbet_bedrag']); ?></td>
+                    </tr>
+                    <tr valign="middle">
+                        <td width="100" align="right" valign="top" nowrap>
+                            <div align="right">Nog openstaand </div>
+                        </td>
+                        <td valign="top" nowrap>
+                            <?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>&nbsp;
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td colspan="2" valign="top" nowrap>
+                            <!-- Betaaldatum, betaalwijze en bedrag selectie -->
+                            Betaling d.d. <input name="datum" type="text"
+                                id="datum" size="10"
+                                value="<?php echo $_SESSION['datum'] ?>"> per
+                            <label>
+                                <input name="betaalwijze" type="radio"
+                                    value="Postbank" checked> Postbank</label>
+                            <label>
+                                <input type="radio" name="betaalwijze"
+                                    value="KB"> KB</label>
+                            <label>
+                                <input type="radio" name="betaalwijze"
+                                    value="PayPal"> PayPal</label>
+                            <label>
+                                <input type="radio" name="betaalwijze"
+                                    value="kas"> kas van &nbsp;&#8364;&nbsp;
+                                <input name="betaling" type="text" id="betaling"
+                                    size="5"
+                                    value="<?php echo ($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?>">
+                                &nbsp;
+                                <!-- Checkbox voor cash ter plekse afgesproken -->
+                                Betaling tijdens cursus in contanten
+                                afgesproken: <input name="cash" type="checkbox"
+                                    value="1"
+                                    <?php if (isset($_POST['cash'])) echo 'checked'; ?>>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr valign="middle">
+                        <td colspan="2" valign="top" nowrap>
+                            <div align="left">Opmerkingen over de betaling:<br>
+                                <textarea name="rekening_opmerking" cols="80"
+                                    rows="3"
+                                    id="rekening_opmerking"><?php
                                                                 if ($ins['rekening_opmerking'] != "") echo stripslashes($ins['rekening_opmerking']); ?></textarea>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td>&nbsp;</td>
-                            <td valign="baseline">
-                                <div class="links">
-                                    <input name="Verwerk" type="submit"
-                                        class="fotobijschrift" id="Verwerk"
-                                        value="Verwerk betaling" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td colspan="2">
-                                <p class="groot">Nog openstaande rekeningen:</p>
-                                <div id="navcontainer" style="width: 300px;">
-                                    <ul id="navlist"> <?php
+                            </div>
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td>&nbsp;</td>
+                        <td valign="baseline">
+                            <div class="links">
+                                <input name="Verwerk" type="submit"
+                                    class="fotobijschrift" id="Verwerk"
+                                    value="Verwerk betaling" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr valign="baseline">
+                        <td colspan="2">
+                            <p class="groot">Nog openstaande rekeningen:</p>
+                            <div id="navcontainer" style="width: 300px;">
+                                <ul id="navlist"> <?php
                                                         foreach ($openstaand as $open) {
                                                             $grijs = TRUE;
                                                             if (stripos($open['rekening_opmerking'], 'Betaling ter plekke in cash') === FALSE)
@@ -394,73 +392,73 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                                                             echo $opens;
                                                         }
                                                         ?> </ul>
+                            </div>
+                            <!-- Huidige inschrijving invoice weergeven -->
+                            <?php if (isset($ins['CursusId_FK']) && $ins['CursusId_FK'] != "") { ?>
+                            <hr style="margin-top: 20px;">
+                            <p><strong>Huidige inschrijving:</strong></p>
+                            <div style="font-size: 12px;">
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        <strong>Cursus:</strong>
+                                    </div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo $cursusnaam[$ins['CursusId_FK']]['NL']; ?>
+                                    </div>
                                 </div>
-                                <!-- Huidige inschrijving invoice weergeven -->
-                                <?php if (isset($ins['CursusId_FK']) && $ins['CursusId_FK'] != "") { ?>
-                                    <hr style="margin-top: 20px;">
-                                    <p><strong>Huidige inschrijving:</strong></p>
-                                    <div style="font-size: 12px;">
-                                        <div
-                                            style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                            <div
-                                                style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
-                                                <strong>Cursus:</strong>
-                                            </div>
-                                            <div style="flex: 1; min-width: 200px;">
-                                                <?php echo $cursusnaam[$ins['CursusId_FK']]['NL']; ?>
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                            <div
-                                                style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
-                                                Cursusgeld:</div>
-                                            <div style="flex: 1; min-width: 200px;">
-                                                <?php echo euro2($ins['cursusgeld']); ?>
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                            <div
-                                                style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
-                                                Gedoneerd:</div>
-                                            <div style="flex: 1; min-width: 200px;">
-                                                <?php echo euro2($ins['donatie']); ?>
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding-top: 8px; border-top: 1px solid #ccc;">
-                                            <div
-                                                style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
-                                                <strong>Totaal:</strong>
-                                            </div>
-                                            <div style="flex: 1; min-width: 200px;">
-                                                <strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?></strong>
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-                                            <div
-                                                style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
-                                                Al betaald:</div>
-                                            <div style="flex: 1; min-width: 200px;">
-                                                <?php echo euro2($ins['aanbet_bedrag']); ?>
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 8px; border-top: 1px solid #ccc;">
-                                            <div
-                                                style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
-                                                <strong>Openstaand:</strong>
-                                            </div>
-                                            <div style="flex: 1; min-width: 200px;">
-                                                <strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?></strong>
-                                            </div>
-                                        </div>
-                                    </div> <?php } ?>
-                            </td>
-                        </tr>
-                    </form><?php } ?>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        Cursusgeld:</div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo euro2($ins['cursusgeld']); ?>
+                                    </div>
+                                </div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        Gedoneerd:</div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo euro2($ins['donatie']); ?>
+                                    </div>
+                                </div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding-top: 8px; border-top: 1px solid #ccc;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        <strong>Totaal:</strong>
+                                    </div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie']); ?></strong>
+                                    </div>
+                                </div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        Al betaald:</div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <?php echo euro2($ins['aanbet_bedrag']); ?>
+                                    </div>
+                                </div>
+                                <div
+                                    style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 8px; border-top: 1px solid #ccc;">
+                                    <div
+                                        style="flex: 1; min-width: 200px; text-align: right; padding-right: 10px;">
+                                        <strong>Openstaand:</strong>
+                                    </div>
+                                    <div style="flex: 1; min-width: 200px;">
+                                        <strong><?php echo euro2($ins['cursusgeld'] + $ins['donatie'] - $ins['aanbet_bedrag']); ?></strong>
+                                    </div>
+                                </div>
+                            </div> <?php } ?>
+                        </td>
+                    </tr>
+                </form><?php } ?>
             </table> <?php echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}<br>";
                         foreach ($openstaand_bedrag as $key => $value) {
                             if (strpos($key, 'totaal') === false) {
@@ -475,5 +473,4 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
         </div>
     </div>
 </body>
-
 </html>
