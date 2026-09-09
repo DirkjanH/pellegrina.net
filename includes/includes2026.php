@@ -1,28 +1,36 @@
 <?php
-// stel php in dat deze fouten weergeeft
-//ini_set('display_errors', 1);
+ini_set('display_errors', '0');
+ini_set('display_startup_errors', '0');
 error_reporting(E_ALL);
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use function PHP81_BC\strftime;
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.use_strict_mode', '1');
+    session_set_cookie_params([
+        'httponly' => true,
+        'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+        'samesite' => 'Lax',
+    ]);
+    session_start();
+}
 
 //Connection statement
-require_once($_SERVER["DOCUMENT_ROOT"] . '/connections/connect_PDO.php');
+require_once dirname(__DIR__) . '/connections/connect_PDO.php';
 
 //Connection statement
-require_once($_SERVER["DOCUMENT_ROOT"] . '/connections/inschrijf.php');
+require_once dirname(__DIR__) . '/connections/inschrijf.php';
 
 //Functies
-require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/functies.php');
+require_once __DIR__ . '/functies.php';
 
 //Aditional Functions
-require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/functions.inc.php');
+require_once __DIR__ . '/functions.inc.php';
 
 //datum & tijd functies
-require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/datetime.php');
+require_once __DIR__ . '/datetime.php';
 
 // zet de localiteit op Nederland
 setlocale(LC_ALL, 'nl_NL');
@@ -38,18 +46,26 @@ $minimumleeftijd = 10;
 $maximumleeftijd = 88;
 $opening_inschrijving = date('2025-12-01');
 
-// build the form action
-$_SERVER['QUERY_STRING'] .= strip_tags('SID');
-$editFormAction = $_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) ? "?" .
-    $_SERVER['QUERY_STRING'] : "");
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$queryString = $_SERVER['QUERY_STRING'] ?? '';
+$editFormAction = htmlspecialchars(
+    $requestPath . ($queryString !== '' ? '?' . $queryString : ''),
+    ENT_QUOTES,
+    'UTF-8'
+);
 
 function safestrtotime($szFormat, $szDate)
 {
-    if (!isset($szDate))
+    if (!isset($szDate) || $szDate === '')
         $szDate = date("Y-m-d H:i:s");
+
+    if (!is_string($szDate) || !is_string($szFormat)) {
+        return -1;
+    }
 
     $szTemp = "00-00-0000";
     $arryMatch = array();
+    $arryDate = array();
     if (preg_match(
         '%(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])%',
         $szDate,
@@ -85,7 +101,10 @@ function safestrtotime($szFormat, $szDate)
         //$szTemp = $arryTemp[0].'-'.$arryTemp[1].'-'.$arryTemp[2];
     }
 
-    if (!checkdate($arryDate['m'], $arryDate['d'], $arryDate['Y'])) {
+    if (
+        !isset($arryDate['m'], $arryDate['d'], $arryDate['Y']) ||
+        !checkdate($arryDate['m'], $arryDate['d'], $arryDate['Y'])
+    ) {
         return -1;
     }
 

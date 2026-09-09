@@ -5,7 +5,6 @@ error_reporting(E_ALL);
 
 // Laad globale includes en vendor libraries
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
 // Kint is development-only; production must not fail when it is not installed.
 if (class_exists('Kint')) {
