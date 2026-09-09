@@ -68,7 +68,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
-      <!-- InstanceBeginEditable name="mainpage" -->
       <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/cursustitel.php'); ?>
       <ul>
         <li>Voor: zangers (solisten en zeer ervaren koorzangers),
