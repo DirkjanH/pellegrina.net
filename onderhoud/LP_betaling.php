@@ -24,8 +24,13 @@ foreach ($cursussen as $cur) {
 }
 
 // Bepaal deelnemers ID uit GET parameter
-$id = filter_input(INPUT_GET, 'DlnmrId', FILTER_VALIDATE_INT);
-$id = $id === false || $id === null ? -1 : $id;
+$postedDlnmrId = filter_input(INPUT_POST, 'DlnmrId', FILTER_VALIDATE_INT);
+$sessionDlnmrId = filter_var($_SESSION['DlnmrId'] ?? null, FILTER_VALIDATE_INT);
+$getDlnmrId = filter_input(INPUT_GET, 'DlnmrId', FILTER_VALIDATE_INT);
+$id = $postedDlnmrId ?: ($sessionDlnmrId ?: ($getDlnmrId ?: -1));
+if ($id > 0) {
+    $_SESSION['DlnmrId'] = $id;
+}
 $postedInschId = filter_input(INPUT_POST, 'InschId', FILTER_VALIDATE_INT);
 
 // Verwerk betaling als formulier verzonden
@@ -222,8 +227,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
                                 name="DlnmrId" type="text"
-                                value="<?php if (isset($_GET['DlnmrId']))
-                                            echo $_GET['DlnmrId']; ?>"
+                                value="<?php echo $id > 0 ? $id : ''; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                         </form>
@@ -242,7 +246,7 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                             }
                             echo "</option>\n</select>";
                             echo '<input name="DlnmrId" type="hidden" value="';
-                            if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
+                            if ($id > 0) echo $id . '" />';
                             echo '<input type="submit" name="Submit" value="Zoek">';
                             echo '</form></td></tr>';
                         } elseif ($totalRows_inschrijving === 1) {
@@ -259,15 +263,13 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                                 <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-                                    type="hidden"
-                                    value="<?php
-                                            echo $ins['aanbet_bedrag']; ?>">
+                                    type="hidden" value="<?php
+                                                            echo $ins['aanbet_bedrag']; ?>">
                                 <input name="InschId" id="InschId" type="hidden"
                                     value="<?php
                                             echo $ins['InschId']; ?>">
-                                <input name="CursusId_FK" type="hidden"
-                                    value="<?php
-                                            echo $ins['CursusId_FK']; ?>">
+                                <input name="CursusId_FK" type="hidden" value="<?php
+                                                                                echo $ins['CursusId_FK']; ?>">
                             </td>
                         </tr>
                         <tr valign="baseline">

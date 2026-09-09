@@ -14,6 +14,12 @@ Kint::$enabled_mode = false;
 d($_GET);
 d($_POST);
 
+$postedDlnmrId = filter_input(INPUT_POST, 'DlnmrId', FILTER_VALIDATE_INT);
+if ($postedDlnmrId) $_SESSION['DlnmrId'] = $postedDlnmrId;
+$sessionDlnmrId = filter_var($_SESSION['DlnmrId'] ?? null, FILTER_VALIDATE_INT);
+$getDlnmrId = filter_input(INPUT_GET, 'DlnmrId', FILTER_VALIDATE_INT);
+$DlnmrId = $sessionDlnmrId ?: ($getDlnmrId ?: -1);
+
 $cursus = $eerstecursus + 1;
 if (isset($_GET['cursus']) and ($_GET['cursus'] != "")) $cursus = $_GET['cursus'] + $cursus_offset;
 
@@ -55,12 +61,12 @@ function lijst($tabel)
 	return $aantal;
 }
 // begin Update gegevens deelname herhalingsconcert
-if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "") and isset($_POST["verzend"]) and ($_POST['verzend'] == "Update deelname herhalingsconcert")) {
+if ($DlnmrId > 0 and isset($_POST["verzend"]) and ($_POST['verzend'] == "Update deelname herhalingsconcert")) {
 	$updateSQL = sprintf(
 		"UPDATE inschrijving SET herhaling=%s, herhaling_txt=%s WHERE DlnmrId_FK=%s AND CursusId_FK = %s",
 		GetSQLValueString($_POST['herhaling'], "int"),
 		GetSQLValueString($_POST['herhaling_txt'], "text"),
-		GetSQLValueString($_GET['DlnmrId'], "int"),
+		GetSQLValueString($DlnmrId, "int"),
 		$cursus
 	);
 
@@ -81,10 +87,7 @@ d($cursusnaam);
 // end Recordset Cursusnamen
 
 // begin Recordset gegevens deelname herhalingsconcert
-$colname__inschrijving = '-1';
-if (isset($_GET['DlnmrId']) and ($_GET['DlnmrId'] != "")) {
-	$colname__inschrijving = $_GET['DlnmrId'];
-}
+$colname__inschrijving = $DlnmrId;
 $query_deelnemer = sprintf(
 	"SELECT naam, instr, herhaling, herhaling_txt FROM inschrijving, dlnmr WHERE DlnmrId_FK = DlnmrId AND CursusId_FK = %s AND DlnmrId_FK = %s",
 	$cursus,
@@ -163,7 +166,7 @@ $onbekend = select_query($query_onbekend);
 								cellpadding="5" class="onzichtbaar">
 								<tr>
 									<td><input name="DlnmrId" type="input"
-											value="<?php if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId']; ?>"
+											value="<?php echo $DlnmrId > 0 ? $DlnmrId : ''; ?>"
 											size="5" />
 										<input type="submit" name="Submit"
 											value="Zoek"> &nbsp;

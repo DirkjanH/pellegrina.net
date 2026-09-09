@@ -10,13 +10,15 @@ Kint::$enabled_mode = false;
 
 d($_REQUEST, $_GET, $_POST, $_SESSION);
 
-if (isset($_SESSION['inschrijving']) and empty($_GET['DlnmrId'])) $inschrijving = $_SESSION['inschrijving'];
+$postedDlnmrId = filter_input(INPUT_POST, 'DlnmrId', FILTER_VALIDATE_INT);
+if ($postedDlnmrId) $_SESSION['DlnmrId'] = $postedDlnmrId;
+$sessionDlnmrId = filter_var($_SESSION['DlnmrId'] ?? null, FILTER_VALIDATE_INT);
+$getDlnmrId = filter_input(INPUT_GET, 'DlnmrId', FILTER_VALIDATE_INT);
+$id = $sessionDlnmrId ?: ($getDlnmrId ?: -1);
+
+if (isset($_SESSION['inschrijving']) and $id < 1) $inschrijving = $_SESSION['inschrijving'];
 
 ob_start();
-
-if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
-if (isset($_SESSION['DlnmrId']) and $_SESSION['DlnmrId'] != '' and $_GET['DlnmrId'] == '')
-    $_GET['DlnmrId'] = $_SESSION['DlnmrId'];
 
 // Kies tarievenmodule:
 require_once("tarieven.php");
@@ -26,9 +28,6 @@ function send_alert(string $msg)
 
     echo "<script language=\"javascript\">alert(\"{$msg}\");</script>";
 }  //end function 
-
-if (empty($_GET['DlnmrId']) or $_GET['DlnmrId'] == "") $id = -1;
-else $id = $_GET['DlnmrId'];
 
 // Query voor inschrijvingen zonder verzonden rekening (normale gang) of specifieke deelnemer (heruitvoering)
 if ($id == -1) {
@@ -354,6 +353,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -379,6 +379,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
     <link rel="stylesheet" href="/css/LP_onderhoud.css">
 </head>
+
 <body>
     <div id="zoeknaam"> <?php require_once('LP_zoeknaam.php'); ?> </div>
     <div id="mainframe">
@@ -391,8 +392,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
                                 name="DlnmrId" type="text"
-                                value="<?php if (isset($_GET['DlnmrId']))
-                                                                        echo $_GET['DlnmrId']; ?>"
+                                value="<?php echo $id > 0 ? $id : ''; ?>"
                                 size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                             Rekening al verzonden: <input
@@ -418,7 +418,7 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
                             }
                             echo "</option>\n</select>";
                             echo '<input name="DlnmrId" type="hidden" value="';
-                            if (isset($_GET['DlnmrId'])) echo $_GET['DlnmrId'] . '" />';
+                            if ($id > 0) echo $id . '" />';
                             echo '<input type="submit" name="Submit" value="Zoek">';
                             echo '</form></td></tr>';
 
@@ -454,4 +454,5 @@ if ((isset($_POST["verzend"])) && ($_POST["verzend"] == "Maak rekeningen")) {
         </div>
     </div> <?php ob_end_flush(); ?>
 </body>
+
 </html>
