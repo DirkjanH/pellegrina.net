@@ -7,8 +7,13 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
-// Debug tool uitschakelen
-Kint::$enabled_mode = false;
+// Kint is development-only; production must not fail when it is not installed.
+if (class_exists('Kint')) {
+    Kint::$enabled_mode = false;
+}
+if (!function_exists('d')) {
+    function d(...$values) {}
+}
 
 // Initialiseer sessie datum (standaard vandaag)
 if (!(isset($_SESSION['datum']) && $_SESSION['datum'] != "")) $_SESSION['datum'] = date("d-m-Y");
@@ -276,15 +281,13 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                                 <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-                                    type="hidden"
-                                    value="<?php
-                                            echo $ins['aanbet_bedrag']; ?>">
+                                    type="hidden" value="<?php
+                                                            echo $ins['aanbet_bedrag']; ?>">
                                 <input name="InschId" id="InschId" type="hidden"
                                     value="<?php
                                             echo $ins['InschId']; ?>">
-                                <input name="CursusId_FK" type="hidden"
-                                    value="<?php
-                                            echo $ins['CursusId_FK']; ?>">
+                                <input name="CursusId_FK" type="hidden" value="<?php
+                                                                                echo $ins['CursusId_FK']; ?>">
                             </td>
                         </tr>
                         <tr valign="baseline">
