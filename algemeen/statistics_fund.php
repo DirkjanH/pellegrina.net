@@ -5,7 +5,15 @@ error_reporting(E_ALL);
 
 require_once dirname(__DIR__) . '/includes/includes2027.php';
 
-$jaar = (int) $jaar;
+$gevraagdJaar = filter_input(
+    INPUT_GET,
+    'jaar',
+    FILTER_VALIDATE_INT,
+    ['options' => ['min_range' => 2000, 'max_range' => 2100]]
+);
+$jaar = $gevraagdJaar !== false && $gevraagdJaar !== null
+    ? $gevraagdJaar
+    : (int) $jaar;
 $eerstecursus = (int) $eerstecursus;
 $laatstecursus = (int) $laatstecursus;
 $ACMP = true;
