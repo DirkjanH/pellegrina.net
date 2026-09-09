@@ -9,19 +9,27 @@ if (class_exists('Kint')) {
     Kint::$enabled_mode = false;
 }
 
-$jaarOffsets = [
-    2024 => 57,
-    2025 => 59,
-    2026 => 61,
-    2027 => 63,
-];
+$eersteBeschikbareJaar = 2024;
+$ingesteldeJaar = (int) $jaar;
+$laatsteBeschikbareJaar = max($eersteBeschikbareJaar, $ingesteldeJaar);
+$jaarOffsets = [];
+for ($beschikbaarJaar = $eersteBeschikbareJaar;
+    $beschikbaarJaar <= $laatsteBeschikbareJaar;
+    $beschikbaarJaar++) {
+    $jaarOffsets[$beschikbaarJaar] = 57 + (($beschikbaarJaar - 2024) * 2);
+}
 $gevraagdJaar = filter_input(
     INPUT_GET,
     'jaar',
     FILTER_VALIDATE_INT,
-    ['options' => ['min_range' => 2000, 'max_range' => 2100]]
+    ['options' => [
+        'min_range' => $eersteBeschikbareJaar,
+        'max_range' => $laatsteBeschikbareJaar,
+    ]]
 );
-$jaar = array_key_exists($gevraagdJaar, $jaarOffsets) ? $gevraagdJaar : 2027;
+$jaar = array_key_exists($gevraagdJaar, $jaarOffsets)
+    ? $gevraagdJaar
+    : $ingesteldeJaar;
 $cursus_offset = $jaarOffsets[$jaar];
 $eerstecursus = $cursus_offset + 1;
 $laatstecursus = $cursus_offset + (int) $aantal_cursussen;
@@ -166,7 +174,6 @@ if (class_exists('Kint') && function_exists('d')) {
 <!DOCTYPE HTML>
 <html>
 <!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -182,119 +189,131 @@ if (class_exists('Kint') && function_exists('d')) {
     <!-- InstanceBeginEditable name="head" -->
     <link rel="stylesheet" href="../css/pellegrina_stijlen.css" type="text/css">
     <style type="text/css">
-        <!--
-        table#stat {
-            width: 100%;
-            left: 11px;
-            top: 89px;
-        }
+    <!--
+    table#stat {
+        width: 100%;
+        left: 11px;
+        top: 89px;
+    }
 
-        p {
-            width: auto;
-        }
+    p {
+        width: auto;
+    }
 
-        td {
-            width: 25%;
-        }
+    td {
+        width: 25%;
+    }
 
-        .cursusnaam {
-            vertical-align: top;
-            background-color: #BE9495;
-            font-weight: bold;
-            padding-left: 25px;
-        }
-        -->
+    .cursusnaam {
+        vertical-align: top;
+        background-color: #BE9495;
+        font-weight: bold;
+        padding-left: 25px;
+    }
+    -->
     </style>
     <!-- InstanceEndEditable -->
 </head>
-
 <body> <?php require_once dirname(__DIR__) . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud">
         <?php require_once dirname(__DIR__) . '/includes/header.EN.php'; ?> <div
             id="main">
             <!-- InstanceBeginEditable name="mainpage" -->
             <h2>Statistics <?php echo $jaar; ?></h2>
+            <form method="get"
+                action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+                <fieldset>
+                    <legend>Select year</legend>
+                    <?php foreach ($jaarOffsets as $beschikbaarJaar => $offset) { ?>
+                    <label>
+                        <input type="radio" name="jaar"
+                            value="<?php echo $beschikbaarJaar; ?>"
+                            <?php echo $beschikbaarJaar === $jaar ? 'checked' : ''; ?>
+                            onchange="this.form.submit();">
+                        <?php echo $beschikbaarJaar; ?> </label> <?php } ?>
+                </fieldset>
+            </form>
             <p>Fund for Music Students and Eastern European Participants&nbsp;
             </p>
             <table id="stat"> <?php
                                 $i = $eerstecursus;
                                 while ($i <= $laatstecursus) {
                                 ?> <tr>
-                        <td class="cursusnaam">
-                            <?php echo htmlspecialchars($cursusnaam[$i] ?? '', ENT_QUOTES, 'UTF-8'); ?>:
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <ul>
-                                <li>Participants: <?php echo $aangenomen[$i]; ?>
-                                    <ul>
-                                        <li>Of whom students:
-                                            <?php echo $student[$i]; ?></li>
-                                        <li>Of whom Eastern Europeans:
-                                            <?php echo $oost[$i]; ?></li>
-                                        <li>Of whom Eastern European students:
-                                            <?php echo $ooststudent[$i]; ?></li>
-                                        <li>Of whom other participants applying for
-                                            a reduction:
-                                            <?php echo $reductor[$i]; ?></li>
-                                    </ul>
-                                </li>
-                                <li>Donations by
-                                    participants:&nbsp;<?php echo euro($cursus[$i]['donatie']); ?>
-                                </li>
-                                <li>Number of
-                                    donators:&nbsp;<?php echo $donator[$i] . ' (' . statistics_percentage($donator[$i], $aangenomen[$i]) . ' %)'; ?>
-                                </li>
-                                <li>Average donation per donator:
-                                    <?php echo statistics_average($cursus[$i]['donatie'], $donator[$i]); ?>
-                                </li>
-                                <li>Average donation per participant:
-                                    <?php echo statistics_average($cursus[$i]['donatie'], $aangenomen[$i]); ?><br><br>
-                                    <ul>
-                                        <li>Reductions
-                                            applicants:&nbsp;<?php echo euro($cursus[$i]['korting']); ?>
-                                        </li> <?php if ($ACMP) { ?> <li>Reductions
-                                                students:&nbsp;<?php echo euro($cursus[$i]['student']); ?>
-                                            </li>
-                                            <li>Reductions Eastern
-                                                Europeans:&nbsp;<?php echo euro($cursus[$i]['oost']); ?>
-                                            </li>
-                                            <li>Reductions Eastern European
-                                                students:&nbsp;<?php echo euro($cursus[$i]['ooststudent']); ?>
-                                            </li> <?php $cursus[$i]['korting'] += $cursus[$i]['student'] + $cursus[$i]['oost'] + $cursus[$i]['ooststudent'];
+                    <td class="cursusnaam">
+                        <?php echo htmlspecialchars($cursusnaam[$i] ?? '', ENT_QUOTES, 'UTF-8'); ?>:
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <ul>
+                            <li>Participants: <?php echo $aangenomen[$i]; ?>
+                                <ul>
+                                    <li>Of whom students:
+                                        <?php echo $student[$i]; ?></li>
+                                    <li>Of whom Eastern Europeans:
+                                        <?php echo $oost[$i]; ?></li>
+                                    <li>Of whom Eastern European students:
+                                        <?php echo $ooststudent[$i]; ?></li>
+                                    <li>Of whom other participants applying for
+                                        a reduction:
+                                        <?php echo $reductor[$i]; ?></li>
+                                </ul>
+                            </li>
+                            <li>Donations by
+                                participants:&nbsp;<?php echo euro($cursus[$i]['donatie']); ?>
+                            </li>
+                            <li>Number of
+                                donators:&nbsp;<?php echo $donator[$i] . ' (' . statistics_percentage($donator[$i], $aangenomen[$i]) . ' %)'; ?>
+                            </li>
+                            <li>Average donation per donator:
+                                <?php echo statistics_average($cursus[$i]['donatie'], $donator[$i]); ?>
+                            </li>
+                            <li>Average donation per participant:
+                                <?php echo statistics_average($cursus[$i]['donatie'], $aangenomen[$i]); ?><br><br>
+                                <ul>
+                                    <li>Reductions
+                                        applicants:&nbsp;<?php echo euro($cursus[$i]['korting']); ?>
+                                    </li> <?php if ($ACMP) { ?> <li>Reductions
+                                        students:&nbsp;<?php echo euro($cursus[$i]['student']); ?>
+                                    </li>
+                                    <li>Reductions Eastern
+                                        Europeans:&nbsp;<?php echo euro($cursus[$i]['oost']); ?>
+                                    </li>
+                                    <li>Reductions Eastern European
+                                        students:&nbsp;<?php echo euro($cursus[$i]['ooststudent']); ?>
+                                    </li> <?php $cursus[$i]['korting'] += $cursus[$i]['student'] + $cursus[$i]['oost'] + $cursus[$i]['ooststudent'];
                                                 } ?>
-                                    </ul>
-                                <li>Reductions
-                                    total:&nbsp;<?php echo euro($cursus[$i]['korting']); ?>
-                                </li>
-                                <li>People benefitting from a reduction:
-                                    <?php echo $reductor[$i] + $reductor2[$i] . ' (' . statistics_percentage($reductor[$i] + $reductor2[$i], $aangenomen[$i]) . ' %)'; ?>
-                                </li>
-                                <li>Average reduction:&nbsp;<?php if ($reductor[$i] + $reductor2[$i] > 0)  echo euro($cursus[$i]['korting'] / ($reductor[$i] + $reductor2[$i]));
+                                </ul>
+                            <li>Reductions
+                                total:&nbsp;<?php echo euro($cursus[$i]['korting']); ?>
+                            </li>
+                            <li>People benefitting from a reduction:
+                                <?php echo $reductor[$i] + $reductor2[$i] . ' (' . statistics_percentage($reductor[$i] + $reductor2[$i], $aangenomen[$i]) . ' %)'; ?>
+                            </li>
+                            <li>Average reduction:&nbsp;<?php if ($reductor[$i] + $reductor2[$i] > 0)  echo euro($cursus[$i]['korting'] / ($reductor[$i] + $reductor2[$i]));
                                                             else echo '-' ?>
-                                </li>
-                            </ul>
-                        </td> <?php
+                            </li>
+                        </ul>
+                    </td> <?php
                                     $i++;
                                 }
                                 ?>
-                    </tr>
-                    <tr>
-                        <td colspan="<?php echo $aantal_cursussen; ?>" valign="top">
-                            <p>Total
-                                participants:&nbsp;<?php echo $aangenomen['totaal']; ?>
-                                |
-                                donations:&nbsp;<?php echo euro($cursus['totaal']['donatie']); ?>
-                                | donators:
-                                <?php echo $donator['totaal'] . ' (' . statistics_percentage($donator['totaal'], $aangenomen['totaal']) . ' %)'; ?>
-                                |
-                                reductions:&nbsp;<?php echo euro($cursus['totaal']['korting']); ?>
-                                | people benefitting from a reduction:
-                                <?php echo ($reductor['totaal'] + $reductor2['totaal']) . ' (' . statistics_percentage($reductor['totaal'] + $reductor2['totaal'], $aangenomen['totaal']) . ' %)'; ?>
-                            </p>
-                        </td>
-                    </tr>
+                </tr>
+                <tr>
+                    <td colspan="<?php echo $aantal_cursussen; ?>" valign="top">
+                        <p>Total
+                            participants:&nbsp;<?php echo $aangenomen['totaal']; ?>
+                            |
+                            donations:&nbsp;<?php echo euro($cursus['totaal']['donatie']); ?>
+                            | donators:
+                            <?php echo $donator['totaal'] . ' (' . statistics_percentage($donator['totaal'], $aangenomen['totaal']) . ' %)'; ?>
+                            |
+                            reductions:&nbsp;<?php echo euro($cursus['totaal']['korting']); ?>
+                            | people benefitting from a reduction:
+                            <?php echo ($reductor['totaal'] + $reductor2['totaal']) . ' (' . statistics_percentage($reductor['totaal'] + $reductor2['totaal'], $aangenomen['totaal']) . ' %)'; ?>
+                        </p>
+                    </td>
+                </tr>
             </table>
             <!-- InstanceEndEditable -->
             <h2> <a href="javascript: history.go(-1)">Back</a></h2>
@@ -303,5 +322,4 @@ if (class_exists('Kint') && function_exists('d')) {
     </div> <?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
 </body>
 <!-- InstanceEnd -->
-
 </html>
