@@ -5,17 +5,26 @@ error_reporting(E_ALL);
 
 require_once dirname(__DIR__) . '/includes/includes2027.php';
 
+if (class_exists('Kint')) {
+    Kint::$enabled_mode = false;
+}
+
+$jaarOffsets = [
+    2024 => 57,
+    2025 => 59,
+    2026 => 61,
+    2027 => 63,
+];
 $gevraagdJaar = filter_input(
     INPUT_GET,
     'jaar',
     FILTER_VALIDATE_INT,
     ['options' => ['min_range' => 2000, 'max_range' => 2100]]
 );
-$jaar = $gevraagdJaar !== false && $gevraagdJaar !== null
-    ? $gevraagdJaar
-    : (int) $jaar;
-$eerstecursus = (int) $eerstecursus;
-$laatstecursus = (int) $laatstecursus;
+$jaar = array_key_exists($gevraagdJaar, $jaarOffsets) ? $gevraagdJaar : 2027;
+$cursus_offset = $jaarOffsets[$jaar];
+$eerstecursus = $cursus_offset + 1;
+$laatstecursus = $cursus_offset + (int) $aantal_cursussen;
 $ACMP = true;
 $deelnemers = ['totaal' => 0];
 $aangenomen = ['totaal' => 0];
