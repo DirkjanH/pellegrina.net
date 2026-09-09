@@ -1,5 +1,4 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursussen.php'; ?>
-
 <!DOCTYPE HTML>
 <html>
 
@@ -31,46 +30,110 @@
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>
 		<div id="main" style="clear: none;">
 			<div class="w3-center" lang="cs-CZ">
-				<h1 class="LP_colour w3-margin-bottom" style="margin-top: 0px;">Dva projekty pro každého hudebníka s profesionálním přístupem</h1>
+				<h1 class="LP_colour w3-margin-bottom" style="margin-top: 0px;">
+					Dva projekty pro každého hudebníka s profesionálním
+					přístupem</h1>
 			</div>
 			<div class="w3-row">
 				<div class="w3-twothird w3-panel">
-					<h2 class="LP_colour lijnboven" style="margin-top: 0px;">Letní hudební kurzy společnosti <em>La Pellegrina</em> <?php echo $jaar ?> v Čechách a Nízozemsku:</h2>
-					<p>dva projekty, ve kterých se můžete odevzdat nádherné hudbě se špičkovými lektory a stejně smýšlejícími lidmi. Projekty jsou určeny zkušeným instrumentalistům a zpěvákům. Vítáni jsou amatéři, poloprofesionálové i profesionálové, zkrátka všichni hudební nadšenci, kteří jsou pohotoví, přizpůsobiví, schopní hrát /zpívat v souboru s ostatními hráči a jejichž technická úroveň dovoluje zahrát /zazpívat své party v předem určených skladbách. Předpokladem spokojenosti všech účastníků je jejich předchozí zodpovědná příprava a technické zvládnutí svého partu před začátkem kurzu. Věk účastníků je neomezen.</p>
+					<h2 class="LP_colour lijnboven" style="margin-top: 0px;">
+						Letní hudební kurzy společnosti <em>La Pellegrina</em>
+						<?php echo $jaar ?> v Čechách a Nízozemsku:</h2>
+					<p>dva projekty, ve kterých se můžete odevzdat nádherné
+						hudbě se špičkovými lektory a stejně smýšlejícími lidmi.
+						Projekty jsou určeny zkušeným instrumentalistům a
+						zpěvákům. Vítáni jsou amatéři, poloprofesionálové i
+						profesionálové, zkrátka všichni hudební nadšenci, kteří
+						jsou pohotoví, přizpůsobiví, schopní hrát /zpívat v
+						souboru s ostatními hráči a jejichž technická úroveň
+						dovoluje zahrát /zazpívat své party v předem určených
+						skladbách. Předpokladem spokojenosti všech účastníků je
+						jejich předchozí zodpovědná příprava a technické
+						zvládnutí svého partu před začátkem kurzu. Věk účastníků
+						je neomezen.</p>
 					<div class="w3-card-8 w3-panel w3-pale-green">
-						<p class="LP_colour w3-large"><strong>Českým a&nbsp;slovenským účastníkům kursů pořádaných agenturou <i>La
-									Pellegrina</i> nabízíme zvýhodněné podmínky, mimo jiné i&nbsp;<a href="algemeen/CZ_prijzen.php" target="_blank">snížené ceny</a>. </strong></p>
+						<p class="LP_colour w3-large"><strong>Českým
+								a&nbsp;slovenským účastníkům kursů pořádaných
+								agenturou <i>La Pellegrina</i> nabízíme
+								zvýhodněné podmínky, mimo jiné i&nbsp;<a
+									href="algemeen/CZ_prijzen.php"
+									target="_blank">snížené ceny</a>. </strong>
+						</p>
 					</div>
-					<h2 class="romantic lijnboven">1. Dvořákova kantáta <i>Svatební košile</i> pro orchestr, sbor a sólisty</h2>
-					<h3 class="romantic plaats">30. července - 9. srpna v Českých Budějovicích</h3>
+					<h2 class="romantic lijnboven">1. Mendelssohnovo oratorium
+						<i>Elias</i> pro orchestr, sbor a sólisty
+					</h2>
+					<h3 class="romantic plaats">22. července - 1. srpna v
+						Českých Budějovicích, Česká republika</h3>
 					<ul>
-						<li>Pro sborové a sólové zpěváky, orchestrální a komorní hráče na smyčcové a dechové nástroje, klavíristy. Vítány jsou i existující soubory
+						<li>Pro sborové a sólové zpěváky, orchestrální a komorní
+							hráče na smyčcové a dechové nástroje, klavíristy.
+							Vítány jsou i existující soubory </li>
+						<li>Lektoři: Martina Bernášková (flétna), Petr Bernášek
+							(housle), Václav Bernášek (violoncello), Pavel
+							Hořejší (viola), Dirkjan Horringa (klarinet), Libor
+							Nováček (klavír), Mitchell Sandler (zpěv), Rudolf
+							Sternadel (housle a viola) a další </li>
+						<li>Ústřední dílo pro všechny: Mendelssohnovo oratorium
+							<i>Elias</i> op. 70
 						</li>
-						<li>Lektoři: Martina Bernášková (flétna), Petr Bernášek (housle), Václav Bernášek (violoncello), Pavel Hořejší (viola), Dirkjan Horringa (klarinet), Libor Nováček (klavír), Mitchell Sandler (zpěv), Rudolf Sternadel (housle a viola) a další
-						</li>
-						<li>Ústřední dílo pro všechny: Dvořákovu kantátu <i>Svatební košile</i> op. 69</li>
-						<li>Sbor: kromě kantáty <i>Svatební košile</i> s orchestrem také skladby komorního sborového repertoáru, a cappella a s klavírem</li>
-						<li>Instrumentalisté budou hrát každý ve dvou předem určených komorních souborech a ve velkém symfonickém orchestru
-						</li>
-						<li>Účastníci budou mít možnost zahrát nebo zazpívat si jednu větu z sólového koncertu nebo arii W.A. Mozarta (nebo některého z jeho současníků) za doprovodu “ad hoc” orchestru</li>
-						<li>Kurz probíhá v příjemném prostředí Konzervatoře v Českých Budějovicích a vyvrcholí společným koncertem v katedrále</li>
+						<li>Sbor: kromě oratoria <i>Elias</i> s orchestrem také
+							skladby komorního sborového repertoáru, a cappella a
+							s klavírem</li>
+						<li>Instrumentalisté budou hrát každý ve dvou předem
+							určených komorních souborech a ve velkém symfonickém
+							orchestru </li>
+						<li>Účastníci budou mít možnost zahrát nebo zazpívat si
+							jednu větu z sólového koncertu nebo arii W.A.
+							Mozarta (nebo některého z jeho současníků) za
+							doprovodu “ad hoc” orchestru</li>
+						<li>Kurz probíhá v příjemném prostředí Konzervatoře v
+							Českých Budějovicích a vyvrcholí společným koncertem
+							v katedrále</li>
 					</ul>
-					<h2 class="baroque lijnboven">2. Barokní hudba ze střední Evropy v 415 Hz</h2>
-					<h3 class="baroque plaats">13. - 19. srpna v klášteře Nieuw Sion, Nízozemsko</h3>
+					<h2 class="baroque lijnboven">2. Neapolská barokní hudba v
+						415 Hz</h2>
+					<h3 class="baroque plaats">8. - 14. srpna v klášteře Nieuw
+						Sion, Nizozemsko</h3>
 					<ul>
-						<li>Pro zpěváky (sólisty a zkušené sboristy) a instrumentalisty (pouze na dobové nástroje, ladění 415 Hz)</li>
-						<li>Lektoři: Femke Huizinga (orchestr, housle), Hanna Lindeijer (barokní dechové nástroje), Dirkjan Horringa (zpěv a umělecký vedoucí), Ricardo Rodríguez Miranda (viola da gamba, barokní tánec), Mitchell Sandler (zpěv) a Edoardo Valorz (basso continuo)</li>
-						<li>Díla pro všechny: hudba z Vídně/Prahy/Drážďan/Kroměříže od autorů jako Fux, Caldara, Biber, Zelenka, Michna, Vejvanovský a Schmelzer. Ústředními díly jsou Requiem f moll od Bibera a Miserere c moll ZWV 57 od Zelenky</li>
-						<li>Každé dopoledne hraní barokní hudby v menších instrumentálních, vokálních, nebo smíšených vokálně intrumentálních ansámblech</li>
-						<li>Kurz probíhá v příjemném prostředí bývalého kláštera a vyvrcholí společným koncertem v klášterním kostele </li>
-						<li>S dílnou barokního tance pro všechny účastníky, vedenou Ricardem Rodríguezem Mirandou</li>
+						<li>Pro zpěváky (sólisty a zkušené sboristy) a
+							instrumentalisty (pouze na dobové nástroje, ladění
+							415 Hz)</li>
+						<li>Lektoři: Femke Huizinga (orchestr, housle), Hanna
+							Lindeijer (barokní dechové nástroje), Dirkjan
+							Horringa (zpěv a umělecký vedoucí), Ricardo
+							Rodríguez Miranda (viola da gamba, barokní tánec),
+							Mitchell Sandler (zpěv) a Edoardo Valorz (basso
+							continuo)</li>
+						<li>Díla pro všechny: hudba z
+							Vídně/Prahy/Drážďan/Kroměříže od autorů jako Fux,
+							Caldara, Biber, Zelenka, Michna, Vejvanovský a
+							Schmelzer. Ústředními díly jsou Requiem f moll od
+							Bibera a Miserere c moll ZWV 57 od Zelenky</li>
+						<li>Každé dopoledne hraní barokní hudby v menších
+							instrumentálních, vokálních, nebo smíšených vokálně
+							intrumentálních ansámblech</li>
+						<li>Kurz probíhá v příjemném prostředí bývalého kláštera
+							a vyvrcholí společným koncertem v klášterním kostele
+						</li>
+						<li>S dílnou barokního tance pro všechny účastníky,
+							vedenou Ricardem Rodríguezem Mirandou</li>
 					</ul>
 				</div>
 				<div class="w3-rest w3-panel">
-					<div class="fotocenter"><img src="Images/CZ_info-web-resources/image/IMG_1782-2.jpg" alt="Houslistka v kostele" /></div>
-					<div class="fotocenter"><img src="Images/CZ_info-web-resources/image/P1020545.png" alt="Orchestr a bas v Bechyňském kostele" /></div>
-					<div class="fotocenter"><img src="Images/CZ_info-web-resources/image/IMG_2544.jpg" alt="Klarinetistka v komořině" /></div>
-					<div class="fotocenter"><img src="Images/Locaties/Budejovice/ensemble_in_zaal.jpg" alt="Koncertní sál v Budějovicích" width="325" height="248" /></div>
+					<div class="fotocenter"><img
+							src="Images/CZ_info-web-resources/image/IMG_1782-2.jpg"
+							alt="Houslistka v kostele" /></div>
+					<div class="fotocenter"><img
+							src="Images/CZ_info-web-resources/image/P1020545.png"
+							alt="Orchestr a bas v Bechyňském kostele" /></div>
+					<div class="fotocenter"><img
+							src="Images/CZ_info-web-resources/image/IMG_2544.jpg"
+							alt="Klarinetistka v komořině" /></div>
+					<div class="fotocenter"><img
+							src="Images/Locaties/Budejovice/ensemble_in_zaal.jpg"
+							alt="Koncertní sál v Budějovicích" width="325"
+							height="248" /></div>
 				</div>
 			</div>
 			<h2> <a href="javascript: history.go(-1)">Zpět</a></h2>
