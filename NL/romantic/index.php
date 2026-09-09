@@ -86,12 +86,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           docenten vormen een ad hoc orkest dat de begeleiding van
           blad speelt</li>
       </ul>
-      <p class="plaatsvoor">Nog plaatsen beschikbaar voor fagot, hoorn,
-        piano en strijkers in alle groepen. Het koor heeft nog enkele
-        plaatsen in alle groepen, met name voor sopranen en bassen</p>
-      <p class="volvoor">Deze cursus is vol voor fluit, hobo en klarinet
-      </p>
-      <p><a href="cursus.php" class="">Lees meer over deze cursus</a></p>
+      <p class="plaatsvoor onzichtbaar">Nog plaatsen beschikbaar voor
+        fagot, hoorn, piano en strijkers in alle groepen. Het koor heeft
+        nog enkele plaatsen in alle groepen, met name voor sopranen en
+        bassen</p>
+      <p class="volvoor onzichtbaar">Deze cursus is vol voor fluit, hobo
+        en klarinet </p>
+      <p class="onzichtbaar"><a href="cursus.php" class="">Lees meer over
+          deze cursus</a></p>
       <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
   </div>
