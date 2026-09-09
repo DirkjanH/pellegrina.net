@@ -4,7 +4,7 @@
 error_reporting(E_ALL);
 
 // Laad globale includes en vendor libraries
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2026.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 
 // Debug tool uitschakelen
@@ -221,8 +221,10 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                     <td colspan="2">
                         <form id="zoek" name="zoek" method="get"
                             action="<?php echo $editFormAction; ?>"> Id: <input
-                                name="DlnmrId" type="text" value="<?php if (isset($_GET['DlnmrId']))
-                                                                        echo $_GET['DlnmrId']; ?>" size="5" />
+                                name="DlnmrId" type="text"
+                                value="<?php if (isset($_GET['DlnmrId']))
+                                            echo $_GET['DlnmrId']; ?>"
+                                size="5" />
                             <input type="submit" name="Submit" value="Zoek">
                         </form>
                     </td>
@@ -257,13 +259,15 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                                 <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-                                    type="hidden" value="<?php
-                                                            echo $ins['aanbet_bedrag']; ?>">
+                                    type="hidden"
+                                    value="<?php
+                                            echo $ins['aanbet_bedrag']; ?>">
                                 <input name="InschId" id="InschId" type="hidden"
                                     value="<?php
                                             echo $ins['InschId']; ?>">
-                                <input name="CursusId_FK" type="hidden" value="<?php
-                                                                                echo $ins['CursusId_FK']; ?>">
+                                <input name="CursusId_FK" type="hidden"
+                                    value="<?php
+                                            echo $ins['CursusId_FK']; ?>">
                             </td>
                         </tr>
                         <tr valign="baseline">
