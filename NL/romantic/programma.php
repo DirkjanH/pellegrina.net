@@ -62,7 +62,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     ?> <div id="main">
       <div class="cols2">
         <h2>Programmadetails</h2>
-        <p><img src="image_agent_tag_17133191877901095419"
+        <p><img src="/Images/mendelssohn.jpg"
             alt="Portret van Felix Mendelssohn Bartholdy"
             class="w3-right w3-margin-left" style="width:250px;">
         </p>
