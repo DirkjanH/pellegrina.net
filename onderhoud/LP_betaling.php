@@ -1,6 +1,6 @@
 <?php
 // Stel PHP fouten rapportage in
-//ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Laad globale includes en vendor libraries
@@ -280,13 +280,15 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                                 <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-                                    type="hidden" value="<?php
-                                                            echo $ins['aanbet_bedrag']; ?>">
+                                    type="hidden"
+                                    value="<?php
+                                            echo $ins['aanbet_bedrag']; ?>">
                                 <input name="InschId" id="InschId" type="hidden"
                                     value="<?php
                                             echo $ins['InschId']; ?>">
-                                <input name="CursusId_FK" type="hidden" value="<?php
-                                                                                echo $ins['CursusId_FK']; ?>">
+                                <input name="CursusId_FK" type="hidden"
+                                    value="<?php
+                                            echo $ins['CursusId_FK']; ?>">
                             </td>
                         </tr>
                         <tr valign="baseline">
