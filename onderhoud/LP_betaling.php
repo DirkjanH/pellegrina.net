@@ -32,6 +32,14 @@ if ($id > 0) {
     $_SESSION['DlnmrId'] = $id;
 }
 $postedInschId = filter_input(INPUT_POST, 'InschId', FILTER_VALIDATE_INT);
+$selectedCursusId = filter_input(INPUT_GET, 'cursus', FILTER_VALIDATE_INT);
+if (
+    $selectedCursusId === false ||
+    $selectedCursusId < $eerstecursus ||
+    $selectedCursusId > $laatstecursus
+) {
+    $selectedCursusId = 0;
+}
 
 // Verwerk betaling als formulier verzonden
 if ((isset($_POST["Verwerk"])) && ($_POST["Verwerk"] == "Verwerk betaling") && $postedInschId) {
@@ -62,6 +70,11 @@ $query_inschrijving = '';
 $query_inschrijving = "SELECT * FROM inschrijving, dlnmr WHERE DlnmrId_FK = DlnmrId 
 AND DlnmrId_FK = {$id} AND CursusId_FK > {$cursus_offset}
 AND CursusId_FK <= ({$aantal_cursussen} + {$cursus_offset}) ORDER BY CursusId_FK ASC";
+if ($selectedCursusId > 0) {
+    $query_inschrijving = "SELECT * FROM inschrijving, dlnmr WHERE DlnmrId_FK = DlnmrId
+    AND DlnmrId_FK = {$id} AND CursusId_FK = {$selectedCursusId}
+    ORDER BY CursusId_FK ASC";
+}
 
 // Overschrijf query als specifieke inschrijving verzonden
 if ($postedInschId) {
@@ -237,12 +250,12 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                             echo "<tr><td colspan=\"3\">";
                             echo "<p><b>Kies één van de volgende inschrijvingen:</b></p>";
                             echo "<form action=\"{$editFormAction}\" method=\"get\" name=\"inschrijving\" id=\"inschrijving\"> \n <select name=\"cursus\" size=\"{$totalRows_inschrijving}\" >";
-                            foreach ($inschrijving as $ins) {
-                                echo "<option value=\"{$ins['CursusId_FK']}\"";
-                                if (!(strcmp($ins['CursusId_FK'], $_GET['cursus']))) {
+                            foreach ($inschrijving as $inschrijvingOptie) {
+                                echo "<option value=\"{$inschrijvingOptie['CursusId_FK']}\"";
+                                if ($inschrijvingOptie['CursusId_FK'] == $selectedCursusId) {
                                     echo "SELECTED";
                                 }
-                                echo '>' . $cursusnaam[$ins['CursusId_FK']]['NL'];
+                                echo '>' . $cursusnaam[$inschrijvingOptie['CursusId_FK']]['NL'];
                             }
                             echo "</option>\n</select>";
                             echo '<input name="DlnmrId" type="hidden" value="';
@@ -263,13 +276,15 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                                 <?php if ($ins['CursusId_FK'] != "") echo "<p>Inschrijving nr. 
 			<input name=\"Id\" type=\"text\" DISABLED value=\"{$ins['InschId']}\"
 			size=\"2\">&nbsp;voor cursus:&nbsp;<b>{$cursusnaam[$ins['CursusId_FK']]['NL']}</b></p>"; ?> <input name="aanbet_bedrag"
-                                    type="hidden" value="<?php
-                                                            echo $ins['aanbet_bedrag']; ?>">
+                                    type="hidden"
+                                    value="<?php
+                                            echo $ins['aanbet_bedrag']; ?>">
                                 <input name="InschId" id="InschId" type="hidden"
                                     value="<?php
                                             echo $ins['InschId']; ?>">
-                                <input name="CursusId_FK" type="hidden" value="<?php
-                                                                                echo $ins['CursusId_FK']; ?>">
+                                <input name="CursusId_FK" type="hidden"
+                                    value="<?php
+                                            echo $ins['CursusId_FK']; ?>">
                             </td>
                         </tr>
                         <tr valign="baseline">
