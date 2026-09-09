@@ -60,41 +60,39 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
-      <div class="cols2">
-        <h2>Programmadetails</h2>
-        <p><img src="/Images/mendelssohn.jpg"
-            alt="Portret van Felix Mendelssohn Bartholdy"
-            class="w3-left w3-margin-right" style="width:250px;">
+      <h2>Programmadetails</h2>
+      <p><img src="/Images/mendelssohn.jpg"
+          alt="Portret van Felix Mendelssohn Bartholdy"
+          class="w3-left w3-margin-right" style="width:250px;">
+      </p>
+      <div class="w3-left">
+        <h3>Het centrale werk: Mendelssohns Elias op. 70</h3>
+        <p>In het afsluitende concert voeren we het romantische
+          oratorium <em>Elias</em> van Mendelssohn uit met solisten,
+          orkest en koor.</p>
+        <p>Felix Mendelssohn voltooide zijn grootse oratorium
+          <em>Elias</em> in 1846 voor het muziekfestival in
+          Birmingham. Het werk vertelt het dramatische levensverhaal
+          van de oude-testamentische profeet Elia. Van de verwoestende
+          droogte en de confrontatie met de Baälpriesters op de berg
+          Carmel, tot zijn eenzame vlucht in de woestijn en zijn
+          uiteindelijke hemelvaart in een vurige wagen: Mendelssohn
+          wist deze bijbelse vertelling te vangen in verbluffend
+          theatraal en emotioneel geladen muziek.
         </p>
-        <div class="w3-left">
-          <h3>Het centrale werk: Mendelssohns Elias op. 70</h3>
-          <p>In het afsluitende concert voeren we het romantische
-            oratorium <em>Elias</em> van Mendelssohn uit met
-            solisten, orkest en koor.</p>
-          <p>Felix Mendelssohn voltooide zijn grootse oratorium
-            <em>Elias</em> in 1846 voor het muziekfestival in
-            Birmingham. Het werk vertelt het dramatische
-            levensverhaal van de oude-testamentische profeet Elia.
-            Van de verwoestende droogte en de confrontatie met de
-            Baälpriesters op de berg Carmel, tot zijn eenzame vlucht
-            in de woestijn en zijn uiteindelijke hemelvaart in een
-            vurige wagen: Mendelssohn wist deze bijbelse vertelling
-            te vangen in verbluffend theatraal en emotioneel geladen
-            muziek.
-          </p>
-          <p>In de opbouw van het oratorium verweefde Mendelssohn de
-            barokke contrapuntische traditie van Bach en Händel met
-            de meeslepende, lyrische expressie van de
-            negentiende-eeuwse romantiek. Het koor vervult daarbij
-            een indrukwekkende dubbelrol: het ene moment verbeeldt
-            het de woedende volksmassa of de smekende Baälpriesters,
-            het volgende moment geeft het alwetend commentaar zoals
-            in een klassieke Griekse tragedie.</p>
-        </div>
-        <h2><a href="javascript: history.go(-1)">Terug</a></h2>
+        <p>In de opbouw van het oratorium verweefde Mendelssohn de
+          barokke contrapuntische traditie van Bach en Händel met de
+          meeslepende, lyrische expressie van de negentiende-eeuwse
+          romantiek. Het koor vervult daarbij een indrukwekkende
+          dubbelrol: het ene moment verbeeldt het de woedende
+          volksmassa of de smekende Baälpriesters, het volgende moment
+          geeft het alwetend commentaar zoals in een klassieke Griekse
+          tragedie.</p>
       </div>
+      <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+  </div>
+  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
 
 </html>
