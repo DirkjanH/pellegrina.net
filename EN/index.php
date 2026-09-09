@@ -160,8 +160,8 @@ $jaar = 2027;
                     <p>for instrumentalists and (choir) singers, with chamber
                         music and chamber choir</p>
                     <ul>
-                        <li>České Budějovice (Czechia), 22 July - 1 August
-                            2027</li>
+                        <li>České Budějovice (Czechia), 22 July - 1 August 2027
+                        </li>
                     </ul>
                     <p class="plaatsvoor onzichtbaar">Still place for a bassoon
                         and a double bass<br>the choir has a few places in all
@@ -200,9 +200,9 @@ $jaar = 2027;
                 </div>
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3>More information</h3>
-                    <p><a href="tmp_over_pellegrina.php">About La Pellegrina</a>
+                    <p><a href="over_pellegrina.php">About La Pellegrina</a>
                     </p>
-                    <p><a href="tmp_contact.php">Contact</a></p>
+                    <p><a href="contact.php">Contact</a></p>
                 </div>
             </div>
             <!-- begin olark code -->

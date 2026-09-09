@@ -213,9 +213,9 @@ $jaar = 2027;
                 </div>
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3>Meer informatie</h3>
-                    <p><a href="tmp_over_pellegrina.php">Over La Pellegrina</a>
+                    <p><a href="over_pellegrina.php">Over La Pellegrina</a>
                     </p>
-                    <p><a href="tmp_contact.php">Contact</a></p>
+                    <p><a href="contact.php">Contact</a></p>
                 </div>
             </div>
         </div>
