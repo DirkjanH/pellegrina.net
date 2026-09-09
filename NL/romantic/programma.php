@@ -64,7 +64,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <h2>Programmadetails</h2>
         <p><img src="/Images/mendelssohn.jpg"
             alt="Portret van Felix Mendelssohn Bartholdy"
-            class="w3-right w3-margin-left" style="width:250px;">
+            class="w3-left w3-margin-right" style="width:250px;">
         </p>
         <h3>Het centrale werk: Mendelssohns Elias op. 70</h3>
         <p>Felix Mendelssohn voltooide zijn grootse oratorium
