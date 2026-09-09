@@ -59,14 +59,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                             echo $navigatie;
                                             echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                             require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
-                                            ?> <div id="main">
+                                            ?> <div id="main"
+      class="w3-cell-row">
       <h2>Programmadetails</h2>
-      <div class="w3-left w3-margin-right"><img
+      <div class="w3-cell w3-margin-right"><img
           src="/Images/mendelssohn.jpg"
           alt="Portret van Felix Mendelssohn Bartholdy"
           class="w3-image" style="width:250px;">
       </div>
-      <div class="w3-left">
+      <div class="w3-cell w3-left">
         <h3>Het centrale werk: Mendelssohns Elias op. 70</h3>
         <p>In het afsluitende concert voeren we het romantische
           oratorium <em>Elias</em> van Mendelssohn uit met solisten,
