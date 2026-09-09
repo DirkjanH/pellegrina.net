@@ -66,30 +66,39 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                         require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
                                         ?> <div id="main">
             <div class="cols2">
-
-                <h2>Program details</h2>
-                <p>The summer school focuses on Baroque music in Central Europe (ca. 1600 – 1750). The region comprising the east of Germany, Austria, the Czech Republic and Poland, played a central role in the development of Western classical music, with expression, virtuosity, and new forms taking center stage.
-                <h4>Historical and social context</h4>
-                <p>The Baroque period coincided with a time of political and religious tensions, such as the Thirty Years' War and the rise of absolute monarchs such as the Habsburgs in Vienna and the Hohenzollerns in Brandenburg. Much music was written in the service of the court and the church, where wealthy monarchs and bishops employed composers and musicians. At the same time, public concert life grew due to the increasing prosperity of the bourgeoisie, allowing music to flourish outside churches and courts.</p>
-                <h4>Important composers</h4>
-                <p>Central European composers such as Johann Sebastian Bach (Germany), Heinrich Schütz, Georg Philipp Telemann, and, for Austria, Johann Fux and Jan Dismas Zelenka (from what was then Bohemia, now the Czech Republic) left their mark on Baroque music. They developed various instrumental and vocal styles that strongly influenced the further history of Western music. Baroque music from Central Europe thus reflects the search for expression, splendor, and innovation that characterized this flourishing period in European music history.</p>
-                <p>
-                <div class="fotolinks w3-center"><img src="/Images/Biber.png" alt="Heinrich Ignaz Franz Biber" class="w3-image" width="250"><br>Heinrich Ignaz Franz Biber</div>A typical example of a Central European composer is Heinrich Ignaz Franz Biber (1644 - 1704). Biber was born in Stráž pod Ralskem (then Wartenberg), Bohemia. He received his basic education at the Jesuit College in Opava (German: Troppau), Moravia, where he became acquainted with Pavel Josef Vejvanovský and Philipp Jacob Rittler, among others. He probably studied in Prague, Dresden, and Vienna with, among others, the violin virtuoso Johann Heinrich Schmelzer.
-                In the early 1660s, he was employed as a musician by Prince Johann Seyfried Eggenberg in Graz in the Austrian province of Styria (Steiermark). Later, until 1670, he was chapel master of the famous chapel of the prince-archbishop of Olomouc Karl von Lichtenstein-Kastelkorn, who performed at the bishop's summer residence, Kroměříž Castle in Moravia. Subsequently, he was a violinist and composer, conductor, and steward at the court of the Archbishop of Salzburg, Maximilian Gandolph von Khuenburg. We will perform his Requiem in F minor.</p>
-                <div style="display:inline-block;">
-                    <h4 style="margin-top: 0;">Musical characteristics</h4>
-                    <p>The transition from Renaissance to Baroque brought a shift from polyphony to a style in which a clear melody line above an accompanying bass (basso continuo) took center stage. Baroque music is characterized by exuberant ornamentation, affect theory (the expression of emotions), harmonic counterpoint, and the development of forms such as the concerto grosso and the suite. Instruments such as the harpsichord and the violin became important, and harmony became essential to the structure of pieces. Church music remained important, but faced competition from secular genres such as chamber music, dance forms, and the first public concerts. The rise of opera as a genre, particularly in Vienna and later also in Prague and Dresden, testifies to the theatrical side of Central European Baroque music as well.</p>
-                </div>
-                <div style="display:inline-block;">
-                    <h4 style="margin-top: 0;">The role of the archive in Kroměříž</h4>
-                    <div class="fotocenter w3-center"><img src="/Images/kromeriz.jpg" alt="Kroměříž" class="w3-image"><br>Impression of Baroque Kroměříž</div>
-                    <p>The music archive of Kroměříž Castle in Moravia (Czech Republic) is one of the richest collections of Baroque church music in Central Europe. Built up by bishops such as Karl von Liechtenstein-Castelcorn in the 17th century, this archive contains thousands of manuscripts and prints, including works by international and local composers, both religious and instrumental repertoire. Kroměříž served as an important cultural center where composers from all over Europe, including Italian and German masters, worked or had their works performed. The archive provides insight into the high quality, international stylistic diversity, and social role of church music in the Baroque period, both during liturgy and for concert performances at court.​</p>
-                    <h4>Influence and Heritage</h4>
-                    <p>Thanks to the Kroměříž archive, much of Central Europe's church music heritage has been preserved that might otherwise have been lost. This makes it possible to bring the repertoire of composers such as Johann Heinrich Schmelzer, Pavel Josef Vejvanovský, Heinrich Biber, and Giovanni Valentini back to life in contemporary performances. The archive symbolizes the exchange of styles and influences within Central Europe and shows how church music contributed to the cultural identity of the region.</p>
-                </div>
-                <h2><a href="javascript: history.go(-1)">Back</a></h2>
+                <h2>Baroque Music from Naples (1650–1750)</h2>
+                <p>The programme for everybody attending the summer school
+                    focuses on Baroque music from Naples. During the seventeenth
+                    and eighteenth centuries, Naples was the beating heart of
+                    European musical life. Driven by its prestigious
+                    conservatories and vibrant opera houses, the "Neapolitan
+                    School" attracted musicians from across the continent. This
+                    summer, we dive into the rich, expressive, and virtuosic
+                    repertoire born along the Bay of Naples, exploring both
+                    grand orchestral sacred works and intimate chamber music.
+                </p>
+                <p>In our daily afternoon sessions, singers and instrumentalists
+                    join forces to perform sweeping sacred masterworks and
+                    dramatic vocal-instrumental pieces from the Neapolitan Late
+                    Baroque. Our central repertoire includes:</p>
+                <ul>
+                    <li><strong>Giovanni Battista Pergolesi:</strong> selected
+                        orchestral movements — showcasing the poignant, lyrical,
+                        and intensely dramatic style that made Pergolesi
+                        legendary across Europe.</li>
+                    <li><strong>Alessandro Scarlatti:</strong> Representative
+                        sacred works and choruses — highlighting the brilliant
+                        counterpoint and vocal mastery of the founding father of
+                        the Neapolitan School.</li>
+                    <li><strong>Francesco Durante & Leonardo Leo:</strong>
+                        Selected sacred concertos and double-choir psalm
+                        settings — featuring rich string writing, expressive
+                        solos, and vibrant choral fugues.</li>
+                </ul>
             </div>
+            <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
+    </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 
