@@ -66,32 +66,32 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                         require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
                                         ?> <div id="main">
             <div class="cols2">
-                <h2>Baroque Music from Naples (1650–1750)</h2>
-                <p>The programme for everybody attending the summer school
-                    focuses on Baroque music from Naples. During the seventeenth
-                    and eighteenth centuries, Naples was the beating heart of
-                    European musical life. Driven by its prestigious
-                    conservatories and vibrant opera houses, the "Neapolitan
-                    School" attracted musicians from across the continent. This
-                    summer, we dive into the rich, expressive, and virtuosic
-                    repertoire born along the Bay of Naples, exploring both
-                    grand orchestral sacred works and intimate chamber music.
+                <h2>Baroque Music from Naples (1650 – 1750)</h2>
+                <p>The programme for all participants at the summer school is
+                    dedicated to Baroque music from Naples. During the
+                    seventeenth and eighteenth centuries, Naples was the beating
+                    heart of European musical life. Driven by its prestigious
+                    conservatories and vibrant opera houses, the 'Neapolitan
+                    School' attracted musicians from across the continent. This
+                    summer, we dive into this rich, expressive, and virtuosic
+                    Neapolitan repertoire, exploring both compelling orchestral
+                    works and sacred music for soloists, choir, and orchestra.
                 </p>
-                <p>In our daily afternoon sessions, singers and instrumentalists
-                    join forces to perform sweeping sacred masterworks and
-                    dramatic vocal-instrumental pieces from the Neapolitan Late
-                    Baroque. Our central repertoire includes:</p>
+                <p>During the daily afternoon sessions, singers and
+                    instrumentalists join forces to perform dramatic
+                    vocal-instrumental pieces from the Neapolitan Baroque. Our
+                    central repertoire includes:</p>
                 <ul>
                     <li><strong>Giovanni Battista Pergolesi:</strong> selected
-                        orchestral movements — showcasing the poignant, lyrical,
-                        and intensely dramatic style that made Pergolesi
-                        legendary across Europe.</li>
-                    <li><strong>Alessandro Scarlatti:</strong> Representative
-                        sacred works and choruses — highlighting the brilliant
+                        orchestral movements — an illustration of the poignant,
+                        lyrical, and intensely dramatic style that made
+                        Pergolesi legendary throughout Europe.</li>
+                    <li><strong>Alessandro Scarlatti:</strong> representative
+                        sacred works and choruses — highlighting the ingenious
                         counterpoint and vocal mastery of the founding father of
                         the Neapolitan School.</li>
                     <li><strong>Francesco Durante & Leonardo Leo:</strong>
-                        Selected sacred concertos and double-choir psalm
+                        selected sacred concertos and double-choir psalm
                         settings — featuring rich string writing, expressive
                         solos, and vibrant choral fugues.</li>
                 </ul>

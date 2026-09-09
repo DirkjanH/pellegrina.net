@@ -63,24 +63,22 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
-      <div class="cols2"> Hier is de Nederlandse vertaling met behoud van
-        de HTML-structuur: ```html <h2>Barokmuziek uit Napels
-          (1650–1750)</h2>
+      <div class="cols2">
+        <h2>Barokmuziek uit Napels (1650 – 1750)</h2>
         <p>Het programma voor alle deelnemers aan de zomerschool staat
           in het teken van barokmuziek uit Napels. Gedurende de
           zeventiende en achttiende eeuw was Napels het kloppende hart
           van het Europese muzikale leven. Aangedreven door de
           prestigieuze conservatoria en bruisende operahuizen trok de
-          "Napolitaanse School" musici uit het hele continent aan.
-          Deze zomer duiken we in het rijke, expressieve en virtuoze
-          repertoire dat ontstond aan de Golf van Napels, waarbij we
-          zowel meeslepende religieuze orkestwerken als intieme
-          kamermuziek verkennen. </p>
+          'Napolitaanse School' musici uit het hele continent aan.
+          Deze zomer duiken we in dit rijke, expressieve en virtuoze
+          Napolitaanse repertoire, waarbij we zowel meeslepende
+          orkestwerken als religieuze werken voor solisten, koor en
+          orkest verkennen. </p>
         <p>Tijdens de dagelijkse middagsessies bundelen zangers en
           instrumentalisten hun krachten voor het uitvoeren van
-          meeslepende religieuze meesterwerken en dramatische
-          vocaal-instrumentale stukken uit de Napolitaanse laatbarok.
-          Ons centrale repertoire omvat onder meer:</p>
+          dramatische vocaal-instrumentale stukken uit de Napolitaanse
+          barok. Ons centrale repertoire omvat onder meer:</p>
         <ul>
           <li><strong>Giovanni Battista Pergolesi:</strong>
             geselecteerde orkestdelen — een illustratie van de
