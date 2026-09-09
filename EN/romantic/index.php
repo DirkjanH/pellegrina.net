@@ -82,17 +82,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         </li>
         <li>Everyone plays in two pre-formed chamber music ensembles
         </li>
-        <li>Central work for all: Dvořák's
-          Cantata <i>The Spectre's Bride</i> op. 69</li>
-        <li>Choir: in addition to the Spectre's Bride with
-          orchestra, the choir also works on chamber choir repertoire, a
+        <li>Central work for everyone: Mendelssohn's oratorio
+          <em>Elijah</em> op. 70
+        </li>
+        <li>Choir: in addition to the <em>Elijah</em> with orchestra,
+          the choir will also work on chamber choir repertoire, a
           cappella and with piano</li>
         <li>At the Conservatoire of České Budějovice, South Bohemia,
           Czech Republic </li>
-        <li>With <em>Mozart Concerto Event</em>: participants can play or
-          sing a (movement of a) concerto or an aria by Mozart or a
-          contemporary; the other participants and tutors form an ad hoc orchestra
-          which sightreads the accompaniment</li>
+        <li>With <em>Mozart Concerto Event</em>: participants can play
+          or sing a (movement of a) concerto or an aria by Mozart or a
+          contemporary; the other participants and tutors form an ad
+          hoc orchestra which sightreads the accompaniment</li>
       </ul>
       <p class="plaatsvoor onzichtbaar">Places available for piano, violin
         and viola. The choir still has a few spots in all groups,
