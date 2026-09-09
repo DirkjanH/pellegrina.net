@@ -61,10 +61,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
       <h2>Programmadetails</h2>
-      <p><img src="/Images/mendelssohn.jpg"
+      <div class="w3-left"><img src="/Images/mendelssohn.jpg"
           alt="Portret van Felix Mendelssohn Bartholdy"
           class="w3-left w3-margin-right" style="width:250px;">
-      </p>
+      </div>
       <div class="w3-left">
         <h3>Het centrale werk: Mendelssohns Elias op. 70</h3>
         <p>In het afsluitende concert voeren we het romantische
