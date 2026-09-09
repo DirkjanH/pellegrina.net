@@ -18,10 +18,20 @@ if (!function_exists('d')) {
 if (!(isset($_SESSION['datum']) && $_SESSION['datum'] != "")) $_SESSION['datum'] = date("d-m-Y");
 if (isset($_POST['datum']) && $_POST['datum'] != "") $_SESSION['datum'] = $_POST['datum'];
 
+// Initialiseer formulier actie
+$editFormAction = $_SERVER['PHP_SELF'];
+
+// Zet default waarden voor variabelen die uit includes2027.php moeten komen
+if (!isset($cursus_offset)) $cursus_offset = 0;
+if (!isset($aantal_cursussen)) $aantal_cursussen = 100;
+if (!isset($eerstecursus)) $eerstecursus = 1;
+if (!isset($laatstecursus)) $laatstecursus = 999;
+
 // Laad alle cursusgegevens en bouw naamarray
 $query_cursussen = "SELECT * FROM cursus WHERE CursusId > {$cursus_offset} ORDER BY CursusId ASC";
 $cursussen = select_query($query_cursussen);
 
+$cursusnaam = [];
 foreach ($cursussen as $cur) {
     $cursusnaam[$cur['CursusId']]['NL'] = $cur['cursusnaam_nl'];
     $cursusnaam[$cur['CursusId']]['EN'] = $cur['cursusnaam_en'];
@@ -29,7 +39,10 @@ foreach ($cursussen as $cur) {
 
 // Bepaal deelnemers ID uit GET parameter
 $postedDlnmrId = filter_input(INPUT_POST, 'DlnmrId', FILTER_VALIDATE_INT);
-$sessionDlnmrId = filter_var($_SESSION['DlnmrId'] ?? null, FILTER_VALIDATE_INT);
+$sessionDlnmrId = $_SESSION['DlnmrId'] ?? null;
+if ($sessionDlnmrId !== null) {
+    $sessionDlnmrId = (int)$sessionDlnmrId;
+}
 $getDlnmrId = filter_input(INPUT_GET, 'DlnmrId', FILTER_VALIDATE_INT);
 $id = $postedDlnmrId ?: ($sessionDlnmrId ?: ($getDlnmrId ?: -1));
 if ($id > 0) {
@@ -49,9 +62,11 @@ if (
 if ((isset($_POST["Verwerk"])) && ($_POST["Verwerk"] == "Verwerk betaling") && $postedInschId) {
 
     // Voeg betaling toe aan opmerkingen
-    if ($_POST['betaling'] != 0) $_POST['rekening_opmerking'] = $_POST['rekening_opmerking'] . "Betaling van &#8364;&nbsp;{$_POST['betaling']} d.d. {$_POST['datum']} per {$_POST['betaalwijze']}\n";
+    if (isset($_POST['betaling']) && $_POST['betaling'] != 0) {
+        $_POST['rekening_opmerking'] = $_POST['rekening_opmerking'] . "Betaling van &#8364;&nbsp;{$_POST['betaling']} d.d. {$_POST['datum']} per {$_POST['betaalwijze']}\n";
+    }
     // Markeer cash betaling ter plekke
-    if ($_POST['cash'] == 1) {
+    if (isset($_POST['cash']) && $_POST['cash'] == 1) {
         $_POST['rekening_opmerking'] .= "Betaling ter plekke in cash afgesproken\n";
         $_POST['betaling'] = 0;
     }
@@ -93,6 +108,7 @@ if ($postedInschId) {
 
 d($query_inschrijving);
 
+$inschrijving = [];
 if ($query_inschrijving != '') {
     $inschrijving = select_query($query_inschrijving) ?: [];
 }
@@ -117,7 +133,7 @@ ORDER BY CursusId_FK, achternaam ASC";
 
 d($query_openstaand);
 
-$openstaand = select_query($query_openstaand);
+$openstaand = select_query($query_openstaand) ?: [];
 $totalRows_openstaand = count($openstaand);
 
 // Bereken totale openstaande bedragen per cursus
@@ -136,7 +152,7 @@ WHERE DlnmrId_FK = DlnmrId
 	AND geboortedatum != 0  
 GROUP BY CursusId_FK";
 
-$bedrag = select_query($query_bedrag);
+$bedrag = select_query($query_bedrag) ?: [];
 
 $openstaand_bedrag['totaal'] = 0;
 foreach ($bedrag as $i => $bedr) {
@@ -165,7 +181,7 @@ WHERE DlnmrId_FK = DlnmrId
 	AND rekening_opmerking LIKE '%cash%'
 GROUP BY CursusId_FK";
 
-$cashbedrag = select_query($query_bedrag);
+$cashbedrag = select_query($query_bedrag) ?: [];
 
 $openstaand_cashbedrag['totaal'] = 0;
 foreach ($cashbedrag as $i => $cashbedr) {
@@ -459,16 +475,16 @@ $openstaand_giraal = euro2($openstaand_bedrag['totaal'] - $openstaand_cashbedrag
                         </td>
                     </tr>
                 </form><?php } ?>
-            </table> <?php echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash {$openstaand_cashbedrag['Etotaal']} + giraal {$openstaand_giraal} = {$openstaand_bedrag['Etotaal']}<br>";
+            </table> <?php 
+                        echo '<p>Aantal nog openstaande rekeningen: ' . $totalRows_openstaand . "; Totaal nog openstaand bedrag: cash " . $openstaand_cashbedrag['Etotaal'] . " + giraal " . $openstaand_giraal . " (";
                         foreach ($openstaand_bedrag as $key => $value) {
                             if (strpos($key, 'totaal') === false) {
                                 echo "Cursus {$key}: ";
                                 echo $value . " | ";
                             }
                         }
-                        echo '</p>';
-                        ?> </td>
-            </tr>
+                        echo ')</p>';
+                        ?> 
             </table>
         </div>
     </div>
