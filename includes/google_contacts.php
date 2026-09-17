@@ -141,16 +141,28 @@ function google_contacts_groups(): array
     return $groups;
 }
 
+function google_contacts_normalize_group_name(string $name): string
+{
+    $name = trim((string) preg_replace('/\s+/u', ' ', $name));
+    return function_exists('mb_strtolower') ? mb_strtolower($name, 'UTF-8') : strtolower($name);
+}
+
 function google_contacts_read(string $group = ''): array
 {
     $groups = google_contacts_groups();
     $groupNames = array_flip($groups);
     $groupResourceName = '';
     if ($group !== '') {
-        if (!isset($groups[$group])) {
-            return [];
+        $requestedGroup = google_contacts_normalize_group_name($group);
+        foreach ($groups as $groupName => $resourceName) {
+            if (google_contacts_normalize_group_name($groupName) === $requestedGroup) {
+                $groupResourceName = $resourceName;
+                break;
+            }
         }
-        $groupResourceName = $groups[$group];
+        if ($groupResourceName === '') {
+            throw new RuntimeException('Google Contacts-groep niet gevonden: ' . trim($group));
+        }
     }
 
     $contacts = [];
