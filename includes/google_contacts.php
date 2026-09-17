@@ -124,14 +124,13 @@ function google_contacts_groups(): array
     do {
         $parameters = [
             'pageSize' => 1000,
-            'groupFields' => 'name',
         ];
         if ($pageToken) {
             $parameters['pageToken'] = $pageToken;
         }
         $response = google_contacts_request('contactGroups', $parameters);
         foreach ($response['contactGroups'] ?? [] as $group) {
-            $groupName = $group['name'] ?? $group['formattedName'] ?? '';
+            $groupName = $group['formattedName'] ?? $group['name'] ?? '';
             if ($groupName !== '' && !empty($group['resourceName'])) {
                 $groups[$groupName] = $group['resourceName'];
             }
