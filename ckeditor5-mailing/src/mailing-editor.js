@@ -104,6 +104,9 @@ MailingEditor.builtinPlugins = [
 
 MailingEditor.defaultConfig = {
 	language: "nl",
+	htmlSupport: {
+		allow: [{ name: /.*/, classes: true }],
+	},
 	toolbar: {
 		items: [
 			"undo",
