@@ -161,7 +161,11 @@ function google_contacts_read(string $group = ''): array
             }
         }
         if ($groupResourceName === '') {
-            throw new RuntimeException('Google Contacts-groep niet gevonden: ' . trim($group));
+            $availableGroups = implode(', ', array_keys($groups));
+            throw new RuntimeException(
+                'Google Contacts-groep niet gevonden: ' . trim($group)
+                    . '. Beschikbare groepen: ' . ($availableGroups ?: '(geen)')
+            );
         }
     }
 
