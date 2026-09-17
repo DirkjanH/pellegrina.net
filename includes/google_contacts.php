@@ -151,16 +151,15 @@ function google_contacts_read(string $group = ''): array
 {
     $groups = google_contacts_groups();
     $groupNames = array_flip($groups);
-    $groupResourceName = '';
+    $groupResourceNames = [];
     if ($group !== '') {
         $requestedGroup = google_contacts_normalize_group_name($group);
         foreach ($groups as $groupName => $resourceName) {
-            if (google_contacts_normalize_group_name($groupName) === $requestedGroup) {
-                $groupResourceName = $resourceName;
-                break;
+            if (str_contains(google_contacts_normalize_group_name($groupName), $requestedGroup)) {
+                $groupResourceNames[] = $resourceName;
             }
         }
-        if ($groupResourceName === '') {
+        if ($groupResourceNames === []) {
             $availableGroups = implode(', ', array_keys($groups));
             throw new RuntimeException(
                 'Google Contacts-groep niet gevonden: ' . trim($group)
@@ -184,9 +183,13 @@ function google_contacts_read(string $group = ''): array
         $response = google_contacts_request('people/me/connections', $parameters);
         foreach ($response['connections'] ?? [] as $person) {
             $memberships = $person['memberships'] ?? [];
-            $inGroup = $groupResourceName === '';
+            $inGroup = $groupResourceNames === [];
             foreach ($memberships as $membership) {
-                if (($membership['contactGroupMembership']['contactGroupResourceName'] ?? '') === $groupResourceName) {
+                if (in_array(
+                    $membership['contactGroupMembership']['contactGroupResourceName'] ?? '',
+                    $groupResourceNames,
+                    true
+                )) {
                     $inGroup = true;
                     break;
                 }
