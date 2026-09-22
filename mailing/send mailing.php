@@ -45,6 +45,34 @@ function h($value)
 	return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
+function toon_mail_foutverslag($mail, $adres, $mailing_nr, $duur, $foutmelding)
+{
+	$verslag = [
+		'tijdstip' => date('Y-m-d H:i:s'),
+		'request-id' => substr(hash('sha256', session_id() . microtime(true)), 0, 12),
+		'mailingnummer' => (int) $mailing_nr,
+		'naam' => (string) ($adres['naam'] ?? ''),
+		'e-mailadres' => (string) ($adres['email'] ?? ''),
+		'mailadresId' => (int) ($adres['mailadresId'] ?? 0),
+		'fout' => $foutmelding ?: 'Geen nadere foutmelding van PHPMailer ontvangen.',
+		'smtp-host' => (string) ($mail->Host ?? ''),
+		'smtp-poort' => (int) ($mail->Port ?? 0),
+		'veiligheid' => (string) ($mail->SMTPSecure ?? 'geen'),
+		'timeout-seconden' => (int) ($mail->Timeout ?? 0),
+		'duur-seconden' => round($duur, 3),
+	];
+
+	// Schrijf technische details naar de serverlog; toon ze daarnaast aan de beheerder.
+	error_log('Mailing verzenden mislukt: ' . json_encode($verslag, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+	echo '<details open><summary>Gedetailleerd foutverslag</summary><dl>';
+	foreach ($verslag as $veld => $waarde) {
+		echo '<dt><strong>' . h($veld) . '</strong></dt><dd>' . h($waarde) . '</dd>';
+	}
+	echo '</dl></details>';
+
+	return $verslag;
+}
+
 /* Set locale to Dutch */
 setlocale(LC_ALL, 'nl_NL');
 date_default_timezone_set('Europe/Amsterdam');
@@ -173,11 +201,20 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 				$mail->Body  = $mail_body;
 				$mail->AltBody = strip_tags($mail_body);
 
-				if (!$mail->Send()) {
+				$verzend_start = microtime(true);
+				try {
+					$verzonden = $mail->Send();
+					$mail_fout = $mail->ErrorInfo;
+				} catch (Throwable $exception) {
+					$verzonden = false;
+					$mail_fout = get_class($exception) . ': ' . $exception->getMessage();
+				}
+				if (!$verzonden) {
 					$bericht = "Bericht aan " . h($adres['naam']) . " kon niet verzonden worden.<br>";
-					$bericht .= "De fout is intern gelogd.<br>";
 					echo $bericht;
 					$regel_bericht .= $bericht;
+					$foutverslag = toon_mail_foutverslag($mail, $adres, $mailing_nr, microtime(true) - $verzend_start, $mail_fout);
+					$regel_bericht .= 'Foutverslag: ' . json_encode($foutverslag, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '<br>';
 					// Een transportfout geldt voor de hele SMTP-verbinding; probeer niet 39 keer opnieuw.
 					break;
 				} else {
