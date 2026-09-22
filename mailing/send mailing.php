@@ -103,6 +103,17 @@ if (!$mailing) {
 	exit('Mailing bestaat niet.');
 }
 
+// Toon vóór het verzenden het actuele totaal en het aantal adressen zonder verzendtijd.
+$statusStmt = $db->prepare(
+	"SELECT COUNT(*) AS totaal, " .
+		"SUM(CASE WHEN tijd_verzonden IS NULL OR tijd_verzonden = '' THEN 1 ELSE 0 END) AS resterend " .
+		"FROM {$mailing_adressen} WHERE mailingId_FK = :mailing"
+);
+$statusStmt->execute(['mailing' => $mailing_nr]);
+$mailing_status = $statusStmt->fetch(PDO::FETCH_ASSOC) ?: ['totaal' => 0, 'resterend' => 0];
+$totaal_mails = (int) $mailing_status['totaal'];
+$resterende_mails = (int) $mailing_status['resterend'];
+
 if (empty($_SESSION['mailing_csrf'])) {
 	$_SESSION['mailing_csrf'] = bin2hex(random_bytes(32));
 }
@@ -121,6 +132,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 	<body>
 		<h3>Mailing-nr: <?= h($mailing_nr) ?>: <?= h($mailing['subject']) ?></h3>
 		<p>Controleer de mailing voordat deze wordt verzonden.</p>
+		<p>
+			<strong>Totaal aantal mails:</strong> <?= h($totaal_mails) ?><br>
+			<strong>Te verzenden mails:</strong> <?= h($resterende_mails) ?>
+		</p>
 		<form method="post"
 			action="<?= h($_SERVER['PHP_SELF']) ?>?mailing=<?= h($mailing_nr) ?>">
 			<input type="hidden" name="csrf_token"
