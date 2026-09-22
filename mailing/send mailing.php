@@ -51,6 +51,8 @@ date_default_timezone_set('Europe/Amsterdam');
 
 $refreshrate = 15 * 60; // 15 minuten
 $blokgrootte = 40;
+$smtp_timeout = 20; // Voorkom dat een onbereikbare SMTP-server de aanvraag minuten blokkeert.
+set_time_limit(120); // Een batch mag nooit onbeperkt lang blijven draaien.
 
 $mailing_opdrachten = 'mailing_opdrachten';
 $mailing_adressen = 'mailing_adressen';
@@ -147,6 +149,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 				$encrypt = '';
 				if ($adres['DlnmrId'] != '') $encrypt = encrypt_decrypt('encrypt', $adres['DlnmrId']);
 				$mail = new LPmailer();
+				// PHPMailer gebruikt standaard 300 seconden; dat is te lang voor een webaanvraag.
+				$mail->Timeout = $smtp_timeout;
 				$mail->Subject = $Subject;
 				$from = filter_var($mailing['From'], FILTER_VALIDATE_EMAIL);
 				$recipient = filter_var(stripslashes($adres['email']), FILTER_VALIDATE_EMAIL);
@@ -174,6 +178,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 					$bericht .= "De fout is intern gelogd.<br>";
 					echo $bericht;
 					$regel_bericht .= $bericht;
+					// Een transportfout geldt voor de hele SMTP-verbinding; probeer niet 39 keer opnieuw.
+					break;
 				} else {
 					$verzonden_mails++;
 					$blok_verzonden++;
