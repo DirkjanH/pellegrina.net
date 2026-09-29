@@ -1006,24 +1006,30 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
     function initializeMessageEditor() {
         var message = document.querySelector('#message');
         if (!message) return;
+		var editorContentChanged = false;
+		var sourceContentChanged = false;
+		var form = document.getElementById('formulier');
         MailingEditor.create(message, {
-            language: 'nl',
-            toolbar: ['undo', 'redo', '|', 'sourceEditing', 'heading',
-                'fontSize', 'fontFamily', 'fontColor',
-                'fontBackgroundColor', 'highlight', '|', 'bold',
-                'italic', 'underline', 'strikethrough', 'subscript',
-                'superscript', 'removeFormat', '|', 'alignment',
-                'bulletedList', 'numberedList', 'outdent', 'indent',
-                'link', 'blockQuote', 'insertTable', 'code',
-                'codeBlock', 'htmlEmbed', 'horizontalLine',
-                'pageBreak', 'mediaEmbed'
-            ]
+			language: 'nl'
         }).then(editor => {
-            document.getElementById('formulier').addEventListener(
-                'submit',
-                () => {
+			editor.model.document.on('change:data', () => {
+				editorContentChanged = true;
+			});
+			form.addEventListener('input', event => {
+				if (event.target.closest('.ck-source-editing-area textarea')) {
+					sourceContentChanged = true;
+				}
+			});
+			form.addEventListener('submit', () => {
+				var sourceEditing = editor.plugins.get('SourceEditing');
+				if (sourceEditing.isSourceEditingMode && sourceContentChanged) {
+					var sourceField = form.querySelector(
+						'.ck-source-editing-area textarea');
+					if (sourceField) message.value = sourceField.value;
+				} else if (editorContentChanged) {
                     message.value = editor.getData();
-                });
+				}
+			});
         }).catch(error => console.error('CKEditor kon niet worden gestart:',
             error));
     }

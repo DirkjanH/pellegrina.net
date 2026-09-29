@@ -105,7 +105,7 @@ MailingEditor.builtinPlugins = [
 MailingEditor.defaultConfig = {
 	language: "nl",
 	htmlSupport: {
-		allow: [{ name: /.*/, classes: true }],
+		allow: [{ name: /.*/, attributes: true, classes: true, styles: true }],
 	},
 	toolbar: {
 		items: [
