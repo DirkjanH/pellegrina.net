@@ -1001,42 +1001,90 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 	<title>LP message mailer</title>
 	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<script src="./mailing-editor.js"></script>
+	<script src="https://cdn.ckeditor.com/4.22.1/full-all/ckeditor.js"></script>
 	<script src="./main.js"></script>
 	<script type="text/javascript">
 		function initializeMessageEditor() {
 			var message = document.querySelector('#message');
 			if (!message) return;
-			var editorContentChanged = false;
-			var sourceContentChanged = false;
 			var form = document.getElementById('formulier');
-			MailingEditor.create(message, {
-				language: 'nl'
-			}).then(editor => {
-				editor.model.document.on('change:data', () => {
-					editorContentChanged = true;
-				});
-				form.addEventListener('input', event => {
-					if (event.target.closest(
-							'.ck-source-editing-area textarea')) {
-						sourceContentChanged = true;
-					}
-				});
-				form.addEventListener('submit', () => {
-					var sourceEditing = editor.plugins.get(
-						'SourceEditing');
-					if (sourceEditing.isSourceEditingMode &&
-						sourceContentChanged) {
-						var sourceField = form.querySelector(
-							'.ck-source-editing-area textarea');
-						if (sourceField) message.value = sourceField
-							.value;
-					} else if (editorContentChanged) {
-						message.value = editor.getData();
-					}
-				});
-			}).catch(error => console.error('CKEditor kon niet worden gestart:',
-				error));
+			var originalHtml = message.value;
+			var editor = CKEDITOR.replace(message, {
+				language: 'nl',
+				allowedContent: true,
+				disallowedContent: '',
+				removePlugins: 'easyimage,exportpdf,scayt,wsc',
+				toolbarCanCollapse: true,
+				toolbar: [{
+					name: 'document',
+					items: ['Source', '-', 'Save', 'NewPage',
+						'Preview', 'Print', 'Templates'
+					]
+				}, {
+					name: 'clipboard',
+					items: ['Cut', 'Copy', 'Paste', 'PasteText',
+						'PasteFromWord', '-', 'Undo', 'Redo'
+					]
+				}, {
+					name: 'editing',
+					items: ['Find', 'Replace', '-', 'SelectAll']
+				}, {
+					name: 'forms',
+					items: ['Form', 'Checkbox', 'Radio',
+						'TextField', 'Textarea', 'Select',
+						'Button', 'ImageButton', 'HiddenField'
+					]
+				}, '/', {
+					name: 'basicstyles',
+					items: ['Bold', 'Italic', 'Underline', 'Strike',
+						'Subscript', 'Superscript', '-',
+						'RemoveFormat', 'CopyFormatting'
+					]
+				}, {
+					name: 'paragraph',
+					items: ['NumberedList', 'BulletedList', '-',
+						'Outdent', 'Indent', '-', 'Blockquote',
+						'CreateDiv', '-', 'JustifyLeft',
+						'JustifyCenter', 'JustifyRight',
+						'JustifyBlock', '-', 'BidiLtr',
+						'BidiRtl', 'Language'
+					]
+				}, {
+					name: 'links',
+					items: ['Link', 'Unlink', 'Anchor']
+				}, {
+					name: 'insert',
+					items: ['Image', 'Table', 'HorizontalRule',
+						'Smiley', 'SpecialChar', 'PageBreak',
+						'Iframe'
+					]
+				}, '/', {
+					name: 'styles',
+					items: ['Styles', 'Format', 'Font', 'FontSize']
+				}, {
+					name: 'colors',
+					items: ['TextColor', 'BGColor']
+				}, {
+					name: 'tools',
+					items: ['Maximize', 'ShowBlocks', 'ShowBorders']
+				}, {
+					name: 'about',
+					items: ['About']
+				}]
+			});
+			editor.on('instanceReady', function() {
+				editor.resetDirty();
+
+				function updateMessageBeforeSubmit() {
+					if (!editor.checkDirty()) message.value = originalHtml;
+					else editor.updateElement();
+				}
+				form.addEventListener('submit', updateMessageBeforeSubmit);
+				form.submit = function() {
+					updateMessageBeforeSubmit();
+					HTMLFormElement.prototype.submit.call(form);
+				};
+			});
 		}
 		document.addEventListener('DOMContentLoaded', initializeMessageEditor);
 
@@ -1375,7 +1423,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				onclick="toggleBerichten()">Opgeslagen nieuwsbrieven</button>
 			<br>
 			<textarea name="message"
-				id="message"><?php echo stripslashes($nieuwsbrief['message']); ?></textarea>
+				id="message"><?php echo htmlspecialchars(stripslashes($nieuwsbrief['message']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></textarea>
 			<p>
 				<input type="submit" name="submitten" value="Voeg toe">
 				<input name="submitten" type="submit" id="submitten"
@@ -1395,17 +1443,17 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC"
+					type="checkbox" id="CC" value="CC" <?php
+														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
+				CC <input name="test" type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
-					type="checkbox" id="test" value="test"
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
+					id="header" value="uit"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
-					name="header" type="checkbox" id="header" value="uit"
-					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
-						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-																			else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
+				<label><br> Afzender: <input name="afzender" type="text"
+						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+												else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
