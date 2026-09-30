@@ -47,7 +47,9 @@ $nieuwsbrief = [
 // Daardoor kan een gebruiker eerst adressen selecteren en daarna de nieuwsbrief
 // bewerken zonder dat de ontvangerslijst opnieuw hoeft te worden opgebouwd.
 if (empty($_SESSION['cursusId'])) $_SESSION['cursusId'] = $eerstecursus;
-$tijdelijkeCursusIds = isset($_POST['tijdelijkeCursusIds']) && $_POST['tijdelijkeCursusIds'] === '1';
+$cursusJaar = (string) ($_POST['cursusJaar'] ?? $jaar);
+$cursusJaarIds = ['2025' => 60, '2026' => 62, '2027' => 64];
+if (!isset($cursusJaarIds[$cursusJaar])) $cursusJaar = (string) $jaar;
 if (isset($_POST['cursusId']) and $_POST['cursusId'] === "0") {
 	$_SESSION['cursusId'] = 0;
 	$_POST['selectie'] = 'alles';
@@ -596,6 +598,12 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 		case 'cursus':
 
 			$adressen = [];
+			$geselecteerdCursusnummer = (int) $_SESSION['cursusId'];
+			if (isset($cursusJaarIds[$cursusJaar]) && in_array($geselecteerdCursusnummer, [1, 2], true)) {
+				$geselecteerdCursusnummer = $cursusJaarIds[$cursusJaar] + $geselecteerdCursusnummer - 1;
+			} else {
+				$geselecteerdCursusnummer += $cursus_offset;
+			}
 
 			$query_inschrijving = sprintf(
 				"SELECT DISTINCT naam, voornaam, password, email, CursusId_FK, DlnmrId
@@ -611,12 +619,7 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 		AND cursusId_FK = %s 
 		AND taal %s %s
 		ORDER BY achternaam ASC",
-				GetSQLValueString(
-					$tijdelijkeCursusIds && in_array((int) $_SESSION['cursusId'], [1, 2], true)
-						? (int) $_SESSION['cursusId'] + 59
-						: (int) $_SESSION['cursusId'] + $cursus_offset,
-					"int"
-				),
+				GetSQLValueString($geselecteerdCursusnummer, "int"),
 				$taal[$_SESSION['taal']],
 				$instrzang[$_SESSION['instrzang']]
 			);
@@ -1186,12 +1189,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			}
 		}
 
-		function toggleTijdelijkeCursusIds() {
-			var veld = document.getElementById('tijdelijkeCursusIds');
-			var knop = document.getElementById('tijdelijkeCursusIdsKnop');
-			var actief = veld.value !== '1';
-			veld.value = actief ? '1' : '0';
-			knop.textContent = actief ? "Gebruik normale cursus-ID's" : 'Gebruik tijdelijk ID 60/61';
+		function selecteerCursusJaar(jaar) {
+			document.getElementById('cursusJaar').value = jaar;
 		}
 
 		function messageZoek(Nr) {
@@ -1496,10 +1495,12 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 							onClick="Selecteer('c', 1)">Cursus 1</button>
 						<button name="cursusNr" type="button"
 							onClick="Selecteer('c', 2)">Cursus 2</button>
-						<button id="tijdelijkeCursusIdsKnop" name="cursusNr" type="button"
-							onClick="toggleTijdelijkeCursusIds()">
-							<?php echo $tijdelijkeCursusIds ? "Gebruik normale cursus-ID's" : 'Gebruik tijdelijk ID 60/61'; ?>
-						</button>
+						<button name="cursusJaarKnop" type="button"
+							onClick="selecteerCursusJaar('2027')">2027</button>
+						<button name="cursusJaarKnop" type="button"
+							onClick="selecteerCursusJaar('2026')">2026</button>
+						<button name="cursusJaarKnop" type="button"
+							onClick="selecteerCursusJaar('2025')">2025</button>
 						<button name="cursusNr" type="button"
 							onClick="Selecteer('c', 3)">Cursus 3</button>
 						<button ACCESSKEY="i" name="cursusNr" type="button"
@@ -1550,8 +1551,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 							xx2-yy2</span><br>
 						<input type="hidden" name="cursusId" id="cursusId"
 							value="<?php echo $_POST['cursusId']; ?>">
-						<input type="hidden" name="tijdelijkeCursusIds" id="tijdelijkeCursusIds"
-							value="<?php echo $tijdelijkeCursusIds ? '1' : '0'; ?>">
+						<input type="hidden" name="cursusJaar" id="cursusJaar"
+							value="<?php echo htmlspecialchars($cursusJaar, ENT_QUOTES, 'UTF-8'); ?>">
 						<input type="hidden" name="selectie" id="selectie">
 					</td>
 				</tr>
