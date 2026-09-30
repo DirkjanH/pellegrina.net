@@ -29,6 +29,129 @@
     <div id="inhoud" class="w3-main">
         <div id="main">
             <h2>List of works performed in concerts </h2>
+            <h1 class="jaar">2026</h1>
+            <h2 class="cursus">Dvořák's The Spectre's Bride for choir, soloists
+                and orchestra | České Budějovice, 30 July - 9 August</h2>
+            <p>In the final concert in het Cathedral of České Budějovice:</p>
+            <ul>
+                <li>Dvořák - Cantata "The Spectre's Bride" op. 69</li>
+            </ul>
+            <p>In the chamber music programme:</p>
+            <ul>
+                <li>Schubert, String Quartet No. 13 in A minor</li>
+                <li>Beethoven, Piano Trio op. 1 no. 3</li>
+                <li>Danzi, Wind Quintet op. 56 no. 2</li>
+                <li>Weigl, Trio No. 4 in G minor</li>
+                <li>Brahms, Violin Sonata no. 2 in A op. 100</li>
+                <li>Rheinberger, Nonet for Winds and Strings</li>
+                <li>Mozart, Sextet "Riconosci in questo amplesso" (from Le Nozze
+                    di Figaro)</li>
+                <li>Saint-Saëns, Le Carnaval des animaux</li>
+                <li>Kahn, Sérénade op. 73</li>
+                <li>Dohnányi, Piano Quintet no. 1 in C minor op. 1</li>
+                <li>Berwald, Septet in B flat major</li>
+                <li>Mendelssohn, String Quartet no. 2 in A minor op. 13</li>
+                <li>Dvořák, Piano Trio 'Dumky' op. 90</li>
+                <li>Helsted, Decet in D major op. 18</li>
+                <li>Beethoven, Trio in C major op. 87 for two oboes and cor
+                    anglais</li>
+                <li>Dvořák, Moravian Duets</li>
+            </ul>
+            <h2 class="cursus">Baroque music from Central Europe 415 Hz |
+                Monastery Nieuw Sion, 13 - 19 August</h2>
+            <p>In the final concert in the monastery church:</p>
+            <ul>
+                <li>Heinichen, Concerto à 7 S.215</li>
+                <li>Biber, De Profundis</li>
+                <li>Zelenka, Ecce nunc benedicite ZWV 99</li>
+                <li>Hasse, Miserere in C minor</li>
+                <li>Heinichen, Confitebor S.32</li>
+                <li>Biber, Requiem in F minor</li>
+            </ul>
+            <p>In the chamber music programme:</p>
+            <ul>
+                <li>Schein, Christ unser Herr zum Jordan kam</li>
+                <li>Tůma, Stabat Mater MO 814</li>
+                <li>Colonna, Nisi Dominus op. 12</li>
+                <li>Bertali, Sonata a 6 in D major</li>
+                <li>Purcell, The Plaint (from The Fairy Queen)</li>
+                <li>Zelenka, Lamentatio ZWV 53/6</li>
+                <li>A. Scarlatti, Miserere in C minor</li>
+                <li>J.C. Bach, Lamento "Ach, daß ich Wassers gnug hätte"</li>
+                <li>Capricornus, Du grosser König</li>
+                <li>Buns, Ave Maria op. 9 no. 9</li>
+                <li>Janitsch, Quartet in G minor "O Haupt voll Blut und Wunden"
+                </li>
+                <li>Danielis, Paratum cor meum</li>
+                <li>Buxtehude, Jesu meine Freude BuxWV 60</li>
+                <li>Charpentier, Ave maris stella H. 60</li>
+            </ul>
+            <h1 class="jaar">2025</h1>
+            <h2 class="cursus">Missa in tempore belli for choir, soloists and
+                orchestra | České Budějovice, 24 July - 3 August</h2>
+            <p>In the final concert in het Cathedral of České Budějovice:</p>
+            <ul>
+                <li>Dvořák - Symphonic Poem "The Golden Spinning Wheel" op. 109
+                </li>
+                <li>Josef Haydn - Missa in tempore belli (Paukenmesse)</li>
+            </ul>
+            <p>In the chamber music programme:</p>
+            <ul>
+                <li>Rota, Nonet</li>
+                <li>Dvořák, String Quintet with Viola op. 97</li>
+                <li>Brahms, Piano Quintet in F minor op. 34</li>
+                <li>Mozart, Piano Quartet in E flat major KV 493</li>
+                <li>Mozart, Piano Quintet with Winds KV 452</li>
+                <li>Schubert, String Quintet in C major, D. 956</li>
+                <li>Beethoven, String Quartet op. 18 no. 4</li>
+                <li>Andriessen, Divertimento a Cinque</li>
+                <li>Reicha, Quintet in A major</li>
+                <li>Dvořák, String Quintet with Double Bass</li>
+                <li>Mozart, Trio of the Three Ladies (from The Magic Flute)</li>
+                <li>Bach, The Musical Offering</li>
+                <li>Reinecke, Trio for piano, oboe and horn</li>
+                <li>Smetana, Piano Trio op. 15</li>
+                <li>Dvořák, Serenade op. 44 for winds</li>
+            </ul>
+            <h2 class="cursus">Baroque music in 415 Hz: Purcell & Handel |
+                Monastery Nieuw Sion, 10 - 16 August</h2>
+            <p>In the final concert in the Refectory:</p>
+            <ul>
+                <li>Purcell, Welcome to All the Pleasures</li>
+                <li>Handel, Pastiche from Utrecht Te Deum, Jubilate & Ode for
+                    St. Cecilia's Day</li>
+                <li>Purcell, Hail! Bright Cecilia</li>
+            </ul>
+            <p>In the chamber music programme:</p>
+            <ul>
+                <li>Purcell, In nomine à 6</li>
+                <li>Montéclair, Cantata 'La Bergère'</li>
+                <li>Boismortier, Motet à voix seule pour la Sainte Vierge</li>
+                <li>Pohle, In te Domine speravi</li>
+                <li>A. Scarlatti, Quae es ista</li>
+                <li>Purcell, O Lord, thou art my God Z. 41</li>
+                <li>Humfrey, O Lord my God</li>
+                <li>Merula, Ego flos campi</li>
+                <li>Schütz, Iss dein Brot SWV 358</li>
+                <li>Stradella, O vos omnes</li>
+                <li>Rosenmüller, Christum ducem, qui per crucem</li>
+                <li>Byrd, Ye Sacred Muses</li>
+                <li>Purcell, Fantasias</li>
+                <li>Purcell, The Lord is my Light Z. 55</li>
+                <li>Purcell, In Thee, O Lord Z. 16</li>
+                <li>Purcell, It is a Good Thing Z. 18</li>
+                <li>Purcell, I was Glad Z. 19</li>
+                <li>Purcell, Unto Thee, O Lord Z. 63</li>
+                <li>Bach, Aria 'Zweig und Äste' (from BWV 205)</li>
+                <li>Purcell, Beati omnes</li>
+                <li>Purcell, O Happy Man Z. 139</li>
+                <li>Boismortier, Sonata à 4 in A minor op. 34 no. 6</li>
+                <li>Boismortier, Sonata à 4 in G minor op. 34 no. 1</li>
+                <li>Vivaldi, Chamber Sonata in G minor RV 103</li>
+                <li>Finger, Trio Sonata</li>
+                <li>Biber, Sonata IX (from Fidicinium Sacro-Profanum)</li>
+                <li>Bach, Aria 'Sein’ Allmacht zu ergründen' (from BWV 128)</li>
+            </ul>
             <h1 class="jaar">2024</h1>
             <h2 class="cursus">Reicha's Requiem for choir, soloists and
                 orchestra | České Budějovice, 25 July - 4 August</h2>
