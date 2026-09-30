@@ -115,7 +115,7 @@
             </ul>
             <h2 class="cursus">Baroque music in 415 Hz: Purcell & Handel |
                 Monastery Nieuw Sion, 10 - 16 August</h2>
-            <p>In the final concert in the Refectory:</p>
+            <p>In the final concert in the monastery church:</p>
             <ul>
                 <li>Purcell, Welcome to All the Pleasures</li>
                 <li>Handel, Pastiche from Utrecht Te Deum, Jubilate & Ode for
