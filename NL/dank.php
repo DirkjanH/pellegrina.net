@@ -139,8 +139,7 @@ switch ($dlnmr['betaalstatus']) {
 		$message .= "<p>Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. De aanbetaling bedraagt {$cursus['inschrijfgeld']} of de helft van het totaal verschuldigde cursusbedrag als dat lager is dan {$cursus['inschrijfgeld']} </p>\n";
 		break;
 	default:
-		$message .= "<p>Om een of andere reden hebben we je aanbetaling (nog) niet ontvangen. Het kan zijn dat de betaling niet is gelukt of door jezelf is afgebroken. Er is dan geen geld van je rekening afgeschreven.<br>
-			Het kan ook zijn dat de betaling nog niet verwerkt is. Daarom is het zinvol om deze pagina even te verversen (Ctrl-R) en te zien of de betaling dan wel wordt gemeld.<br>
+		$message .= "<p>We hebben je aanbetaling nog niet bevestigd. De betaling kan nog worden verwerkt. Als Mollie de betaling definitief als mislukt meldt, ontvang je daarover een aparte e-mail.<br>
 			Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling van {$cursus['inschrijfgeld']} hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. Tsjechische deelnemers kunnen hun aanbetaling in CZK overmaken op <strong>rekening 538940301/0100 van Komerční Banka</strong>.</p>\n";
 		break;
 }
@@ -199,25 +198,28 @@ if (!$mail_already_sent) {
 ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <title>Hartelijk dank voor je inschrijving!</title>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
-        type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+	<title>Hartelijk dank voor je inschrijving!</title>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
+	<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
+		type="text/css">
 </head>
+
 <body>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
-    <div id="inhoud">
-        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
-        <div id="main"> <?php echo $message; ?> <h2> <a
-                    href="javascript: history.go(-1)">Terug</a></h2>
-            <p>&nbsp;</p>
-        </div>
-    </div>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
+	<div id="inhoud">
+		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php'; ?>
+		<div id="main"> <?php echo $message; ?> <h2> <a
+					href="javascript: history.go(-1)">Terug</a></h2>
+			<p>&nbsp;</p>
+		</div>
+	</div>
+	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
+
 </html>

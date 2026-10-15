@@ -139,8 +139,7 @@ switch ($dlnmr['betaalstatus']) {
 		$message .= "<p>Your registration will be processed immediately once we have received payment of the deposit on our bank account <strong>NL60 BUNQ 2177 4957 25</strong> in the name of La Pellegrina, Utrecht. For bank transfers from outside the EU: BIC BUNQ NL2A. The deposit is {$course['enrolment fee']} or half of the total course amount due if it is less than {$cursus['inschrijfgeld']} </p>";
 		break;
 	default:
-		$message .= "<p>For some reason we have not (yet) received your deposit. The payment may have failed or been aborted by yourself. In that case no money has been debited from your account.<br>
-			It is also possible that the payment has not yet been processed. Therefore, it makes sense to refresh this page (Ctrl-R) and see if the payment is then reported.<br>
+		$message .= "<p>We have not yet confirmed your deposit. The payment may still be processing. If Mollie reports the payment as definitively failed, you will receive a separate email.<br>
 			Your registration will be processed immediately once we have received payment of the deposit of {$cursus['inschrijfgeld']} in our bank account <strong>NL60 BUNQ 2177 4957 25</strong> in the name of La Pellegrina, Utrecht. For bank transfers from outside the EU: BIC BUNQ NL2A. Czech participants can pay their deposit in CZK to Komerční Banka account 538940301/0100.</p>";
 		break;
 }
