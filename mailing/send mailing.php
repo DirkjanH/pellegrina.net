@@ -131,17 +131,20 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 	<body>
 		<h3>Mailing-nr: <?= h($mailing_nr) ?>: <?= h($mailing['subject']) ?></h3>
-		<p>Controleer de mailing voordat deze wordt verzonden.</p>
+		<p>De mailing wordt nu verzonden.</p>
 		<p>
 			<strong>Totaal aantal mails:</strong> <?= h($totaal_mails) ?><br>
 			<strong>Te verzenden mails:</strong> <?= h($resterende_mails) ?>
 		</p>
-		<form method="post"
+		<form id="start-mailing" method="post"
 			action="<?= h($_SERVER['PHP_SELF']) ?>?mailing=<?= h($mailing_nr) ?>">
 			<input type="hidden" name="csrf_token"
 				value="<?= h($_SESSION['mailing_csrf']) ?>">
-			<button type="submit">Mailing verzenden</button>
+			<noscript><button type="submit">Mailing verzenden</button></noscript>
 		</form>
+		<script>
+			document.getElementById('start-mailing').submit();
+		</script>
 	</body>
 
 	</html><?php
