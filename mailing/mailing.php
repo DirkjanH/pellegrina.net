@@ -1431,7 +1431,7 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 		id="formulier" enctype='multipart/form-data'>
 		<div id="message_area"> <strong>Subject:</strong>
 			<input name="subject" type="text" id="subject" size="70"
-				value="<?php echo stripslashes($nieuwsbrief['subject']); ?>">
+				value="<?php echo htmlspecialchars(stripslashes($nieuwsbrief['subject']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>">
 			<button type="button" id="berichten_openen" aria-expanded="false"
 				aria-controls="berichten_inhoud"
 				onclick="toggleBerichten()">Opgeslagen nieuwsbrieven</button>
