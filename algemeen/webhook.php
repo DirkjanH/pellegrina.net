@@ -31,12 +31,49 @@ if (!$inschrijving) {
 	exit('Deze boeking bestaat niet in de tabel.');
 }
 
+$mail_sent_dir = $_SERVER['DOCUMENT_ROOT'] . '/mail_sent';
+if (!is_dir($mail_sent_dir) && !mkdir($mail_sent_dir, 0775, true) && !is_dir($mail_sent_dir)) {
+	error_log('Mollie-webhook kon mail_sent-map niet aanmaken.');
+	http_response_code(503);
+	exit('Webhookstatus kan tijdelijk niet worden opgeslagen.');
+}
+
+$mail_key = preg_replace('/[^A-Za-z0-9_-]/', '', $mollie_id);
+$attempt_file = $mail_sent_dir . '/payment-webhook-' . $mail_key . '.attempts';
+$attempt_lock = fopen($attempt_file . '.lock', 'c');
+if ($attempt_lock === false || !flock($attempt_lock, LOCK_EX)) {
+	if (is_resource($attempt_lock)) fclose($attempt_lock);
+	error_log('Mollie-webhookpoging kon niet worden vergrendeld voor betaling ' . $mail_key);
+	http_response_code(503);
+	exit('Webhookstatus kan tijdelijk niet worden opgeslagen.');
+}
+
+$previous_attempts = is_file($attempt_file) ? (int) file_get_contents($attempt_file) : 0;
+$attempts_exhausted_before_request = $previous_attempts >= 5;
+$attempt_count = min($previous_attempts + 1, 5);
+$attempts_saved = file_put_contents($attempt_file, (string) $attempt_count, LOCK_EX) !== false;
+flock($attempt_lock, LOCK_UN);
+fclose($attempt_lock);
+if (!$attempts_saved) {
+	error_log('Mollie-webhookpoging kon niet worden opgeslagen voor betaling ' . $mail_key);
+	http_response_code(503);
+	exit('Webhookstatus kan tijdelijk niet worden opgeslagen.');
+}
+
+$retry_webhook = static function ($message) use ($mail_key, $attempt_count, $attempts_exhausted_before_request) {
+	error_log('Mollie-webhook tijdelijk mislukt voor betaling ' . $mail_key . ' (poging ' . $attempt_count . '/5): ' . $message);
+	if ($attempts_exhausted_before_request) {
+		http_response_code(200);
+		exit('Maximumaantal webhookpogingen is bereikt.');
+	}
+	http_response_code(503);
+	exit($attempt_count >= 5 ? 'Maximumaantal webhookpogingen bereikt; betalingsstatus is niet definitief.' : $message);
+};
+
 try {
 	$payment = $mollie->payments->get($mollie_id);
 } catch (Throwable $exception) {
-	error_log('Mollie-webhook kon betaling niet ophalen: ' . $exception->getMessage());
-	http_response_code(503);
-	exit('Betalingsstatus tijdelijk niet beschikbaar.');
+	$retry_webhook('Betalingsstatus tijdelijk niet beschikbaar.');
 }
 
 $definitief_mislukt = in_array($payment->status, ['failed', 'expired', 'canceled'], true);
@@ -46,74 +83,74 @@ if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()
 		SET betaalstatus = " . quote($payment->status) . ", aanbetaling = NOW(), aanbet_bedrag = " . quote($payment->amount->value) . ", aangenomen = 1
 		WHERE Mollie_ID = {$mollie_id_sql}";
 	if (!exec_query($betaal_query)) {
-		http_response_code(503);
-		exit('Betalingsstatus kon tijdelijk niet worden opgeslagen.');
+		$retry_webhook('Betalingsstatus kon tijdelijk niet worden opgeslagen.');
 	}
 } elseif ($definitief_mislukt) {
 	$betaal_query = "UPDATE inschrijving SET betaalstatus = " . quote($payment->status) . " WHERE Mollie_ID = {$mollie_id_sql}";
 	if (!exec_query($betaal_query)) {
-		http_response_code(503);
-		exit('Betalingsstatus kon tijdelijk niet worden opgeslagen.');
+		$retry_webhook('Betalingsstatus kon tijdelijk niet worden opgeslagen.');
 	}
 
-	$mail_sent_dir = $_SERVER['DOCUMENT_ROOT'] . '/mail_sent';
-	if (!is_dir($mail_sent_dir) && !mkdir($mail_sent_dir, 0775, true) && !is_dir($mail_sent_dir)) {
-		error_log('Mollie-foutmail kon niet worden klaargezet: mail_sent-map is niet beschikbaar.');
-		http_response_code(503);
-		exit('Foutmelding kan tijdelijk niet worden verzonden.');
-	}
+}
 
-	$mail_key = preg_replace('/[^A-Za-z0-9_-]/', '', $mollie_id);
-	$mail_marker = $mail_sent_dir . '/payment-failure-' . $mail_key . '.sent';
-	$mail_lock = fopen($mail_marker . '.lock', 'c');
-	if ($mail_lock === false || !flock($mail_lock, LOCK_EX)) {
-		if (is_resource($mail_lock)) fclose($mail_lock);
-		error_log('Mollie-foutmail kon niet worden vergrendeld voor betaling ' . $mail_key);
-		http_response_code(503);
-		exit('Foutmelding kan tijdelijk niet worden verzonden.');
-	}
+$definitieve_status = $definitief_betaald || $definitief_mislukt;
+if (!$definitieve_status) {
+	$retry_webhook('Betalingsstatus nog niet definitief (status: ' . $payment->status . ').');
+}
 
-	$mail_verzonden = true;
-	if (!is_file($mail_marker)) {
-		$naam = htmlspecialchars((string) $inschrijving['naam'], ENT_QUOTES, 'UTF-8');
-		$voornaam = htmlspecialchars((string) $inschrijving['voornaam'], ENT_QUOTES, 'UTF-8');
-		$status = htmlspecialchars((string) $payment->status, ENT_QUOTES, 'UTF-8');
-		$inschrijving_nr = (int) $inschrijving['InschId'];
+$mail_type = $definitief_betaald ? 'confirmation' : 'failure';
+$mail_marker = $mail_sent_dir . '/payment-' . $mail_type . '-' . $mail_key . '.sent';
+$mail_lock = fopen($mail_marker . '.lock', 'c');
+if ($mail_lock === false || !flock($mail_lock, LOCK_EX)) {
+	if (is_resource($mail_lock)) fclose($mail_lock);
+	$retry_webhook('Mailstatus kon niet worden vergrendeld.');
+}
+
+$mail_verzonden = true;
+if (!is_file($mail_marker)) {
+	$naam = htmlspecialchars((string) $inschrijving['naam'], ENT_QUOTES, 'UTF-8');
+	$voornaam = htmlspecialchars((string) $inschrijving['voornaam'], ENT_QUOTES, 'UTF-8');
+	$inschrijving_nr = (int) $inschrijving['InschId'];
+	if ($definitief_betaald) {
 		if (strtolower((string) $inschrijving['taal']) === 'en') {
-			$subject = 'Payment failed for your La Pellegrina registration';
-			$message = "<p>Dear {$voornaam},</p><p>Mollie has definitively reported your deposit payment for registration {$inschrijving_nr} as failed (status: {$status}). No payment confirmation was received.</p><p>Please contact <a href=\"mailto:aanmelding@pellegrina.net\">aanmelding@pellegrina.net</a> if you need help completing your registration.</p><p>Kind regards,<br>La Pellegrina</p>";
+			$subject = 'Payment received for your La Pellegrina registration';
+			$message = "<p>Dear {$voornaam},</p><p>Mollie has confirmed receipt of your deposit payment for registration {$inschrijving_nr}. Your registration is confirmed.</p><p>Kind regards,<br>La Pellegrina</p>";
 		} else {
-			$subject = 'Betaling mislukt voor je inschrijving bij La Pellegrina';
-			$message = "<p>Beste {$voornaam},</p><p>Mollie heeft de betaling van je aanbetaling voor inschrijving {$inschrijving_nr} definitief als mislukt gemeld (status: {$status}). We hebben geen betalingsbevestiging ontvangen.</p><p>Neem contact op met <a href=\"mailto:aanmelding@pellegrina.net\">aanmelding@pellegrina.net</a> als je hulp nodig hebt bij het afronden van je inschrijving.</p><p>Met muzikale groet,<br>La Pellegrina</p>";
+			$subject = 'Betaling ontvangen voor je inschrijving bij La Pellegrina';
+			$message = "<p>Beste {$voornaam},</p><p>Mollie heeft de ontvangst van je aanbetaling voor inschrijving {$inschrijving_nr} bevestigd. Je inschrijving is bevestigd.</p><p>Met muzikale groet,<br>La Pellegrina</p>";
 		}
-
-		$mail_verzonden = LPmail(
-			(string) $inschrijving['email'],
-			(string) $inschrijving['naam'],
-			$subject,
-			$message,
-			'aanmelding@pellegrina.net',
-			'LP Aanmelding'
-		);
-		if ($mail_verzonden && file_put_contents($mail_marker, date('c'), LOCK_EX) === false) {
-			error_log('Mollie-foutmail verzonden maar marker kon niet worden opgeslagen voor betaling ' . $mail_key);
-			$mail_verzonden = false;
-		}
+	} elseif (strtolower((string) $inschrijving['taal']) === 'en') {
+		$status = htmlspecialchars((string) $payment->status, ENT_QUOTES, 'UTF-8');
+		$subject = 'Payment failed for your La Pellegrina registration';
+		$message = "<p>Dear {$voornaam},</p><p>Mollie has definitively reported your deposit payment for registration {$inschrijving_nr} as failed (status: {$status}). No payment confirmation was received.</p><p>Please contact <a href=\"mailto:aanmelding@pellegrina.net\">aanmelding@pellegrina.net</a> if you need help completing your registration.</p><p>Kind regards,<br>La Pellegrina</p>";
+	} else {
+		$status = htmlspecialchars((string) $payment->status, ENT_QUOTES, 'UTF-8');
+		$subject = 'Betaling mislukt voor je inschrijving bij La Pellegrina';
+		$message = "<p>Beste {$voornaam},</p><p>Mollie heeft de betaling van je aanbetaling voor inschrijving {$inschrijving_nr} definitief als mislukt gemeld (status: {$status}). We hebben geen betalingsbevestiging ontvangen.</p><p>Neem contact op met <a href=\"mailto:aanmelding@pellegrina.net\">aanmelding@pellegrina.net</a> als je hulp nodig hebt bij het afronden van je inschrijving.</p><p>Met muzikale groet,<br>La Pellegrina</p>";
 	}
 
-	flock($mail_lock, LOCK_UN);
-	fclose($mail_lock);
-	if (!$mail_verzonden) {
-		error_log('Mollie-foutmail niet verzonden voor betaling ' . $mail_key);
-		http_response_code(503);
-		exit('Foutmelding kan tijdelijk niet worden verzonden.');
+	$mail_verzonden = LPmail(
+		(string) $inschrijving['email'],
+		(string) $inschrijving['naam'],
+		$subject,
+		$message,
+		'aanmelding@pellegrina.net',
+		'LP Aanmelding'
+	);
+	if ($mail_verzonden && file_put_contents($mail_marker, date('c'), LOCK_EX) === false) {
+		error_log('Mollie-mail verzonden maar marker kon niet worden opgeslagen voor betaling ' . $mail_key);
+		$mail_verzonden = false;
 	}
 }
 
-if (!$definitief_betaald && !$definitief_mislukt) {
-	error_log('Mollie-webhook wacht op definitieve betalingsstatus voor betaling ' . $mollie_id . ' (status: ' . $payment->status . ').');
-	http_response_code(503);
-	exit('Betalingsstatus nog niet definitief.');
+flock($mail_lock, LOCK_UN);
+fclose($mail_lock);
+if (!$mail_verzonden) {
+	$retry_webhook('Mail kon niet worden verzonden.');
+}
+
+if ($definitief_betaald && !exec_query("UPDATE inschrijving SET dankmail_verzonden = NOW() WHERE Mollie_ID = {$mollie_id_sql}")) {
+	$retry_webhook('Verzendstatus van de bevestigingsmail kon niet worden opgeslagen.');
 }
 
 http_response_code(200);

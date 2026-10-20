@@ -167,18 +167,42 @@ d($to, $naam, $subject, $mail_text);
 $booking_reference = isset($_GET['res']) ? preg_replace('/[^a-zA-Z0-9_-]/', '', $_GET['res']) : '';
 $mail_sent_dir = $_SERVER['DOCUMENT_ROOT'] . '/mail_sent';
 $mail_sent_file = $booking_reference !== '' ? $mail_sent_dir . '/' . $booking_reference . '.sent' : '';
+$mollie_id = (string) ($dlnmr['Mollie_ID'] ?? '');
+$is_mollie_registration = preg_match('/^tr_[A-Za-z0-9]+$/', $mollie_id) === 1;
+$payment_confirmation_file = $is_mollie_registration
+	? $mail_sent_dir . '/payment-confirmation-' . preg_replace('/[^A-Za-z0-9_-]/', '', $mollie_id) . '.sent'
+	: '';
+$mail_sending_deferred = $is_mollie_registration && $dlnmr['betaalstatus'] !== 'paid';
 
 $db_mail_already_sent = isset($dlnmr['dankmail_verzonden']) && !empty($dlnmr['dankmail_verzonden']) && $dlnmr['dankmail_verzonden'] !== '0000-00-00' && $dlnmr['dankmail_verzonden'] !== '0000-00-00 00:00:00' && $dlnmr['dankmail_verzonden'] !== '0';
 $file_mail_already_sent = $mail_sent_file !== '' && file_exists($mail_sent_file);
 
-$mail_already_sent = $db_mail_already_sent || $file_mail_already_sent;
+$mail_already_sent = $is_mollie_registration
+	? ($payment_confirmation_file !== '' && file_exists($payment_confirmation_file))
+	: ($db_mail_already_sent || $file_mail_already_sent);
+$payment_mail_lock = false;
+$payment_mail_lock_failed = false;
 
 if ($mail_sent_file !== '' && !is_dir($mail_sent_dir)) {
 	@mkdir($mail_sent_dir, 0775, true);
 }
 
+if (!$mail_sending_deferred && $is_mollie_registration) {
+	$payment_mail_lock = fopen($payment_confirmation_file . '.lock', 'c');
+	if ($payment_mail_lock === false || !flock($payment_mail_lock, LOCK_EX)) {
+		if (is_resource($payment_mail_lock)) fclose($payment_mail_lock);
+		$payment_mail_lock = false;
+		$payment_mail_lock_failed = true;
+		error_log('Bevestigingsmail kon niet worden vergrendeld voor betaling ' . $mollie_id);
+	} else {
+		$mail_already_sent = file_exists($payment_confirmation_file);
+	}
+}
+
 // bericht ter bevestiging:
-if (!$mail_already_sent) {
+if ($payment_mail_lock_failed) {
+	echo "De email is niet verzonden!<br>";
+} elseif (!$mail_sending_deferred && !$mail_already_sent) {
 	if (!empty($dlnmr) && !empty($to)) {
 		$mail_verstuurd = LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding');
 		if (!$mail_verstuurd) {
@@ -190,10 +214,17 @@ if (!$mail_already_sent) {
 			if ($mail_sent_file !== '') {
 				@file_put_contents($mail_sent_file, time());
 			}
+			if ($payment_confirmation_file !== '' && file_put_contents($payment_confirmation_file, date('c'), LOCK_EX) === false) {
+				error_log('Bevestigingsmail verzonden maar Mollie-marker kon niet worden opgeslagen voor betaling ' . $mollie_id);
+			}
 		}
 	}
-} else {
+} elseif (!$mail_sending_deferred && $mail_already_sent) {
 	echo "<p>Dit bevestigingsmail is voor deze boeking al eerder verzonden.</p>";
+}
+if (is_resource($payment_mail_lock)) {
+	flock($payment_mail_lock, LOCK_UN);
+	fclose($payment_mail_lock);
 }
 ?>
 <!DOCTYPE HTML>
