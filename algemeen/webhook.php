@@ -40,6 +40,7 @@ try {
 }
 
 $definitief_mislukt = in_array($payment->status, ['failed', 'expired', 'canceled'], true);
+$definitief_betaald = $payment->status === 'paid';
 if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()) {
 	$betaal_query = "UPDATE inschrijving
 		SET betaalstatus = " . quote($payment->status) . ", aanbetaling = NOW(), aanbet_bedrag = " . quote($payment->amount->value) . ", aangenomen = 1
@@ -107,6 +108,12 @@ if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()
 		http_response_code(503);
 		exit('Foutmelding kan tijdelijk niet worden verzonden.');
 	}
+}
+
+if (!$definitief_betaald && !$definitief_mislukt) {
+	error_log('Mollie-webhook wacht op definitieve betalingsstatus voor betaling ' . $mollie_id . ' (status: ' . $payment->status . ').');
+	http_response_code(503);
+	exit('Betalingsstatus nog niet definitief.');
 }
 
 http_response_code(200);
