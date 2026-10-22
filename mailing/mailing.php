@@ -740,7 +740,19 @@ if (empty($_POST["submitten"])) {
 if ($_POST['afzender'] != ''  and $_POST['afzendermail'] != '') $afzender = $_POST['afzender'] . '#' . $_POST['afzendermail'];
 else $afzender = '';
 
-if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
+$subject_warning = false;
+$save_actions = ["Voeg toe", "Update", "Verzend"];
+if (
+	isset($_POST["submitten"])
+	&& in_array($_POST["submitten"], $save_actions, true)
+	&& (!isset($_POST['subject']) || !is_string($_POST['subject']) || trim($_POST['subject']) === '')
+) {
+	$subject_warning = true;
+	$nieuwsbrief = [
+		'subject' => '',
+		'message' => is_string($_POST['message'] ?? null) ? $_POST['message'] : '',
+	];
+} elseif (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 	case "Voeg toe":
 		$insertSQL = sprintf(
 			"INSERT INTO messages (subject, message, afzender, datum, adressen, cursusId, taal) 
@@ -1442,6 +1454,11 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 <body>
 	<form action="<?php echo $editFormAction; ?>" method="post" name="formulier"
 		id="formulier" enctype='multipart/form-data'>
+		<?php if ($subject_warning) { ?>
+			<p role="alert" class="subject-warning">
+				De nieuwsbrief is niet opgeslagen: vul eerst een onderwerp in.
+			</p>
+		<?php } ?>
 		<div id="message_area"> <strong>Subject:</strong>
 			<input name="subject" type="text" id="subject" size="70"
 				value="<?php echo htmlspecialchars(stripslashes($nieuwsbrief['subject']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>">
