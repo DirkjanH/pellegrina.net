@@ -985,6 +985,7 @@ if (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
 
 $where = 'DATE(datum) > SUBDATE(CURDATE(), INTERVAL 2 YEAR)';
 if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'subject LIKE ' . GetSQLValueString('%' . $_POST['zoek_subject'] . '%', 'text');
+$berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 
 ?>
 <!DOCTYPE HTML>
@@ -1231,11 +1232,23 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			knop.setAttribute('aria-expanded', geopend ? 'true' : 'false');
 			kop.setAttribute('aria-expanded', geopend ? 'true' : 'false');
 			if (geopend) {
-				var knopPositie = knop.getBoundingClientRect();
-				wrapper.style.top = (knopPositie.bottom + 4) + 'px';
-				wrapper.style.left = knopPositie.left + 'px';
+				positioneerBerichten();
 			}
 		}
+
+		function positioneerBerichten() {
+			var wrapper = document.getElementById('berichten_wrapper');
+			var knop = document.getElementById('berichten_openen');
+			var knopPositie = knop.getBoundingClientRect();
+			wrapper.style.top = (knopPositie.bottom + 4) + 'px';
+			wrapper.style.left = knopPositie.left + 'px';
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			if (document.getElementById('berichten_wrapper').classList.contains('berichten_open')) {
+				positioneerBerichten();
+			}
+		});
 
 		function sluitMailingResultaat() {
 			var resultaat = document.querySelector('.mailing-result');
@@ -1432,7 +1445,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 		<div id="message_area"> <strong>Subject:</strong>
 			<input name="subject" type="text" id="subject" size="70"
 				value="<?php echo htmlspecialchars(stripslashes($nieuwsbrief['subject']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>">
-			<button type="button" id="berichten_openen" aria-expanded="false"
+			<button type="button" id="berichten_openen"
+				aria-expanded="<?php echo $berichten_open ? 'true' : 'false'; ?>"
 				aria-controls="berichten_inhoud"
 				onclick="toggleBerichten()">Opgeslagen nieuwsbrieven</button>
 			<br>
@@ -1640,8 +1654,9 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 			</div>
 		</div>
 		</div>
-		<div id="berichten_wrapper">
-			<button type="button" id="berichten_header" aria-expanded="false"
+		<div id="berichten_wrapper" class="<?php echo $berichten_open ? 'berichten_open' : ''; ?>">
+			<button type="button" id="berichten_header"
+				aria-expanded="<?php echo $berichten_open ? 'true' : 'false'; ?>"
 				aria-controls="berichten_inhoud" onclick="toggleBerichten()">
 				Opgeslagen nieuwsbrieven </button>
 			<div id="berichten_inhoud">
@@ -1655,8 +1670,8 @@ if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'su
 										accesskey="F"
 										value="<?php
 												if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') echo $_POST['zoek_subject'] ?>">
-									<input name="subject" type="submit"
-										id="subject" value="zoek">
+									<input name="zoek_nieuwsbrieven" type="submit"
+										id="zoek_nieuwsbrieven" value="zoek">
 								</label>
 							</th>
 							<th width="13%">Datum:</th>
