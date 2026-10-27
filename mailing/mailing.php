@@ -1111,6 +1111,22 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 		}
 		document.addEventListener('DOMContentLoaded', initializeMessageEditor);
 
+		function toggleEditorFullscreen() {
+			var messageArea = document.getElementById('message_area');
+			var button = document.getElementById('message_fullscreen_toggle');
+			var fullscreen = messageArea.classList.toggle('editor-fullscreen');
+			button.setAttribute('aria-pressed', fullscreen ? 'true' : 'false');
+			button.textContent = fullscreen ? 'Terug naar overzicht' : 'Editor volledig scherm';
+		}
+
+		document.addEventListener('keydown', function(event) {
+			var messageArea = document.getElementById('message_area');
+			if (event.key === 'Escape' && messageArea &&
+				messageArea.classList.contains('editor-fullscreen')) {
+				toggleEditorFullscreen();
+			}
+		});
+
 		function Selecteer(code, Nr) {
 			switch (code) {
 				case 'a':
@@ -1447,6 +1463,55 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			min-height: 0;
 			overflow-y: auto;
 		}
+
+		#message_area.editor-fullscreen {
+			position: fixed;
+			inset: 0;
+			z-index: 1000;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			width: auto;
+			height: 100vh;
+			height: 100dvh;
+			padding: 8px;
+			background: #fff;
+			overflow: hidden;
+		}
+
+		#message_area.editor-fullscreen > :not(#message_fullscreen_toggle):not(.cke) {
+			display: none;
+		}
+
+		#message_area.editor-fullscreen > #message_fullscreen_toggle {
+			align-self: flex-start;
+			flex: none;
+		}
+
+		#message_area.editor-fullscreen > .cke {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			width: 100%;
+			min-height: 0;
+		}
+
+		#message_area.editor-fullscreen .cke_inner {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			min-height: 0;
+		}
+
+		#message_area.editor-fullscreen .cke_contents {
+			flex: 1;
+			height: auto !important;
+			min-height: 0;
+		}
+
+		#message_area.editor-fullscreen .cke_contents iframe {
+			height: 100% !important;
+		}
 		-->
 	</style>
 </head>
@@ -1466,6 +1531,8 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 				aria-expanded="<?php echo $berichten_open ? 'true' : 'false'; ?>"
 				aria-controls="berichten_inhoud"
 				onclick="toggleBerichten()">Opgeslagen nieuwsbrieven</button>
+			<button type="button" id="message_fullscreen_toggle"
+				aria-pressed="false" onclick="toggleEditorFullscreen()">Editor volledig scherm</button>
 			<br>
 			<textarea name="message"
 				id="message"><?php echo htmlspecialchars(stripslashes($nieuwsbrief['message']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></textarea>
