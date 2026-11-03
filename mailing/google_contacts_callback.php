@@ -1,15 +1,15 @@
 <?php
 
-session_set_cookie_params([
-    'lifetime' => 0,
-    'path'     => '/',
-    'domain'   => $_SERVER['HTTP_HOST'] ?? '',
-    'secure'   => true,      // Verplicht als je op HTTPS draait
-    'httponly' => true,    // Beveiliging tegen XSS
-    'samesite' => 'Lax'    // Voorkomt verlies van de sessie bij de Google-redirect
-]);
+if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.use_strict_mode', '1');
+    session_set_cookie_params([
+        'httponly' => true,
+        'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+        'samesite' => 'Lax',
+    ]);
+    session_start();
+}
 
-session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/google_contacts.php';
 

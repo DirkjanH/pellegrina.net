@@ -76,10 +76,16 @@ function google_contacts_access_token(): string
         if (!$token->getRefreshToken()) {
             throw new RuntimeException('De Google Contacts-koppeling is verlopen; autoriseer opnieuw.');
         }
+        $refreshToken = $token->getRefreshToken();
         $token = google_contacts_provider()->getAccessToken('refresh_token', [
-            'refresh_token' => $token->getRefreshToken(),
+            'refresh_token' => $refreshToken,
         ]);
-        $_SESSION['google_contacts_token'] = $token->jsonSerialize();
+        $tokenData = $token->jsonSerialize();
+        if (empty($tokenData['refresh_token'])) {
+            $tokenData['refresh_token'] = $refreshToken;
+        }
+        $_SESSION['google_contacts_token'] = $tokenData;
+        $token = new AccessToken($tokenData);
     }
 
     return $token->getToken();

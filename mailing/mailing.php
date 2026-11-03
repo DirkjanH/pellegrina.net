@@ -43,17 +43,6 @@ $nieuwsbrief = [
 	'afzender' => ''
 ];
 
-session_set_cookie_params([
-	'lifetime' => 0,
-	'path'     => '/',
-	'domain'   => $_SERVER['HTTP_HOST'] ?? '',
-	'secure'   => true,      // Verplicht als je op HTTPS draait
-	'httponly' => true,    // Beveiliging tegen XSS
-	'samesite' => 'Lax'    // Voorkomt verlies van de sessie bij de Google-redirect
-]);
-
-session_start();
-
 // De formulierkeuzes blijven tussen opeenvolgende POST-verzoeken beschikbaar.
 // Daardoor kan een gebruiker eerst adressen selecteren en daarna de nieuwsbrief
 // bewerken zonder dat de ontvangerslijst opnieuw hoeft te worden opgebouwd.
