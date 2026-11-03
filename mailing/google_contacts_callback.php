@@ -1,5 +1,14 @@
 <?php
 
+session_set_cookie_params([
+    'lifetime' => 0,
+    'path'     => '/',
+    'domain'   => $_SERVER['HTTP_HOST'] ?? '',
+    'secure'   => true,      // Verplicht als je op HTTPS draait
+    'httponly' => true,    // Beveiliging tegen XSS
+    'samesite' => 'Lax'    // Voorkomt verlies van de sessie bij de Google-redirect
+]);
+
 session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/google_contacts.php';

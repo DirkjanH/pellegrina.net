@@ -43,6 +43,17 @@ $nieuwsbrief = [
 	'afzender' => ''
 ];
 
+session_set_cookie_params([
+	'lifetime' => 0,
+	'path'     => '/',
+	'domain'   => $_SERVER['HTTP_HOST'] ?? '',
+	'secure'   => true,      // Verplicht als je op HTTPS draait
+	'httponly' => true,    // Beveiliging tegen XSS
+	'samesite' => 'Lax'    // Voorkomt verlies van de sessie bij de Google-redirect
+]);
+
+session_start();
+
 // De formulierkeuzes blijven tussen opeenvolgende POST-verzoeken beschikbaar.
 // Daardoor kan een gebruiker eerst adressen selecteren en daarna de nieuwsbrief
 // bewerken zonder dat de ontvangerslijst opnieuw hoeft te worden opgebouwd.
@@ -1116,13 +1127,13 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			var button = document.getElementById('message_fullscreen_toggle');
 			var fullscreen = messageArea.classList.toggle('editor-fullscreen');
 			button.setAttribute('aria-pressed', fullscreen ? 'true' : 'false');
-			button.textContent = fullscreen ? 'Terug naar overzicht' : 'Editor volledig scherm';
+			button.textContent = fullscreen ? 'Terug naar overzicht' :
+				'Editor volledig scherm';
 		}
-
 		document.addEventListener('keydown', function(event) {
 			var messageArea = document.getElementById('message_area');
-			if (event.key === 'Escape' && messageArea &&
-				messageArea.classList.contains('editor-fullscreen')) {
+			if (event.key === 'Escape' && messageArea && messageArea
+				.classList.contains('editor-fullscreen')) {
 				toggleEditorFullscreen();
 			}
 		});
@@ -1271,9 +1282,9 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			wrapper.style.top = (knopPositie.bottom + 4) + 'px';
 			wrapper.style.left = knopPositie.left + 'px';
 		}
-
 		document.addEventListener('DOMContentLoaded', function() {
-			if (document.getElementById('berichten_wrapper').classList.contains('berichten_open')) {
+			if (document.getElementById('berichten_wrapper').classList
+				.contains('berichten_open')) {
 				positioneerBerichten();
 			}
 		});
@@ -1479,16 +1490,16 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			overflow: hidden;
 		}
 
-		#message_area.editor-fullscreen > :not(#message_fullscreen_toggle):not(.cke) {
+		#message_area.editor-fullscreen> :not(#message_fullscreen_toggle):not(.cke) {
 			display: none;
 		}
 
-		#message_area.editor-fullscreen > #message_fullscreen_toggle {
+		#message_area.editor-fullscreen>#message_fullscreen_toggle {
 			align-self: flex-start;
 			flex: none;
 		}
 
-		#message_area.editor-fullscreen > .cke {
+		#message_area.editor-fullscreen>.cke {
 			display: flex;
 			flex: 1;
 			flex-direction: column;
@@ -1519,12 +1530,10 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 <body>
 	<form action="<?php echo $editFormAction; ?>" method="post" name="formulier"
 		id="formulier" enctype='multipart/form-data'>
-		<?php if ($subject_warning) { ?>
-			<p role="alert" class="subject-warning">
-				De nieuwsbrief is niet opgeslagen: vul eerst een onderwerp in.
-			</p>
-		<?php } ?>
-		<div id="message_area"> <strong>Subject:</strong>
+		<?php if ($subject_warning) { ?> <p role="alert"
+				class="subject-warning"> De nieuwsbrief is niet opgeslagen: vul
+				eerst een onderwerp in. </p> <?php } ?> <div id="message_area">
+			<strong>Subject:</strong>
 			<input name="subject" type="text" id="subject" size="70"
 				value="<?php echo htmlspecialchars(stripslashes($nieuwsbrief['subject']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>">
 			<button type="button" id="berichten_openen"
@@ -1532,7 +1541,8 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 				aria-controls="berichten_inhoud"
 				onclick="toggleBerichten()">Opgeslagen nieuwsbrieven</button>
 			<button type="button" id="message_fullscreen_toggle"
-				aria-pressed="false" onclick="toggleEditorFullscreen()">Editor volledig scherm</button>
+				aria-pressed="false" onclick="toggleEditorFullscreen()">Editor
+				volledig scherm</button>
 			<br>
 			<textarea name="message"
 				id="message"><?php echo htmlspecialchars(stripslashes($nieuwsbrief['message']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></textarea>
@@ -1555,17 +1565,17 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC"
+					type="checkbox" id="CC" value="CC" <?php
+														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
+				CC <input name="test" type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
-					type="checkbox" id="test" value="test"
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
+					id="header" value="uit"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
-					name="header" type="checkbox" id="header" value="uit"
-					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
-						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-																			else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
+				<label><br> Afzender: <input name="afzender" type="text"
+						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+												else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
@@ -1738,7 +1748,8 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			</div>
 		</div>
 		</div>
-		<div id="berichten_wrapper" class="<?php echo $berichten_open ? 'berichten_open' : ''; ?>">
+		<div id="berichten_wrapper"
+			class="<?php echo $berichten_open ? 'berichten_open' : ''; ?>">
 			<button type="button" id="berichten_header"
 				aria-expanded="<?php echo $berichten_open ? 'true' : 'false'; ?>"
 				aria-controls="berichten_inhoud" onclick="toggleBerichten()">
@@ -1754,8 +1765,9 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 										accesskey="F"
 										value="<?php
 												if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') echo $_POST['zoek_subject'] ?>">
-									<input name="zoek_nieuwsbrieven" type="submit"
-										id="zoek_nieuwsbrieven" value="zoek">
+									<input name="zoek_nieuwsbrieven"
+										type="submit" id="zoek_nieuwsbrieven"
+										value="zoek">
 								</label>
 							</th>
 							<th width="13%">Datum:</th>
