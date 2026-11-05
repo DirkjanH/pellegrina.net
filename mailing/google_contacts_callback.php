@@ -13,7 +13,7 @@ if (session_status() === PHP_SESSION_NONE) {
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/google_contacts.php';
 
-$debug = getenv('GOOGLE_CONTACTS_DEBUG') === '1';
+// $debug = getenv('GOOGLE_CONTACTS_DEBUG') === '1';
 $debugDetails = [];
 
 try {
