@@ -57,7 +57,7 @@ function google_contacts_authorization_url(): string
     setcookie('google_contacts_oauth_state', $provider->getState(), [
         'expires' => time() + 600,
         'path' => '/mailing',
-        'secure' => true,
+        'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
         'httponly' => true,
         'samesite' => 'Lax',
     ]);
