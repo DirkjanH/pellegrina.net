@@ -25,7 +25,9 @@
    *
    * @param  string $format Date format
    * @param  integer|string|DateTime $timestamp Timestamp
+   * @param  string|null $locale locale
    * @return string
+   * @throws InvalidArgumentException
    * @author BohwaZ <https://bohwaz.net/>
    */
   function strftime (string $format, $timestamp = null, ?string $locale = null) : string {
@@ -37,11 +39,11 @@
       } catch (Exception $e) {
         throw new InvalidArgumentException('$timestamp argument is neither a valid UNIX timestamp, a valid date-time string or a DateTime object.', 0, $e);
       }
+
+      $timestamp->setTimezone(new DateTimeZone(date_default_timezone_get()));
     }
 
-    $timestamp->setTimezone(new DateTimeZone(date_default_timezone_get()));
-
-    $locale = Locale::canonicalize($locale ?? setlocale(LC_TIME, '0'));
+    $locale = Locale::canonicalize($locale ?? (Locale::getDefault() ?? setlocale(LC_TIME, '0')));
 
     $intl_formats = [
       '%a' => 'ccc',	// An abbreviated textual representation of the day	Sun through Sat
@@ -171,13 +173,18 @@
 
       // Time and Date Stamps
       '%c' => $intl_formatter,
-      '%D' => 'm/d/Y',
+      '%D' => 'm/d/y', // %m/%d/%y
       '%F' => 'Y-m-d',
       '%s' => 'U',
       '%x' => $intl_formatter,
     ];
 
-    $out = preg_replace_callback('/(?<!%)%([_#-]?)([a-zA-Z])/', function ($match) use ($translation_table, $timestamp) {
+    // %% is matched as its own token, so that "%%%Y" becomes "%" followed by the year
+    $out = preg_replace_callback('/%%|%([_#-]?)([a-zA-Z])/', function ($match) use ($translation_table, $timestamp) {
+      if ($match[0] == '%%') {
+        return '%';
+      }
+
       $prefix = $match[1];
       $char = $match[2];
       $pattern = '%'.$char;
@@ -212,6 +219,5 @@
       return $result;
     }, $format);
 
-    $out = str_replace('%%', '%', $out);
     return $out;
   }
