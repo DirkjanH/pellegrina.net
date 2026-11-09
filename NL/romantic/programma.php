@@ -5,12 +5,12 @@ $filenaam = explode('/', str_replace('/var', '', dirname(__FILE__)));
 $filenaam[7] = basename(__FILE__, ".php");
 //	print_r($filenaam);	
 switch ($filenaam[6]) {
-  case 'romantic':
-    $cursus = 1;
-    break;
-  case 'baroque':
-    $cursus = 2;
-    break;
+    case 'romantic':
+        $cursus = 1;
+        break;
+    case 'baroque':
+        $cursus = 2;
+        break;
 }
 //	echo 'Cursus is: '.$cursus.'<br>';
 $taal = $filenaam[5];
@@ -54,10 +54,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-auto w3-main"> <?php
-                                            echo $navigatie;
-                                            echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
-                                            require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
-                                            ?> <div id="main"
+                                                echo $navigatie;
+                                                echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
+                                                require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
+                                                ?> <div id="main"
             class="programma-layout">
             <div class="programma-afbeelding"><img src="/Images/mendelssohn.jpg"
                     alt="Portret van Felix Mendelssohn Bartholdy">
@@ -66,7 +66,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h3>Het centrale werk: Mendelssohns Elias op. 70</h3>
                 <p>In het afsluitende concert voeren we het romantische
                     oratorium <em>Elias</em> van Mendelssohn uit met solisten,
-                    orkest en koor.</p>
+                    orkest en koor. Omdat het hele stuk te lang is om in deze
+                    cursus in te studeren, hebben we gekozen alleen het eerste
+                    deel uit te voeren. Dat duurt 65 à 70 minuten en is dus een
+                    volledig concertprogramma op zich. Ook qua verhaal kan het
+                    goed op zichzelf staan.</p>
                 <p>Felix Mendelssohn voltooide zijn grootse oratorium
                     <em>Elias</em> in 1846 voor het muziekfestival in
                     Birmingham. Het werk vertelt het dramatische levensverhaal
