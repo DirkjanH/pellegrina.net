@@ -5,11 +5,11 @@
 	"license": "proprietary",
 	"require": {
 		"phpmailer/phpmailer": "~7",
-		"pelago/emogrifier": "~8.3",
+		"pelago/emogrifier": "~8",
 		"kint-php/kint": "~6",
 		"mollie/mollie-api-php": "~3",
 		"chillerlan/php-qrcode": "~4.3",
-		"league/oauth2-google": "~5.0",
+		"league/oauth2-google": "~5",
 		"php81_bc/strftime": "~0.7"
 	}
 }
