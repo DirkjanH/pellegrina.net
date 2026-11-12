@@ -69,7 +69,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     ?> <div id="main">
             <!-- InstanceBeginEditable name="mainpage" -->
             <h2 class="begin">Frequently Asked Questions: Romantic course</h2>
-            <div class="w3-card-2 w3-padding"><B>How are chamber music ensembles
+            <div class="w3-card-2 w3-padding w3-margin-bottom"><B>How are chamber music ensembles
                     put together?</B> As soon as we know who is going to take
                 part in the project, which is usually by April, we make two sets
                 of chamber music ensembles for the morning program as every
@@ -78,12 +78,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 course, we cannot guarantee complete satisfaction. Every
                 participant may put one of these ensembles themselves. For the
                 other ensemble, let us know if you have any preferences.</div>
-            <div class="w3-card-2 w3-padding"><B>The evenings are free. Is there
+            <div class="w3-card-2 w3-padding w3-margin-bottom"><B>The evenings are free. Is there
                     time to play together? </B>Oh yes. The fanatics return to
                 the conservatoire after dinner to play in the numerous study
                 rooms. These 'night ensembles' are usually formed on the spot,
                 so don't forget to bring your favorite sheet music.</div>
-            <div class="w3-card-2 w3-padding"><B>How should I pay?</B> <em>La
+            <div class="w3-card-2 w3-padding w3-margin-bottom"><B>How should I pay?</B> <em>La
                     Pellegrina</em> offers two methods of payment. You may
                 either transfer your payment into account NL60 BUNQ 2177 4957 25
                 (BIC ASNB NL21) of <em>La Pellegrina</em>, Utrecht, the
@@ -91,7 +91,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 spot is also possible by mutual agreement. See the <a
                     href="praktisch.php" target="_self">Prices &amp; Practicals
                     page</a> for more information.</div>
-            <div class="w3-card-2 w3-padding"><strong>How to travel to České
+            <div class="w3-card-2 w3-padding w3-margin-bottom"><strong>How to travel to České
                     Budějovice?</strong> International trains now run again from
                 the Netherlands and Germany, to Linz (Austria) or Prague. From
                 both places, there are frequent trains to České Budějovice. It
@@ -99,11 +99,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 From České Budějovice railway station, it is an 800 meter walk
                 to the conservatoire. It is possible to have luggage collected
                 from the station.</div>
-            <div class="w3-card-2 w3-padding"><B>How can I provide for a
+            <div class="w3-card-2 w3-padding w3-margin-bottom"><B>How can I provide for a
                     cancellation insurance?</B> We advise you to carry a
                 cancellation insurance through your own bank or insurance agent.
             </div>
-            <div class="w3-card-2 w3-padding"><B>Is there any possibility of
+            <div class="w3-card-2 w3-padding w3-margin-bottom"><B>Is there any possibility of
                     travelling together? </B><I>La Pellegrina</I> only organizes
                 the project, not the journey. But you may be able to find your
                 travel partners as a list of participants will be available
