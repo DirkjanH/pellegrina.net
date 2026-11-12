@@ -25,6 +25,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <meta charset="utf-8">
     <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
+    <link rel="stylesheet" href="/css/faq.css" type="text/css">
     <!-- InstanceBeginEditable name="doctitle" -->
     <title>Vaak gestelde vragen: romantische cursus</title>
     <!-- InstanceEndEditable -->
@@ -68,7 +69,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     ?> <div id="main">
             <!-- InstanceBeginEditable name="mainpage" -->
             <h2 class="begin">Vaak gestelde vragen: romantische cursus</h2>
-            <div class="w3-card-2 w3-padding w3-margin-bottom"><b>Hoe worden de
+            <div class="w3-card-2 w3-padding faq-item"><b>Hoe worden de
                     kamermuziekensembles samengesteld?</b> Als de bezetting van
                 het project definitief is, meestal in de loop van april, dan
                 worden er twee sets van kamermuziekensembles voor het
@@ -78,18 +79,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 zelf samenstellen; voor het andere ensemble mogen wensen worden
                 doorgegeven. <i>La Pellegrina </i>streeft ernaar die te
                 honoreren, maar kan dat niet garanderen.</div>
-            <div class="w3-card-2 w3-padding w3-margin-bottom"><b>De avonden zijn vrij. Wordt er
+            <div class="w3-card-2 w3-padding faq-item"><b>De avonden zijn vrij. Wordt er
                     dan ook muziek gemaakt?</b> De echt fanatieke deelnemers
                 gaan na het eten terug naar het conservatorium om in de vele
                 repetitieruimtes te musiceren. Deze ensembles vormen zich
                 meestal ter plekke. Het is aan te raden om je eigen bladmuziek
                 mee te nemen.</div>
-            <div class="w3-card-2 w3-padding w3-margin-bottom"><b>Hoe kan ik betalen?</b> <i>La
+            <div class="w3-card-2 w3-padding faq-item"><b>Hoe kan ik betalen?</b> <i>La
                     Pellegrina</i> accepteert betalingen via rekening NL33 ASNB
                 0707 2500 72 (voor buitenlandse betalingen: BIC BUNQ NL2A)
                 t.n.v. La Pellegrina te Utrecht. Als dit niet praktisch is, is
                 betaling in contanten ter plekke in overleg ook mogelijk.</div>
-            <div class="w3-card-2 w3-padding w3-margin-bottom"><strong>Hoe wordt er gereisd naar
+            <div class="w3-card-2 w3-padding faq-item"><strong>Hoe wordt er gereisd naar
                     České Budějovice?</strong> Vanuit Nederland en Duitsland
                 gaan er inmiddels weer internationale treinen, naar Linz
                 (Oostenrijk) of Praag. Vanuit beide plaatsen gaan er frequente
@@ -98,11 +99,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 van České Budějovice is het 800 meter lopen naar het
                 conservatorium. Het is mogelijk om je bagage op te laten halen
                 bij het station.</div>
-            <div class="w3-card-2 w3-padding w3-margin-bottom"><b>Hoe kan ik een
+            <div class="w3-card-2 w3-padding faq-item"><b>Hoe kan ik een
                     annuleringsverzekering afsluiten?</b> Het is aan te raden
                 een annuleringsverzekering af te sluiten. Dit kan via de eigen
                 verzekeringsagent of bank.</div>
-            <div class="w3-card-2 w3-padding w3-margin-bottom"><b>Is het mogelijk om samen te
+            <div class="w3-card-2 w3-padding faq-item"><b>Is het mogelijk om samen te
                     reizen?</b>
                 <i>La Pellegrina</i> organiseert de reis niet. Maar om mensen
                 die graag samen willen reizen met elkaar in contact te brengen,
