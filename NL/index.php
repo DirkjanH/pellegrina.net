@@ -137,7 +137,8 @@ $jaar = 2027;
                 <p>Deze pagina geeft een overzicht van de cursussen in
                     <?php echo $jaar ?>. De barokcursus vindt plaats in het
                     voormalige klooster Nieuw Sion in de bossen van Salland bij
-                    Deventer. De cursus rond Mendelssohns Elias vindt plaats in
+                    Deventer. De cursus rond het eerste deel van Mendelssohns
+                    Elias vindt plaats in
                     Tsjechië, het meest muzikale land van Europa. Plaats van
                     handeling is het conservatorium van České Budějovice, 120 km
                     ten zuiden van Praag. </p>
@@ -168,7 +169,7 @@ $jaar = 2027;
             <div class="w3-half">
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3><a href="romantic/index.php"><span
-                                class="romantic">Mendelssohns Elias voor orkest,
+                                class="romantic">Mendelssohns Elias (1e deel) voor orkest,
                                 koor en solisten</span></a></h3>
                     <p>voor instrumentalisten en (koor)zangers, met kamermuziek
                         en kamerkoor</p>

@@ -61,7 +61,7 @@
 						</p>
 					</div>
 					<h2 class="romantic lijnboven">1. Mendelssohnovo oratorium
-						<i>Elias</i> pro orchestr, sbor a sólisty
+						<i>Elias</i> (1. část) pro orchestr, sbor a sólisty
 					</h2>
 					<h3 class="romantic plaats">22. července - 1. srpna v
 						Českých Budějovicích, Česká republika</h3>
@@ -75,9 +75,9 @@
 							Nováček (klavír), Mitchell Sandler (zpěv), Rudolf
 							Sternadel (housle a viola) a další </li>
 						<li>Ústřední dílo pro všechny: Mendelssohnovo oratorium
-							<i>Elias</i> op. 70
+							<i>Elias</i> op. 70 (1. část)
 						</li>
-						<li>Sbor: kromě oratoria <i>Elias</i> s orchestrem také
+						<li>Sbor: kromě 1. části oratoria <i>Elias</i> s orchestrem také
 							skladby komorního sborového repertoáru, a cappella a
 							s klavírem</li>
 						<li>Instrumentalisté budou hrát každý ve dvou předem

@@ -83,9 +83,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>Everyone plays in two pre-formed chamber music ensembles
         </li>
         <li>Central work for everyone: Mendelssohn's oratorio
-          <em>Elijah</em> op. 70
+          <em>Elijah</em> op. 70 (Part I)
         </li>
-        <li>Choir: in addition to the <em>Elijah</em> with orchestra,
+        <li>Choir: in addition to Part I of <em>Elijah</em> with orchestra,
           the choir will also work on chamber choir repertoire, a
           cappella and with piano</li>
         <li>At the Conservatoire of České Budějovice, South Bohemia,

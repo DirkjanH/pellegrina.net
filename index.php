@@ -127,7 +127,7 @@ function getisp($ip = '')
                         <p>Twee zomercursussen voor gevorderde amateurmusici
                             en professionals.</p>
                         <ul>
-                            <li><strong>Mendelssohns Elias</strong>
+                            <li><strong>Mendelssohns Elias (1e deel)</strong>
                                 <span>22 juli - 1 augustus 2027</span></li>
                             <li><strong>Napolitaanse Barok</strong>
                                 <span>8 - 14 augustus 2027</span></li>
@@ -184,7 +184,7 @@ function getisp($ip = '')
                         <p>Two summer schools for accomplished amateur
                             musicians and professionals.</p>
                         <ul>
-                            <li><strong>Mendelssohn's Elijah</strong>
+                            <li><strong>Mendelssohn's Elijah (Part I)</strong>
                                 <span>22 July - 1 August 2027</span></li>
                             <li><strong>Neapolitan Baroque in 415 Hz</strong>
                                 <span>8 - 14 August 2027</span></li>

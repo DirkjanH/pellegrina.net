@@ -73,8 +73,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li>Kamermuziek: iedereen speelt in twee, van tevoren gevormde
                     ensembles</li>
                 <li>Centraal werk voor iedereen: Mendelssohns oratorium
-                    <em>Elias</em> op. 70</li>
-                <li>Koor: naast de <em>Elias</em> met orkest werkt het koor ook
+                    <em>Elias</em> op. 70 (1e deel)</li>
+                <li>Koor: naast het eerste deel van <em>Elias</em> met orkest werkt het koor ook
                     aan kamerkoorrepertoire, a capella en met piano</li>
                 <li>In het conservatorium van České Budějovice, Zuid-Bohemen,
                     Tsjechië</li>

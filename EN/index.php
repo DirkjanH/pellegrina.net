@@ -121,7 +121,7 @@ $jaar = 2027;
                 <p>This page gives an overview of the courses in
                     <?php echo $jaar ?>. The baroque course takes place in the
                     former monastery Nieuw Sion in the woods of Salland near
-                    Deventer. The course around Mendelssohn's Elijah will take place
+                    Deventer. The course around Part I of Mendelssohn's Elijah will take place
                     in the Czech Republic, Europe's most musical country. The
                     venue is the conservatoire of České Budějovice, 120 km south
                     of Prague.</p>
@@ -155,7 +155,7 @@ $jaar = 2027;
             <div class="w3-half">
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3><a href="romantic/index.php"><span
-                                class="romantic">Mendelssohn's Elijah for
+                                class="romantic">Mendelssohn's Elijah (Part I) for
                                 orchestra, choir and soloists</span></a></h3>
                     <p>for instrumentalists and (choir) singers, with chamber
                         music and chamber choir</p>

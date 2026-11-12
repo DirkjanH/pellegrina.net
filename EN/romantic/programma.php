@@ -23,7 +23,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <title>Mendelssohn's oratorio Elijah</title>
+    <title>Mendelssohn's oratorio Elijah (Part I)</title>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <script>
@@ -63,15 +63,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="Portrait of Felix Mendelssohn Bartholdy">
             </div>
             <div class="programma-tekst">
-                <h1>The central work: Mendelssohn's Elijah, Op. 70</h1>
-                <p>In the final concert, we will perform Mendelssohn's Romantic
-                    oratorio <em>Elijah</em>, with soloists, orchestra and
-                    choir. Since the complete work is too long to prepare during
-                    this course, we have decided to perform only the first part.
-                    This lasts approximately 65 to 70 minutes and therefore
+                <h1>The central work: Mendelssohn's Elijah, Op. 70 (Part I)</h1>
+                <p>In the final concert, we will perform only Part I of
+                    Mendelssohn's Romantic oratorio <em>Elijah</em>, with
+                    soloists, orchestra and choir. The complete work is too long
+                    to prepare during this course. Part I lasts approximately
+                    65 to 70 minutes and therefore
                     makes a complete concert programme in its own right. The
                     story, too, forms a satisfying whole. </p>
-                <p>Mendelssohn's <em>Elijah</em> reflects his admiration for
+                <p>Part I of Mendelssohn's <em>Elijah</em> reflects his admiration for
                     Bach and Handel, while at the same time giving the oratorio
                     a distinctly Romantic dramatic character. The choir plays an
                     important role: it represents the people of Israel, the

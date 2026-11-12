@@ -23,7 +23,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <title>Dvořáks cantate Het Bruidshemd</title>
+    <title>Mendelssohns oratorium Elias (1e deel)</title>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <script>
@@ -63,15 +63,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="Portret van Felix Mendelssohn Bartholdy">
             </div>
             <div class="programma-tekst">
-                <h1>Het centrale werk: Mendelssohns Elias op. 70</h1>
-                <p>In het afsluitende concert voeren we het romantische
-                    oratorium <em>Elias</em> van Mendelssohn uit met solisten,
-                    orkest en koor. Omdat het hele stuk te lang is om in deze
-                    cursus in te studeren, hebben we gekozen alleen het eerste
-                    deel uit te voeren. Dat duurt 65 à 70 minuten en is dus een
+                <h1>Het centrale werk: Mendelssohns Elias op. 70 (1e deel)</h1>
+                <p>In het afsluitende concert voeren we alleen het eerste deel
+                    van het romantische oratorium <em>Elias</em> van Mendelssohn
+                    uit met solisten, orkest en koor. Het hele werk is te lang
+                    om tijdens deze cursus in te studeren. Het eerste deel
+                    duurt 65 à 70 minuten en is dus een
                     volledig concertprogramma op zich. Ook qua verhaal kan het
                     goed op zichzelf staan.</p>
-                <p> Mendelssohn laat in <em>Elias</em> zijn bewondering voor
+                <p> In het eerste deel van <em>Elias</em> laat Mendelssohn zijn bewondering voor
                     Bach en Händel horen, maar geeft het oratorium
                     tegelijkertijd een uitgesproken romantische dramatiek. Het
                     koor speelt een belangrijke rol: het verbeeldt het volk
