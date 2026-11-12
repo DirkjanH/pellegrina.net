@@ -170,8 +170,9 @@ td.lijn {
 
 .landing-header {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	gap: 28px;
 	padding-bottom: 28px;
 	border-bottom: 1px solid #e6e1d8;
@@ -179,8 +180,9 @@ td.lijn {
 
 .landing-logo {
 	display: block;
-	width: min(45%, 420px);
+	width: min(100%, 600px);
 	height: auto;
+	background-color: #fff;
 }
 
 .registration-notice {
@@ -193,11 +195,36 @@ td.lijn {
 	color: #6b5126;
 	font-size: 15px;
 	line-height: 1.4;
-	text-align: right;
+	text-align: center;
 }
 
 .landing-page #bannerteksten {
 	display: grid;
+}
+
+.landing-page #bannerteksten span {
+	grid-area: 1 / 1;
+	animation: registration-language 8s linear infinite;
+}
+
+.landing-page #bannerteksten span + span {
+	animation-delay: -4s;
+}
+
+@keyframes registration-language {
+	0%, 40%, 100% {
+		opacity: 1;
+	}
+
+	50%, 90% {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.landing-page #bannerteksten span {
+		animation-timing-function: steps(1, end);
+	}
 }
 
 @media (min-width: 993px) {
@@ -211,6 +238,12 @@ td.lijn {
 		border-radius: 0;
 		line-height: 1.5;
 		text-align: center;
+	}
+}
+
+@media (min-width: 993px) and (max-width: 1279px) {
+	.landing-header {
+		padding-top: 180px;
 	}
 }
 
@@ -406,10 +439,6 @@ td.lijn {
 		flex-direction: column;
 		gap: 20px;
 		padding-bottom: 24px;
-	}
-
-	.landing-logo {
-		width: min(100%, 380px);
 	}
 
 	.registration-notice {
