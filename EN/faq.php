@@ -1,13 +1,11 @@
 <!doctype html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <title>Naamloos document</title>
 </head>
-
 <body>
     <h2 class="begin">Frequently Asked Questions</h2>
     <div class="w3-card-2 w3-padding"><B>How are chamber music ensembles put
@@ -20,10 +18,10 @@
         themselves. For the other ensemble, let us know if you have any
         preferences. </div>
     <div class="w3-card-2 w3-padding"><B>The evenings are free. Is there time to
-            play together? </B>Oh yes. The fanatics return to the monastery or
-        the conservatoire after dinner to play in the numerous study rooms.
-        These 'night ensembles' are usually formed on the spot, so don't forget
-        to bring your favorite sheet music. </div>
+            play together? </B>Oh yes. The fanatics return to the conservatoire
+        after dinner to play in the numerous study rooms. These 'night
+        ensembles' are usually formed on the spot, so don't forget to bring your
+        favorite sheet music. </div>
     <div class="w3-card-2 w3-padding"><B>How should I pay?</B> <em>La
             Pellegrina</em> offers two methods of payment. You may either
         transfer your payment into account NL60 BUNQ 2177 4957 25 (BIC ASNB
@@ -46,8 +44,6 @@
         the journey. But you may be able to find your travel partners as a list
         of participants will be available after the decision about
         participation,
-        <strong><?php echo $cursusdata['beslisdatum']; ?></strong>.
-    </div>
+        <strong><?php echo $cursusdata['beslisdatum']; ?></strong>. </div>
 </body>
-
 </html>
