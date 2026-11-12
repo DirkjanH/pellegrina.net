@@ -29,10 +29,10 @@ function getisp($ip = '')
     return $myisp;
 } ?>
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>La Pellegrina Music Summer Schools</title>
     <meta name="Description"
         content="Musical Summer Schools for advanced musical amateurs, chamber music and orchestra">
@@ -58,109 +58,9 @@ function getisp($ip = '')
         content="https://pellegrina.net/Images/Logos/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
+    <link href="/css/banner.css" rel="stylesheet" type="text/css">
     <link href="/css/openingspagina.css" rel="stylesheet" type="text/css">
-    <link href="css/banner.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        <!--
-        body,
-        td,
-        th,
-        p {
-            background-color: #CCC;
-            text-align: center;
-            color: #000000;
-            font: 700 normal 24px;
-            font-family: 'Alegreya Sans', Verdana, sans-serif;
-        }
-
-        h1 {
-            font-size: 18px;
-            color: #35191C;
-            margin-top: 2.0em;
-        }
-
-        h2 {
-            color: #901324;
-            text-align: left;
-        }
-
-        h3 {
-            color: #739D44;
-            font-size: 22px;
-        }
-
-        h4 {
-            color: #07A900;
-            font-size: 18px;
-        }
-
-        h5 {
-            font-size: 110%;
-            color: #569442;
-            text-align: center;
-        }
-
-        h6 {
-            font-size: 110%;
-            color: black;
-            margin-bottom: -10px;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        a:link,
-        a:visited {
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        img {
-            border-style: none;
-        }
-
-        a:hover,
-        a:active {
-            text-decoration: none;
-            color: #990033;
-            font-weight: bolder;
-        }
-
-        div#home {
-            border: thin;
-        }
-
-        div#carroussel {
-            display: flex;
-            justify-content: center;
-        }
-
-        div#envelop {
-            position: relative;
-            clear: both !important;
-            margin: 0px;
-            border-style: none;
-        }
-
-        img.mySlides {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-            max-width: 640px;
-            width: 100%;
-        }
-
-        #teller {
-            font: italic 50%;
-            color: #999999;
-            text-align: center;
-        }
-
-        ol {
-            padding: 0px;
-        }
-        -->
-    </style>
+    <script src="/javascript/slideshow.js" defer></script>
     <meta name="google-site-verification"
         content="BOrB5tEMjKF9O0X8Ow1Gjl2z7Q-Su6aCqce0dbJZeVE" />
     <meta name="verify-v1"
@@ -194,47 +94,19 @@ function getisp($ip = '')
     <!-- End Facebook Pixel Code -->
 </head>
 
-<body>
-    <div id="inhoud" class="w3-content">
-        <div id="envelop" class="w3-hide-small w3-hide-medium">
+<body class="landing-page">
+    <main id="inhoud" class="landing-shell">
+        <header class="landing-header">
+            <img class="landing-logo" src="Images/Logos/LP_nieuw.png"
+                alt="La Pellegrina" width="600" height="112">
             <div id="banner">
-                <div id="bannerteksten" class="bannergeel"
-                    style="font-size: 100%;">
-                    <div class="">Inschrijving 2027 start 1 december!</div>
-                    <div class="">Registration for 2027 starts December 1!</div>
-                </div>
-                <div id="" class="bannergroen onzichtbaar">
-                    <div class="onzichtbaar">Inschrijving voor zomer 2026 is
-                        gestart!</div>
-                    <div class="onzichtbaar">Registration for summer 2026 has
-                        started! </div>
-                </div>
-                <div id="" class="banneroranje">
-                    <div class="onzichtbaar">Nog enkele plaatsen beschikbaar...
-                    </div>
-                    <div class="onzichtbaar">A few last places available...
-                    </div>
-                </div>
-                <div id="" class="bannerrood onzichtbaar">
-                    <div class="onzichtbaar">De cursussen in 2026 zijn helemaal
-                        vol</div>
-                    <div class="onzichtbaar">The 2026 courses are fully booked
-                    </div>
-                </div>
-                <div id="" class="onzichtbaar">
-                    <div class="onzichtbaar">Wie zich vóór 1 maart aanmeldt,
-                        krijgt € 50 korting</div>
-                    <div class="onzichtbaar">Who registers before 1 March,
-                        receives a EUR 50 red.</div>
+                <div id="bannerteksten" class="registration-notice bannergeel">
+                    <span lang="nl">Inschrijving <?php echo $jaar ?> start 1 december!</span>
+                    <span>Registration for <?php echo $jaar ?> starts December 1!</span>
                 </div>
             </div>
-        </div>
-        <div id="home"
-            class="w3-container w3-card-4 w3-margin-top w3-white w3-content w3-padding"
-            style="max-width:1400px">
-            <div class="w3-center w3-container"><img
-                    src="Images/Logos/LP_nieuw.png" alt="La Pellegrina"
-                    style="max-width:600px;width:100%"></div>
+        </header>
+        <div id="home">
             <div id="fb-root"></div>
             <script>
                 (function(d, s, id) {
@@ -246,31 +118,28 @@ function getisp($ip = '')
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
             </script>
-            <div class="w3-card-8">
-                <div class="w3-row-padding w3-light-grey">
-                    <div
-                        class="w3-card-4 w3-white w3-margin-top w3-quarter w3-padding">
-                        <h1>
-                            <a href="NL" target="_self"><img
-                                    src="Images/Logos/Vlag_NL.jpg"
-                                    alt="Nederlands" width="34" height="24"
-                                    border="0" align="absmiddle">Cursusprogramma
-                                <?php echo $jaar ?> </a>
-                        </h1>
-                        <p class="w3-margin-top"><a href="NL"
-                                target="_self">Twee zomercursussen voor
-                                gevorderde amateurmusici en professionals:</a>
-                        </p>
-                        <ol><a href="NL" target="_self">
-                                <li class="klein"><b>Mendelssohns Elias</i></b>
-                                    - 22 juli - 1 augustus 2027</li>
-                                <li class="klein"><b>Napolitaanse Barok</b> - 8
-                                    - 14 augustus 2027</li>
-                            </a></ol>
-                    </div></a>
-                    <div id="carroussel" class="w3-panel w3-section w3-half">
+            <div class="landing-grid">
+                    <a class="course-card course-card-nl" href="NL" lang="nl">
+                        <span class="course-language"><img
+                                src="Images/Logos/Vlag_NL.jpg" alt=""
+                                width="28" height="20">Nederlands</span>
+                        <h2>Zomercursussen <?php echo $jaar ?></h2>
+                        <p>Twee zomercursussen voor gevorderde amateurmusici
+                            en professionals.</p>
+                        <ul>
+                            <li><strong>Mendelssohns Elias</strong>
+                                <span>22 juli - 1 augustus 2027</span></li>
+                            <li><strong>Napolitaanse Barok</strong>
+                                <span>8 - 14 augustus 2027</span></li>
+                        </ul>
+                        <span class="course-cta">Bekijk de cursussen <span aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <div id="carroussel"
+                        role="region" aria-roledescription="carousel"
+                        aria-label="La Pellegrina in beeld / in pictures">
+                        <div class="slideshow-images">
                         <img src="Images/slideshow/dvorak_tutors.jpg" alt=""
-                            class="mySlides" />
+                            class="mySlides is-active" fetchpriority="high" />
                         <img src="Images/slideshow/oboeband.jpg" alt=""
                             class="mySlides" />
                         <img src="Images/slideshow/blazers_buiten.jpg" alt=""
@@ -295,172 +164,61 @@ function getisp($ip = '')
                             class="mySlides" />
                         <img src="Images/slideshow/zingende_mannen.jpg" alt=""
                             class="mySlides" />
-                        <script>
-                            var myIndex = 0;
-                            carousel();
-
-                            function carousel() {
-                                var i;
-                                var x = document.getElementsByClassName("mySlides");
-                                for (i = 0; i < x.length; i++) {
-                                    x[i].style.display = "none";
-                                }
-                                myIndex++;
-                                if (myIndex > x.length) {
-                                    myIndex = 1
-                                }
-                                x[myIndex - 1].style.display = "block";
-                                setTimeout(carousel, 3000);
-                            }
-                        </script>
+                        </div>
+                        <div class="slideshow-controls" hidden>
+                            <button type="button" class="slideshow-previous"
+                                aria-label="Vorige foto / Previous photo">&#10094;</button>
+                            <button type="button" class="slideshow-toggle"
+                                aria-pressed="false" aria-label="Pauze / Pause"
+                                title="Pauze / Pause"><span
+                                    class="slideshow-toggle-icon" aria-hidden="true"></span></button>
+                            <button type="button" class="slideshow-next"
+                                aria-label="Volgende foto / Next photo">&#10095;</button>
+                        </div>
                     </div>
-                    <div
-                        class="w3-card-4 w3-section w3-white w3-margin-top w3-quarter w3-padding">
-                        <h1><a href="EN" target="_self"><img
-                                    src="Images/Logos/Vlag_UK.jpg" alt="English"
-                                    width="34" height="24" border="0"
-                                    align="absmiddle">Course Programme
-                                <?php echo $jaar ?></a></h1>
-                        <p class="w3-margin-top"><a href="EN" target="_self">Two
-                                summer schools for accomplished amateur
-                                musicians and professionals:</a></p>
-                        <ol><a href="EN" target="_self">
-                                <li class="klein"><b>Mendelssohns Elias</b> - 22
-                                    July - 1 August 2027</li>
-                                <li class="klein"><b>Neapolitan Baroque in 415
-                                        Hz</b> - 8 - 14 August 2027</li>
-                            </a></ol>
-                    </div>
-                </div>
+                    <a class="course-card course-card-en" href="EN">
+                        <span class="course-language"><img
+                                src="Images/Logos/Vlag_UK.jpg" alt=""
+                                width="28" height="20">English</span>
+                        <h2>Summer Schools <?php echo $jaar ?></h2>
+                        <p>Two summer schools for accomplished amateur
+                            musicians and professionals.</p>
+                        <ul>
+                            <li><strong>Mendelssohn's Elijah</strong>
+                                <span>22 July - 1 August 2027</span></li>
+                            <li><strong>Neapolitan Baroque in 415 Hz</strong>
+                                <span>8 - 14 August 2027</span></li>
+                        </ul>
+                        <span class="course-cta">Explore the courses <span aria-hidden="true">&rarr;</span></span>
+                    </a>
             </div>
-            <div class="w3-section w3-white"><strong><a href="japan.php"><img
-                            src="Images/Logos/Vlag_Japan.jpg" alt="Japan"
-                            width="34" height="24"
-                            align="baseline">&nbsp;コース案内(概要</a>)
-                </strong>&nbsp;|&nbsp;&nbsp;&nbsp;<a href="CZ_info.php"><img
-                        src="Images/Logos/CZ-vlag.jpg" width="34" height="23"
-                        alt="" />&nbsp;Čeští účastníci vítáni</a></div>
-            <p class="w3-center w3-panel">This program has been made possible,
-                in part, with support from <br>
+            <nav class="other-languages" aria-label="More languages">
+                <a href="japan.php" lang="ja"><img
+                        src="Images/Logos/Vlag_Japan.jpg" alt=""
+                        width="28" height="20">コース案内（概要）</a>
+                <a href="CZ_info.php" lang="cs"><img
+                        src="Images/Logos/CZ-vlag.jpg" width="28" height="20"
+                        alt="">Čeští účastníci vítáni</a>
+            </nav>
+            <footer class="landing-footer">
+            <div class="landing-support">
+                <p>This program has been made possible, in part, with support from</p>
                 <a href="http://www.acmp.net" target="_blank"><img
                         src="/Images/Logos/ACMP_CMYK.jpg" width="200"
-                        height="104" alt="" /></a>
-            </p><a
+                        height="104" alt="ACMP" /></a>
+            </div>
+            <a class="landing-facebook"
                 href="http://www.facebook.com/pages/La-Pellegrina/443675859011335"
                 title="La Pellegrina on Facebook" target="_blank"><img
                     src="/Images/Logos/facebook_logo.png" alt="Facebook"
-                    width="25" height="25" class="geenlijn" /></a><br>
+                    width="22" height="22" />La Pellegrina on Facebook</a>
             <div class="fb-like"
                 data-href="http://www.facebook.com/pages/La-Pellegrina/443675859011335?ref=hl"
                 data-send="true" data-layout="box_count" data-width="450"
                 data-show-faces="true" data-font="verdana"></div>
-            <script src="https://code.jquery.com/jquery-latest.js"></script>
-            <script type="text/javascript">
-                $(window).load(function() {
-                    var pages = $("div#bannerteksten div"),
-                        current = 0;
-                    var currentPage, nextPage;
-                    var timeoutID;
-                    var handler = function() {
-                        currentPage = pages.eq(current);
-                        if (current >= pages.length - 1) current = 0;
-                        else current = current + 1;
-                        nextPage = pages.eq(current);
-                        currentPage.fadeOut('quick', function() {
-                            nextPage.fadeIn('quick',
-                                function() {
-                                    nextPage.css("opacity",
-                                        1);
-                                    currentPage.hide();
-                                    currentPage.css(
-                                        "opacity", 0);
-                                    $('div.banner div')
-                                        .bind('', handler);
-                                });
-                        });
-                        timeoutID = setTimeout(function() {
-                            handler();
-                        }, 4000);
-                    }
-                    timeoutID = setTimeout(function() {
-                        handler();
-                    }, 0);
-                });
-            </script>
-            <script>
-                $(window).load(function() {
-                    var pages = $('#container li'),
-                        current = 0;
-                    var currentPage, nextPage;
-                    var timeoutID;
-                    var buttonClicked = 0;
-                    var handler1 = function() {
-                        buttonClicked = 1;
-                        $('#container .button').unbind('click');
-                        currentPage = pages.eq(current);
-                        if ($(this).hasClass('prevButton')) {
-                            if (current <= 0) current = pages.length -
-                                1;
-                            else current = current - 1;
-                        } else {
-                            if (current >= pages.length - 1) current =
-                                0;
-                            else current = current + 1;
-                        }
-                        nextPage = pages.eq(current);
-                        currentPage.fadeTo('slow', 0.3, function() {
-                            nextPage.fadeIn('slow', function() {
-                                nextPage.css("opacity",
-                                    1);
-                                currentPage.hide();
-                                currentPage.css(
-                                    "opacity", 1);
-                                $('#container .button')
-                                    .bind('click',
-                                        handler1);
-                            });
-                        });
-                    }
-                    var handler2 = function() {
-                        if (buttonClicked == 0) {
-                            $('#container .button').unbind('click');
-                            currentPage = pages.eq(current);
-                            if (current >= pages.length - 1) current =
-                                0;
-                            else current = current + 1;
-                            nextPage = pages.eq(current);
-                            currentPage.fadeTo('slow', 0.5, function() {
-                                nextPage.fadeIn('slow',
-                                    function() {
-                                        nextPage.css(
-                                            "opacity", 1
-                                        );
-                                        currentPage.hide();
-                                        currentPage.css(
-                                            "opacity", 1
-                                        );
-                                        $('#container .button')
-                                            .bind('click',
-                                                handler1);
-                                    });
-                            });
-                            timeoutID = setTimeout(function() {
-                                handler2();
-                            }, 5000);
-                        }
-                    }
-                    $('#container .button').click(function() {
-                        clearTimeout(timeoutID);
-                        handler1();
-                    });
-                    timeoutID = setTimeout(function() {
-                        handler2();
-                    }, 3500);
-                });
-            </script>
+            </footer>
         </div>
-    </div>
-    </div>
+    </main>
     <!-- begin olark code -->
     <script data-cfasync="false" type='text/javascript'>
         /*<![CDATA[*/
