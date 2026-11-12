@@ -71,8 +71,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     65 to 70 minutes and therefore
                     makes a complete concert programme in its own right. The
                     story, too, forms a satisfying whole. </p>
-                <p>Part I of Mendelssohn's <em>Elijah</em> reflects his admiration for
-                    Bach and Handel, while at the same time giving the oratorio
+                <p>Part I of Mendelssohn's <em>Elijah</em> reflects his admiration
+                    for Bach and Handel, while at the same time giving the oratorio
                     a distinctly Romantic dramatic character. The choir plays an
                     important role: it represents the people of Israel, the
                     angels and the bystanders. The contrasts between the

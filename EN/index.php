@@ -4,7 +4,6 @@ $jaar = 2027;
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <title>La Pellegrina&nbsp; <?php echo $jaar ?> </title>
     <meta charset="utf-8">
@@ -13,19 +12,19 @@ $jaar = 2027;
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <script type="text/javascript">
-        function klapdiensten(id) {
-            if (document.getElementById(id)) {
-                var cont = document.getElementById(id).style;
-                if (cont.display == "block") {
-                    cont.display = "none";
-                } else {
-                    cont.display = "block";
-                }
-                return false;
+    function klapdiensten(id) {
+        if (document.getElementById(id)) {
+            var cont = document.getElementById(id).style;
+            if (cont.display == "block") {
+                cont.display = "none";
             } else {
-                return true;
+                cont.display = "block";
             }
+            return false;
+        } else {
+            return true;
         }
+    }
     </script>
     <link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <link href="/css/openingspagina.css" rel="stylesheet" type="text/css">
@@ -39,43 +38,42 @@ $jaar = 2027;
 <![endif]-->
     <!-- Facebook Pixel Code -->
     <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                    arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '537749209897328');
-        fbq('track', 'PageView');
+    ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '537749209897328');
+    fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
 </head>
-
 <body>
     <div id="fb-root"></div>
     <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
     </script>
     <div id="inhoud">
         <div id="envelop" class="w3-hide-small w3-hide-medium">
@@ -121,10 +119,10 @@ $jaar = 2027;
                 <p>This page gives an overview of the courses in
                     <?php echo $jaar ?>. The baroque course takes place in the
                     former monastery Nieuw Sion in the woods of Salland near
-                    Deventer. The course around Part I of Mendelssohn's Elijah will take place
-                    in the Czech Republic, Europe's most musical country. The
-                    venue is the conservatoire of České Budějovice, 120 km south
-                    of Prague.</p>
+                    Deventer. The course around Mendelssohn's Elijah will take
+                    place in the Czech Republic, Europe's most musical country.
+                    The venue is the conservatoire of České Budějovice, 120 km
+                    south of Prague.</p>
                 <p>Click on the course titles for more information. <b>From 1
                         December, all information will be complete and
                         registration will be open</b>.</p>
@@ -155,8 +153,9 @@ $jaar = 2027;
             <div class="w3-half">
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3><a href="romantic/index.php"><span
-                                class="romantic">Mendelssohn's Elijah (Part I) for
-                                orchestra, choir and soloists</span></a></h3>
+                                class="romantic">Mendelssohn's Elijah (Part I)
+                                for orchestra, choir and soloists</span></a>
+                    </h3>
                     <p>for instrumentalists and (choir) singers, with chamber
                         music and chamber choir</p>
                     <ul>
@@ -207,109 +206,109 @@ $jaar = 2027;
             </div>
             <!-- begin olark code -->
             <script data-cfasync="false" type='text/javascript'>
-                /*<![CDATA[*/
-                window.olark || (function(c) {
-                    var f = window,
-                        d = document,
-                        l = f.location.protocol == "https:" ? "https:" :
-                        "http:",
-                        z = c.name,
-                        r = "load";
-                    var nt = function() {
-                        f[z] = function() {
-                            (a.s = a.s || []).push(arguments)
-                        };
-                        var a = f[z]._ = {},
-                            q = c.methods.length;
-                        while (q--) {
-                            (function(n) {
-                                f[z][n] = function() {
-                                    f[z]("call", n, arguments)
-                                }
-                            })(c.methods[q])
-                        }
-                        a.l = c.loader;
-                        a.i = nt;
-                        a.p = {
-                            0: +new Date
-                        };
-                        a.P = function(u) {
-                            a.p[u] = new Date - a.p[0]
-                        };
-
-                        function s() {
-                            a.P(r);
-                            f[z](r)
-                        }
-                        f.addEventListener ? f.addEventListener(r, s,
-                            false) : f.attachEvent("on" + r, s);
-                        var ld = function() {
-                            function p(hd) {
-                                hd = "head";
-                                return ["<", hd, "></", hd, "><", i,
-                                    ' onl' + 'oad="var d=', g,
-                                    ";d.getElementsByTagName('head')[0].",
-                                    j, "(d.", h, "('script')).",
-                                    k, "='", l, "//", a.l, "'",
-                                    '"', "></", i, ">"
-                                ].join("")
-                            }
-                            var i = "body",
-                                m = d[i];
-                            if (!m) {
-                                return setTimeout(ld, 100)
-                            }
-                            a.P(1);
-                            var j = "appendChild",
-                                h = "createElement",
-                                k = "src",
-                                n = d[h]("div"),
-                                v = n[j](d[h](z)),
-                                b = d[h]("iframe"),
-                                g = "document",
-                                e = "domain",
-                                o;
-                            n.style.display = "none";
-                            m.insertBefore(n, m.firstChild).id = z;
-                            b.frameBorder = "0";
-                            b.id = z + "-loader";
-                            if (/MSIE[ ]+6/.test(navigator
-                                    .userAgent)) {
-                                b.src = "javascript:false"
-                            }
-                            b.allowTransparency = "true";
-                            v[j](b);
-                            try {
-                                b.contentWindow[g].open()
-                            } catch (w) {
-                                c[e] = d[e];
-                                o = "javascript:var d=" + g +
-                                    ".open();d.domain='" + d
-                                    .domain + "';";
-                                b[k] = o + "void(0);"
-                            }
-                            try {
-                                var t = b.contentWindow[g];
-                                t.write(p());
-                                t.close()
-                            } catch (x) {
-                                b[k] = o + 'd.write("' + p()
-                                    .replace(/"/g, String
-                                        .fromCharCode(92) + '"') +
-                                    '");d.close();'
-                            }
-                            a.P(2)
-                        };
-                        ld()
+            /*<![CDATA[*/
+            window.olark || (function(c) {
+                var f = window,
+                    d = document,
+                    l = f.location.protocol == "https:" ? "https:" :
+                    "http:",
+                    z = c.name,
+                    r = "load";
+                var nt = function() {
+                    f[z] = function() {
+                        (a.s = a.s || []).push(arguments)
                     };
-                    nt()
-                })({
-                    loader: "static.olark.com/jsclient/loader0.js",
-                    name: "olark",
-                    methods: ["configure", "extend", "declare", "identify"]
-                });
-                /* custom configuration goes here (www.olark.com/documentation) */
-                olark.identify('5575-684-10-1480'); /*]]>*/
+                    var a = f[z]._ = {},
+                        q = c.methods.length;
+                    while (q--) {
+                        (function(n) {
+                            f[z][n] = function() {
+                                f[z]("call", n, arguments)
+                            }
+                        })(c.methods[q])
+                    }
+                    a.l = c.loader;
+                    a.i = nt;
+                    a.p = {
+                        0: +new Date
+                    };
+                    a.P = function(u) {
+                        a.p[u] = new Date - a.p[0]
+                    };
+
+                    function s() {
+                        a.P(r);
+                        f[z](r)
+                    }
+                    f.addEventListener ? f.addEventListener(r, s,
+                        false) : f.attachEvent("on" + r, s);
+                    var ld = function() {
+                        function p(hd) {
+                            hd = "head";
+                            return ["<", hd, "></", hd, "><", i,
+                                ' onl' + 'oad="var d=', g,
+                                ";d.getElementsByTagName('head')[0].",
+                                j, "(d.", h, "('script')).",
+                                k, "='", l, "//", a.l, "'",
+                                '"', "></", i, ">"
+                            ].join("")
+                        }
+                        var i = "body",
+                            m = d[i];
+                        if (!m) {
+                            return setTimeout(ld, 100)
+                        }
+                        a.P(1);
+                        var j = "appendChild",
+                            h = "createElement",
+                            k = "src",
+                            n = d[h]("div"),
+                            v = n[j](d[h](z)),
+                            b = d[h]("iframe"),
+                            g = "document",
+                            e = "domain",
+                            o;
+                        n.style.display = "none";
+                        m.insertBefore(n, m.firstChild).id = z;
+                        b.frameBorder = "0";
+                        b.id = z + "-loader";
+                        if (/MSIE[ ]+6/.test(navigator
+                                .userAgent)) {
+                            b.src = "javascript:false"
+                        }
+                        b.allowTransparency = "true";
+                        v[j](b);
+                        try {
+                            b.contentWindow[g].open()
+                        } catch (w) {
+                            c[e] = d[e];
+                            o = "javascript:var d=" + g +
+                                ".open();d.domain='" + d
+                                .domain + "';";
+                            b[k] = o + "void(0);"
+                        }
+                        try {
+                            var t = b.contentWindow[g];
+                            t.write(p());
+                            t.close()
+                        } catch (x) {
+                            b[k] = o + 'd.write("' + p()
+                                .replace(/"/g, String
+                                    .fromCharCode(92) + '"') +
+                                '");d.close();'
+                        }
+                        a.P(2)
+                    };
+                    ld()
+                };
+                nt()
+            })({
+                loader: "static.olark.com/jsclient/loader0.js",
+                name: "olark",
+                methods: ["configure", "extend", "declare", "identify"]
+            });
+            /* custom configuration goes here (www.olark.com/documentation) */
+            olark.identify('5575-684-10-1480'); /*]]>*/
             </script>
             <noscript>
                 <p><a href="https://www.olark.com/site/5575-684-10-1480/contact"
@@ -323,5 +322,4 @@ $jaar = 2027;
             require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
             ?>
 </body>
-
 </html>

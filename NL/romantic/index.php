@@ -74,8 +74,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     ensembles</li>
                 <li>Centraal werk voor iedereen: Mendelssohns oratorium
                     <em>Elias</em> op. 70 (1e deel)</li>
-                <li>Koor: naast het eerste deel van <em>Elias</em> met orkest werkt het koor ook
-                    aan kamerkoorrepertoire, a capella en met piano</li>
+                <li>Koor: naast het eerste deel van <em>Elias</em> met orkest
+                    werkt het koor ook aan kamerkoorrepertoire, a capella en met
+                    piano</li>
                 <li>In het conservatorium van České Budějovice, Zuid-Bohemen,
                     Tsjechië</li>
                 <li>Met <em>Mozart Concerto Event</em>: deelnemers kunnen een

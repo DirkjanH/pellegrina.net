@@ -67,11 +67,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>In het afsluitende concert voeren we alleen het eerste deel
                     van het romantische oratorium <em>Elias</em> van Mendelssohn
                     uit met solisten, orkest en koor. Het hele werk is te lang
-                    om tijdens deze cursus in te studeren. Het eerste deel
-                    duurt 65 à 70 minuten en is dus een
-                    volledig concertprogramma op zich. Ook qua verhaal kan het
-                    goed op zichzelf staan.</p>
-                <p> In het eerste deel van <em>Elias</em> laat Mendelssohn zijn bewondering voor
+                    om tijdens deze cursus in te studeren. Het eerste deel duurt
+                    65 à 70 minuten en is dus een volledig concertprogramma op
+                    zich. Ook qu a verhaal kan het goed op zichzelf staan.</p>
+                <p> In de <em>Elias</em> laat Mendelssohn zijn bewondering voor
                     Bach en Händel horen, maar geeft het oratorium
                     tegelijkertijd een uitgesproken romantische dramatiek. Het
                     koor speelt een belangrijke rol: het verbeeldt het volk
