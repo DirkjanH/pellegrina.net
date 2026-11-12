@@ -18,10 +18,9 @@
         themselves. For the other ensemble, let us know if you have any
         preferences. </div>
     <div class="w3-card-2 w3-padding"><B>The evenings are free. Is there time to
-            play together? </B>Oh yes. The fanatics return to the conservatoire
-        after dinner to play in the numerous study rooms. These 'night
-        ensembles' are usually formed on the spot, so don't forget to bring your
-        favorite sheet music. </div>
+            play together? </B>Oh yes. The fanatics return after dinner to play
+        in the numerous study rooms. These 'night ensembles' are usually formed
+        on the spot, so don't forget to bring your favorite sheet music. </div>
     <div class="w3-card-2 w3-padding"><B>How should I pay?</B> <em>La
             Pellegrina</em> offers two methods of payment. You may either
         transfer your payment into account NL60 BUNQ 2177 4957 25 (BIC ASNB

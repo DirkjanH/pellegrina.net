@@ -18,10 +18,10 @@
         doorgegeven. <i>La Pellegrina </i>streeft ernaar die te honoreren, maar
         kan dat niet garanderen. </div>
     <div class="w3-card-2 w3-padding"><b>De avonden zijn vrij. Wordt er dan ook
-            muziek gemaakt?</b> De echt fanatieke deelnemers gaan 's avonds
-        terug naar het conservatorium om in de vele repetitieruimtes te
-        musiceren. Deze ensembles vormen zich meestal ter plekke. Het is aan te
-        raden om je eigen bladmuziek mee te nemen. </div>
+            muziek gemaakt?</b> De echt fanatieke deelnemers gaan na het eten
+        terug om in de vele repetitieruimtes te musiceren. Deze ensembles vormen
+        zich meestal ter plekke. Het is aan te raden om je eigen bladmuziek mee
+        te nemen. </div>
     <div class="w3-card-2 w3-padding"><b>Hoe kan ik betalen?</b> <i>La
             Pellegrina</i> accepteert betalingen via rekening NL33 ASNB 0707
         2500 72 (voor buitenlandse betalingen: BIC BUNQ NL2A) t.n.v. La
