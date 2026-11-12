@@ -71,36 +71,21 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     deel uit te voeren. Dat duurt 65 à 70 minuten en is dus een
                     volledig concertprogramma op zich. Ook qua verhaal kan het
                     goed op zichzelf staan.</p>
-                <p>Felix Mendelssohn voltooide zijn grootse oratorium
-                    <em>Elias</em> in 1846 voor het muziekfestival in
-                    Birmingham. Het werk vertelt het dramatische levensverhaal
-                    van de oude-testamentische profeet Elia. Van de verwoestende
-                    droogte en de confrontatie met de Baälpriesters op de berg
-                    Carmel, tot zijn eenzame vlucht in de woestijn en zijn
-                    uiteindelijke hemelvaart in een vurige wagen: Mendelssohn
-                    wist deze bijbelse vertelling te vangen in verbluffend
-                    theatraal en emotioneel geladen muziek. </p>
-                <p>In de opbouw van het oratorium verweefde Mendelssohn de
-                    barokke contrapuntische traditie van Bach en Händel met de
-                    meeslepende, lyrische expressie van de negentiende-eeuwse
-                    romantiek. Het koor vervult daarbij een indrukwekkende
-                    dubbelrol: het ene moment verbeeldt het de woedende
-                    volksmassa of de smekende Baälpriesters, het volgende moment
-                    geeft het alwetend commentaar zoals in een klassieke Griekse
-                    tragedie.</p>
+                <p> Mendelssohn laat in <em>Elias</em> zijn bewondering voor
+                    Bach en Händel horen, maar geeft het oratorium
+                    tegelijkertijd een uitgesproken romantische dramatiek. Het
+                    koor speelt een belangrijke rol: het verbeeldt het volk
+                    Israël, de engelen en de omstanders. Vooral de contrasten
+                    tussen de wanhopige gebeden van het volk, de indrukwekkende
+                    profetische uitspraken van Elias en de lyrische aria's maken
+                    het eerste deel tot een afwisselend en meeslepend geheel.
+                </p>
+                <p> De muziek schildert de gebeurtenissen bijna filmisch: de
+                    dreiging van de droogte, de wanhoop van de weduwe, de strijd
+                    op de berg Karmel en uiteindelijk de overwinning van Elias'
+                    God. </p>
                 <h2>Toelichting bij het eerste deel</h2>
-                <p> Felix Mendelssohns <em>Elias</em> (op. 70) is een van de
-                    grote oratoria uit de negentiende eeuw. Het werk ging in
-                    1846 in première in Birmingham en is gebaseerd op het
-                    Bijbelverhaal van de profeet Elia, zoals dat vooral
-                    beschreven wordt in het eerste en tweede boek Koningen. </p>
-                <p> Mendelssohn verbindt de dramatiek van het Bijbelverhaal met
-                    indrukwekkende koorscènes, lyrische aria's en kleurrijke
-                    orkestpartijen. Het koor vervult daarbij verschillende
-                    rollen: soms is het de stem van het volk Israël, soms geeft
-                    het commentaar op de gebeurtenissen en soms klinkt het als
-                    een bijna overweldigende, goddelijke stem. </p>
-                <h2>Het verhaal – eerste deel</h2>
+                <h2>Het verhaal</h2>
                 <p> Het oratorium begint met een dramatische aankondiging van
                     Elia: als straf voor de afgodendienst van het volk zal er
                     geen regen meer vallen. Daarmee begint een langdurige
@@ -130,64 +115,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         ensembles.</li>
                     <li><strong>Orkest:</strong> strijkers, twee fluiten, twee
                         hobo's, twee klarinetten, twee fagotten, vier hoorns,
-                        twee trompetten, drie trombones, ophicleïde, pauken en
-                        orgel.</li>
+                        twee trompetten, drie trombones, ophicleïde (bij ons
+                        tuba), pauken en orgel.</li>
                 </ul>
                 <p> De belangrijkste solistenrol is die van Elias, doorgaans
                     gezongen door een bas of bas-bariton. De overige solisten
                     vertolken meerdere personages, waaronder koning Achab, de
                     profeet Obadja, de weduwe, haar zoon en verschillende
                     engelen. </p>
-                <h2>Solisten en personages</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Stemsoort</th>
-                            <th>Belangrijkste rollen</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Bas</td>
-                            <td>Elias</td>
-                        </tr>
-                        <tr>
-                            <td>Tenor</td>
-                            <td>Obadja en Achab</td>
-                        </tr>
-                        <tr>
-                            <td>Sopraan</td>
-                            <td>De weduwe, haar zoon en een engel</td>
-                        </tr>
-                        <tr>
-                            <td>Alt</td>
-                            <td>Een engel en koningin Izebel</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>
-                    <em>De precieze rolverdeling kan per uitvoering
-                        verschillen.</em>
-                </p>
                 <h2>Duur</h2>
                 <p> Het eerste deel duurt ongeveer <strong>65 à 70
-                        minuten</strong>, afhankelijk van tempo en eventuele
-                    coupures. Het complete oratorium duurt ongeveer 2 uur en 10
-                    minuten tot 2 uur en 15 minuten. </p>
-                <h2>Muzikale kenmerken</h2>
-                <p> Mendelssohn laat in <em>Elias</em> zijn bewondering voor
-                    Bach en Händel horen, maar geeft het oratorium
-                    tegelijkertijd een uitgesproken romantische dramatiek. Het
-                    koor speelt een belangrijke rol: het verbeeldt het volk
-                    Israël, de engelen en de omstanders. Vooral de contrasten
-                    tussen de wanhopige gebeden van het volk, de indrukwekkende
-                    profetische uitspraken van Elias en de lyrische aria's maken
-                    het eerste deel tot een afwisselend en meeslepend geheel.
-                </p>
-                <p> De muziek schildert de gebeurtenissen bijna filmisch: de
-                    dreiging van de droogte, de wanhoop van de weduwe, de strijd
-                    op de berg Karmel en uiteindelijk de overwinning van Elias'
-                    God. </p>
+                        minuten</strong>, afhankelijk van het tempo. Het
+                    complete oratorium duurt ongeveer 2 uur en 10 minuten.</p>
             </div>
         </div>
         <h2><a href="javascript: history.go(-1)">Terug</a></h2>
