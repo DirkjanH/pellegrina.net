@@ -36,7 +36,7 @@
         Netherlands and Germany, to Linz (Austria) or Prague. From both places,
         there are frequent trains to České Budějovice. It is also possible to
         fly to Prague and take the train from there. From České Budějovice
-        railway station, it is a 15-minute walk to the conservatoire. It is
+        railway station, it is an 800 meter walk to the conservatoire. It is
         possible to have luggage collected from the station. </div>
     <div class="w3-card-2 w3-padding"><B>How can I provide for a cancellation
             insurance?</B> We advise you to carry a cancellation insurance
