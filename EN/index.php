@@ -121,7 +121,7 @@ $jaar = 2027;
                 <p>This page gives an overview of the courses in
                     <?php echo $jaar ?>. The baroque course takes place in the
                     former monastery Nieuw Sion in the woods of Salland near
-                    Deventer. The course around Haydn and Dvořák will take place
+                    Deventer. The course around Mendelssohn's Elijah will take place
                     in the Czech Republic, Europe's most musical country. The
                     venue is the conservatoire of České Budějovice, 120 km south
                     of Prague.</p>
