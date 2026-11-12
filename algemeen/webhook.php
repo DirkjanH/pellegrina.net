@@ -4,7 +4,7 @@
 //ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/includes2025.php');
+require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/includes2027.php');
 require_once($_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php');
 require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/mollie.php');
 require_once($_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php');
@@ -107,7 +107,15 @@ if ($mail_lock === false || !flock($mail_lock, LOCK_EX)) {
 }
 
 $mail_verzonden = true;
-if (!is_file($mail_marker)) {
+$mail_marker_saved = true;
+$booking_reference = preg_replace('/[^a-zA-Z0-9_-]/', '', (string) ($inschrijving['random_id'] ?? ''));
+$booking_mail_marker = $booking_reference !== '' ? $mail_sent_dir . '/' . $booking_reference . '.sent' : '';
+$mail_already_sent = is_file($mail_marker)
+	|| ($definitief_betaald && (
+		($booking_mail_marker !== '' && is_file($booking_mail_marker))
+		|| LPconfirmationSent((int) $inschrijving['InschId'])
+	));
+if (!$mail_already_sent) {
 	$naam = htmlspecialchars((string) $inschrijving['naam'], ENT_QUOTES, 'UTF-8');
 	$voornaam = htmlspecialchars((string) $inschrijving['voornaam'], ENT_QUOTES, 'UTF-8');
 	$inschrijving_nr = (int) $inschrijving['InschId'];
@@ -139,7 +147,7 @@ if (!is_file($mail_marker)) {
 	);
 	if ($mail_verzonden && file_put_contents($mail_marker, date('c'), LOCK_EX) === false) {
 		error_log('Mollie-mail verzonden maar marker kon niet worden opgeslagen voor betaling ' . $mail_key);
-		$mail_verzonden = false;
+		$mail_marker_saved = false;
 	}
 }
 
@@ -151,6 +159,9 @@ if (!$mail_verzonden) {
 
 if ($definitief_betaald && !exec_query("UPDATE inschrijving SET dankmail_verzonden = NOW() WHERE Mollie_ID = {$mollie_id_sql}")) {
 	$retry_webhook('Verzendstatus van de bevestigingsmail kon niet worden opgeslagen.');
+}
+if (!$mail_marker_saved) {
+	$retry_webhook('Mailmarker kon niet worden opgeslagen.');
 }
 
 http_response_code(200);

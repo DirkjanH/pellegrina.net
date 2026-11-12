@@ -177,9 +177,8 @@ $mail_sending_deferred = $is_mollie_registration && $dlnmr['betaalstatus'] !== '
 $db_mail_already_sent = isset($dlnmr['dankmail_verzonden']) && !empty($dlnmr['dankmail_verzonden']) && $dlnmr['dankmail_verzonden'] !== '0000-00-00' && $dlnmr['dankmail_verzonden'] !== '0000-00-00 00:00:00' && $dlnmr['dankmail_verzonden'] !== '0';
 $file_mail_already_sent = $mail_sent_file !== '' && file_exists($mail_sent_file);
 
-$mail_already_sent = $is_mollie_registration
-	? ($payment_confirmation_file !== '' && file_exists($payment_confirmation_file))
-	: ($db_mail_already_sent || $file_mail_already_sent);
+$mail_already_sent = $db_mail_already_sent || $file_mail_already_sent
+	|| ($payment_confirmation_file !== '' && file_exists($payment_confirmation_file));
 $payment_mail_lock = false;
 $payment_mail_lock_failed = false;
 
@@ -195,7 +194,9 @@ if (!$mail_sending_deferred && $is_mollie_registration) {
 		$payment_mail_lock_failed = true;
 		error_log('Bevestigingsmail kon niet worden vergrendeld voor betaling ' . $mollie_id);
 	} else {
-		$mail_already_sent = file_exists($payment_confirmation_file);
+		$mail_already_sent = file_exists($payment_confirmation_file)
+			|| ($mail_sent_file !== '' && file_exists($mail_sent_file))
+			|| LPconfirmationSent((int) $dlnmr['InschId']);
 	}
 }
 
