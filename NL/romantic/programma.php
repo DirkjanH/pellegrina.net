@@ -85,7 +85,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     op de berg Karmel en uiteindelijk de overwinning van Elias'
                     God. </p>
                 <h2>Toelichting bij het eerste deel</h2>
-                <h2>Het verhaal</h2>
+                <h3>Het verhaal</h3>
                 <p> Het oratorium begint met een dramatische aankondiging van
                     Elia: als straf voor de afgodendienst van het volk zal er
                     geen regen meer vallen. Daarmee begint een langdurige
@@ -106,7 +106,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vervolgens om regen. Na een lange periode van droogte
                     verschijnt er eindelijk een wolkje aan de hemel: de regen
                     keert terug. </p>
-                <h2>Bezetting</h2>
+                <h3>Bezetting</h3>
                 <ul>
                     <li><strong>Solisten:</strong> sopraan, alt, tenor en bas.
                     </li>
@@ -123,7 +123,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     vertolken meerdere personages, waaronder koning Achab, de
                     profeet Obadja, de weduwe, haar zoon en verschillende
                     engelen. </p>
-                <h2>Duur</h2>
+                <h3>Duur</h3>
                 <p> Het eerste deel duurt ongeveer <strong>65 à 70
                         minuten</strong>, afhankelijk van het tempo. Het
                     complete oratorium duurt ongeveer 2 uur en 10 minuten.</p>
