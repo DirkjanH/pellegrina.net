@@ -559,6 +559,37 @@ div#main {
   background-color: white;
 }
 
+div#top,
+div#main,
+div.w3-card:not(.w3-dropdown-content),
+div.w3-card-2,
+div.w3-card-4,
+div.w3-card-8,
+ul.w3-card-2 {
+  border-radius: 16px;
+}
+
+.programma-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.programma-afbeelding {
+  flex: 0 0 auto;
+}
+
+.programma-afbeelding img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.programma-tekst {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 ul#cursusmenu {
   background-color: @cursusmenu !important;
   margin-top: -2px;
@@ -691,6 +722,21 @@ a:hover {
   #titel div.cijfer {
     display: none;
     column-count: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .programma-layout {
+    display: block;
+  }
+
+  .programma-afbeelding {
+    margin-bottom: 20px;
+  }
+
+  .programma-afbeelding img {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

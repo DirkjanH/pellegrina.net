@@ -685,6 +685,16 @@ div#main {
   background-color: white;
 }
 
+div#top,
+div#main,
+div.w3-card:not(.w3-dropdown-content),
+div.w3-card-2,
+div.w3-card-4,
+div.w3-card-8,
+ul.w3-card-2 {
+  border-radius: 16px;
+}
+
 .programma-layout {
   display: flex;
   align-items: flex-start;
