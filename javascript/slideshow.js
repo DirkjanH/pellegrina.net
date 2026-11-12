@@ -1,6 +1,18 @@
 (() => {
     'use strict';
 
+    const grid = document.querySelector('.landing-grid');
+    if (grid) {
+        const browserLanguage = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+        const language = /^nl(?:-|$)/i.test(browserLanguage) ? 'nl' : 'en';
+        document.documentElement.lang = language;
+        if (language === 'en') {
+            const dutchCard = grid.querySelector('.course-card-nl');
+            grid.prepend(grid.querySelector('.course-card-en'));
+            grid.append(dutchCard);
+        }
+    }
+
     const carousel = document.getElementById('carroussel');
     if (!carousel) return;
 

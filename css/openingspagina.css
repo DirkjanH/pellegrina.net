@@ -230,6 +230,14 @@ td.lijn {
 	animation-delay: -4s;
 }
 
+html[lang="en"] .landing-page #bannerteksten span:first-child {
+	animation-delay: -4s;
+}
+
+html[lang="en"] .landing-page #bannerteksten span + span {
+	animation-delay: 0s;
+}
+
 @keyframes registration-language {
 	0%, 40%, 100% {
 		opacity: 1;

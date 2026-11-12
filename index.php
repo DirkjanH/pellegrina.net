@@ -102,7 +102,7 @@ function getisp($ip = '')
             <div id="banner">
                 <div id="bannerteksten" class="registration-notice bannergeel">
                     <span lang="nl">Inschrijving <?php echo $jaar ?> start 1 december!</span>
-                    <span>Registration for <?php echo $jaar ?> starts December 1!</span>
+                    <span lang="en">Registration for <?php echo $jaar ?> starts December 1!</span>
                 </div>
             </div>
         </header>
@@ -176,7 +176,7 @@ function getisp($ip = '')
                                 aria-label="Volgende foto / Next photo">&#10095;</button>
                         </div>
                     </div>
-                    <a class="course-card course-card-en" href="EN">
+                    <a class="course-card course-card-en" href="EN" lang="en">
                         <span class="course-language"><img
                                 src="Images/Logos/Vlag_UK.jpg" alt=""
                                 width="28" height="20">English</span>
@@ -200,7 +200,7 @@ function getisp($ip = '')
                         src="Images/Logos/CZ-vlag.jpg" width="28" height="20"
                         alt="">Čeští účastníci vítáni</a>
             </nav>
-            <footer class="landing-footer">
+            <footer class="landing-footer" lang="en">
             <div class="landing-support">
                 <p>This program has been made possible, in part, with support from</p>
                 <a href="http://www.acmp.net" target="_blank"><img
