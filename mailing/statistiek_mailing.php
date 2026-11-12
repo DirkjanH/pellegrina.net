@@ -189,7 +189,7 @@ if ($mailing_nr > 0) {
 			height: 1.5em;
 			padding: 0;
 			border: 0;
-			border-radius: 50%;
+			border-radius: 25%;
 			background: #d32f2f;
 			color: #fff;
 			font-size: 1em;

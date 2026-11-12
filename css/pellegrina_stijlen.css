@@ -692,6 +692,32 @@ div.w3-card-2,
 div.w3-card-4,
 div.w3-card-8,
 ul.w3-card-2 {
+  border-radius: 8px;
+}
+
+.w3-badge,
+.w3-circle {
+  border-radius: 25%;
+}
+
+.w3-round-small {
+  border-radius: 1px;
+}
+
+.w3-round,
+.w3-round-medium {
+  border-radius: 2px;
+}
+
+.w3-round-large {
+  border-radius: 4px;
+}
+
+.w3-round-xlarge {
+  border-radius: 8px;
+}
+
+.w3-round-xxlarge {
   border-radius: 16px;
 }
 
