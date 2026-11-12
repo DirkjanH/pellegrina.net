@@ -153,7 +153,7 @@ $jaar = 2027;
             <div class="w3-half">
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3><a href="romantic/index.php"><span
-                                class="romantic">Mendelssohn's Elijah (Part I)
+                                class="romantic">Mendelssohn's Elijah
                                 for orchestra, choir and soloists</span></a>
                     </h3>
                     <p>for instrumentalists and (choir) singers, with chamber

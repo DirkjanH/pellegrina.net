@@ -166,7 +166,7 @@ $jaar = 2027;
             <div class="w3-half">
                 <div class="w3-card-2 w3-padding w3-margin-bottom">
                     <h3><a href="romantic/index.php"><span
-                                class="romantic">Mendelssohns Elias (1e deel)
+                                class="romantic">Mendelssohns Elias
                                 voor orkest, koor en solisten</span></a></h3>
                     <p>voor instrumentalisten en (koor)zangers, met kamermuziek
                         en kamerkoor</p>
