@@ -24,7 +24,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-  <title>Barok uit Centraal Europa</title>
+  <title>Programma "<?php echo $cursusdata['cursusnaam']; ?>"</title>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
   <link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
