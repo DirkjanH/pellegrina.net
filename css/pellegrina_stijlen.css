@@ -133,7 +133,7 @@
 .actiekleur {
   /* voor actieve accordion */
   color: black !important;
-  background-color: #25a6f6 !important;
+  background-color: #56baf8 !important;
 }
 .course {
   font-weight: bold;
@@ -408,7 +408,7 @@ table#taal {
 }
 th {
   font-style: italic;
-  background: LightSkyBlue;
+  background: #b8e2fc;
   text-align: center;
   margin: 0 5px;
   border: thin solid #333;
@@ -628,7 +628,7 @@ ul.w3-card-2 {
   min-width: 0;
 }
 ul#cursusmenu {
-  background-color: #56baf8 !important;
+  background-color: #87cefa !important;
   margin-top: -2px;
 }
 ul#cursusmenu li a {
@@ -638,13 +638,13 @@ ul#cursusmenu li a {
   text-decoration: none;
 }
 ul#cursusmenu li a:hover {
-  background-color: #b8e2fc;
+  background-color: #e9f6fe;
 }
 /* Navigatie: */
 nav#navcontainer {
   width: 185px;
-  border: 1px solid #076eae;
-  background: LightSkyBlue;
+  border: 1px solid #098ddf;
+  background: #b8e2fc;
 }
 #navcontainer ul {
   width: 185px;
@@ -669,7 +669,7 @@ nav#navcontainer {
   padding-top: 0;
   margin-bottom: 0;
   background: initial;
-  border-bottom: 1px solid #076eae;
+  border-bottom: 1px solid #098ddf;
 }
 #navcontainer a:link,
 #navcontainer a:visited {
@@ -678,7 +678,7 @@ nav#navcontainer {
 #navcontainer a:hover,
 #navcontainer a:active {
   color: black !important;
-  background-color: #25a6f6 !important;
+  background-color: #56baf8 !important;
 }
 #navlist a.grijs:hover,
 #navlist a.grijs:active {
