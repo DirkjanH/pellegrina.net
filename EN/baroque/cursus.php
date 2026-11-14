@@ -77,7 +77,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     aspects: each morning we work in small ensembles of
                     singers and players of 'early' instruments, both vocal and
                     instrumental separately or in combination. Each afternoon we work together on a joint
-                    program with baroque music from Central Europe. All singers and instrumentalists participate in this program.</p>
+                    program with Neapolitan baroque music. All singers and instrumentalists participate in this program.</p>
                 <p class="citaat">Jeroen van Bergeijk: &quot;The ideal holiday
                     spending: many days of hard work in a monastery, immersed in
                     music, with an inspiring group of music lovers&quot;</p>
@@ -186,7 +186,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     <li>Tuesday August 18: final internal presentation of the
                         chamber music ensembles</li>
                     <li>Wednesday afternoon August 19: public concert with the
-                        programme 'Baroque from Central Europe' in the monastery church,
+                        programme 'Neapolitan Baroque' in the monastery church,
                         followed by drinks and departure</li>
                 </ul>
                 <p class="citaat">Annelies Jans: &quot;Each morning two

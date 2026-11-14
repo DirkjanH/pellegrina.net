@@ -7,7 +7,7 @@
 <head>
     <meta http-equiv="Content-Type"
         content="text/html; charset=utf8mb4_ubicode_ci">
-    <title>La Pellegrina - Concert Barokmuziek uit Centraal Europa - woensdag 19
+    <title>La Pellegrina - Concert met Napolitaanse barokmuziek - woensdag 19
         augustus</title>
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://pellegrina.net/Images/Logos/apple-touch-icon.png">

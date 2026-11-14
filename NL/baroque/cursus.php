@@ -77,7 +77,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     bespelers van 'oude' instrumenten, zowel vocaal en
                     instrumentaal apart als gecombineerd. Daarnaast is er een
                     programma waarin alle zangers en instrumentalisten
-                    participeren, met barokmuziek uit Centraal Europa.</p>
+                    participeren, met Napolitaanse barokmuziek.</p>
                 <p class="citaat">Jeroen van Bergeijk: &quot;De ideale
                     vakantiebesteding: hard werken in een klooster,
                     ondergedompeld in muziek, met een fijne groep
@@ -225,8 +225,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         10:30 cursusopening en eerste repetitie</li>
                     <li>Dinsdag 18 augustus: afsluitende interne presentatie van
                         de kamermuziekensembles; </li>
-                    <li>Woensdagmiddag 19 augustus: openbaar concert 'Barok uit
-                        Centraal Europa' in de kloosterkerk, aansluitend borrel
+                    <li>Woensdagmiddag 19 augustus: openbaar concert 'Napolitaanse
+                        Barok' in de kloosterkerk, aansluitend borrel
                         en vertrek</li>
                 </ul>
                 <p class="citaat">Annelies Jans: &ldquo;Twee repetities 's
