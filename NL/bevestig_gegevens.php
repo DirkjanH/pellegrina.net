@@ -90,7 +90,6 @@ else exit('Deze deelnemer bestaat niet. Het programma wordt nu afgebroken.')
 <!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.NL.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>

@@ -8,14 +8,12 @@
 
    <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-   <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
 
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Zauberflöte audition</title>
 <!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>

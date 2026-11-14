@@ -14,7 +14,6 @@
 <!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet" type="text/css">
 <!-- InstanceBeginEditable name="head" -->
 
 

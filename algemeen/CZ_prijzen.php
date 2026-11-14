@@ -7,12 +7,9 @@ $i = $eerstecursus; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
     <title>České ceny</title>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
-        type="text/css">
 </head>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>

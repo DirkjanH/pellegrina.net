@@ -22,7 +22,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php'; ?>
 
    <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-   <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
 
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->

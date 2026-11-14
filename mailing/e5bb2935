@@ -862,7 +862,6 @@ if (isset($_POST['zoek_subject']) AND $_POST['zoek_subject'] != '') $where = "WH
 
    <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-   <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
 
    <script src="/vendor/tinymce/tinymce/tinymce.min.js"></script>
      <script>	

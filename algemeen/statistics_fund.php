@@ -184,8 +184,6 @@ if (class_exists('Kint') && function_exists('d')) {
     <!-- InstanceEndEditable -->
     <?php require_once dirname(__DIR__) . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once dirname(__DIR__) . '/includes/GA_code.php'; ?>
-    <link href="/css/pagina_stijlen_algemeen.css" rel="stylesheet"
-        type="text/css">
     <!-- InstanceBeginEditable name="head" -->
     <link rel="stylesheet" href="../css/pellegrina_stijlen.css" type="text/css">
     <style type="text/css">

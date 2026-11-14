@@ -61,7 +61,6 @@ if ($_POST['username'] != '' AND $_POST['password'] != '' AND array_search($_POS
 <script src="http://www.pellegrina.net/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="http://www.pellegrina.net/css/pellegrina_stijlen.css" type="text/css">
-<link rel="stylesheet" href="http://www.pellegrina.net/css/pagina_stijlen.css" type="text/css">
 <link rel="stylesheet" href="http://www.pellegrina.net/css/home.css" type="text/css">
 <link rel="stylesheet" href="http://www.pellegrina.net/css/navigatie.css" type="text/css" />
 <link rel="stylesheet" href="http://www.pellegrina.net/css/kleuren.css" type="text/css" />

@@ -28,7 +28,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 
   <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-  <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
 
   <!-- InstanceBeginEditable name="doctitle" -->
   <title>2011 Video recordings on DVD</title>

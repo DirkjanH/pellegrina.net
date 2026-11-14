@@ -157,7 +157,6 @@ $docenteninfo = select_query($query_docenten);
     <meta charset="utf-8">
     <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <link rel="stylesheet" href="/css/pagina_stijlen.css" type="text/css">
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://pellegrina.net/mailing/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32"
