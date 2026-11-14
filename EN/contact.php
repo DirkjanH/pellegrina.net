@@ -20,8 +20,9 @@
     <ul>
         <li>NL60 BUNQ 2177 4957 25 (BIC BUNQ NL2A) in name of <em>La
                 Pellegrina</em>, Utrecht</li>
-        <li>For payments from Czechia: CZ44 0100 0000 0005 3894 0301 (BIC
-            KOMBCZPPXXX) in name of Dirk Johannes Horringa, Utrecht</li>
+        <li>For payments from Czechia: ČSOB account 375170575/0300,
+            IBAN CZ54 0300 0000 0003 7517 0575 (BIC CEKOCZPP)
+            in name of Horringa Dirk Johannes, Utrecht</li>
         <li>For payments from the USA: Wise Account number 8310003482 (ACH and
             Wire routing number 026073150) in name of La Pellegrina, Utrecht NL
         </li>

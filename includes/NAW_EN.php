@@ -12,7 +12,7 @@
 				and possible other preferences</li>
           <li>Please pay the deposit electronically after sending in this form or transfer the <b>deposit of 
 			 EUR&nbsp;{$cursusdata['inschrijfgeld']}</b> to <a href=\"contact.php\"><i>La
-             Pellegrina,</i></a>. Czech participants can pay their deposit in CZK to Komerční Banka account 538940301/0100.</li>
+             Pellegrina,</i></a>. Czech participants can pay their deposit in CZK to ČSOB account 375170575/0300 in the name of Horringa Dirk Johannes.</li>
           <li>You will then receive provisional confirmation of registration. Ultimately on {$cursusdata['beslisdatum']} you will receive a notification of placement</li>
           <li>By applying you agree with conditions stated in <a href=\"praktisch.php\">Practical matters</a> and elsewhere on this site.</li>
        </ul></td>

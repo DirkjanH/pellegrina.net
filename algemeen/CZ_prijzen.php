@@ -69,7 +69,7 @@ $i = $eerstecursus; ?>
             <h2>Přihláška</h2>
             <p>Přihlášku odešlete prostřednictvím elektronického formuláře.
                 Zároveň je třeba uhradit polovinu celkové ceny kursu jako
-                zápisné na účet 538940301/0100 u&nbsp;Komerční Banky. Druhá
+                zápisné na účet 375170575/0300 u&nbsp;ČSOB, vedený na jméno Horringa Dirk Johannes. Druhá
                 polovina musí být zaplacena nejpozději do 15. června. Jako
                 variabilní symbol uveďte datum svého narození ve formátu
                 rok-měsíc-den. Při platbě na účet prostřednictvím poštovní

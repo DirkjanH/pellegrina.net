@@ -140,7 +140,7 @@ switch ($dlnmr['betaalstatus']) {
 		break;
 	default:
 		$message .= "<p>We hebben je aanbetaling nog niet bevestigd. De betaling kan nog worden verwerkt. Als Mollie de betaling definitief als mislukt meldt, ontvang je daarover een aparte e-mail.<br>
-			Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling van {$cursus['inschrijfgeld']} hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. Tsjechische deelnemers kunnen hun aanbetaling in CZK overmaken op <strong>rekening 538940301/0100 van Komerční Banka</strong>.</p>\n";
+			Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling van {$cursus['inschrijfgeld']} hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. Tsjechische deelnemers kunnen hun aanbetaling in CZK overmaken op <strong>rekening 375170575/0300 van ČSOB</strong> ten name van Horringa Dirk Johannes.</p>\n";
 		break;
 }
 
