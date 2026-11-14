@@ -644,6 +644,7 @@ ul#cursusmenu li a:hover {
 nav#navcontainer {
   width: 185px;
   border: 1px solid #378dbf;
+  border-radius: 4px;
   background: #d1e5f1;
 }
 #navcontainer ul {
