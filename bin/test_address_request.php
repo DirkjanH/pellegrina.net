@@ -10,7 +10,7 @@ if ($mailTestMode) {
     function mail($to, $subject, $message, $headers) {
         global $capturedMail;
         $capturedMail = compact('to', 'subject', 'message', 'headers');
-        throw new AddressRequestStored('Confirmation email captured without sending.');
+        return true;
     }
 }
 
@@ -30,10 +30,17 @@ function exec_query($query) {
     throw new AddressRequestStored($query);
 }
 
+function KT_redir($url) {
+    global $capturedRedirect;
+    $capturedRedirect = $url;
+    throw new AddressRequestStored('Confirmation redirect captured.');
+}
+
 function addressRequest($language, array $post) {
-    global $storedValues, $capturedMail;
+    global $storedValues, $capturedMail, $capturedRedirect;
     $storedValues = [];
     $capturedMail = null;
+    $capturedRedirect = null;
     $_POST = $post;
     $_SERVER['DOCUMENT_ROOT'] = dirname(__DIR__);
     $_SERVER['PHP_SELF'] = "/{$language}/adres_toevoegen.php";
@@ -51,7 +58,20 @@ function addressRequest($language, array $post) {
             $html = ob_get_clean() . $html;
         }
     }
-    return ['stored' => $stored, 'html' => $html, 'values' => $storedValues, 'mail' => $capturedMail];
+    return ['stored' => $stored, 'html' => $html, 'values' => $storedValues, 'mail' => $capturedMail, 'redirect' => $capturedRedirect];
+}
+
+function addressThankYouPage($root, $language, array $query) {
+    $_SERVER['DOCUMENT_ROOT'] = $root;
+    $_GET = $query;
+    $navigatie = '';
+    ob_start();
+    try {
+        require dirname(__DIR__) . "/{$language}/dank_info.php";
+        return ob_get_contents();
+    } finally {
+        ob_end_clean();
+    }
 }
 
 function checkAddressRequest($condition, $message) {
@@ -82,6 +102,9 @@ if ($mailTestMode) {
             $subjectAction = $language === 'NL' ? ($action === 'alles' ? 'toegevoegd' : 'bijgewerkt') : ($action === 'alles' ? 'added' : 'updated');
             checkAddressRequest(str_contains($mail['subject'], $subjectAction), "{$language}: subject must distinguish adding from updating.");
             checkAddressRequest(str_contains($mail['message'], $complete['email']), "{$language}: registered details must remain in the confirmation.");
+            checkAddressRequest(parse_url($result['redirect'], PHP_URL_PATH) === "/{$language}/dank_info.php", "{$language}: confirmation redirect must work from both direct and course forms.");
+            parse_str(parse_url($result['redirect'], PHP_URL_QUERY), $query);
+            checkAddressRequest($query === ['voornaam' => $complete['voornaam'], 'actie' => $action], "{$language}: confirmation redirect must preserve name and action.");
         }
         echo "PASS: {$language} confirmation mail distinguishes adding and updating without sending mail.\n";
     }
@@ -134,6 +157,38 @@ foreach (['NL', 'EN'] as $language) {
     $result = addressRequest($language, array_merge($complete, ['adres' => '', 'opmerkingen' => '"><script>alert(1)</script>']));
     checkAddressRequest(str_contains($result['html'], '&lt;script&gt;alert(1)&lt;/script&gt;'), "{$language}: submitted values must be escaped when redisplayed.");
     echo "PASS: {$language} required fields, validation errors, optional fields, unsubscribe, and single telephone storage.\n";
+}
+
+$root = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'pellegrina-address-' . bin2hex(random_bytes(6));
+$includes = $root . DIRECTORY_SEPARATOR . 'includes';
+$stubs = ['GA_code.php', 'GA_tagmanager.php', 'footer.php', 'header.NL.php', 'header.EN.php', 'metatags+javascript.NL.php', 'metatags+javascript.EN.php'];
+mkdir($includes, 0700, true);
+try {
+    foreach ($stubs as $stub) file_put_contents($includes . DIRECTORY_SEPARATOR . $stub, '<?php');
+    foreach ([
+        'NL' => ['alles' => 'toevoegen', 'email' => 'updaten', 'delete' => 'verwijderd', '' => 'insturen'],
+        'EN' => ['alles' => 'adding', 'email' => 'updating', 'delete' => 'deleted', '' => 'Thank you for sending in your form.'],
+    ] as $language => $messages) {
+        foreach ($messages as $action => $expected) {
+            $query = ['voornaam' => '<script>alert(1)</script>'];
+            if ($action !== '') $query['actie'] = $action;
+            $html = addressThankYouPage($root, $language, $query);
+            foreach ($messages as $otherAction => $text) {
+                checkAddressRequest(str_contains($html, $text) === ($action === $otherAction), "{$language}: confirmation page must only describe the requested action.");
+            }
+            $activities = $language === 'NL' ? 'onze activiteiten' : 'our activities';
+            checkAddressRequest(str_contains($html, $activities) === ($action === 'alles'), "{$language}: only adding must confirm future activity updates.");
+            checkAddressRequest(str_contains($html, '&lt;script&gt;alert(1)&lt;/script&gt;') && !str_contains($html, '<script>alert(1)</script>'), "{$language}: confirmation must escape the submitted first name.");
+        }
+        echo "PASS: {$language} thank-you page distinguishes adding, updating, unsubscribing, and legacy links.\n";
+    }
+} finally {
+    foreach ($stubs as $stub) {
+        $path = $includes . DIRECTORY_SEPARATOR . $stub;
+        if (file_exists($path)) unlink($path);
+    }
+    rmdir($includes);
+    rmdir($root);
 }
 
 $process = proc_open([PHP_BINARY, '-d', 'disable_functions=mail', __FILE__, '--mail'], [1 => STDOUT, 2 => STDERR], $pipes);

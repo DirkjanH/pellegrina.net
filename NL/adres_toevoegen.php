@@ -191,7 +191,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "info-aanvraag"))
 					echo "Dank voor uw informatie. Er is zojuist een email ter bevestiging naar u verstuurd!<br>";
 					$insertGoTo = "/NL/dank_info.php";
 					$vn = urlencode($_POST['voornaam']);
-					$insertGoTo .= "?voornaam=$vn";
+					$insertGoTo .= "?voornaam=$vn&actie=" . urlencode($_POST['actie']);
 					KT_redir($insertGoTo);
 					}
 				else echo "De mail is niet verstuurd!<br>";

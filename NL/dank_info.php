@@ -1,4 +1,6 @@
-<?php 
+<?php
+$actie = $_GET['actie'] ?? '';
+$voornaam = is_string($_GET['voornaam'] ?? null) ? $_GET['voornaam'] : '';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 
 <!DOCTYPE HTML>
@@ -46,16 +48,20 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 	 ?>
   <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
    <h2 class="begin">Formulier ontvangen</h2>
-    <p>Beste <?php echo $_GET['voornaam']; ?>,</p>
-    <p>Het formulier is succesvol verstuurd. Je email-adres en eventuele overige
-      gegevens zijn toegevoegd aan de mailinglist van <i>La Pellegrina</i>,
-      zodat je in de toekomst informatie over zomercursussen en aanverwante
-      projecten ontvangt per post of per email. Als je hebt aangegeven
-      je gegevens uit het bestand van La Pellegrina te willen
-      verwijderen, is dat inmiddels gebeurd. </p>
-    <p>Nagenoeg alle informatie over de projecten
-      van dit jaar vind je op deze website; je ontvangt hierover dus geen informatie.
-      Indien je nog vragen hebt, kun je het beste telefonisch contact opnemen
+    <p>Beste <?php echo htmlspecialchars($voornaam, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>,</p>
+    <?php if ($actie === 'alles'): ?>
+    <p>Hartelijk dank voor het toevoegen van je gegevens aan het bestand van
+      <em>La Pellegrina</em>. Vanaf nu houden we je op de hoogte van onze activiteiten.</p>
+    <?php elseif ($actie === 'email'): ?>
+    <p>Hartelijk dank voor het updaten van je gegevens in het bestand van
+      <em>La Pellegrina</em>.</p>
+    <?php elseif ($actie === 'delete'): ?>
+    <p>Je gegevens zijn uit het bestand van <em>La Pellegrina</em> verwijderd.</p>
+    <?php else: ?>
+    <p>Hartelijk dank voor het insturen van je formulier.</p>
+    <?php endif; ?>
+    <p>Er is een bevestiging per e-mail verstuurd.</p>
+    <p>Indien je nog vragen hebt, kun je het beste contact opnemen
       met <em>La Pellegrina</em>, telefonisch (0619 224 758) of per <a href="mailto:info@pellegrina.net">email</a>.</p>
     <p>Met muzikale groet, </p>
     <p>Dirkjan Horringa <em><br>

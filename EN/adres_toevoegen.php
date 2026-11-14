@@ -188,9 +188,9 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "info-aanvraag"))
 					{
 			// redirect naar de dank.php pagina's
 					echo "Thanks for your information. A confirmation email has just been sent to you.<br>";
-					$insertGoTo = "../dank_info.php";
+					$insertGoTo = "/EN/dank_info.php";
 					$vn = urlencode($_POST['voornaam']);
-					$insertGoTo .= "?voornaam=$vn";
+					$insertGoTo .= "?voornaam=$vn&actie=" . urlencode($_POST['actie']);
 					KT_redir($insertGoTo);
 					}
 				else echo "The mail has not been sent!<br>";

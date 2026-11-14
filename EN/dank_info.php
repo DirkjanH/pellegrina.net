@@ -1,4 +1,6 @@
-<?php 
+<?php
+$actie = $_GET['actie'] ?? '';
+$voornaam = is_string($_GET['voornaam'] ?? null) ? $_GET['voornaam'] : '';
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 
 <!DOCTYPE HTML>
@@ -47,15 +49,19 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
   <div id="main"> 
   <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Thank you for sending in this form</h2>
-    <p>Dear <?php echo $_GET['voornaam']; ?>,</p>
-<p>Your address will be added to the <i>La Pellegrina </i>mailing list,
-      so that you will receive information about future summer
-      schools and related projects by email. If you have indicated
-      not to want to receive information from <i>La Pellegrina</i>,
-      then your entry in our database has been deleted. </p>
-    <p>Nearly all information about this year's summer schools is on this web
-      site; you will therefore not receive additional information. If you
-      have any questions, please feel free to contact <em>La Pellegrina</em> by
+    <p>Dear <?php echo htmlspecialchars($voornaam, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?>,</p>
+    <?php if ($actie === 'alles'): ?>
+    <p>Thank you for adding your details to the <em>La Pellegrina</em> database.
+      From now on, we will keep you informed about our activities.</p>
+    <?php elseif ($actie === 'email'): ?>
+    <p>Thank you for updating your details in the <em>La Pellegrina</em> database.</p>
+    <?php elseif ($actie === 'delete'): ?>
+    <p>Your entry in the <em>La Pellegrina</em> database has been deleted.</p>
+    <?php else: ?>
+    <p>Thank you for sending in your form.</p>
+    <?php endif; ?>
+    <p>A confirmation email has been sent to you.</p>
+    <p>If you have any questions, please feel free to contact <em>La Pellegrina</em> by
       phone (+31 619 224 758) or <a href="mailto:info@pellegrina.net">email</a>.</p>
     <p>Musical greetings,</p>
     <p>Dirkjan Horringa <em><br>
