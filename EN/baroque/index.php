@@ -75,7 +75,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>For: singers (soloists and very experienced choral singers),
           instrumentalists (baroque strings, viola da gamba,
           recorder/traverso, baroque oboe, baroque bassoon, baroque
-          trumpet & trombone, harpsichord/organ, theorbo; period
+          natural horn, trumpet, harpsichord/organ, theorbo; period
           instruments only, tuning pitch 415 Hz)</li>
         <li>With Dirkjan Horringa (singers and artistic direction),
           Femke Huizinga (orchestra, violin), Hanna Lindeijer (baroque

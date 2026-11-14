@@ -115,14 +115,14 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                                     <?php
                                     if (isset($instr) and stristr($instr, '141') !== false) echo 'selected'; ?>>
                                     barokfagot </OPTION>
+                                <OPTION VALUE="150"
+                                    <?php
+                                    if (isset($instr) and stristr($instr, '150') !== false) echo 'selected'; ?>>
+                                    natuurhoorn</OPTION>
                                 <OPTION VALUE="160"
                                     <?php
                                     if (isset($instr) and stristr($instr, '160') !== false) echo 'selected'; ?>>
                                     baroktrompet</OPTION>
-                                <OPTION VALUE="170"
-                                    <?php
-                                    if (isset($instr) and stristr($instr, '170') !== false) echo 'selected'; ?>>
-                                    baroktrombone</OPTION>
                             </OPTGROUP>
                             <OPTGROUP
                                 LABEL="Strijkers (barokinstrumenten of moderne instrumenten met darmsnaren en barokstok)">

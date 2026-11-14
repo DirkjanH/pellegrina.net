@@ -72,7 +72,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <ul>
         <li>Voor: zangers (solisten en zeer ervaren koorzangers),
           instrumentalisten (barokstrijkers, viola da gamba, traverso,
-          barokhobo, barokfagot, baroktrompet & trombone,
+          barokhobo, barokfagot, natuurhoorn, baroktrompet,
           clavecimbel/orgel, theorbe, uitsluitend ‘oude’ instrumenten,
           stemtoon 415 Hz)</li>
         <li>Olv Dirkjan Horringa (zangers en artistieke leiding), Femke

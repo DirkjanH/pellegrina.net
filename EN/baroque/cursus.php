@@ -89,8 +89,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     ensembles. The ensembles work most of the time under the intensive supervision of the
                     teachers. The ensembles present themselves to the other
                     participants at the end of the course. This year the focus
-                    is on German, Austrian, Polish and Czech baroque music, but this is optional for
-                    chamber music. Feel free to play or sing Italian, English or
+                    is on baroque music from Southern Italy, particularly Naples,
+                    but this is optional for chamber music. Feel free to play or sing German, English or
                     French music in the small ensemble program.</p>
                 <p class="citaat">Birgit Apfelbaum: &quot;In my opinion, La Pellegrina fully lives up to its claim of offering a stimulating environment for dedicated baroque enthusiasts with a professional attitude. I particularly enjoyed the combination of the tutti program with a grand final concert for external listeners and the work in chamber music ensembles accompanied by highly motivated coaches, culminating in a recital attended by the other participants.&quot;</p>
                 <p>Alle formaties vanaf kwartet zijn mogelijk. De ensembles worden in april of mei samengesteld, zodat je je thuis kunt voorbereiden. Binnen de mogelijkheden en beperkingen van de cursus wordt rekening gehouden met wensen voor stukken en instrumentatie. De cursus staat open voor individuele deelnemers en vaste ensembles.</p>
@@ -103,11 +103,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     A number of rooms and keyboard instruments are available for this.</p>
                 <p class="citaat">Lea Schuiling: &quot;Nice of course, doing a piece like this for choir, soloists and orchestra. But the
                     chamber music is really an asset! Singers and instrumentalists, one to a part, with coaching by all teachers ... Something you rarely get the opportunity to do! And when the teachers sometimes contradict each other, .. well, .. that gives space&quot;</p>
-                <h3>Baroque from Central Europe, program for all singers and instrumentalists</h3>
-                <p><div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.jpg" width="800" alt="Concert in the monastery church"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work together on the programme 'Baroque from Central Europe' for all,
-                which is performed in the monastery church on the last course day as the culmination of the course. The program includes Biber's Requiem in F minor and Zelenka's Miserere in C minor ZWV 57. Of course, at first sectional rehearsals for the choir and orchestra and correpetition for the soloists will be held. Later in
-                the week, all groups join forces to create a colorful and diverse ensemble, in which everyone has their
-                own challenges. <a href="programma.php">Read more about the works and their musical and historical context here</a>.
+                <h3>Neapolitan Baroque for all singers and instrumentalists</h3>
+                <p><div class="fotocenter w3-center"><img class="w3-image" src="/Images/concert_kloosterkerk.jpg" width="800" alt="Concert in the monastery church"><br>Concert in the monastery church</div>Every afternoon, all singers and instrumentalists work together on the programme 'Neapolitan Baroque'. The centrepiece is Alessandro Scarlatti's <i>Te Deum</i> and Nicola Porpora's <i>Laudate Pueri</i>, both for soloists, choir and orchestra (strings, winds and basso continuo). This programme is performed in the monastery church as the course's final concert. First, there are sectional rehearsals for the choir and orchestra and rehearsals with the soloists. Later in the week, all groups join forces to create a colourful and diverse ensemble in which everyone has their own challenges. <a href="programma.php">Read more about the works and their musical and historical context here</a>.
                 </p>
             </div>
             <p class="citaat">Andrew Fyson: &quot;Attending La Pellegrina and
@@ -154,7 +151,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h4><strong>Instrumentalists</strong></h4>
                 <p>The maximum instrumental group size is 24. For instruments we
                     can place baroque strings, viola da gamba,
-                    traverso/recorder, baroque oboe, baroque bassoon, baroque trumpet & trombone
+                    traverso/recorder, baroque oboe, baroque bassoon, natural horn, baroque trumpet
                     harpsichord/organ, theorbo; period instruments only, tuning
                     pitch 415 Hz. </p>
                 <p>To qualify you must meet the following requirements: </p>

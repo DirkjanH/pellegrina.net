@@ -130,15 +130,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         alt="Concert in de kloosterkerk"><br>Concert in de
                     kloosterkerk</div> Iedere middag werken alle zangers en
                 instrumentalisten samen aan het programma 'Napolitaanse Barok'
-                voor iedereen. Centraal staat het Requiem in f klein van Biber
-                en het Miserere in c klein ZWV 57 van Zelenka. Dit programma
-                wordt in de kloosterkerk uitgevoerd als het slotconcert van de
-                cursus. Uiteraard zijn er eerst groepsrepetities voor het koor
-                en het orkest, en correpetitie voor de solisten. Later in de
-                week komen alle groepen bijeen en ontstaat een kleurrijk en
-                divers ensemble, waarin iedereen zijn eigen uitdagingen heeft.
-                <a href="programma.php">Lees hier meer over de werken en hun
-                    muzikale en historische context</a>.</p>
+                voor iedereen. Centraal staan het <i>Te Deum</i> van Alessandro
+                Scarlatti en het <i>Laudate Pueri</i> van Nicola Porpora, beide
+                voor soli, koor en orkest (strijkers, blazers en BC). Dit
+                programma wordt in de kloosterkerk uitgevoerd als het
+                slotconcert van de cursus. Uiteraard zijn er eerst
+                groepsrepetities voor het koor en het orkest, en correpetitie
+                voor de solisten. Later in de week komen alle groepen bijeen en
+                ontstaat een kleurrijk en divers ensemble, waarin iedereen zijn
+                eigen uitdagingen heeft. <a href="programma.php">Lees hier meer
+                    over de werken en hun muzikale en historische context</a>.
+                </p>
             </div>
             <p class="citaat">Andrew Fyson: &#8220;Het bijwonen van La
                 Pellegrina en het werken met prachtige en enthousiaste
@@ -194,7 +196,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h4>Instrumentalisten</h4>
                 <p>Er is plaats voor maximaal 24 instrumentalisten, namelijk
                     barokstrijkers, viola da gamba, blokfluit, traverso,
-                    barokhobo, barokfagot, baroktrompet & -trombone,
+                    barokhobo, barokfagot, natuurhoorn, baroktrompet,
                     clavecimbel/orgel, theorbe, uitsluitend 'oude' instrumenten,
                     stemtoon 415 Hz.</p>
                 <p>Om deel te kunnen nemen dien je te voldoen aan de volgende
