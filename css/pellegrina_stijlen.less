@@ -56,6 +56,7 @@
   .course();
 }
 
+/* Ensemblelijsten: ensemblelijst_1.php en ensemblelijst_2.php; ook onderhoud/ensemble.php. */
 .set0 {
   color: @set0;
   background-color: tint(@set0, 90%);
@@ -148,6 +149,16 @@ h6 {
 
 h2+h3 {
   margin-top: 0.5em;
+}
+
+/* Jaar- en cursuskoppen op algemeen/werken.php. */
+.werken h1.jaar {
+  border-top: 3px double;
+  padding-top: 10px;
+}
+
+.werken h2.cursus {
+  margin: 0 0 5px 0;
 }
 
 ul {
@@ -258,6 +269,7 @@ div.fotocenter img {
   margin-top: 20px;
 }
 
+/* Ensemblenummers op ensemblelijst_1.php en ensemblelijst_2.php. */
 .formation {
   font-size: 3em;
 }
@@ -268,6 +280,7 @@ div.fotocenter img {
   position: absolute;
 }
 
+/* Blok met beschikbare plaatsen op EN/romantic/cursus.php. */
 #nog_plaats {
   width: 98%;
   height: auto;
@@ -420,10 +433,15 @@ table#overzicht {
   font-size: 0.9em;
 }
 
+/* Facebookverwijzing op NL/ en EN/dank.php, dank_info.php en dank_GDPR.php,
+   en op EN/baroque/dank.php; ook gebruikt in bevestigingsmails. */
 p.facebook {
   color: #336699;
 }
 
+/* Kolomindeling op downloads/course_baroque.php en course_romantic.php,
+   NL/baroque/programma.php, EN/baroque/programma.php en
+   EN/romantic/programma_reicha.php en Svatá Ludmila cuts.php. */
 div.cols3 {
   column-count: 3;
   column-width: 300px;
@@ -469,7 +487,8 @@ select {
   border-width: thin;
 }
 
-/* Opmaak titel: */
+/* Cursustitel via includes/cursustitel.php op de cursuspagina's
+   onder NL/baroque, EN/baroque, NL/romantic en EN/romantic. */
 div#titel {
   width: 100%;
   display: table;
@@ -541,6 +560,7 @@ div#inhoud {
   margin-left: auto;
 }
 
+/* Gemeenschappelijke paginakop via includes/header.NL.php en header.EN.php. */
 div#top {
   margin-left: 200px;
   text-align: center;
@@ -598,6 +618,7 @@ ul.w3-card-2 {
   border-radius: 16px;
 }
 
+/* Afbeelding naast programmatekst op NL/romantic/programma.php en EN/romantic/programma.php. */
 .programma-layout {
   display: flex;
   align-items: flex-start;
@@ -619,6 +640,7 @@ ul.w3-card-2 {
   min-width: 0;
 }
 
+/* Oude ul-variant van het cursusmenu; includes/cursustitel.php gebruikt nu een div. */
 ul#cursusmenu {
   background-color: @cursusmenu !important;
   margin-top: -2px;
@@ -635,7 +657,8 @@ ul#cursusmenu li a:hover {
   background-color: @cursusmenu_actief;
 }
 
-/* Navigatie: */
+/* Zijmenu via includes/navigatie.NL.php, navigatie.EN.php
+   en de overeenkomstige navigatie.tijdelijk-bestanden. */
 nav#navcontainer {
   width: 185px;
   border: 1px solid darken(@nav_accent, 20%);
@@ -783,6 +806,7 @@ a:hover {
   }
 
   div#cursus_form {
+    /* Afdrukweergave van ensemblelijst_1.php, ensemblelijst_2.php en onderhoud/ensemblelijst.php. */
     margin-left: 0px !important;
     padding: 0px;
     border: none !important;
@@ -803,6 +827,7 @@ a:hover {
   }
 
   div.pagina {
+    /* Afzonderlijke afdrukpagina's op bus.php en bus_bech.php. */
     page-break-after: always;
   }
 

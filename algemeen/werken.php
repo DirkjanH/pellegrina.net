@@ -9,22 +9,9 @@
     <title>Performed Works</title>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <style type="text/css">
-        h1.jaar {
-            border-top: 3px double;
-            padding-top: 10px;
-            font-size: 32px;
-        }
-
-        h2.cursus {
-            color: #009933;
-            margin: 0 0 5px 0;
-            font-size: 20x;
-        }
-    </style>
 </head>
 
-<body>
+<body class="werken">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main">
         <div id="main">
