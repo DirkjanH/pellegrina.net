@@ -194,6 +194,7 @@ h2+h3 {
 }
 
 .adresformulier input:not([type="radio"]):not([type="hidden"]),
+.adresformulier select,
 .adresformulier textarea {
   width: 100%;
   padding: 10px;
@@ -211,8 +212,18 @@ h2+h3 {
   resize: vertical;
 }
 
-.adresformulier fieldset.adresformulier-geslacht {
-  margin: 16px 0 0;
+.adresformulier-naam {
+  display: flex;
+  gap: 12px;
+}
+
+.adresformulier-geslacht {
+  flex: 0 0 5.5rem;
+}
+
+.adresformulier-naam > div:last-child {
+  flex: 1;
+  min-width: 0;
 }
 
 .adresformulier-knoppen {

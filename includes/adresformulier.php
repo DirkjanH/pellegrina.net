@@ -1,12 +1,12 @@
 <?php
 $adresformulierTekst = $adresformulierTaal === 'NL' ? [
     'titel' => 'Adresgegevens en nieuwsbrief',
-    'inleiding' => 'Blijf op de hoogte van de zomercursussen en andere projecten van La Pellegrina. Met dit formulier kun je je gegevens toevoegen of je afmelden. Als je al bekend bent bij La Pellegrina, kun je je gegevens wijzigen door dit formulier in te sturen.',
+    'inleiding' => 'Blijf op de hoogte van de zomercursussen en andere projecten van <em>La Pellegrina</em>. Met dit formulier kun je je gegevens toevoegen of je afmelden. Als je al bekend bent bij <em>La Pellegrina</em>, kun je je gegevens wijzigen door dit formulier in te sturen.',
     'verplicht' => 'Velden met * zijn verplicht. Bij afmelden zijn alleen je naam en e-mailadres nodig.',
     'actie' => 'Wat wil je doen?',
     'acties' => [
         'alles' => 'Mij aanmelden voor de nieuwsbrief',
-        'email' => '<strong>Ik ben al bekend bij <em>La Pellegrina</em>. Update mijn gegevens als volgt in het bestand</strong> (alle relevante gegevens en tenminste je naam en emailadres invullen en op verzenden drukken)',
+        'email' => 'Ik ben al bekend bij <em>La Pellegrina</em>. Update mijn gegevens als volgt in het bestand (alle relevante gegevens en tenminste je naam en emailadres invullen en op verzenden drukken)',
         'delete' => 'Mij afmelden voor de nieuwsbrief',
     ],
     'persoonlijk' => 'Persoonlijke gegevens',
@@ -17,9 +17,10 @@ $adresformulierTekst = $adresformulierTaal === 'NL' ? [
     'email' => 'E-mail',
     'instrstem' => 'Instrument / stemsoort',
     'geboortedatum' => 'Geboortedatum (dd-mm-jjjj)',
-    'geslacht' => 'Geslacht (optioneel)',
-    'M' => 'Man',
-    'V' => 'Vrouw',
+    'geslacht' => 'Geslacht',
+    'M' => 'M',
+    'V' => 'V',
+    'X' => 'X',
     'adres' => 'Straat en huisnummer',
     'postcode' => 'Postcode',
     'plaats' => 'Plaats',
@@ -30,12 +31,12 @@ $adresformulierTekst = $adresformulierTaal === 'NL' ? [
     'wissen' => 'Formulier leegmaken',
 ] : [
     'titel' => 'Contact details and newsletter',
-    'inleiding' => 'Stay informed about La Pellegrina summer schools and related projects. Use this form to add your details or to unsubscribe. If you are known by La Pellegrina you can change your details by sending this form.',
+    'inleiding' => 'Stay informed about <em>La Pellegrina</em> summer schools and related projects. Use this form to add your details or to unsubscribe. If you are known by <em>La Pellegrina</em> you can change your details by sending this form.',
     'verplicht' => 'Fields marked * are required. To unsubscribe, only your name and email address are needed.',
     'actie' => 'What would you like to do?',
     'acties' => [
         'alles' => 'Subscribe to the newsletter',
-        'email' => '<strong>I am already known to <em>La Pellegrina</em>. Update my details in your records as follows</strong> (fill in all relevant details and at least your name and email address, then press Send)',
+        'email' => 'I am already known to <em>La Pellegrina</em>. Update my details in your records as follows (fill in all relevant details and at least your name and email address, then press Send)',
         'delete' => 'Unsubscribe from the newsletter',
     ],
     'persoonlijk' => 'Personal details',
@@ -46,9 +47,10 @@ $adresformulierTekst = $adresformulierTaal === 'NL' ? [
     'email' => 'Email',
     'instrstem' => 'Instrument / voice type',
     'geboortedatum' => 'Date of birth (dd-mm-yyyy)',
-    'geslacht' => 'Gender (optional)',
-    'M' => 'Male',
-    'V' => 'Female',
+    'geslacht' => 'Gender',
+    'M' => 'M',
+    'V' => 'F',
+    'X' => 'X',
     'adres' => 'Street and house number',
     'postcode' => 'Postal code',
     'plaats' => 'City',
@@ -113,7 +115,19 @@ $adresformulierVelden = [
                         $voorwaardelijkVerplicht = $verplicht && !$altijdVerplicht;
                         $nuVerplicht = $altijdVerplicht || ($voorwaardelijkVerplicht && !$adresformulierAfmelden);
                     ?>
-                        <div>
+                        <div<?php if ($veld === 'voornaam') echo ' class="adresformulier-naam"'; ?>>
+                            <?php if ($veld === 'voornaam'): ?>
+                                <div class="adresformulier-geslacht">
+                                    <label for="adres-geslacht"><?php echo $adresformulierTekst['geslacht']; ?></label>
+                                    <select name="geslacht" id="adres-geslacht" autocomplete="sex">
+                                        <option value="">-</option>
+                                        <?php foreach (['M', 'V', 'X'] as $geslacht): ?>
+                                            <option value="<?php echo $geslacht; ?>" <?php if (($_POST['geslacht'] ?? '') === $geslacht) echo 'selected'; ?>><?php echo $adresformulierTekst[$geslacht]; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div>
+                            <?php endif; ?>
                             <label for="adres-<?php echo $veld; ?>">
                                 <?php echo $adresformulierTekst[$veld]; ?>
                                 <?php if ($verplicht): ?>
@@ -127,21 +141,12 @@ $adresformulierVelden = [
                                 <?php if ($veld === 'geboortedatum'): ?>placeholder="<?php echo $adresformulierTaal === 'NL' ? 'dd-mm-jjjj' : 'dd-mm-yyyy'; ?>" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}"<?php endif; ?>
                                 <?php if ($voorwaardelijkVerplicht) echo 'data-adres-verplicht'; ?>
                                 <?php if ($nuVerplicht) echo 'required'; ?>>
+                            <?php if ($veld === 'voornaam'): ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <?php if ($groep === 'persoonlijk'): ?>
-                    <fieldset class="adresformulier-geslacht">
-                        <legend><?php echo $adresformulierTekst['geslacht']; ?></legend>
-                        <?php foreach (['M', 'V'] as $geslacht): ?>
-                            <label class="adresformulier-keuze">
-                                <input type="radio" name="geslacht" value="<?php echo $geslacht; ?>"
-                                    <?php if (($_POST['geslacht'] ?? '') === $geslacht) echo 'checked'; ?>>
-                                <span><?php echo $adresformulierTekst[$geslacht]; ?></span>
-                            </label>
-                        <?php endforeach; ?>
-                    </fieldset>
-                <?php endif; ?>
             </fieldset>
         <?php endforeach; ?>
         <label for="adres-opmerkingen"><?php echo $adresformulierTekst['opmerkingen']; ?></label>

@@ -71,6 +71,12 @@ foreach (['NL', 'EN'] as $language) {
     }
     checkAddressRequest($xpath->query("//input[@name='mobiel']")->length === 0, "{$language}: separate mobile field remains.");
     checkAddressRequest($xpath->query("//input[@name='telefoon' and @type='tel']")->length === 1, "{$language}: telephone input must use type tel.");
+    checkAddressRequest($xpath->query("//div[@class='adresformulier-naam']/div[1]/select[@name='geslacht' and not(@required)]/option[@value='X']")->length === 1, "{$language}: optional gender selector with X must precede the first name.");
+    checkAddressRequest($xpath->query("//input[@name='geslacht']")->length === 0, "{$language}: old gender radio buttons remain.");
+    $result = addressRequest($language, array_merge($complete, ['geslacht' => 'X']));
+    checkAddressRequest($result['stored'] && $result['values'][6] === 'X', "{$language}: gender X must be saved.");
+    $result = addressRequest($language, array_merge($complete, ['geslacht' => 'X', 'email' => '']));
+    checkAddressRequest(preg_match('/value="X"\s+selected/', $result['html']) === 1, "{$language}: selected gender must remain after a validation error.");
 
     foreach (['31-02-2000', '01-01-2999', 'not-a-date', "01-01-\0"] as $date) {
         $result = addressRequest($language, array_merge($complete, ['geboortedatum' => $date]));
