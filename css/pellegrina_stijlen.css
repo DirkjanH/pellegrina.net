@@ -128,7 +128,7 @@
 }
 /* Kleuren: */
 .LP_colour {
-  color: darkgreen;
+  color: #0069cb;
 }
 .actiekleur {
   /* voor actieve accordion */
@@ -150,7 +150,7 @@
   text-decoration: none !important;
 }
 .romantic {
-  color: #269551;
+  color: #1f713e;
   font-weight: bold;
   text-decoration: none !important;
 }
