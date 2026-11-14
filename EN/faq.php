@@ -24,8 +24,8 @@
         on the spot, so don't forget to bring your favorite sheet music. </div>
     <div class="w3-card-2 w3-padding faq-item"><B>How should I pay?</B> <em>La
             Pellegrina</em> offers two methods of payment. You may either
-        transfer your payment into account NL60 BUNQ 2177 4957 25 (BIC ASNB
-        NL21) of <em>La Pellegrina</em>, Utrecht, the Netherlands. If this is
+        transfer your payment into account NL60 BUNQ 2177 4957 25 (BIC BUNQ
+        NL2A) of <em>La Pellegrina</em>, Utrecht, the Netherlands. If this is
         not practical, payment in cash on the spot is also possible by mutual
         agreement. See the <a href="praktisch.php" target="_self">Prices &amp;
             Practicals page</a> for more information. </div>

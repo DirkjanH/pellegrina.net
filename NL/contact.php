@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -13,7 +12,6 @@
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
 </head>
-
 <body>
     <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Contact</h2>
@@ -30,15 +28,14 @@
     <h2>Colofon</h2>
     <h4>Tekst</h4>
     <p>Dirkjan Horringa</p>
-    <h4>Video</h4>
-    <p>Martin Mrkva, Bram Heemskerk, Nicky de Bie, Ank de Wit</p>
     <h4>Design &amp; uitvoering</h4>
     <p>Thomas Op de Coul, Dirkjan Horringa </p>
     <h4>Foto's</h4>
-    <p>Hans Nijs en Václav Pancer, maar ook prachtige foto's van deelnemers en docenten, waaronder Briana Gillet, Matthia Cox,
-        Lea Schuiling, Wout&nbsp;van&nbsp;den&nbsp;Heuvel, Cassandra Luckhardt,
-        Anthonie Meijers, Désirée Staverman, Vivian Stemerdink,
-        Patrick&nbsp;Vercammen, Petra&nbsp;Wals, Joyce Vermeer, Fred Willems en
+    <p>Hans Nijs en Václav Pancer, maar ook prachtige foto's van deelnemers en
+        docenten, waaronder Briana Gillet, Matthia Cox, Lea Schuiling,
+        Wout&nbsp;van&nbsp;den&nbsp;Heuvel, Cassandra Luckhardt, Anthonie
+        Meijers, Désirée Staverman, Vivian Stemerdink, Patrick&nbsp;Vercammen,
+        Petra&nbsp;Wals, Joyce Vermeer, Fred Willems en
         Annemieke&nbsp;Zwanenburg.</p>
     <h2 class="begin">Interessante links over muziek</h2>
     <h3>Muziekbibliotheken en&nbsp;digitale collecties van&nbsp;edities</h3>
@@ -78,5 +75,4 @@
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
-
 </html>

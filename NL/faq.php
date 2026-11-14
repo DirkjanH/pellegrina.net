@@ -24,8 +24,8 @@
         zich meestal ter plekke. Het is aan te raden om je eigen bladmuziek mee
         te nemen. </div>
     <div class="w3-card-2 w3-padding faq-item"><b>Hoe kan ik betalen?</b> <i>La
-            Pellegrina</i> accepteert betalingen via rekening NL33 ASNB 0707
-        2500 72 (voor buitenlandse betalingen: BIC BUNQ NL2A) t.n.v. La
+            Pellegrina</i> accepteert betalingen via rekening NL60 BUNQ 2177
+        4957 25 (voor buitenlandse betalingen: BIC BUNQ NL2A) t.n.v. La
         Pellegrina te Utrecht. Als dit niet praktisch is, is betaling in
         contanten ter plekke in overleg ook mogelijk.</div>
     <div class="w3-card-2 w3-padding faq-item"><strong>Hoe wordt er gereisd naar České
