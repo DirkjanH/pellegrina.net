@@ -147,11 +147,14 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "info-aanvraag"))
 						if (empty($subject)) $subject = " ";
 						}
 				else {
-		// maak een subject aan:
-						$subject = "Gegevens/email toegevoegd aan bestand La Pellegrina";
-							
-				// maak de tekst van het emailbericht aan:
-						$message .= "Hartelijk dank voor het toevoegen van je gegevens c.q. emailadres aan het bestand van La Pellegrina. De volgende gegevens zijn geregistreerd:\n\n";
+						if ($_POST['actie'] === 'alles') {
+							$subject = "Gegevens toegevoegd aan bestand La Pellegrina";
+							$message .= "Hartelijk dank voor het toevoegen van je gegevens aan het bestand van La Pellegrina. Vanaf nu houden we je op de hoogte van onze activiteiten.\n\n";
+						} else {
+							$subject = "Gegevens bijgewerkt in bestand La Pellegrina";
+							$message .= "Hartelijk dank voor het updaten van je gegevens in het bestand van La Pellegrina.\n\n";
+						}
+						$message .= "De volgende gegevens zijn geregistreerd:\n\n";
 						$message .= "{$naam}\n";
 						$message .= "{$_POST['email']}\n";
 						if (isset($_POST['geboortedatum'])and ($_POST['geboortedatum'] != "")) $message .= "{$_POST['geboortedatum']}\n";

@@ -2,6 +2,18 @@
 
 class AddressRequestStored extends RuntimeException {}
 
+$mailTestMode = in_array('--mail', $argv, true);
+if ($mailTestMode) {
+    if (function_exists('mail')) {
+        throw new RuntimeException('Run mail tests with -d disable_functions=mail to prevent real email delivery.');
+    }
+    function mail($to, $subject, $message, $headers) {
+        global $capturedMail;
+        $capturedMail = compact('to', 'subject', 'message', 'headers');
+        throw new AddressRequestStored('Confirmation email captured without sending.');
+    }
+}
+
 function select_query($query, $index = 2) {
     return false;
 }
@@ -13,12 +25,15 @@ function GetSQLValueString($value, $type) {
 }
 
 function exec_query($query) {
+    global $mailTestMode;
+    if ($mailTestMode) return true;
     throw new AddressRequestStored($query);
 }
 
 function addressRequest($language, array $post) {
-    global $storedValues;
+    global $storedValues, $capturedMail;
     $storedValues = [];
+    $capturedMail = null;
     $_POST = $post;
     $_SERVER['DOCUMENT_ROOT'] = dirname(__DIR__);
     $_SERVER['PHP_SELF'] = "/{$language}/adres_toevoegen.php";
@@ -36,7 +51,7 @@ function addressRequest($language, array $post) {
             $html = ob_get_clean() . $html;
         }
     }
-    return ['stored' => $stored, 'html' => $html, 'values' => $storedValues];
+    return ['stored' => $stored, 'html' => $html, 'values' => $storedValues, 'mail' => $capturedMail];
 }
 
 function checkAddressRequest($condition, $message) {
@@ -54,6 +69,24 @@ $complete = [
     'plaats' => 'Test city', 'land' => 'Netherlands', 'telefoon' => '+31 6 12345678',
     'geboortedatum' => '29-02-2000',
 ];
+
+if ($mailTestMode) {
+    foreach (['NL' => ['toevoegen', 'updaten', 'activiteiten'], 'EN' => ['adding', 'updating', 'activities']] as $language => [$adding, $updating, $activities]) {
+        foreach (['alles' => $adding, 'email' => $updating] as $action => $verb) {
+            $result = addressRequest($language, array_merge($complete, ['actie' => $action]));
+            $mail = $result['mail'];
+            checkAddressRequest($mail !== null && $mail['to'] === $complete['email'], "{$language}: confirmation must be addressed to the applicant.");
+            checkAddressRequest(str_contains($mail['message'], $verb), "{$language}: {$action} confirmation uses the wrong action.");
+            checkAddressRequest(!str_contains($mail['message'], $action === 'alles' ? $updating : $adding), "{$language}: confirmation mixes adding and updating.");
+            checkAddressRequest(str_contains($mail['message'], $activities) === ($action === 'alles'), "{$language}: only adding must confirm future activity updates.");
+            $subjectAction = $language === 'NL' ? ($action === 'alles' ? 'toegevoegd' : 'bijgewerkt') : ($action === 'alles' ? 'added' : 'updated');
+            checkAddressRequest(str_contains($mail['subject'], $subjectAction), "{$language}: subject must distinguish adding from updating.");
+            checkAddressRequest(str_contains($mail['message'], $complete['email']), "{$language}: registered details must remain in the confirmation.");
+        }
+        echo "PASS: {$language} confirmation mail distinguishes adding and updating without sending mail.\n";
+    }
+    exit(0);
+}
 
 foreach (['NL', 'EN'] as $language) {
     $initial = addressRequest($language, []);
@@ -102,3 +135,7 @@ foreach (['NL', 'EN'] as $language) {
     checkAddressRequest(str_contains($result['html'], '&lt;script&gt;alert(1)&lt;/script&gt;'), "{$language}: submitted values must be escaped when redisplayed.");
     echo "PASS: {$language} required fields, validation errors, optional fields, unsubscribe, and single telephone storage.\n";
 }
+
+$process = proc_open([PHP_BINARY, '-d', 'disable_functions=mail', __FILE__, '--mail'], [1 => STDOUT, 2 => STDERR], $pipes);
+if (!is_resource($process)) throw new RuntimeException('Could not start isolated confirmation mail tests.');
+exit(proc_close($process));
