@@ -13,8 +13,8 @@
 @koppen: #047a73;
 @link: #cb0033;
 
-@nav_background: #f1ffc4; // licht geelgroen
-@nav_accent: darken(@nav_background, 20%); // geelgroen
+@nav_background: LightSkyBlue; // licht hemelsblauw
+@nav_accent: darken(@nav_background, 20%);
 
 @cursusmenu: lighten(@nav_accent, 10%);
 @cursusmenu_actief: lighten(@cursusmenu, 20%);
@@ -413,11 +413,13 @@ table#overzicht {
 .begin {
   margin-top: 0em;
 }
+
 .opmerking {
   font-style: italic;
   color: #666;
   font-size: 0.9em;
 }
+
 p.facebook {
   color: #336699;
 }
@@ -447,7 +449,8 @@ div.cols3 h3 {
   column-span: all;
 }
 
-div.cols3 ul, div.cols2 ul {
+div.cols3 ul,
+div.cols2 ul {
   margin-top: 0px;
 }
 
