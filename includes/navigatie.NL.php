@@ -27,7 +27,8 @@
                 <em>La Pellegrina</em></a>
             <a href="vorigeprojecten.php"
                 class="w3-bar-item w3-button">Ervaringen van deelnemers</a>
-            <a href="/algemeen/werken.php" class="w3-bar-item w3-button">Eerder
+            <a href="/algemeen/werken.php" target="_blank" rel="noopener"
+                class="w3-bar-item w3-button">Eerder
                 uitgevoerde werken</a>
             <a href="contact.php" target="_parent"
                 class="w3-bar-item w3-button">Contact & links</a>

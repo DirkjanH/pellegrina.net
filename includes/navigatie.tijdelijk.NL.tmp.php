@@ -19,7 +19,7 @@
                 <li><a href="over_pellegrina.php">Over <em>La
                             Pellegrina</em></a></li>
                 <li><a href="vorigeprojecten.php">Eerdere projecten</a></li>
-                <li><a href="../../algemeen/werken.php">Eerder uitgevoerde
+                <li><a href="../../algemeen/werken.php" target="_blank" rel="noopener">Eerder uitgevoerde
                         werken</a></li>
                 <li><a href="contact.php" target="_parent">Contact & links</a>
                 </li>

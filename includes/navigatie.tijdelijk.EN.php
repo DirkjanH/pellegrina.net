@@ -29,7 +29,7 @@
             <a class="w3-bar-item w3-button"
                 href="vorigeprojecten.php">Experiences of participants</a>
             <a class="w3-bar-item w3-button"
-                href="/algemeen/werken.php">Previously performed works</a>
+                href="/algemeen/werken.php" target="_blank" rel="noopener">Previously performed works</a>
             <a class="w3-bar-item w3-button" href="contact.php"
                 target="_parent">Contact & links</a>
         </div>
