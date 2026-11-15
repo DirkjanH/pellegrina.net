@@ -56,16 +56,16 @@
 </nav>
 <script>
     function w3_open() {
-        document.getElementById("main").style.marginLeft = "200px";
-        document.getElementById("navcontainer").style.width = "200px";
-        document.getElementById("navcontainer").style.display = "block";
-        document.getElementById("openNav").style.display = "none";
+        var menu = document.getElementById("navcontainer");
+        menu.style.display = "block";
+        document.getElementById("main").style.marginLeft = menu.offsetWidth + "px";
+        document.querySelector(".w3-opennav").style.display = "none";
     }
 
     function w3_close() {
-        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("main").style.marginLeft = "";
         document.getElementById("navcontainer").style.display = "none";
-        document.getElementById("openNav").style.display = "inline-block";
+        document.querySelector(".w3-opennav").style.display = "inline-block";
     }
 
     function myFunction() {

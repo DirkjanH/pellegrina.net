@@ -10,6 +10,7 @@ div#mainpage {
 }
 
 div#zoeknaam {
+    width: 200px;
     float: left;
     margin-right: 16px;
 }
@@ -19,50 +20,6 @@ div#navigatie {
     font-size: 12px;
     float: left;
     margin-left: 16px;
-}
-
-#navcontainer {
-    width: 195px;
-    background-color: white;
-    display: block;
-    margin-bottom: 20px;
-}
-
-#navcontainer li {
-    padding-bottom: 0;
-    line-height: 1.2em;
-    font-size: 13px;
-}
-
-ul#navlist {
-    margin: 0;
-    padding: 0;
-}
-
-#navlist a:link,
-#navlist a:visited {
-    display: block;
-    color: black;
-}
-
-#navlist a:hover,
-#navlist a:active {
-    display: block;
-    background-color: grey;
-    color: white;
-}
-
-#navcontainer ul {
-    list-style-type: none;
-}
-
-#navcontainer li.active {
-    border-bottom: none;
-}
-
-#navcontainer li.active a {
-    text-decoration: none;
-    width: 195px;
 }
 
 .NogNietBevestigd {

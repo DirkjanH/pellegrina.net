@@ -106,7 +106,7 @@ function check($input)
 </head>
 
 <body>
-    <div id="inhoud" class="w3-panel"> <?php if (empty($Inschr)) $Inschr = $_SESSION['Inschr'];
+    <div id="inhoud"> <?php if (empty($Inschr)) $Inschr = $_SESSION['Inschr'];
                                         d($_SESSION, $Inschr) ?> <form
             id="vinden" method="post"
             action="<?php echo $_SERVER['PHP_SELF']; ?>">

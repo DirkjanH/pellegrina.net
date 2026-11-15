@@ -739,40 +739,31 @@ ul#cursusmenu li a:hover {
   background-color: @cursusmenu_actief;
 }
 
-/* Zijmenu via includes/navigatie.NL.php, navigatie.EN.php
-   en de overeenkomstige navigatie.tijdelijk-bestanden. */
-nav#navcontainer {
-  width: 185px;
+/* Gedeeld zijmenu voor de navigatie-includes en onderhoud/LP_zoeknaam.php. */
+#navcontainer {
+  width: 200px;
+  margin-bottom: 20px;
   border: 1px solid darken(@nav_accent, 20%);
   border-radius: 4px;
   background: @nav_background;
 }
 
-#navcontainer ul {
-  width: 185px;
+#navcontainer ul,
+#navcontainer li {
   list-style-type: none;
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
 #navcontainer a {
   font-size: 13px;
-  width: 185px;
+  line-height: 1.4;
+  width: 100%;
   display: block;
-  padding: 4px 8px;
+  padding: 6px 8px;
   margin: 0;
   text-decoration: none;
-  border-bottom: 1px solid black;
-}
-
-#navcontainer li,
-#navcontainer div.w3-accordion {
-  width: 185px;
-  margin-top: 0px;
-  padding-bottom: 0;
-  padding-top: 0;
-  margin-bottom: 0;
-  background: initial;
+  overflow-wrap: anywhere;
   border-bottom: 1px solid darken(@nav_accent, 20%);
 }
 
@@ -782,13 +773,15 @@ nav#navcontainer {
 }
 
 #navcontainer a:hover,
-#navcontainer a:active {
+#navcontainer a:active,
+#navcontainer a:focus-visible {
   color: black !important;
   background-color: @nav_accent !important;
 }
 
-#navlist a.grijs:hover,
-#navlist a.grijs:active {
+#navcontainer a.grijs:hover,
+#navcontainer a.grijs:active,
+#navcontainer a.grijs:focus-visible {
   background-color: #999 !important;
   color: #666 !important;
 }
@@ -803,7 +796,7 @@ p.citaat {
   letter-spacing: 0.03em;
 }
 
-#navcontainer {
+nav#navcontainer {
   display: none;
 }
 
@@ -849,7 +842,7 @@ a:hover {
     position: relative;
     clear: both !important;
     border-style: none;
-    width: 100%;
+    width: auto;
   }
 }
 
