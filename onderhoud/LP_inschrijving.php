@@ -258,11 +258,11 @@ d($cursus, $dlnmr, $inschrijving);
                             <?php if ($ins['CursusId_FK'] != "") {
                                 $cursusgegevens = $cursus[$ins['CursusId_FK']];
                             ?>
-                                Inschrijving nr. <input name="InschId" type="text"
-                                    class="uit" value="<?php echo $ins['InschId']; ?>" size="2">
-                                <br><b><?php echo htmlspecialchars($cursusgegevens['cursusnaam_nl'], ENT_QUOTES, 'UTF-8'); ?></b>
+                                <b><?php echo htmlspecialchars($cursusgegevens['cursusnaam_nl'], ENT_QUOTES, 'UTF-8'); ?></b>
                                 (<?php echo (new DateTimeImmutable($cursusgegevens['datum_begin']))->format('d-m-Y'); ?>
                                 t/m <?php echo (new DateTimeImmutable($cursusgegevens['datum_eind']))->format('d-m-Y'); ?>)
+                                Inschrijving nr. <input name="InschId" type="text"
+                                    class="uit" value="<?php echo $ins['InschId']; ?>" size="2">
                             <?php } ?>
                             <input name="CursusId_FK" type="hidden"
                                 value="<?php echo stripslashes($ins['CursusId_FK']); ?>">
