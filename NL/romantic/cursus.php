@@ -119,13 +119,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 de afwisseling van kamermuziek en tutti programma, de
                 begeleiding door goede coaches en de heerlijk muziek!"</p>
             <div class="container">
-                <h3>Het programma voor solisten, koor en orkest: Dvořáks <i>Svatební košile</i> (Het Bruidshemd)</h3>
+                <h3>Het programma voor solisten, koor en orkest: Mendelssohns <i>Elias</i> (1e deel)</h3>
                 <div class="fotorechts"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Kathedraal met de Zwarte Toren" width="400"
                         class="w3-image"><br>kathedraal van České Budějovice met de Zwarte Toren</div>
                 <p>Elke middag werken we aan een programma voor iedereen, dat we als afsluiting van de cursus openbaar uitvoeren.
-                    Dit jaar klinkt in dit slotconcert de cantate <i>Svatební košile</i> (Het Bruidshemd) van Dvořák, voor solisten, koor en orkest. <a href="programma.php">Lees meer over het Bruidshemd en zijn muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en magnifiek klinkende kathedraal van České Budějovice.</p>
+                    Dit jaar klinkt in dit slotconcert het eerste deel van Mendelssohns oratorium <i>Elias</i>, voor solisten, koor en orkest. <a href="programma.php">Lees meer over Elias en zijn muzikale en historische context</a>. Het slotconcert vindt plaats in de schitterende en magnifiek klinkende kathedraal van České Budějovice.</p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;De orkestrepetities verliepen
                 erg prettig. Het lukt Dirkjan ieder jaar weer om ambitieus en
@@ -135,7 +135,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <div class="fotolinks"><img src="/Images/Mitchell en koor.jpg"
                     alt="" width="400"><br> Mitchell Sandler and his chamber choir</div>
             <p>De cursus staat open voor 32 ervaren koorzangers (SATB). Het koor
-                heeft een grote en uitdagende partij in <em>Svatební košile</em>. Daarnaast vormen de koorleden elke ochtend
+                heeft een grote en uitdagende partij in Mendelssohns <em>Elias</em>. Daarnaast vormen de koorleden elke ochtend
                 een kamerkoor koor en werken ze aan muziek van Mendelssohn, Dvořák, Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler zal dit koor leiden op zijn onnavolgbare manier, waarbij hij behulpzame vocale instructies en uitstekende pianobegeleiding combineert met duidelijke leiding. Tsjechische professionele zangers, met name tenoren en bassen, zullen zich bij het koor
                 voegen koor als de balans tussen de verschillende stemgroepen daar om vraagt. </p>
             <p class="citaat">Marrie Kardol: &quot;Pellegrina is een van mijn leukste en gezondste verslavingen geworden!&quot;</p>
@@ -185,7 +185,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2><a name="kennismaking"></a>Kennismakingsrepetitie</h2>
                 <div class="fotorechts"><img src="/Images/DJ_in_actie.jpg" width="400" class="w3-image" src="Dirkjan Horringa in actie"><br>Dirkjan Horringa in actie</div>
                 <p>
-                    Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van Dvořáks Bruidshemd in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
+                    Op <strong>zaterdag 13 juni</strong> houden we een voorbereidende repetitie van het eerste deel van Mendelssohns <em>Elias</em> in Den Dolder bij Utrecht. Het doel is om de andere deelnemers te leren kennen
                     en een eerste kennismaking te hebben met het koor- en orkestprogramma, zodat je je daarna efficiënter kunt voorbereiden op je partij. Daarnaast is het inspirerend om vast een
                     gevoel te krijgen voor het werk dat je gaat spelen of zingen en ook je ‘collega's’ te ontmoeten.
                 </p>
@@ -203,7 +203,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li>Dinsdag 4 augustus vrije dag</li>
                 <li>Woensdagavond 5 augustus <em>Mozart Concerto Event</em>: deelnemers spelen solo in delen uit Mozart concerten, à vue begeleid door het orkest</li>
                 <li>Vrijdagmiddag en -avond 7 augustus kamermuziekconcerten voor en door deelnemers </li>
-                <li>Zaterdagmiddag 8 augustus om 15:00 openbare uitvoering in de kathedraal van Dvořáks cantate <i>Svatební košile</i> (Het Bruidshemd) door
+                <li>Zaterdagmiddag 8 augustus om 15:00 openbare uitvoering in de kathedraal van het eerste deel van Mendelssohns oratorium <i>Elias</i> door
                     solisten, koor en orkest </li>
                 <li>Zondagochtend 9 augustus vertrek na het ontbijt</li>
             </ul>
@@ -218,7 +218,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     ensembles aan kamermuziek en kamerkoor</li>
                 <li>13:00 lunch</li>
                 <li>14:30 het orkest werkt eerst in groepsrepetities, later in de cursus in de complete bezetting; het koor werkt in het
-                    begin apart aan Dvořáks <em>Bruidshemd</em>. Later in de week repeteren koor en orkest samen </li>
+                    begin apart aan Mendelssohns <em>Elias</em>. Later in de week repeteren koor en orkest samen </li>
                 <li>17:30 borrelen en avondeten</li>
                 <li>'s Avonds: vrij; ruime gelegenheid voor extra kamermuziek, en vergeet niet dat Tsjechië beroemd is om haar bier...</li>
             </ul>

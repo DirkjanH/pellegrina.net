@@ -131,13 +131,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 of chamber music and tutti program, the guidance by good coaches
                 and the wonderful music!”</p>
             <div class="container">
-                <h3>The programme for soloists, choir and orchestra: Dvořák's <i>Svatební košile</i> (the Spectre's Bride)</h3>
+                <h3>The programme for soloists, choir and orchestra: Mendelssohn's <i>Elijah</i> (Part I)</h3>
                 <div class="fotorechts"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Cathedral with Black Tower" width="400"
                         class="w3-image"><br>České Budějovice cathedral with the Black Tower</div>
                 <p>Each afternoon we work on our tutti programme, which we will perform publicly at the end of
-                    the course. This year, the final concert will feature Dvořák's <i>Svatební košile</i> (the Spectre's Bride) for soloists, choir and
+                    the course. This year, the final concert will feature Part I of Mendelssohn's oratorio <i>Elijah</i> for soloists, choir and
                     orchestra. <a href="programma.php">Read more about the works and their
                         musical and historical context here</a>. The concert will take place in the České Budějovice cathedral, with its magnificent acoustics.</p>
             </div>
@@ -150,7 +150,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     alt="" width="400"><br> Mitchell Sandler and
                 his chamber choir</div>
             <p>The course is open to 32 experienced chamber choir singers
-                (SATB). The choir has a big and challenging role in <em>Svatební košile</em>. In addition, the choristers form a
+                (SATB). The choir has a big and challenging role in Mendelssohn's <em>Elijah</em>. In addition, the choristers form a
                 chamber choir every morning and work on music by Mendelssohn,
                 Dvořák, Mozart and their Czech contemporaries. Mitchell Sandler
                 will lead this choir in his inimitable way, combining helpful
@@ -245,7 +245,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li> 13:00 lunch</li>
                 <li>14:30 the orchestra first works in sectional rehearsals,
                     later also in full ensemble; the choir works at first
-                    separately on Dvořák's <i>Svatební košile</i>. Later
+                    separately on Mendelssohn's <i>Elijah</i>. Later
                     in the week, choir and orchestra rehearse together </li>
                 <li>17:30 drinks and dinner</li>
                 <li> Evening off, plenty of time for playing more chamber music,
