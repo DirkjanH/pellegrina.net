@@ -8,23 +8,11 @@
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<link rel="stylesheet" href="/css/openingspagina.css" type="text/css">
 	<title>Letní hudební kurzy společnost La Pellegrina</title>
-	<style type="text/css">
-		h2.lijnboven {
-			border-top-width: thin;
-			border-top-style: solid;
-			border-top-color: inherit;
-		}
-
-		h3.plaats {
-			margin-top: -10px;
-			margin-left: 24px;
-		}
-	</style>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
 </head>
 
-<body>
+<body class="cz-info">
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
 	<div id="inhoud" style="max-width: 1200px">
 		<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>

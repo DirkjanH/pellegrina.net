@@ -99,73 +99,8 @@ foreach ($instrumenten as $record) $instrumententabel[$record['id']] = $record['
 <html>
 <head>
     <title>List of participants</title>
-    <style type="text/css">
-    <!--
-    body {
-        margin-left: 20px;
-        margin-top: 20px;
-        margin-right: 20px;
-    }
-
-    table {
-        /* [disabled]table-layout: auto; */
-        width: 100%;
-        border: 3px double #000000;
-        border-collapse: collapse;
-    }
-
-    td {
-        border: 1px solid #000000;
-        padding: 0.4em;
-    }
-
-    td.iks {
-        text-align: center;
-    }
-
-    tr.gepostuleerd {
-        background: #FCF;
-    }
-
-    tr.niet_aangenomen {
-        background: #9FC;
-    }
-
-    tr.afgewezen {
-        background: pink;
-    }
-
-    div#inhoud {
-        margin-left: 0px;
-        border: none;
-        background-color: white;
-    }
-
-    div#header {
-        border: none;
-        background-color: white;
-    }
-    -->
-    </style>
-    <style type="text/css" media="print">
-    <!--
-    .no-print {
-        display: none;
-    }
-
-    div#inhoud,
-    div#top {
-        margin-left: 0px;
-        border: none;
-    }
-
-    div#top img {
-        border: hidden;
-    }
-    -->
-    </style>
 </head>
-<body>
+<body class="deelnemerslijst inschrijvingslijst">
     <div id="inhoud">
         <div id="header" class="no-print w3-center w3-padding-top"><img
                 class="geenlijn" src="Images/Logos/Pellegrina.gif" width="402"

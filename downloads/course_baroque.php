@@ -16,23 +16,9 @@ $cssVersion = '?v=' . time(); ?>
     <meta name="robots" content="noindex, nofollow">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <link href="../css/pellegrina_stijlen.css<?php echo $cssVersion; ?>"
-        rel="stylesheet" type="text/css">
-    <style type="text/css">
-        h3 {
-            margin: 25px 0px 15px;
-            padding: 0px;
-        }
-
-        table#parts tr,
-        td {
-            margin: 10px 5px;
-            padding: 5px;
-        }
-    </style>
 </head>
 
-<body>
+<body class="downloads-baroque">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud">
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php'; ?>

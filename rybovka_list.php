@@ -76,27 +76,8 @@ echo '</pre>';
 <title>Participants</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-<!--
-body {
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
-}
-table {
-	table-layout: auto;
-	width: 100%;
-	border: 3px double #000000;
-	border-collapse: collapse;
-}
-td {
-	border: 1px solid #000000;
-	padding: 0.4em;
-}
--->
-</style>
 </head>
-<body>
+<body class="deelnemerslijst">
 
   
 <form action="<?php echo $editFormAction; ?>" method="get" name="form" id="form">

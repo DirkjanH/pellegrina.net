@@ -254,36 +254,6 @@ d($instrumententabel);
 	<meta charset="utf-8">
 	<title>Accommodatie</title>
 	<link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-	<style type="text/css">
-		<!-- body {
-		margin: 20px;
-		}
-
-		table {
-			table-layout: auto;
-			width: 100%;
-			border: 3px double #000000;
-			border-collapse: collapse;
-		}
-
-		td {
-			border: 1px solid #000000;
-			padding: 0.4em;
-		}
-
-		td.iks {
-			text-align: center;
-		}
-
-		.nieuwe_deelnemer {
-			background-color: #FFCC66;
-		}
-
-		.nadruk {
-			color: rgba(0, 51, 153, 1);
-		}
-		-->
-	</style>
 	<SCRIPT TYPE="text/javascript">
 		<!--
 		function Ganaar(cursus) {
@@ -294,7 +264,7 @@ d($instrumententabel);
 	</SCRIPT>
 </head>
 
-<body>
+<body class="deelnemerslijst accommodatielijst">
 	<div class="w3-white">
 		<form action="<?php echo $editFormAction; ?>" method="post" name="formulier" id="formulier">
 			<div class="w3-panel w3-left">

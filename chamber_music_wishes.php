@@ -91,27 +91,6 @@ d($instrumententabel);
   <meta charset="utf-8">
   <title>Chamber music wishes</title>
   <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-    <!--
-    body {
-      margin-left: 20px;
-      margin-top: 20px;
-      margin-right: 20px;
-    }
-
-    td.iks {
-      text-align: center;
-    }
-
-    .nieuwe_deelnemer {
-      background-color: #FFCC66;
-    }
-
-    .nadruk {
-      color: rgba(0, 51, 153, 1);
-    }
-    -->
-  </style>
   <SCRIPT TYPE="text/javascript">
     <!--
     function Ganaar(cursus) {
@@ -122,7 +101,7 @@ d($instrumententabel);
   </SCRIPT>
 </head>
 
-<body>
+<body class="kamermuziekwensen">
 
 
   <form action="<?php echo $editFormAction; ?>" method="get" name="formulier" id="formulier">

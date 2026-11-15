@@ -51,16 +51,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
-    <style>
-        td.nr {
-            width: 30px;
-            vertical-align: top;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
-<body>
+<body class="tekst-vertaling">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
                                         echo $navigatie;

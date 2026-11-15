@@ -928,3 +928,166 @@ a:hover {
     display: none !important;
   }
 }
+
+/* Menuknop via de vier includes/navigatie*-bestanden. */
+.w3-opennav {
+  padding: 8px;
+  background-color: yellow;
+}
+
+/* Sorteerbare tabellen via includes/jquery_opdrachten.php. */
+table.tablesorter {
+  margin: 10px 0 15px;
+}
+
+table.tablesorter thead tr th,
+table.tablesorter tfoot tr th {
+  border: 1px solid #FFF;
+  padding: 4px;
+}
+
+table.tablesorter thead tr .header {
+  background-image: url("/Images/Logos/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+
+table.tablesorter tbody td {
+  border: 1px solid #FFF;
+  padding: 4px;
+  vertical-align: top;
+}
+
+table.tablesorter tbody tr:nth-of-type(odd) {
+  color: #333;
+  background: #DDD;
+}
+
+table.tablesorter thead tr .headerSortUp {
+  background-image: url("/Images/Logos/asc.gif");
+}
+
+table.tablesorter thead tr .headerSortDown {
+  background-image: url("/Images/Logos/desc.gif");
+}
+
+table.tablesorter thead tr .headerSortDown,
+table.tablesorter thead tr .headerSortUp {
+  background-color: #FF4848;
+}
+
+/* :where begrenst de paginascope zonder de bestaande CSS-specificiteit te verhogen. */
+/* downloads/course_baroque.php. */
+:where(.downloads-baroque) h3 {
+  margin: 25px 0 15px;
+  padding: 0;
+}
+
+:where(.downloads-baroque) table#parts tr,
+:where(.downloads-baroque) td {
+  margin: 10px 5px;
+  padding: 5px;
+}
+
+/* EN/romantic/Text_SB.php en Text Spectre's Bride.php. */
+:where(.tekst-vertaling) td.nr {
+  width: 30px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+/* CZ_info.php. */
+:where(.cz-info) h2.lijnboven {
+  border-top-width: thin;
+  border-top-style: solid;
+  border-top-color: inherit;
+}
+
+:where(.cz-info) h3.plaats {
+  margin-top: -10px;
+  margin-left: 24px;
+}
+
+/* Lijsten: part_list.php, part_list_birth.php, ACMP_list.php, rybovka_list.php,
+   leeftijden_deelnemers.php, accommodatie.php en chamber_music_wishes.php. */
+body:where(.deelnemerslijst, .kamermuziekwensen) {
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+:where(.deelnemerslijst) table {
+  table-layout: auto;
+  width: 100%;
+  border: 3px double #000;
+  border-collapse: collapse;
+}
+
+:where(.deelnemerslijst) td {
+  border: 1px solid #000;
+  padding: 0.4em;
+}
+
+:where(.inschrijvingslijst, .acmp-lijst, .leeftijdenlijst, .accommodatielijst, .kamermuziekwensen) td.iks {
+  text-align: center;
+}
+
+:where(.inschrijvingslijst, .acmp-lijst, .leeftijdenlijst) tr.gepostuleerd {
+  background: #FCF;
+}
+
+:where(.inschrijvingslijst, .acmp-lijst, .leeftijdenlijst) tr.niet_aangenomen {
+  background: #9FC;
+}
+
+:where(.inschrijvingslijst) tr.afgewezen {
+  background: pink;
+}
+
+:where(.inschrijvingslijst, .acmp-lijst) div#inhoud {
+  margin-left: 0;
+  border: none;
+  background-color: white;
+}
+
+:where(.inschrijvingslijst, .acmp-lijst) div#header {
+  border: none;
+  background-color: white;
+}
+
+:where(.acmp-lijst) table {
+  margin-bottom: 50px;
+}
+
+:where(.acmp-lijst) div#inhoud {
+  padding-bottom: 50px;
+}
+
+body:where(.accommodatielijst) {
+  margin-bottom: 20px;
+}
+
+:where(.accommodatielijst, .kamermuziekwensen) .nieuwe_deelnemer {
+  background-color: #FFCC66;
+}
+
+:where(.accommodatielijst, .kamermuziekwensen) .nadruk {
+  color: rgba(0, 51, 153, 1);
+}
+
+@media print {
+  :where(.inschrijvingslijst, .acmp-lijst) .no-print {
+    display: none;
+  }
+
+  :where(.inschrijvingslijst, .acmp-lijst) div#inhoud,
+  :where(.inschrijvingslijst, .acmp-lijst) div#top {
+    margin-left: 0;
+    border: none;
+  }
+
+  :where(.inschrijvingslijst, .acmp-lijst) div#top img {
+    border: hidden;
+  }
+}

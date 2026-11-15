@@ -1,11 +1,5 @@
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    .w3-opennav {
-        padding: 8px;
-        background-color: yellow;
-    }
-</style>
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-large"
     id="navcontainer">
     <a class="w3-bar-item w3-button w3-large w3-hide-large"
