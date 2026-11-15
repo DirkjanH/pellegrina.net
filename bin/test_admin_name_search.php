@@ -142,6 +142,6 @@ foreach ([
     checkSearch(str_contains($match[1], htmlspecialchars($course['cursusnaam_nl'], ENT_QUOTES, 'UTF-8')), 'The Dutch course name must be visible after a historical-participant search.');
     $range = '(' . implode(' t/m ', $dates) . ')';
     checkSearch((bool) preg_match('/<\/b>\s*' . preg_quote($range, '/') . '/', preg_replace('/\s+/', ' ', $match[1])), 'The numeric date range must appear in parentheses immediately after the course name, without a line break.');
-    checkSearch((bool) preg_match('/' . preg_quote($range, '/') . '\s*Inschrijving nr\.\s*<input name="InschId"[^>]*value="2930"/s', preg_replace('/\s+/', ' ', $match[1])), 'The registration number must follow the date range without a line break.');
+    checkSearch((bool) preg_match('/' . preg_quote($range, '/') . '\s*Nr\.\s*<input name="InschId"[^>]*value="2930"/s', preg_replace('/\s+/', ' ', $match[1])), 'The registration number must follow the date range without a line break.');
 }
 echo "PASS: current and historical registrations show the Dutch course name and their own date range.\n";
