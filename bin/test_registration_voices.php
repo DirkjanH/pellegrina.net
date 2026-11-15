@@ -28,7 +28,7 @@ function exec_query($query) {
 function checkVoices($condition, $message) {
     if (!$condition) throw new RuntimeException($message);
 }
-function registerVoices($language, $selection, $withInstrument = true) {
+function registerVoices($language, $selection, $withInstrument = true, $gender = 'V') {
     global $voiceRoot, $voiceWrites;
     $voiceWrites = [];
     $_GET = [];
@@ -39,7 +39,7 @@ function registerVoices($language, $selection, $withInstrument = true) {
         'submit' => $language === 'NL' ? 'verzenden' : 'submit',
         'voornaam' => 'Test', 'achternaam' => 'Example', 'adres' => 'Test 1',
         'postcode' => '1234 AB', 'plaats' => 'Test', 'geboortedatum' => '2000-02-29',
-        'geslacht' => 'V', 'email' => 'test@example.invalid', 'CursusId_FK' => '1',
+        'geslacht' => $gender, 'email' => 'test@example.invalid', 'CursusId_FK' => '1',
         'zanger' => 'on', 'voorwaarden' => 'akkoord', 'AdresId' => 2,
         'DlnmrId' => 3, 'taal' => $language, 'instr' => ['112'], 'zangstem' => $selection,
     ];
@@ -95,6 +95,8 @@ try {
         $result = registerVoices($language, ['60', '40'], false);
         $sql = end($result['writes']);
         checkVoices($result['stored'] && substr_count($sql, "'60, 40'") === 2, "{$language}: singers without an instrument must retain both voices in instr and zangstem.");
+        $result = registerVoices($language, ['30'], true, 'X');
+        checkVoices($result['stored'] && count(array_filter($result['writes'], static fn($sql) => str_contains($sql, "geslacht='X'"))) === 1, "{$language}: gender X must be accepted and stored.");
         echo "PASS: {$language} multiple voices, mixed solo/choir choices, legacy choices, and validation; no database or mail used.\n";
     }
 } finally {

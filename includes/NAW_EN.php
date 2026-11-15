@@ -44,9 +44,10 @@
                 value="<?php
                         if (isset($_POST['voornaam'])) echo $_POST['voornaam']; ?>" /></td>
             <td width="15">&nbsp;</td>
-            <td width="120">Sex: </td>
+            <td width="120">Gender: </td>
             <td><input name="geslacht" type="radio" value="M" id="geslacht_man" <?php if (isset($_POST['geslacht']) and ($_POST['geslacht'] == "M")) echo 'checked'; ?> /><label for="geslacht_man">M</label>
               <input name="geslacht" type="radio" value="V" id="geslacht_vrouw" <?php if (isset($_POST['geslacht']) and ($_POST['geslacht'] == "V")) echo 'checked'; ?> /><label for="geslacht_vrouw">F</label>
+              <input name="geslacht" type="radio" value="X" id="geslacht_x" <?php if (isset($_POST['geslacht']) and ($_POST['geslacht'] == "X")) echo 'checked'; ?> /><label for="geslacht_x">X</label>
             </td>
           </tr>
           <tr>
