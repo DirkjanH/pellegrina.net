@@ -198,14 +198,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
             <h4>Weekindeling</h4>
             <ul>
-                <li>Donderdagavond 30 juli rond 18:00 opening cursus met het avondeten; 's avonds eerste<em> </em>repetitie van koor en orkest</li>
-                <li>Vrijdagavond 31 juli kamermuziekconcert door de docenten</li>
-                <li>Dinsdag 4 augustus vrije dag</li>
-                <li>Woensdagavond 5 augustus <em>Mozart Concerto Event</em>: deelnemers spelen solo in delen uit Mozart concerten, à vue begeleid door het orkest</li>
-                <li>Vrijdagmiddag en -avond 7 augustus kamermuziekconcerten voor en door deelnemers </li>
-                <li>Zaterdagmiddag 8 augustus om 15:00 openbare uitvoering in de kathedraal van het eerste deel van Mendelssohns oratorium <i>Elias</i> door
+                <li>Donderdagavond 22 juli rond 18:00 opening cursus met het avondeten; 's avonds eerste<em> </em>repetitie van koor en orkest</li>
+                <li>Vrijdagavond 23 juli kamermuziekconcert door de docenten</li>
+                <li>Dinsdag 27 juli vrije dag</li>
+                <li>Woensdagavond 28 juli <em>Mozart Concerto Event</em>: deelnemers spelen solo in delen uit Mozart concerten, à vue begeleid door het orkest</li>
+                <li>Vrijdagmiddag en -avond 30 juli kamermuziekconcerten voor en door deelnemers </li>
+                <li>Zaterdagmiddag 31 juli om 15:00 openbare uitvoering in de kathedraal van het eerste deel van Mendelssohns oratorium <i>Elias</i> door
                     solisten, koor en orkest </li>
-                <li>Zondagochtend 9 augustus vertrek na het ontbijt</li>
+                <li>Zondagochtend 1 augustus vertrek na het ontbijt</li>
             </ul>
             <p class="citaat">François Lanave: &quot;Ik was de enige Franstalige
                 persoon bij het ontbijt te midden van muzikanten die een vreemde

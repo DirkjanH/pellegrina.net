@@ -218,19 +218,19 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a name="dagindeling"></a>Week programme and daily schedule</h2>
             <h4>Week programme</h4>
             <ul>
-                <li>Thursday 30 July: arrival in České Budějovice, course
+                <li>Thursday 22 July: arrival in České Budějovice, course
                     opening with dinner at 18:00 h, first rehearsal for
                     soloists, choir and orchestra in the evening</li>
-                <li>Friday evening 31 July: tutors' chamber music concert</li>
-                <li>Tuesday 4 August: 'free day'</li>
-                <li>Wednesday evening 5 August <em>Mozart Concerto Event</em>:
+                <li>Friday evening 23 July: tutors' chamber music concert</li>
+                <li>Tuesday 27 July: 'free day'</li>
+                <li>Wednesday evening 28 July <em>Mozart Concerto Event</em>:
                     participants play solo in movements from Mozart concertos, a
                     vue accompanied by the orchestra</li>
-                <li>Friday afternoon and evening 7 August: participants' chamber
+                <li>Friday afternoon and evening 30 July: participants' chamber
                     music concerts</li>
-                <li>Saturday 8 August: final, public concert of choir and
+                <li>Saturday 31 July: final, public concert of choir and
                     orchestra at the cathedral</li>
-                <li>Sunday morning 9 August: departure after breakfast</li>
+                <li>Sunday morning 1 August: departure after breakfast</li>
             </ul>
             <p class="citaat">François Lanave: &quot;I was the only
                 French-speaking person at breakfast among musicians speaking a
