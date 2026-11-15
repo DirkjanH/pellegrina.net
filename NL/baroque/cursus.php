@@ -221,11 +221,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
                 <h4> Weekindeling</h4>
                 <ul>
-                    <li>Donderdagochtend 13 augustus: aankomst op Nieuw Sion,
+                    <li>Zondagochtend 8 augustus: aankomst op Nieuw Sion,
                         10:30 cursusopening en eerste repetitie</li>
-                    <li>Dinsdag 18 augustus: afsluitende interne presentatie van
+                    <li>Vrijdag 13 augustus: afsluitende interne presentatie van
                         de kamermuziekensembles; </li>
-                    <li>Woensdagmiddag 19 augustus: openbaar concert 'Napolitaanse
+                    <li>Zaterdagmiddag 14 augustus: openbaar concert 'Napolitaanse
                         Barok' in de kloosterkerk, aansluitend borrel
                         en vertrek</li>
                 </ul>
