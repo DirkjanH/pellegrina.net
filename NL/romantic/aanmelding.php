@@ -194,10 +194,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
           <td>
             <p><strong><label for="solozang_stem">Ik heb de volgende stemsoorten:</label></strong></p>
             <p id="solozang_stem_uitleg" class="nadruk">(meerdere keuzes zijn mogelijk door de Ctrl-toets ingedrukt te houden)</p>
-            <select name="zangstem[]" id="solozang_stem" multiple size="6" aria-describedby="solozang_stem_uitleg">
+            <select name="zangstem[]" id="solozang_stem" multiple size="7" aria-describedby="solozang_stem_uitleg">
               <option value="11" <?php if (in_array('11', $stemsoorten, true)) echo 'selected'; ?>>sopraan</option>
               <option value="21" <?php if (in_array('21', $stemsoorten, true)) echo 'selected'; ?>>mezzosopraan</option>
               <option value="31" <?php if (in_array('31', $stemsoorten, true)) echo 'selected'; ?>>alt</option>
+              <option value="40" <?php if (in_array('40', $stemsoorten, true)) echo 'selected'; ?>>countertenor</option>
               <option value="51" <?php if (in_array('51', $stemsoorten, true)) echo 'selected'; ?>>tenor</option>
               <option value="61" <?php if (in_array('61', $stemsoorten, true)) echo 'selected'; ?>>bariton</option>
               <option value="71" <?php if (in_array('71', $stemsoorten, true)) echo 'selected'; ?>>bas</option>
