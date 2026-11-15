@@ -8,16 +8,17 @@ Versie: 1.3
 
 	use Pelago\Emogrifier\CssInliner;
 
-	function LPconfirmationSent(int $inschrijving_id): bool
+	function LPconfirmationSent(int $inschrijving_id, bool $payment_failed = false): bool
 	{
+		$column = $payment_failed ? 'mislukkingsmail_verzonden' : 'dankmail_verzonden';
 		$inschrijving = select_query(
-			"SELECT dankmail_verzonden FROM inschrijving WHERE InschId = " . $inschrijving_id,
+			"SELECT {$column} FROM inschrijving WHERE InschId = " . $inschrijving_id,
 			1
 		);
 		if (!is_array($inschrijving)) {
-			throw new RuntimeException('Verzendstatus van de bevestigingsmail kon niet worden opgehaald.');
+			throw new RuntimeException('Verzendstatus van de betalingsmail kon niet worden opgehaald.');
 		}
-		$verzonden = $inschrijving['dankmail_verzonden'] ?? null;
+		$verzonden = $inschrijving[$column] ?? null;
 		return !empty($verzonden) && !in_array($verzonden, ['0000-00-00', '0000-00-00 00:00:00', '0'], true);
 	}
 

@@ -99,6 +99,7 @@ if (!$definitieve_status) {
 }
 
 $mail_type = $definitief_betaald ? 'confirmation' : 'failure';
+$mail_status_column = $definitief_betaald ? 'dankmail_verzonden' : 'mislukkingsmail_verzonden';
 $mail_marker = $mail_sent_dir . '/payment-' . $mail_type . '-' . $mail_key . '.sent';
 $mail_lock = fopen($mail_marker . '.lock', 'c');
 if ($mail_lock === false || !flock($mail_lock, LOCK_EX)) {
@@ -111,10 +112,8 @@ $mail_marker_saved = true;
 $booking_reference = preg_replace('/[^a-zA-Z0-9_-]/', '', (string) ($inschrijving['random_id'] ?? ''));
 $booking_mail_marker = $booking_reference !== '' ? $mail_sent_dir . '/' . $booking_reference . '.sent' : '';
 $mail_already_sent = is_file($mail_marker)
-	|| ($definitief_betaald && (
-		($booking_mail_marker !== '' && is_file($booking_mail_marker))
-		|| LPconfirmationSent((int) $inschrijving['InschId'])
-	));
+	|| ($definitief_betaald && $booking_mail_marker !== '' && is_file($booking_mail_marker))
+	|| LPconfirmationSent((int) $inschrijving['InschId'], $definitief_mislukt);
 if (!$mail_already_sent) {
 	$naam = htmlspecialchars((string) $inschrijving['naam'], ENT_QUOTES, 'UTF-8');
 	$voornaam = htmlspecialchars((string) $inschrijving['voornaam'], ENT_QUOTES, 'UTF-8');
@@ -151,14 +150,15 @@ if (!$mail_already_sent) {
 	}
 }
 
+$mail_status_saved = $mail_verzonden && exec_query("UPDATE inschrijving SET {$mail_status_column} = NOW() WHERE Mollie_ID = {$mollie_id_sql}");
 flock($mail_lock, LOCK_UN);
 fclose($mail_lock);
 if (!$mail_verzonden) {
 	$retry_webhook('Mail kon niet worden verzonden.');
 }
 
-if ($definitief_betaald && !exec_query("UPDATE inschrijving SET dankmail_verzonden = NOW() WHERE Mollie_ID = {$mollie_id_sql}")) {
-	$retry_webhook('Verzendstatus van de bevestigingsmail kon niet worden opgeslagen.');
+if (!$mail_status_saved) {
+	$retry_webhook('Verzendstatus van de betalingsmail kon niet worden opgeslagen.');
 }
 if (!$mail_marker_saved) {
 	$retry_webhook('Mailmarker kon niet worden opgeslagen.');
