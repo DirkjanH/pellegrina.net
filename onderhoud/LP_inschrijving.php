@@ -261,8 +261,8 @@ d($cursus, $dlnmr, $inschrijving);
                                 Inschrijving nr. <input name="InschId" type="text"
                                     class="uit" value="<?php echo $ins['InschId']; ?>" size="2">
                                 <br><b><?php echo htmlspecialchars($cursusgegevens['cursusnaam_nl'], ENT_QUOTES, 'UTF-8'); ?></b>
-                                <br><?php echo format_datum_short($cursusgegevens['datum_begin'], 'nl_NL'); ?>
-                                t/m <?php echo format_datum_short($cursusgegevens['datum_eind'], 'nl_NL'); ?>
+                                (<?php echo (new DateTimeImmutable($cursusgegevens['datum_begin']))->format('d-m-Y'); ?>
+                                t/m <?php echo (new DateTimeImmutable($cursusgegevens['datum_eind']))->format('d-m-Y'); ?>)
                             <?php } ?>
                             <input name="CursusId_FK" type="hidden"
                                 value="<?php echo stripslashes($ins['CursusId_FK']); ?>">

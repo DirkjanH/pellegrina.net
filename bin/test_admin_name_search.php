@@ -130,18 +130,18 @@ echo "PASS: first use with a previously saved course filter works without warnin
 foreach ([
     [
         ['CursusId' => 101, 'cursusnaam_nl' => 'Mendelssohns Elias & kamermuziek', 'datum_begin' => '2027-07-22', 'datum_eind' => '2027-08-01'],
-        ['22 juli 2027', '1 augustus 2027'],
+        ['22-07-2027', '01-08-2027'],
     ],
     [
         ['CursusId' => 99, 'cursusnaam_nl' => 'Historische cursus', 'datum_begin' => '2026-07-30', 'datum_eind' => '2026-08-09'],
-        ['30 juli 2026', '9 augustus 2026'],
+        ['30-07-2026', '09-08-2026'],
     ],
 ] as [$course, $dates]) {
     $result = searchRequest([], $post + ['InschId' => '2930', 'alles' => 'on'], '/onderhoud/LP_inschrijving.php', $rows, $course);
     checkSearch((bool) preg_match('/Cursus:<\/td>\s*<td[^>]*>(.*?)<\/td>/s', $result['html'], $match), 'Registration must show a course-details cell.');
     checkSearch(str_contains($match[1], htmlspecialchars($course['cursusnaam_nl'], ENT_QUOTES, 'UTF-8')), 'The Dutch course name must be visible after a historical-participant search.');
-    foreach ($dates as $date) checkSearch(str_contains($match[1], $date), 'The selected course date must be displayed in Dutch: ' . $date);
-    checkSearch(str_contains($match[1], 't/m'), 'Course details must show a date range.');
+    $range = '(' . implode(' t/m ', $dates) . ')';
+    checkSearch((bool) preg_match('/<\/b>\s*' . preg_quote($range, '/') . '/', preg_replace('/\s+/', ' ', $match[1])), 'The numeric date range must appear in parentheses immediately after the course name, without a line break.');
     checkSearch((bool) preg_match('/name="InschId"[^>]*value="2930"/s', $match[1]), 'The registration number must remain available.');
 }
 echo "PASS: current and historical registrations show the Dutch course name and their own date range.\n";
