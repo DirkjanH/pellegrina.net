@@ -9,6 +9,7 @@ div#aanmeldingsprobleem {
 table.formulier {
   width: 100%;
   max-width: 600px;
+  table-layout: fixed;
   padding: 5px;
   border-style: none;
   margin-right: auto;
@@ -16,7 +17,8 @@ table.formulier {
   background: #ffffff;
 }
 table.formulier table {
-  /* [disabled]width: 600px; */
+  width: 100%;
+  max-width: 100%;
   vertical-align: top;
 }
 table.formulier p,
@@ -93,4 +95,84 @@ input,
 textarea,
 select {
   border: thin #595959 groove;
+}
+/* Cursusaanmelding: NL/EN, baroque/romantic/aanmelding.php, met NAW_NL.php
+   of NAW_EN.php en akkoord_voorwaarden_NL.php of akkoord_voorwaarden_EN.php. */
+table.formulier td {
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+table.NAW {
+  table-layout: fixed;
+}
+#aanmelding input,
+#aanmelding select,
+#aanmelding textarea,
+#f_zoeknaam input {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  font-size: 16px;
+}
+#aanmelding input:not([type="hidden"]):not([type="radio"]):not([type="checkbox"]),
+#aanmelding select,
+#aanmelding textarea,
+#f_zoeknaam input {
+  min-height: 44px;
+  padding: 8px;
+}
+table.NAW input:not([type="radio"]),
+#aanmelding select,
+#aanmelding textarea {
+  width: 100%;
+}
+#aanmelding textarea {
+  resize: vertical;
+}
+#aanmelding input[type="radio"],
+#aanmelding input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  margin: 6px 6px 6px 0;
+  vertical-align: middle;
+}
+table.formulier td.linkerkolom {
+  width: 36px;
+}
+@media screen and (max-width: 640px) {
+  div#main {
+    padding: 12px;
+  }
+  div#aanmeldingsprobleem {
+    margin: 0;
+  }
+  table.NAW,
+  table.NAW > tbody {
+    display: block;
+  }
+  table.NAW tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+  table.NAW td {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+  table.NAW td:nth-child(3) {
+    display: none;
+  }
+  table.NAW td:nth-child(4) {
+    margin-top: 8px;
+  }
+  #aanmelding input:not([type="hidden"]):not([type="radio"]):not([type="checkbox"]),
+  #f_zoeknaam input[type="submit"] {
+    width: 100%;
+  }
+  #aanmelding input[type="submit"],
+  #f_zoeknaam input[type="submit"] {
+    white-space: normal;
+  }
 }
