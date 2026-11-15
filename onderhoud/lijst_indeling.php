@@ -92,45 +92,12 @@ echo '</pre>';
 	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>List of participants</title>
 
-	<style type="text/css">
-		<!--
-		body {
-			margin-left: 20px;
-			margin-top: 20px;
-			margin-right: 20px;
-		}
-
-		table {
-			table-layout: auto;
-			width: 100%;
-			border: 3px double #000000;
-			border-collapse: collapse;
-		}
-
-		td {
-			border: 1px solid #000000;
-			padding: 0.4em;
-		}
-
-		td.iks {
-			text-align: center;
-		}
-
-		tr.gepostuleerd {
-			background: #FCF;
-		}
-
-		tr.niet_aangenomen {
-			background: #9FC;
-		}
-		-->
-	</style>
 	<!-- InstanceEndEditable -->
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
 </head>
 
-<body>
+<body class="deelnemerslijst">
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
 	<div class="inhoud">
 		<div id="main">

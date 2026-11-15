@@ -80,14 +80,6 @@ foreach ($cursussen as &$cursus) {
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <title>Cursusgegevens <?php echo $jaar; ?></title>
     <style type="text/css">
-    th {
-        font-family: Verdana, Geneva, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        font-style: normal;
-        text-align: center !important;
-    }
-
     input {
         text-align: center;
     }

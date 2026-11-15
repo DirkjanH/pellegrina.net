@@ -489,39 +489,33 @@ p.suggestie {
 table {
   border-collapse: collapse;
 }
+/* Gegevens- en beheertabellen delen randen en celruimte; aanmeldingsopmaak blijft apart. */
+table:where(.gestreept, .tablesorter, .w3-table, .w3-table-all, [border]:not([border="0"])),
+:where(.deelnemerslijst) table {
+  border: 1px solid var(--w3-border-color, #CCC);
+}
+:is(table.gestreept, table.tablesorter, table.w3-table, table.w3-table-all, table[border]:not([border="0"]), .deelnemerslijst table) > :is(thead, tbody, tfoot) > tr > :is(th, td) {
+  border: 1px solid var(--w3-border-color, #CCC);
+  padding: 8px;
+  vertical-align: top;
+}
 table#taal {
   text-align: center;
 }
 th {
-  font-style: italic;
+  font-style: normal;
+  font-weight: 600;
   background: #d1e5f1;
-  text-align: center;
-  margin: 0 5px;
-  border: thin solid #333;
+  text-align: left;
+  border: 1px solid var(--w3-border-color, #CCC);
 }
 td.geld {
   text-align: right;
 }
-table.gestreept tr:nth-of-type(odd) td {
-  color: #333;
-  background: #DDD;
-}
-table.gestreept thead tr th,
-table.tablesorter tfoot tr th {
-  border: 1px solid #FFF;
-  padding: 4px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-table.gestreept td {
-  border: 1px solid #FFF;
-  padding: 4px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+:is(table.gestreept, table.tablesorter) tbody tr:nth-of-type(even):not(:where(.gepostuleerd, .niet_aangenomen, .afgewezen, .nieuwe_deelnemer, .NogNietBevestigd, .set0, .set1, .set2, .over)),
 .zebra {
   color: #333;
-  background: #DDD;
+  background: var(--w3-surface-alt, #DDD);
 }
 .over {
   color: #FFF;
@@ -900,28 +894,11 @@ table.tablesorter {
   margin: 10px 0 15px;
 }
 
-table.tablesorter thead tr th,
-table.tablesorter tfoot tr th {
-  border: 1px solid #FFF;
-  padding: 4px;
-}
-
 table.tablesorter thead tr .header {
   background-image: url("/Images/Logos/bg.gif");
   background-repeat: no-repeat;
   background-position: center right;
   cursor: pointer;
-}
-
-table.tablesorter tbody td {
-  border: 1px solid #FFF;
-  padding: 4px;
-  vertical-align: top;
-}
-
-table.tablesorter tbody tr:nth-of-type(odd) {
-  color: #333;
-  background: #DDD;
 }
 
 table.tablesorter thead tr .headerSortUp {
@@ -944,12 +921,6 @@ table.tablesorter thead tr .headerSortUp {
   padding: 0;
 }
 
-:where(.downloads-baroque) table#parts tr,
-:where(.downloads-baroque) td {
-  margin: 10px 5px;
-  padding: 5px;
-}
-
 /* EN/romantic/Text_SB.php en Text Spectre's Bride.php. */
 :where(.tekst-vertaling) td.nr {
   width: 30px;
@@ -970,7 +941,8 @@ table.tablesorter thead tr .headerSortUp {
 }
 
 /* Lijsten: part_list.php, part_list_birth.php, ACMP_list.php, rybovka_list.php,
-   leeftijden_deelnemers.php, accommodatie.php en chamber_music_wishes.php. */
+   leeftijden_deelnemers.php, accommodatie.php, chamber_music_wishes.php,
+   onderhoud/lijst_indeling.php en onderhoud/opmerkingen kamermuziek.php. */
 body:where(.deelnemerslijst, .kamermuziekwensen) {
   margin-left: 20px;
   margin-top: 20px;
@@ -978,30 +950,23 @@ body:where(.deelnemerslijst, .kamermuziekwensen) {
 }
 
 :where(.deelnemerslijst) table {
-  table-layout: auto;
   width: 100%;
-  border: 3px double #000;
-  border-collapse: collapse;
 }
 
-:where(.deelnemerslijst) td {
-  border: 1px solid #000;
-  padding: 0.4em;
-}
-
-:where(.inschrijvingslijst, .acmp-lijst, .leeftijdenlijst, .accommodatielijst, .kamermuziekwensen) td.iks {
+:where(.deelnemerslijst, .kamermuziekwensen) td.iks {
   text-align: center;
 }
 
-:where(.inschrijvingslijst, .acmp-lijst, .leeftijdenlijst) tr.gepostuleerd {
+/* Statuskleuren gaan voor de wisselende rijkleuren van W3-tabellen. */
+.deelnemerslijst table tr.gepostuleerd {
   background: #FCF;
 }
 
-:where(.inschrijvingslijst, .acmp-lijst, .leeftijdenlijst) tr.niet_aangenomen {
+.deelnemerslijst table tr.niet_aangenomen {
   background: #9FC;
 }
 
-:where(.inschrijvingslijst) tr.afgewezen {
+.deelnemerslijst table tr.afgewezen {
   background: pink;
 }
 
@@ -1028,7 +993,7 @@ body:where(.accommodatielijst) {
   margin-bottom: 20px;
 }
 
-:where(.accommodatielijst, .kamermuziekwensen) .nieuwe_deelnemer {
+:is(.accommodatielijst, .kamermuziekwensen) table :is(tr, td).nieuwe_deelnemer {
   background-color: #FFCC66;
 }
 
