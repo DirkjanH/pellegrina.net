@@ -140,7 +140,7 @@ else $aantal_inschrijvingen = 0;
 // end Recordset Inschrijvingen van een deelnemer
 
 // begin Recordset Cursusnamen
-$cursus = select_query("SELECT CursusId, cursusnaam_nl, YEAR(datum_begin) as jaar FROM cursus ORDER BY CursusId ASC", 'CursusId');
+$cursus = select_query("SELECT CursusId, cursusnaam_nl, datum_begin, datum_eind, YEAR(datum_begin) as jaar FROM cursus ORDER BY CursusId ASC", 'CursusId');
 
 // begin Recordset Dlnmr voor deelnemersnaam
 $DlnmrId = '-1';
@@ -255,7 +255,15 @@ d($cursus, $dlnmr, $inschrijving);
                     <tr>
                         <td nowrap align="right">Cursus:</td>
                         <td colspan="3">
-                            <?php if ($ins['CursusId_FK'] != "") echo "Inschrijving nr. <input name=\"InschId\" type=\"text\" class=\"uit\" value=\"{$ins['InschId']}\" size=\"2\">&nbsp;&nbsp;<b>{$cursus[$ins['CursusId_FK']]['cursusnaam_nl']}</b>"; ?>
+                            <?php if ($ins['CursusId_FK'] != "") {
+                                $cursusgegevens = $cursus[$ins['CursusId_FK']];
+                            ?>
+                                Inschrijving nr. <input name="InschId" type="text"
+                                    class="uit" value="<?php echo $ins['InschId']; ?>" size="2">
+                                <br><b><?php echo htmlspecialchars($cursusgegevens['cursusnaam_nl'], ENT_QUOTES, 'UTF-8'); ?></b>
+                                <br><?php echo format_datum_short($cursusgegevens['datum_begin'], 'nl_NL'); ?>
+                                t/m <?php echo format_datum_short($cursusgegevens['datum_eind'], 'nl_NL'); ?>
+                            <?php } ?>
                             <input name="CursusId_FK" type="hidden"
                                 value="<?php echo stripslashes($ins['CursusId_FK']); ?>">
                         </td>

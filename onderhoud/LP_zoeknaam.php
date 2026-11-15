@@ -50,8 +50,8 @@ if ((isset($_POST["zoek"])) and ($_POST["zoek"] == "zoek") and ($_POST["oude_dln
         $Cursussen = select_query($query_Cursussen);
         $grijs[$ins['DlnmrId']] = TRUE;
         if (is_array($Cursussen))
-            foreach ($Cursussen as $cursus) {
-                $grijs[$ins['DlnmrId']] = !(in_array($cursus['CursusId_FK'], $cur));
+            foreach ($Cursussen as $cursusdeelname) {
+                $grijs[$ins['DlnmrId']] = !(in_array($cursusdeelname['CursusId_FK'], $cur));
             } // foreach Cursussen
         else
             echo ('Geen namen gevonden</br>');
