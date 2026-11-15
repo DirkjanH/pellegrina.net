@@ -59,6 +59,16 @@ if (isset($oude_gegevens) and is_array($oude_gegevens)) {
 	$geboortedatum = safestrtotime('Y-m-d', $_POST['geboortedatum']);
 } else $zoekresultaat = "<tr><td class=\"nadruk\">This is not a valid password.</td></tr>";
 
+require_once __DIR__ . '/stemsoorten.php';
+try {
+	$stemsoorten = normaliseer_stemsoorten($_POST['zangstem'] ?? '');
+	$ongeldigeStemsoort = false;
+} catch (InvalidArgumentException $exception) {
+	$stemsoorten = [];
+	$ongeldigeStemsoort = true;
+}
+$_POST['zangstem'] = implode(', ', $stemsoorten);
+
 d($instrumentcodetabel, $_POST);
 
 if ((isset($_POST['submit'])) && ($_POST['submit'] == 'submit')) {
@@ -87,10 +97,10 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'submit')) {
 	}
 	d($instrumentenlijst);
 
-	if (isset($_POST['instr'])) $ins = $_POST['instr'];
+	$ins = $_POST['instr'] ?? [];
 	if (isset($_POST['toehoorder'])) $ins[] = 500;
 	$instrumenten = implode(', ', (array)$ins); // alleen instrumenten & toehoorders
-	if (isset($_POST['zangstem']) AND $_POST['zangstem'] != '') $ins[] = $_POST['zangstem'];
+	$ins = array_merge($ins, $stemsoorten);
 	$instr = implode(', ', (array)$ins); // alle functies
 
 	if (isset($_POST['rol_z'])) $rol_z = implode(', ', $_POST['rol_z']);
@@ -178,9 +188,13 @@ if ((isset($_POST['submit'])) && ($_POST['submit'] == 'submit')) {
 	}
 
 	// check zangstem:
+	if ($ongeldigeStemsoort) {
+		$error = true;
+		$fout .= "<li>Your voice selection is invalid. Please select your voice types again from the list.</li>\n";
+	}
 	if ((isset($_POST['zanger']) or isset($_POST['solozanger'])) and $_POST['zangstem'] == '') {
 		$error = true;
-		$fout .= "   <li>You want to take part as singer. Please indicate <b>your voice type</b></li>\n";
+		$fout .= "   <li>You want to take part as a singer. Please select <b>at least one voice type</b>.</li>\n";
 	}
 
 	// check akkoord:

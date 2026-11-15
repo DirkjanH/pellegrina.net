@@ -229,28 +229,17 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                 <tr>
                     <td class="linkerkolom">&nbsp;</td>
                     <td>
-                        <p><strong>My voice type is:</strong></p>
-                        <input name="zangstem" type="radio" value="10"
-                            <?php
-                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "10")) echo 'checked'; ?>>soprano  <input
-                            type="radio" name="zangstem" value="20"
-                            <?php
-                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "20")) echo 'checked'; ?>>mezzosoprano  <input
-                            type="radio" name="zangstem" value="30"
-                            <?php
-                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "30")) echo 'checked'; ?>>alto  <input
-                            type="radio" name="zangstem" value="40"
-                            <?php
-                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "40")) echo 'checked'; ?>>countertenor  <input
-                            type="radio" name="zangstem" value="50"
-                            <?php
-                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "50")) echo 'checked'; ?>>tenor  <input
-                            type="radio" name="zangstem" value="60"
-                            <?php
-                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "60")) echo 'checked'; ?>>baritone  <input
-                            type="radio" name="zangstem" value="70"
-                            <?php
-                            if (isset($_POST['zangstem']) and ($_POST['zangstem'] == "70")) echo 'checked'; ?>>bass
+                        <p><strong><label for="zang_stem">My voice types:</label></strong></p>
+                        <p id="zang_stem_uitleg" class="nadruk">(multiple choices are possible by keeping the Ctrl key pressed)</p>
+                        <select name="zangstem[]" id="zang_stem" multiple size="7" aria-describedby="zang_stem_uitleg">
+                            <option value="10" <?php if (in_array('10', $stemsoorten, true)) echo 'selected'; ?>>soprano</option>
+                            <option value="20" <?php if (in_array('20', $stemsoorten, true)) echo 'selected'; ?>>mezzosoprano</option>
+                            <option value="30" <?php if (in_array('30', $stemsoorten, true)) echo 'selected'; ?>>alto</option>
+                            <option value="40" <?php if (in_array('40', $stemsoorten, true)) echo 'selected'; ?>>countertenor</option>
+                            <option value="50" <?php if (in_array('50', $stemsoorten, true)) echo 'selected'; ?>>tenor</option>
+                            <option value="60" <?php if (in_array('60', $stemsoorten, true)) echo 'selected'; ?>>baritone</option>
+                            <option value="70" <?php if (in_array('70', $stemsoorten, true)) echo 'selected'; ?>>bass</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
