@@ -11,23 +11,6 @@ $cursusnr = 1 + $cursus_offset; ?>
     <meta name="robots" content="noindex, nofollow">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <link href="../css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-    h4.nadrukkelijk {
-        color: #F03;
-    }
-
-    .blok {
-        clear: none;
-        float: left;
-        width: 500px;
-    }
-
-    #inhoud #main ul .alles {
-        clear: both;
-        height: 240px;
-    }
-    </style>
 </head>
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>

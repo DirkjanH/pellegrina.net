@@ -139,7 +139,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 een kamerkoor koor en werken ze aan muziek van Mendelssohn, Dvořák, Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler zal dit koor leiden op zijn onnavolgbare manier, waarbij hij behulpzame vocale instructies en uitstekende pianobegeleiding combineert met duidelijke leiding. Tsjechische professionele zangers, met name tenoren en bassen, zullen zich bij het koor
                 voegen koor als de balans tussen de verschillende stemgroepen daar om vraagt. </p>
             <p class="citaat">Marrie Kardol: &quot;Pellegrina is een van mijn leukste en gezondste verslavingen geworden!&quot;</p>
-            <div class="container" style="clear: both;">
+            <div class="container">
                 <h4><a name="solozang"></a>Solozangers</h4>
                 <div class="fotorechts"><img class="w3-image"
                         src="/Images/zangcoaching.jpg"

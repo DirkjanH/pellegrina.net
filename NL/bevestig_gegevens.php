@@ -163,10 +163,10 @@ else exit('Deze deelnemer bestaat niet. Het programma wordt nu afgebroken.')
 
 <div <?php if (empty($dlnmr) OR $dlnmr['naam'] == '') echo('class="onzichtbaar"'); ?>>
    <form method="post">
-      <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-green w3-block" style="width: 100%;">Ja, ik ga akkoord met de opgeslagen gegevens en wil de <em>La Pellegrina</em> nieuwsbrief (ca. 2 x per jaar) blijven ontvangen</button>
-      <button onClick="GP_popupConfirmMsg('Weet je zeker dat je je gegevens werkelijk wilt wissen?'); return document.MM_returnValue" id="bevestig" name="bevestig" value="wis" type="submit" class="w3-btn w3-red w3-block" style="width: 100%;">Nee, ik wil dat de opgeslagen gegevens gewist worden en wil de <em>La Pellegrina</em> nieuwsbrief niet meer ontvangen</button>
+      <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-green w3-block">Ja, ik ga akkoord met de opgeslagen gegevens en wil de <em>La Pellegrina</em> nieuwsbrief (ca. 2 x per jaar) blijven ontvangen</button>
+      <button onClick="GP_popupConfirmMsg('Weet je zeker dat je je gegevens werkelijk wilt wissen?'); return document.MM_returnValue" id="bevestig" name="bevestig" value="wis" type="submit" class="w3-btn w3-red w3-block">Nee, ik wil dat de opgeslagen gegevens gewist worden en wil de <em>La Pellegrina</em> nieuwsbrief niet meer ontvangen</button>
    </form>   
-   <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-blue w3-block" style="width: 100%;">Mocht je je gegevens willen wijzigen, stuur dan even een mailtje met je wens naar <a class="w3-text-white w3-large" href="mailto:info@pellegrina.net">info@pellegrina.net</a></button>
+   <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-blue w3-block">Mocht je je gegevens willen wijzigen, stuur dan even een mailtje met je wens naar <a class="w3-text-white w3-large" href="mailto:info@pellegrina.net">info@pellegrina.net</a></button>
 </div>
 <p>Voor een volledig overzicht van hoe wij met je persoonsgegevens omgaan verwijzen we je graag naar de <a href="privacy.php" target="_blank">privacyverklaring</a> van <em>La Pellegrina</em>. Bedankt voor je vertrouwen! </p>
    <p>Met muzikale groet</p>

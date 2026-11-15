@@ -160,7 +160,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 voice groups needs it.</p>
             <p class="citaat">Marrie Kardol &quot;Pellegrina has become one of
                 my best and healthiest addictions!&quot;</p>
-            <div class="container" style="clear: both">
+            <div class="container">
                 <h4><a name="solozang"></a>Solo singers</h4>
                 <div class="fotorechts"><img src="/Images/zangcoaching.jpg"
                         alt="singer being coached" width="400"

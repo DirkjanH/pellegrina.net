@@ -29,13 +29,6 @@ $jaar = 2027;
     <link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
     <link href="/css/openingspagina.css" rel="stylesheet" type="text/css">
     <link href="/css/banner.css" rel="stylesheet" type="text/css">
-    <!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
     <!-- Facebook Pixel Code -->
     <script>
     ! function(f, b, e, v, n, t, s) {

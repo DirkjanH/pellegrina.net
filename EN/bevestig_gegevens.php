@@ -162,10 +162,10 @@ else exit('This participant does not exist. The program is now being terminated.
 
 <div <?php if (empty($dlnmr) OR $dlnmr['naam'] == '') echo('class="onzichtbaar"'); ?>>
    <form method="post">
-      <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-green w3-block" style="width: 100%;">Yes, I agree with the stored data and want to continue receiving the <em>La Pellegrina</em> newsletter (about 2 x per year)</button>
-      <button onClick="GP_popupConfirmMsg('Are you sure you want to delete your details?'); return document.MM_returnValue" id="bevestig" name="bevestig" value="wis" type="submit" class="w3-btn w3-red w3-block" style="width: 100%;">No, I want the stored data to be deleted and to stop receiving the <em>La Pellegrina</em> newsletter</button>
+      <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-green w3-block">Yes, I agree with the stored data and want to continue receiving the <em>La Pellegrina</em> newsletter (about 2 x per year)</button>
+      <button onClick="GP_popupConfirmMsg('Are you sure you want to delete your details?'); return document.MM_returnValue" id="bevestig" name="bevestig" value="wis" type="submit" class="w3-btn w3-red w3-block">No, I want the stored data to be deleted and to stop receiving the <em>La Pellegrina</em> newsletter</button>
    </form>   
-   <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-blue w3-block" style="width: 100%;">If you want to change your details, please send an e-mail with your wish to <a class="w3-text-white w3-large" href="mailto:info@pellegrina.net">info@pellegrina.net</a></button>
+   <button id="bevestig" name="bevestig" value="ja" type="submit" class="w3-btn w3-blue w3-block">If you want to change your details, please send an e-mail with your wish to <a class="w3-text-white w3-large" href="mailto:info@pellegrina.net">info@pellegrina.net</a></button>
 </div>
 <p>For a complete overview of how we deal with your personal data, we refer you to the <a href="privacy.php" target="_blank">privacy statement</a> of <em>La Pellegrina</em>. Thank you for your confidence! </p>
    <p>Musical greetings,</p>
