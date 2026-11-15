@@ -11,14 +11,24 @@ while ($i <= $laatstecursus) {
 
 if (isset($_POST['DlnmrId']) and $_POST['DlnmrId'] != '') $_SESSION['DlnmrId'] = $_POST['DlnmrId'];
 
-if (empty($_POST['oude_dlnrs'])) $_POST['oude_dlnrs'] = '';
-if (empty($_POST['cursus'])) {
-    $_POST['cursus'] = 'alles';
-    $_POST['zoek'] = 'zoek';
+if (isset($_POST['zoek']) && $_POST['zoek'] === 'zoek') {
+    $_SESSION['LP_zoeknaam'] = [
+        'zoeknaam' => $_POST['zoeknaam'] ?? '',
+        'oude_dlnrs' => isset($_POST['oude_dlnrs']) && $_POST['oude_dlnrs'] == '1' ? '1' : '',
+        'cursus' => !empty($_POST['cursus']) ? $_POST['cursus'] : 'alles',
+    ];
 }
 
-if (isset($_POST['cursus']) && $_POST['cursus'] != '') $_SESSION['cursuskeuze'] = $_POST['cursus'];
-if (isset($_SESSION['cursuskeuze']) && $_SESSION['cursuskeuze'] != '' && empty($_POST['cursus'])) $_POST['cursus'] = $_SESSION['cursuskeuze'];
+$zoekinstellingen = $_SESSION['LP_zoeknaam'] ?? [
+    'zoeknaam' => '',
+    'oude_dlnrs' => '',
+    'cursus' => !empty($_SESSION['cursuskeuze']) ? $_SESSION['cursuskeuze'] : 'alles',
+];
+$_POST['zoeknaam'] = $zoekinstellingen['zoeknaam'];
+$_POST['oude_dlnrs'] = $zoekinstellingen['oude_dlnrs'];
+$_POST['cursus'] = $zoekinstellingen['cursus'];
+$_POST['zoek'] = 'zoek';
+$_SESSION['cursuskeuze'] = $_POST['cursus'];
 
 if ((isset($_POST["zoek"])) and ($_POST["zoek"] == "zoek") and ($_POST["oude_dlnrs"] == 1)) {
 
@@ -29,11 +39,7 @@ if ((isset($_POST["zoek"])) and ($_POST["zoek"] == "zoek") and ($_POST["oude_dln
     } // colname__Inschr
     $query_Inschr = sprintf("SELECT DISTINCT DlnmrId, naam FROM dlnmr WHERE naam LIKE \"%%%s%%\" 
 		ORDER BY achternaam ASC", $zoeknaam);
-    $Inschr = select_query($query_Inschr);
-    if (is_array($Inschr))
-        $aantal_ins = count($Inschr);
-    else
-        $aantal_ins = 0;
+    $Inschr = select_query($query_Inschr) ?: [];
 
     foreach ($Inschr as $ins) {
         $query_Cursussen = sprintf(
@@ -76,12 +82,11 @@ if ((isset($_POST["zoek"])) && ($_POST["zoek"] == "zoek") and ($_POST["oude_dlnr
         $query_Inschr = "SELECT DISTINCT DlnmrId, naam FROM dlnmr, inschrijving WHERE DlnmrId = DlnmrId_FK AND NOT (afgewezen <=> 1)
 			AND CursusId_FK > {$cursus_offset} AND CursusId_FK <= ({$aantal_cursussen} + {$cursus_offset}) AND NOT(aangenomen <=> 1) ORDER BY achternaam ASC";
     }
-    $Inschr = select_query($query_Inschr);
-    if (isset($Inschr) and is_array($Inschr)) {
-        $aantal_ins = count($Inschr);
-        $_SESSION['Inschr'] = $Inschr;
-    } else $aantal_ins = 0;
+    $Inschr = select_query($query_Inschr) ?: [];
 } // if zoek
+
+$aantal_ins = count($Inschr);
+$_SESSION['Inschr'] = $Inschr;
 
 function check($input)
 {
@@ -106,13 +111,12 @@ function check($input)
 </head>
 
 <body>
-    <div id="inhoud"> <?php if (empty($Inschr)) $Inschr = $_SESSION['Inschr'];
-                                        d($_SESSION, $Inschr) ?> <form
+    <div id="inhoud"> <?php d($_SESSION, $Inschr) ?> <form
             id="vinden" method="post"
             action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <p><label>Naam: </label><input name="zoeknaam" type="text"
                     id="zoeknaam" size="15"
-                    value="<?php echo $_POST['zoeknaam']; ?>"> <a
+                    value="<?php echo htmlspecialchars($_POST['zoeknaam'], ENT_QUOTES, 'UTF-8'); ?>"> <a
                     href="javascript:wis()" class="w3-text-red w3-hover-white"
                     style="text-decoration: none; padding: 10px;"><b>X</b></a><br>
                 <label>Alle deelnemers van ooit: </label><input
@@ -134,10 +138,7 @@ function check($input)
                     inschrijvingen</label>
             </p>
             <input name="zoek" type="hidden" id="zoek" value="zoek">
-            <?php if (empty($Inschr)) {
-                $Inschr = $_SESSION['Inschr'];
-            }
-            d($aantal_ins, $Inschr); ?> <p>Kies een naam uit: <span
+            <?php d($aantal_ins, $Inschr); ?> <p>Kies een naam uit: <span
                     class="klein">(totaal:<?php echo $aantal_ins; ?>)</span></p>
             <div id="navcontainer">
                 <ul id="navlist"> <?php foreach ($Inschr as $ins) { ?> <li
@@ -147,7 +148,7 @@ function check($input)
                                         if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
                                             echo ('<span class="grijs">');
                                         echo "{$ins['naam']} <span class=\"klein\">({$ins['DlnmrId']})</span>";
-                                        if (is_null($ins['voorl_bev']))
+                                        if (is_null($ins['voorl_bev'] ?? null))
                                             echo " <span class=\"NogNietBevestigd\">###</span>";
                                         if (isset($grijs[$ins['DlnmrId']]) and $grijs[$ins['DlnmrId']])
                                             echo '</span>'; ?></a>
