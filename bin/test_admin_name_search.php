@@ -3,6 +3,25 @@
 class Kint { public static $enabled_mode; }
 function d(...$values) {}
 
+class SearchFixtureDatabase {
+    public function prepare($query) { return new SearchFixtureStatement($query); }
+}
+class SearchFixtureStatement {
+    private $query;
+    public function __construct($query) { $this->query = $query; }
+    public function execute($parameters) {
+        global $queries, $queryParameters;
+        $queries[] = $this->query;
+        $queryParameters[] = $parameters;
+    }
+    public function fetchAll($mode) {
+        global $fixture;
+        if (str_starts_with($this->query, 'SELECT DISTINCT DlnmrId')) return $fixture['rows'] ?: [];
+        if (str_contains($this->query, 'SELECT CursusId_FK')) return [['CursusId_FK' => 101]];
+        throw new RuntimeException('Unexpected fixture query: ' . $this->query);
+    }
+}
+
 function select_query($query, $index = 2) {
     global $fixture, $queries;
     $queries[] = $query;
@@ -29,6 +48,8 @@ if (($argv[1] ?? '') === '--request') {
     $aantal_cursussen = 2;
     $cursus = [101 => ['cursusnaam_nl' => 'Testcursus']];
     $queries = [];
+    $queryParameters = [];
+    $db = new SearchFixtureDatabase();
     ob_start();
     if ($fixture['course'] === null) {
         require dirname(__DIR__) . '/onderhoud/LP_zoeknaam.php';
@@ -56,7 +77,7 @@ if (($argv[1] ?? '') === '--request') {
         }
     }
     $html = ob_get_clean();
-    echo json_encode(['html' => $html, 'session' => $_SESSION, 'queries' => $queries, 'cursus' => $cursus], JSON_THROW_ON_ERROR);
+    echo json_encode(['html' => $html, 'session' => $_SESSION, 'queries' => $queries, 'parameters' => $queryParameters, 'cursus' => $cursus], JSON_THROW_ON_ERROR);
     exit;
 }
 
@@ -93,7 +114,7 @@ foreach (['LP_inschrijving.php', 'LP_financieel.php', 'LP_rekening.php'] as $pag
     checkSearch((bool) preg_match('/id="oude_dlnrs"[^>]*checked/s', $result['html']), $page . ': historical-participant checkbox must remain selected.');
     checkSearch(str_contains($result['html'], 'ToonId(501)'), $page . ': matching participant must remain in the list.');
     checkSearch($result['session']['DlnmrId'] === '501', $page . ': selected participant must be retained.');
-    checkSearch(str_contains($result['queries'][0], 'FROM dlnmr WHERE naam LIKE "%Voorbeeld & Test%"'), $page . ': search must still include historical participants.');
+    checkSearch(str_contains($result['queries'][0], 'FROM dlnmr WHERE naam LIKE ?') && $result['parameters'][0] === ['%Voorbeeld & Test%'], $page . ': search must use a bound historical-participant name.');
 }
 echo "PASS: historical search, results and selected participant survive three page changes.\n";
 
@@ -107,7 +128,7 @@ $result = searchRequest($result['session'], [], '/onderhoud/LP_rekening.php', $c
 checkSearch($result['session']['LP_zoeknaam']['oude_dlnrs'] === '', 'An unchecked historical-participant checkbox must clear the saved option.');
 checkSearch(!(bool) preg_match('/id="oude_dlnrs"[^>]*checked/s', $result['html']), 'The historical-participant checkbox must remain unchecked after navigation.');
 checkSearch(str_contains($result['html'], 'value="Huidige"'), 'A changed search term must replace the previous term.');
-checkSearch(str_contains($result['queries'][0], 'CursusId_FK=102'), 'The chosen course must also survive navigation.');
+checkSearch(str_contains($result['queries'][0], 'CursusId_FK=?') && $result['parameters'][0][1] === 102, 'The chosen course must also survive navigation.');
 echo "PASS: changed search, unchecked option and course filter survive navigation.\n";
 
 $result = searchRequest($result['session'], ['zoek' => 'zoek', 'zoeknaam' => 'Geen resultaat', 'oude_dlnrs' => '1', 'cursus' => 'alles'], '/onderhoud/LP_persoonlijk.php', false);
@@ -120,12 +141,37 @@ echo "PASS: an empty historical search remains empty after navigation.\n";
 $result = searchRequest($result['session'], ['zoek' => 'zoek', 'zoeknaam' => '', 'cursus' => 'alles'], '/onderhoud/LP_persoonlijk.php', $currentRows);
 $result = searchRequest($result['session'], [], '/onderhoud/LP_rekening.php', $currentRows);
 checkSearch($result['session']['LP_zoeknaam']['zoeknaam'] === '', 'An explicitly cleared search must remain empty.');
-checkSearch(str_contains($result['queries'][0], 'naam LIKE "%%"'), 'An explicitly cleared search must not restore the old term.');
+checkSearch($result['parameters'][0] === ['%%'], 'An explicitly cleared search must not restore the old term.');
 echo "PASS: clearing the search remains effective after navigation.\n";
 
 $result = searchRequest(['cursuskeuze' => '2'], [], '/onderhoud/LP_persoonlijk.php', []);
-checkSearch(str_contains($result['queries'][0], 'CursusId_FK=102'), 'Existing saved course choices must remain supported.');
+checkSearch(str_contains($result['queries'][0], 'CursusId_FK=?') && $result['parameters'][0][1] === 102, 'Existing saved course choices must remain supported.');
 echo "PASS: first use with a previously saved course filter works without warnings.\n";
+
+$attack = '" OR 1=1 --';
+$result = searchRequest([], ['zoek' => 'zoek', 'zoeknaam' => $attack, 'oude_dlnrs' => '1', 'cursus' => 'alles'], '/onderhoud/LP_persoonlijk.php', [['DlnmrId' => 501, 'naam' => '<script>alert(1)</script>']]);
+checkSearch($result['parameters'][0] === ['%' . $attack . '%'] && !str_contains($result['queries'][0], $attack), 'The search term must be bound, not interpolated into SQL.');
+checkSearch($result['parameters'][1] === ['<script>alert(1)</script>'], 'Participant names must also be bound in the course query.');
+checkSearch(str_contains($result['html'], '&lt;script&gt;alert(1)&lt;/script&gt;') && !str_contains($result['html'], '<script>alert(1)</script>'), 'Participant names must be HTML-escaped.');
+echo "PASS: historical search binds SQL input and escapes participant names.\n";
+
+foreach ([
+    [['zoek' => 'zoek', 'zoeknaam' => ['x']], 'Ongeldige zoekopdracht.'],
+    [['DlnmrId' => '1 OR 1=1'], 'Ongeldig deelnemersnummer.'],
+] as [$invalidPost, $message]) {
+    $process = proc_open([PHP_BINARY, __FILE__, '--request'], [
+        0 => ['pipe', 'r'], 1 => ['pipe', 'w'], 2 => ['pipe', 'w'],
+    ], $pipes);
+    if (!is_resource($process)) throw new RuntimeException('Could not start invalid-input fixture.');
+    fwrite($pipes[0], json_encode(['session' => [], 'post' => $invalidPost, 'page' => '/onderhoud/LP_bezettingen.php', 'rows' => [], 'course' => null], JSON_THROW_ON_ERROR));
+    fclose($pipes[0]);
+    $output = stream_get_contents($pipes[1]);
+    $errors = stream_get_contents($pipes[2]);
+    fclose($pipes[1]);
+    fclose($pipes[2]);
+    checkSearch(proc_close($process) === 0 && $output === $message && $errors === '', 'Invalid input must be rejected explicitly without warnings.');
+}
+echo "PASS: invalid search input and participant IDs are rejected.\n";
 
 foreach ([
     [
