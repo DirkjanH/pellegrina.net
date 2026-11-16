@@ -33,157 +33,114 @@ $cssVersion = '?v=' . time(); ?>
                     <th>Flyer concert</th>
                 </tr>
                 <tr>
-                    <td class="w3-center"><a href="../part_list.php?cursus=2"
-                            target="_blank">List of participants</a></td>
-                    <td class="w3-center"><a
-                            href="https://pellegrina.net/ensemblelijst_2.php"
-                            target="_blank">Chamber music ensembles</a></td>
-                    <td class="w3-center"><a
-                            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTU_T6ifuUO40FAMPOA-I_v5GOIo00yKUIFCEbkuEyQ9VCw05pTswkFi7Z1UiQCtne9X9GzTNMKx7sS/pubhtml?gid=0&single=true"
-                            target="_blank">Overview of accommodation</a></td>
+                    <td class="w3-center"><a class="grijs">List of participants</a></td>
+                    <td class="w3-center"><a class="grijs">Chamber music ensembles</a></td>
+                    <td class="w3-center"><a class="grijs">Overview of accommodation</a></td>
                     <td class="w3-center"><a
                             href="https://docs.google.com/document/d/1ODcgAmuTYIfNC9DKLaU0f6zed2uJvaJ6aoiIGp2Sb1A/edit?usp=sharing"
                             target="_blank">Accommodation near<br>Nieuw Sion</a>
                     </td>
-                    <td class="w3-center"><a
-                            href="https://docs.google.com/document/d/e/2PACX-1vSXywNgXj36DpMyjGpYuh20GpRdJugAzvmj8zXUthx0mOB2Lx9zzAeSFcepXTpQTveO17gRBWNCZ5Of/pub"
-                            target="_blank">Daily program</a></td>
-                    <td class="w3-center"><a
-                            href="https://www.pellegrina.net/barok2026/"
-                            target="_blank">Information & reservation
+                    <td class="w3-center"><a class="grijs">Daily program</a></td>
+                    <td class="w3-center"><a class="grijs">Information & reservation
                             concert</a></td>
                 </tr>
             </table>
             <div class="onzichtbaar">
-                <h2>Some chamber music works</h2>
-                <p>Most chamber music works are available on the <a
-                        href="https://imslp.org/" target="_blank">International
-                        Music Score Library Project (IMSLP)</a> or the <a
-                        href="https://www.cpdl.org/" target="_blank">Choral
-                        Public Domain Library (CPDL)</a>. Only works that are
+                <h2 class="onzichtbaar">Some chamber music works</h2>
+                <p>Most chamber music works are available on the International
+                        Music Score Library Project (IMSLP) or the Choral
+                        Public Domain Library (CPDL). Only works that are
                     not generally available are listed below.</p>
-                <h4>Domenico Scarlatti - Salve Regina (set 2 nr. 2)</h4>
-                <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-(S,A,Streicher,Orgel).pdf"
-                        target="_blank">Full score</a></li>
-                <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine1.pdf"
-                        target="_blank">Violin 1</a></li>
-                <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Violine2.pdf"
-                        target="_blank">Violin 2</a></li>
-                <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Viola.pdf"
-                        target="_blank">Viola</a></li>
-                <li><a href="/pdf/2025-2/Scarlatti D. - Salve Regina/ScarlattiD-SalveRegina-Cello-B<br></p>ss.pdf"
-                        target="_blank">Cello</a></li>
+                <h4 class="onzichtbaar">Domenico Scarlatti - Salve Regina (set 2 nr. 2)</h4>
+                <li>Full score</li>
+                <li>Violin 1</li>
+                <li>Violin 2</li>
+                <li>Viola</li>
+                <li>Cello</li>
             </div>
-            <h2>Tutti programme</h2>
+            <h2 class="onzichtbaar">Tutti programme</h2>
             <p>All works we are going to perform are now available here. Please
                 print and study what you need. The string parts will soon have
                 bowings; string players will be notified.</p>
             <p>Singers, please print out the vocal scores and bring them with
                 you. Study the choral parts as well as your solo parts.</p>
-            <h4>Heinichen, Johann David - Concerto à 7 S.215</h4>
+            <h4 class="onzichtbaar">Heinichen, Johann David - Concerto à 7 S.215</h4>
             <p class="nadruk">A new edition has been made by Lea, extending the
                 recorder parts with the tutti sections and giving more common
                 clefs in the 2nd violin. Please only use this new edition.</p>
             <div class="cols3">
                 <ul>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen/Heinichen, Johann David - Concerto à 7 S.215 Full score -met streken.pdf"
-                            target="_blank">Full score <b>with bowings</b></a>
+                    <li>Full score <b>with bowings</b>
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen/hein 215 recorders 1 and 2.pdf"
-                            target="_blank">Flute 1/2</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen/hein 215-1 test _oboe 1_oboe 2 geheel.pdf"
-                            target="_blank">Oboe 1/2</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen/hein 215 vi 1.pdf"
-                            target="_blank">Violin 1</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen/Hein 215 vi 2.pdf"
-                            target="_blank">Violin 2</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen/hein 215-viola.pdf"
-                            target="_blank">Viola</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen/Heinichen 215 bassi.pdf"
-                            target="_blank">Cello, double bass, bassoon</a>
+                    <li>Flute 1/2</li>
+                    <li>Oboe 1/2</li>
+                    <li>Violin 1</li>
+                    <li>Violin 2</li>
+                    <li>Viola</li>
+                    <li>Cello, double bass, bassoon
                     </li>
                 </ul>
             </div>
-            <h4>Biber, Heinrich - De Profundis</h4>
+            <h4 class="onzichtbaar">Biber, Heinrich - De Profundis</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Full Score met streken.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis
-                            <b>Full score with bowings</b></a>
+                    <li>Biber, Heinrich - De Profundis
+                            <b>Full score with bowings</b>
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Voices & BC.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Vocal score & BC</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Vocal score & BC
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Cornetto ripieno.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Recorders, oboes</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Recorders, oboes
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Alto Trombone ripieno.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Alto trombone</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Alto trombone
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Tenor Trombone ripieno.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Tenor trombone</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Tenor trombone
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Bass Trombone ripieno.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Bass trombone, bassoon</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Bass trombone, bassoon
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Violino primo.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Violin 1</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Violin 1
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Violino secundo.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Violin 2</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Violin 2
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Viola prima.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Viola 1</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Viola 1
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Viola secunda.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Viola 2</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Viola 2
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Cello, double bass.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis -
-                            Cello, double bass, BC</a>
+                    <li>Biber, Heinrich - De Profundis -
+                            Cello, double bass, BC
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber_DP/Biber - De profundis - Organo.pdf"
-                            target="_blank">Biber, Heinrich - De Profundis - BC
-                            part with empty stave</a>
+                    <li>Biber, Heinrich - De Profundis - BC
+                            part with empty stave
                     </li>
                 </ul>
             </div>
-            <h4>Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
+            <h4 class="onzichtbaar">Zelenka, Jan Dismas - Ecce nunc benedicite, ZWV 99</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Partitur MET STREKEN.pdf"
-                            target="_blank">Zelenka - Ecce - Score <b>with
-                                bowings</b></a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Oboe1.pdf"
-                            target="_blank">Zelenka - Ecce - Oboe 1</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Oboe2.pdf"
-                            target="_blank">Zelenka - Ecce - Oboe 2</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Violino1.pdf"
-                            target="_blank">Zelenka - Ecce - Violin 1</a>
+                    <li>Zelenka - Ecce - Score <b>with
+                                bowings</b></li>
+                    <li>Zelenka - Ecce - Oboe 1</li>
+                    <li>Zelenka - Ecce - Oboe 2</li>
+                    <li>Zelenka - Ecce - Violin 1
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Violino2.pdf"
-                            target="_blank">Zelenka - Ecce - Violin 2</a>
+                    <li>Zelenka - Ecce - Violin 2
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Viola.pdf"
-                            target="_blank">Zelenka - Ecce - Viola</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Bassi.pdf"
-                            target="_blank">Zelenka - Ecce - Cello, double bass,
-                            bassoon</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Zelenka_Ecce/Zelenka - Ecce - Organo.pdf"
-                            target="_blank">Zelenka - Ecce - Organ BC</a>
+                    <li>Zelenka - Ecce - Viola</li>
+                    <li>Zelenka - Ecce - Cello, double bass,
+                            bassoon</li>
+                    <li>Zelenka - Ecce - Organ BC
                     </li>
                 </ul>
             </div>
-            <h4>Hasse, Johann Adolph - Miserere in c moll</h4>
+            <h4 class="onzichtbaar">Hasse, Johann Adolph - Miserere in c moll</h4>
             <div class="w3-panel w3-border w3-light-grey">
                 <p><b>N.B.</b> only the following sections of this Miserere will
                     be performed:</p>
@@ -199,94 +156,70 @@ $cssVersion = '?v=' . time(); ?>
             </p>
             <div class=" cols3">
                 <ul class="cols3">
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Hasse/Miserere-Hasse_score met ALLE streken deel 1, 2 4 en 5.pdf"
-                            target="_blank">Hasse - Miserere in c moll - Full
+                    <li>Hasse - Miserere in c moll - Full
                             score <b>with bowings in movements 1, 2, 4 and
-                                5</b></a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Hasse/Miserere-Hasse_Violino I.pdf"
-                            target="_blank">Hasse - Miserere in c moll - Violin
-                            I</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Hasse/Miserere-Hasse_Violino II.pdf"
-                            target="_blank">Hasse - Miserere in c moll - Violin
-                            II</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Hasse/Miserere-Hasse_Viola I-II.pdf"
-                            target="_blank">Hasse - Miserere in c moll - Viola
-                            I-II</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Hasse/Miserere-Hasse_Viola III.pdf"
-                            target="_blank">Hasse - Miserere in c moll - Viola
-                            III</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Hasse/Miserere-Hasse_Violoncello-Contrabbasso.pdf"
-                            target="_blank">Hasse - Miserere in c moll - Cello,
-                            double bass</a></li>
+                                5</b></li>
+                    <li>Hasse - Miserere in c moll - Violin
+                            I</li>
+                    <li>Hasse - Miserere in c moll - Violin
+                            II</li>
+                    <li>Hasse - Miserere in c moll - Viola
+                            I-II</li>
+                    <li>Hasse - Miserere in c moll - Viola
+                            III</li>
+                    <li>Hasse - Miserere in c moll - Cello,
+                            double bass</li>
                 </ul>
             </div>
-            <h4>Heinichen, Johann David - Confitebor S.32</h4>
+            <h4 class="onzichtbaar">Heinichen, Johann David - Confitebor S.32</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Full Score - met STREKEN.pdf"
-                            target="_blank">Heinichen - Confitebor S.32 - Full
-                            score <b>with bowings</b></a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 1.pdf"
-                            target="_blank">Heinichen - Confitebor S.32 - Violin
-                            1</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violin 2.pdf"
-                            target="_blank">Heinichen - Confitebor S.32 - Violin
-                            2</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Viola.pdf"
-                            target="_blank">Heinichen - Confitebor S.32 -
-                            Viola</a>
+                    <li>Heinichen - Confitebor S.32 - Full
+                            score <b>with bowings</b></li>
+                    <li>Heinichen - Confitebor S.32 - Violin
+                            1</li>
+                    <li>Heinichen - Confitebor S.32 - Violin
+                            2</li>
+                    <li>Heinichen - Confitebor S.32 -
+                            Viola
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Heinichen_CTD/Heinichen Confitebor - Violoncello.pdf"
-                            target="_blank">Heinichen - Confitebor S.32 - Cello,
-                            double bass</a></li>
+                    <li>Heinichen - Confitebor S.32 - Cello,
+                            double bass</li>
                 </ul>
             </div>
-            <h4>Biber, Heinrich - Requiem in f</h4>
+            <h4 class="onzichtbaar">Biber, Heinrich - Requiem in f</h4>
             <div class="cols3">
                 <ul>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber_Requiem_in_f_Full score with bowings.pdf"
-                            target="_blank">Biber - Requiem in f - Full score
-                            <b>with bowings</b></a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber_Requiem_in_f_VS_PML.pdf"
-                            target="_blank">Biber - Requiem in f - Vocal
-                            score</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Violin I.pdf"
-                            target="_blank">Biber - Requiem in f - Violin I</a>
+                    <li>Biber - Requiem in f - Full score
+                            <b>with bowings</b></li>
+                    <li>Biber - Requiem in f - Vocal
+                            score</li>
+                    <li>Biber - Requiem in f - Violin I
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Violin II.pdf"
-                            target="_blank">Biber - Requiem in f - Violin II</a>
+                    <li>Biber - Requiem in f - Violin II
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Viola I.pdf"
-                            target="_blank">Biber - Requiem in f - Viola I</a>
+                    <li>Biber - Requiem in f - Viola I
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Viola I (violino).pdf"
-                            target="_blank">Biber - Requiem in f - Viola I (in
-                            vioolsleutel)</a>
+                    <li>Biber - Requiem in f - Viola I (in
+                            vioolsleutel)
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Viola II.pdf"
-                            target="_blank">Biber - Requiem in f - Viola II</a>
+                    <li>Biber - Requiem in f - Viola II
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Viola III.pdf"
-                            target="_blank">Biber - Requiem in f - Viola III</a>
+                    <li>Biber - Requiem in f - Viola III
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Violone.pdf"
-                            target="_blank">Biber - Requiem in f - Violone</a>
+                    <li>Biber - Requiem in f - Violone
                     </li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Alto trombone.pdf"
-                            target="_blank">Biber - Requiem in f - Alto trombone
-                            (also viola da gamba)</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Tenor trombone.pdf"
-                            target="_blank">Biber - Requiem in f - Tenor
-                            trombone (also viola da gamba)</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - Bass trombone.pdf"
-                            target="_blank">Biber - Requiem in f - Bass trombone
-                            (also viola da gamba)</a></li>
-                    <li><a href="https://pellegrina.net/pdf/2026-2/Biber/Biber - Requiem f - BC.pdf"
-                            target="_blank">Biber - Requiem in f - BC</a>
+                    <li>Biber - Requiem in f - Alto trombone
+                            (also viola da gamba)</li>
+                    <li>Biber - Requiem in f - Tenor
+                            trombone (also viola da gamba)</li>
+                    <li>Biber - Requiem in f - Bass trombone
+                            (also viola da gamba)</li>
+                    <li>Biber - Requiem in f - BC
                     </li>
                 </ul>
             </div>
-            <h2> <a href="javascript: history.go(-1)">Back</a></h2>
+            <h2> <a class="grijs">Back</a></h2>
             <p>&nbsp;</p>
         </div>
     </div>

@@ -30,148 +30,86 @@ $cursusnr = 1 + $cursus_offset; ?>
                     <th>Concert info</th>
                 </tr>
                 <tr>
-                    <td class="w3-center"><a
-                            href="https://www.google.com/maps/d/u/0/edit?mid=1zv5-hN4rGS_fZVT6gYvyPTuxC86MaC0&usp=sharing"
-                            target="_blank">Map of České Budějovice, with all
+                    <td class="w3-center"><a class="grijs">Map of České Budějovice, with all
                             venues</a></td>
-                    <td class="w3-center "><a <a
-                            href="../part_list.php?cursus=1"
-                            target="_blank">List of participants</a></td>
-                    <td class="w3-center"><a <a href="../ensemblelijst_1.php"
-                            target="_blank">Chamber music formations</a></td>
-                    <td class="w3-center"><a
-                            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFLg6QPRVFYDyHi-RGPmubkTiK-bKlAzt_usIAo3-cEziK74ELWOux9UlgNFt8un_eEIjlhUKa5BXo/pubhtml?gid=701953541&single=true"
-                            target="_blank">Accommodation overview</a></td>
-                    <td class="w3-center"><a
-                            href="https://docs.google.com/document/d/e/2PACX-1vRUkk_0waRcC8g61gO4ZJ4R7X6HgWfE6qzX_apk7CmH65i-Gfxwk-ibgYBkyKZ4mxU8QueVfoZ9jdzg/pub"
-                            target="_blank">Daily program</a></td>
-                    <td class="w3-center"><a href="https://www.horringa.net/"
-                            target="_blank">Concert info (in English)</a><br>
-                        <a href="/svk/" target="_blank">Concert info (in
+                    <td class="w3-center "><a class="grijs">List of participants</a></td>
+                    <td class="w3-center"><a class="grijs">Chamber music formations</a></td>
+                    <td class="w3-center"><a class="grijs">Accommodation overview</a></td>
+                    <td class="w3-center"><a class="grijs">Daily program</a></td>
+                    <td class="w3-center"><a class="grijs">Concert info (in English)</a><br>
+                        <a class="grijs">Concert info (in
                             Czech)</a>
                     </td>
                 </tr>
             </table>
-            <h2>Chamber Choir Repertoire</h2>
+            <h2 class="onzichtbaar">Chamber Choir Repertoire</h2>
             <ul>
-                <li><a href="../pdf/2026-1/chamberchoir_2026.pdf"
-                        target="_blank">Chamber Choir Repertoire 2026 <b>(new,
-                            improved version)</b></a> (105 pages)</li>
+                <li>Chamber Choir Repertoire 2026 <b>(new,
+                            improved version)</b> (105 pages)</li>
             </ul>
             <div class="onzichtbaar">
                 <p>Some MIDI files of the chamber choir repertoire</p>
                 <ul>
-                    <li>Sandler - O Mistress Mine: <a
-                            href="../MIDI/Mistress - Sop.mid"
-                            target="_blank">soprano</a> | <a
-                            href="../MIDI/Mistress - Alt.mid"
-                            target="_blank">alto</a> | <a
-                            href="../MIDI/Mistress - Ten.mid"
-                            target="_blank">tenor</a> | <a
-                            href="../MIDI/Mistress - Bas.mid"
-                            target="_blank">bass</a></li>
-                    <li>Elgar - Dreamy bits: <a href="../MIDI/Elgar - Sop.mid"
-                            target="_blank">soprano</a> | <a
-                            href="../MIDI/Elgar - Alt.mid"
-                            target="_blank">alto</a> | <a
-                            href="../MIDI/Elgar - Ten.mid"
-                            target="_blank">tenor</a> | <a
-                            href="../MIDI/Elgar - bas.mid"
-                            target="_blank">bass</a></li>
+                    <li>Sandler - O Mistress Mine: <a class="grijs">soprano</a> | <a class="grijs">alto</a> | <a class="grijs">tenor</a> | <a class="grijs">bass</a></li>
+                    <li>Elgar - Dreamy bits: <a class="grijs">soprano</a> | <a class="grijs">alto</a> | <a class="grijs">tenor</a> | <a class="grijs">bass</a></li>
                 </ul>
             </div>
             <h2 class="onzichtbaar">Some chamber music works</h2>
             <div class="">
-                <h2>Dvořák - Cantata 'Svatební košile' (The Spectre's Bride) op.
+                <h2 class="onzichtbaar">Dvořák - Cantata 'Svatební košile' (The Spectre's Bride) op.
                     109 </h2>
                 <ul>
-                    <li><a href="../pdf/2026-1/Dvořák - Svatební košíle - score A4.pdf"
-                            target="_blank">Full orchestral score</a></li>
-                    <li>Singers can download and print the <a
-                            href="../pdf/2026-1/Dvořák - Svatební košile - piano reduction.pdf"
-                            target="_blank">NEW & MUCH IMPROVED vocal score</a>
+                    <li>Full orchestral score</li>
+                    <li>Singers can download and print the NEW & MUCH IMPROVED vocal score
                     </li>
-                    <li>This page by former participant Marrie Kardol gives <a
-                            href="https://midi.emjeka.nl/midifiles/dvorak-bruidshemd.html"
-                            target="_blank">practice files for all voices of all
+                    <li>This page by former participant Marrie Kardol gives <a class="grijs">practice files for all voices of all
                             choruses of Svatební košile</a></li>
                 </ul>
                 <div class="cols3">
                     <ul>
-                        <li><a href="../pdf/2026-1/Flauto 1.pdf"
-                                target="_blank">Flute I</a></li>
-                        <li><a href="../pdf/2026-1/Flauto 2.pdf"
-                                target="_blank">Flute II</a></li>
-                        <li><a href="../pdf/2026-1/Oboe 1.pdf"
-                                target="_blank">Oboe I</a></li>
-                        <li><a href="../pdf/2026-1/Oboe 2.pdf"
-                                target="_blank">Oboe II</a></li>
-                        <li><a href="../pdf/2026-1/Corno ingl..pdf"
-                                target="_blank">Cor anglais</a></li>
-                        <li><a href="../pdf/2026-1/Clarinetto 1.pdf"
-                                target="_blank">Clarinet I</a></li>
-                        <li><a href="../pdf/2026-1/Clarinetto 2.pdf"
-                                target="_blank">Clarinet II</a></li>
-                        <li><a href="../pdf/2026-1/Svatební košile - Bass clarinet - Bass Clarinet in Bb.pdf"
-                                target="_blank">Bass Clarinet</a></li>
-                        <li><a href="../pdf/2026-1/Fagott 1.pdf"
-                                target="_blank">Bassoon I</a></li>
-                        <li><a href="../pdf/2026-1/Fagott 2.pdf"
-                                target="_blank">Bassoon II</a></li>
-                        <li><a href="../pdf/2026-1/Corno 1.pdf"
-                                target="_blank">Horn I</a></li>
-                        <li><a href="../pdf/2026-1/Corno 2.pdf"
-                                target="_blank">Horn II</a></li>
-                        <li><a href="../pdf/2026-1/Corno 3.pdf"
-                                target="_blank">Horn III</a></li>
-                        <li><a href="../pdf/2026-1/Corno 4.pdf"
-                                target="_blank">Horn IV</a></li>
-                        <li><a href="../pdf/2026-1/Tromba 1.pdf"
-                                target="_blank">Trumpet I</a></li>
-                        <li><a href="../pdf/2026-1/Tromba 2.pdf"
-                                target="_blank">Trumpet II</a></li>
-                        <li><a href="../pdf/2026-1/Trombone 1.pdf"
-                                target="_blank">Trombone I</a></li>
-                        <li><a href="../pdf/2026-1/Trombone 2.pdf"
-                                target="_blank">Trombone II</a></li>
-                        <li><a href="../pdf/2026-1/Trombone 3.pdf"
-                                target="_blank">Trombone III</a></li>
-                        <li><a href="../pdf/2026-1/Tuba.pdf"
-                                target="_blank">Tuba</a></li>
-                        <li><a href="../pdf/2026-1/Timpani.pdf"
-                                target="_blank">Timpani</a>
-                        <li><a href="../pdf/2026-1/Svatební košile - Triangle, Tam-tam, Orchestral Bells.pdf"
-                                target="_blank">Other percussion</a>
-                        <li><a href="../pdf/2026-1/ARPA I.pdf"
-                                target="_blank">Harp</a>
+                        <li>Flute I</li>
+                        <li>Flute II</li>
+                        <li>Oboe I</li>
+                        <li>Oboe II</li>
+                        <li>Cor anglais</li>
+                        <li>Clarinet I</li>
+                        <li>Clarinet II</li>
+                        <li>Bass Clarinet</li>
+                        <li>Bassoon I</li>
+                        <li>Bassoon II</li>
+                        <li>Horn I</li>
+                        <li>Horn II</li>
+                        <li>Horn III</li>
+                        <li>Horn IV</li>
+                        <li>Trumpet I</li>
+                        <li>Trumpet II</li>
+                        <li>Trombone I</li>
+                        <li>Trombone II</li>
+                        <li>Trombone III</li>
+                        <li>Tuba</li>
+                        <li>Timpani
+                        <li>Other percussion
+                        <li>Harp
                         </li>
-                        <li style="break-before: column;"><a
-                                href="../pdf/2026-1/Violino I.pdf"
-                                target="_blank">Violin I <b>(with
-                                    bowings)</b></a></li>
-                        <li><a href="../pdf/2026-1/Violino II.pdf"
-                                target="_blank">Violin II <b>(with
-                                    bowings)</b></a></li>
-                        <li><a href="../pdf/2026-1/Viola.pdf"
-                                target="_blank">Viola <b>(with bowings)</b></a>
+                        <li style="break-before: column;">Violin I <b>(with
+                                    bowings)</b></li>
+                        <li>Violin II <b>(with
+                                    bowings)</b></li>
+                        <li>Viola <b>(with bowings)</b>
                         </li>
-                        <li><a href="../pdf/2026-1/Violoncello.pdf"
-                                target="_blank">Cello <b>(with bowings)</b></a>
+                        <li>Cello <b>(with bowings)</b>
                         </li>
-                        <li><a href="../pdf/2026-1/Contrabasso.pdf"
-                                target="_blank">Double bass <b>(with
-                                    bowings)</b></a></li>
+                        <li>Double bass <b>(with
+                                    bowings)</b></li>
                     </ul>
                 </div>
-                <p><a href="https://open.spotify.com/album/73Uv153nrk6FVPqSyyKYX2?si=sixd0MEBQy-ksQLYL98WkQ"
-                        target="_blank">Excellent recording on Spotify to get an
+                <p><a class="grijs">Excellent recording on Spotify to get an
                         impression of Dvořák's <i>Spectre's Bride</i></a></p>
-                <p><a href="../MP3/Svatební košile Op.69.m4a"
-                        target="_blank">Another excellent recording, a historic
+                <p><a class="grijs">Another excellent recording, a historic
                         recording from 1961, of Dvořák's <i>Spectre's
                             Bride</i></a></p>
             </div>
-            <h2> <a href="javascript: history.go(-1)">Back</a></h2>
+            <h2> <a class="grijs">Back</a></h2>
         </div>
     </div>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
