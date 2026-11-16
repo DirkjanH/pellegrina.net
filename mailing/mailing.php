@@ -1111,6 +1111,30 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 		}
 		document.addEventListener('DOMContentLoaded', initializeMessageEditor);
 
+		var afmeldTaal = 'nl';
+		function wisselAfmeldTaal() {
+			afmeldTaal = afmeldTaal === 'nl' ? 'en' : 'nl';
+			document.getElementById('afmeld_taal').textContent =
+				'Afmeldlink: ' + (afmeldTaal === 'nl' ? 'Nederlands' : 'English');
+		}
+
+		function voegAfmeldlinkToe() {
+			var tekst = afmeldTaal === 'nl' ? 'Afmelden voor mailings' : 'Unsubscribe from mailings';
+			var html = '<p><a href="https://pellegrina.net/algemeen/afmelden.php?token={afmeldtoken}&amp;lang=' +
+				afmeldTaal + '">' + tekst + '</a></p>';
+			var editor = typeof CKEDITOR !== 'undefined' && CKEDITOR.instances.message;
+			if (editor && editor.status !== 'ready') {
+				window.alert('De editor wordt nog geladen. Probeer het zo opnieuw.');
+				return;
+			}
+			if (editor) {
+				if (editor.mode === 'wysiwyg') editor.insertHtml(html);
+				else editor.setData(editor.getData() + html);
+			} else {
+				document.getElementById('message').value += html;
+			}
+		}
+
 		function toggleEditorFullscreen() {
 			var messageArea = document.getElementById('message_area');
 			var button = document.getElementById('message_fullscreen_toggle');
@@ -1479,7 +1503,7 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			overflow: hidden;
 		}
 
-		#message_area.editor-fullscreen> :not(#message_fullscreen_toggle):not(.cke) {
+		#message_area.editor-fullscreen> :not(#message_fullscreen_toggle):not(#afmeld_controls):not(.cke) {
 			display: none;
 		}
 
@@ -1535,6 +1559,10 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			<br>
 			<textarea name="message"
 				id="message"><?php echo htmlspecialchars(stripslashes($nieuwsbrief['message']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></textarea>
+			<p id="afmeld_controls">
+				<button type="button" id="afmeld_taal" onclick="wisselAfmeldTaal()">Afmeldlink: Nederlands</button>
+				<button type="button" onclick="voegAfmeldlinkToe()">Afmeldlink invoegen</button>
+			</p>
 			<p>
 				<input type="submit" name="submitten" value="Voeg toe">
 				<input name="submitten" type="submit" id="submitten"

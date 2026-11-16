@@ -8,6 +8,7 @@ error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailing_afmelden.php';
 
 Kint::$enabled_mode = false;
 
@@ -104,13 +105,13 @@ if (!$mailing) {
 }
 
 // Toon vóór het verzenden het actuele totaal en het aantal adressen zonder verzendtijd.
-$statusStmt = $db->prepare(
-	"SELECT COUNT(*) AS totaal, " .
-		"SUM(CASE WHEN tijd_verzonden IS NULL OR tijd_verzonden = '' THEN 1 ELSE 0 END) AS resterend " .
-		"FROM {$mailing_adressen} WHERE mailingId_FK = :mailing"
-);
-$statusStmt->execute(['mailing' => $mailing_nr]);
-$mailing_status = $statusStmt->fetch(PDO::FETCH_ASSOC) ?: ['totaal' => 0, 'resterend' => 0];
+try {
+	$mailing_status = mailingAfmeldVerzendStatus($db, $mailing_nr);
+} catch (PDOException $exception) {
+	error_log('Afmeldregister voor mailing niet beschikbaar: ' . $exception->getMessage());
+	http_response_code(500);
+	exit('Het afmeldregister is niet beschikbaar; de mailing is niet verstuurd.');
+}
 $totaal_mails = (int) $mailing_status['totaal'];
 $resterende_mails = (int) $mailing_status['resterend'];
 
@@ -167,8 +168,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 		$aantal_emails = count($adressen);
 
 		$regel_bericht = '';
-		$refresh = false;
-		if ($eerder_verzonden_mails < $aantal_emails) $refresh = true;
+		$refresh = $resterende_mails > 0;
+		$afgebroken = false;
 			?>
 <!DOCTYPE HTML>
 <html>
@@ -204,6 +205,21 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 					$regel_bericht .= 'Ongeldig e-mailadres overgeslagen.<br>';
 					continue;
 				}
+				try {
+					$afmeldStatus = mailingAfmeldStatus($db, $recipient);
+					if ($afmeldStatus !== null && $afmeldStatus['afgemeld_op'] !== null) {
+						continue;
+					}
+					$afmeldToken = str_contains($mail_text, '{afmeldtoken}')
+						? mailingAfmeldToken($db, $recipient) : null;
+				} catch (Throwable $exception) {
+					error_log('Afmeldregister voor mailing niet beschikbaar: ' . $exception->getMessage());
+					echo 'Het afmeldregister kon niet worden gecontroleerd; verzending is gestopt.<br>';
+					$regel_bericht .= 'Verzending gestopt: afmeldregister niet beschikbaar.<br>';
+					$refresh = false;
+					$afgebroken = true;
+					break;
+				}
 				LPmailingAfzender($mail, $from, stripslashes($mailing['FromName']));
 				$mail->AddAddress($recipient, stripslashes($adres['naam']));
 				$mail_body = $mail_text;
@@ -212,6 +228,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 				if (isset($adres['cursus']) and $adres['cursus'] != '') $mail_body = str_replace("{cursus}", $adres['cursus'], $mail_body);
 				if (isset($adres['password']) and $adres['password'] != '') $mail_body = str_replace("{password}", $adres['password'], $mail_body);
 				$mail_body = str_replace("DlnmrIdx", $encrypt, $mail_body);
+				if ($afmeldToken !== null) {
+					$mail_body = mailingAfmeldHeaders($mail, $mail_body, $afmeldToken);
+				}
 				$tracker = 'https://pellegrina.net/mailing/volg/volg.php?kenmerk=' . urlencode($adres['kenmerk']);
 				$mail_body = str_replace('</body>', '<img src="' . h($tracker) . '" border="0" alt=""/></body>', $mail_body);
 
@@ -253,10 +272,20 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 		$blok_bericht .= 'Refresh: ' . $refresh . '; verzonden: ' . $verzonden_mails . '; totaal aantal mails: ' . $aantal_emails;
 
 		echo ' <br>' . $blok_bericht . '<br>';
-		if ($verzonden_mails >= $aantal_emails) {
-			$slot_bericht = '<br>********* ' . date('d/m H:i') . ' <span style="color: red;">Mailing verzonden</span><br>';
+		if ($refresh) {
+			try {
+				$refresh = (int) mailingAfmeldVerzendStatus($db, $mailing_nr)['resterend'] > 0;
+			} catch (PDOException $exception) {
+				error_log('Afmeldregister voor mailing niet beschikbaar: ' . $exception->getMessage());
+				echo 'Het afmeldregister kon niet worden gecontroleerd; verzending is gestopt.<br>';
+				$refresh = false;
+				$afgebroken = true;
+			}
+		}
+		if (!$refresh && !$afgebroken) {
+			$slot_bericht = '<br>********* ' . date('d/m H:i') . ' <span style="color: red;">Mailing afgehandeld</span><br>';
 			echo $slot_bericht;
-		} elseif ($refresh) {
+		} elseif ($refresh && !$afgebroken) {
 			// Ga na een pauze verder met het volgende blok via POST, inclusief CSRF-token.
 			echo '<form id="volgende-blok" method="post" action="' . h($_SERVER['PHP_SELF']) . '?mailing=' . h($mailing_nr) . '">';
 			echo '<input type="hidden" name="csrf_token" value="' . h($_SESSION['mailing_csrf']) . '">';
