@@ -8,6 +8,36 @@ Versie: 1.3
 
 	use Pelago\Emogrifier\CssInliner;
 
+	function LPmailPlainText($mail, string $html): string
+	{
+		$html = preg_replace_callback(
+			'~<a\b[^>]*\bhref\s*=\s*(["\'])(https?://[^"\']+|mailto:[^"\']+)\1[^>]*>(.*?)</a\s*>~is',
+			static function ($match) {
+				$label = trim(html_entity_decode(strip_tags($match[3]), ENT_QUOTES, 'UTF-8'));
+				$url = html_entity_decode($match[2], ENT_QUOTES, 'UTF-8');
+				return $match[3] . ($label === $url || 'mailto:' . $label === $url ? '' : ' (' . $match[2] . ')');
+			},
+			$html
+		);
+		$html = preg_replace('/<\s*br\s*\/?\s*>|<\/\s*(?:p|div|li|tr|h[1-6])\s*>/i', "\n", $html);
+		return $mail->html2text($html);
+	}
+
+	function LPmailingAfzender($mail, string $from, string $name): void
+	{
+		if (!filter_var($from, FILTER_VALIDATE_EMAIL)) {
+			throw new InvalidArgumentException('Ongeldig afzenderadres voor de mailing.');
+		}
+		$domain = strtolower(substr(strrchr($from, '@'), 1));
+		$alignedFrom = $domain === 'pellegrina.net' ? $from : 'info@pellegrina.net';
+		if (!$mail->setFrom($alignedFrom, $name)) {
+			throw new RuntimeException('Afzenderadres voor de mailing kon niet worden ingesteld.');
+		}
+		if ($alignedFrom !== $from && !$mail->addReplyTo($from, $name)) {
+			throw new RuntimeException('Antwoordadres voor de mailing kon niet worden ingesteld.');
+		}
+	}
+
 	function LPconfirmationSent(int $inschrijving_id, bool $payment_failed = false): bool
 	{
 		$column = $payment_failed ? 'mislukkingsmail_verzonden' : 'dankmail_verzonden';
@@ -35,7 +65,7 @@ Versie: 1.3
 		$mail->AddBCC('info@pellegrina.net', 'LP Aanmelding');
 		$mail->Subject = $subject;
 		$mail->Body  = $emogrifier;
-		$mail->AltBody = strip_tags($emogrifier);
+		$mail->AltBody = LPmailPlainText($mail, $emogrifier);
 
 		$geslaagd = $mail->Send();
 

@@ -143,6 +143,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "info-aanvraag"))
 		
 						$headers = "From: $from\r\n";
 						$headers .= "Bcc: info@pellegrina.net\r\n";
+						$headers .= "Content-Type: text/plain; charset=utf-8\r\n";
+						$headers .= "Content-Transfer-Encoding: 8bit\r\n";
 						if (empty($subject)) $subject = " ";
 						}
 				else {

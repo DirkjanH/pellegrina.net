@@ -204,7 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 					$regel_bericht .= 'Ongeldig e-mailadres overgeslagen.<br>';
 					continue;
 				}
-				$mail->SetFrom($from, stripslashes($mailing['FromName']));
+				LPmailingAfzender($mail, $from, stripslashes($mailing['FromName']));
 				$mail->AddAddress($recipient, stripslashes($adres['naam']));
 				$mail_body = $mail_text;
 				if (isset($adres['voornaam']) and $adres['voornaam'] != '') $mail_body = str_replace("{voornaam}", $adres['voornaam'], $mail_text);
@@ -217,7 +217,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 				if ($cc) $mail->AddCC("info@pellegrina.net", "LP PHP mailer");
 				$mail->Body  = $mail_body;
-				$mail->AltBody = strip_tags($mail_body);
+				$mail->AltBody = LPmailPlainText($mail, $mail_body);
 
 				$verzend_start = microtime(true);
 				try {

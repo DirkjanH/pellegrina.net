@@ -102,10 +102,13 @@ if ($mailTestMode) {
             $subjectAction = $language === 'NL' ? ($action === 'alles' ? 'toegevoegd' : 'bijgewerkt') : ($action === 'alles' ? 'added' : 'updated');
             checkAddressRequest(str_contains($mail['subject'], $subjectAction), "{$language}: subject must distinguish adding from updating.");
             checkAddressRequest(str_contains($mail['message'], $complete['email']), "{$language}: registered details must remain in the confirmation.");
+            checkAddressRequest(str_contains($mail['headers'], 'charset=utf-8'), "{$language}: confirmation must declare UTF-8.");
             checkAddressRequest(parse_url($result['redirect'], PHP_URL_PATH) === "/{$language}/dank_info.php", "{$language}: confirmation redirect must work from both direct and course forms.");
             parse_str(parse_url($result['redirect'], PHP_URL_QUERY), $query);
             checkAddressRequest($query === ['voornaam' => $complete['voornaam'], 'actie' => $action], "{$language}: confirmation redirect must preserve name and action.");
         }
+        $result = addressRequest($language, array_merge($complete, ['actie' => 'delete']));
+        checkAddressRequest(str_contains($result['mail']['headers'], 'charset=utf-8'), "{$language}: unsubscribe confirmation must declare UTF-8.");
         echo "PASS: {$language} confirmation mail distinguishes adding and updating without sending mail.\n";
     }
     exit(0);

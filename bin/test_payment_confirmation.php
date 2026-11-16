@@ -16,6 +16,7 @@ namespace {
 		public function AddAddress($to, $name) {}
 		public function SetFrom($from, $name) {}
 		public function AddBCC($to, $name) {}
+		public function html2text($html) { return html_entity_decode(trim(strip_tags($html)), ENT_QUOTES, 'UTF-8'); }
 		public function clearAddresses() {}
 		public function Send() {
 			global $fixture;
