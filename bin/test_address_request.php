@@ -37,6 +37,33 @@ unset($_SERVER['RECAPTCHA_SECRET']);
 $captchaCalls = 0;
 $captchaResponse = ['success' => true, 'hostname' => 'pellegrina.net'];
 $captchaHttpStatus = 200;
+require_once dirname(__DIR__) . '/includes/recaptcha.php';
+
+$configFile = tempnam(sys_get_temp_dir(), 'lp-recaptcha-');
+if ($configFile === false) throw new RuntimeException('Could not create CAPTCHA configuration fixture.');
+try {
+    file_put_contents($configFile, '<?php return ["secret" => "private-test-secret"];');
+    if (laadAdresRecaptchaSecret($configFile) !== 'private-test-secret') {
+        throw new RuntimeException('Private CAPTCHA configuration must take precedence.');
+    }
+    file_put_contents($configFile, '<?php return [];');
+    try {
+        laadAdresRecaptchaSecret($configFile);
+        throw new RuntimeException('Invalid CAPTCHA configuration was accepted.');
+    } catch (RuntimeException $exception) {
+        if ($exception->getMessage() !== 'Het privébestand voor reCAPTCHA bevat geen geldige sleutel.') throw $exception;
+    }
+    file_put_contents($configFile, '<?php return [;');
+    try {
+        laadAdresRecaptchaSecret($configFile);
+        throw new RuntimeException('Invalid PHP configuration was accepted.');
+    } catch (RuntimeException $exception) {
+        if ($exception->getMessage() !== 'Het privébestand voor reCAPTCHA kon niet worden ingelezen.') throw $exception;
+    }
+} finally {
+    unlink($configFile);
+}
+echo "PASS: private CAPTCHA configuration and invalid configuration.\n";
 
 class AddressRequestStored extends RuntimeException {}
 

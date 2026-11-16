@@ -8,6 +8,6 @@ Voor RFC 8058 moet de DKIM-handtekening **beide** afmeldheaders ondertekenen. La
 
 ## Beveiliging adresformulieren
 
-De Nederlandse en Engelse adresformulieren gebruiken de bestaande Google reCAPTCHA-sitesleutel. Stel vóór publicatie de bijbehorende geheime sleutel op de webserver in als `RECAPTCHA_SECRET`, beschikbaar voor PHP via een omgevingsvariabele of servervariabele. Plaats de sleutel niet in de repository. Zonder geldige sleutel, werkende cURL-extensie en bereikbare Google-verificatie worden aanvragen niet opgeslagen.
+De Nederlandse en Engelse adresformulieren gebruiken een Google reCAPTCHA-sitesleutel. Plaats vóór publicatie de bijbehorende geheime sleutel in `/var/www/vhosts/horringa.net/private/recaptcha.php`, buiten de webroot. Dit PHP-bestand moet een array met sleutel `secret` teruggeven en leesbaar zijn voor PHP. Plaats het niet in de repository. Als het bestand ontbreekt, kan de sleutel ook via de PHP-omgevingsvariabele of servervariabele `RECAPTCHA_SECRET` worden ingesteld. Een aanwezig maar ongeldig privébestand geeft een fout. Zonder geldige sleutel, werkende cURL-extensie en bereikbare Google-verificatie worden aanvragen niet opgeslagen.
 
 Onzichtbare reCAPTCHA v2 en v3 worden ondersteund. Bij v3 moet de actie `submit` zijn en de score minimaal 0,5 bedragen. Test na installatie beide talen met de eigen websitesleutel.

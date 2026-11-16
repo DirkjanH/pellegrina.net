@@ -152,7 +152,7 @@ $adresformulierVelden = [
         <label for="adres-opmerkingen"><?php echo $adresformulierTekst['opmerkingen']; ?></label>
         <textarea name="opmerkingen" id="adres-opmerkingen" rows="4"><?php echo $adresformulierWaarde('opmerkingen'); ?></textarea>
         <div class="adresformulier-knoppen">
-            <button type="submit" data-sitekey="6LcMbAIkAAAAANkqG0D-L46IHFm8z2-8bRCT6tEg"
+            <button type="submit" data-sitekey="6Ld1HiMuAAAAAC0cAHj6dS3N8rV6HYC3O96zp3O4"
                 data-callback="onAdresformulierSubmit" data-action="submit"
                 class="g-recaptcha w3-btn w3-green"><?php echo $adresformulierTekst['verzenden']; ?></button>
             <button type="reset" class="w3-btn"><?php echo $adresformulierTekst['wissen']; ?></button>

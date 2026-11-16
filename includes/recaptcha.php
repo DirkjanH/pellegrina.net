@@ -1,15 +1,36 @@
 <?php
 
+function laadAdresRecaptchaSecret(string $configFile): string
+{
+    if (file_exists($configFile)) {
+        if (!is_file($configFile) || !is_readable($configFile)) {
+            throw new RuntimeException('Het privébestand voor reCAPTCHA is niet leesbaar.');
+        }
+        try {
+            $config = require $configFile;
+        } catch (Throwable $exception) {
+            throw new RuntimeException('Het privébestand voor reCAPTCHA kon niet worden ingelezen.');
+        }
+        if (!is_array($config) || !isset($config['secret']) || !is_string($config['secret']) || $config['secret'] === '') {
+            throw new RuntimeException('Het privébestand voor reCAPTCHA bevat geen geldige sleutel.');
+        }
+        return $config['secret'];
+    }
+
+    $secret = getenv('RECAPTCHA_SECRET') ?: ($_SERVER['RECAPTCHA_SECRET'] ?? '');
+    if (!is_string($secret) || $secret === '') {
+        throw new RuntimeException('De geheime reCAPTCHA-sleutel is niet ingesteld.');
+    }
+    return $secret;
+}
+
 function controleerAdresRecaptcha($token): bool
 {
     if (!is_string($token) || $token === '' || strlen($token) > 8192) {
         return false;
     }
 
-    $secret = getenv('RECAPTCHA_SECRET') ?: ($_SERVER['RECAPTCHA_SECRET'] ?? '');
-    if (!is_string($secret) || $secret === '') {
-        throw new RuntimeException('RECAPTCHA_SECRET is niet ingesteld.');
-    }
+    $secret = laadAdresRecaptchaSecret('/var/www/vhosts/horringa.net/private/recaptcha.php');
     if (!function_exists('curl_init')) {
         throw new RuntimeException('De cURL-extensie ontbreekt.');
     }
