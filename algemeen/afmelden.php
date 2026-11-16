@@ -51,15 +51,17 @@ try {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $english ? 'Unsubscribe' : 'Afmelden' ?> - La Pellegrina</title>
+    <link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 </head>
-<body>
-    <main>
+<body class="afmeldpagina">
+    <main class="adresformulier">
+        <img src="/Images/Logos/LP_nieuw.png" alt="La Pellegrina" width="300" height="57" class="w3-image">
         <h1><?= $english ? 'Unsubscribe' : 'Afmelden' ?></h1>
         <p><?= htmlspecialchars($message, ENT_QUOTES, 'UTF-8') ?></p>
         <?php if ($method === 'GET'): ?>
             <form method="post">
                 <input type="hidden" name="confirm" value="1">
-                <button type="submit"><?= $english ? 'Unsubscribe' : 'Afmelden' ?></button>
+                <button type="submit" class="w3-btn w3-green"><?= $english ? 'Unsubscribe' : 'Afmelden' ?></button>
             </form>
         <?php endif; ?>
     </main>
