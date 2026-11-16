@@ -12,6 +12,7 @@ div#mainpage {
 div#zoeknaam {
     width: 200px;
     float: left;
+    margin-left: 6px;
     margin-right: 16px;
 }
 

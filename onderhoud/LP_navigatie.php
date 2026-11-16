@@ -17,6 +17,8 @@
                     <div class="grid_item"><a class="button"
                                     href="LP_bezettingen.php">Bezettingen</a></div>
                     <div class="grid_item"><a class="button"
+                                    href="LP_badges.php">Badges</a></div>
+                    <div class="grid_item"><a class="button"
                                     href="LP_herhaling.php">Herhaling</a></div>
                     <div class="grid_item"><a class="button"
                                     href="LP_zwartelijst.php">Zwarte lijst</a></div>
