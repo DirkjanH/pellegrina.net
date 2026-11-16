@@ -1,5 +1,43 @@
 <?php
 
+if (!in_array('--captcha-stubs', $argv, true)) {
+    $disabled = 'mail,curl_init,curl_setopt_array,curl_exec,curl_getinfo,curl_close';
+    $command = array_merge([PHP_BINARY, '-d', 'disable_functions=' . $disabled, __FILE__, '--captcha-stubs'], array_slice($argv, 1));
+    $process = proc_open($command, [1 => STDOUT, 2 => STDERR], $pipes);
+    if (!is_resource($process)) throw new RuntimeException('Could not start isolated address tests.');
+    exit(proc_close($process));
+}
+
+if (!function_exists('curl_init')) {
+    function curl_init($url) {
+        global $captchaCalls;
+        $captchaCalls++;
+        return (object) ['url' => $url];
+    }
+    function curl_setopt_array($curl, $options) {
+        global $captchaRequest;
+        $captchaRequest = ['url' => $curl->url, 'options' => $options];
+        return true;
+    }
+    function curl_exec($curl) {
+        global $captchaResponse;
+        return $captchaResponse === false ? false : json_encode($captchaResponse);
+    }
+    function curl_getinfo($curl, $option) {
+        global $captchaHttpStatus;
+        return $captchaHttpStatus;
+    }
+    function curl_close($curl) {}
+} else {
+    throw new RuntimeException('Real CAPTCHA verification must be disabled in address tests.');
+}
+
+putenv('RECAPTCHA_SECRET=test-secret');
+unset($_SERVER['RECAPTCHA_SECRET']);
+$captchaCalls = 0;
+$captchaResponse = ['success' => true, 'hostname' => 'pellegrina.net'];
+$captchaHttpStatus = 200;
+
 class AddressRequestStored extends RuntimeException {}
 
 $mailTestMode = in_array('--mail', $argv, true);
@@ -87,7 +125,7 @@ $complete = [
     'voornaam' => 'Test', 'achternaam' => 'Example', 'email' => 'test@example.invalid',
     'instrstem' => 'Violin', 'adres' => 'Test street 1', 'postcode' => '1234 AB',
     'plaats' => 'Test city', 'land' => 'Netherlands', 'telefoon' => '+31 6 12345678',
-    'geboortedatum' => '29-02-2000',
+    'geboortedatum' => '29-02-2000', 'g-recaptcha-response' => 'test-token',
 ];
 
 if ($mailTestMode) {
@@ -115,6 +153,46 @@ if ($mailTestMode) {
 }
 
 foreach (['NL', 'EN'] as $language) {
+    $missingCaptcha = $complete;
+    unset($missingCaptcha['g-recaptcha-response']);
+    $result = addressRequest($language, $missingCaptcha);
+    checkAddressRequest(!$result['stored'] && str_contains($result['html'], 'role="alert"'), "{$language}: missing CAPTCHA must prevent storage.");
+    $result = addressRequest($language, array_merge($complete, ['g-recaptcha-response' => ['invalid']]));
+    checkAddressRequest(!$result['stored'], "{$language}: invalid CAPTCHA input must prevent storage.");
+
+    foreach ([
+        ['success' => false],
+        ['success' => true, 'hostname' => 'example.invalid'],
+        ['success' => true, 'hostname' => 'pellegrina.net', 'score' => 0.4, 'action' => 'submit'],
+        ['success' => true, 'hostname' => 'pellegrina.net', 'score' => 0.9, 'action' => 'other'],
+        ['success' => true, 'hostname' => 'pellegrina.net', 'action' => 'submit'],
+    ] as $captchaResponse) {
+        $result = addressRequest($language, $complete);
+        checkAddressRequest(!$result['stored'] && str_contains($result['html'], 'role="alert"'), "{$language}: rejected CAPTCHA must prevent storage.");
+    }
+    $captchaResponse = false;
+    $result = addressRequest($language, $complete);
+    checkAddressRequest(!$result['stored'] && str_contains($result['html'], 'role="alert"'), "{$language}: CAPTCHA outage must prevent storage.");
+    $captchaResponse = ['success' => true, 'hostname' => 'pellegrina.net'];
+    $captchaHttpStatus = 503;
+    $result = addressRequest($language, $complete);
+    checkAddressRequest(!$result['stored'], "{$language}: HTTP failure must prevent storage.");
+    $captchaHttpStatus = 200;
+    putenv('RECAPTCHA_SECRET');
+    $callsBefore = $captchaCalls;
+    $result = addressRequest($language, $complete);
+    checkAddressRequest(!$result['stored'] && str_contains($result['html'], 'role="alert"') && $captchaCalls === $callsBefore, "{$language}: missing CAPTCHA secret must prevent storage without a request.");
+    putenv('RECAPTCHA_SECRET=test-secret');
+    $captchaResponse = ['success' => true, 'hostname' => 'www.pellegrina.net', 'score' => 0.5, 'action' => 'submit'];
+    checkAddressRequest(addressRequest($language, $complete)['stored'], "{$language}: valid v3 CAPTCHA must allow storage.");
+    $captchaResponse = ['success' => true, 'hostname' => 'pellegrina.net'];
+    checkAddressRequest(addressRequest($language, $complete)['stored'], "{$language}: valid invisible v2 CAPTCHA must allow storage.");
+    parse_str($captchaRequest['options'][CURLOPT_POSTFIELDS], $captchaPost);
+    checkAddressRequest($captchaRequest['url'] === 'https://www.google.com/recaptcha/api/siteverify'
+        && $captchaPost === ['secret' => 'test-secret', 'response' => 'test-token'],
+        "{$language}: CAPTCHA token must be verified with the configured secret.");
+    echo "PASS: {$language} CAPTCHA validation and service failures.\n";
+
     $initial = addressRequest($language, []);
     libxml_use_internal_errors(true);
     $document = new DOMDocument();
@@ -151,7 +229,7 @@ foreach (['NL', 'EN'] as $language) {
     checkAddressRequest($result['values'][4] === $language, "{$language}: wrong registration language.");
     checkAddressRequest($result['values'][11] === $complete['telefoon'] && $result['values'][12] === '', "{$language}: telephone must be saved once, without the removed mobile field.");
 
-    $unsubscribe = array_intersect_key($complete, array_flip(['MM_insert', 'voornaam', 'achternaam', 'email']));
+    $unsubscribe = array_intersect_key($complete, array_flip(['MM_insert', 'voornaam', 'achternaam', 'email', 'g-recaptcha-response']));
     $unsubscribe['actie'] = 'delete';
     checkAddressRequest(addressRequest($language, $unsubscribe)['stored'], "{$language}: unsubscribe must only require name and email.");
     unset($unsubscribe['email']);

@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 ob_start();
 
 require_once $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
+require_once $_SERVER["DOCUMENT_ROOT"].'/includes/recaptcha.php';
 
 Kint::$enabled_mode = false;
 
@@ -90,6 +91,19 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "info-aanvraag"))
 				$error = true;
 				$fout	.= "   <li>Your email address is not or not correctly filled out</li>\n";
 			}
+
+		if (!$error) {
+			try {
+				if (!controleerAdresRecaptcha($_POST['g-recaptcha-response'] ?? null)) {
+					$error = true;
+					$fout .= "<li>The security check failed. Please try again.</li>\n";
+				}
+			} catch (RuntimeException $exception) {
+				error_log('reCAPTCHA address form: ' . $exception->getMessage());
+				$error = true;
+				$fout .= "<li>The security check is temporarily unavailable. Please try again later.</li>\n";
+			}
+		}
 
 		$fout .= "</ul>\n<p>Please return to the fields metioned and fill them out. Then press \"send\" again.</p>
 					<p>In case you don't succeed to send this form please send a normal email containing the relevant information to <a href=\"mailto:info@pellegrina.net\">info@pellegrina.net</a>, 

@@ -5,6 +5,7 @@
 error_reporting(E_ALL);
 
 require_once $_SERVER["DOCUMENT_ROOT"].'/vendor/autoload.php';
+require_once $_SERVER["DOCUMENT_ROOT"].'/includes/recaptcha.php';
 
 Kint::$enabled_mode = false;
 
@@ -87,6 +88,19 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "info-aanvraag"))
 				$error = true;
 				$fout	.= "   <li>Je emailadres is niet of niet correct ingevuld</li>\n";
 			}
+
+		if (!$error) {
+			try {
+				if (!controleerAdresRecaptcha($_POST['g-recaptcha-response'] ?? null)) {
+					$error = true;
+					$fout .= "<li>De beveiligingscontrole is niet geslaagd. Probeer het opnieuw.</li>\n";
+				}
+			} catch (RuntimeException $exception) {
+				error_log('reCAPTCHA adresformulier: ' . $exception->getMessage());
+				$error = true;
+				$fout .= "<li>De beveiligingscontrole is tijdelijk niet beschikbaar. Probeer het later opnieuw.</li>\n";
+			}
+		}
 
 		$fout .= "</ul>\n<p>Ga naar de desbetreffende velden op het formulier en vul de gegevens aan. 
 					Druk daarna nogmaals op 'Formulier verzenden'.</p>
