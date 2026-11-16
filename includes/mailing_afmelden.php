@@ -66,9 +66,14 @@ function mailingAfmelden(PDO $db, string $token): bool
     return $stmt->fetchColumn() !== false;
 }
 
+function mailingHeeftAfmeldlink(string $body): bool
+{
+    return preg_match('/(?:\{|%7b)afmeldtoken(?:\}|%7d)/i', $body) === 1;
+}
+
 function mailingAfmeldHeaders($mail, string $body, string $token): string
 {
-    if (!preg_match('/\A[a-f0-9]{64}\z/', $token) || !str_contains($body, '{afmeldtoken}')) {
+    if (!preg_match('/\A[a-f0-9]{64}\z/', $token) || !mailingHeeftAfmeldlink($body)) {
         throw new InvalidArgumentException('Ongeldige afmeldlink.');
     }
     $url = 'https://pellegrina.net/algemeen/afmelden.php?token=' . $token;
@@ -76,5 +81,5 @@ function mailingAfmeldHeaders($mail, string $body, string $token): string
         || !$mail->addCustomHeader('List-Unsubscribe-Post', 'List-Unsubscribe=One-Click')) {
         throw new RuntimeException('Afmeldheaders konden niet worden ingesteld.');
     }
-    return str_replace('{afmeldtoken}', $token, $body);
+    return preg_replace('/(?:\{|%7b)afmeldtoken(?:\}|%7d)/i', $token, $body);
 }

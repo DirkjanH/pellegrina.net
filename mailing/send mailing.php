@@ -210,7 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 					if ($afmeldStatus !== null && $afmeldStatus['afgemeld_op'] !== null) {
 						continue;
 					}
-					$afmeldToken = str_contains($mail_text, '{afmeldtoken}')
+					$afmeldToken = mailingHeeftAfmeldlink($mail_text)
 						? mailingAfmeldToken($db, $recipient) : null;
 				} catch (Throwable $exception) {
 					error_log('Afmeldregister voor mailing niet beschikbaar: ' . $exception->getMessage());

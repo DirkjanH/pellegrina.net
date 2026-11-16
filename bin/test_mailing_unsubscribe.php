@@ -92,6 +92,10 @@ try {
 
     $html = '<p><a href="https://pellegrina.net/algemeen/afmelden.php?token={afmeldtoken}&amp;lang=en">Unsubscribe</a></p>';
     $html = Pelago\Emogrifier\CssInliner::fromHtml($html)->inlineCss('')->render();
+    $encodedHtml = str_replace('{afmeldtoken}', '%7Bafmeldtoken%7D', $html);
+    checkUnsubscribe(mailingHeeftAfmeldlink($encodedHtml), 'URL-encoded placeholders must be recognized.');
+    checkUnsubscribe(str_contains(mailingAfmeldHeaders(new PHPMailer\PHPMailer\PHPMailer(), $encodedHtml, $token), 'token=' . $token),
+        'URL-encoded placeholders must be replaced with a personal token.');
     $mail = new PHPMailer\PHPMailer\PHPMailer();
     $mail->isSMTP();
     $mail->setFrom('info@pellegrina.net');
@@ -162,7 +166,7 @@ try {
     checkUnsubscribe((int) $status['totaal'] === 4 && (int) $status['resterend'] === 1, 'Unsubscribed recipients must be excluded from queued mailings.');
     checkUnsubscribe((int) mailingAfmeldVerzendStatus($db, 2)['resterend'] === 0, 'Unsubscribes must apply to other mailings too.');
     $stmt = $db->prepare('INSERT INTO mailing_opdrachten VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
-    $stmt->execute([1, $html, 'Test', 'info@pellegrina.net', 'La Pellegrina', '', 1, '2026-01-01', '']);
+    $stmt->execute([1, $encodedHtml, 'Test', 'info@pellegrina.net', 'La Pellegrina', '', 1, '2026-01-01', '']);
     $sendUrl = 'http://127.0.0.1:' . $port . '/send.php?mailing=1';
     $form = file_get_contents($sendUrl);
     checkUnsubscribe(preg_match('/name="csrf_token"\s+value="([^"]+)"/', $form, $csrf) === 1, 'Mailing confirmation token missing.');
@@ -179,7 +183,8 @@ try {
     checkUnsubscribe(str_contains($http_response_header[0] ?? '', '200') && str_contains($result, 'Mailing afgehandeld'), 'Mailing batch did not finish.');
     $sent = array_map(static fn($line) => json_decode($line, true, 512, JSON_THROW_ON_ERROR), file($root . '/sent', FILE_IGNORE_NEW_LINES));
     checkUnsubscribe(count($sent) === 1 && $sent[0]['recipient'] === 'allowed@example.org', 'Mailing must send only to non-unsubscribed recipients.');
-    checkUnsubscribe(isset($sent[0]['headers']['List-Unsubscribe-Post']) && !str_contains($sent[0]['body'], '{afmeldtoken}'), 'Mailing must include a personal one-click link.');
+    checkUnsubscribe(isset($sent[0]['headers']['List-Unsubscribe-Post']) && !mailingHeeftAfmeldlink($sent[0]['body'])
+        && preg_match('/token=[a-f0-9]{64}/', $sent[0]['body']) === 1, 'Mailing must include a personal one-click link.');
     checkUnsubscribe((int) mailingAfmeldVerzendStatus($db, 1)['resterend'] === 0, 'No sendable recipients should remain after the batch.');
     try {
         mailingAfmeldToken($db, 'first@example.org');
