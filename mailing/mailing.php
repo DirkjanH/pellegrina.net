@@ -1,7 +1,6 @@
 <?php
 $documentRoot = realpath($_SERVER['DOCUMENT_ROOT'] ?? '');
-$privateConfigPath = dirname($_SERVER['DOCUMENT_ROOT'] ?? '') .
-	DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'login.php';
+$privateConfigPath = '/var/www/vhosts/horringa.net/private/login.php';
 $privateConfigRealPath = realpath($privateConfigPath);
 $documentRootPrefix = $documentRoot === false
 	? ''
