@@ -1,4 +1,94 @@
-<?php // Verbindingsdeclaratie
+<?php
+$documentRoot = realpath($_SERVER['DOCUMENT_ROOT'] ?? '');
+$privateConfigPath = dirname($_SERVER['DOCUMENT_ROOT'] ?? '') .
+	DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'login.php';
+$privateConfigRealPath = realpath($privateConfigPath);
+$documentRootPrefix = $documentRoot === false
+	? ''
+	: rtrim($documentRoot, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
+
+if (
+	$documentRoot === false ||
+	$privateConfigRealPath === false ||
+	str_starts_with($privateConfigRealPath . DIRECTORY_SEPARATOR, $documentRootPrefix)
+) {
+	http_response_code(503);
+	exit('Mailingbeheer is niet geconfigureerd.');
+}
+
+$mailingConfig = require $privateConfigRealPath;
+$mailingPasswordHash = is_array($mailingConfig)
+	? ($mailingConfig['mailing_password_hash'] ?? null)
+	: null;
+
+if (
+	!is_string($mailingPasswordHash) ||
+	$mailingPasswordHash === '' ||
+	password_get_info($mailingPasswordHash)['algoName'] === 'unknown'
+) {
+	http_response_code(503);
+	exit('Mailingbeheer is niet geconfigureerd.');
+}
+
+if (session_status() === PHP_SESSION_NONE) {
+	ini_set('session.use_strict_mode', '1');
+	session_set_cookie_params([
+		'httponly' => true,
+		'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+		'samesite' => 'Lax',
+	]);
+	session_start();
+}
+
+header('Cache-Control: no-store, private');
+
+if (empty($_SESSION['mailing_authenticated'])) {
+	if (empty($_SESSION['mailing_login_csrf'])) {
+		$_SESSION['mailing_login_csrf'] = bin2hex(random_bytes(32));
+	}
+
+	$loginError = '';
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		$csrfToken = (string) ($_POST['csrf_token'] ?? '');
+		if (
+			hash_equals($_SESSION['mailing_login_csrf'], $csrfToken) &&
+			password_verify((string) ($_POST['password'] ?? ''), $mailingPasswordHash)
+		) {
+			session_regenerate_id(true);
+			$_SESSION['mailing_authenticated'] = true;
+			unset($_SESSION['mailing_login_csrf']);
+			header('Location: /mailing/mailing.php');
+			exit;
+		}
+
+		$loginError = 'Onjuist wachtwoord.';
+	}
+	?>
+	<!DOCTYPE html>
+	<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mailingbeheer aanmelden</title>
+	</head>
+	<body>
+		<h1>Mailingbeheer</h1>
+		<?php if ($loginError !== ''): ?>
+			<p role="alert"><?= htmlspecialchars($loginError, ENT_QUOTES, 'UTF-8') ?></p>
+		<?php endif; ?>
+		<form method="post">
+			<input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['mailing_login_csrf'], ENT_QUOTES, 'UTF-8') ?>">
+			<label for="password">Wachtwoord</label>
+			<input id="password" name="password" type="password" autocomplete="current-password" required>
+			<button type="submit">Aanmelden</button>
+		</form>
+	</body>
+	</html>
+	<?php
+	exit;
+}
+
+// Verbindingsdeclaratie
 // stel php in dat deze fouten weergeeft
 //ini_set('display_errors',1);
 error_reporting(E_ALL);
