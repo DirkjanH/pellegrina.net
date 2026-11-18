@@ -41,6 +41,32 @@ if (session_status() === PHP_SESSION_NONE) {
 
 header('Cache-Control: no-store, private');
 
+if (
+	!empty($_SESSION['mailing_authenticated']) &&
+	$_SERVER['REQUEST_METHOD'] === 'POST' &&
+	($_POST['mailing_action'] ?? '') === 'logout'
+) {
+	$logoutCsrfToken = $_SESSION['mailing_logout_csrf'] ?? null;
+	$submittedCsrfToken = (string) ($_POST['logout_csrf_token'] ?? '');
+	if (!is_string($logoutCsrfToken) || !hash_equals($logoutCsrfToken, $submittedCsrfToken)) {
+		http_response_code(400);
+		exit('Ongeldige uitlogaanvraag.');
+	}
+
+	unset(
+		$_SESSION['mailing_authenticated'],
+		$_SESSION['mailing_login_csrf'],
+		$_SESSION['mailing_logout_csrf']
+	);
+	session_regenerate_id(true);
+	header('Location: /mailing/mailing.php');
+	exit;
+}
+
+if (!empty($_SESSION['mailing_authenticated']) && empty($_SESSION['mailing_logout_csrf'])) {
+	$_SESSION['mailing_logout_csrf'] = bin2hex(random_bytes(32));
+}
+
 if (empty($_SESSION['mailing_authenticated'])) {
 	if (empty($_SESSION['mailing_login_csrf'])) {
 		$_SESSION['mailing_login_csrf'] = bin2hex(random_bytes(32));
@@ -1419,6 +1445,27 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			padding: 0 10px;
 		}
 
+		#mailing_logout_form {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 8px;
+		}
+
+		#mailing_logout_form button {
+			padding: 6px 12px;
+			border: 1px solid #378dbf;
+			border-radius: 4px;
+			background: #d1e5f1;
+			color: #003465;
+			font: inherit;
+			cursor: pointer;
+		}
+
+		#mailing_logout_form button:hover,
+		#mailing_logout_form button:focus-visible {
+			background: #82bada;
+		}
+
 		.mailing-result {
 			position: fixed;
 			top: 10px;
@@ -1638,6 +1685,11 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 </head>
 
 <body>
+	<form id="mailing_logout_form" method="post" action="/mailing/mailing.php">
+		<input type="hidden" name="logout_csrf_token"
+			value="<?= htmlspecialchars($_SESSION['mailing_logout_csrf'], ENT_QUOTES, 'UTF-8') ?>">
+		<button type="submit" name="mailing_action" value="logout">Uitloggen</button>
+	</form>
 	<form action="<?php echo $editFormAction; ?>" method="post" name="formulier"
 		id="formulier" enctype='multipart/form-data'>
 		<?php if ($subject_warning) { ?> <p role="alert"
