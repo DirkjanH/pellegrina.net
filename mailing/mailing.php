@@ -88,371 +88,376 @@ if (empty($_SESSION['mailing_authenticated'])) {
 
 		$loginError = 'Onjuist wachtwoord.';
 	}
-	?>
+?>
 	<!DOCTYPE html>
 	<html lang="nl">
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Mailingbeheer aanmelden</title>
+		<title>Mailing login</title>
 		<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
 		<link rel="stylesheet" href="/css/mailing-login.css">
 	</head>
+
 	<body class="mailing-login-page">
-		<a class="mailing-login-logo" href="/" aria-label="La Pellegrina - naar de homepage">
+		<a class="mailing-login-logo" href="/"
+			aria-label="La Pellegrina - naar de homepage">
 			<img src="/Images/Logos/LP_nieuw.png" alt="La Pellegrina">
 		</a>
 		<main class="mailing-login-card">
-			<h1>Mailingbeheer</h1>
+			<h1>Mailing login</h1>
 			<p class="mailing-login-intro">Meld je aan om verder te gaan.</p>
-			<?php if ($loginError !== ''): ?>
-				<p class="mailing-login-error" role="alert"><?= htmlspecialchars($loginError, ENT_QUOTES, 'UTF-8') ?></p>
-			<?php endif; ?>
-			<form method="post">
-				<input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['mailing_login_csrf'], ENT_QUOTES, 'UTF-8') ?>">
+			<?php if ($loginError !== ''): ?> <p class="mailing-login-error"
+					role="alert">
+					<?= htmlspecialchars($loginError, ENT_QUOTES, 'UTF-8') ?></p>
+			<?php endif; ?> <form method="post">
+				<input type="hidden" name="csrf_token"
+					value="<?= htmlspecialchars($_SESSION['mailing_login_csrf'], ENT_QUOTES, 'UTF-8') ?>">
 				<label for="password">Wachtwoord</label>
-				<input id="password" name="password" type="password" autocomplete="current-password" required>
+				<input id="password" name="password" type="password"
+					autocomplete="current-password" required>
 				<button type="submit">Aanmelden</button>
 			</form>
 		</main>
 	</body>
-	</html>
-	<?php
-	exit;
-}
 
-// Verbindingsdeclaratie
-// stel php in dat deze fouten weergeeft
-//ini_set('display_errors',1);
-error_reporting(E_ALL);
-
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
-require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/google_contacts.php';
-
-use Pelago\Emogrifier\CssInliner;
-use function \PHP81_BC\strftime;
-
-Kint::$enabled_mode = false;
-
-d($GLOBALS, $_POST, $_GET);
-
-ob_start();
-
-$voorzetsels = array(' van', ' der', ' den', ' ten', ' de', ' \'t', 'Dr. ', 'Mr. ', 'Drs. ', ' Op', ' ter', ' le', ' von');
-$leeg = '';
-$ctrlf = "\r\n";
-$enclosure = '"';
-
-$taal[1] = 'LIKE "%XXX%"';
-$taal[2] = 'LIKE "%NL%"';
-$taal[3] = 'NOT LIKE "%NL%"';
-$taal[4] = 'LIKE "%%"';
-
-$instrzang[1] = '';
-$instrzang[2] = 'AND instrumentalist <=> 1';
-$instrzang[3] = 'AND zanger <=> 1';
-
-$aantal_kolommen = 5;
-$adressen = [];
-$inschrijving = [];
-$results = [];
-$pcgebieden = [];
-$cursusnaam = [];
-$aantal = 0;
-$nieuwsbrief = [
-	'subject' => '',
-	'message' => '',
-	'afzender' => ''
-];
-
-// De formulierkeuzes blijven tussen opeenvolgende POST-verzoeken beschikbaar.
-// Daardoor kan een gebruiker eerst adressen selecteren en daarna de nieuwsbrief
-// bewerken zonder dat de ontvangerslijst opnieuw hoeft te worden opgebouwd.
-if (empty($_SESSION['cursusId'])) $_SESSION['cursusId'] = $eerstecursus;
-$cursusJaar = (string) ($_POST['cursusJaar'] ?? $jaar);
-$cursusJaarIds = ['2025' => 60, '2026' => 62, '2027' => 64];
-if (!isset($cursusJaarIds[$cursusJaar])) $cursusJaar = (string) $jaar;
-if (isset($_POST['cursusId']) and $_POST['cursusId'] === "0") {
-	$_SESSION['cursusId'] = 0;
-	$_POST['selectie'] = 'alles';
-} elseif (isset($_POST['cursusId']) and $_POST['cursusId'] != "") $_SESSION['cursusId'] = $_POST['cursusId'];
-
-if (empty($_SESSION['messageId'])) $_SESSION['messageId'] = 1;
-if (isset($_POST['messageId']) and $_POST['messageId'] != "") $_SESSION['messageId'] = $_POST['messageId'];
-if (empty($_SESSION['taal'])) $_SESSION['taal'] = 1;
-if (isset($_POST['taal'])) $_SESSION['taal'] = $_POST['taal'];
-if (empty($_SESSION['instrzang'])) $_SESSION['instrzang'] = 1;
-if (isset($_POST['instrzang'])) $_SESSION['instrzang'] = $_POST['instrzang'];
-
-$_POST['message'] = stripslashes((string) ($_POST['message'] ?? ''));
-$_POST['subject'] = stripslashes((string) ($_POST['subject'] ?? '[subject]'));
-$_POST['afzender'] = (string) ($_POST['afzender'] ?? '');
-$_POST['afzendermail'] = (string) ($_POST['afzendermail'] ?? '');
-$_POST['CC'] = (string) ($_POST['CC'] ?? '');
-$_POST['adressen'] = (string) ($_POST['adressen'] ?? '');
-$_POST['outlook'] = (string) ($_POST['outlook'] ?? '');
-$_POST['postcodegebied'] = (string) ($_POST['postcodegebied'] ?? '');
-$_POST['groep'] = (string) ($_POST['groep'] ?? '');
-
-d($_POST, $_SESSION);
-
-// Elke bron wordt hieronder naar dezelfde adresvelden vertaald. De rest van het
-// script hoeft daardoor geen onderscheid meer te maken tussen database-, CSV-,
-// Outlook- en Google-invoer.
-
-function sort_array($array, $sortby, $direction = 'asc')
-{
-
-	$sortedArr = array();
-	$tmp_Array = array();
-
-	foreach ($array as $k => $v) {
-		$tmp_Array[] = strtolower($v[$sortby]);
-	}
-
-	if ($direction == 'asc') {
-		asort($tmp_Array);
-	} else {
-		arsort($tmp_Array);
-	}
-
-	foreach ($tmp_Array as $k => $tmp) $sortedArr[] = $array[$k];
-	return $sortedArr;
-} //eind sort_array
-
-function super_unique($array, $key)
-{
-	// De sleutel voorkomt dat dezelfde e-mail meerdere keren wordt ingepland,
-	// ook wanneer een adres in meerdere postcodegebieden voorkomt.
-	$temp_array = [];
-	foreach ($array as &$v) {
-		if (!isset($temp_array[$v[$key]]))
-			$temp_array[$v[$key]] = &$v;
-	}
-	$array = array_values($temp_array);
-	return $array;
-}
-
-function lees_gdata($groep = '')
-{
-	global $voorzetsels, $leeg;
-	try {
-		$results = google_contacts_read($groep);
-	} catch (Throwable $exception) {
-		$errorMessage = 'Google Contacts-fout: ' . $exception->getMessage();
-		error_log($errorMessage);
-		echo '<script>window.alert(' . json_encode(
-			$errorMessage,
-			JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT
-		) . ');</script>';
-		echo '<p><strong>Google Contacts-fout:</strong> ' . htmlspecialchars(
-			$exception->getMessage(),
-			ENT_QUOTES,
-			'UTF-8'
-		) . '</p>';
-		return [];
-	}
-	foreach ($results as &$adres) {
-		$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $adres['voornaam']));
-		if ($adres['postcode'] !== '' && preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) {
-			$adres['land'] = 'NL';
+	</html> <?php
+			exit;
 		}
-	}
-	unset($adres);
-	return sort_array($results, 'postcode');
-}
 
-function lees_outlook($input)
-{
-	global $voorzetsels, $leeg, $ctrlf, $enclosure;
-	$adressen = [];
-	$witregel = $ctrlf . $ctrlf;
-	$lijst = explode($witregel, $input);
-	// Outlook scheidt contacten met een lege regel; ontbreekt die scheiding,
-	// dan is de invoer waarschijnlijk geen export in het verwachte formaat.
+		// Verbindingsdeclaratie
+		// stel php in dat deze fouten weergeeft
+		//ini_set('display_errors',1);
+		error_reporting(E_ALL);
 
-	if (strpos($input, $witregel) === false)
-		echo '<script language="javascript">confirm("Dit zijn geen Outlook-adressen. Wil je dit?")</script>;';
+		require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+		require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/google_contacts.php';
 
-	d($lijst);
+		use Pelago\Emogrifier\CssInliner;
+		use function \PHP81_BC\strftime;
 
-	//unset($lijst[0]);
-	$i = 1;
-	foreach ($lijst as $adres) {
-		$tmp = explode($ctrlf, $adres);
-		foreach ($tmp as $t) {
-			$t = rtrim($t);
-			if ($t != '')
-				$tmp[substr($t, 0, strcspn($t, ':'))] = substr(stristr($t, ':'), 2);
+		Kint::$enabled_mode = false;
+
+		d($GLOBALS, $_POST, $_GET);
+
+		ob_start();
+
+		$voorzetsels = array(' van', ' der', ' den', ' ten', ' de', ' \'t', 'Dr. ', 'Mr. ', 'Drs. ', ' Op', ' ter', ' le', ' von');
+		$leeg = '';
+		$ctrlf = "\r\n";
+		$enclosure = '"';
+
+		$taal[1] = 'LIKE "%XXX%"';
+		$taal[2] = 'LIKE "%NL%"';
+		$taal[3] = 'NOT LIKE "%NL%"';
+		$taal[4] = 'LIKE "%%"';
+
+		$instrzang[1] = '';
+		$instrzang[2] = 'AND instrumentalist <=> 1';
+		$instrzang[3] = 'AND zanger <=> 1';
+
+		$aantal_kolommen = 5;
+		$adressen = [];
+		$inschrijving = [];
+		$results = [];
+		$pcgebieden = [];
+		$cursusnaam = [];
+		$aantal = 0;
+		$nieuwsbrief = [
+			'subject' => '',
+			'message' => '',
+			'afzender' => ''
+		];
+
+		// De formulierkeuzes blijven tussen opeenvolgende POST-verzoeken beschikbaar.
+		// Daardoor kan een gebruiker eerst adressen selecteren en daarna de nieuwsbrief
+		// bewerken zonder dat de ontvangerslijst opnieuw hoeft te worden opgebouwd.
+		if (empty($_SESSION['cursusId'])) $_SESSION['cursusId'] = $eerstecursus;
+		$cursusJaar = (string) ($_POST['cursusJaar'] ?? $jaar);
+		$cursusJaarIds = ['2025' => 60, '2026' => 62, '2027' => 64];
+		if (!isset($cursusJaarIds[$cursusJaar])) $cursusJaar = (string) $jaar;
+		if (isset($_POST['cursusId']) and $_POST['cursusId'] === "0") {
+			$_SESSION['cursusId'] = 0;
+			$_POST['selectie'] = 'alles';
+		} elseif (isset($_POST['cursusId']) and $_POST['cursusId'] != "") $_SESSION['cursusId'] = $_POST['cursusId'];
+
+		if (empty($_SESSION['messageId'])) $_SESSION['messageId'] = 1;
+		if (isset($_POST['messageId']) and $_POST['messageId'] != "") $_SESSION['messageId'] = $_POST['messageId'];
+		if (empty($_SESSION['taal'])) $_SESSION['taal'] = 1;
+		if (isset($_POST['taal'])) $_SESSION['taal'] = $_POST['taal'];
+		if (empty($_SESSION['instrzang'])) $_SESSION['instrzang'] = 1;
+		if (isset($_POST['instrzang'])) $_SESSION['instrzang'] = $_POST['instrzang'];
+
+		$_POST['message'] = stripslashes((string) ($_POST['message'] ?? ''));
+		$_POST['subject'] = stripslashes((string) ($_POST['subject'] ?? '[subject]'));
+		$_POST['afzender'] = (string) ($_POST['afzender'] ?? '');
+		$_POST['afzendermail'] = (string) ($_POST['afzendermail'] ?? '');
+		$_POST['CC'] = (string) ($_POST['CC'] ?? '');
+		$_POST['adressen'] = (string) ($_POST['adressen'] ?? '');
+		$_POST['outlook'] = (string) ($_POST['outlook'] ?? '');
+		$_POST['postcodegebied'] = (string) ($_POST['postcodegebied'] ?? '');
+		$_POST['groep'] = (string) ($_POST['groep'] ?? '');
+
+		d($_POST, $_SESSION);
+
+		// Elke bron wordt hieronder naar dezelfde adresvelden vertaald. De rest van het
+		// script hoeft daardoor geen onderscheid meer te maken tussen database-, CSV-,
+		// Outlook- en Google-invoer.
+
+		function sort_array($array, $sortby, $direction = 'asc')
+		{
+
+			$sortedArr = array();
+			$tmp_Array = array();
+
+			foreach ($array as $k => $v) {
+				$tmp_Array[] = strtolower($v[$sortby]);
+			}
+
+			if ($direction == 'asc') {
+				asort($tmp_Array);
+			} else {
+				arsort($tmp_Array);
+			}
+
+			foreach ($tmp_Array as $k => $tmp) $sortedArr[] = $array[$k];
+			return $sortedArr;
+		} //eind sort_array
+
+		function super_unique($array, $key)
+		{
+			// De sleutel voorkomt dat dezelfde e-mail meerdere keren wordt ingepland,
+			// ook wanneer een adres in meerdere postcodegebieden voorkomt.
+			$temp_array = [];
+			foreach ($array as &$v) {
+				if (!isset($temp_array[$v[$key]]))
+					$temp_array[$v[$key]] = &$v;
+			}
+			$array = array_values($temp_array);
+			return $array;
 		}
-		$a = stripslashes(substr($adres, 0, strcspn($adres, $ctrlf)));
-		if (isset($tmp['E-mail']) and strpbrk($tmp['E-mail'], '@.') and strpbrk($a, ',')) {
-			$tmp['achternaam'] = substr($a, 0, strpos($a, ','));
-			$tmp['voornaam'] = substr(stristr($a, ','), 2);
-			$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['voornaam']));
-			$adressen[$i]['naam'] = rtrim($tmp['voornaam'] . ' ' . $tmp['achternaam']);
-			$adressen[$i]['email'] = $tmp['E-mail'];
-			$i++;
+
+		function lees_gdata($groep = '')
+		{
+			global $voorzetsels, $leeg;
+			try {
+				$results = google_contacts_read($groep);
+			} catch (Throwable $exception) {
+				$errorMessage = 'Google Contacts-fout: ' . $exception->getMessage();
+				error_log($errorMessage);
+				echo '<script>window.alert(' . json_encode(
+					$errorMessage,
+					JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT
+				) . ');</script>';
+				echo '<p><strong>Google Contacts-fout:</strong> ' . htmlspecialchars(
+					$exception->getMessage(),
+					ENT_QUOTES,
+					'UTF-8'
+				) . '</p>';
+				return [];
+			}
+			foreach ($results as &$adres) {
+				$adres['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $adres['voornaam']));
+				if ($adres['postcode'] !== '' && preg_match('/[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}/i', $adres['postcode'])) {
+					$adres['land'] = 'NL';
+				}
+			}
+			unset($adres);
+			return sort_array($results, 'postcode');
 		}
-	}
-	d($adressen);
 
-	return $adressen;
-}
+		function lees_outlook($input)
+		{
+			global $voorzetsels, $leeg, $ctrlf, $enclosure;
+			$adressen = [];
+			$witregel = $ctrlf . $ctrlf;
+			$lijst = explode($witregel, $input);
+			// Outlook scheidt contacten met een lege regel; ontbreekt die scheiding,
+			// dan is de invoer waarschijnlijk geen export in het verwachte formaat.
 
-function lees_distributielijst($input)
-{
-	global $voorzetsels, $leeg, $ctrlf, $enclosure;
-	$adressen = [];
+			if (strpos($input, $witregel) === false)
+				echo '<script language="javascript">confirm("Dit zijn geen Outlook-adressen. Wil je dit?")</script>;';
 
-	//d($input);
+			d($lijst);
 
-	if (strpos($input, ('Leden:' . "\t " . $ctrlf)) === false)
-		echo '<script language="javascript">confirm("Dit is geen Outlook-distributielijst. Wil je dit?")</script>;';
+			//unset($lijst[0]);
+			$i = 1;
+			foreach ($lijst as $adres) {
+				$tmp = explode($ctrlf, $adres);
+				foreach ($tmp as $t) {
+					$t = rtrim($t);
+					if ($t != '')
+						$tmp[substr($t, 0, strcspn($t, ':'))] = substr(stristr($t, ':'), 2);
+				}
+				$a = stripslashes(substr($adres, 0, strcspn($adres, $ctrlf)));
+				if (isset($tmp['E-mail']) and strpbrk($tmp['E-mail'], '@.') and strpbrk($a, ',')) {
+					$tmp['achternaam'] = substr($a, 0, strpos($a, ','));
+					$tmp['voornaam'] = substr(stristr($a, ','), 2);
+					$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['voornaam']));
+					$adressen[$i]['naam'] = rtrim($tmp['voornaam'] . ' ' . $tmp['achternaam']);
+					$adressen[$i]['email'] = $tmp['E-mail'];
+					$i++;
+				}
+			}
+			d($adressen);
 
-	$lijst = explode($ctrlf, $input);
-	// In een distributielijst staat één lid per regel. Regels zonder '@' zijn
-	// kopteksten of lege regels en worden daarom genegeerd.
-
-	//d($lijst);
-
-	$i = 0;
-	foreach ($lijst as $adres) {
-		if (strpos($adres, '@') !== false) {
-			$tmp['E-mail'] = ltrim(substr($adres, strrpos($adres, "\t"), strlen($adres)));
-			if (strpos($adres, ' (') !== false)
-				$a = substr($adres, 0, strrpos($adres, " ("));
-			else
-				$a = substr($adres, 0, strrpos($adres, "\t"));
-			$tmp['achternaam'] = trim(substr($a, strrpos($a, ' '), strlen($adres)));
-			$tmp['voornaam'] = trim(substr($a, 0, strrpos($a, ' ')));
-			$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['voornaam']));
-			$adressen[$i]['naam'] = rtrim($tmp['voornaam'] . ' ' . $tmp['achternaam']);
-			$adressen[$i]['email'] = $tmp['E-mail'];
-			$i++;
+			return $adressen;
 		}
-	}
-	d($adressen);
-	echo '</pre>';
 
-	return $adressen;
-}
-
-function lees_access($input)
-{
-	global $voorzetsels, $leeg, $ctrlf, $enclosure;
-	$adressen = [];
-	$delimiter = ',';
-	if (strpos($input, '","'))
-		$delimiter = ',';
-	elseif (strpos($input, '";"'))
-		$delimiter = ';';
-	else
-		echo '<script language="javascript">confirm("Dit is geen CSV. Wil je dit?")</script>;';
-
-	d($input, $delimiter, $enclosure);
-
-	$fp = fopen('php://temp', 'r+');
-	// Een tijdelijke stream geeft fgetcsv dezelfde delimiter- en quote-logica
-	// als bij een fysiek bestand, zonder de gebruikersinvoer op schijf te zetten.
-	// Schrijf $input naar de tijdelijke stream met fwrite().
-	fwrite($fp, $input);
-	// Spoel de stream terug zodat de zojuist geschreven inhoud kan worden gelezen.
-	rewind($fp);
-	// Lees de volledige regel in een variabele.
-	$adressen = [];
-	$i = 0;
-	while (!feof($fp)) {
-		$tmp = fgetcsv($fp, 1000, $delimiter, $enclosure);
-		if (isset($tmp['0']) and strpbrk($tmp['0'], '@.')) {
-			$adressen[$i]['email'] = $tmp[0];
-			$adressen[$i]['naam'] = $tmp[1];
-			$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['2']));
-			$i++;
-		}
-	}
-	// Sluit de tijdelijke stream.
-	fclose($fp);
-
-	//d($adressen);
-
-	return $adressen;
-}
-
-function lees_google($input)
-{
-	global $voorzetsels, $leeg, $enclosure;
-	$adressen = [];
-	$lijst = [];
-	$regelscheiding = ', ';
-	if (strpos($input, $regelscheiding) === false)
-		echo '<script language="javascript">confirm("Dit zijn geen Google-adressen. Wil je dit?")</script>;';
-	else $lijst = explode($regelscheiding, $input);
-	// Het Google-formaat bevat naam en adres als "Naam <adres>"; beide worden
-	// hier gescheiden zodat de vervolgcode één uniforme structuur ontvangt.
-
-	d($lijst);
-
-	//	unset($lijst[0]);
-	$i = 0;
-	foreach ($lijst as $adres) {
-		$tmp = explode(' <', $adres);
-		$tmp[0] = trim($tmp[0], '"<> ');
-		$tmp[1] = trim($tmp[1], '"<> ');
-		$tmp['voornaam'] = substr($tmp[0], 0, strpos($tmp[0], ' '));
-		$tmp['achternaam'] = substr(stristr($tmp[0], ' '), 1);
-		if ($tmp[1] != '') {
-			$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['voornaam']));
-			$adressen[$i]['naam'] = rtrim($tmp['voornaam'] . ' ' . $tmp['achternaam']);
-			$adressen[$i]['email'] = $tmp[1];
-			$i++;
-		}
-	}
-
-	//d($adressen);
-
-	return $adressen;
-}
-
-// Omgekeerd zoeken, vergelijkbaar met strrchr.
-function strrrchr($haystack, $needle)
-{
-	// Geeft alles vóór $needle terug.
-	return substr($haystack, 0, strpos($haystack, $needle));
-}
-
-// Taal 1 is de veilige testmodus: er worden uitsluitend vaste testadressen
-// klaargezet en er wordt geen productiedoelgroep uit de database geladen.
-if (isset($_SESSION['taal']) and $_SESSION['taal'] == 1) { // test-adressen
-	$adressen[0]['verzenden'] = 'on';
-	$adressen[0]['naam'] =  "test-adres Outlook";
-	$adressen[0]['voornaam'] =  "...";
-	$adressen[0]['password'] =  "xxxx";
-	$adressen[0]['email'] =  "dirkjanhorringa@outlook.com";
-	$adressen[0]['DlnmrId'] =  "737";
-	$adressen[1]['verzenden'] = 'off';
-	$adressen[1]['naam'] =  "test-adres Google";
-	$adressen[1]['voornaam'] =  "....";
-	$adressen[1]['password'] =  "xxxx";
-	$adressen[1]['email'] =  "dhorringa@gmail.com";
-	$adressen[1]['DlnmrId'] =  "737";
-	$aantal = 2;
-}
-
-if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal'] > 1) {
-
-	// De selectie bepaalt alleen hoe de kandidaten worden verzameld. Het
-	// feitelijke verzenden gebeurt pas later, nadat de gebruiker de vinkjes heeft
-	// gecontroleerd en expliciet voor "Verzend" kiest.
-	switch ($_POST['selectie']) {
-
-		case 'alles':
-
+		function lees_distributielijst($input)
+		{
+			global $voorzetsels, $leeg, $ctrlf, $enclosure;
 			$adressen = [];
 
-			$query_inschrijving = sprintf(
-				"SELECT DISTINCT
+			//d($input);
+
+			if (strpos($input, ('Leden:' . "\t " . $ctrlf)) === false)
+				echo '<script language="javascript">confirm("Dit is geen Outlook-distributielijst. Wil je dit?")</script>;';
+
+			$lijst = explode($ctrlf, $input);
+			// In een distributielijst staat één lid per regel. Regels zonder '@' zijn
+			// kopteksten of lege regels en worden daarom genegeerd.
+
+			//d($lijst);
+
+			$i = 0;
+			foreach ($lijst as $adres) {
+				if (strpos($adres, '@') !== false) {
+					$tmp['E-mail'] = ltrim(substr($adres, strrpos($adres, "\t"), strlen($adres)));
+					if (strpos($adres, ' (') !== false)
+						$a = substr($adres, 0, strrpos($adres, " ("));
+					else
+						$a = substr($adres, 0, strrpos($adres, "\t"));
+					$tmp['achternaam'] = trim(substr($a, strrpos($a, ' '), strlen($adres)));
+					$tmp['voornaam'] = trim(substr($a, 0, strrpos($a, ' ')));
+					$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['voornaam']));
+					$adressen[$i]['naam'] = rtrim($tmp['voornaam'] . ' ' . $tmp['achternaam']);
+					$adressen[$i]['email'] = $tmp['E-mail'];
+					$i++;
+				}
+			}
+			d($adressen);
+			echo '</pre>';
+
+			return $adressen;
+		}
+
+		function lees_access($input)
+		{
+			global $voorzetsels, $leeg, $ctrlf, $enclosure;
+			$adressen = [];
+			$delimiter = ',';
+			if (strpos($input, '","'))
+				$delimiter = ',';
+			elseif (strpos($input, '";"'))
+				$delimiter = ';';
+			else
+				echo '<script language="javascript">confirm("Dit is geen CSV. Wil je dit?")</script>;';
+
+			d($input, $delimiter, $enclosure);
+
+			$fp = fopen('php://temp', 'r+');
+			// Een tijdelijke stream geeft fgetcsv dezelfde delimiter- en quote-logica
+			// als bij een fysiek bestand, zonder de gebruikersinvoer op schijf te zetten.
+			// Schrijf $input naar de tijdelijke stream met fwrite().
+			fwrite($fp, $input);
+			// Spoel de stream terug zodat de zojuist geschreven inhoud kan worden gelezen.
+			rewind($fp);
+			// Lees de volledige regel in een variabele.
+			$adressen = [];
+			$i = 0;
+			while (!feof($fp)) {
+				$tmp = fgetcsv($fp, 1000, $delimiter, $enclosure);
+				if (isset($tmp['0']) and strpbrk($tmp['0'], '@.')) {
+					$adressen[$i]['email'] = $tmp[0];
+					$adressen[$i]['naam'] = $tmp[1];
+					$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['2']));
+					$i++;
+				}
+			}
+			// Sluit de tijdelijke stream.
+			fclose($fp);
+
+			//d($adressen);
+
+			return $adressen;
+		}
+
+		function lees_google($input)
+		{
+			global $voorzetsels, $leeg, $enclosure;
+			$adressen = [];
+			$lijst = [];
+			$regelscheiding = ', ';
+			if (strpos($input, $regelscheiding) === false)
+				echo '<script language="javascript">confirm("Dit zijn geen Google-adressen. Wil je dit?")</script>;';
+			else $lijst = explode($regelscheiding, $input);
+			// Het Google-formaat bevat naam en adres als "Naam <adres>"; beide worden
+			// hier gescheiden zodat de vervolgcode één uniforme structuur ontvangt.
+
+			d($lijst);
+
+			//	unset($lijst[0]);
+			$i = 0;
+			foreach ($lijst as $adres) {
+				$tmp = explode(' <', $adres);
+				$tmp[0] = trim($tmp[0], '"<> ');
+				$tmp[1] = trim($tmp[1], '"<> ');
+				$tmp['voornaam'] = substr($tmp[0], 0, strpos($tmp[0], ' '));
+				$tmp['achternaam'] = substr(stristr($tmp[0], ' '), 1);
+				if ($tmp[1] != '') {
+					$adressen[$i]['voornaam'] = rtrim(str_replace($voorzetsels, $leeg, $tmp['voornaam']));
+					$adressen[$i]['naam'] = rtrim($tmp['voornaam'] . ' ' . $tmp['achternaam']);
+					$adressen[$i]['email'] = $tmp[1];
+					$i++;
+				}
+			}
+
+			//d($adressen);
+
+			return $adressen;
+		}
+
+		// Omgekeerd zoeken, vergelijkbaar met strrchr.
+		function strrrchr($haystack, $needle)
+		{
+			// Geeft alles vóór $needle terug.
+			return substr($haystack, 0, strpos($haystack, $needle));
+		}
+
+		// Taal 1 is de veilige testmodus: er worden uitsluitend vaste testadressen
+		// klaargezet en er wordt geen productiedoelgroep uit de database geladen.
+		if (isset($_SESSION['taal']) and $_SESSION['taal'] == 1) { // test-adressen
+			$adressen[0]['verzenden'] = 'on';
+			$adressen[0]['naam'] =  "test-adres Outlook";
+			$adressen[0]['voornaam'] =  "...";
+			$adressen[0]['password'] =  "xxxx";
+			$adressen[0]['email'] =  "dirkjanhorringa@outlook.com";
+			$adressen[0]['DlnmrId'] =  "737";
+			$adressen[1]['verzenden'] = 'off';
+			$adressen[1]['naam'] =  "test-adres Google";
+			$adressen[1]['voornaam'] =  "....";
+			$adressen[1]['password'] =  "xxxx";
+			$adressen[1]['email'] =  "dhorringa@gmail.com";
+			$adressen[1]['DlnmrId'] =  "737";
+			$aantal = 2;
+		}
+
+		if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal'] > 1) {
+
+			// De selectie bepaalt alleen hoe de kandidaten worden verzameld. Het
+			// feitelijke verzenden gebeurt pas later, nadat de gebruiker de vinkjes heeft
+			// gecontroleerd en expliciet voor "Verzend" kiest.
+			switch ($_POST['selectie']) {
+
+				case 'alles':
+
+					$adressen = [];
+
+					$query_inschrijving = sprintf(
+						"SELECT DISTINCT
 										  naam,
 										  voornaam,
 										  `password`,
@@ -472,23 +477,23 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 										AND achternaam NOT LIKE \"%%ZZZ%%\"
 										AND taal %s %s
 									ORDER BY achternaam ASC",
-				$taal[$_SESSION['taal']],
-				$instrzang[$_SESSION['instrzang']]
-			);
+						$taal[$_SESSION['taal']],
+						$instrzang[$_SESSION['instrzang']]
+					);
 
-			// echo 'query_inschrijving: ' . $query_inschrijving . "<br>\n";
+					// echo 'query_inschrijving: ' . $query_inschrijving . "<br>\n";
 
-			$inschrijving = select_query($query_inschrijving);
-			$aantal = count($inschrijving);
-			d($inschrijving);
-			break;
+					$inschrijving = select_query($query_inschrijving);
+					$aantal = count($inschrijving);
+					d($inschrijving);
+					break;
 
-		case 'niet-ingeschreven':
+				case 'niet-ingeschreven':
 
-			$adressen = [];
+					$adressen = [];
 
-			$query_inschrijving = sprintf(
-				"SELECT DISTINCT
+					$query_inschrijving = sprintf(
+						"SELECT DISTINCT
 									  naam,
 									  voornaam,
 									  `password`,
@@ -513,223 +518,223 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 										AND achternaam NOT LIKE \"%%ZZZ%%\"
 										AND taal %s %s
 									ORDER BY achternaam ASC",
-				GetSQLValueString($eerstecursus, "int"),
-				$taal[$_SESSION['taal']],
-				$instrzang[$_SESSION['instrzang']]
-			);
+						GetSQLValueString($eerstecursus, "int"),
+						$taal[$_SESSION['taal']],
+						$instrzang[$_SESSION['instrzang']]
+					);
 
-			d($query_inschrijving);
+					d($query_inschrijving);
 
-			$inschrijving = select_query($query_inschrijving);
-			$aantal = count($inschrijving);
-			break;
+					$inschrijving = select_query($query_inschrijving);
+					$aantal = count($inschrijving);
+					break;
 
-		case 'outlook':
-			$adressen = lees_outlook(stripslashes($_POST['outlook']));
-			$aantal = count($adressen);
-			// echo "joehoe!<br>Aantal = {$aantal}<br>";
-			break;
+				case 'outlook':
+					$adressen = lees_outlook(stripslashes($_POST['outlook']));
+					$aantal = count($adressen);
+					// echo "joehoe!<br>Aantal = {$aantal}<br>";
+					break;
 
-		case 'google':
-			$adressen = lees_google(stripslashes($_POST['outlook']));
-			$aantal = count($adressen);
-			// echo "joehoe!<br>Aantal = {$aantal}<br>";
-			break;
+				case 'google':
+					$adressen = lees_google(stripslashes($_POST['outlook']));
+					$aantal = count($adressen);
+					// echo "joehoe!<br>Aantal = {$aantal}<br>";
+					break;
 
-		case 'lp-nl':
-			$adressen = lees_gdata('LaPel NL');
-			$aantal = count($adressen);
-			//	echo "joehoe!<br>Aantal = {$aantal}<br>";
-			break;
+				case 'lp-nl':
+					$adressen = lees_gdata('LaPel NL');
+					$aantal = count($adressen);
+					//	echo "joehoe!<br>Aantal = {$aantal}<br>";
+					break;
 
-		case 'lp-eng':
-			$adressen = lees_gdata('LaPel ENG');
-			$aantal = count($adressen);
-			//	echo "joehoe!<br>Aantal = {$aantal}<br>";
-			break;
+				case 'lp-eng':
+					$adressen = lees_gdata('LaPel ENG');
+					$aantal = count($adressen);
+					//	echo "joehoe!<br>Aantal = {$aantal}<br>";
+					break;
 
-		case 'utrecht':
+				case 'utrecht':
 
-			$adressen = [];
-			unset($_SESSION['adressen']);
+					$adressen = [];
+					unset($_SESSION['adressen']);
 
-			$results = lees_gdata();
-			$aantal_r = count($results);
-			$adressen = array();
-			foreach ($results as $r) {
-				if ((($r['postcode'] > '1000' and $r['postcode'] < '1400')
-						or ($r['postcode'] > '2500' and $r['postcode'] < '4300'))
-					and $r['land'] == 'NL'
-				)
-					$adressen[] = $r;
-			}
-			$aantal = count($adressen);
-			d($aantal_r, $aantal);
-			break;
-
-		case 'culemborg':
-
-			$adressen = [];
-			unset($_SESSION['adressen']);
-
-			$results = lees_gdata();
-			$aantal_r = count($results);
-			$adressen = array();
-			foreach ($results as $r) {
-				if ((($r['postcode'] > 3400 and $r['postcode'] < 4300))
-					and $r['land'] == 'NL'
-				)
-					$adressen[] = $r;
-			}
-			$aantal = count($adressen);
-			break;
-
-		case 'arnhem':
-
-			$adressen = [];
-			unset($_SESSION['adressen']);
-
-			$results = lees_gdata();
-			$aantal_r = count($results);
-			$adressen = array();
-			foreach ($results as $r) {
-				if ((($r['postcode'] > 6500 and $r['postcode'] < 8000))
-					and $r['land'] == 'NL'
-				)
-					$adressen[] = $r;
-			}
-			$aantal = count($adressen);
-			break;
-
-		case 'afoort':
-
-			$adressen = [];
-			unset($_SESSION['adressen']);
-
-			$results = lees_gdata();
-			$aantal_r = count($results);
-			$adressen = array();
-			foreach ($results as $r) {
-				if ((($r['postcode'] >= 3700 and $r['postcode'] <= 4000)
-						or ($r['postcode'] >= 1200 and $r['postcode'] <= 1400))
-					and $r['land'] == 'NL'
-				)
-					$adressen[] = $r;
-			}
-			$aantal = count($adressen);
-			d($adressen, $aantal);
-			break;
-
-		case 'postcodegebied':
-
-			$adressen = [];
-			unset($_SESSION['adressen']);
-			$pcgebieden = [];
-
-			d($_POST['postcodegebied']);
-			function viercijfers($code)
-			{
-				// Vergelijkingen met postcodebereiken zijn betrouwbaar wanneer elk
-				// invoerelement eerst exact vier cijfers krijgt.
-				$code = strval($code);
-				if (!ctype_digit($code)) echo "Deze postcode $code bestaat niet geheel uit cijfers<br>";
-				if (strlen($code) > 4) echo $code = substr($code, 0, 4);
-				elseif (strlen($code) < 4) $code = str_pad($code, 4, '0');
-				d($code);
-				return $code;
-			}
-
-			if (isset($_POST['postcodegebied']) and $_POST['postcodegebied'] != '') {
-				$pcg = str_replace(' ', '', $_POST['postcodegebied']);
-				if (strpos($pcg, ';')) $gebieden = explode(';', $pcg);
-				else $gebieden[0] = $pcg;
-				// var_dump($gebieden);
-				foreach ($gebieden as $gebied) {
-					$pc = ['', ''];
-					if (strpos($gebied, '-')) $pc = explode('-', $gebied);
-					// var_dump($pc);
-					$pc[0] = viercijfers($pc[0]);
-					$pc[1] = viercijfers($pc[1]);
-					if ($pc[0] < $pc[1]) {
-						$geb['begin'] = $pc[0];
-						$geb['eind'] = $pc[1];
-					} else {
-						$geb['begin'] = $pc[1];
-						$geb['eind'] = $pc[0];
+					$results = lees_gdata();
+					$aantal_r = count($results);
+					$adressen = array();
+					foreach ($results as $r) {
+						if ((($r['postcode'] > '1000' and $r['postcode'] < '1400')
+								or ($r['postcode'] > '2500' and $r['postcode'] < '4300'))
+							and $r['land'] == 'NL'
+						)
+							$adressen[] = $r;
 					}
-					$pcgebieden[] = $geb;
-				}
-			}
-			d($pcgebieden);
-			$results = lees_gdata();
-			d($results);
-			$aantal_r = count($results);
-			$adressen = array();
-			foreach ($pcgebieden as $pcgebied) {
-				foreach ($results as $r) {
-					if ($r['land'] == 'NL' and $r['postcode'] >= $pcgebied['begin'] and $r['postcode'] <= $pcgebied['eind'])
-						$adressen[] = $r;
-				}
-			}
-			$adressen = super_unique($adressen, 'email');
-			$aantal = count($adressen);
-			break;
+					$aantal = count($adressen);
+					d($aantal_r, $aantal);
+					break;
 
-		case 'groep':
-			d($_POST['groep']);
-			if (isset($_POST['groep']) and $_POST['groep'] != '') $adressen = lees_gdata(stripslashes($_POST['groep']));
-			$aantal = count($adressen);
-			break;
+				case 'culemborg':
 
-		case 'distributielijst':
-			// echo 'joehoe!<br>';
-			$adressen = lees_distributielijst(stripslashes($_POST['outlook']));
-			$aantal = count($adressen);
-			break;
+					$adressen = [];
+					unset($_SESSION['adressen']);
 
-		case 'access':
-			// echo 'joehoe!<br>';
-			$adressen = lees_access(stripslashes($_POST['outlook']));
-			$aantal = count($adressen);
-			break;
+					$results = lees_gdata();
+					$aantal_r = count($results);
+					$adressen = array();
+					foreach ($results as $r) {
+						if ((($r['postcode'] > 3400 and $r['postcode'] < 4300))
+							and $r['land'] == 'NL'
+						)
+							$adressen[] = $r;
+					}
+					$aantal = count($adressen);
+					break;
 
-		case 'csv':
-			$adressen = str_getcsv(stripslashes($_POST['outlook']));
-			$aantal = count($adressen);
-			break;
+				case 'arnhem':
 
-		case 'emails':
-			$adressen = [];
+					$adressen = [];
+					unset($_SESSION['adressen']);
 
-			$adr = explode("\n", stripslashes($_POST['outlook']));
-			$adres = array_unique($adr);
-			foreach ($adres as $a) {
-				if ($a != '' and strpos($a, '@')) {
-					$row['email'] = $a;
-					$row['naam'] = $a;
-					$adressen[] = $row;
-				}
-			}
-			if (isset($adressen) && is_array($adressen)) {
-				$aantal = count($adressen);
-			}
+					$results = lees_gdata();
+					$aantal_r = count($results);
+					$adressen = array();
+					foreach ($results as $r) {
+						if ((($r['postcode'] > 6500 and $r['postcode'] < 8000))
+							and $r['land'] == 'NL'
+						)
+							$adressen[] = $r;
+					}
+					$aantal = count($adressen);
+					break;
 
-			d($adressen);
+				case 'afoort':
 
-			break;
+					$adressen = [];
+					unset($_SESSION['adressen']);
 
-		case 'cursus':
+					$results = lees_gdata();
+					$aantal_r = count($results);
+					$adressen = array();
+					foreach ($results as $r) {
+						if ((($r['postcode'] >= 3700 and $r['postcode'] <= 4000)
+								or ($r['postcode'] >= 1200 and $r['postcode'] <= 1400))
+							and $r['land'] == 'NL'
+						)
+							$adressen[] = $r;
+					}
+					$aantal = count($adressen);
+					d($adressen, $aantal);
+					break;
 
-			$adressen = [];
-			$geselecteerdCursusnummer = (int) $_SESSION['cursusId'];
-			if (isset($cursusJaarIds[$cursusJaar]) && in_array($geselecteerdCursusnummer, [1, 2], true)) {
-				$geselecteerdCursusnummer = $cursusJaarIds[$cursusJaar] + $geselecteerdCursusnummer - 1;
-			} else {
-				$geselecteerdCursusnummer += $cursus_offset;
-			}
+				case 'postcodegebied':
 
-			$query_inschrijving = sprintf(
-				"SELECT DISTINCT naam, voornaam, password, email, CursusId_FK, DlnmrId
+					$adressen = [];
+					unset($_SESSION['adressen']);
+					$pcgebieden = [];
+
+					d($_POST['postcodegebied']);
+					function viercijfers($code)
+					{
+						// Vergelijkingen met postcodebereiken zijn betrouwbaar wanneer elk
+						// invoerelement eerst exact vier cijfers krijgt.
+						$code = strval($code);
+						if (!ctype_digit($code)) echo "Deze postcode $code bestaat niet geheel uit cijfers<br>";
+						if (strlen($code) > 4) echo $code = substr($code, 0, 4);
+						elseif (strlen($code) < 4) $code = str_pad($code, 4, '0');
+						d($code);
+						return $code;
+					}
+
+					if (isset($_POST['postcodegebied']) and $_POST['postcodegebied'] != '') {
+						$pcg = str_replace(' ', '', $_POST['postcodegebied']);
+						if (strpos($pcg, ';')) $gebieden = explode(';', $pcg);
+						else $gebieden[0] = $pcg;
+						// var_dump($gebieden);
+						foreach ($gebieden as $gebied) {
+							$pc = ['', ''];
+							if (strpos($gebied, '-')) $pc = explode('-', $gebied);
+							// var_dump($pc);
+							$pc[0] = viercijfers($pc[0]);
+							$pc[1] = viercijfers($pc[1]);
+							if ($pc[0] < $pc[1]) {
+								$geb['begin'] = $pc[0];
+								$geb['eind'] = $pc[1];
+							} else {
+								$geb['begin'] = $pc[1];
+								$geb['eind'] = $pc[0];
+							}
+							$pcgebieden[] = $geb;
+						}
+					}
+					d($pcgebieden);
+					$results = lees_gdata();
+					d($results);
+					$aantal_r = count($results);
+					$adressen = array();
+					foreach ($pcgebieden as $pcgebied) {
+						foreach ($results as $r) {
+							if ($r['land'] == 'NL' and $r['postcode'] >= $pcgebied['begin'] and $r['postcode'] <= $pcgebied['eind'])
+								$adressen[] = $r;
+						}
+					}
+					$adressen = super_unique($adressen, 'email');
+					$aantal = count($adressen);
+					break;
+
+				case 'groep':
+					d($_POST['groep']);
+					if (isset($_POST['groep']) and $_POST['groep'] != '') $adressen = lees_gdata(stripslashes($_POST['groep']));
+					$aantal = count($adressen);
+					break;
+
+				case 'distributielijst':
+					// echo 'joehoe!<br>';
+					$adressen = lees_distributielijst(stripslashes($_POST['outlook']));
+					$aantal = count($adressen);
+					break;
+
+				case 'access':
+					// echo 'joehoe!<br>';
+					$adressen = lees_access(stripslashes($_POST['outlook']));
+					$aantal = count($adressen);
+					break;
+
+				case 'csv':
+					$adressen = str_getcsv(stripslashes($_POST['outlook']));
+					$aantal = count($adressen);
+					break;
+
+				case 'emails':
+					$adressen = [];
+
+					$adr = explode("\n", stripslashes($_POST['outlook']));
+					$adres = array_unique($adr);
+					foreach ($adres as $a) {
+						if ($a != '' and strpos($a, '@')) {
+							$row['email'] = $a;
+							$row['naam'] = $a;
+							$adressen[] = $row;
+						}
+					}
+					if (isset($adressen) && is_array($adressen)) {
+						$aantal = count($adressen);
+					}
+
+					d($adressen);
+
+					break;
+
+				case 'cursus':
+
+					$adressen = [];
+					$geselecteerdCursusnummer = (int) $_SESSION['cursusId'];
+					if (isset($cursusJaarIds[$cursusJaar]) && in_array($geselecteerdCursusnummer, [1, 2], true)) {
+						$geselecteerdCursusnummer = $cursusJaarIds[$cursusJaar] + $geselecteerdCursusnummer - 1;
+					} else {
+						$geselecteerdCursusnummer += $cursus_offset;
+					}
+
+					$query_inschrijving = sprintf(
+						"SELECT DISTINCT naam, voornaam, password, email, CursusId_FK, DlnmrId
 		FROM inschrijving, dlnmr 
 		WHERE DlnmrId = DlnmrId_FK 
 		AND aangenomen = 1 
@@ -742,255 +747,255 @@ if (isset($_POST['selectie']) and isset($_SESSION['taal']) and $_SESSION['taal']
 		AND cursusId_FK = %s 
 		AND taal %s %s
 		ORDER BY achternaam ASC",
-				GetSQLValueString($geselecteerdCursusnummer, "int"),
-				$taal[$_SESSION['taal']],
-				$instrzang[$_SESSION['instrzang']]
-			);
+						GetSQLValueString($geselecteerdCursusnummer, "int"),
+						$taal[$_SESSION['taal']],
+						$instrzang[$_SESSION['instrzang']]
+					);
 
-			d($query_inschrijving);
+					d($query_inschrijving);
 
-			$inschrijving = select_query($query_inschrijving);
-			if (isset($inschrijving) && is_array($inschrijving)) {
-				$aantal = count($inschrijving);
-			}
-			break;
+					$inschrijving = select_query($query_inschrijving);
+					if (isset($inschrijving) && is_array($inschrijving)) {
+						$aantal = count($inschrijving);
+					}
+					break;
 
-		case 'project':
+				case 'project':
 
-			$adressen = [];
+					$adressen = [];
 
-			$query_inschrijving = sprintf(
-				"SELECT naam, voornaam, password, email, CursusId_FK, DlnmrId FROM project_aanmelding, dlnmr 
+					$query_inschrijving = sprintf(
+						"SELECT naam, voornaam, password, email, CursusId_FK, DlnmrId FROM project_aanmelding, dlnmr 
 		WHERE DlnmrId = DlnmrId_FK AND NOT (afgewezen <=> 1) 
 		AND cursusId_FK = %s AND taal %s %s ORDER BY achternaam ASC",
-				GetSQLValueString($_SESSION['cursusId'], "int"),
-				$taal[$_SESSION['taal']],
-				$instrzang[$_SESSION['instrzang']]
-			);
+						GetSQLValueString($_SESSION['cursusId'], "int"),
+						$taal[$_SESSION['taal']],
+						$instrzang[$_SESSION['instrzang']]
+					);
 
-			d($query_inschrijving);
+					d($query_inschrijving);
 
-			$inschrijving = select_query($query_inschrijving);
-			if (isset($inschrijving) && is_array($inschrijving)) {
-				$aantal = count($inschrijving);
-			}
-			break;
-	} // einde switch
-}
-
-if (isset($inschrijving)) {
-	// Database-resultaten krijgen dezelfde velden als handmatig aangeleverde
-	// adressen, zodat de opslag- en verzendstappen één codepad kunnen gebruiken.
-	foreach ($inschrijving as $i => $insch) {
-		$adressen[$i]['verzenden'] = 'on';
-		$adressen[$i]['naam'] =  $insch['naam'];
-		$adressen[$i]['voornaam'] =  $insch['voornaam'];
-		$adressen[$i]['password'] =  $insch['password'] ?? '';
-		$adressen[$i]['cursus'] =  $insch['CursusId_FK'] ?? 0;
-		$adressen[$i]['email'] =  $insch['email'];
-		$adressen[$i]['DlnmrId'] =  $insch['DlnmrId'] ?? 0;
-	}
-	$adressen = super_unique($adressen, 'email');
-	$aantal = count($adressen);
-}
-
-foreach ($adressen as &$adres) {
-	$adres['verzenden'] = $adres['verzenden'] ?? 'on';
-	$adres['naam'] = (string) ($adres['naam'] ?? $adres['email'] ?? '');
-	$adres['voornaam'] = (string) ($adres['voornaam'] ?? '');
-	$adres['email'] = (string) ($adres['email'] ?? '');
-	$adres['postcode'] = (string) ($adres['postcode'] ?? '');
-	$adres['cursus'] = (int) ($adres['cursus'] ?? 0);
-	$adres['password'] = (string) ($adres['password'] ?? '');
-	$adres['DlnmrId'] = (int) ($adres['DlnmrId'] ?? 0);
-}
-unset($adres);
-
-if (isset($adressen) and count($adressen) > 0) {
-	$_SESSION['adressen'] = $adressen;
-}
-
-if (empty($_POST['selectie']) or $_POST['selectie'] == '') {
-	// Bij een volgende formulieractie zijn de checkboxen de bron van waarheid;
-	// niet-aangevinkte adressen blijven in de sessie maar worden niet verzonden.
-	if (isset($_SESSION['adressen'])) foreach ($_SESSION['adressen'] as $key => &$adres) {
-		if (empty($_POST["C{$key}"]) or $_POST["C{$key}"] != 'on') $adres['verzenden'] = 'off';
-		else $adres['verzenden'] = 'on';
-	}
-}
-// Einde van recordset inschrijving
-
-d($_POST, $_SESSION, $adressen, $inschrijving);
-
-// Cursusnamen worden één keer opgehaald en in beide talen voorbereid, zodat de
-// formulierkeuzes later alleen nog uit deze geheugenstructuur hoeven te lezen.
-$query_cursussen = sprintf(
-	"SELECT * FROM cursus WHERE cursusId BETWEEN %s AND %s ORDER BY cursusId ASC",
-	$eerstecursus,
-	$laatstecursus
-);
-
-$cursussen = select_query($query_cursussen);
-$totaal_cursussen = count($cursussen);
-
-foreach ($cursussen as $cursus) {
-	$begindatum = strftime('%A %e %B %Y', strtotime($cursus['datum_begin']), 'nl_NL');
-	$einddatum = strftime('%A %e %B %Y', strtotime($cursus['datum_eind']), 'nl_NL');
-	$datum = $begindatum . ' - ' . $einddatum;
-	$cursusnaam[$cursus['CursusId']]['NL'] = $cursus['cursusnaam_nl']
-		. ' (' . $cursus['cursusplaats_nl'] . ', ' . $datum . ')';
-	$begindatum = strftime('%A %B %e, %Y', strtotime($cursus['datum_begin']), 'en_GB');
-	$einddatum = strftime('%A %B %e, %Y', strtotime($cursus['datum_eind']), 'en_GB');
-	$datum = $begindatum . ' - ' . $einddatum;
-	$cursusnaam[$cursus['CursusId']]['EN'] = $cursus['cursusnaam_en']
-		. ' (' . $cursus['cursusplaats_en'] . ', ' . $datum . ')';
-}
-
-d($totaal_cursussen, $cursusnaam);
-
-// Een nieuwsbrief is een opgeslagen concept. De knoppen hieronder maken een
-// nieuw concept, werken het huidige concept bij, laden het opnieuw of wissen het.
-
-if (empty($_POST["submitten"])) {
-	$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
-	$nieuwsbrief = select_query($query_messages, 1);
-
-	$afz = explode('#', $nieuwsbrief['afzender']);
-	$_POST['afzender'] = $afz[0];
-	if (isset($afz[1])) $_POST['afzendermail'] = $afz[1];
-}
-
-if ($_POST['afzender'] != ''  and $_POST['afzendermail'] != '') $afzender = $_POST['afzender'] . '#' . $_POST['afzendermail'];
-else $afzender = '';
-
-$subject_warning = false;
-$save_actions = ["Voeg toe", "Update", "Verzend"];
-if (
-	isset($_POST["submitten"])
-	&& in_array($_POST["submitten"], $save_actions, true)
-	&& (!isset($_POST['subject']) || !is_string($_POST['subject']) || trim($_POST['subject']) === '')
-) {
-	$subject_warning = true;
-	$nieuwsbrief = [
-		'subject' => '',
-		'message' => is_string($_POST['message'] ?? null) ? $_POST['message'] : '',
-	];
-} elseif (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
-	case "Voeg toe":
-		$insertSQL = sprintf(
-			"INSERT INTO messages (subject, message, afzender, datum, adressen, cursusId, taal) 
-		VALUES (%s, %s, %s, now(), %s, %s, %s)",
-			GetSQLValueString($_POST['subject'], "text"),
-			GetSQLValueString($_POST['message'], "text"),
-			GetSQLValueString($afzender, "text"),
-			GetSQLValueString($_POST['adressen'], "text"),
-			GetSQLValueString($_SESSION['cursusId'], "int"),
-			GetSQLValueString($_SESSION['taal'], "int")
-		);
-
-		exec_query($insertSQL);
-
-		$_SESSION['messageId'] = $db->lastInsertId();
-		$_POST['messageId'] = $_SESSION['messageId'];
-		$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
-		d($query_messages);
-		$nieuwsbrief = select_query($query_messages, 1);
-		break;
-
-	case "Update":
-		$updateSQL = sprintf(
-			"UPDATE messages SET subject=%s, message=%s, afzender=%s, cursusId=%s, taal=%s WHERE messageId=%s",
-			GetSQLValueString(stripslashes($_POST['subject']), "text"),
-			GetSQLValueString(stripslashes($_POST['message']), "text"),
-			GetSQLValueString($afzender, "text"),
-			GetSQLValueString($_SESSION['cursusId'], "int"),
-			GetSQLValueString($_SESSION['taal'], "int"),
-			GetSQLValueString($_SESSION['messageId'], "int")
-		);
-
-		d($updateSQL);
-		exec_query($updateSQL);
-
-		$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
-		$nieuwsbrief = select_query($query_messages, 1);
-		break;
-
-	case "Bewerken":
-		$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
-		$nieuwsbrief = select_query($query_messages, 1);
-		break;
-
-	case "Maak leeg":
-		$query_messages = "SELECT * FROM messages WHERE messageId = -1";
-		$nieuwsbrief = select_query($query_messages);
-		break;
-
-	case "Wis nieuwsbrief":
-		$query_messages = "DELETE FROM messages WHERE messageId = {$_SESSION['messageId']}";
-		exec_query($query_messages);
-
-		$query_messages = "SELECT * FROM messages WHERE messageId = -1";
-		$nieuwsbrief = select_query($query_messages, 1);
-		break;
-
-	case "Verzend":
-		// Verzenden bestaat uit twee fasen: eerst wordt de gerenderde mail als
-		// opdracht opgeslagen, daarna worden de gekozen ontvangers eraan gekoppeld.
-		d($_POST, $_SESSION, $adressen);
-		if (empty($_POST['header']) or $_POST['header'] != 'uit') {
-			if ($_SESSION['taal'] == 2 or $_SESSION['taal'] == 1) {
-				$mail_text_file = ($_SERVER['DOCUMENT_ROOT'] . '/bevestiging/briefhoofd_NL.htm');
-				$taalinstelling = 'NL';
-			} else {
-				$mail_text_file = ($_SERVER['DOCUMENT_ROOT'] . '/bevestiging/briefhoofd_EN.htm');
-				$taalinstelling = 'EN';
-			}
-		} else {
-			$mail_text_file = ($_SERVER['DOCUMENT_ROOT'] . '/bevestiging/briefhoofd_leeg.htm');
+					$inschrijving = select_query($query_inschrijving);
+					if (isset($inschrijving) && is_array($inschrijving)) {
+						$aantal = count($inschrijving);
+					}
+					break;
+			} // einde switch
 		}
 
-		$mail_text = file_get_contents($mail_text_file);
+		if (isset($inschrijving)) {
+			// Database-resultaten krijgen dezelfde velden als handmatig aangeleverde
+			// adressen, zodat de opslag- en verzendstappen één codepad kunnen gebruiken.
+			foreach ($inschrijving as $i => $insch) {
+				$adressen[$i]['verzenden'] = 'on';
+				$adressen[$i]['naam'] =  $insch['naam'];
+				$adressen[$i]['voornaam'] =  $insch['voornaam'];
+				$adressen[$i]['password'] =  $insch['password'] ?? '';
+				$adressen[$i]['cursus'] =  $insch['CursusId_FK'] ?? 0;
+				$adressen[$i]['email'] =  $insch['email'];
+				$adressen[$i]['DlnmrId'] =  $insch['DlnmrId'] ?? 0;
+			}
+			$adressen = super_unique($adressen, 'email');
+			$aantal = count($adressen);
+		}
 
-		$mail_text = str_replace("</html>", $_POST['message'] . "</body></html>", $mail_text);
+		foreach ($adressen as &$adres) {
+			$adres['verzenden'] = $adres['verzenden'] ?? 'on';
+			$adres['naam'] = (string) ($adres['naam'] ?? $adres['email'] ?? '');
+			$adres['voornaam'] = (string) ($adres['voornaam'] ?? '');
+			$adres['email'] = (string) ($adres['email'] ?? '');
+			$adres['postcode'] = (string) ($adres['postcode'] ?? '');
+			$adres['cursus'] = (int) ($adres['cursus'] ?? 0);
+			$adres['password'] = (string) ($adres['password'] ?? '');
+			$adres['DlnmrId'] = (int) ($adres['DlnmrId'] ?? 0);
+		}
+		unset($adres);
 
-		$css = file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/css/w3.css') . PHP_EOL;
-		$css .= file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/css/mailing.css');
+		if (isset($adressen) and count($adressen) > 0) {
+			$_SESSION['adressen'] = $adressen;
+		}
 
-		$mail_text = CssInliner::fromHtml(stripslashes($mail_text))->inlineCss($css)->render();
+		if (empty($_POST['selectie']) or $_POST['selectie'] == '') {
+			// Bij een volgende formulieractie zijn de checkboxen de bron van waarheid;
+			// niet-aangevinkte adressen blijven in de sessie maar worden niet verzonden.
+			if (isset($_SESSION['adressen'])) foreach ($_SESSION['adressen'] as $key => &$adres) {
+				if (empty($_POST["C{$key}"]) or $_POST["C{$key}"] != 'on') $adres['verzenden'] = 'off';
+				else $adres['verzenden'] = 'on';
+			}
+		}
+		// Einde van recordset inschrijving
 
-		d($mail_text);
-		$mailing_namen = [];
+		d($_POST, $_SESSION, $adressen, $inschrijving);
 
-		if (isset($_SESSION['adressen'])) {
+		// Cursusnamen worden één keer opgehaald en in beide talen voorbereid, zodat de
+		// formulierkeuzes later alleen nog uit deze geheugenstructuur hoeven te lezen.
+		$query_cursussen = sprintf(
+			"SELECT * FROM cursus WHERE cursusId BETWEEN %s AND %s ORDER BY cursusId ASC",
+			$eerstecursus,
+			$laatstecursus
+		);
 
-			if (isset($_POST['test']) and $_POST['test'] == 'test') {
-				$adr['verzenden'] = 'on';
-				$adr['naam'] =  "test-kopie";
-				$adr['voornaam'] =  "...";
-				$adr['password'] =  "xxxx";
-				$adr['email'] =  "dirkjanhorringa@outlook.com";
-				$adr['cursus'] = 0;
-				$adr['DlnmrId'] = 0;
+		$cursussen = select_query($query_cursussen);
+		$totaal_cursussen = count($cursussen);
 
-				$_SESSION['adressen'][] = $adr;
-				/* 			end($_SESSION['adressen']);
+		foreach ($cursussen as $cursus) {
+			$begindatum = strftime('%A %e %B %Y', strtotime($cursus['datum_begin']), 'nl_NL');
+			$einddatum = strftime('%A %e %B %Y', strtotime($cursus['datum_eind']), 'nl_NL');
+			$datum = $begindatum . ' - ' . $einddatum;
+			$cursusnaam[$cursus['CursusId']]['NL'] = $cursus['cursusnaam_nl']
+				. ' (' . $cursus['cursusplaats_nl'] . ', ' . $datum . ')';
+			$begindatum = strftime('%A %B %e, %Y', strtotime($cursus['datum_begin']), 'en_GB');
+			$einddatum = strftime('%A %B %e, %Y', strtotime($cursus['datum_eind']), 'en_GB');
+			$datum = $begindatum . ' - ' . $einddatum;
+			$cursusnaam[$cursus['CursusId']]['EN'] = $cursus['cursusnaam_en']
+				. ' (' . $cursus['cursusplaats_en'] . ', ' . $datum . ')';
+		}
+
+		d($totaal_cursussen, $cursusnaam);
+
+		// Een nieuwsbrief is een opgeslagen concept. De knoppen hieronder maken een
+		// nieuw concept, werken het huidige concept bij, laden het opnieuw of wissen het.
+
+		if (empty($_POST["submitten"])) {
+			$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
+			$nieuwsbrief = select_query($query_messages, 1);
+
+			$afz = explode('#', $nieuwsbrief['afzender']);
+			$_POST['afzender'] = $afz[0];
+			if (isset($afz[1])) $_POST['afzendermail'] = $afz[1];
+		}
+
+		if ($_POST['afzender'] != ''  and $_POST['afzendermail'] != '') $afzender = $_POST['afzender'] . '#' . $_POST['afzendermail'];
+		else $afzender = '';
+
+		$subject_warning = false;
+		$save_actions = ["Voeg toe", "Update", "Verzend"];
+		if (
+			isset($_POST["submitten"])
+			&& in_array($_POST["submitten"], $save_actions, true)
+			&& (!isset($_POST['subject']) || !is_string($_POST['subject']) || trim($_POST['subject']) === '')
+		) {
+			$subject_warning = true;
+			$nieuwsbrief = [
+				'subject' => '',
+				'message' => is_string($_POST['message'] ?? null) ? $_POST['message'] : '',
+			];
+		} elseif (isset($_POST["submitten"])) switch ($_POST["submitten"]) {
+			case "Voeg toe":
+				$insertSQL = sprintf(
+					"INSERT INTO messages (subject, message, afzender, datum, adressen, cursusId, taal) 
+		VALUES (%s, %s, %s, now(), %s, %s, %s)",
+					GetSQLValueString($_POST['subject'], "text"),
+					GetSQLValueString($_POST['message'], "text"),
+					GetSQLValueString($afzender, "text"),
+					GetSQLValueString($_POST['adressen'], "text"),
+					GetSQLValueString($_SESSION['cursusId'], "int"),
+					GetSQLValueString($_SESSION['taal'], "int")
+				);
+
+				exec_query($insertSQL);
+
+				$_SESSION['messageId'] = $db->lastInsertId();
+				$_POST['messageId'] = $_SESSION['messageId'];
+				$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
+				d($query_messages);
+				$nieuwsbrief = select_query($query_messages, 1);
+				break;
+
+			case "Update":
+				$updateSQL = sprintf(
+					"UPDATE messages SET subject=%s, message=%s, afzender=%s, cursusId=%s, taal=%s WHERE messageId=%s",
+					GetSQLValueString(stripslashes($_POST['subject']), "text"),
+					GetSQLValueString(stripslashes($_POST['message']), "text"),
+					GetSQLValueString($afzender, "text"),
+					GetSQLValueString($_SESSION['cursusId'], "int"),
+					GetSQLValueString($_SESSION['taal'], "int"),
+					GetSQLValueString($_SESSION['messageId'], "int")
+				);
+
+				d($updateSQL);
+				exec_query($updateSQL);
+
+				$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
+				$nieuwsbrief = select_query($query_messages, 1);
+				break;
+
+			case "Bewerken":
+				$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
+				$nieuwsbrief = select_query($query_messages, 1);
+				break;
+
+			case "Maak leeg":
+				$query_messages = "SELECT * FROM messages WHERE messageId = -1";
+				$nieuwsbrief = select_query($query_messages);
+				break;
+
+			case "Wis nieuwsbrief":
+				$query_messages = "DELETE FROM messages WHERE messageId = {$_SESSION['messageId']}";
+				exec_query($query_messages);
+
+				$query_messages = "SELECT * FROM messages WHERE messageId = -1";
+				$nieuwsbrief = select_query($query_messages, 1);
+				break;
+
+			case "Verzend":
+				// Verzenden bestaat uit twee fasen: eerst wordt de gerenderde mail als
+				// opdracht opgeslagen, daarna worden de gekozen ontvangers eraan gekoppeld.
+				d($_POST, $_SESSION, $adressen);
+				if (empty($_POST['header']) or $_POST['header'] != 'uit') {
+					if ($_SESSION['taal'] == 2 or $_SESSION['taal'] == 1) {
+						$mail_text_file = ($_SERVER['DOCUMENT_ROOT'] . '/bevestiging/briefhoofd_NL.htm');
+						$taalinstelling = 'NL';
+					} else {
+						$mail_text_file = ($_SERVER['DOCUMENT_ROOT'] . '/bevestiging/briefhoofd_EN.htm');
+						$taalinstelling = 'EN';
+					}
+				} else {
+					$mail_text_file = ($_SERVER['DOCUMENT_ROOT'] . '/bevestiging/briefhoofd_leeg.htm');
+				}
+
+				$mail_text = file_get_contents($mail_text_file);
+
+				$mail_text = str_replace("</html>", $_POST['message'] . "</body></html>", $mail_text);
+
+				$css = file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/css/w3.css') . PHP_EOL;
+				$css .= file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/css/mailing.css');
+
+				$mail_text = CssInliner::fromHtml(stripslashes($mail_text))->inlineCss($css)->render();
+
+				d($mail_text);
+				$mailing_namen = [];
+
+				if (isset($_SESSION['adressen'])) {
+
+					if (isset($_POST['test']) and $_POST['test'] == 'test') {
+						$adr['verzenden'] = 'on';
+						$adr['naam'] =  "test-kopie";
+						$adr['voornaam'] =  "...";
+						$adr['password'] =  "xxxx";
+						$adr['email'] =  "dirkjanhorringa@outlook.com";
+						$adr['cursus'] = 0;
+						$adr['DlnmrId'] = 0;
+
+						$_SESSION['adressen'][] = $adr;
+						/* 			end($_SESSION['adressen']);
 			$index = key($_SESSION['adressen']);
 			$_POST["C{$index}"] = 'on';
  */
-			}
+					}
 
-			d($_POST, $_SESSION, $adressen);
+					d($_POST, $_SESSION, $adressen);
 
-			// De mailingtekst wordt inline gestyled voordat de achtergrondtaak hem
-			// verstuurt; zo is de HTML-mail niet afhankelijk van externe CSS-bestanden.
-			// Daarna wordt de opdracht apart van de adressen vastgelegd.
-			$mail_text = $db->quote($mail_text);
-			$subject = $db->quote($_POST['subject']);
-			$fromMail = $db->quote($_POST['afzendermail']);
-			$fromName = $db->quote($_POST['afzender']);
-			$cc = $db->quote($_POST['CC']);
+					// De mailingtekst wordt inline gestyled voordat de achtergrondtaak hem
+					// verstuurt; zo is de HTML-mail niet afhankelijk van externe CSS-bestanden.
+					// Daarna wordt de opdracht apart van de adressen vastgelegd.
+					$mail_text = $db->quote($mail_text);
+					$subject = $db->quote($_POST['subject']);
+					$fromMail = $db->quote($_POST['afzendermail']);
+					$fromName = $db->quote($_POST['afzender']);
+					$cc = $db->quote($_POST['CC']);
 
-			$Query = " 
+					$Query = " 
 				INSERT INTO mailing_opdrachten 
 				( 
 					`message`, 
@@ -1015,16 +1020,16 @@ if (
 				)  
 			";
 
-			d($_POST, $_SESSION, $mail_text, $Query);
+					d($_POST, $_SESSION, $mail_text, $Query);
 
-			exec_query($Query);
+					exec_query($Query);
 
-			// Haal de ID op:
-			echo 'Mailing nr. ' . ($mailingId_FK = $db->lastInsertId()) . ' is klaargezet.<br>';
+					// Haal de ID op:
+					echo 'Mailing nr. ' . ($mailingId_FK = $db->lastInsertId()) . ' is klaargezet.<br>';
 
-			// Elke ontvanger krijgt een eigen kenmerk. Dat kenmerk maakt individuele
-			// tracking of afmeldlinks mogelijk zonder de mailingtekst te dupliceren.
-			$sQueryAdressen = " 
+					// Elke ontvanger krijgt een eigen kenmerk. Dat kenmerk maakt individuele
+					// tracking of afmeldlinks mogelijk zonder de mailingtekst te dupliceren.
+					$sQueryAdressen = " 
 		INSERT INTO mailing_adressen 
 		( 
 			mailingId_FK, 
@@ -1049,80 +1054,80 @@ if (
 		)  
 	";
 
-			$oStmt = $db->prepare($sQueryAdressen);
-			$oStmt->bindParam(':mailingId_FK', $smailingId_FK, PDO::PARAM_INT);
-			$oStmt->bindParam(':naam', $snaam, PDO::PARAM_STR);
-			$oStmt->bindParam(':voornaam', $svoornaam, PDO::PARAM_STR);
-			$oStmt->bindParam(':email', $semail, PDO::PARAM_STR);
-			$oStmt->bindParam(':cursus', $scursus, PDO::PARAM_INT);
-			$oStmt->bindParam(':password', $spassword, PDO::PARAM_STR);
-			$oStmt->bindParam(':kenmerk', $skenmerk, PDO::PARAM_STR);
-			$oStmt->bindParam(':DlnmrId', $sid, PDO::PARAM_INT);
+					$oStmt = $db->prepare($sQueryAdressen);
+					$oStmt->bindParam(':mailingId_FK', $smailingId_FK, PDO::PARAM_INT);
+					$oStmt->bindParam(':naam', $snaam, PDO::PARAM_STR);
+					$oStmt->bindParam(':voornaam', $svoornaam, PDO::PARAM_STR);
+					$oStmt->bindParam(':email', $semail, PDO::PARAM_STR);
+					$oStmt->bindParam(':cursus', $scursus, PDO::PARAM_INT);
+					$oStmt->bindParam(':password', $spassword, PDO::PARAM_STR);
+					$oStmt->bindParam(':kenmerk', $skenmerk, PDO::PARAM_STR);
+					$oStmt->bindParam(':DlnmrId', $sid, PDO::PARAM_INT);
 
-			$mailing_aantal = 0;
+					$mailing_aantal = 0;
 
-			//d($_SESSION['adressen']);
-			foreach ($_SESSION['adressen'] as $key => &$adres) {
-				// Alleen adressen die niet expliciet zijn uitgezet, worden gekoppeld
-				// aan de opdracht; de overige blijven beschikbaar voor hergebruik.
-				if ($adres['verzenden'] != 'off') {
-					$mailing_namen[] = $adres['naam'];
-					$smailingId_FK = $mailingId_FK;
-					$snaam = $adres['naam'];
-					$svoornaam = $adres['voornaam'];
-					$semail = $adres['email'];
-					$scursus = $adres['cursus'];
-					$spassword = $adres['password'];
-					$sid = $adres['DlnmrId'];
-					$skenmerk = bin2hex(random_bytes(8));
-					//d($sid, $adres, $oStmt);
-					$oStmt->execute();
-					$mailing_aantal++;
-				} else unset($adres);
-			}
-		} // if (isset($_SESSION['adressen']))
+					//d($_SESSION['adressen']);
+					foreach ($_SESSION['adressen'] as $key => &$adres) {
+						// Alleen adressen die niet expliciet zijn uitgezet, worden gekoppeld
+						// aan de opdracht; de overige blijven beschikbaar voor hergebruik.
+						if ($adres['verzenden'] != 'off') {
+							$mailing_namen[] = $adres['naam'];
+							$smailingId_FK = $mailingId_FK;
+							$snaam = $adres['naam'];
+							$svoornaam = $adres['voornaam'];
+							$semail = $adres['email'];
+							$scursus = $adres['cursus'];
+							$spassword = $adres['password'];
+							$sid = $adres['DlnmrId'];
+							$skenmerk = bin2hex(random_bytes(8));
+							//d($sid, $adres, $oStmt);
+							$oStmt->execute();
+							$mailing_aantal++;
+						} else unset($adres);
+					}
+				} // if (isset($_SESSION['adressen']))
 
-		$updateSQL = sprintf(
-			"UPDATE messages SET subject=%s, message=%s, afzender=%s, datum=NOW() 
+				$updateSQL = sprintf(
+					"UPDATE messages SET subject=%s, message=%s, afzender=%s, datum=NOW() 
 	WHERE messageId=%s",
-			GetSQLValueString($_POST['subject'], "text"),
-			GetSQLValueString($_POST['message'], "text"),
-			GetSQLValueString($afzender, "text"),
-			GetSQLValueString($_SESSION['messageId'], "int")
-		);
+					GetSQLValueString($_POST['subject'], "text"),
+					GetSQLValueString($_POST['message'], "text"),
+					GetSQLValueString($afzender, "text"),
+					GetSQLValueString($_SESSION['messageId'], "int")
+				);
 
-		exec_query($updateSQL);
+				exec_query($updateSQL);
 
-		$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
-		$nieuwsbrief = select_query($query_messages, 1);
+				$query_messages = "SELECT * FROM messages WHERE messageId = {$_SESSION['messageId']}";
+				$nieuwsbrief = select_query($query_messages, 1);
 
-		if (isset($mailingId_FK)) {
-			echo '<section class="mailing-result">';
-			echo '<div class="mailing-result-actions">';
-			echo '<button class="mailing-result-close" type="button" onclick="sluitMailingResultaat()">Sluiten</button>';
-			echo '<strong>Mailing nr. ' . $mailingId_FK . ' is klaargezet.</strong>';
-			echo '<span>Totaal aantal adressen: ' . ($mailing_aantal ?? 0) . '</span>';
-			echo '<a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a>';
-			echo '<a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a>';
-			echo '</div>';
-			echo '<div class="mailing-result-names">';
-			foreach ($mailing_namen as $naam) {
-				echo '<span>' . htmlspecialchars($naam, ENT_QUOTES, 'UTF-8') . '</span>';
-			}
-			echo '</div>';
-			echo '</section>';
+				if (isset($mailingId_FK)) {
+					echo '<section class="mailing-result">';
+					echo '<div class="mailing-result-actions">';
+					echo '<button class="mailing-result-close" type="button" onclick="sluitMailingResultaat()">Sluiten</button>';
+					echo '<strong>Mailing nr. ' . $mailingId_FK . ' is klaargezet.</strong>';
+					echo '<span>Totaal aantal adressen: ' . ($mailing_aantal ?? 0) . '</span>';
+					echo '<a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a>';
+					echo '<a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a>';
+					echo '</div>';
+					echo '<div class="mailing-result-names">';
+					foreach ($mailing_namen as $naam) {
+						echo '<span>' . htmlspecialchars($naam, ENT_QUOTES, 'UTF-8') . '</span>';
+					}
+					echo '</div>';
+					echo '</section>';
+				}
+				break; // einde verzend mailing
 		}
-		break; // einde verzend mailing
-}
 
-// Toon standaard alleen recente nieuwsbrieven; een ingevulde zoekterm vervangt
-// dit tijdsfilter zodat ook oudere concepten op onderwerp terug te vinden zijn.
+		// Toon standaard alleen recente nieuwsbrieven; een ingevulde zoekterm vervangt
+		// dit tijdsfilter zodat ook oudere concepten op onderwerp terug te vinden zijn.
 
-$where = 'DATE(datum) > SUBDATE(CURDATE(), INTERVAL 2 YEAR)';
-if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'subject LIKE ' . GetSQLValueString('%' . $_POST['zoek_subject'] . '%', 'text');
-$berichten_open = isset($_POST['zoek_nieuwsbrieven']);
+		$where = 'DATE(datum) > SUBDATE(CURDATE(), INTERVAL 2 YEAR)';
+		if (isset($_POST['zoek_subject']) and $_POST['zoek_subject'] != '') $where = 'subject LIKE ' . GetSQLValueString('%' . $_POST['zoek_subject'] . '%', 'text');
+		$berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 
-?>
+			?>
 <!DOCTYPE HTML>
 <html>
 
@@ -1233,21 +1238,25 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			});
 		}
 		document.addEventListener('DOMContentLoaded', initializeMessageEditor);
-
 		var afmeldTaal = 'nl';
+
 		function wisselAfmeldTaal() {
 			afmeldTaal = afmeldTaal === 'nl' ? 'en' : 'nl';
-			document.getElementById('afmeld_taal').textContent =
-				'Afmeldlink: ' + (afmeldTaal === 'nl' ? 'Nederlands' : 'English');
+			document.getElementById('afmeld_taal').textContent = 'Afmeldlink: ' + (
+				afmeldTaal === 'nl' ? 'Nederlands' : 'English');
 		}
 
 		function voegAfmeldlinkToe() {
-			var tekst = afmeldTaal === 'nl' ? 'Afmelden voor mailings' : 'Unsubscribe from mailings';
-			var html = '<p><a href="https://pellegrina.net/algemeen/afmelden.php?token={afmeldtoken}&amp;lang=' +
+			var tekst = afmeldTaal === 'nl' ? 'Afmelden voor mailings' :
+				'Unsubscribe from mailings';
+			var html =
+				'<p><a href="https://pellegrina.net/algemeen/afmelden.php?token={afmeldtoken}&amp;lang=' +
 				afmeldTaal + '">' + tekst + '</a></p>';
-			var editor = typeof CKEDITOR !== 'undefined' && CKEDITOR.instances.message;
+			var editor = typeof CKEDITOR !== 'undefined' && CKEDITOR.instances
+				.message;
 			if (editor && editor.status !== 'ready') {
-				window.alert('De editor wordt nog geladen. Probeer het zo opnieuw.');
+				window.alert(
+					'De editor wordt nog geladen. Probeer het zo opnieuw.');
 				return;
 			}
 			if (editor) {
@@ -1688,7 +1697,8 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 	<form id="mailing_logout_form" method="post" action="/mailing/mailing.php">
 		<input type="hidden" name="logout_csrf_token"
 			value="<?= htmlspecialchars($_SESSION['mailing_logout_csrf'], ENT_QUOTES, 'UTF-8') ?>">
-		<button type="submit" name="mailing_action" value="logout">Uitloggen</button>
+		<button type="submit" name="mailing_action"
+			value="logout">Uitloggen</button>
 	</form>
 	<form action="<?php echo $editFormAction; ?>" method="post" name="formulier"
 		id="formulier" enctype='multipart/form-data'>
@@ -1709,8 +1719,10 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 			<textarea name="message"
 				id="message"><?php echo htmlspecialchars(stripslashes($nieuwsbrief['message']), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></textarea>
 			<p id="afmeld_controls">
-				<button type="button" id="afmeld_taal" onclick="wisselAfmeldTaal()">Afmeldlink: Nederlands</button>
-				<button type="button" onclick="voegAfmeldlinkToe()">Afmeldlink invoegen</button>
+				<button type="button" id="afmeld_taal"
+					onclick="wisselAfmeldTaal()">Afmeldlink: Nederlands</button>
+				<button type="button" onclick="voegAfmeldlinkToe()">Afmeldlink
+					invoegen</button>
 			</p>
 			<p>
 				<input type="submit" name="submitten" value="Voeg toe">
@@ -1731,17 +1743,17 @@ $berichten_open = isset($_POST['zoek_nieuwsbrieven']);
 				<br>
 				<input name="verzenden" type="checkbox" id="verzenden"
 					value="Verzenden"> Daadwerkelijk verzenden <input name="CC"
-					type="checkbox" id="CC" value="CC" <?php
-														if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met
-				CC <input name="test" type="checkbox" id="test" value="test"
+					type="checkbox" id="CC" value="CC"
 					<?php
-					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input name="header" type="checkbox"
-					id="header" value="uit"
+					if (isset($_POST['CC']) and $_POST['CC'] == 'CC') echo 'checked'; ?>> met CC <input name="test"
+					type="checkbox" id="test" value="test"
 					<?php
-					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header
-				<label><br> Afzender: <input name="afzender" type="text"
-						id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
-												else echo 'La Pellegrina'; ?>">
+					if (isset($_POST['test']) and $_POST['test'] == 'test') echo 'checked'; ?>> kopie naar "test" <input
+					name="header" type="checkbox" id="header" value="uit"
+					<?php
+					if (isset($_POST['header']) and $_POST['header'] == 'uit') echo 'checked'; ?>> zonder header <label><br> Afzender: <input
+						name="afzender" type="text" id="afzender" value="<?php if (isset($_POST['afzender']) and $_POST['afzender'] != '') echo $_POST['afzender'];
+																			else echo 'La Pellegrina'; ?>">
 				</label> ; <label>Mail-adres afzender: <input
 						name="afzendermail" type="text" id="afzendermail" value="<?php if (isset($_POST['afzendermail']) and $_POST['afzendermail'] != '') echo $_POST['afzendermail'];
 																					else echo 'info@pellegrina.net'; ?>">
