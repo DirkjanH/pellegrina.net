@@ -1,0 +1,109 @@
+.mailing-login-page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.mailing-login-logo {
+  display: block;
+  width: min(100%, 600px);
+  margin-bottom: 24px;
+  line-height: 0;
+}
+
+.mailing-login-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.mailing-login-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border: 1px solid #d2d2d2;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 52, 101, 0.12);
+}
+
+.mailing-login-card h1 {
+  margin: 0 0 4px;
+  color: #003465;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.mailing-login-intro {
+  margin: 0 0 24px;
+  color: #555;
+  text-align: center;
+}
+
+.mailing-login-error {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border: 1px solid #c7352e;
+  border-radius: 4px;
+  background: #fce8ec;
+  color: #8b1e19;
+}
+
+.mailing-login-card label {
+  display: block;
+  margin-bottom: 6px;
+  color: #003465;
+  font-weight: bold;
+}
+
+.mailing-login-card input[type="password"] {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  margin-bottom: 18px;
+  padding: 9px 11px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+}
+
+.mailing-login-card input[type="password"]:focus {
+  border-color: #003465;
+  outline: 3px solid rgba(0, 79, 152, 0.2);
+}
+
+.mailing-login-card button {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 4px;
+  background: #003465;
+  color: #fff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mailing-login-card button:hover {
+  background: #004f98;
+}
+
+.mailing-login-card button:focus-visible {
+  outline: 3px solid #82bada;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .mailing-login-card {
+    padding: 24px 20px;
+  }
+}

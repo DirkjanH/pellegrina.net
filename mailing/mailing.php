@@ -69,18 +69,26 @@ if (empty($_SESSION['mailing_authenticated'])) {
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Mailingbeheer aanmelden</title>
+		<link rel="stylesheet" href="/css/pellegrina_stijlen.css">
+		<link rel="stylesheet" href="/css/mailing-login.css">
 	</head>
-	<body>
-		<h1>Mailingbeheer</h1>
-		<?php if ($loginError !== ''): ?>
-			<p role="alert"><?= htmlspecialchars($loginError, ENT_QUOTES, 'UTF-8') ?></p>
-		<?php endif; ?>
-		<form method="post">
-			<input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['mailing_login_csrf'], ENT_QUOTES, 'UTF-8') ?>">
-			<label for="password">Wachtwoord</label>
-			<input id="password" name="password" type="password" autocomplete="current-password" required>
-			<button type="submit">Aanmelden</button>
-		</form>
+	<body class="mailing-login-page">
+		<a class="mailing-login-logo" href="/" aria-label="La Pellegrina - naar de homepage">
+			<img src="/Images/Logos/LP_nieuw.png" alt="La Pellegrina">
+		</a>
+		<main class="mailing-login-card">
+			<h1>Mailingbeheer</h1>
+			<p class="mailing-login-intro">Meld je aan om verder te gaan.</p>
+			<?php if ($loginError !== ''): ?>
+				<p class="mailing-login-error" role="alert"><?= htmlspecialchars($loginError, ENT_QUOTES, 'UTF-8') ?></p>
+			<?php endif; ?>
+			<form method="post">
+				<input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['mailing_login_csrf'], ENT_QUOTES, 'UTF-8') ?>">
+				<label for="password">Wachtwoord</label>
+				<input id="password" name="password" type="password" autocomplete="current-password" required>
+				<button type="submit">Aanmelden</button>
+			</form>
+		</main>
 	</body>
 	</html>
 	<?php
