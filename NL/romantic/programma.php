@@ -19,6 +19,7 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -27,30 +28,31 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
     <script>
-    ! function(f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function() {
-            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                arguments)
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '537749209897328');
-    fbq('track', 'PageView');
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                    arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '537749209897328');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
 </head>
+
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-auto w3-main"> <?php
@@ -69,7 +71,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     uit met solisten, orkest en koor. Het hele werk is te lang
                     om tijdens deze cursus in te studeren. Het eerste deel duurt
                     65 à 70 minuten en is dus een volledig concertprogramma op
-                    zich. Ook qu a verhaal kan het goed op zichzelf staan.</p>
+                    zich. Ook qua verhaal kan het goed op zichzelf staan.</p>
                 <p> In de <em>Elias</em> laat Mendelssohn zijn bewondering voor
                     Bach en Händel horen, maar geeft het oratorium
                     tegelijkertijd een uitgesproken romantische dramatiek. Het
@@ -107,9 +109,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     keert terug. </p>
                 <h3>Bezetting</h3>
                 <ul>
-                    <li><strong>Solisten:</strong> sopraan, alt, tenor en bas.
+                    <li><strong>Solisten: </strong>sopraan, alt, tenor en bas.
                     </li>
-                    <li><strong>Koor:</strong> gemengd vierstemmig koor (SATB),
+                    <li><strong>Koor: </strong>gemengd vierstemmig koor (SATB),
                         met onder andere dubbelkwartet en kleinere vocale
                         ensembles.</li>
                     <li><strong>Orkest:</strong> strijkers, twee fluiten, twee
@@ -132,4 +134,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     </div>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
+
 </html>
