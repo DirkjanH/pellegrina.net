@@ -65,33 +65,45 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     ?> <div id="main">
       <div class="cols2">
         <h2>Barokmuziek uit Napels (1650 – 1750)</h2>
-        <p>Het programma voor alle deelnemers aan de zomerschool staat
-          in het teken van barokmuziek uit Napels. Gedurende de
-          zeventiende en achttiende eeuw was Napels het kloppende hart
-          van het Europese muzikale leven. Aangedreven door de
-          prestigieuze conservatoria en bruisende operahuizen trok de
-          'Napolitaanse School' musici uit het hele continent aan.
-          Deze zomer duiken we in dit rijke, expressieve en virtuoze
-          Napolitaanse repertoire, waarbij we zowel meeslepende
-          orkestwerken als religieuze werken voor solisten, koor en
-          orkest verkennen. </p>
+        <p>Het gezamenlijke programma voor alle deelnemers aan de
+          zomerschool staat in het teken van barokmuziek uit Napels.
+          Gedurende de zeventiende en achttiende eeuw was Napels het
+          kloppende hart van het Europese muzikale leven. Aangedreven
+          door de prestigieuze conservatoria en bruisende operahuizen
+          trok de 'Napolitaanse School' musici uit het hele continent
+          aan.</p>
+        <p>In die tijd bestond er geen scherpe scheiding tussen kerk en
+          theater: de stijlen van de geestelijke muziek en de opera
+          leken sterk op elkaar en wisselden voortdurend muzikale
+          ideeën, affecten en vocale virtuositeit uit. Deze zomer
+          duiken we in dit rijke, expressieve en dramatische
+          Napolitaanse repertoire. We verkennen zowel meeslepende
+          instrumentale en geestelijke werken als concertant
+          uitgevoerde delen uit opera's.</p>
         <p>Tijdens de dagelijkse middagsessies bundelen zangers en
-          instrumentalisten hun krachten voor het uitvoeren van
-          dramatische vocaal-instrumentale stukken uit de Napolitaanse
-          barok. Ons centrale repertoire omvat onder meer:</p>
+          instrumentalisten hun krachten voor de uitvoering van deze
+          vocaal-instrumentale meesterwerken, begeleid door een
+          kleurrijk barokorkest dat naast strijkers, houtblazers en
+          basso continuo ook koper omvat: natuurhoorns en
+          baroktrompetten. Ons centrale repertoire omvat onder meer:
+        </p>
         <ul>
           <li><strong>Giovanni Battista Pergolesi:</strong>
-            geselecteerde orkestdelen — een illustratie van de
-            doorleefde, lyrische en intens dramatische stijl die
-            Pergolesi door heel Europa legendarisch maakte.</li>
+            geselecteerde instrumentale en operadelen, bijvoorbeeld
+            uit <i>Il Flaminio</i> (1735) &mdash; een illustratie
+            van de doorleefde, lyrische en intens dramatische stijl
+            die Pergolesi door heel Europa legendarisch maakte.</li>
           <li><strong>Alessandro Scarlatti:</strong> representatieve
-            geestelijke werken en koren — met de nadruk op het
-            ingenieuze contrapunt en de vocale meesterschap van de
-            aartsvader van de Napolitaanse School.</li>
-          <li><strong>Francesco Durante & Leonardo Leo:</strong>
-            geselecteerde geestelijke concerten en dubbelkorige
-            psalmzettingen — met een rijke strijkerspartij,
-            expressieve solo's en bruisende koorfuga's.</li>
+            geestelijke werken en operascènes, bv. uit <i>La
+              Griselda</i> (1721) &mdash; met de nadruk op het
+            ingenieuze contrapunt, de rijke blazersbezetting en het
+            vocale meesterschap van de aartsvader van de
+            Napolitaanse School.</li>
+          <li><strong>Francesco Durante &amp; Leonardo Leo:</strong>
+            geselecteerde geestelijke concerten, operadelen en
+            dubbelkorige psalmzettingen &mdash; met een rijke
+            strijkerspartij, kleurrijk koper en hout, expressieve
+            solo's en bruisende koorfuga's.</li>
         </ul>
       </div>
     </div>
