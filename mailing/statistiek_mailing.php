@@ -3,6 +3,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/connections/connect_PDO.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/functies.php');
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailing_verzenden.php';
 
 session_start();
 ob_start();
@@ -20,8 +21,13 @@ d($_POST);
 if (isset($_POST['delete_mailing'])) {
 	$deleteMailingId = filter_var($_POST['delete_mailing'], FILTER_VALIDATE_INT);
 	if ($deleteMailingId !== false && $deleteMailingId > 0) {
+		$mailingLock = false;
 		try {
+			$mailingLock = mailingVerzendLock($db);
+			if (!$mailingLock) throw new RuntimeException('De mailingwerker is bezig. Probeer het later opnieuw.');
 			$db->beginTransaction();
+			$deleteTaak = $db->prepare('DELETE FROM mailing_verzendtaken WHERE mailing_id = :mailingId');
+			$deleteTaak->execute([':mailingId' => $deleteMailingId]);
 			$deleteAdressen = $db->prepare('DELETE FROM mailing_adressen WHERE mailingId_FK = :mailingId');
 			$deleteAdressen->execute([':mailingId' => $deleteMailingId]);
 			$deleteMailing = $db->prepare('DELETE FROM mailing_opdrachten WHERE mailingId = :mailingId');
@@ -30,13 +36,15 @@ if (isset($_POST['delete_mailing'])) {
 			if (($_SESSION['mailing'] ?? null) == $deleteMailingId) {
 				unset($_SESSION['mailing']);
 			}
-		} catch (PDOException $exception) {
+		} catch (PDOException | RuntimeException $exception) {
 			if ($db->inTransaction()) $db->rollBack();
 			echo '<p><strong>Verwijderen mislukt:</strong> ' . htmlspecialchars(
 				$exception->getMessage(),
 				ENT_QUOTES,
 				'UTF-8'
 			) . '</p>';
+		} finally {
+			if ($mailingLock) mailingVerzendUnlock($db);
 		}
 	}
 }
@@ -216,7 +224,7 @@ if ($mailing_nr > 0) {
 				if ($totaal > 0) $percentage_geopend = ' (' . round(($geopend / $totaal) * 100, 1) . ' %)';
 				else echo ('Geen mails verzonden<br>');
 				echo "<p class=\"w3-small\"><input TYPE=\"button\" class=\"w3-light-green w3-border-green\" onclick=\"javascript: formSubmit({$m['MAILINGiD']})\" value=\"{$m['MAILINGiD']}\"> 
-				{$m['subject']} $percentage_geopend <button type=\"submit\" class=\"delete-mailing\" name=\"delete_mailing\" value=\"{$m['MAILINGiD']}\" aria-label=\"Mailing wissen\" title=\"Mailing wissen\" onclick=\"return confirm('Deze mailing en alle bijbehorende adressen definitief wissen?');\">&times;</button></p>" . PHP_EOL;
+				{$m['subject']} $percentage_geopend <a href=\"send%20mailing.php?mailing=" . (int) $m['MAILINGiD'] . "\" target=\"_blank\">Verzending beheren</a> <button type=\"submit\" class=\"delete-mailing\" name=\"delete_mailing\" value=\"{$m['MAILINGiD']}\" aria-label=\"Mailing wissen\" title=\"Mailing wissen\" onclick=\"return confirm('Deze mailing en alle bijbehorende adressen definitief wissen?');\">&times;</button></p>" . PHP_EOL;
 			} ?>
 			<input type="hidden" name="mailing" id="mailing" value="">
 		</form>

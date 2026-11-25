@@ -1,310 +1,127 @@
 <?php
-// Toon interne foutdetails nooit aan bezoekers van dit verzendendpoint.
 ini_set('display_errors', '0');
 ini_set('display_startup_errors', '0');
 error_reporting(E_ALL);
 
-//Connection statement
-require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php');
-require_once $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
-require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailfuncties.inc.php';
-require_once $_SERVER["DOCUMENT_ROOT"] . '/includes/mailing_afmelden.php';
-
-Kint::$enabled_mode = false;
-
-/**
- * simple method to encrypt or decrypt a plain text string
- * initialization vector(IV) has to be the same when encrypting and decrypting
- * 
- * @param string $action: can be 'encrypt' or 'decrypt'
- * @param string $string: string to encrypt or decrypt
- *
- * @return string
- */
-function encrypt_decrypt($action, $string)
-{
-	$output = false;
-	$encrypt_method = "AES-256-CBC";
-	$secret_key = 'Mach a Šebestová';
-	$secret_iv = 'Sudoměřice u Bechyně';
-	// hash
-	$key = hash('sha256', $secret_key);
-
-	// iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
-	$iv = substr(hash('sha256', $secret_iv), 0, 16);
-	if ($action == 'encrypt') {
-		$output = openssl_encrypt($string, $encrypt_method, $key, 0, $iv);
-		$output = base64_encode($output);
-	} else if ($action == 'decrypt') {
-		$output = openssl_decrypt(base64_decode($string), $encrypt_method, $key, 0, $iv);
-	}
-	return $output;
-}
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/includes2027.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailing_afmelden.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/mailing_verzenden.php';
 
 function h($value)
 {
-	return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
-function toon_mail_foutverslag($mail, $adres, $mailing_nr, $duur, $foutmelding)
-{
-	$verslag = [
-		'tijdstip' => date('Y-m-d H:i:s'),
-		'request-id' => substr(hash('sha256', session_id() . microtime(true)), 0, 12),
-		'mailingnummer' => (int) $mailing_nr,
-		'naam' => (string) ($adres['naam'] ?? ''),
-		'e-mailadres' => (string) ($adres['email'] ?? ''),
-		'mailadresId' => (int) ($adres['mailadresId'] ?? 0),
-		'fout' => $foutmelding ?: 'Geen nadere foutmelding van PHPMailer ontvangen.',
-		'smtp-host' => (string) ($mail->Host ?? ''),
-		'smtp-poort' => (int) ($mail->Port ?? 0),
-		'veiligheid' => (string) ($mail->SMTPSecure ?? 'geen'),
-		'timeout-seconden' => (int) ($mail->Timeout ?? 0),
-		'duur-seconden' => round($duur, 3),
-	];
-
-	// Schrijf technische details naar de serverlog; toon ze daarnaast aan de beheerder.
-	error_log('Mailing verzenden mislukt: ' . json_encode($verslag, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-	echo '<details open><summary>Gedetailleerd foutverslag</summary><dl>';
-	foreach ($verslag as $veld => $waarde) {
-		echo '<dt><strong>' . h($veld) . '</strong></dt><dd>' . h($waarde) . '</dd>';
-	}
-	echo '</dl></details>';
-
-	return $verslag;
-}
-
-/* Set locale to Dutch */
-setlocale(LC_ALL, 'nl_NL');
-date_default_timezone_set('Europe/Amsterdam');
-
-$refreshrate = 15 * 60; // 15 minuten
-$blokgrootte = 40;
-$smtp_timeout = 20; // Voorkom dat een onbereikbare SMTP-server de aanvraag minuten blokkeert.
-set_time_limit(120); // Een batch mag nooit onbeperkt lang blijven draaien.
-
-$mailing_opdrachten = 'mailing_opdrachten';
-$mailing_adressen = 'mailing_adressen';
-$mailing_tekst = 'messages';
-
-// Valideer de identifier voordat deze verderop in queries wordt gebruikt.
 $mailing_nr = filter_input(INPUT_GET, 'mailing', FILTER_VALIDATE_INT, [
-	'options' => ['min_range' => 1],
+    'options' => ['min_range' => 1],
 ]);
-if ($mailing_nr === false || $mailing_nr === null) {
-	http_response_code(400);
-	exit('Ongeldig mailingnummer.');
+if (!$mailing_nr) {
+    http_response_code(400);
+    exit('Ongeldig mailingnummer.');
 }
 
-$stmt = $db->prepare("SELECT * FROM {$mailing_opdrachten} WHERE mailingId = :mailing LIMIT 1");
-$stmt->execute(['mailing' => $mailing_nr]);
-$mailing = $stmt->fetch(PDO::FETCH_ASSOC);
-if (!$mailing) {
-	http_response_code(404);
-	exit('Mailing bestaat niet.');
-}
-
-// Toon vóór het verzenden het actuele totaal en het aantal adressen zonder verzendtijd.
 try {
-	$mailing_status = mailingAfmeldVerzendStatus($db, $mailing_nr);
-} catch (PDOException $exception) {
-	error_log('Afmeldregister voor mailing niet beschikbaar: ' . $exception->getMessage());
-	http_response_code(500);
-	exit('Het afmeldregister is niet beschikbaar; de mailing is niet verstuurd.');
-}
-$totaal_mails = (int) $mailing_status['totaal'];
-$resterende_mails = (int) $mailing_status['resterend'];
+    $stmt = $db->prepare('SELECT * FROM mailing_opdrachten WHERE mailingId = ?');
+    $stmt->execute([$mailing_nr]);
+    $mailing = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!$mailing) {
+        http_response_code(404);
+        exit('Mailing bestaat niet.');
+    }
 
-if (empty($_SESSION['mailing_csrf'])) {
-	$_SESSION['mailing_csrf'] = bin2hex(random_bytes(32));
-}
+    if (empty($_SESSION['mailing_csrf'])) {
+        $_SESSION['mailing_csrf'] = bin2hex(random_bytes(32));
+    }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (!hash_equals($_SESSION['mailing_csrf'], (string) ($_POST['csrf_token'] ?? ''))) {
+            http_response_code(403);
+            exit('Ongeldige beveiligingstoken.');
+        }
+        if (!mailingVerzendLock($db)) {
+            http_response_code(409);
+            exit('De mailingwerker is bezig. Probeer het over enkele ogenblikken opnieuw.');
+        }
+        try {
+            $actie = $_POST['actie'] ?? 'starten';
+            if ($actie === 'pauzeren') {
+                $stmt = $db->prepare("UPDATE mailing_verzendtaken SET status = 'gepauzeerd' WHERE mailing_id = ? AND status = 'wacht' AND bezig_adres IS NULL");
+                $stmt->execute([$mailing_nr]);
+                if ($stmt->rowCount() !== 1) throw new RuntimeException('Pauzeren is niet mogelijk; controleer de status van de mailing.');
+            } elseif ($actie === 'opnieuw' || $actie === 'registreren') {
+                mailingLosOnzekereVerzendingOp($db, $mailing_nr, $actie === 'registreren');
+            } elseif ($actie === 'starten') {
+                mailingInWachtrij($db, $mailing_nr);
+            } else {
+                throw new RuntimeException('Ongeldige actie.');
+            }
+        } finally {
+            mailingVerzendUnlock($db);
+        }
+        header('Location: ' . $_SERVER['PHP_SELF'] . '?mailing=' . $mailing_nr, true, 303);
+        exit;
+    }
 
-// Een GET-request mag alleen de bevestigingspagina tonen; POST start het verzenden.
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    $mailing_status = mailingAfmeldVerzendStatus($db, $mailing_nr);
+    $stmt = $db->prepare('SELECT * FROM mailing_verzendtaken WHERE mailing_id = ?');
+    $stmt->execute([$mailing_nr]);
+    $taak = $stmt->fetch(PDO::FETCH_ASSOC);
+    $onzekerAdres = null;
+    if ($taak && $taak['status'] === 'gestopt' && $taak['bezig_adres'] !== null) {
+        $stmt = $db->prepare('SELECT email FROM mailing_adressen WHERE mailingId_FK = ? AND mailadresId = ?');
+        $stmt->execute([$mailing_nr, $taak['bezig_adres']]);
+        $onzekerAdres = $stmt->fetchColumn();
+    }
+} catch (PDOException | RuntimeException $exception) {
+    error_log('Mailingwachtrij niet beschikbaar: ' . $exception->getMessage());
+    http_response_code(500);
+    exit('De mailingwachtrij is niet beschikbaar. Controleer de installatie en de serverlog.');
+}
 ?>
-	<!DOCTYPE HTML>
-	<html lang="nl">
-
-	<head>
-		<meta charset="utf-8">
-		<title>Mailing verzenden</title>
-	</head>
-
-	<body>
-		<h3>Mailing-nr: <?= h($mailing_nr) ?>: <?= h($mailing['subject']) ?></h3>
-		<p>De mailing wordt nu verzonden.</p>
-		<p>
-			<strong>Totaal aantal mails:</strong> <?= h($totaal_mails) ?><br>
-			<strong>Te verzenden mails:</strong> <?= h($resterende_mails) ?>
-		</p>
-		<form id="start-mailing" method="post"
-			action="<?= h($_SERVER['PHP_SELF']) ?>?mailing=<?= h($mailing_nr) ?>">
-			<input type="hidden" name="csrf_token"
-				value="<?= h($_SESSION['mailing_csrf']) ?>">
-			<noscript><button type="submit">Mailing verzenden</button></noscript>
-		</form>
-		<script>
-			document.getElementById('start-mailing').submit();
-		</script>
-	</body>
-
-	</html><?php
-			exit;
-		}
-
-		$csrf_token = (string) ($_POST['csrf_token'] ?? '');
-		if (!hash_equals((string) $_SESSION['mailing_csrf'], $csrf_token)) {
-			http_response_code(403);
-			exit('Ongeldige beveiligingstoken.');
-		}
-
-		$message = $mailing['message'];
-		$eerder_verzonden_mails = $mailing['verzonden_mails'];
-		$blokNr = (int) floor($eerder_verzonden_mails / $blokgrootte);
-
-		$stmt = $db->prepare("SELECT * FROM {$mailing_adressen} WHERE mailingId_FK = :mailing ORDER BY mailadresId");
-		$stmt->execute(['mailing' => $mailing_nr]);
-		$adressen = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		$aantal_emails = count($adressen);
-
-		$regel_bericht = '';
-		$refresh = $resterende_mails > 0;
-		$afgebroken = false;
-			?>
 <!DOCTYPE HTML>
-<html>
-
+<html lang="nl">
 <head>
-	<meta charset="utf-8">
-	<title>Verzend mailing</title>
+    <meta charset="utf-8">
+    <title>Mailing verzenden</title>
 </head>
-
-<body> <?php
-		echo '<h3>Mailing-nr: ' . h($mailing_nr) . ': ' . h($mailing['tijd_aanmaak']) . ' - <span style="color: teal;">' . h($mailing['subject']) . '</span>. Aantal mailadressen: ' . h($aantal_emails) . '</h3>';
-
-		$Subject 			= stripslashes($mailing['subject']);
-		$mail_text 			= stripslashes($message);
-		$cc = !empty($mailing['CC']);
-
-		echo $start_bericht = '+++++++++ ' . date('d/m H:i') . ' Startbericht: tot nu toe verzonden = ' . $eerder_verzonden_mails . '; Bloknr. = ' . $blokNr . '<br><br>';
-
-		$verzonden_mails = (int) $mailing['verzonden_mails'];
-		$blok_verzonden = 0;
-
-		foreach ($adressen as $nr => $adres) {
-			if ($blok_verzonden < $blokgrootte && empty($adres['tijd_verzonden'])) {
-				$encrypt = '';
-				if ($adres['DlnmrId'] != '') $encrypt = encrypt_decrypt('encrypt', $adres['DlnmrId']);
-				$mail = new LPmailer();
-				// PHPMailer gebruikt standaard 300 seconden; dat is te lang voor een webaanvraag.
-				$mail->Timeout = $smtp_timeout;
-				$mail->Subject = $Subject;
-				$from = filter_var($mailing['From'], FILTER_VALIDATE_EMAIL);
-				$recipient = filter_var(stripslashes($adres['email']), FILTER_VALIDATE_EMAIL);
-				if (!$from || !$recipient) {
-					$regel_bericht .= 'Ongeldig e-mailadres overgeslagen.<br>';
-					continue;
-				}
-				try {
-					$afmeldStatus = mailingAfmeldStatus($db, $recipient);
-					if ($afmeldStatus !== null && $afmeldStatus['afgemeld_op'] !== null) {
-						continue;
-					}
-					$afmeldToken = mailingHeeftAfmeldlink($mail_text)
-						? mailingAfmeldToken($db, $recipient) : null;
-				} catch (Throwable $exception) {
-					error_log('Afmeldregister voor mailing niet beschikbaar: ' . $exception->getMessage());
-					echo 'Het afmeldregister kon niet worden gecontroleerd; verzending is gestopt.<br>';
-					$regel_bericht .= 'Verzending gestopt: afmeldregister niet beschikbaar.<br>';
-					$refresh = false;
-					$afgebroken = true;
-					break;
-				}
-				LPmailingAfzender($mail, $from, stripslashes($mailing['FromName']));
-				$mail->AddAddress($recipient, stripslashes($adres['naam']));
-				$mail_body = $mail_text;
-				if (isset($adres['voornaam']) and $adres['voornaam'] != '') $mail_body = str_replace("{voornaam}", $adres['voornaam'], $mail_text);
-				if (isset($adres['naam']) and $adres['naam'] != '') $mail_body = str_replace("{naam}", $adres['naam'], $mail_body);
-				if (isset($adres['cursus']) and $adres['cursus'] != '') $mail_body = str_replace("{cursus}", $adres['cursus'], $mail_body);
-				if (isset($adres['password']) and $adres['password'] != '') $mail_body = str_replace("{password}", $adres['password'], $mail_body);
-				$mail_body = str_replace("DlnmrIdx", $encrypt, $mail_body);
-				if ($afmeldToken !== null) {
-					$mail_body = mailingAfmeldHeaders($mail, $mail_body, $afmeldToken);
-				}
-				$tracker = 'https://pellegrina.net/mailing/volg/volg.php?kenmerk=' . urlencode($adres['kenmerk']);
-				$mail_body = str_replace('</body>', '<img src="' . h($tracker) . '" border="0" alt=""/></body>', $mail_body);
-
-				if ($cc) $mail->AddCC("info@pellegrina.net", "LP PHP mailer");
-				$mail->Body  = $mail_body;
-				$mail->AltBody = LPmailPlainText($mail, $mail_body);
-
-				$verzend_start = microtime(true);
-				try {
-					$verzonden = $mail->Send();
-					$mail_fout = $mail->ErrorInfo;
-				} catch (Throwable $exception) {
-					$verzonden = false;
-					$mail_fout = get_class($exception) . ': ' . $exception->getMessage();
-				}
-				if (!$verzonden) {
-					$bericht = "Bericht aan " . h($adres['naam']) . " kon niet verzonden worden.<br>";
-					echo $bericht;
-					$regel_bericht .= $bericht;
-					$foutverslag = toon_mail_foutverslag($mail, $adres, $mailing_nr, microtime(true) - $verzend_start, $mail_fout);
-					$regel_bericht .= 'Foutverslag: ' . json_encode($foutverslag, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '<br>';
-					// Een transportfout geldt voor de hele SMTP-verbinding; probeer niet 39 keer opnieuw.
-					break;
-				} else {
-					$verzonden_mails++;
-					$blok_verzonden++;
-					$bericht = "Bericht aan " . h($adres['naam']) . " (nr. {$verzonden_mails}) verzonden.<br>";
-					echo $bericht;
-					$regel_bericht .= $bericht;
-					$updateAdres = $db->prepare("UPDATE {$mailing_adressen} SET tijd_verzonden = NOW() WHERE mailadresId = :adres");
-					$updateAdres->execute(['adres' => (int) $adres['mailadresId']]);
-				}
-				echo 'Totaal aantal mails: ' . $verzonden_mails . ' tot nu toe verzonden.<br>';
-			}
-		}
-
-		$blokNr = (int) ceil($verzonden_mails / $blokgrootte);
-		$blok_bericht = '========= ' . date('d/m H:i') . ' Blok nr. ' . $blokNr . ' verzonden.<br>';
-		$blok_bericht .= 'Refresh: ' . $refresh . '; verzonden: ' . $verzonden_mails . '; totaal aantal mails: ' . $aantal_emails;
-
-		echo ' <br>' . $blok_bericht . '<br>';
-		if ($refresh) {
-			try {
-				$refresh = (int) mailingAfmeldVerzendStatus($db, $mailing_nr)['resterend'] > 0;
-			} catch (PDOException $exception) {
-				error_log('Afmeldregister voor mailing niet beschikbaar: ' . $exception->getMessage());
-				echo 'Het afmeldregister kon niet worden gecontroleerd; verzending is gestopt.<br>';
-				$refresh = false;
-				$afgebroken = true;
-			}
-		}
-		if (!$refresh && !$afgebroken) {
-			$slot_bericht = '<br>********* ' . date('d/m H:i') . ' <span style="color: red;">Mailing afgehandeld</span><br>';
-			echo $slot_bericht;
-		} elseif ($refresh && !$afgebroken) {
-			// Ga na een pauze verder met het volgende blok via POST, inclusief CSRF-token.
-			echo '<form id="volgende-blok" method="post" action="' . h($_SERVER['PHP_SELF']) . '?mailing=' . h($mailing_nr) . '">';
-			echo '<input type="hidden" name="csrf_token" value="' . h($_SESSION['mailing_csrf']) . '">';
-			echo '<button type="submit">Volgende blok verzenden</button></form>';
-			echo '<script>setTimeout(function () { document.getElementById("volgende-blok").submit(); }, ' . ($refreshrate * 1000) . ');</script>';
-		}
-		$bb = strip_tags(($start_bericht ?? '') . '\r\n' . ($regel_bericht ?? '') . '\r\n' . ($blok_bericht ?? '') . '\r\n' . ($slot_bericht ?? ''));
-		try {
-			// Gebruik parameters, omdat ook de logtekst apostrofs of speciale tekens kan bevatten.
-			$updateMailing = $db->prepare("UPDATE {$mailing_opdrachten} SET verzonden_mails = :verzonden, `log` = CONCAT(`log`, :log) WHERE mailingId = :mailing");
-			$updateMailing->execute([
-				'verzonden' => $verzonden_mails,
-				'log' => $bb,
-				'mailing' => $mailing_nr,
-			]);
-		} catch (PDOException $e) {
-			error_log('Mailinglog kon niet worden bijgewerkt: ' . $e->getMessage());
-			echo 'Log niet geschreven.<br>';
-		}
-		?> </body>
-
+<body>
+    <h3>Mailing-nr: <?= h($mailing_nr) ?>: <?= h($mailing['subject']) ?></h3>
+    <p>
+        <strong>Totaal aantal mails:</strong> <?= h($mailing_status['totaal']) ?><br>
+        <strong>Te verzenden mails:</strong> <?= h($mailing_status['resterend']) ?>
+    </p>
+    <?php if ($taak && $taak['status'] === 'wacht'): ?>
+        <p>De mailing staat in de wachtrij. De server verwerkt deze in blokken van maximaal 40 mails.</p>
+        <p>Volgende poging vanaf: <?= h($taak['volgende_poging']) ?>. Ververs deze pagina om de voortgang te bekijken.</p>
+        <form method="post" action="<?= h($_SERVER['PHP_SELF']) ?>?mailing=<?= h($mailing_nr) ?>">
+            <input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
+            <input type="hidden" name="actie" value="pauzeren">
+            <button type="submit">Mailing pauzeren</button>
+        </form>
+    <?php elseif ($taak && $taak['status'] === 'afgerond'): ?>
+        <p>Mailing afgehandeld.</p>
+    <?php else: ?>
+        <?php if ($taak && $taak['status'] === 'gestopt'): ?>
+            <p>De verzending is gestopt: <?= h($taak['laatste_fout']) ?></p>
+            <?php if ($taak['bezig_adres'] !== null): ?>
+                <p>Het is onzeker of het bericht aan <?= h($onzekerAdres ?: 'mailadresId ' . $taak['bezig_adres']) ?> is afgeleverd. Controleer de maillogs en los de fout op voordat je een keuze maakt.</p>
+                <form method="post" action="<?= h($_SERVER['PHP_SELF']) ?>?mailing=<?= h($mailing_nr) ?>">
+                    <input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
+                    <button type="submit" name="actie" value="opnieuw" onclick="return confirm('Opnieuw proberen kan een dubbele mail veroorzaken. Doorgaan?')">Opnieuw proberen en hervatten</button>
+                    <button type="submit" name="actie" value="registreren" onclick="return confirm('Alleen kiezen als de mail daadwerkelijk verzonden is. Doorgaan?')">Als verzonden registreren en hervatten</button>
+                </form>
+            <?php else: ?>
+                <p>Los de fout op voordat je de mailing hervat.</p>
+            <?php endif; ?>
+        <?php elseif ($taak && $taak['status'] === 'gepauzeerd'): ?>
+            <p>De mailing is gepauzeerd.</p>
+        <?php endif; ?>
+        <?php if (!$taak || $taak['bezig_adres'] === null): ?>
+            <form method="post" action="<?= h($_SERVER['PHP_SELF']) ?>?mailing=<?= h($mailing_nr) ?>">
+                <input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
+                <button type="submit"><?= $taak ? 'Mailing hervatten' : 'Mailing starten' ?></button>
+            </form>
+        <?php endif; ?>
+    <?php endif; ?>
+    <p>Je kunt deze pagina sluiten zodra de geplande taak op de server is ingesteld.</p>
+</body>
 </html>
