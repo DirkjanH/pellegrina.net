@@ -98,70 +98,20 @@ if (!$definitieve_status) {
 	$retry_webhook('Betalingsstatus nog niet definitief (status: ' . $payment->status . ').');
 }
 
-$mail_type = $definitief_betaald ? 'confirmation' : 'failure';
-$mail_status_column = $definitief_betaald ? 'dankmail_verzonden' : 'mislukkingsmail_verzonden';
-$mail_marker = $mail_sent_dir . '/payment-' . $mail_type . '-' . $mail_key . '.sent';
-$mail_lock = fopen($mail_marker . '.lock', 'c');
-if ($mail_lock === false || !flock($mail_lock, LOCK_EX)) {
-	if (is_resource($mail_lock)) fclose($mail_lock);
-	$retry_webhook('Mailstatus kon niet worden vergrendeld.');
+$booking_reference = (string) ($inschrijving['random_id'] ?? '');
+if (!preg_match('/^[A-Za-z0-9_-]+$/', $booking_reference)) {
+	$retry_webhook('Boekingsreferentie voor de dankmail ontbreekt of is ongeldig.');
 }
 
-$mail_verzonden = true;
-$mail_marker_saved = true;
-$booking_reference = preg_replace('/[^a-zA-Z0-9_-]/', '', (string) ($inschrijving['random_id'] ?? ''));
-$booking_mail_marker = $booking_reference !== '' ? $mail_sent_dir . '/' . $booking_reference . '.sent' : '';
-$mail_already_sent = is_file($mail_marker)
-	|| ($definitief_betaald && $booking_mail_marker !== '' && is_file($booking_mail_marker))
-	|| LPconfirmationSent((int) $inschrijving['InschId'], $definitief_mislukt);
-if (!$mail_already_sent) {
-	$naam = htmlspecialchars((string) $inschrijving['naam'], ENT_QUOTES, 'UTF-8');
-	$voornaam = htmlspecialchars((string) $inschrijving['voornaam'], ENT_QUOTES, 'UTF-8');
-	$inschrijving_nr = (int) $inschrijving['InschId'];
-	if ($definitief_betaald) {
-		if (strtolower((string) $inschrijving['taal']) === 'en') {
-			$subject = 'Payment received for your La Pellegrina registration';
-			$message = "<p>Dear {$voornaam},</p><p>Mollie has confirmed receipt of your deposit payment for registration {$inschrijving_nr}. Your registration is confirmed.</p><p>Kind regards,<br>La Pellegrina</p>";
-		} else {
-			$subject = 'Betaling ontvangen voor je inschrijving bij La Pellegrina';
-			$message = "<p>Beste {$voornaam},</p><p>Mollie heeft de ontvangst van je aanbetaling voor inschrijving {$inschrijving_nr} bevestigd. Je inschrijving is bevestigd.</p><p>Met muzikale groet,<br>La Pellegrina</p>";
-		}
-	} elseif (strtolower((string) $inschrijving['taal']) === 'en') {
-		$status = htmlspecialchars((string) $payment->status, ENT_QUOTES, 'UTF-8');
-		$subject = 'Payment failed for your La Pellegrina registration';
-		$message = "<p>Dear {$voornaam},</p><p>Mollie has definitively reported your deposit payment for registration {$inschrijving_nr} as failed (status: {$status}). No payment confirmation was received.</p><p>Please contact <a href=\"mailto:aanmelding@pellegrina.net\">aanmelding@pellegrina.net</a> if you need help completing your registration.</p><p>Kind regards,<br>La Pellegrina</p>";
-	} else {
-		$status = htmlspecialchars((string) $payment->status, ENT_QUOTES, 'UTF-8');
-		$subject = 'Betaling mislukt voor je inschrijving bij La Pellegrina';
-		$message = "<p>Beste {$voornaam},</p><p>Mollie heeft de betaling van je aanbetaling voor inschrijving {$inschrijving_nr} definitief als mislukt gemeld (status: {$status}). We hebben geen betalingsbevestiging ontvangen.</p><p>Neem contact op met <a href=\"mailto:aanmelding@pellegrina.net\">aanmelding@pellegrina.net</a> als je hulp nodig hebt bij het afronden van je inschrijving.</p><p>Met muzikale groet,<br>La Pellegrina</p>";
-	}
-
-	$mail_verzonden = LPmail(
-		(string) $inschrijving['email'],
-		(string) $inschrijving['naam'],
-		$subject,
-		$message,
-		'aanmelding@pellegrina.net',
-		'LP Aanmelding'
-	);
-	if ($mail_verzonden && file_put_contents($mail_marker, date('c'), LOCK_EX) === false) {
-		error_log('Mollie-mail verzonden maar marker kon niet worden opgeslagen voor betaling ' . $mail_key);
-		$mail_marker_saved = false;
-	}
-}
-
-$mail_status_saved = $mail_verzonden && exec_query("UPDATE inschrijving SET {$mail_status_column} = NOW() WHERE Mollie_ID = {$mollie_id_sql}");
-flock($mail_lock, LOCK_UN);
-fclose($mail_lock);
-if (!$mail_verzonden) {
-	$retry_webhook('Mail kon niet worden verzonden.');
-}
-
-if (!$mail_status_saved) {
-	$retry_webhook('Verzendstatus van de betalingsmail kon niet worden opgeslagen.');
-}
-if (!$mail_marker_saved) {
-	$retry_webhook('Mailmarker kon niet worden opgeslagen.');
+$language = strtolower((string) $inschrijving['taal']) === 'en' ? 'EN' : 'NL';
+$confirmation_sent = (static function ($language, $confirmation_reference, $cursus_offset) {
+	$confirmation_internal = true;
+	$confirmation_success = false;
+	require dirname(__DIR__) . '/' . $language . '/dank.php';
+	return $confirmation_success;
+})($language, $booking_reference, $cursus_offset);
+if (!$confirmation_sent) {
+	$retry_webhook('Dankmail kon niet worden verzonden of geregistreerd.');
 }
 
 http_response_code(200);

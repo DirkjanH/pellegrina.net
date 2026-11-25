@@ -16,16 +16,29 @@ $locale = 'nl';
 
 d($_REQUEST);
 
-$deelnemer_query = "SELECT * FROM dlnmr d, adres a, inschrijving i WHERE i.random_id = '{$_GET['res']}' AND d.AdresId_FK = a.AdresId AND d.DlnmrId = i.DlnmrId_FK";
+$booking_reference = $confirmation_reference ?? ($_GET['res'] ?? '');
+if (!is_string($booking_reference) || !preg_match('/^[A-Za-z0-9_-]+$/', $booking_reference)) {
+	http_response_code(400);
+	exit('Ongeldige boekingsreferentie.');
+}
+$reference_sql = quote($booking_reference);
+$deelnemer_query = "SELECT * FROM dlnmr d, adres a, inschrijving i WHERE i.random_id = {$reference_sql} AND d.AdresId_FK = a.AdresId AND d.DlnmrId = i.DlnmrId_FK";
 d($deelnemer_query);
 $dlnmr = select_query($deelnemer_query, 1);
 d($dlnmr);
-if (isset($dlnmr) and str_contains($dlnmr['Mollie_ID'], 'tr_') and $dlnmr['betaalstatus'] == 'open') {
-	sleep(3);
-	$dlnmr = select_query($deelnemer_query, 1); // haal inschrijving na 3 seconden nog een keer op
+if (!$dlnmr) {
+	http_response_code(404);
+	exit('Inschrijving niet gevonden.');
+}
+if (preg_match('/^tr_[A-Za-z0-9]+$/', (string) ($dlnmr['Mollie_ID'] ?? ''))
+	&& !in_array($dlnmr['betaalstatus'], ['paid', 'failed', 'expired', 'canceled'], true)) {
+	if (!empty($confirmation_internal)) return;
+	header('Refresh: 5');
+	echo 'De betalingsstatus wordt verwerkt. Deze pagina wordt automatisch vernieuwd.';
+	exit;
 }
 
-$adres_query = "SELECT CONCAT(a.adres, ', ', a.postcode, ' ', a.plaats, ', ', a.land) as adres FROM dlnmr d, adres a, inschrijving i WHERE i.random_id = '{$_GET['res']}' AND d.AdresId_FK = a.AdresId AND d.DlnmrId = i.DlnmrId_FK";
+$adres_query = "SELECT CONCAT(a.adres, ', ', a.postcode, ' ', a.plaats, ', ', a.land) as adres FROM dlnmr d, adres a, inschrijving i WHERE i.random_id = {$reference_sql} AND d.AdresId_FK = a.AdresId AND d.DlnmrId = i.DlnmrId_FK";
 $dlnmr['adres'] = select_query($adres_query, 0);
 d($adres_query, $dlnmr['adres']);
 $naam = $dlnmr['naam'];
@@ -138,8 +151,13 @@ switch ($dlnmr['betaalstatus']) {
 	case 'transfer':
 		$message .= "<p>Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. De aanbetaling bedraagt {$cursus['inschrijfgeld']} of de helft van het totaal verschuldigde cursusbedrag als dat lager is dan {$cursus['inschrijfgeld']} </p>\n";
 		break;
+	case 'failed':
+	case 'expired':
+	case 'canceled':
+		$message .= "<p>Je betaling via Mollie is niet geslaagd. We hebben je aanbetaling niet ontvangen. Je inschrijving wordt verwerkt zodra we de aanbetaling van {$cursus['inschrijfgeld']} hebben ontvangen op rekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht (BIC BUNQ NL2A). Neem bij vragen contact op met <a href=\"mailto:aanmelding@pellegrina.net\">aanmelding@pellegrina.net</a>.</p>\n";
+		break;
 	default:
-		$message .= "<p>We hebben je aanbetaling nog niet bevestigd. De betaling kan nog worden verwerkt. Als Mollie de betaling definitief als mislukt meldt, ontvang je daarover een aparte e-mail.<br>
+		$message .= "<p>We hebben je aanbetaling nog niet bevestigd.<br>
 			Je inschrijving wordt direct verwerkt als we de betaling van de aanbetaling van {$cursus['inschrijfgeld']} hebben ontvangen op onze bankrekening <strong>NL60 BUNQ 2177 4957 25</strong> ten name van La Pellegrina, Utrecht. Voor bankoverschrijvingen van buiten de EU: BIC BUNQ NL2A. Tsjechische deelnemers kunnen hun aanbetaling in CZK overmaken op <strong>rekening 375170575/0300 van ČSOB</strong> ten name van Horringa Dirk Johannes.</p>\n";
 		break;
 }
@@ -164,7 +182,6 @@ $mail_text = str_replace("</html>", stripslashes($message) . "</body></html>", $
 
 d($to, $naam, $subject, $mail_text);
 
-$booking_reference = isset($_GET['res']) ? preg_replace('/[^a-zA-Z0-9_-]/', '', $_GET['res']) : '';
 $mail_sent_dir = $_SERVER['DOCUMENT_ROOT'] . '/mail_sent';
 $mail_sent_file = $booking_reference !== '' ? $mail_sent_dir . '/' . $booking_reference . '.sent' : '';
 $mollie_id = (string) ($dlnmr['Mollie_ID'] ?? '');
@@ -172,7 +189,6 @@ $is_mollie_registration = preg_match('/^tr_[A-Za-z0-9]+$/', $mollie_id) === 1;
 $payment_confirmation_file = $is_mollie_registration
 	? $mail_sent_dir . '/payment-confirmation-' . preg_replace('/[^A-Za-z0-9_-]/', '', $mollie_id) . '.sent'
 	: '';
-$mail_sending_deferred = $is_mollie_registration && $dlnmr['betaalstatus'] !== 'paid';
 
 $db_mail_already_sent = isset($dlnmr['dankmail_verzonden']) && !empty($dlnmr['dankmail_verzonden']) && $dlnmr['dankmail_verzonden'] !== '0000-00-00' && $dlnmr['dankmail_verzonden'] !== '0000-00-00 00:00:00' && $dlnmr['dankmail_verzonden'] !== '0';
 $file_mail_already_sent = $mail_sent_file !== '' && file_exists($mail_sent_file);
@@ -182,11 +198,13 @@ $mail_already_sent = $db_mail_already_sent || $file_mail_already_sent
 $payment_mail_lock = false;
 $payment_mail_lock_failed = false;
 
-if ($mail_sent_file !== '' && !is_dir($mail_sent_dir)) {
-	@mkdir($mail_sent_dir, 0775, true);
+if ($mail_sent_file !== '' && !is_dir($mail_sent_dir) && !mkdir($mail_sent_dir, 0775, true) && !is_dir($mail_sent_dir)) {
+	error_log('Map voor dankmailstatus kon niet worden aangemaakt.');
+	if (!empty($confirmation_internal)) return;
+	exit('De e-mail kon niet worden verzonden.');
 }
 
-if (!$mail_sending_deferred && $is_mollie_registration) {
+if ($is_mollie_registration) {
 	$payment_mail_lock = fopen($payment_confirmation_file . '.lock', 'c');
 	if ($payment_mail_lock === false || !flock($payment_mail_lock, LOCK_EX)) {
 		if (is_resource($payment_mail_lock)) fclose($payment_mail_lock);
@@ -202,30 +220,38 @@ if (!$mail_sending_deferred && $is_mollie_registration) {
 
 // bericht ter bevestiging:
 if ($payment_mail_lock_failed) {
-	echo "De email is niet verzonden!<br>";
-} elseif (!$mail_sending_deferred && !$mail_already_sent) {
+	if (empty($confirmation_internal)) echo "De email is niet verzonden!<br>";
+} elseif (!$mail_already_sent) {
 	if (!empty($dlnmr) && !empty($to)) {
 		$mail_verstuurd = LPmail($to, $naam, $subject, $mail_text, 'aanmelding@pellegrina.net', 'LP Aanmelding');
 		if (!$mail_verstuurd) {
-			echo "De email is niet verzonden!<br>";
+			error_log('Dankmail kon niet worden verzonden voor boeking ' . $booking_reference);
+			if (empty($confirmation_internal)) echo "De email is niet verzonden!<br>";
 		} else {
+			$marker_saved = $mail_sent_file !== '' && file_put_contents($mail_sent_file, time(), LOCK_EX) !== false;
+			$db_saved = false;
 			if (isset($dlnmr['InschId']) && !empty($dlnmr['InschId'])) {
-				exec_query("UPDATE inschrijving SET dankmail_verzonden = NOW() WHERE InschId = " . intval($dlnmr['InschId']));
-			}
-			if ($mail_sent_file !== '') {
-				@file_put_contents($mail_sent_file, time());
+				$db_saved = exec_query("UPDATE inschrijving SET dankmail_verzonden = NOW() WHERE InschId = " . intval($dlnmr['InschId']));
 			}
 			if ($payment_confirmation_file !== '' && file_put_contents($payment_confirmation_file, date('c'), LOCK_EX) === false) {
 				error_log('Bevestigingsmail verzonden maar Mollie-marker kon niet worden opgeslagen voor betaling ' . $mollie_id);
 			}
+			if (!$marker_saved || !$db_saved) error_log('Verzendstatus van dankmail kon niet volledig worden opgeslagen voor boeking ' . $booking_reference);
+			$confirmation_success = $marker_saved || $db_saved;
 		}
+	} else {
+		error_log('Ontvanger voor dankmail ontbreekt voor boeking ' . $booking_reference);
 	}
-} elseif (!$mail_sending_deferred && $mail_already_sent) {
-	echo "<p>Dit bevestigingsmail is voor deze boeking al eerder verzonden.</p>";
+} elseif ($mail_already_sent) {
+	$confirmation_success = true;
 }
 if (is_resource($payment_mail_lock)) {
 	flock($payment_mail_lock, LOCK_UN);
 	fclose($payment_mail_lock);
+}
+if (!empty($confirmation_internal)) return;
+if (empty($confirmation_success) && !$payment_mail_lock_failed && !empty($mail_verstuurd)) {
+	echo "De verzendstatus van de e-mail kon niet worden opgeslagen.<br>";
 }
 ?>
 <!DOCTYPE HTML>
