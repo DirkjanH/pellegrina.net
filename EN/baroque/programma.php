@@ -104,6 +104,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         writing, colourful brass and woodwinds, expressive
                         solos, and vibrant choral fugues.</li>
                 </ul>
+                <p>The final selection of works will be made once it is known
+                    which singers and instrumentalists are participating in the
+                    course. This is to optimally tailor the repertoire to the
+                    available musicians.</p>
             </div>
         </div>
         <h2><a href="javascript: history.go(-1)">Back</a></h2>

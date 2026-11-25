@@ -105,6 +105,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             strijkerspartij, kleurrijk koper en hout, expressieve
             solo's en bruisende koorfuga's.</li>
         </ul>
+        <p>De definitieve keuze van werken wordt gemaakt zodra bekend is
+          welke zangers en instrumentaltisten aan de cursus deelnemen.
+          Dit om het repertoire optimaal af te stemmen op de aanwezige
+          musici.</p>
       </div>
     </div>
     <h2><a href="javascript: history.go(-1)">Terug</a></h2>
