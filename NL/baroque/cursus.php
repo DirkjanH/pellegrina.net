@@ -132,7 +132,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 instrumentalisten samen aan het programma 'Napolitaanse Barok'
                 voor iedereen. Centraal staan het <i>Te Deum</i> van Alessandro
                 Scarlatti en het <i>Laudate Pueri</i> van Nicola Porpora, beide
-                voor soli, koor en orkest (strijkers, blazers en BC). Dit
+                voor soli, koor en orkest (strijkers, blazers en BC). Ook
+                aria's uit Napolitaanse barokopera's komen aan bod. Dit
                 programma wordt in de kloosterkerk uitgevoerd als het
                 slotconcert van de cursus. Uiteraard zijn er eerst
                 groepsrepetities voor het koor en het orkest, en correpetitie

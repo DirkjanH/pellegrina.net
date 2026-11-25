@@ -86,7 +86,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           solisten en koor van onder andere Pergolesi, Scarlatti,
           Durante en Leo, dat als feestelijke afsluiting van de
           zomerschool wordt uitgevoerd in de kerk van klooster Nieuw
-          Sion.</li>
+          Sion. Ook aria's uit Napolitaanse barokopera's komen aan bod.</li>
         <li>Barokke kamermuziek elke ochtend voor instrumentale, vocale
           of gecombineerde vocaal-instrumentale ensembles</li>
         <li>In klooster Nieuw Sion, Diepenveen bij Deventer, met

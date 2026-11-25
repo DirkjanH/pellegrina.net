@@ -89,7 +89,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
           masterpieces for orchestra, soloists, and choir by, for
           example, Pergolesi, Scarlatti, Durante, and Leo, which will
           be performed in the Nieuw Sion monastery church as a festive
-          conclusion to the summer school.</li>
+          conclusion to the summer school. The programme also includes
+          arias from Neapolitan Baroque operas.</li>
         <li>Baroque chamber music every morning for instrumental, vocal
           or combined vocal-instrumental ensembles</li>
         <li>In monastery Nieuw Sion, Diepenveen near Deventer
