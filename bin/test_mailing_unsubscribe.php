@@ -201,7 +201,7 @@ try {
     checkUnsubscribe(str_contains($http_response_header[0] ?? '', '405'), 'Old POST requests must not execute mailing actions.');
     $sendUrl = 'http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=1';
     $form = file_get_contents($sendUrl);
-    checkUnsubscribe(str_contains($form, 'Mailing starten') && str_contains($form, 'Te verzenden mails:'), 'Statistics must show mailing controls and progress.');
+    checkUnsubscribe(str_contains($form, 'Mailing starten') && str_contains($form, 'aantal emails = 4'), 'Statistics must show mailing controls and progress.');
     checkUnsubscribe(preg_match('/name="csrf_token"\s+value="([^"]+)"/', $form, $csrf) === 1, 'Mailing confirmation token missing.');
     $cookie = '';
     foreach ($http_response_header as $header) {

@@ -268,8 +268,7 @@ if ($mailing) {
 			max-width: 1400px;
 		}
 
-		.verzendkop,
-		.verzendtotalen {
+		.verzendkop {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
@@ -335,8 +334,6 @@ if ($mailing) {
 		<?php if ($mailing_status !== null): ?>
 		<section>
 			<h2>Verzending</h2>
-			<p class="verzendtotalen"><span><strong>Totaal aantal mails:</strong> <?= h($mailing_status['totaal']) ?></span>
-				<span><strong>Te verzenden mails:</strong> <?= h($mailing_status['resterend']) ?></span></p>
 			<?php if ($taak && $taak['status'] === 'wacht'): ?>
 				<p>De mailing staat in de wachtrij. De server verwerkt deze in blokken van maximaal 40 mails.
 					Volgende poging vanaf: <?= h($taak['volgende_poging']) ?>.</p>
@@ -365,7 +362,6 @@ if ($mailing) {
 					</form>
 				<?php endif; ?>
 			<?php endif; ?>
-			<p>Je kunt deze pagina sluiten zodra de geplande taak op de server is ingesteld.</p>
 		</section>
 		<?php endif; ?>
 		<?php
