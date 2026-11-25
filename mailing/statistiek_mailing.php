@@ -264,6 +264,23 @@ if ($mailing) {
 
 	</script>
 	<style>
+		.mailing-statistieken {
+			max-width: 1400px;
+		}
+
+		.verzendkop,
+		.verzendtotalen {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 0.5em 1.5em;
+		}
+
+		.verzendkop h3,
+		.verzendkop form {
+			margin: 0;
+		}
+
 		.delete-mailing {
 			width: 1.5em;
 			height: 1.5em;
@@ -287,7 +304,7 @@ if ($mailing) {
 </head>
 
 <body>
-	<div class="w3-panel w3-content">
+	<div class="w3-panel w3-content mailing-statistieken">
 		<form id="form1" action="" method="post">
 			<input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
 			<?php foreach ($mailings as $m) {
@@ -306,19 +323,23 @@ if ($mailing) {
 		<?php endif; ?>
 		<?php if ($mailing): ?>
 		<h1><?= h($mailing['subject']) ?></h1>
-		<h3>Verzonden op <?= h($mailing['tijd_aanmaak']) ?></h3>
-		<?php if ($mailing_status !== null): ?>
-		<section>
-			<h2>Verzending</h2>
-			<p><strong>Totaal aantal mails:</strong> <?= h($mailing_status['totaal']) ?><br>
-				<strong>Te verzenden mails:</strong> <?= h($mailing_status['resterend']) ?></p>
-			<?php if ($taak && $taak['status'] === 'wacht'): ?>
-				<p>De mailing staat in de wachtrij. De server verwerkt deze in blokken van maximaal 40 mails.</p>
-				<p>Volgende poging vanaf: <?= h($taak['volgende_poging']) ?>.</p>
+		<div class="verzendkop">
+			<h3>Verzonden op <?= h($mailing['tijd_aanmaak']) ?></h3>
+			<?php if ($mailing_status !== null && $taak && $taak['status'] === 'wacht'): ?>
 				<form method="post" action="?mailing=<?= h($mailing_nr) ?>">
 					<input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
 					<button type="submit" name="actie" value="pauzeren">Mailing pauzeren</button>
 				</form>
+			<?php endif; ?>
+		</div>
+		<?php if ($mailing_status !== null): ?>
+		<section>
+			<h2>Verzending</h2>
+			<p class="verzendtotalen"><span><strong>Totaal aantal mails:</strong> <?= h($mailing_status['totaal']) ?></span>
+				<span><strong>Te verzenden mails:</strong> <?= h($mailing_status['resterend']) ?></span></p>
+			<?php if ($taak && $taak['status'] === 'wacht'): ?>
+				<p>De mailing staat in de wachtrij. De server verwerkt deze in blokken van maximaal 40 mails.
+					Volgende poging vanaf: <?= h($taak['volgende_poging']) ?>.</p>
 			<?php elseif ($taak && $taak['status'] === 'afgerond'): ?>
 				<p>Mailing afgehandeld.</p>
 			<?php else: ?>
@@ -354,7 +375,7 @@ if ($mailing) {
 		if (!$alles && $aantal_verzonden > 0) echo '; van verzonden ' . round(($aantal_niet_geopend / $aantal_verzonden) * 100, 1) . ' %)';
 		echo '<br>';
 		?>
-		<div id="chart_div" style="width: 900px; height: 500px;" class="w3-card-4 w3-margin-top"></div>
+		<div id="chart_div" style="width: 100%; max-width: 900px; height: 500px;" class="w3-card-4 w3-margin-top"></div>
 		<?php elseif ($mailing_nr): ?>
 		<p>Mailing bestaat niet.</p>
 		<?php endif; ?>

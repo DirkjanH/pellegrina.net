@@ -222,6 +222,12 @@ try {
     ]]);
     $result = file_get_contents($sendUrl, false, $context);
     checkUnsubscribe(str_contains($result, 'staat in de wachtrij') && !file_exists($root . '/sent'), 'POST must queue without sending.');
+    $page = new DOMDocument();
+    $page->loadHTML('<?xml encoding="UTF-8">' . $result, LIBXML_NOERROR | LIBXML_NOWARNING);
+    $xpath = new DOMXPath($page);
+    checkUnsubscribe($xpath->query('//div[contains(concat(" ", normalize-space(@class), " "), " verzendkop ")]/h3')->length === 1
+        && $xpath->query('//div[contains(concat(" ", normalize-space(@class), " "), " verzendkop ")]/form/button[@value="pauzeren"]')->length === 1,
+        'The pause action must appear alongside the sending date.');
     $db->sqliteCreateFunction('GET_LOCK', static fn($name, $timeout) => 0);
     checkUnsubscribe(!mailingVerwerkWachtrij($db, static fn() => new LPmailer()) && !file_exists($root . '/sent'), 'A busy worker lock must prevent sending.');
     $db->sqliteCreateFunction('GET_LOCK', static fn($name, $timeout) => 1);
