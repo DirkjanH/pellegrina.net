@@ -106,7 +106,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             solo's en bruisende koorfuga's.</li>
         </ul>
         <p>De definitieve keuze van werken wordt gemaakt zodra bekend is
-          welke zangers en instrumentaltisten aan de cursus deelnemen.
+          welke zangers en instrumentalisten aan de cursus deelnemen.
           Dit om het repertoire optimaal af te stemmen op de aanwezige
           musici.</p>
       </div>
