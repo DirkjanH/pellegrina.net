@@ -200,7 +200,6 @@ if ($mailing) {
 	d($jsonTable);
 } //if ($mailing_nr > 0)
 ?>
-
 <!DOCTYPE HTML>
 <html>
 
@@ -211,7 +210,8 @@ if ($mailing) {
 	<meta http-equiv="refresh" content="900">
 	<title>Statistieken mailings</title>
 	<link href="/css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript"
+		src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript">
 		google.charts.load("current", {
 			packages: ["corechart"],
@@ -254,14 +254,12 @@ if ($mailing) {
 					title: 'aantal emails'
 				}
 			};
-
 			// Create our data table out of JSON data loaded from server.
 			var data = new google.visualization.DataTable(<?php echo $jsonTable ?>);
-
-			var chart = new google.visualization.<?php echo $chartType; ?>(document.getElementById('chart_div'));
+			var chart = new google.visualization.<?php echo $chartType; ?>(document
+				.getElementById('chart_div'));
 			chart.draw(data, options);
 		}
-
 	</script>
 	<style>
 		.mailing-statistieken {
@@ -299,86 +297,81 @@ if ($mailing) {
 			background: #a51f1f;
 		}
 	</style>
-
 </head>
 
 <body>
 	<div class="w3-panel w3-content mailing-statistieken">
 		<form id="form1" action="" method="post">
-			<input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
-			<?php foreach ($mailings as $m) {
-				$id = (int) ($m['MAILINGiD'] ?? $m['mailingId']);
-				$totaal = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$id}", 0);
-				$geopend = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$id} AND tijd_geopend IS NOT NULL", 0);
-				d($geopend, $totaal);
-				$percentage_geopend = $totaal > 0 ? ' (' . round(($geopend / $totaal) * 100, 1) . ' %)' : '';
-				echo '<p class="w3-small"><a class="w3-light-green w3-border-green" href="?mailing=' . $id . '">' . $id . '</a> '
-					. h($m['subject']) . h($percentage_geopend)
-					. ' <button type="submit" class="delete-mailing" name="delete_mailing" value="' . $id . '" aria-label="Mailing wissen" title="Mailing wissen" onclick="return confirm(\'Deze mailing en alle bijbehorende adressen definitief wissen?\');">&times;</button></p>' . PHP_EOL;
-			} ?>
-		</form>
-		<?php if ($actieFout !== ''): ?>
-			<p><strong><?= h($actieFout) ?></strong></p>
-		<?php endif; ?>
-		<?php if ($mailing): ?>
-		<h1><?= h($mailing['subject']) ?></h1>
-		<div class="verzendkop">
-			<h3>Verzonden op <?= h($mailing['tijd_aanmaak']) ?></h3>
-			<?php if ($mailing_status !== null && $taak && $taak['status'] === 'wacht'): ?>
-				<form method="post" action="?mailing=<?= h($mailing_nr) ?>">
-					<input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
-					<button type="submit" name="actie" value="pauzeren">Mailing pauzeren</button>
-				</form>
-			<?php endif; ?>
-		</div>
-		<?php if ($mailing_status !== null): ?>
-		<section>
-			<h2>Verzending</h2>
-			<?php if ($taak && $taak['status'] === 'wacht'): ?>
-				<p>De mailing staat in de wachtrij. De server verwerkt deze in blokken van maximaal 40 mails.
-					Volgende poging vanaf: <?= h($taak['volgende_poging']) ?>.</p>
-			<?php elseif ($taak && $taak['status'] === 'afgerond'): ?>
-				<p>Mailing afgehandeld.</p>
-			<?php else: ?>
-				<?php if ($taak && $taak['status'] === 'gestopt'): ?>
-					<p>De verzending is gestopt: <?= h($taak['laatste_fout']) ?></p>
-					<?php if ($taak['bezig_adres'] !== null): ?>
-						<p>Het is onzeker of het bericht aan <?= h($onzekerAdres ?: 'mailadresId ' . $taak['bezig_adres']) ?> is afgeleverd. Controleer de maillogs en los de fout op voordat je een keuze maakt.</p>
-						<form method="post" action="?mailing=<?= h($mailing_nr) ?>">
-							<input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
-							<button type="submit" name="actie" value="opnieuw" onclick="return confirm('Opnieuw proberen kan een dubbele mail veroorzaken. Doorgaan?')">Opnieuw proberen en hervatten</button>
-							<button type="submit" name="actie" value="registreren" onclick="return confirm('Alleen kiezen als de mail daadwerkelijk verzonden is. Doorgaan?')">Als verzonden registreren en hervatten</button>
-						</form>
-					<?php else: ?>
-						<p>Los de fout op voordat je de mailing hervat.</p>
-					<?php endif; ?>
-				<?php elseif ($taak && $taak['status'] === 'gepauzeerd'): ?>
-					<p>De mailing is gepauzeerd.</p>
-				<?php endif; ?>
-				<?php if (!$taak || $taak['bezig_adres'] === null): ?>
+			<input type="hidden" name="csrf_token"
+				value="<?= h($_SESSION['mailing_csrf']) ?>"> <?php foreach ($mailings as $m) {
+																	$id = (int) ($m['MAILINGiD'] ?? $m['mailingId']);
+																	$totaal = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$id}", 0);
+																	$geopend = select_query("SELECT count(*) as aantal FROM mailing_adressen WHERE mailingId_FK = {$id} AND tijd_geopend IS NOT NULL", 0);
+																	d($geopend, $totaal);
+																	$percentage_geopend = $totaal > 0 ? ' (' . round(($geopend / $totaal) * 100, 1) . ' %)' : '';
+																	echo '<p class="w3-small"><a class="w3-light-green w3-border-green" href="?mailing=' . $id . '">' . $id . '</a> '
+																		. h($m['subject']) . h($percentage_geopend)
+																		. ' <button type="submit" class="delete-mailing" name="delete_mailing" value="' . $id . '" aria-label="Mailing wissen" title="Mailing wissen" onclick="return confirm(\'Deze mailing en alle bijbehorende adressen definitief wissen?\');">&times;</button></p>' . PHP_EOL;
+																} ?>
+		</form> <?php if ($actieFout !== ''): ?> <p>
+				<strong><?= h($actieFout) ?></strong>
+			</p> <?php endif; ?> <?php if ($mailing): ?> <h1>
+				<?= h($mailing['subject']) ?></h1>
+			<div class="verzendkop">
+				<h3>Verzonden op <?= h($mailing['tijd_aanmaak']) ?></h3>
+				<?php if ($mailing_status !== null && $taak && $taak['status'] === 'wacht'): ?>
 					<form method="post" action="?mailing=<?= h($mailing_nr) ?>">
-						<input type="hidden" name="csrf_token" value="<?= h($_SESSION['mailing_csrf']) ?>">
-						<button type="submit" name="actie" value="starten"><?= $taak ? 'Mailing hervatten' : 'Mailing starten' ?></button>
-					</form>
-				<?php endif; ?>
-			<?php endif; ?>
-		</section>
-		<?php endif; ?>
-		<?php
-		echo 'aantal emails = ' . $aantal . ' | ';
-		if (!$alles && $aantal > 0) echo 'aantal verzonden emails = ' . $aantal_verzonden . ' (' . round(($aantal_verzonden / $aantal) * 100, 1) . ' %) | ';
-		echo 'aantal geopende emails = ' . $aantal_niet_geopend . ' (' . ($aantal > 0 ? round(($aantal_niet_geopend / $aantal) * 100, 1) : 0) . ' %)';
-		if (!$alles && $aantal_verzonden > 0) echo '; van verzonden ' . round(($aantal_niet_geopend / $aantal_verzonden) * 100, 1) . ' %)';
-		echo '<br>';
-		?>
-		<div id="chart_div" style="width: 100%; max-width: 900px; height: 500px;" class="w3-card-4 w3-margin-top"></div>
-		<?php elseif ($mailing_nr): ?>
-		<p>Mailing bestaat niet.</p>
-		<?php endif; ?>
-		<p class="w3-small w3-text-grey">laatste verversing: <?php echo strftime("%c"); ?></p>
-	</div>
-
-	<?php ob_end_flush(); ?>
+						<input type="hidden" name="csrf_token"
+							value="<?= h($_SESSION['mailing_csrf']) ?>">
+						<button type="submit" name="actie" value="pauzeren">Mailing
+							pauzeren</button>
+					</form> <?php endif; ?>
+			</div> <?php if ($mailing_status !== null): ?> <section>
+					<?php if ($taak && $taak['status'] === 'wacht'): ?> <p>De mailing
+							staat in de wachtrij. De server verwerkt deze in blokken van
+							maximaal 40 mails. Volgende poging vanaf:
+							<?= h($taak['volgende_poging']) ?>.</p>
+					<?php elseif ($taak && $taak['status'] === 'afgerond'): ?> <p>
+							Mailing afgehandeld.</p> <?php else: ?>
+						<?php if ($taak && $taak['status'] === 'gestopt'): ?> <p>De
+								verzending is gestopt: <?= h($taak['laatste_fout']) ?></p>
+							<?php if ($taak['bezig_adres'] !== null): ?> <p>Het is onzeker of
+									het bericht aan
+									<?= h($onzekerAdres ?: 'mailadresId ' . $taak['bezig_adres']) ?>
+									is afgeleverd. Controleer de maillogs en los de fout op voordat
+									je een keuze maakt.</p>
+								<form method="post" action="?mailing=<?= h($mailing_nr) ?>">
+									<input type="hidden" name="csrf_token"
+										value="<?= h($_SESSION['mailing_csrf']) ?>">
+									<button type="submit" name="actie" value="opnieuw"
+										onclick="return confirm('Opnieuw proberen kan een dubbele mail veroorzaken. Doorgaan?')">Opnieuw
+										proberen en hervatten</button>
+									<button type="submit" name="actie" value="registreren"
+										onclick="return confirm('Alleen kiezen als de mail daadwerkelijk verzonden is. Doorgaan?')">Als
+										verzonden registreren en hervatten</button>
+								</form> <?php else: ?> <p>Los de fout op voordat je de mailing
+									hervat.</p> <?php endif; ?>
+						<?php elseif ($taak && $taak['status'] === 'gepauzeerd'): ?> <p>De
+								mailing is gepauzeerd.</p> <?php endif; ?>
+						<?php if (!$taak || $taak['bezig_adres'] === null): ?> <form
+								method="post" action="?mailing=<?= h($mailing_nr) ?>">
+								<input type="hidden" name="csrf_token"
+									value="<?= h($_SESSION['mailing_csrf']) ?>">
+								<button type="submit" name="actie"
+									value="starten"><?= $taak ? 'Mailing hervatten' : 'Mailing starten' ?></button>
+							</form> <?php endif; ?> <?php endif; ?>
+				</section> <?php endif; ?> <?php
+											echo 'Totaal aantal emails = ' . $aantal . ' | ';
+											if (!$alles && $aantal > 0) echo 'aantal verzonden emails = ' . $aantal_verzonden . ' (' . round(($aantal_verzonden / $aantal) * 100, 1) . ' %) | ';
+											echo 'aantal geopende emails = ' . $aantal_niet_geopend . ' (' . ($aantal > 0 ? round(($aantal_niet_geopend / $aantal) * 100, 1) : 0) . ' %)';
+											if (!$alles && $aantal_verzonden > 0) echo '; van verzonden ' . round(($aantal_niet_geopend / $aantal_verzonden) * 100, 1) . ' %)';
+											echo '<br>';
+											?> <div id="chart_div" style="width: 100%; max-width: 900px; height: 500px;"
+				class="w3-card-4 w3-margin-top"></div>
+		<?php elseif ($mailing_nr): ?> <p>Mailing bestaat niet.</p>
+		<?php endif; ?> <p class="w3-small w3-text-grey">laatste verversing:
+			<?php echo strftime("%c"); ?></p>
+	</div> <?php ob_end_flush(); ?>
 </body>
 
 </html>
