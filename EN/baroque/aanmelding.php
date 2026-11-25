@@ -315,21 +315,21 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/includes/ToggleText.php');
                     <td class="linkerkolom"><input type="checkbox" name="hotel_2pp" id="hotel_2pp" value="1"
                             <?php if (isset($_POST["hotel_2pp"]) and $_POST["hotel_2pp"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I would prefer a place in a double room with private bathroom facilities in the Gatehouse (Poortgebouw) <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_2pp"]); ?> per person; limited availability)</span></td>
+                    <td>I prefer a place in a double room with private bathroom facilities in the Gatehouse (Poortgebouw) <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_2pp"]); ?> per person; limited availability)</span></td>
                 </tr>
                 <tr>
                     <td class="linkerkolom"><input type="checkbox"
                             name="eenpersoons" id="eenpersoons" value="1"
                             <?php if (isset($_POST["eenpersoons"]) and $_POST["eenpersoons"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I would prefer a single room in the Guest House (Gastenverblijf) <span class="nadruk">(additional charge
+                    <td>I prefer a single room in the Guest House (Gastenverblijf) <span class="nadruk">(additional charge
                             <?php echo euro($cursusdata["eenpers"]); ?>; limited availability)</span></td>
                 </tr>
                 <tr>
                     <td class="linkerkolom"><input type="checkbox" name="hotel_1pp" id="hotel_1pp" value="1"
                             <?php if (isset($_POST["hotel_1pp"]) and $_POST["hotel_1pp"] == 1) echo "checked"; ?>>
                     </td>
-                    <td>I would prefer a single room in the Gatehouse (Poortgebouw) <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_1pp"]) ?>; limited
+                    <td>I prefer a single room in the Gatehouse (Poortgebouw) <span class="nadruk">(additional charge <?php echo euro($cursusdata["hotel_1pp"]) ?>; limited
                             availability)</span></td>
                 </tr>
                 <tr>

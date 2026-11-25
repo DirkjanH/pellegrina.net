@@ -1,0 +1,6 @@
+{
+	"chat.tools.eligibleForAutoApproval": {
+		"php bin\\\\test_payment_confirmation.php": true,
+		"php bin\\\\test_registration_voices.php": true
+	}
+}
