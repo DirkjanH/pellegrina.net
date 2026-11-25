@@ -1108,7 +1108,7 @@ if (empty($_SESSION['mailing_authenticated'])) {
 					echo '<strong>Mailing nr. ' . $mailingId_FK . ' is klaargezet.</strong>';
 					echo '<span>Totaal aantal adressen: ' . ($mailing_aantal ?? 0) . '</span>';
 					echo '<a href="toon%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Toon mailing</a>';
-					echo '<a href="send%20mailing.php?mailing=' . $mailingId_FK . '" target="_blank">Send mailing</a>';
+					echo '<a href="statistiek_mailing.php?mailing=' . (int) $mailingId_FK . '" target="_blank">Verzending beheren</a>';
 					echo '</div>';
 					echo '<div class="mailing-result-names">';
 					foreach ($mailing_namen as $naam) {

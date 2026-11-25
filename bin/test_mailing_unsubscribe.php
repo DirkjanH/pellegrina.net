@@ -21,6 +21,7 @@ if (($argv[1] ?? '') === '--request') {
 
 require $repository . '/vendor/autoload.php';
 require $repository . '/includes/mailing_afmelden.php';
+date_default_timezone_set('Europe/Amsterdam');
 
 function checkUnsubscribe($condition, $message) {
     if (!$condition) throw new RuntimeException($message);
@@ -44,8 +45,16 @@ mkdir($root);
 mkdir($root . '/connections');
 mkdir($root . '/includes');
 mkdir($root . '/vendor');
-file_put_contents($root . '/connections/connect_PDO.php',
-    '<?php $db = new PDO("sqlite:" . $_SERVER["DOCUMENT_ROOT"] . "/db.sqlite"); $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);');
+file_put_contents($root . '/connections/connect_PDO.php', <<<'PHP'
+<?php
+$db = new PDO('sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/db.sqlite');
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$db->sqliteCreateFunction('GET_LOCK', static fn($name, $timeout) => 1);
+$db->sqliteCreateFunction('RELEASE_LOCK', static fn($name) => 1);
+$db->sqliteCreateFunction('UNIX_TIMESTAMP', static fn($date) => $date === null ? null : strtotime($date));
+PHP);
+file_put_contents($root . '/includes/functies.php',
+    '<?php require ' . var_export($repository . '/includes/functies.php', true) . ';');
 file_put_contents($root . '/includes/mailing_afmelden.php',
     '<?php require ' . var_export($repository . '/includes/mailing_afmelden.php', true) . ';');
 file_put_contents($root . '/includes/mailing_verzenden.php',
@@ -54,7 +63,9 @@ file_put_contents($root . '/afmelden.php',
     '<?php require ' . var_export($repository . '/algemeen/afmelden.php', true) . ';');
 file_put_contents($root . '/send.php',
     '<?php require ' . var_export($repository . '/mailing/send mailing.php', true) . ';');
-file_put_contents($root . '/vendor/autoload.php', '<?php class Kint { public static $enabled_mode; }');
+file_put_contents($root . '/statistiek_mailing.php',
+    '<?php require ' . var_export($repository . '/mailing/statistiek_mailing.php', true) . ';');
+file_put_contents($root . '/vendor/autoload.php', '<?php class Kint { public static $enabled_mode; } function d(...$args) {}');
 file_put_contents($root . '/includes/includes2027.php', <<<'PHP'
 <?php
 session_start();
@@ -93,7 +104,7 @@ try {
     require $root . '/includes/mailfuncties.inc.php';
     require $repository . '/includes/mailing_verzenden.php';
     $db->exec('CREATE TABLE mailing_afmeldingen (email TEXT PRIMARY KEY, token TEXT NOT NULL UNIQUE, afgemeld_op TEXT)');
-    $db->exec('CREATE TABLE mailing_adressen (mailadresId INTEGER PRIMARY KEY, mailingId_FK INTEGER, naam TEXT, voornaam TEXT, email TEXT, cursus TEXT, password TEXT, DlnmrId TEXT, kenmerk TEXT, tijd_verzonden TEXT)');
+    $db->exec('CREATE TABLE mailing_adressen (mailadresId INTEGER PRIMARY KEY, mailingId_FK INTEGER, naam TEXT, voornaam TEXT, email TEXT, cursus TEXT, password TEXT, DlnmrId TEXT, kenmerk TEXT, tijd_verzonden TEXT, tijd_geopend TEXT)');
     $db->exec('CREATE TABLE mailing_opdrachten (mailingId INTEGER PRIMARY KEY, message TEXT, subject TEXT, `From` TEXT, FromName TEXT, CC TEXT, verzonden_mails INTEGER, tijd_aanmaak TEXT, log TEXT)');
     $db->exec('CREATE TABLE mailing_verzendtaken (mailing_id INTEGER PRIMARY KEY, status TEXT, volgende_poging TEXT, laatste_fout TEXT, bezig_adres INTEGER)');
     $db->exec("CREATE TABLE mailing_verzendklok (id INTEGER PRIMARY KEY, volgende_blok TEXT); INSERT INTO mailing_verzendklok VALUES (1, '2000-01-01 00:00:00')");
@@ -179,8 +190,18 @@ try {
     checkUnsubscribe((int) mailingAfmeldVerzendStatus($db, 2)['resterend'] === 0, 'Unsubscribes must apply to other mailings too.');
     $stmt = $db->prepare('INSERT INTO mailing_opdrachten VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)');
     $stmt->execute([1, $encodedHtml, 'Test', 'info@pellegrina.net', 'La Pellegrina', '', 1, '2026-01-01', '']);
-    $sendUrl = 'http://127.0.0.1:' . $port . '/send.php?mailing=1';
+    $legacyUrl = 'http://127.0.0.1:' . $port . '/send.php?mailing=1';
+    $noRedirect = stream_context_create(['http' => ['follow_location' => 0, 'ignore_errors' => true]]);
+    file_get_contents($legacyUrl, false, $noRedirect);
+    checkUnsubscribe(str_contains($http_response_header[0] ?? '', '302')
+        && in_array('Location: statistiek_mailing.php?mailing=1', $http_response_header, true)
+        && !file_exists($root . '/sent'), 'Old links must redirect to statistics without starting a mailing.');
+    $legacyPost = stream_context_create(['http' => ['method' => 'POST', 'ignore_errors' => true]]);
+    file_get_contents($legacyUrl, false, $legacyPost);
+    checkUnsubscribe(str_contains($http_response_header[0] ?? '', '405'), 'Old POST requests must not execute mailing actions.');
+    $sendUrl = 'http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=1';
     $form = file_get_contents($sendUrl);
+    checkUnsubscribe(str_contains($form, 'Mailing starten') && str_contains($form, 'Te verzenden mails:'), 'Statistics must show mailing controls and progress.');
     checkUnsubscribe(preg_match('/name="csrf_token"\s+value="([^"]+)"/', $form, $csrf) === 1, 'Mailing confirmation token missing.');
     $cookie = '';
     foreach ($http_response_header as $header) {
@@ -189,7 +210,7 @@ try {
     checkUnsubscribe($cookie !== '', 'Mailing session cookie missing.');
     $invalidContext = stream_context_create(['http' => [
         'method' => 'POST', 'header' => "Content-Type: application/x-www-form-urlencoded\r\nCookie: {$cookie}\r\n",
-        'content' => http_build_query(['csrf_token' => 'invalid']), 'ignore_errors' => true,
+        'content' => http_build_query(['csrf_token' => 'invalid', 'actie' => 'starten']), 'ignore_errors' => true,
     ]]);
     file_get_contents($sendUrl, false, $invalidContext);
     checkUnsubscribe(str_contains($http_response_header[0] ?? '', '403')
@@ -197,7 +218,7 @@ try {
         'Invalid CSRF tokens must not queue a mailing.');
     $context = stream_context_create(['http' => [
         'method' => 'POST', 'header' => "Content-Type: application/x-www-form-urlencoded\r\nCookie: {$cookie}\r\n",
-        'content' => http_build_query(['csrf_token' => $csrf[1]]), 'ignore_errors' => true,
+        'content' => http_build_query(['csrf_token' => $csrf[1], 'actie' => 'starten']), 'ignore_errors' => true,
     ]]);
     $result = file_get_contents($sendUrl, false, $context);
     checkUnsubscribe(str_contains($result, 'staat in de wachtrij') && !file_exists($root . '/sent'), 'POST must queue without sending.');
@@ -217,7 +238,12 @@ try {
     for ($i = 0; $i < 41; $i++) {
         $insert->execute(['Name', 'Name', 'user' . $i . '@example.org', '', '', '', 'track']);
     }
-    mailingInWachtrij($db, 3);
+    $resumeContext = stream_context_create(['http' => [
+        'method' => 'POST', 'header' => "Content-Type: application/x-www-form-urlencoded\r\nCookie: {$cookie}\r\n",
+        'content' => http_build_query(['csrf_token' => $csrf[1], 'actie' => 'starten']), 'ignore_errors' => true,
+    ]]);
+    $resumeResult = file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=3', false, $resumeContext);
+    checkUnsubscribe(str_contains($resumeResult, 'staat in de wachtrij'), 'A second mailing must be selectable and queueable from statistics.');
     checkUnsubscribe(!mailingVerwerkWachtrij($db, static fn() => new LPmailer()), 'The global pause must also apply to another mailing.');
     $db->exec("UPDATE mailing_verzendklok SET volgende_blok = '2000-01-01 00:00:00' WHERE id = 1");
     checkUnsubscribe(mailingVerwerkWachtrij($db, static fn() => new LPmailer()), 'First block was not processed.');
@@ -227,10 +253,11 @@ try {
         'method' => 'POST', 'header' => "Content-Type: application/x-www-form-urlencoded\r\nCookie: {$cookie}\r\n",
         'content' => http_build_query(['csrf_token' => $csrf[1], 'actie' => 'pauzeren']), 'ignore_errors' => true,
     ]]);
-    $pauseResult = file_get_contents('http://127.0.0.1:' . $port . '/send.php?mailing=3', false, $pauseContext);
+    $pauseResult = file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=3', false, $pauseContext);
     checkUnsubscribe(str_contains($pauseResult, 'mailing is gepauzeerd'), 'A queued mailing must be pausable from the browser.');
     checkUnsubscribe($db->query('SELECT status FROM mailing_verzendtaken WHERE mailing_id = 3')->fetchColumn() === 'gepauzeerd', 'Pause must persist.');
-    mailingInWachtrij($db, 3);
+    $resumeResult = file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=3', false, $resumeContext);
+    checkUnsubscribe(str_contains($resumeResult, 'staat in de wachtrij'), 'A paused mailing must be resumable from statistics.');
     checkUnsubscribe(!mailingVerwerkWachtrij($db, static fn() => new LPmailer()), 'Requeueing must not bypass the delay.');
     $db->exec("UPDATE mailing_verzendtaken SET volgende_poging = '2000-01-01 00:00:00' WHERE mailing_id = 3");
     $db->exec("UPDATE mailing_verzendklok SET volgende_blok = '2000-01-01 00:00:00' WHERE id = 1");
@@ -249,6 +276,11 @@ try {
     }
     checkUnsubscribe($db->query('SELECT status FROM mailing_verzendtaken WHERE mailing_id = 4')->fetchColumn() === 'gestopt', 'A failed mailing must pause.');
     checkUnsubscribe(!mailingVerwerkWachtrij($db, static fn() => new LPmailer()), 'A paused mailing must not be retried automatically.');
+    $failurePage = file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=4');
+    checkUnsubscribe(str_contains($failurePage, 'failure@example.org')
+        && str_contains($failurePage, 'Opnieuw proberen en hervatten')
+        && str_contains($failurePage, 'Als verzonden registreren en hervatten'),
+        'Statistics must show uncertain delivery and both resolution options.');
     try {
         mailingInWachtrij($db, 4);
         throw new RuntimeException('Uncertain mail was resumed without a decision.');
@@ -269,9 +301,20 @@ try {
         'method' => 'POST', 'header' => "Content-Type: application/x-www-form-urlencoded\r\nCookie: {$cookie}\r\n",
         'content' => http_build_query(['csrf_token' => $csrf[1], 'actie' => 'registreren']), 'ignore_errors' => true,
     ]]);
-    $resolveResult = file_get_contents('http://127.0.0.1:' . $port . '/send.php?mailing=4', false, $resolveContext);
+    $resolveResult = file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=4', false, $resolveContext);
     checkUnsubscribe(str_contains($resolveResult, 'staat in de wachtrij'), 'An administrator must be able to confirm an uncertain delivery.');
     checkUnsubscribe((int) mailingAfmeldVerzendStatus($db, 4)['resterend'] === 0, 'Confirmed delivery must be recorded before resumption.');
+    $stmt->execute([5, $html, 'Empty', 'info@pellegrina.net', 'La Pellegrina', '', 0, '2026-01-01', '']);
+    $emptyPage = file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=5');
+    checkUnsubscribe(str_contains($emptyPage, 'Mailing starten') && str_contains($emptyPage, 'aantal emails = 0'),
+        'Statistics must work before any recipients have been sent.');
+    $deleteContext = stream_context_create(['http' => [
+        'method' => 'POST', 'header' => "Content-Type: application/x-www-form-urlencoded\r\nCookie: {$cookie}\r\n",
+        'content' => http_build_query(['csrf_token' => $csrf[1], 'delete_mailing' => 5]), 'ignore_errors' => true,
+    ]]);
+    file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=5', false, $deleteContext);
+    checkUnsubscribe((int) $db->query('SELECT COUNT(*) FROM mailing_opdrachten WHERE mailingId = 5')->fetchColumn() === 0,
+        'Deleting a mailing from statistics must still work.');
     try {
         mailingAfmeldToken($db, 'first@example.org');
         throw new RuntimeException('Unsubscribed address was allowed to receive a token.');
@@ -289,7 +332,7 @@ try {
     $insert = null;
     $db = null;
     gc_collect_cycles();
-    foreach (['status', 'db.sqlite', 'server.log', 'sent', 'afmelden.php', 'send.php', 'connections/connect_PDO.php', 'includes/mailing_afmelden.php', 'includes/mailing_verzenden.php', 'includes/includes2027.php', 'includes/mailfuncties.inc.php', 'vendor/autoload.php'] as $file) {
+    foreach (['status', 'db.sqlite', 'server.log', 'sent', 'afmelden.php', 'send.php', 'statistiek_mailing.php', 'connections/connect_PDO.php', 'includes/functies.php', 'includes/mailing_afmelden.php', 'includes/mailing_verzenden.php', 'includes/includes2027.php', 'includes/mailfuncties.inc.php', 'vendor/autoload.php'] as $file) {
         $path = $root . '/' . $file;
         if (file_exists($path)) unlink($path);
     }

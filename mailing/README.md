@@ -17,7 +17,7 @@ Voor RFC 8058 moet de DKIM-handtekening **beide** afmeldheaders ondertekenen. La
    ```
 
    De cronaccount moet de webbestanden en databaseconfiguratie kunnen lezen, database- en SMTP-toegang hebben en naar het privélog kunnen schrijven. PHP heeft dezelfde extensies nodig als de website, waaronder PDO MySQL en OpenSSL. Controleer het cronlog en test met een kleine testmailing.
-4. Open bij een nieuwe mailing **Send mailing**, of bij een bestaande mailing **Verzending beheren** in de mailingstatistieken. Klik op **Mailing starten** of **Mailing hervatten**. De computer en browser hoeven daarna niet aan te blijven. De voortgang en eventuele fouten zijn op dezelfde pagina te zien.
+4. Open bij een nieuwe mailing **Verzending beheren**, of selecteer een bestaande mailing in de mailingstatistieken. Klik op **Mailing starten** of **Mailing hervatten**. De computer en browser hoeven daarna niet aan te blijven. De voortgang en eventuele fouten zijn op dezelfde pagina te zien.
 
 De werker verstuurt maximaal 40 berichten per blok en wacht na ieder blok minstens 15 minuten voordat een volgend blok begint, ook voor een andere mailing. Een databasevergrendeling voorkomt dat twee werkers tegelijk versturen. Via de beheerpagina kan de mailing tussen blokken worden gepauzeerd. Een fout stopt de mailing; los de fout op en hervat handmatig. Als de cronjob niet is ingesteld of niet werkt, blijft de mailing in de wachtrij staan.
 
