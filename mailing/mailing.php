@@ -1424,8 +1424,9 @@ if (empty($_SESSION['mailing_authenticated'])) {
 			var wrapper = document.getElementById('berichten_wrapper');
 			var knop = document.getElementById('berichten_openen');
 			var knopPositie = knop.getBoundingClientRect();
-			wrapper.style.top = (knopPositie.bottom + 4) + 'px';
-			wrapper.style.left = knopPositie.left + 'px';
+			var afmetingen = wrapper.getBoundingClientRect();
+			wrapper.style.top = Math.max(10, Math.min(knopPositie.bottom + 4, window.innerHeight - afmetingen.height - 10)) + 'px';
+			wrapper.style.left = Math.max(10, Math.min(knopPositie.left, window.innerWidth - afmetingen.width - 10)) + 'px';
 		}
 		document.addEventListener('DOMContentLoaded', function() {
 			if (document.getElementById('berichten_wrapper').classList
@@ -1457,9 +1458,11 @@ if (empty($_SESSION['mailing_authenticated'])) {
 		#mailing_logout_form {
 			display: flex;
 			justify-content: flex-end;
+			gap: 8px;
 			margin-bottom: 8px;
 		}
 
+		#mailing_logout_form a,
 		#mailing_logout_form button {
 			padding: 6px 12px;
 			border: 1px solid #378dbf;
@@ -1468,8 +1471,11 @@ if (empty($_SESSION['mailing_authenticated'])) {
 			color: #003465;
 			font: inherit;
 			cursor: pointer;
+			text-decoration: none;
 		}
 
+		#mailing_logout_form a:hover,
+		#mailing_logout_form a:focus-visible,
 		#mailing_logout_form button:hover,
 		#mailing_logout_form button:focus-visible {
 			background: #82bada;
@@ -1689,6 +1695,98 @@ if (empty($_SESSION['mailing_authenticated'])) {
 		#message_area.editor-fullscreen .cke_contents iframe {
 			height: 100% !important;
 		}
+
+		@media (max-width: 700px) {
+			html,
+			body {
+				height: auto;
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+
+			#mailing_logout_form {
+				flex-wrap: wrap;
+			}
+
+			#message_area:not(.editor-fullscreen) {
+				height: auto;
+				overflow: visible;
+			}
+
+			#message_area input[type="text"],
+			#message_area input[type="file"],
+			#message_area textarea {
+				max-width: 100%;
+				box-sizing: border-box;
+			}
+
+			#message_area #subject,
+			#message_area #outlook {
+				width: 100%;
+			}
+
+			#message_area button,
+			#message_area input[type="submit"] {
+				min-height: 36px;
+				margin-block: 2px;
+			}
+
+			#message_area .cke {
+				max-width: 100%;
+			}
+
+			#message_area .cke_top {
+				max-width: 100%;
+				overflow-x: auto;
+			}
+
+			#message_area.editor-fullscreen .cke_top {
+				max-height: 35vh;
+				max-height: 35dvh;
+				overflow: auto;
+			}
+
+			.ontvanger-selectie,
+			.ontvanger-selectie tbody {
+				display: block;
+				width: 100%;
+			}
+
+			.ontvanger-selectie tr {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.ontvanger-selectie td {
+				display: block;
+			}
+
+			.ontvanger-selectie td:last-child {
+				flex: 1 1 100%;
+				min-width: 0;
+			}
+
+			#outlookveld table,
+			#attachments table {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			#attachments th:first-child {
+				width: 25%;
+			}
+
+			#attachments input[type="file"] {
+				width: 100%;
+			}
+
+			.kolom {
+				float: none;
+				width: 100%;
+				font-size: 90%;
+				overflow-wrap: anywhere;
+			}
+		}
 		-->
 	</style>
 </head>
@@ -1697,6 +1795,7 @@ if (empty($_SESSION['mailing_authenticated'])) {
 	<form id="mailing_logout_form" method="post" action="/mailing/mailing.php">
 		<input type="hidden" name="logout_csrf_token"
 			value="<?= htmlspecialchars($_SESSION['mailing_logout_csrf'], ENT_QUOTES, 'UTF-8') ?>">
+		<a href="statistiek_mailing.php" target="_blank" rel="noopener">Mailingstatistieken</a>
 		<button type="submit" name="mailing_action"
 			value="logout">Uitloggen</button>
 	</form>
@@ -1763,7 +1862,7 @@ if (empty($_SESSION['mailing_authenticated'])) {
 			<h2>Verzend mailing aan deelnemers <small>[<a
 						href="/mailing/google_contacts_callback.php">Google
 						Contacts koppelen</a>]</small></h2>
-			<table width="100%" class="w3-table-all" border=1>
+			<table width="100%" class="w3-table-all ontvanger-selectie" border=1>
 				<tr>
 					<td><strong>taalkeuze:</strong></td>
 					<td><input name="taal" type="radio" value="1" <?php if (isset($_POST['taal']) and ($_POST['taal'] == "1"))

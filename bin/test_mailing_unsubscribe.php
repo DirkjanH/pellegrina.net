@@ -202,6 +202,7 @@ try {
     $sendUrl = 'http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=1';
     $form = file_get_contents($sendUrl);
     checkUnsubscribe(str_contains($form, 'Mailing starten') && str_contains($form, 'aantal emails = 4'), 'Statistics must show mailing controls and progress.');
+    checkUnsubscribe(str_contains($form, 'href="mailing.php"') && str_contains($form, 'Mailing opstellen'), 'Statistics must link to the mailing editor.');
     checkUnsubscribe(preg_match('/name="csrf_token"\s+value="([^"]+)"/', $form, $csrf) === 1, 'Mailing confirmation token missing.');
     $cookie = '';
     foreach ($http_response_header as $header) {
@@ -283,6 +284,7 @@ try {
     checkUnsubscribe($db->query('SELECT status FROM mailing_verzendtaken WHERE mailing_id = 4')->fetchColumn() === 'gestopt', 'A failed mailing must pause.');
     checkUnsubscribe(!mailingVerwerkWachtrij($db, static fn() => new LPmailer()), 'A paused mailing must not be retried automatically.');
     $failurePage = file_get_contents('http://127.0.0.1:' . $port . '/statistiek_mailing.php?mailing=4');
+    $failurePage = preg_replace('/\s+/', ' ', $failurePage);
     checkUnsubscribe(str_contains($failurePage, 'failure@example.org')
         && str_contains($failurePage, 'Opnieuw proberen en hervatten')
         && str_contains($failurePage, 'Als verzonden registreren en hervatten'),

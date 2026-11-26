@@ -301,6 +301,7 @@ if ($mailing) {
 
 <body>
 	<div class="w3-panel w3-content mailing-statistieken">
+		<p><a href="mailing.php" class="w3-button w3-light-grey w3-border w3-round">Mailing opstellen</a></p>
 		<form id="form1" action="" method="post">
 			<input type="hidden" name="csrf_token"
 				value="<?= h($_SESSION['mailing_csrf']) ?>"> <?php foreach ($mailings as $m) {
