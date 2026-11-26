@@ -65,6 +65,22 @@ function google_contacts_authorization_url(): string
     return $authorizationUrl;
 }
 
+function google_contacts_is_linked(): bool
+{
+    $data = $_SESSION['google_contacts_token'] ?? null;
+    if (!is_array($data) || !is_string($data['access_token'] ?? null) || $data['access_token'] === '') {
+        return false;
+    }
+
+    $expires = $data['expires'] ?? null;
+    if (!is_numeric($expires) || $expires <= 0) {
+        return false;
+    }
+
+    return $expires >= time()
+        || (is_string($data['refresh_token'] ?? null) && $data['refresh_token'] !== '');
+}
+
 function google_contacts_access_token(): string
 {
     if (empty($_SESSION['google_contacts_token'])) {

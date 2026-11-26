@@ -1481,6 +1481,15 @@ if (empty($_SESSION['mailing_authenticated'])) {
 			background: #82bada;
 		}
 
+		.google-contacts-status {
+			display: inline-block;
+			padding: 0 0.3em;
+			border-radius: 50%;
+			background: #18752d;
+			color: #fff;
+			font-size: 0.85em;
+		}
+
 		.mailing-result {
 			position: fixed;
 			top: 10px;
@@ -1861,7 +1870,11 @@ if (empty($_SESSION['mailing_authenticated'])) {
 			<hr>
 			<h2>Verzend mailing aan deelnemers <small>[<a
 						href="/mailing/google_contacts_callback.php">Google
-						Contacts koppelen</a>]</small></h2>
+						Contacts koppelen</a><?php if (google_contacts_is_linked()): ?>
+						<span class="google-contacts-status" role="img"
+							aria-label="Google Contacts-koppeling opgeslagen in deze sessie"
+							title="Koppeling opgeslagen in deze sessie; toegang wordt bij gebruik gecontroleerd.">&#10003;</span>
+					<?php endif; ?>]</small></h2>
 			<table width="100%" class="w3-table-all ontvanger-selectie" border=1>
 				<tr>
 					<td><strong>taalkeuze:</strong></td>
