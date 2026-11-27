@@ -301,6 +301,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LP Badges - HTML-editor</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/LP_onderhoud.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -315,6 +316,9 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     </style>
 </head>
 <body class="w3-light-grey lp-badges-ui">
+    <div class="w3-content" style="max-width:1000px;">
+        <header id="navigatiebalk"><?php require_once __DIR__ . '/LP_navigatie.php'; ?></header>
+    </div>
     <div class="w3-container w3-content w3-card-4 w3-padding-24"
         style="max-width:1200px; margin-top:24px;">
         <h2 class="w3-center">LP Badges - HTML-editor</h2>
@@ -426,6 +430,7 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LP Badges - invoer (onderhoud)</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/LP_onderhoud.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -433,6 +438,9 @@ if (isset($_GET['editor']) && $_GET['editor'] == '1') {
         rel="stylesheet">
 </head>
 <body class="lp-badges-ui">
+    <div class="w3-content" style="max-width:1000px;">
+        <header id="navigatiebalk"><?php require_once __DIR__ . '/LP_navigatie.php'; ?></header>
+    </div>
     <div class="w3-container w3-content w3-card-4 w3-padding-32"
         style="max-width: 900px; margin-top: 32px;">
         <div class="w3-bar w3-margin-bottom">

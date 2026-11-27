@@ -1,4 +1,4 @@
-    <form name="form1" method="post" href="<?php echo $editFormhref; ?>">
+    <nav aria-label="Onderhoud">
             <div class="container">
                     <div class="grid_item"><a class="button"
                                     href="LP_statistiek.php">Statistieken</a></div>
@@ -23,4 +23,4 @@
                     <div class="grid_item"><a class="button"
                                     href="LP_zwartelijst.php">Zwarte lijst</a></div>
             </div>
-    </form>
+    </nav>

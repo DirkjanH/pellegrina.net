@@ -113,6 +113,7 @@ $courses = [
 $html = badgeRequest([], $courses);
 checkBadges(str_contains($html, '?cursus_id=101') && str_contains($html, '?cursus_id=104') && str_contains($html, '?cursus_id=110'), 'Every configured-year course must be selectable, including noncontiguous IDs.');
 checkBadges(str_contains($html, 'Second &amp; course') && str_contains($html, 'Deelnemer 101'), 'Course names must be escaped and the first configured course selected by default.');
+checkBadges(str_contains($html, 'href="LP_statistiek.php"') && str_contains($html, '/css/LP_onderhoud.css'), 'The badge form must show the shared maintenance navigation.');
 
 $html = badgeRequest(['cursus_id' => '110'], $courses);
 checkBadges(str_contains($html, 'Deelnemer 110') && str_contains($html, 'Docent 110'), 'The chosen course must select its own participants and tutors.');
@@ -129,6 +130,7 @@ checkBadges($legacy['result'][0]['name'] === 'Deelnemer 104', 'Existing offset-b
 foreach (['editor', 'print'] as $mode) {
     $html = badgeRequest(['cursus_id' => '110', $mode => '1', 'extra' => 'Extra naam#Nederland#flute'], $courses);
     checkBadges(str_contains($html, 'Deelnemer 110') && str_contains($html, 'Extra naam') && !str_contains($html, 'Deelnemer 101'), "$mode must use the selected course and extra entries.");
+    checkBadges(str_contains($html, 'href="LP_statistiek.php"') === ($mode === 'editor'), 'Navigation must appear in the editor but not in the print view.');
 }
 
 $otherCourses = [['CursusId' => 80, 'cursusnaam_en' => '<script>alert("test")</script>']];
