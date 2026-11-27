@@ -90,10 +90,10 @@
         <div class="w3-container w3-center fotobijschrift">Trio tijdens
             kamermuziekrepetitie</div>
     </div>
-    <p class="citaat">Jonelle Soelling: “De voorbereiding op dit muziekfestival
-        motiveerde me enorm om een hoger niveau te bereiken. Het was een
-        geweldige ervaring om deel uit te maken van een internationale
-        muziekgemeenschap in Tsjechië.”</p>
+    <p class="citaat">Jonelle Soelling: &quot;De voorbereiding op dit
+        muziekfestival motiveerde me enorm om een hoger niveau te bereiken. Het
+        was een geweldige ervaring om deel uit te maken van een internationale
+        muziekgemeenschap in Tsjechië.&quot;</p>
     <div class="w3-content w3-center"><img src="/Images/gesprek.jpg"
             alt="Monastery garden" class="w3-image" />
         <div class="w3-container w3-center fotobijschrift">Gesprek in de
@@ -101,13 +101,18 @@
     </div>
     <p class="citaat">Wilma Luining: &quot;Iedereen die deelneemt aan het
         project houdt van muziek. Je hebt daardoor snel contact met elkaar, ook
-        als je in je eentje komt.&quot;</p>
+        als je in je eentje komt&quot;</p>
+    <p class="citaat">Lia van den Heuvel: &quot;La Pellegrina is tien dagen
+        heerlijk genieten van mooie muziek, gezellige mensen en prachtige
+        omgeving.&quot;</p>
     <p class="citaat">Fransje Eiselin: &quot;Het reizen was voor mij een grote
         drempel, omdat ik blind ben. Maar ik ga nu al voor de derde keer mee en
         er is altijd wel iemand met wie ik mee kan rijden. Dat is nog gezellig
-        ook.&quot;</p>
-    <p class="citaat">Martin Ashton: &quot;Na een dag hoorn spelen de kroeg in
-        en genieten van het Tsjechische bier.&quot;</p>
+        ook&quot;</p>
+    <p class="citaat">Robert Beverly: &quot;Voor mij is Pellegrina een artistiek
+        toevluchtsoord geworden waar ik twee keer per jaar naartoe ga, en een
+        inspirerende plek om even aan de zorgwekkende wereld te ontsnappen&quot;
+    </p>
     <div class="w3-content w3-center"><img src="/Images/orkest2.jpg"
             alt="The brass section" class="w3-image" />
         <div class="w3-container w3-center fotobijschrift">Orkest in actie in de

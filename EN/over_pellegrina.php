@@ -100,13 +100,16 @@
     <p class="citaat">Wilma Luining: &quot;Since everybody in the course loves
         music, it never takes long to get to know the others, even if you have
         come on your own.&quot;</p>
+    <p class="citaat">Lia van den Heuvel: &quot;La Pellegrina offers ten days of
+        pure enjoyment, with beautiful music, friendly people and stunning
+        surroundings&quot;</p>
     <p class="citaat">Fransje Eiselin: &quot;For me, travelling is difficult as
         I am blind. However this is my third time in Bechyne. It is easy to
         hitch rides with other particpants, and travelling together adds to the
         fun.&quot;</p>
-    <p class="citaat">Martin Ashton: &quot;After every rehearsal we brass
-        players feel an enormous need to taste the Czech beer in the little pub
-        on the corner.&quot;</p>
+    <p class="citaat">Robert Beverly: &quot;For me, Pellegrina has become a
+        twice-a-year artistic sanctuary and uplifting retreat from the worrisome
+        world.&quot;</p>
     <div class="w3-content w3-center"><img src="/Images/orkest2.jpg"
             alt="The brass section" class="w3-image" />
         <div class="w3-container w3-center fotobijschrift">Orchestra in action

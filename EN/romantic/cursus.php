@@ -19,7 +19,6 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -28,36 +27,33 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     <meta charset="UTF-8">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-
     <!-- Facebook Pixel Code -->
     <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
-                    arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '537749209897328');
-        fbq('track', 'PageView');
+    ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(
+                arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '537749209897328');
+    fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=537749209897328&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
-
 </head>
-
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud" class="w3-main"> <?php
@@ -80,16 +76,24 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>&nbsp;</p>
             </div>
             <h2><a name="programma"></a>The programme</h2>
-            <p>For 36 years, <em>La Pellegrina </em>has organised summer courses for instrumentalists and singers in
-                Czechia. This summer course has two aspects: chamber music and a joint programme for soloists, orchestra and choir.
-                The summer school takes place in the conservatoire of České
-                Budějovice, also known by its German name Budweis. This is a friendly town where the proximity to Austria is
-                palpable. The conservatoire has recently undergone extensive
-                renovation, with air conditioning in the concert hall. There are excellent grand pianos in the classrooms
-                and fine facilities for making music. So anyone who always dreamt of studying at a conservatoire can still do so!</p>
-            <p> In the same building there is accommodation in the school hostel, with simple but clean single
-                and double rooms, each with its own shower and toilet. In addition, there is a choice of hotels and apartments in various price ranges in
-                the area. </p>
+            <p>For 36 years, <em>La Pellegrina </em>has organised summer courses
+                for instrumentalists and singers in Czechia. This summer course
+                has two aspects: chamber music and a joint programme for
+                soloists, orchestra and choir. The summer school takes place in
+                the conservatoire of České Budějovice, also known by its German
+                name Budweis. This is a friendly town where the proximity to
+                Austria is palpable. The conservatoire has recently undergone
+                extensive renovation, with air conditioning in the concert hall.
+                There are excellent grand pianos in the classrooms and fine
+                facilities for making music. So anyone who always dreamt of
+                studying at a conservatoire can still do so!</p>
+            <p> In the same building there is accommodation in the school
+                hostel, with simple but clean single and double rooms, each with
+                its own shower and toilet. In addition, there is a choice of
+                hotels and apartments in various price ranges in the area. </p>
+            <p class="citaat">Martin Ashton: &quot;After every rehearsal we
+                brass players feel an enormous need to taste the Czech beer in
+                the little pub on the corner&quot;</p>
             <h3>Chamber music &amp; chamber choir</h3>
             <div class="fotorechts"><img src="/Images/fluittrio.jpg"
                     alt="instrumentalists" width="500" height="334"
@@ -98,48 +102,68 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p>The mornings are devoted to small ensembles. Every participant
                 will be assigned to two different ensembles, alternating per
                 day. At least half of the time the ensembles receive intensive
-                coaching by the tutors. At the end of the course each ensemble presents itself in an concert for the other participants.</p>
-            <p class="citaat">Rob Klotz: If I have to have an addiction, going to La Pellegrina is my drug of choice</p>
+                coaching by the tutors. At the end of the course each ensemble
+                presents itself in an concert for the other participants.</p>
+            <p class="citaat">Rob Klotz: If I have to have an addiction, going
+                to La Pellegrina is my drug of choice</p>
             <p>Instrumentalists take part in chamber music in all possible
                 combinations of strings and winds, with or without piano. All
-                formations from quartet upward are possible, with perhaps a few trios. Very advanced
-                singers (<a href="#solozang">see the description here</a>) may
-                also participate in this. It is also possible to form larger and more complex combinations, which are not easy to organize at home.
-                Think of Schubert's octet, the nonets by Rota, Martinů and Spohr,
-                and Dvořák's serenade for wind instruments. Ensembles will be formed well in advance, so
-                you can prepare your parts thoroughly at home.</p>
+                formations from quartet upward are possible, with perhaps a few
+                trios. Very advanced singers (<a href="#solozang">see the
+                    description here</a>) may also participate in this. It is
+                also possible to form larger and more complex combinations,
+                which are not easy to organize at home. Think of Schubert's
+                octet, the nonets by Rota, Martinů and Spohr, and Dvořák's
+                serenade for wind instruments. Ensembles will be formed well in
+                advance, so you can prepare your parts thoroughly at home.</p>
             <p class="citaat">Yo van Dijk: &quot;What I jumped into with some
                 cold feet turned out to be a pleasant warm bath of enthusiastic
                 musicians. For a moment you are in another world, a more
                 beautiful one without worries&quot; </p>
-            <p>Each morning the singers form a chamber choir and work on music, both a cappella and with piano. Some singers can
-                form chamber music combinations with instruments. For instance, a soprano
+            <p>Each morning the singers form a chamber choir and work on music,
+                both a cappella and with piano. Some singers can form chamber
+                music combinations with instruments. For instance, a soprano
                 could do Schubert's <em>Hirt auf dem Felsen </em>or Spohr's
                 <em>Lieder </em>for voice, clarinet and piano. A baritone could
                 work on Barber's <em>Dover Beach</em> with a string quartet. A
                 few more suggestions: Pergolesi's <em>Stabat Mater</em> with
                 strings, Mozart and Haydn <em>Lieder </em>for several voices and
-                piano, Schubert's <em>Hochzeitsbraten</em> or other works for several
-                voices and piano, etc. There will be time for occasional musical get-togethers, so bring your favourite chamber music works along!
-            </p>
-            <p>The course is open to individual participants as well as existing ensembles.</p>
+                piano, Schubert's <em>Hochzeitsbraten</em> or other works for
+                several voices and piano, etc. There will be time for occasional
+                musical get-togethers, so bring your favourite chamber music
+                works along! </p>
+            <p>The course is open to individual participants as well as existing
+                ensembles.</p>
             <p>
-            <div class="fotolinks"><img width="400" class="w3-image" src="/Images/Lukas_B.jpg" alt="Participant performing as soloist"><br>Participant performing as soloist in the Mozart Concerto Event</div>A special evening will be the <em>Mozart Concerto Event</em>, where everybody is invited to prepare a movement from a concerto or an aria by Mozart or a
-            contemporary. The other instrumentalists and tutors are asked to accompany, sight-reading the orchestral parts.</p>
+            <div class="fotolinks"><img width="400" class="w3-image"
+                    src="/Images/Lukas_B.jpg"
+                    alt="Participant performing as soloist"><br>Participant
+                performing as soloist in the Mozart Concerto Event</div>A
+            special evening will be the <em>Mozart Concerto Event</em>, where
+            everybody is invited to prepare a movement from a concerto or an
+            aria by Mozart or a contemporary. The other instrumentalists and
+            tutors are asked to accompany, sight-reading the orchestral parts.
+            </p>
             <p class="citaat">Anke Muusse: “I really enjoyed my first musical
                 Pellegrina week because of the level of the course, the variety
                 of chamber music and tutti program, the guidance by good coaches
                 and the wonderful music!”</p>
             <div class="container">
-                <h3>The programme for soloists, choir and orchestra: Mendelssohn's <i>Elijah</i> (Part I)</h3>
+                <h3>The programme for soloists, choir and orchestra:
+                    Mendelssohn's <i>Elijah</i> (Part I)</h3>
                 <div class="fotorechts"><img
                         src="\Images\Locaties\Budejovice\black-tower-st-nicholas-cathedral-ceske-budejovice.jpg"
                         alt="Cathedral with Black Tower" width="400"
-                        class="w3-image"><br>České Budějovice cathedral with the Black Tower</div>
-                <p>Each afternoon we work on our tutti programme, which we will perform publicly at the end of
-                    the course. This year, the final concert will feature Part I of Mendelssohn's oratorio <i>Elijah</i> for soloists, choir and
-                    orchestra. <a href="programma.php">Read more about the works and their
-                        musical and historical context here</a>. The concert will take place in the České Budějovice cathedral, with its magnificent acoustics.</p>
+                        class="w3-image"><br>České Budějovice cathedral with the
+                    Black Tower</div>
+                <p>Each afternoon we work on our tutti programme, which we will
+                    perform publicly at the end of the course. This year, the
+                    final concert will feature Part I of Mendelssohn's oratorio
+                    <i>Elijah</i> for soloists, choir and orchestra. <a
+                        href="programma.php">Read more about the works and their
+                        musical and historical context here</a>. The concert
+                    will take place in the České Budějovice cathedral, with its
+                    magnificent acoustics. </p>
             </div>
             <p class="citaat">Anke Wolffes: &quot;The rehearsals were very
                 pleasant. Dirkjan manages every year to be ambitious and
@@ -147,11 +171,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h2><a name="voorwie"></a>For whom</h2>
             <h4>Choir</h4>
             <div class="fotolinks"><img src="/Images/Mitchell en koor.jpg"
-                    alt="" width="400"><br> Mitchell Sandler and
-                his chamber choir</div>
+                    alt="" width="400"><br> Mitchell Sandler and his chamber
+                choir</div>
             <p>The course is open to 32 experienced chamber choir singers
-                (SATB). The choir has a big and challenging role in Mendelssohn's <em>Elijah</em>. In addition, the choristers form a
-                chamber choir every morning and work on music by Mendelssohn,
+                (SATB). The choir has a big and challenging role in
+                Mendelssohn's <em>Elijah</em>. In addition, the choristers form
+                a chamber choir every morning and work on music by Mendelssohn,
                 Dvořák, Mozart and their Czech contemporaries. Mitchell Sandler
                 will lead this choir in his inimitable way, combining helpful
                 vocal instructions and excellent piano accompaniment with clear
@@ -167,10 +192,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         class="w3-image" /><br /> A singer being coached</div>
                 <p>Are you a vocal student or recent graduate, or a talented
                     amateur at an equivalent level, and enjoy singing as a
-                    soloist? Do you have the skills to prepare your part independently? Do you have a specific chamber music piece in mind?
-                    If so, you can be part of one of the chamber music ensembles in the morning sessions.</p>
+                    soloist? Do you have the skills to prepare your part
+                    independently? Do you have a specific chamber music piece in
+                    mind? If so, you can be part of one of the chamber music
+                    ensembles in the morning sessions.</p>
                 <p> We would like to hear you. This will give us an idea of how
-                    to place you within the course. Please make a recording of your singing and send it to <em>La Pellegrina</em>.</p>
+                    to place you within the course. Please make a recording of
+                    your singing and send it to <em>La Pellegrina</em>.</p>
             </div>
             <p class="citaat">Yolande Krooshof: &quot;I have persuaded three
                 people to join the course, eerie, but they all have enjoyed
@@ -191,8 +219,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     accompany singers in their arias and may even play timpani
                     or other percussion in the orchestra, or sing in the choir.
                     For the other instruments in the orchestra, such as harp,
-                    trumpets, trombones and tuba, we usually hire Czech professionals.
-                </p>
+                    trumpets, trombones and tuba, we usually hire Czech
+                    professionals. </p>
                 <p class="citaat">Christine Achten: &quot;A week of letting go
                     of everything and immersing yourself in a bath of beautiful
                     music, hard work, having fun, experiencing beauty , fine
@@ -200,21 +228,28 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     holiday!&quot;</p>
                 <a href="cursus.php" target="_self"></a>
             </div>
-
             <div class="container">
-                <div class="fotorechts"><img src="/Images/DJ_in_actie.jpg" width="400" class="w3-image" src="Dirkjan Horringa in action"><br>Dirkjan Horringa in action</div>
+                <div class="fotorechts"><img src="/Images/DJ_in_actie.jpg"
+                        width="400" class="w3-image"
+                        src="Dirkjan Horringa in action"><br>Dirkjan Horringa in
+                    action</div>
                 <h2><a name="kennismaking"></a>Introductory rehearsal</h2>
-                <p>
-                    On Saturday 13 June we'll slap a first coat of paint on the music, in Den Dolder near Utrecht. Its aim is to get to know the other participants,
-                    and to have a first go at the tutti programme, so you can then prepare your part more efficiently. Besides, it is inspiring to meet your 'colleagues' and to get a feeling for the work your are going to play or sing. Of course this preparatory rehearsal is not mandatory for people not living in the Netherlands, but some foreign participants tend to show up, combining the rehearsal with a trip or visiting friends. They are of course most welcome.
-                </p>
-
+                <p> On Saturday 13 June we'll slap a first coat of paint on the
+                    music, in Den Dolder near Utrecht. Its aim is to get to know
+                    the other participants, and to have a first go at the tutti
+                    programme, so you can then prepare your part more
+                    efficiently. Besides, it is inspiring to meet your
+                    'colleagues' and to get a feeling for the work your are
+                    going to play or sing. Of course this preparatory rehearsal
+                    is not mandatory for people not living in the Netherlands,
+                    but some foreign participants tend to show up, combining the
+                    rehearsal with a trip or visiting friends. They are of
+                    course most welcome. </p>
                 <p class="citaat">Marieke van Dantzig: &quot;forging a beautiful
-                    whole out of a weird combination of people, styles and musical
-                    skills in a short time: that is the magic of inspirator
-                    Dirkjan&quot;</p>
+                    whole out of a weird combination of people, styles and
+                    musical skills in a short time: that is the magic of
+                    inspirator Dirkjan&quot;</p>
             </div>
-
             <h2><a name="dagindeling"></a>Week programme and daily schedule</h2>
             <h4>Week programme</h4>
             <ul>
@@ -245,8 +280,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <li> 13:00 lunch</li>
                 <li>14:30 the orchestra first works in sectional rehearsals,
                     later also in full ensemble; the choir works at first
-                    separately on Mendelssohn's <i>Elijah</i>. Later
-                    in the week, choir and orchestra rehearse together </li>
+                    separately on Mendelssohn's <i>Elijah</i>. Later in the
+                    week, choir and orchestra rehearse together </li>
                 <li>17:30 drinks and dinner</li>
                 <li> Evening off, plenty of time for playing more chamber music,
                     and don’t forget that Czechia is famous for its beer...</li>
@@ -256,9 +291,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 supportive and exhilarating musical experience for serious
                 amateur musicians who are willing to work hard toward the goal
                 of a polished public performance&quot;</p>
-            <div class="fotocenter"> <img
-                    src="/Images/slotconcert_2025.jpg" width="800" class="w3-image"
-                    alt="Performing Haydn's Missa in tempore belli in the Cathedral"><br>Performing Haydn's Missa in tempore belli in the Cathedral in 2025</div>
+            <div class="fotocenter"> <img src="/Images/slotconcert_2025.jpg"
+                    width="800" class="w3-image"
+                    alt="Performing Haydn's Missa in tempore belli in the Cathedral"><br>Performing
+                Haydn's Missa in tempore belli in the Cathedral in 2025</div>
             <h2><a name="waar"></a>Where</h2>
             <p>Read more about České Budějovice, the place where the course will
                 be held:</p>
@@ -276,9 +312,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 with such variety and where do you drink your beer in such a
                 beautiful setting?”</p>
             <div class="fotocenter w3-center"><img src="/Images/bazooka.jpg"
-                    alt="Ensemble" width="800"
-                    class="w3-image"><br> Joy after the chamber music concert
-            </div>
+                    alt="Ensemble" width="800" class="w3-image"><br> Joy after
+                the chamber music concert </div>
             <h2><a name="metwie"></a>With whom</h2>
             <p>The tutors of this course are passionate specialists in their
                 musical fields: <a href="docenten.php#bernaskova">Martina
@@ -290,8 +325,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     Sandler, </a><a href="docenten.php#sternadel">Rudolf
                     Sternadel</a> and <a href="docenten.php#vlasankova">Jitka
                     Vlašánková</a>.</p>
-            <div class="fotocenter w3-center"><img
-                    src="/Images/tutors_CB.jpg" alt="Tutors" class="w3-image" width="800">
+            <div class="fotocenter w3-center"><img src="/Images/tutors_CB.jpg"
+                    alt="Tutors" class="w3-image" width="800">
                 <br>The tutors during the tutors' concert
             </div>
             <h2><a name="inschrijven"></a>How to register</h2>
@@ -301,5 +336,4 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     </div>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-
 </html>
