@@ -41,7 +41,7 @@
       <p class="nadruk"> *) the lower price applies when registering <strong>before March 1st. </strong>Please register early!!! </p>
       <p>Students and <strong>anyone up to 36 years of age</strong> can apply for the students'
         fee. They should include with their enrolment a copy of their proof
-        of registration with an university or other institution of higher education. </p>
+        of registration with a university or other institution of higher education. </p>
       <p>The number of participants who can be accepted against
         these reduced fees is limited, depending on the resources of the
         funds from which these reductions are drawn. <i>La Pellegrina</i> retains the right to decide who receives what reduction. It is

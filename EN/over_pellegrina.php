@@ -16,7 +16,7 @@
         Czechia and the Netherlands - this summer for the 37<sup>th</sup> time.
     </p>
     <h2>What does <em>La Pellegrina</em> mean? </h2>
-    <p><em>La Pellegrina</em> (the Pilgrim Woman) is the name of a Italian play
+    <p><em>La Pellegrina</em> (the Pilgrim Woman) is the name of an Italian play
         from the 16th century. When this play was to be performed at the
         marriage of Ferdinand I de' Medici, grand-duke of Tuscany, with
         Christine de Lorraine, granddaughter of the former queen-mother of
@@ -105,7 +105,7 @@
         surroundings&quot;</p>
     <p class="citaat">Fransje Eiselin: &quot;For me, travelling is difficult as
         I am blind. However this is my third time in Bechyne. It is easy to
-        hitch rides with other particpants, and travelling together adds to the
+        hitch rides with other participants, and travelling together adds to the
         fun.&quot;</p>
     <p class="citaat">Robert Beverly: &quot;For me, Pellegrina has become a
         twice-a-year artistic sanctuary and uplifting retreat from the worrisome

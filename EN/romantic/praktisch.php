@@ -102,7 +102,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p class="citaat">Marieke van Dantzig: “La Pellegrina is a week-long immersion in music with lots of fun and friendly like-minded people!”</p>
       <h3>Prices </h3>
       <p>The course fee - <strong><?php echo euro_en($cursusdata['prijs_volledig']); ?></strong>
-        per person - includes accomodation in double rooms (with private
+        per person - includes accommodation in double rooms (with private
         bathroom) at the conservatoire, breakfast, lunch and (only on the first
         and last night) dinner. Travel and insurance expenses are not included.
         Any bank and credit card charges are payable by the participant.</p>
@@ -112,7 +112,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         polytechnic pay
         <strong><?php echo euro_en($cursusdata['prijs_student']); ?></strong>
         per course, per person. Please send us a copy or scan of your
-        registration with an university or other institution of higher
+        registration with a university or other institution of higher
         education, or of your passport as proof of age.
       </p>
       <h4>Reduction for early applicants </h4>
@@ -135,7 +135,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p>If you just want to come along with your spouse who is participating in
         the course, you pay<strong>
           <?php echo euro_en($cursusdata['toehoorder']); ?></strong> for meals
-        and accomodation in double rooms (course fee, travel and insurance
+        and accommodation in double rooms (course fee, travel and insurance
         expenses not included). You are invited to sit in on all rehearsals,
         concerts and other activities during the course. Also, there is plenty
         to see in and around &#268;esk&eacute; Bud&#283;jovice. Please call or email
@@ -254,7 +254,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         });
       </script>
       <h3>We speak English</h3>
-      <p>The courses organised by <em>La Pellegrina</em> are are open to an
+      <p>The courses organised by <em>La Pellegrina</em> are open to an
         international audience, with most participants coming from Western and
         Eastern Europe. We do, however, have some regular guests from Japan,
         Taiwan, Canada, Mexico and the US. As English will probably be the

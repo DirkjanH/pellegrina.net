@@ -234,8 +234,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     possible...!&quot;</p>
             </div>
             <div class="fotocenter"><img src="/Images/duo.jpg" width="800"
-                    alt="Preparing parts toegether"
-                    class="w3-image" /><br />Preparing parts toegether</div>
+                    alt="Preparing parts together"
+                    class="w3-image" /><br />Preparing parts together</div>
             <h4>Daily Schedule</h4>
             <ul>
                 <li>from 7:30 breakfast</li>

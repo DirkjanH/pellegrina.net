@@ -72,8 +72,8 @@
         werk je naar een concert toe, dat is zo'n geweldig hoogtepunt! En erna
         salonmuziek spelen op het slotfeest.&quot;</p>
     <h2>Op een goed niveau</h2>
-    <p>In de projecten van <i>La Pellegrina</i> komt zowel kamermuziek en
-        kamerkoor aan bod, als grote bezettingen voor orkest en zangers. Voor
+    <p>In de projecten van <i>La Pellegrina</i> komen zowel kamermuziek en
+        kamerkoor als grote bezettingen voor orkest en zangers aan bod. Voor
         enthousiaste zangers en instrumentalisten valt er dus veel te doen op
         een goed muzikaal niveau.</p>
     <div class="fotocenter"><img src="/Images/concert_kathedraal.png"

@@ -230,7 +230,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         borrel en vertrek</li>
                 </ul>
                 <p class="citaat">Annelies Jans: &ldquo;Twee repetities 's
-                    morgens, twee repetities 's middags, en wat goen we op onze
+                    morgens, twee repetities 's middags, en wat doen we op onze
                     vrije avonden? Juist, zoveel mogelijk
                     muziekmaken....!!!&rdquo;</p>
             </div>
@@ -267,17 +267,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 overgedragen aan een stichting die tot doel heeft de spirituele
                 betekenis van de kloostergemeenschap te laten voortbestaan.</p>
             <p> Sindsdien vinden er allerlei spirituele, maar ook culturele en
-                en muzikale activiteiten plaats. Een groeiend aantal mensen die
-                streven naar een kloosterleven waarin stilte en spiritualiteit
+                muzikale activiteiten plaats. Een groeiend aantal mensen streeft
+                naar een kloosterleven waarin stilte en spiritualiteit
                 centraal staan. Driemaal daags zijn er stiltegebeden in de
                 kloosterkerk. Daarnaast verzorgen ze de grote groentetuin,
                 houden de brouwerij en het koffiehuis draaiende en organiseren
                 een groot aantal activiteiten, zoals retraites, jeugdweekenden
                 en dergelijke. </p>
-            <p>De inkomsten van al deze activiteiten jaar betalen kleine
-                reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe
+            <p>Met de inkomsten van al deze activiteiten worden kleine
+                renovaties van het klooster betaald. Er zijn nu bijvoorbeeld nieuwe
                 een- en tweepersoonskamers met eigen badkamer beschikbaar in het
-                gerenoveerde Poortgebouw. Meer informatie is hier vinden:</p>
+                gerenoveerde Poortgebouw. Meer informatie is hier te vinden:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
                         target="_blank">Een sfeer-impressie van het klooster</a>

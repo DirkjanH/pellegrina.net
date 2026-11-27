@@ -111,7 +111,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <h4>Aanzienlijke korting voor studenten en jongeren </h4>
             <p><em>Voltijds</em> studenten aan het wetenschappelijk en hoger
                 beroepsonderwijs en deelnemers t/m 35 jaar (bij aanvang van de cursus
-                waarvoor ze zich hebben aangemeld). krijgen een aanzienlijke korting en
+                waarvoor ze zich hebben aangemeld) krijgen een aanzienlijke korting en
                 betalen
                 <strong><?php echo euro($cursusdata['prijs_student']); ?></strong>
                 cursusgeld per persoon, op basis van een tweepersoons kamer in het

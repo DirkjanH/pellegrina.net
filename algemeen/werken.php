@@ -19,7 +19,7 @@
             <h1 class="jaar">2026</h1>
             <h2 class="cursus">Dvořák's The Spectre's Bride for choir, soloists
                 and orchestra | České Budějovice, 30 July - 9 August</h2>
-            <p>In the final concert in het Cathedral of České Budějovice:</p>
+            <p>In the final concert in the Cathedral of České Budějovice:</p>
             <ul>
                 <li>Dvořák - Cantata "The Spectre's Bride" op. 69</li>
             </ul>
@@ -76,7 +76,7 @@
             <h1 class="jaar">2025</h1>
             <h2 class="cursus">Missa in tempore belli for choir, soloists and
                 orchestra | České Budějovice, 24 July - 3 August</h2>
-            <p>In the final concert in het Cathedral of České Budějovice:</p>
+            <p>In the final concert in the Cathedral of České Budějovice:</p>
             <ul>
                 <li>Dvořák - Symphonic Poem "The Golden Spinning Wheel" op. 109
                 </li>
@@ -142,7 +142,7 @@
             <h1 class="jaar">2024</h1>
             <h2 class="cursus">Reicha's Requiem for choir, soloists and
                 orchestra | České Budějovice, 25 July - 4 August</h2>
-            <p>In the final concert in het Monastery Church:</p>
+            <p>In the final concert in the Monastery Church:</p>
             <ul>
                 <li>Dvořák - Symphonic Variations op. 87</li>
                 <li>Anton Reicha - Messe des Morts (Requiem)</li>

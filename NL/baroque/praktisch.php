@@ -162,7 +162,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 of zelf accommodatie kunnen regelen. In dat geval betaal je
                 naast het cursusgeld alleen een bijdrage voor koffie en thee en
                 de gezamenlijke lunch. Er zijn diverse hotels en Bed & Breakfast
-                gelegenheden in de buurt. Het mogelijk om tegen een meerprijs
+                gelegenheden in de buurt. Het is mogelijk om tegen een meerprijs
                 ook het avondeten in het Klooster te krijgen.</p>
             <h3>Maaltijden</h3>
             <p>Tijdens de cursus beschikken we over een aparte eetzaal, waar
@@ -173,7 +173,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <table class="w3-table-all">
                 <tr>
                     <th>Overzicht van alle prijzen en kortingen</th>
-                    <th class="w3-right-align">Bij inschrijving <br />vòòr
+                    <th class="w3-right-align">Bij inschrijving <br />vóór
                         <?php echo $cursusdata['beslisdatum']; ?>:</th>
                     <th class="w3-right-align">Bij inschrijving <br />op of na
                         <?php echo $cursusdata['beslisdatum']; ?>:</th>

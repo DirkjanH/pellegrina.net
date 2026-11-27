@@ -110,7 +110,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 mooiere wereld zonder zorgen&quot;</p>
             <p>Elke ochtend vormen de koorzangers een kamerkoor en werken aan
                 muziek voor kamerkoor, a cappella en met piano. Sommige zangers
-                kunnen ook kamermzuiek-combinaties vormen met instrumenten. Een
+                kunnen ook kamermuziekcombinaties vormen met instrumenten. Een
                 sopraan kan bijvoorbeeld met fluit en clavecimbel Haydns
                 <i>Deutsche Arien </i> studeren, of de liederen van Spohr of
                 Schubert met klarinet en piano. Een bariton zou <em>Dover
@@ -165,12 +165,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p>De cursus staat open voor 32 ervaren koorzangers (SATB). Het koor
                 heeft een grote en uitdagende partij in Mendelssohns
                 <em>Elias</em>. Daarnaast vormen de koorleden elke ochtend een
-                kamerkoor koor en werken ze aan muziek van Mendelssohn, Dvořák,
+                kamerkoor en werken ze aan muziek van Mendelssohn, Dvořák,
                 Mozart en hun Tsjechische tijdgenoten. Mitchell Sandler zal dit
                 koor leiden op zijn onnavolgbare manier, waarbij hij behulpzame
                 vocale instructies en uitstekende pianobegeleiding combineert
                 met duidelijke leiding. Tsjechische professionele zangers, met
-                name tenoren en bassen, zullen zich bij het koor voegen koor als
+                name tenoren en bassen, zullen zich bij het koor voegen als
                 de balans tussen de verschillende stemgroepen daar om vraagt.
             </p>
             <p class="citaat">Marrie Kardol: &quot;Pellegrina is een van mijn
@@ -208,7 +208,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     orkestwerken: in principe is er plaats voor dubbel hout,
                     vier hoorns, pauken en strijkers 8-8-6-6-3 (of een paar
                     meer). In de kamermuziek is er plaats voor vier pianisten.
-                    Zij spelen in de kamermuziek-ensembles begeleiden zangers in
+                    Zij spelen in de kamermuziek-ensembles en begeleiden zangers in
                     hun aria's en kunnen zelfs pauken of ander slagwerk spelen
                     in het orkest, of in het koor zingen. Voor de overige
                     instrumenten in het orkest, zoals harp, trompetten,

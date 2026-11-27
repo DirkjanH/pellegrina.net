@@ -125,9 +125,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 of the course for which they have registered), receive a
                 substantial discount and pay
                 <strong><?php echo euro_en($cursusdata['prijs_student']); ?></strong>
-                course fee per person, based on a double room. When registration
-                a copy or scan of the registration certificate (or of your
-                passport as proof of age). </p>
+                course fee per person, based on a double room. When registering,
+                please send a copy or scan of your registration certificate
+                (or of your passport as proof of age). </p>
             <h4>Extra reduction for Eastern-European participants</h4>
             <p>For participants from Central European countries and countries of
                 the former Soviet Union specially reduced course fees are
@@ -297,7 +297,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             });
             </script>
             <h3>We speak English</h3>
-            <p>The courses organised by <em>La Pellegrina</em> are are open to
+            <p>The courses organised by <em>La Pellegrina</em> are open to
                 an international audience, with most participants coming from
                 Western and Eastern Europe. We do, however, have some regular
                 guests from Japan, Taiwan, Canada, Australia, Mexico and the US.

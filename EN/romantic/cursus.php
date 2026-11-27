@@ -103,7 +103,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 will be assigned to two different ensembles, alternating per
                 day. At least half of the time the ensembles receive intensive
                 coaching by the tutors. At the end of the course each ensemble
-                presents itself in an concert for the other participants.</p>
+                presents itself in a concert for the other participants.</p>
             <p class="citaat">Rob Klotz: If I have to have an addiction, going
                 to La Pellegrina is my drug of choice</p>
             <p>Instrumentalists take part in chamber music in all possible
@@ -209,7 +209,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                         width="400" height="332" class="w3-image"><br> A happy
                     horn player</div>
                 <h4>Instrumentalists</h4>
-                <p>The course in intended for experienced chamber music players,
+                <p>The course is intended for experienced chamber music players,
                     willing to prepare their parts at home. Pianists are able to
                     play solo parts. The number of participants in this course
                     is determined by the orchestral works: there is room for

@@ -80,7 +80,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
             <p> Een groeiend aantal mensen streeft naar een kloosterleven waarin stilte en spiritualiteit
                 centraal staan. Driemaal daags zijn er stiltegebeden in de kloosterkerk. Daarnaast verzorgen ze de grote groentetuin,
                 houden de brouwerij en het koffiehuis draaiende en organiseren een groot aantal activiteiten, zoals retraites, jeugdweekenden en dergelijke. </p>
-            <p>De inkomsten van al deze activiteiten jaar betalen kleine reconstructies van het klooster. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw. Meer informatie vind
+            <p>Met de inkomsten van al deze activiteiten worden kleine renovaties van het klooster betaald. Er zijn nu bijvoorbeeld nieuwe een- en tweepersoonskamers met eigen badkamer beschikbaar in het gerenoveerde Poortgebouw. Meer informatie vind
                 je hier:</p>
             <ul>
                 <li><a href="https://indebuurt.nl/deventer/woning-van-de-week/binnenkijken-bij-klooster-nieuw-sion-de-monniken-zijn-verhuisd-maar-er-wonen-nog-wel-mensen~108570/"
