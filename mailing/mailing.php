@@ -1149,7 +1149,6 @@ if (empty($_SESSION['mailing_authenticated'])) {
 		content="https://pellegrina.net/mailing/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<title>LP message mailer</title>
-	<!-- CSS: -->
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 	<script src="https://cdn.ckeditor.com/4.22.1/full-all/ckeditor.js"></script>
 	<script src="./main.js"></script>

@@ -282,7 +282,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         are obliged to pay the entire course fee. It is therefore advisable to
         take out a cancellation insurance. </p>
       <p><i>La Pellegrina</i> retains the right to change tutors and programmes if
-        such changes are considered necessary. <!-- InstanceEndEditable -->
+        such changes are considered necessary. 
       <h2><a href="javascript: history.go(-1)">Back</a></h2>
     </div>
   </div>

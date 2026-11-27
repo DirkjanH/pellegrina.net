@@ -1,21 +1,15 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Naamloos document</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 
 <body>
-<!-- InstanceBeginEditable name="mainpage" -->
 <h2 class="begin">Reisinformatie</h2>
 <p>Als je wilt samenreizen per auto of met het openbaar vervoer kunt
     je het beste naar de deelnemerslijst kijken en contact opnemen. Daar is aangegeven hoe men denkt te gaan reizen. Sommigen bieden plaatsen in een auto aan; anderen willen graag meerijden. Weer anderen gaan met het vliegtuig of de trein en reizen graag met anderen.  Waarschijnlijk vind je zo gelijkgestemde
@@ -50,6 +44,5 @@ zielen en kun je een gezamenlijke reis afspreken. </p>
   <li> Het is in Tsjechië gebruikelijk is om twee maal per dag warm te eten. Met diëten kan rekening gehouden worden.</li>
 </ul>
 
-<!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+</html>

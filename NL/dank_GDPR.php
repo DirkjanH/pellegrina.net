@@ -2,22 +2,17 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>La Pellegrina muziekprojecten</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.NL.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -44,7 +39,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 	echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
 	require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.NL.php';
 	 ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+  <div id="main"> 
    <h2 class="begin">Toestemming ontvangen</h2>
     <p>Beste deelnemer,</p>
     <p>We hebben je toestemming om je in het adresbestand van <em>La Pellegrina</em> te mogen houden ontvangen, waarvoor dank. Je email-adres en  overige
@@ -61,10 +56,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
       La Pellegrina</em> </p>
 
     <p class="facebook">P.S. Wist je dat <em>La Pellegrina</em> ook op <strong>facebook</strong> actief is? <a title="La Pellegrina on Facebook" href="http://www.facebook.com/pellegrina.net" target="_blank"><img alt="La Pellegrina on Facebook" src="http://www.pellegrina.net/Images/Logos/facebook_logo.png" width="25" height="25"></a> <a title="La Pellegrina nu ook op facebook" href="http://www.facebook.com/pellegrina.net" target="_blank">www.facebook.com/pellegrina.net</a>. Wij vinden het erg fijn als je ons 'like't en het cursusnieuws deelt met je muzikale vrienden!</p>
-  <!-- InstanceEndEditable -->
     <h2><a href="javascript: history.go(-1)">Terug</a></h2>
   </div>
 </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
-<!-- InstanceEnd --></html>
+</html>

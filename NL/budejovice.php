@@ -1,21 +1,14 @@
 <!doctype html>
 <html>
-<!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-   <!-- InstanceBeginEditable name="doctitle" -->
    <title>Naamloos document</title>
-   <!-- InstanceEndEditable -->
-   <!-- InstanceBeginEditable name="head" -->
-   <!-- InstanceEndEditable -->
 </head>
 
 <body>
-   <!-- InstanceBeginEditable name="mainpage" -->
    <h2 class="begin">České Budějovice, Tsjechië </h2>
    <div class="fotorechts"><img src="/Images/Logos/mapacz.gif"
          alt="Kaart van Tsjechië" class="geenlijn" /></div>

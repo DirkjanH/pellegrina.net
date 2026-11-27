@@ -28,9 +28,8 @@ if ($_POST['username'] != '' AND $_POST['password'] != '' AND array_search($_POS
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <?php //PHP ADODB document - made with PHAkt 3.7.1?>
-<html><!-- InstanceBegin template="/Templates/LP_NL.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>login page</title>
 <style type="text/css">
 <!--
@@ -41,7 +40,6 @@ if ($_POST['username'] != '' AND $_POST['password'] != '' AND array_search($_POS
 }
 -->
 </style>
-<!-- InstanceEndEditable -->
 <meta name="Description" content="Overview of La Pellegrina Musical Summer Schools for advanced musical amateurs in the Czech Republic, containing chamber music and orchestra">
 <meta name="Keywords" content="La Pellegrina, 415 Hz, Barokmuziek, Cursus, koor, klassiek, muziek, zingen, muziekmaken, Kamermuziek, Kleine ensembles, Koorzang, Mozart Mis, Mozart, , Muziekcursus, Muziekliefhebbers, Muziekvakantie, Purcell, Dioclesian, Solozang, Tsjechië muziek, Vocaal, Vocaal ensemble, Workshop, Zomercursus , Chamber Music , Choir, singing, classical, Course, Baroque, Czech music , Czech Republic, Dvorak, Mahler, music abroad, Music making, Orchestra chamber music, Romantic music, Singers, Solo singing, Students music, Summer school abroad, Amateur, Musik, klassisch, Junggesellen, Kammermusik, Laienmusik, Mahler, Musikliebhaber, Romantische Musik, Sologesang, Sommerkurs, Sommerkurs, Studenten, Tschechien, Tschechische Musik ">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -65,19 +63,17 @@ if ($_POST['username'] != '' AND $_POST['password'] != '' AND array_search($_POS
 <link rel="stylesheet" href="http://www.pellegrina.net/css/navigatie.css" type="text/css" />
 <link rel="stylesheet" href="http://www.pellegrina.net/css/kleuren.css" type="text/css" />
 
-<!-- InstanceBeginEditable name="head" -->
 
-<!-- InstanceEndEditable -->
 
 </head>
 <body>
 <div id="inhoud">
 <div align="center" valign="top" id="top">
   <div align="center"> <a href="../index.php" target="_parent"><img src="../Images/Logos/Pellegrina.gif" alt="La Pellegrina logo" width="600" height="112" border="0" align="top" class="geenlijn" /></a>
-    <h5 class="top-tekst"><!-- InstanceBeginEditable name="extra" --><!-- InstanceEndEditable -->muziekprojecten voor iedere muzikant met een professionele instelling</h5>
+    <h5 class="top-tekst">muziekprojecten voor iedere muzikant met een professionele instelling</h5>
   </div>
 </div>
-<div id="navigatie"><!-- InstanceBeginEditable name="nav2" --><!-- InstanceEndEditable -->
+<div id="navigatie">
     <div id="navcontainer">
       <ul id="navlist">
         <li><a href="index.htm" target="_parent">Cursussen</a></li>
@@ -108,7 +104,7 @@ if ($_POST['username'] != '' AND $_POST['password'] != '' AND array_search($_POS
     </table>
   </div>
 </div>
-<div id="main"><!-- InstanceBeginEditable name="EditRegion1" -->
+<div id="main">
 <FORM METHOD="POST" ACTION="<?php echo $editFormAction; ?>">
 <H2>Login pagina voor cursisten </H2>
 <p>&nbsp;</p>
@@ -136,7 +132,7 @@ if ($_POST['username'] != '' AND $_POST['password'] != '' AND array_search($_POS
 </table>
 <p>&nbsp;</p>
 </FORM>
-<!-- InstanceEndEditable --></div>
+</div>
 </div>
 <script type="text/javascript">Cufon.now();</script>
 <script type="text/javascript">
@@ -149,4 +145,4 @@ var pageTracker = _gat._getTracker("UA-10148994-2");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 </body>
-<!-- InstanceEnd --></html>
+</html>

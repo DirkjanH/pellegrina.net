@@ -19,20 +19,14 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <link rel="stylesheet" href="/css/faq.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Vaak gestelde vragen: romantische cursus</title>
-    <!-- InstanceEndEditable -->
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
     <!-- Facebook Pixel Code -->
     <script>
     ! function(f, b, e, v, n, t, s) {
@@ -67,7 +61,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
     ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" -->
             <h2 class="begin">Vaak gestelde vragen: romantische cursus</h2>
             <div class="w3-card-2 w3-padding faq-item"><b>Hoe worden de
                     kamermuziekensembles samengesteld?</b> Als de bezetting van
@@ -111,11 +104,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <strong><?php echo $cursusdata['beslisdatum']; ?></strong>, een
                 deelnemerslijst gepubliceerd.
             </div>
-            <!-- InstanceEndEditable -->
             <h2><a href="javascript: history.go(-1)">Terug</a></h2>
         </div>
     </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 </html>

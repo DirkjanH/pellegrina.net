@@ -1,19 +1,12 @@
 <!doctype html>
 <html>
-<!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Naamloos document</title>
-    <!-- InstanceEndEditable -->
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
 </head>
 <body>
-    <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Reisinformatie klooster Nieuw Sion, Diepenveen bij
         Deventer</h2>
     <ul class="w3-ul w3-card-2">
@@ -37,7 +30,5 @@
     <ul class="w3-ul w3-card-2">
         <li> Zelf mee te nemen: instrument(en), muziek (de van de site gedownloade + eigen muziek), lessenaar, papier en schrijfgerei, concertkleding. Als je iets van licht voor op je lessenaar hebt (plus snoeren om het aan te sluiten), neem het dan mee, want de kerk waar afsluitende concert wordt gehouden is vrij donker.</li>
     </ul>
-    <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
 </html>

@@ -20,24 +20,19 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
 
-  <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>2011 Video recordings on DVD</title>
-  <!-- InstanceEndEditable -->
   <meta charset="UTF-8">
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-  <!-- InstanceBeginEditable name="head" -->
   <link href="css/pellegrina_stijlen.css" rel="stylesheet" type="text/css">
-  <!-- InstanceEndEditable -->
   <!-- Facebook Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -73,7 +68,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
     ?>
     <div id="main">
-      <!-- InstanceBeginEditable name="mainpage" -->
       <h1>Video recordings 2011 </h1>
       <p>All concerts of all courses have been recorded on video with good quality sound. From this excellent footage a box per course with two well-edited DVD's was made. You can order it from Dirkjan Horringa for EUR 18 per box (course 2 EUR 10). Please find the instructions for ordering underneath.</p>
       <hr>
@@ -115,12 +109,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       </ul>
       <h2>CD recordings</h2>
       <p>If you ordered a CD recording from Karel Dvořáček, please contact him about delivery directly via email:&nbsp;<a href="mailto:karel.dvoracek@gmail.com">karel.dvoracek@gmail.com</a>.&nbsp;</p>
-      <!-- InstanceEndEditable -->
       <h2><a href="javascript: history.go(-1)">Back</a></h2>
     </div>
   </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>

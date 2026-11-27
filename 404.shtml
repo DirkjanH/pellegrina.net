@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/error message.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
 <script>
@@ -36,17 +35,16 @@ function includeHTML() {
 }
 </script>
 <head>
-<!-- InstanceBeginEditable name="doctitle" --><title>Not found</title><!-- InstanceEndEditable -->
+<title>Not found</title>
 </head>
 <body>
 <div id="inhoud">
    <div w3-include-html="/includes/header.NL.php" style="margin-bottom: 50px;"></div>
-   <div id="main"><!-- InstanceBeginEditable name="Main" -->
+   <div id="main">
 <H1>Not Found</H1>
 The requested URL <!--#echo var="REQUEST_URI" --> was not found on this server.
 <HR>
 <I><!--#echo var="HTTP_HOST" --></I>
-<!-- InstanceEndEditable -->
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
       <p>&nbsp;</p>
    </div>
@@ -55,4 +53,4 @@ The requested URL <!--#echo var="REQUEST_URI" --> was not found on this server.
 includeHTML();
 </script>
 </body>
-<!-- InstanceEnd --></html>
+</html>

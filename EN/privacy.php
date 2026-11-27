@@ -1,22 +1,17 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursussen.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Privacy and General Data Protection Regulation (GDPR)</title>
-<!-- InstanceEndEditable -->
 <meta charset="UTF-8">
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -44,7 +39,6 @@
   require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php';
   ?>
   <div id="main"> 
-  <!-- InstanceBeginEditable name="mainpage" -->
 <h3>Privacy</h3>
 <p><i>La Pellegrina</i> attaches great importance to the protection of your privacy. That is why all personal information you give us is treated in a careful and confidential manner. We are happy to inform you below about the way in which <em>La Pellegrina </em>handles your data.</p>
 <h3>Personal information</h3>
@@ -56,10 +50,10 @@
 <h3>Links</h3>
 <p>The <em>La Pellegrina </em>website contains links to other websites. <em>La Pellegrina </em>can not be held responsible for the extent to which other websites guarantee your privacy.</p>
 <h3>Questions</h3>
-<p>If you have any questions about this privacy statement, you can send them by e-mail to <a href="mailto:info@pellegrina.net">info@pellegrina.net</a>.</p>  <!-- InstanceEndEditable -->
+<p>If you have any questions about this privacy statement, you can send them by e-mail to <a href="mailto:info@pellegrina.net">info@pellegrina.net</a>.</p>  
     <h2><a href="javascript: history.go(-1)">Back</a></h2>
   </div>
 </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
-<!-- InstanceEnd --></html>
+</html>

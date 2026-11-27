@@ -81,18 +81,15 @@ echo '</pre>';
 <!DOCTYPE HTML>
 <?php //PHP ADODB document - made with PHAkt 2.5.1
 ?>
-<html><!-- InstanceBegin template="/Templates/LP.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
-<!-- CSS: -->
 <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
 <head>
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>List of participants</title>
 
-	<!-- InstanceEndEditable -->
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
 </head>
@@ -101,7 +98,6 @@ echo '</pre>';
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_tagmanager.php'; ?>
 	<div class="inhoud">
 		<div id="main">
-			<!-- InstanceBeginEditable name="mainpage" -->
 			<div id="inhoud">
 				<form action="<?php echo $editFormAction; ?>" method="get" name="form" id="form">
 					<input name="cursus" type="hidden" value="<?php echo $_GET['cursus']; ?>">
@@ -145,12 +141,10 @@ echo '</pre>';
 							<input name="gepostuleerd" type="hidden" value="<?php echo $_GET['gepostuleerd']; ?>">
 				</form>
 			</div>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 	<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd -->
 
 </html>
 <?php

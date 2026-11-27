@@ -2,22 +2,17 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>La Pellegrina muziekprojecten</title>
-<!-- InstanceEndEditable -->
 <meta charset="UTF-8">
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -45,7 +40,6 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
   require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php';
   ?>
   <div id="main"> 
-  <!-- InstanceBeginEditable name="mainpage" -->
    <h2 class="begin">Permission  received</h2>
     <p>Dear participant,</p>
     <p>We have gratefully received your permission for keeping your details on the <em>La Pellegrina</em> database. Your email address and other details will remain on the <em>La Pellegrina</em> mailing list, so that in the future you will receive information about summer courses and related projects per email. If you have indicated that certain data must be changed, this has already been executed.    </p>
@@ -55,10 +49,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
       La Pellegrina</em> </p>
 
     <p class="facebook">P.S. Did you know that <em>La Pellegrina </em>is also active on Facebook? <a title="La Pellegrina on Facebook" href="http://www.facebook.com/pellegrina.net" target="_blank"><img alt="La Pellegrina on Facebook" src="http://www.pellegrina.net/Images/Logos/facebook_logo.png" width="25" height="25"></a> <a title="La Pellegrina nu ook op facebook" href="http://www.facebook.com/pellegrina.net" target="_blank">www.facebook.com/pellegrina.net</a>. We appreciate it when you 'like' us there and share the summer school news with your musical friends!</p>
-  <!-- InstanceEndEditable -->
     <h2><a href="javascript: history.go(-1)">Back</a></h2>
   </div>
 </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
-<!-- InstanceEnd --></html>
+</html>

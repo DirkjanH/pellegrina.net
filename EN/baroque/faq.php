@@ -19,21 +19,15 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <link rel="stylesheet" href="/css/faq.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Frequently Asked Questions: Baroque course</title>
-    <!-- InstanceEndEditable -->
     <meta charset="UTF-8">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
     <!-- Facebook Pixel Code -->
     <script>
     ! function(f, b, e, v, n, t, s) {
@@ -68,7 +62,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
     ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" -->
             <h2 class="begin">Frequently Asked Questions: Baroque course</h2>
             <div class="w3-card-2 w3-padding faq-item"><B>How are chamber music ensembles
                     put together?</B> As soon as we know who is going to take
@@ -110,11 +103,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 after the decision about participation,
                 <strong><?php echo $cursusdata['beslisdatum']; ?></strong>.
             </div>
-            <!-- InstanceEndEditable -->
             <h2><a href="javascript: history.go(-1)">Back</a></h2>
         </div>
     </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 </html>

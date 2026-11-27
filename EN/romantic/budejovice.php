@@ -1,21 +1,15 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Naamloos document</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 
 <body>
-<!-- InstanceBeginEditable name="mainpage" -->
 <h2 class="begin">&#268;esk&eacute; Bud&#283;jovice, Czech Republic</h2>
 <div class="fotolinks"><img src="/Images/Locaties/Budejovice/plein_vanaf_toren.jpg" alt="The central square, seen from the Black Tower" width="450" border="1" /><br />
   The central square, seen from the Black Tower</div>
@@ -51,6 +45,5 @@
   </a>- <a href="http://www.praguenet.com/compass/number_5/travel.html" target="_blank">&#268;esk&eacute; Bud&#283;jovice history</a></p>
   <h2>Photos</h2>
   <p>See also in <a href="http://www.virtourist.com/europe/budejovice/index.html" target="_blank">this photo album</a> for more photos of &#268;esk&eacute; Bud&#283;jovice</p></div>
-<!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+</html>

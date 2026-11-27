@@ -19,23 +19,18 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
 
-  <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title>Reicha's Requiem</title>
-  <!-- InstanceEndEditable -->
   <meta charset="UTF-8">
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-  <!-- InstanceBeginEditable name="head" -->
-  <!-- InstanceEndEditable -->
   <!-- Facebook Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -72,7 +67,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.EN.php';
     ?>
     <div id="main">
-      <!-- InstanceBeginEditable name="mainpage" -->
       <div class="cols2">
         <h2>Programme details</h2>
         <p>Each afternoon we work on a programme for soloists, choir and orchestra, which is performed publicly as the conclusion of the course. This year, this final concert will feature a programme in with Reicha's Requiem willmbe the central work. The orchestra will open the concert with Dvořák's Symphonic Variations. The concert, conducted by Dirkjan Horringa, will take place in the church of the Dominican monastery in České Budějovice.</p>
@@ -108,12 +102,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <p>Despite rave reviews after the premiere on 2 December 1877, the Symphonic Variations were sidelined for ten years. They were not performed again until 6 March 1887, when Dvořák himself conducted the National Theatre Orchestra. The new success of the work encouraged Dvořák to send the score to his great admirer, conductor Hans Richter, with a proposal to include it in the programme of his English tour. Richter accepted and performed the Variations in London to an enthusiastic audience. He wrote the following to Dvořák after the concert: &quot;My dear friend! I am delighted by the enormous success of your Symphonic Variations. When I look at all the hundreds of concerts I have conducted, I realise that I have never known a new work that aroused such unmistakable enthusiasm, on all sides. Everyone wanted to know when the work was written and why Dvořák had waited so long to bring it to the public's attention? I leave the parts here because I will probably perform it again. I say 'probably', although it is almost certain now. In any case, I have to present these variations next winter in Vienna&quot;.</p>
         <p>The Vienna premiere took place on 4 December 1887. Dvořák attended the concert and thus witnessed the huge ovations that followed. He wrote in a letter to his publisher Simrock: &quot;As Brahms said - and he knows the Viennese audience very well: none of my works has ever had such an impact as the 'Variations'. The work was superbly performed and the audience responded with thunderous applause. As thanks for my variations, Brahms gave me a beautiful cigarette holder. </p>
       </div>
-      <!-- InstanceEndEditable -->
       <h2><a href="javascript: history.go(-1)">Back</a></h2>
     </div>
   </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
-<!-- InstanceEnd -->
 
 </html>

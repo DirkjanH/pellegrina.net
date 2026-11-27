@@ -1,19 +1,12 @@
 <!doctype html>
 <html>
-<!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Contact</title>
-    <!-- InstanceEndEditable -->
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
 </head>
 <body>
-    <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Contact</h2>
     <p>Bij vragen of opmerkingen kun je <i>La Pellegrina</i> als volgt bereiken:
     </p>
@@ -72,7 +65,5 @@
                     src="https://www.zingmagazine.nl/wp-content/uploads/2018/10/Zing-header.jpg"
                     alt="Zing Magazine" width="350" class="geenlijn" /></a></li>
     </ul>
-    <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
 </html>

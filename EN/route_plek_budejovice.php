@@ -1,21 +1,15 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Naamloos document</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 
 <body>
-<!-- InstanceBeginEditable name="mainpage" -->
 <h2 class="begin">Travel information</h2>
 <p> Perhaps you have a spare place in your car, or you want a ride. Perhaps you intend to travel by air, train or bus and prefer to travel with others. If you&nbsp;want to&nbsp;travel together&nbsp;by car or&nbsp;public transport&nbsp;you can look&nbsp;at&nbsp;the list of participants.&nbsp;It&nbsp;shows how&nbsp;one intends&nbsp;to travel.&nbsp;Please feel free to take up contact with other participants. Probably&nbsp;you will find&nbsp;like-minded&nbsp;souls and&nbsp;can&nbsp;agree on&nbsp;a  trip together. </p>
 <h3>By  train or by air</h3>
@@ -52,6 +46,5 @@
 	day. Diets can be taken into account.</li>
 </ul>
 
-<!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+</html>

@@ -77,27 +77,22 @@ if ( isset( $id )AND $id != ''){
 else exit('Deze deelnemer bestaat niet. Het programma wordt nu afgebroken.')
 ?>
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 	<title>Bevestig gegevens</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.NL.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 <body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_tagmanager.php'; ?>
 <div id="inhoud">
   <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.NL.php'; ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+  <div id="main"> 
 <div class="w3-content">
    <p>Beste
       <?php echo($dlnmr['voornaam']); ?>, </p>
@@ -172,11 +167,10 @@ else exit('Deze deelnemer bestaat niet. Het programma wordt nu afgebroken.')
    <p>Met muzikale groet</p>
    <p>Dirkjan Horringa</p>
 </div>
-<!-- InstanceEndEditable -->
     <h2> <a href="javascript: history.go(-1)">Terug</a></h2>
     <p>&nbsp;</p>
   </div>
 </div>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd --></html>
+</html>

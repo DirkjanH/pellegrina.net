@@ -241,7 +241,6 @@ else $aantal_zwl = 0;
 			</form>
 			</p>
 		</div>
-		<!-- InstanceEndEditable -->
 	</div>
 </body>
 

@@ -1,26 +1,21 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursussen.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>JAK SE PŘIPOJIT K MEZINÁRODNÍMU SBORU LA PELLEGRINA?</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 <body>
 <div id="inhoud">
   <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php'; ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+  <div id="main"> 
 <h2>Jak se připojit k projektu Svatební Košile <br>
   mezinárodného sboru <em>La Pellegrina</em>?</h2>
 <p><img src="http://www.antikbuddha.com/photos/43805.jpg" alt="Svatební košile" width="277" height="354" hspace="20" align="left">KDO: Jsou v&iacute;t&aacute;ni zp&#283;v&aacute;ci v&scaron;ech hlasov&yacute;ch skupin, schopn&iacute; zp&iacute;vat v komorn&iacute;m sboru. Zkou&scaron;ky jsou vedeny v angli&#269;tin&#283;, zp&iacute;v&aacute; se &#269;esky.</p>
@@ -35,11 +30,10 @@
 <p>V&Iacute;CE INFORMAC&Iacute;:<br>
   Dirkjan Horringa, <a href="mailto:info@pellegrina.net">info@pellegrina.net</a>, tel. +31 619 224 758 (cze/eng)<br>
   Kontakt v &#268;R: Milka Kub&iacute;&#269;kov&aacute;, <a href="mailto:miluse.kubickova@email.cz">miluse.kubickova@email.cz</a>, tel. 608 213 216 (cze)</p>
-<!-- InstanceEndEditable -->
     <h2> <a href="javascript: history.go(-1)">Back</a></h2>
     <p>&nbsp;</p>
   </div>
 </div>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd --></html>
+</html>

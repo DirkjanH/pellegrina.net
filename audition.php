@@ -1,26 +1,21 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursussen.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Zauberflöte audition</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 <body>
 <div id="inhoud">
   <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php'; ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+  <div id="main"> 
     <h1>Zauberflöte audition on February 4 and 5, 2011</h1>
     <h4>The auditions for solo roles in the Zauberflöte will be held at:</h4>
     <p> <a href="http://maps.google.com/maps?f=q&source=s_q&hl=nl&geocode=&q=Oranje+Nassaulaan+2+3523+VR+Utrecht&ie=UTF8&hq=&hnear=Oranje+Nassaulaan+2,+Nieuw+Hoograven,+Utrecht,+Nederland&ll=52.069522,5.122783&spn=0.007875,0.026157&t=h&z=16&iwloc=A" target="_blank">Johannes de Doper-Bernarduskerk</a><br>
@@ -52,11 +47,10 @@
     <h4>Duration of the audition: ca. 20 minutes</h4>
     <p>You will receive notice of your audition time a week in advance at the latest. It is possible to do a vocal warm up at the church. You will receive results of the audition by Friday, 11 February at  the latest.</p>
     <p><span class="nadruk"> In case you can't take part in person, please send a CD, MP3 or YouTube recording to <a href="EN/romantic/contact.php" target="_blank">La Pellegrina</a></span></p>
-  <!-- InstanceEndEditable -->
     <h2> <a href="javascript: history.go(-1)">Back</a></h2>
     <p>&nbsp;</p>
   </div>
 </div>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd --></html>
+</html>

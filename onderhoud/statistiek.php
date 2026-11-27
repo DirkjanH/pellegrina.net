@@ -160,14 +160,12 @@ while ($i <= ($laatstecursus)) {
 ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/onderhoud.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>LP statistiek</title>
-	<!-- InstanceEndEditable -->
 
 	<script type="text/javascript">
 		//<!--
@@ -205,8 +203,6 @@ while ($i <= ($laatstecursus)) {
 		}
 		-->
 	</style>
-	<!-- InstanceBeginEditable name="head" -->
-	<!-- InstanceEndEditable -->
 </head>
 
 <body>
@@ -217,7 +213,7 @@ while ($i <= ($laatstecursus)) {
 		<header id="navigatiebalk">
 			<?php require_once('navigatie_nieuw.php'); ?>
 		</header>
-		<div id="mainpage"><!-- InstanceBeginEditable name="Mainpage" -->
+		<div id="mainpage">
 			<div class="w3-panel">
 				<table class="w3-table w3-striped">
 					<tr>
@@ -358,10 +354,8 @@ while ($i <= ($laatstecursus)) {
 					</tr>
 				</table>
 			</div>
-			<!-- InstanceEndEditable -->
 		</div>
 	</div>
 </body>
-<!-- InstanceEnd -->
 
 </html>

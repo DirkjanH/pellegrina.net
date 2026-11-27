@@ -21,7 +21,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
     <link rel="stylesheet" href="/css/faq.css" type="text/css">
     <title>Vaak gestelde vragen: barokcursus</title>
@@ -61,7 +60,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                                     echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
                                     require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.NL.php';
                                     ?> <div id="main">
-            <!-- InstanceBeginEditable name="mainpage" -->
             <h2 class="begin">Vaak gestelde vragen: barokcursus</h2>
             <div class="w3-card-2 w3-padding faq-item"><b>Hoe worden de
                     kamermuziekensembles samengesteld?</b> Als de bezetting van

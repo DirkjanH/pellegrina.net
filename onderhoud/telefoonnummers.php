@@ -55,17 +55,14 @@ if ((isset($_POST["bewaar"])) && ($_POST["bewaar"] == "bewaar")) {
 
 <!DOCTYPE HTML>
 <?php //PHP ADODB document - made with PHAkt 3.5.1?>
-<html><!-- InstanceBegin template="/Templates/LP.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
 <head>
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Untitled Document</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 </head>
@@ -73,7 +70,6 @@ if ((isset($_POST["bewaar"])) && ($_POST["bewaar"] == "bewaar")) {
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_tagmanager.php'; ?>
 <div class="inhoud">
   <div id="main"> 
-  <!-- InstanceBeginEditable name="mainpage" -->
 <form id="zoek" name="zoek" method="get" action="<?php echo $editFormAction; ?>">
    Id:
    <input name="InschId" type="text" value="<?php if (isset($_GET['InschId'])) echo $_GET['InschId']; ?>" size="5" />
@@ -108,12 +104,11 @@ if ((isset($_POST["bewaar"])) && ($_POST["bewaar"] == "bewaar")) {
       </tr>
    </table>
 </form>
-<!-- InstanceEndEditable --> 
   </div>
 </div>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd --></html>
+</html>
 <?php
 $Recordset1->Close();
 ?>

@@ -1,22 +1,17 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursussen.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Privacy en Algemene verordening gegevensbescherming (AVG)</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.NL.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -43,7 +38,7 @@
 	echo '<span class="w3-opennav w3-xxlarge w3-hide-large" onclick="w3_open()">☰</span>';
 	require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.NL.php';
 	 ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+  <div id="main"> 
 <h3>Privacy</h3>
 <p><i>La Pellegrina</i> hecht veel waarde aan de bescherming van uw privacy. Daarom wordt alle persoonlijke informatie die u ons geeft op een zorgvuldige en vertrouwelijke manier behandeld. Wij informeren u graag hieronder over de manier waarop <i>La Pellegrina</i> omgaat met uw gegevens.</p>
 <h3>Persoonlijke gegevens</h3>
@@ -56,10 +51,10 @@
 <h3>Links</h3>
 <p>De website van <i>La Pellegrina</i> bevat links naar andere websites. <i>La Pellegrina</i> kan niet verantwoordelijk gesteld worden voor de mate waarin andere websites uw privacy waarborgen.</p>
 <h3>Vragen</h3>
-<p>Heeft u nog vragen over deze privacyverklaring dan kunt u deze per e-mail sturen naar <a href="mailto:info@pellegrina.net">info@pellegrina.net</a>.</p>  <!-- InstanceEndEditable -->
+<p>Heeft u nog vragen over deze privacyverklaring dan kunt u deze per e-mail sturen naar <a href="mailto:info@pellegrina.net">info@pellegrina.net</a>.</p>  
     <h2><a href="javascript: history.go(-1)">Terug</a></h2>
   </div>
 </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
-<!-- InstanceEnd --></html>
+</html>

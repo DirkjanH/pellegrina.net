@@ -1,21 +1,15 @@
 <!doctype html>
-<html><!-- InstanceBegin template="/Templates/leeg_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Naamloos document</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 
 <body>
-<!-- InstanceBeginEditable name="mainpage" -->
 <FORM METHOD="POST" ACTION="<?php echo "/login_pagina.php"; ?>">
 <H2>Login page for course participants </H2>
 <p>&nbsp;</p>
@@ -41,6 +35,5 @@
 <input name="taal" type="hidden" value="<?php echo $taal; ?>">
 <input name="cursusnaam" type="hidden" value="<?php echo $cursusnaam; ?>">
 </FORM>
-<!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+</html>

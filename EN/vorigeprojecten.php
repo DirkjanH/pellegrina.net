@@ -69,7 +69,5 @@
                 musical summer in Czechia!</td>
         </tr>
     </table>
-    <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
 </html>

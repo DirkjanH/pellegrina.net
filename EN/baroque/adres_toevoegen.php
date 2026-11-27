@@ -18,21 +18,17 @@ ob_start();
 require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php');
 ?>
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Request newsletter La Pellegrina</title>
-<!-- InstanceEndEditable -->
 <meta charset="UTF-8">
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -60,13 +56,11 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/includes/cursusdata.php');
   require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php';
   ?>
   <div id="main"> 
-  <!-- InstanceBeginEditable name="mainpage" -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/EN/adres_toevoegen.php'; ?>
-  <!-- InstanceEndEditable -->
     <h2><a href="javascript: history.go(-1)">Back</a></h2>
   </div>
 </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
-<!-- InstanceEnd --></html>
+</html>
 <?php ob_flush(); ?>

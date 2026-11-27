@@ -1573,13 +1573,11 @@
                 <li> Dvořák, Violin Romance in F minor (soloist Pavel Šorm,
                     violin) </li>
             </ul>
-            <!-- InstanceEndEditable -->
             <h2> <a href="javascript: history.go(-1)">Back</a></h2>
             <p>&nbsp;</p>
             <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
         </div>
     </div>
 </body>
-<!-- InstanceEnd -->
 
 </html>

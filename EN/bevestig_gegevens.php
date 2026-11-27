@@ -77,27 +77,22 @@ if ( isset( $id )AND $id != ''){
 else exit('This participant does not exist. The program is now being terminated.')
 ?>
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 	<title>Confirm data and permission</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 <body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_tagmanager.php'; ?>
 <div id="inhoud">
   <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php'; ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+  <div id="main"> 
 <div class="w3-content">
    <p>Dear
       <?php echo($dlnmr['voornaam']); ?>, </p>
@@ -171,11 +166,10 @@ else exit('This participant does not exist. The program is now being terminated.
    <p>Musical greetings,</p>
    <p>Dirkjan Horringa</p>
 </div>
-<!-- InstanceEndEditable -->
     <h2> <a href="javascript: history.go(-1)">Back</a></h2>
     <p>&nbsp;</p>
   </div>
 </div>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd --></html>
+</html>

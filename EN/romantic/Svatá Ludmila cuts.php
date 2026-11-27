@@ -1,27 +1,22 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/cursussen.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>Svatá Ludmila - Selection of movements and cuts</title>
-<!-- InstanceEndEditable -->
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
 <body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_tagmanager.php'; ?>
 <div id="inhoud">
   <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php'; ?>
-  <div id="main"> <!-- InstanceBeginEditable name="mainpage" -->
+  <div id="main"> 
   	<h1>Svatá Ludmila - Selection of movements and cuts</h1>
 	<div class="cols3">
 		<h2>First part</h2>
@@ -63,11 +58,10 @@
 		<li>Konec: end</li>
 		<li>Rychle otoč: turn page quickly  </li>
 	</ul>
-  <!-- InstanceEndEditable -->
     <h2> <a href="javascript: history.go(-1)">Back</a></h2>
     <p>&nbsp;</p>
   </div>
 </div>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd --></html>
+</html>

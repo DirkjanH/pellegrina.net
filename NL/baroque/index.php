@@ -19,20 +19,14 @@ $taal = $filenaam[5];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <!-- CSS: -->
   <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-  <!-- InstanceBeginEditable name="doctitle" -->
   <title><?php echo $cursusdata['cursusnaam_nl']; ?></title>
-  <!-- InstanceEndEditable -->
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.NL.php'; ?>
   <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-  <!-- InstanceBeginEditable name="head" -->
-  <!-- InstanceEndEditable -->
   <!-- Facebook Pixel Code -->
   <script>
     ! function(f, b, e, v, n, t, s) {
@@ -102,7 +96,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
       <p class="onzichtbaar">Vol voor: alle instrumenten en zangers </p>
       <p><a href="cursus.php" class="onzichtbaar">Lees meer over deze
           cursus</a></p>
-      <!-- InstanceEndEditable -->
       <h2><a href="javascript: history.go(-1)">Terug</a></h2>
     </div>
   </div>

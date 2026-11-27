@@ -1,19 +1,12 @@
 <!doctype html>
 <html>
-<!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Naamloos document</title>
-    <!-- InstanceEndEditable -->
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
 </head>
 <body>
-    <!-- InstanceBeginEditable name="mainpage" -->
     <h2 class="begin">Ervaringen van deelnemers</h2>
     <table class="w3-table w3-striped w3-bordered" border="1">
         <tr>
@@ -76,7 +69,5 @@
                 zomervakantie in Tsjechi&euml;!</td>
         </tr>
     </table>
-    <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
 </html>

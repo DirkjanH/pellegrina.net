@@ -218,7 +218,6 @@ function ruimtecodes()
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-	<!-- InstanceBeginEditable name="doctitle" -->
 	<title>List of ensemble formation, course nr.
 		<?php echo $_SESSION['Cursus'] ?></title>
 	<meta name="robots" content="noindex, nofollow">
@@ -522,7 +521,6 @@ ensemblelid.InschId AND CursusId_FK = %s AND `set` = %s) = 0 AND i.CursusId_FK =
 			<meta charset="utf-8">
 			<link rel="stylesheet" href="/css/pellegrina_stijlen.css"
 				type="text/css">
-			<!-- InstanceBeginEditable name="doctitle" -->
 			<title>List of ensemble formation, course nr.
 				<?php echo $_SESSION['Cursus'] ?></title>
 			<meta name="robots" content="noindex, nofollow">

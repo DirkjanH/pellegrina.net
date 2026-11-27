@@ -2,22 +2,17 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
 
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/LP_EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>La Pellegrina muziekprojecten</title>
-<!-- InstanceEndEditable -->
 <meta charset="UTF-8">
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/metatags+javascript.EN.php'; ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -45,17 +40,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/includes/GA_code.php'; ?>
   require_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.EN.php';
   ?>
   <div id="main"> 
-  <!-- InstanceBeginEditable name="mainpage" -->
    <h2 class="begin">Choice received</h2>
     <p>Dear participant,</p>
     <p>We have received your choice to be removed from the <em>La Pellegrina</em> mailing list. Your data has now been completely removed.</p>
     <p>With musical greetings,</p>
     <p>Dirkjan Horringa <em><br>
       La Pellegrina</em></p>
-  <!-- InstanceEndEditable -->
     <h2><a href="javascript: history.go(-1)">Back</a></h2>
   </div>
 </div>
 </body>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php'; ?>
-<!-- InstanceEnd --></html>
+</html>

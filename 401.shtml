@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/error message.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
 
-   <!-- CSS: -->
    <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
 
 <script>
@@ -36,19 +35,16 @@ function includeHTML() {
 }
 </script>
 <head>
-<!-- InstanceBeginEditable name="doctitle" -->
    <title>Authorization Required</title>
-   <!-- InstanceEndEditable -->
 </head>
 <body>
 <div id="inhoud">
    <div w3-include-html="/includes/header.NL.php" style="margin-bottom: 50px;"></div>
-   <div id="main"><!-- InstanceBeginEditable name="Main" -->
+   <div id="main">
 <H1>Authorization Required</H1>
 This server could not verify that you are authorized to access the document requested. Either you supplied the wrong credentials (e.g., bad password), or your browser doesn't understand how to supply the credentials required.
 <HR>
 <I><!--#echo var="HTTP_HOST" --></I>
-<!-- InstanceEndEditable -->
       <h2> <a href="javascript: history.go(-1)">Back</a></h2>
       <p>&nbsp;</p>
    </div>
@@ -57,4 +53,4 @@ This server could not verify that you are authorized to access the document requ
 includeHTML();
 </script>
 </body>
-<!-- InstanceEnd --></html>
+</html>

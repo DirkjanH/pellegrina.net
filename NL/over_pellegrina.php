@@ -1,16 +1,10 @@
 ﻿<!doctype html>
 <html>
-<!-- InstanceBegin template="/Templates/leeg_NL.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Naamloos document</title>
-    <!-- InstanceEndEditable -->
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
 </head>
 <body>
     <h2 class="begin"><em>La Pellegrina</em></h2>
@@ -124,7 +118,5 @@
     <h2>Cursusaanbod komende zomer </h2>
     <p>In de komende zomer organiseert <i>La Pellegrina</i> twee zomercursussen,
         één in Nederland, één in Tsjechië.</p>
-    <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
 </html>

@@ -173,18 +173,13 @@ if (class_exists('Kint') && function_exists('d')) {
 ?>
 <!DOCTYPE HTML>
 <html>
-<!-- InstanceBegin template="/Templates/LP algemeen EN.dwt.php" codeOutsideHTMLIsLocked="false" -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Statistics Fund <?php echo $jaar; ?></title>
-    <!-- InstanceEndEditable -->
     <?php require_once dirname(__DIR__) . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once dirname(__DIR__) . '/includes/GA_code.php'; ?>
-    <!-- InstanceBeginEditable name="head" -->
     <link rel="stylesheet" href="../css/pellegrina_stijlen.css" type="text/css">
     <style type="text/css">
     <!--
@@ -210,13 +205,11 @@ if (class_exists('Kint') && function_exists('d')) {
     }
     -->
     </style>
-    <!-- InstanceEndEditable -->
 </head>
 <body> <?php require_once dirname(__DIR__) . '/includes/GA_tagmanager.php'; ?>
     <div id="inhoud">
         <?php require_once dirname(__DIR__) . '/includes/header.EN.php'; ?> <div
             id="main">
-            <!-- InstanceBeginEditable name="mainpage" -->
             <h2>Statistics <?php echo $jaar; ?></h2>
             <form method="get"
                 action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
@@ -313,11 +306,9 @@ if (class_exists('Kint') && function_exists('d')) {
                     </td>
                 </tr>
             </table>
-            <!-- InstanceEndEditable -->
             <h2> <a href="javascript: history.go(-1)">Back</a></h2>
             <p>&nbsp;</p>
         </div>
     </div> <?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
 </body>
-<!-- InstanceEnd -->
 </html>

@@ -22,16 +22,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <!-- CSS: -->
     <link rel="stylesheet" href="/css/pellegrina_stijlen.css" type="text/css">
-    <!-- InstanceBeginEditable name="doctitle" -->
     <title>Summer School "<?php echo $cursusdata['cursusnaam']; ?>"</title>
-    <!-- InstanceEndEditable -->
     <meta charset="UTF-8">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/metatags+javascript.EN.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/GA_code.php'; ?>
-    <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
     <!-- Facebook Pixel Code -->
     <script>
     ! function(f, b, e, v, n, t, s) {
