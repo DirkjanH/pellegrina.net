@@ -107,12 +107,100 @@ hr {
     margin: 16px 0;
 }
 
-/* Make a one column-layout instead of three-column layout */
-@media (max-width: 600px) {
-    .container {
-        grid-template-columns: auto;
-        width: 200px;
-        float: left;
+@media screen and (max-width: 1100px) {
+    div#zoeknaam,
+    div#mainframe {
+        box-sizing: border-box;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    div#zoeknaam {
+        padding: 0 16px;
+    }
+
+    div#mainpage {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    #navigatiebalk .container {
+        grid-template-columns: repeat(auto-fit, minmax(min(135px, 100%), 1fr));
+        width: 100%;
+    }
+
+    #navigatiebalk .grid_item {
+        box-sizing: border-box;
+        width: auto;
+    }
+
+    #navigatiebalk .grid_item a {
+        box-sizing: border-box;
+        display: block;
+        padding: 8px 4px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #mainpage table {
+        max-width: 100%;
+    }
+
+    #mainpage td,
+    #mainpage th {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    #mainpage input,
+    #mainpage select,
+    #mainpage textarea,
+    #zoeknaam input,
+    #zoeknaam select {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    #mainpage textarea {
+        max-width: min(100%, 18rem);
+    }
+
+    :is(#inschrijf, #inschrijvingsform) > table {
+        width: 100%;
+    }
+
+    :is(#inschrijf, #inschrijvingsform) > table > tbody > tr {
+        display: grid;
+        grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+    }
+
+    :is(#inschrijf, #inschrijvingsform) > table > tbody > tr > td {
+        width: auto;
+        min-width: 0;
+    }
+
+    :is(#inschrijf, #inschrijvingsform) > table > tbody > tr > td:only-child {
+        grid-column: 1 / -1;
+    }
+
+    #inschrijf table table tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #mainpage #openstaand,
+    #mainpage #navcontainer {
+        max-width: 100%;
+    }
+
+    #mainpage .w3-left {
+        max-width: 100%;
+    }
+
+    #mainpage .w3-left + .w3-left {
         clear: both;
     }
 }

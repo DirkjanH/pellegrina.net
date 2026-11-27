@@ -74,6 +74,48 @@ body {
     margin-top: 3mm;
 }
 
+@media screen and (max-width: 600px) {
+    .page {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .badge {
+        min-height: 32mm;
+    }
+
+    .badge-text {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .lp-badges-ui .w3-bar .w3-bar-item {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    .lp-badges-ui .w3-button {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .lp-badges-ui pre {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    .badge-editor-preview .page {
+        height: calc(297mm - 38mm);
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: calc((297mm - 38mm) / 7);
+    }
+}
+
 @media print {
     body {
         margin: 0;
