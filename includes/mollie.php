@@ -4,7 +4,7 @@ require_once __DIR__ . '/mollie_config.php';
 
 $mollie = new \Mollie\Api\MollieApiClient();
 try {
-    $mollieLiveSleutel = laadMollieLiveSleutel('/var/www/vhosts/horringa.net/private/mollie.php');
+    //    $mollieLiveSleutel = laadMollieLiveSleutel('/var/www/vhosts/horringa.net/private/mollie.php');
 } catch (RuntimeException $exception) {
     error_log('Mollie-configuratie: ' . $exception->getMessage());
     http_response_code(503);
