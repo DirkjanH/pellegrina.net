@@ -10,6 +10,29 @@ namespace Pelago\Emogrifier {
 }
 
 namespace {
+	require dirname(__DIR__) . '/vendor/autoload.php';
+
+	class FixturePaymentNotFound extends \Mollie\Api\Exceptions\ApiException
+	{
+		public function __construct() { $this->code = 404; }
+	}
+
+	class FixturePayments
+	{
+		private $payment, $modus;
+		public function __construct($payment, $modus) { $this->payment = $payment; $this->modus = $modus; }
+		public function get($id) {
+			global $fixture;
+			if ($this->modus !== ($fixture['payment_mode'] ?? 'live')) throw new FixturePaymentNotFound();
+			return $this->payment;
+		}
+	}
+
+	function maakMollieClient($modus) {
+		global $payment;
+		return (object) ['payments' => new FixturePayments($payment, $modus)];
+	}
+
 	class Kint { public static $enabled_mode; }
 	class LPmailer
 	{
@@ -81,6 +104,7 @@ namespace {
 		$_SERVER['DOCUMENT_ROOT'] = $argv[2];
 		$cursus_offset = 0;
 		$fixture = json_decode(file_get_contents($argv[2] . '/fixture.json'), true, 512, JSON_THROW_ON_ERROR);
+		$mollieModus = $fixture['current_mode'] ?? 'live';
 		$_POST['id'] = 'tr_TestPayment';
 		$payment = new class($fixture['status']) {
 			public $status;
@@ -93,11 +117,7 @@ namespace {
 			public function hasRefunds() { return false; }
 			public function hasChargebacks() { return false; }
 		};
-		$mollie = (object) ['payments' => new class($payment) {
-			private $payment;
-			public function __construct($payment) { $this->payment = $payment; }
-			public function get($id) { return $this->payment; }
-		}];
+		$mollie = maakMollieClient($mollieModus);
 		register_shutdown_function(static function () {
 			file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/response.json', json_encode([
 				'status' => http_response_code(),
@@ -118,7 +138,7 @@ namespace {
 	$directories = ['includes', 'vendor', 'css', 'mail_sent', 'bevestiging'];
 	$files = [
 		'includes/includes2027.php' => '<?php',
-		'includes/mollie.php' => '<?php',
+		'includes/mollie.php' => '<?php require_once ' . var_export($repository . '/includes/mollie_config.php', true) . ';',
 		'includes/LPmailer.inc.php' => '<?php',
 		'vendor/autoload.php' => '<?php',
 		'css/mailing.css' => '',
@@ -170,6 +190,8 @@ namespace {
 			'legacy booking marker' => ['marker' => 'test-booking.sent', 'mails' => 0],
 			'payment marker' => ['marker' => 'payment-confirmation-tr_TestPayment.sent', 'mails' => 0],
 			'first paid notification' => ['mails' => 1, 'initial_status' => 'open', 'database' => true],
+			'live payment after switching to test' => ['current_mode' => 'test', 'payment_mode' => 'live', 'mails' => 1, 'database' => true],
+			'test payment after switching to live' => ['current_mode' => 'live', 'payment_mode' => 'test', 'mails' => 1, 'database' => true],
 			'repeated paid notification' => ['mails' => 1, 'repeat' => true, 'database' => true],
 			'legacy endpoint' => ['mails' => 1, 'endpoint' => 'legacy', 'database' => true],
 			'failure after earlier registration confirmation' => ['date' => '2026-01-02 12:00:00', 'status' => 'failed', 'mails' => 0],
@@ -219,6 +241,8 @@ namespace {
 				'marker_write_fails' => $case['marker_write_fails'] ?? false,
 				'database_write_fails' => $case['database_write_fails'] ?? false,
 				'mail_fails' => $case['mail_fails'] ?? false,
+				'current_mode' => $case['current_mode'] ?? 'live',
+				'payment_mode' => $case['payment_mode'] ?? 'live',
 			])));
 			$statuses = $case['statuses'] ?? array_fill(0, count($case['endpoints'] ?? []) ?: ($case['requests'] ?? (!empty($case['repeat']) ? 2 : 1)), $case['status'] ?? 'paid');
 			foreach ($statuses as $request => $status) {

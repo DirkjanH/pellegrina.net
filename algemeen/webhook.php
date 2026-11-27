@@ -71,7 +71,14 @@ $retry_webhook = static function ($message) use ($mail_key, $attempt_count, $att
 };
 
 try {
-	$payment = $mollie->payments->get($mollie_id);
+	$payment = haalMollieBetalingOp($mollie, $mollie_id, static function () use ($mollieModus) {
+		try {
+			return maakMollieClient($mollieModus === 'live' ? 'test' : 'live');
+		} catch (RuntimeException $exception) {
+			error_log('Mollie-configuratie voor eerdere betaling: ' . $exception->getMessage());
+			throw $exception;
+		}
+	});
 } catch (Throwable $exception) {
 	$retry_webhook('Betalingsstatus tijdelijk niet beschikbaar.');
 }
