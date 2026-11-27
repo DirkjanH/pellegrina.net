@@ -152,7 +152,7 @@ function getisp($ip = '')
                             class="mySlides" />
                         <img src="Images/slideshow/barokensemble.jpg" alt=""
                             class="mySlides" />
-                        <img src="Images/slideshow/DJ_dirigerend2.jpg" alt=""
+                        <img src="Images/slideshow/lucka.jpg" alt=""
                             class="mySlides" />
                         <img src="Images/slideshow/horringa%20in%20actie.jpg" alt=""
                             class="mySlides" />
