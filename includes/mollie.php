@@ -22,9 +22,3 @@ try {
     http_response_code(503);
     exit('Online betalen is tijdelijk niet beschikbaar.');
 }
-if ($mollieLiveSleutel !== null) {
-    $mollie->setApiKey($mollieLiveSleutel);
-} else {
-    $mollie->setApiKey("test_PqGy4z4RKMVpgQHzyaxSPSKsjQd5Gq"); // La Pellegrina test
-}
-unset($mollieLiveSleutel);
