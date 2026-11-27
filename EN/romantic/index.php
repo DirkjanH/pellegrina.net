@@ -76,7 +76,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
         <li>Everyone plays in two pre-formed chamber music ensembles
         </li>
         <li>Central work for everyone: Mendelssohn's oratorio
-          <em>Elijah</em> op. 70 (Part I)
+          <em>Elijah</em> op. 70 (Part I), sung in German
         </li>
         <li>Choir: in addition to Part I of <em>Elijah</em> with orchestra,
           the choir will also work on chamber choir repertoire, a

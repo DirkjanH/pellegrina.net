@@ -159,7 +159,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>Each afternoon we work on our tutti programme, which we will
                     perform publicly at the end of the course. This year, the
                     final concert will feature Part I of Mendelssohn's oratorio
-                    <i>Elijah</i> for soloists, choir and orchestra. <a
+                    <i>Elijah</i> for soloists, choir and orchestra. We will
+                    sing it in German. <a
                         href="programma.php">Read more about the works and their
                         musical and historical context here</a>. The concert
                     will take place in the České Budějovice cathedral, with its

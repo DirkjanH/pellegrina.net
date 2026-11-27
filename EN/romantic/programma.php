@@ -66,8 +66,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h1>The central work: Mendelssohn's Elijah, Op. 70 (Part I)</h1>
                 <p>In the final concert, we will perform only Part I of
                     Mendelssohn's Romantic oratorio <em>Elijah</em>, with
-                    soloists, orchestra and choir. The complete work is too long
-                    to prepare during this course. Part I lasts approximately
+                    soloists, orchestra and choir. We will sing it in German.
+                    The complete work is too long to prepare during this course.
+                    Part I lasts approximately
                     65 to 70 minutes and therefore
                     makes a complete concert programme in its own right. The
                     story, too, forms a satisfying whole. </p>

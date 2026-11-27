@@ -148,7 +148,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <p>Elke middag werken we aan een programma voor iedereen, dat we
                     als afsluiting van de cursus openbaar uitvoeren. Dit jaar
                     klinkt in dit slotconcert het eerste deel van Mendelssohns
-                    oratorium <i>Elias</i>, voor solisten, koor en orkest. <a
+                    oratorium <i>Elias</i>, voor solisten, koor en orkest. We
+                    zingen het werk in het Duits. <a
                         href="programma.php">Lees meer over Elias en zijn
                         muzikale en historische context</a>. Het slotconcert
                     vindt plaats in de schitterende en magnifiek klinkende

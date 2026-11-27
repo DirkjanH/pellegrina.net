@@ -68,8 +68,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h1>Het centrale werk: Mendelssohns Elias op. 70 (1e deel)</h1>
                 <p>In het afsluitende concert voeren we alleen het eerste deel
                     van het romantische oratorium <em>Elias</em> van Mendelssohn
-                    uit met solisten, orkest en koor. Het hele werk is te lang
-                    om tijdens deze cursus in te studeren. Het eerste deel duurt
+                    uit met solisten, orkest en koor. We zingen het in het
+                    Duits. Het hele werk is te lang om tijdens deze cursus in
+                    te studeren. Het eerste deel duurt
                     65 à 70 minuten en is dus een volledig concertprogramma op
                     zich. Ook qua verhaal kan het goed op zichzelf staan.</p>
                 <p> In de <em>Elias</em> laat Mendelssohn zijn bewondering voor
