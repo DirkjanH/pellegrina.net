@@ -132,16 +132,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 instrumentalisten samen aan het programma 'Napolitaanse Barok'
                 voor iedereen. Centraal staan het <i>Te Deum</i> van Alessandro
                 Scarlatti en het <i>Laudate Pueri</i> van Nicola Porpora, beide
-                voor soli, koor en orkest (strijkers, blazers en BC). Ook
-                aria's uit Napolitaanse barokopera's komen aan bod. Dit
-                programma wordt in de kloosterkerk uitgevoerd als het
-                slotconcert van de cursus. Uiteraard zijn er eerst
-                groepsrepetities voor het koor en het orkest, en correpetitie
-                voor de solisten. Later in de week komen alle groepen bijeen en
-                ontstaat een kleurrijk en divers ensemble, waarin iedereen zijn
-                eigen uitdagingen heeft. <a href="programma.php">Lees hier meer
-                    over de werken en hun muzikale en historische context</a>.
-                </p>
+                voor soli, koor en orkest (strijkers, blazers en BC). Ook aria's
+                uit Napolitaanse barokopera's komen aan bod. Dit programma wordt
+                in de kloosterkerk uitgevoerd als het slotconcert van de cursus.
+                Uiteraard zijn er eerst groepsrepetities voor het koor en het
+                orkest, en correpetitie voor de solisten. Later in de week komen
+                alle groepen bijeen en ontstaat een kleurrijk en divers
+                ensemble, waarin iedereen zijn eigen uitdagingen heeft. <a
+                    href="programma.php">Lees hier meer over de werken en hun
+                    muzikale en historische context</a>. </p>
             </div>
             <p class="citaat">Andrew Fyson: &#8220;Het bijwonen van La
                 Pellegrina en het werken met prachtige en enthousiaste
@@ -173,8 +172,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 musicus, maar ook een gecertificeerde Tai-Chi-instructeur.
                 Iedere ochtend vóór het ontbijt doet hij een Tai-Chi sessie met
                 iedereen die maar wil aansluiten.</p>
-            <p class="citaat">Franca Post: "Hele fijne sfeer, prachtige lokatie
-                en heerlijk ontspannend."</p>
+            <p class="citaat">Baukje van Schie: "Intens samenspelen met
+                prachtige barokmuziek en fijne mensen"</p>
             <div class="container">
                 <h2><a name="voorwie"></a>Voor wie </h2>
                 <div class="fotorechts"><img src="/Images/counter.jpg"
@@ -222,13 +221,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                 <h2><a name="dagindeling"></a>Week- en dagindeling</h2>
                 <h4> Weekindeling</h4>
                 <ul>
-                    <li>Zondagochtend 8 augustus: aankomst op Nieuw Sion,
-                        10:30 cursusopening en eerste repetitie</li>
+                    <li>Zondagochtend 8 augustus: aankomst op Nieuw Sion, 10:30
+                        cursusopening en eerste repetitie</li>
                     <li>Vrijdag 13 augustus: afsluitende interne presentatie van
                         de kamermuziekensembles; </li>
-                    <li>Zaterdagmiddag 14 augustus: openbaar concert 'Napolitaanse
-                        Barok' in de kloosterkerk, aansluitend borrel
-                        en vertrek</li>
+                    <li>Zaterdagmiddag 14 augustus: openbaar concert
+                        'Napolitaanse Barok' in de kloosterkerk, aansluitend
+                        borrel en vertrek</li>
                 </ul>
                 <p class="citaat">Annelies Jans: &ldquo;Twee repetities 's
                     morgens, twee repetities 's middags, en wat goen we op onze
