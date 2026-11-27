@@ -1,3 +1,3 @@
 <?php
 
-return 'live';
+return 'test';
