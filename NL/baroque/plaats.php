@@ -101,6 +101,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                             src="/Images/NS/dejeuner_dans_l'herbe.jpg"
                             alt="Lunch en diner vinden buiten plaats, als het weer het toelaat" width="800"
                             class="w3-image" /><br> De lunch en het diner vinden doorgaans buiten plaats</div>
+                    <div class="fotocenter"><img src="/Images/kloostercamping.jpg"
+                            class="w3-image" width="800"
+                            alt="Tenten op de camping in de kloostertuin" /><br>
+                        Kamperen in de kloostertuin</div>
                     <div class="fotocenter"><img
                             src="/Images/Locaties/Nieuw Sion/luchtfoto.jpg"
                             class="w3-image" width="800"

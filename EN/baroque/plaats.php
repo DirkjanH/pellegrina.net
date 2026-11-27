@@ -99,6 +99,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/cursusdata.php'; ?>
                     src="/Images/NS/dejeuner_dans_l'herbe.jpg" class="w3-image" width="800"
                     alt="Dinner and lunch are usually taken outside" /> Dinner
                 and lunch are usually taken outside</div>
+            <div class="fotocenter"><img src="/Images/kloostercamping.jpg"
+                    class="w3-image" width="800"
+                    alt="Tents at the campsite in the monastery garden" /><br>
+                Camping in the monastery garden</div>
             <div class="fotocenter"><img
                     src="/Images/Locaties/Nieuw Sion/luchtfoto.jpg"
                     class="w3-image" width="800"
